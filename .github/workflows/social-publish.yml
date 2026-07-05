@@ -58,6 +58,7 @@ jobs:
           fi
 
       - name: Guardar cambios en registro y placas
+        if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"

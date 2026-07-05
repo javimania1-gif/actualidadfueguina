@@ -66,9 +66,14 @@ jobs:
 
       - name: Disparar publicación social inmediata si hay urgentes
         if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Buscar si se crearon archivos con 'urgent: true'
-          if grep -q "urgent: true" src/content/noticias/*.md; then
-            echo "Se detectaron noticias urgentes. Disparando workflow social..."
+          # Solo detectar noticias urgentes que han sido modificadas o añadidas en este commit (HEAD)
+          if git diff HEAD~1 HEAD --unified=0 | grep -q "urgent: true"; then
+            echo "Se detectaron nuevas noticias urgentes. Disparando workflow social..."
             gh workflow run social-publish.yml -f dry_run=false
+          else
+            echo "No hay noticias urgentes nuevas."
           fi

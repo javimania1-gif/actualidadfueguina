@@ -1,9 +1,21 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { ROOT, callModel, extractJsonObject, cleanText } from './news-utils.mjs';
+import { ROOT, callModel, extractJsonObject, cleanText, sleep } from './news-utils.mjs';
 
 export const SOCIAL_DATA_PATH = path.join(ROOT, 'data/social-posts.json');
+
+/**
+ * Escapa caracteres especiales para XML/SVG.
+ */
+export function escapeXml(unsafe) {
+  return String(unsafe || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
 
 /**
  * Carga el registro de publicaciones sociales.
@@ -22,9 +34,10 @@ export async function loadSocialData() {
  */
 export async function saveSocialData(data) {
   await fs.mkdir(path.dirname(SOCIAL_DATA_PATH), { recursive: true });
-  // Mantener los últimos 1000 registros para no crecer infinitamente
+  // Ordenar por fecha descendente y mantener los últimos 1000 registros
+  data.posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   if (data.posts.length > 1000) {
-    data.posts = data.posts.slice(-1000);
+    data.posts = data.posts.slice(0, 1000);
   }
   await fs.writeFile(SOCIAL_DATA_PATH, JSON.stringify(data, null, 2), 'utf8');
 }
@@ -33,8 +46,6 @@ export async function saveSocialData(data) {
  * Genera textos para redes sociales usando IA.
  */
 export async function generateSocialCopy({ title, description, category, location, tags, body, platform }) {
-  const isInstagram = platform === 'instagram';
-
   const system = `Sos el Community Manager de Actualidad Fueguina.
 Tu tarea es escribir el copy para una publicación de ${platform.toUpperCase()}.
 Actualidad Fueguina es un medio serio, cercano y profesional de Tierra del Fuego.
@@ -46,15 +57,14 @@ Reglas para FACEBOOK:
 - Favorecer comentarios con una pregunta natural al final.
 - Evitar clickbait falso.
 - Incluir un placeholder para el enlace: [URL].
-- No inventar información que no esté en el texto base.
+- No inventar información.
 
 Reglas para INSTAGRAM:
 - Caption visual y estructurado.
 - Párrafos breves.
-- Generar conversación.
-- Incluir de 3 a 8 hashtags relevantes al final.
-- No saturar de emojis, usar 1 o 2 máximo.
-- Invitar a leer la nota en el link de la biografía o sitio web.
+- Generar conversación e invitar a leer la nota en la bio.
+- Incluir de 3 a 8 hashtags relevantes.
+- Máximo 2 emojis.
 - No inventar información.
 
 Entregá exclusivamente JSON con el campo "text".`;
@@ -93,15 +103,14 @@ CUERPO: ${body.slice(0, 4000)}`;
 }
 
 /**
- * Genera una placa visual para Instagram.
- * Requiere 'sharp'.
+ * Genera una placa visual para Instagram con logo AF.
  */
 export async function generateInstagramPlate({ title, category, imagePath, outputPath }) {
   let sharp;
   try {
     sharp = (await import('sharp')).default;
   } catch (e) {
-    console.warn('Sharp no está instalado. Saltando generación de imagen.');
+    console.warn('Sharp no disponible.');
     return null;
   }
 
@@ -117,147 +126,129 @@ export async function generateInstagramPlate({ title, category, imagePath, outpu
       }
     }
 
-    // Si no hay imagen, usamos un fondo sólido con el color de AF
     const background = baseImage
       ? await sharp(baseImage).resize(width, height, { fit: 'cover' }).blur(5).toBuffer()
       : { create: { width, height, channels: 4, background: { r: 0, g: 48, b: 87, alpha: 1 } } };
 
     const words = title.split(' ');
-    let line1 = '';
-    let line2 = '';
+    let lines = [''];
+    let currentLine = 0;
     for (const word of words) {
-      if ((line1 + word).length < 25) line1 += (line1 ? ' ' : '') + word;
-      else if ((line2 + word).length < 25) line2 += (line2 ? ' ' : '') + word;
-      else if (line2 && !line2.endsWith('...')) line2 += '...';
+      if ((lines[currentLine] + word).length < 24) {
+        lines[currentLine] += (lines[currentLine] ? ' ' : '') + word;
+      } else if (currentLine < 2) {
+        currentLine++;
+        lines[currentLine] = word;
+      } else {
+        if (!lines[currentLine].endsWith('...')) lines[currentLine] += '...';
+        break;
+      }
     }
 
-    const overlay = Buffer.from(`
+    const logoPath = path.join(ROOT, 'public/logo-af.jpg');
+    const hasLogo = await fs.access(logoPath).then(() => true).catch(() => false);
+    const composites = [];
+
+    if (hasLogo) {
+      const logoBuffer = await sharp(logoPath).resize(120, 120).toBuffer();
+      composites.push({ input: logoBuffer, top: 40, left: 920 });
+    }
+
+    const escapedCategory = escapeXml(category.toUpperCase());
+    const escapedLines = lines.map(escapeXml);
+
+    const overlaySvg = `
       <svg width="${width}" height="${height}">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:rgba(0,0,0,0.1);stop-opacity:1" />
-            <stop offset="50%" style="stop-color:rgba(0,0,0,0.5);stop-opacity:1" />
+            <stop offset="0%" style="stop-color:rgba(0,0,0,0.2);stop-opacity:1" />
+            <stop offset="60%" style="stop-color:rgba(0,0,0,0.5);stop-opacity:1" />
             <stop offset="100%" style="stop-color:rgba(0,0,0,0.9);stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
-
-        <text x="50" y="100" font-family="sans-serif" font-size="32" font-weight="bold" fill="#ffffff">
-          ${category.toUpperCase()}
-        </text>
-
-        <text x="50" y="850" font-family="sans-serif" font-size="64" font-weight="bold" fill="#ffffff">
-          ${line1}
-        </text>
-        ${line2 ? `<text x="50" y="930" font-family="sans-serif" font-size="64" font-weight="bold" fill="#ffffff">${line2}</text>` : ''}
-
-        <text x="50" y="1280" font-family="sans-serif" font-size="24" fill="#cccccc">
-          actualidadfueguina.com.ar
-        </text>
+        <text x="50" y="100" font-family="sans-serif" font-size="32" font-weight="bold" fill="#ffffff">${escapedCategory}</text>
+        <text x="50" y="850" font-family="sans-serif" font-size="64" font-weight="bold" fill="#ffffff">${escapedLines[0]}</text>
+        ${escapedLines[1] ? `<text x="50" y="940" font-family="sans-serif" font-size="64" font-weight="bold" fill="#ffffff">${escapedLines[1]}</text>` : ''}
+        ${escapedLines[2] ? `<text x="50" y="1030" font-family="sans-serif" font-size="64" font-weight="bold" fill="#ffffff">${escapedLines[2]}</text>` : ''}
+        <text x="50" y="1280" font-family="sans-serif" font-size="28" fill="#ffffff">actualidadfueguina.com.ar</text>
       </svg>
-    `);
+    `;
 
-    await sharp(background)
-      .composite([{ input: overlay, top: 0, left: 0 }])
-      .toFile(outputPath);
+    composites.push({ input: Buffer.from(overlaySvg), top: 0, left: 0 });
 
+    await sharp(background).composite(composites).toFile(outputPath);
     return outputPath;
   } catch (error) {
-    console.error('Error generando placa Instagram:', error);
+    console.error('Error generando placa:', error);
     return null;
   }
 }
 
 /**
- * Publica en Facebook Page.
+ * Llama a la API con reintentos para errores recuperables.
  */
+async function callMetaWithRetry(url, options, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url, options);
+      const data = await res.json();
+      if (res.ok) return data;
+
+      const errorMsg = data.error?.message || res.statusText;
+      const isRecoverable = [408, 429, 500, 502, 503, 504].includes(res.status) || errorMsg.includes('limit');
+
+      if (isRecoverable && i < retries - 1) {
+        const delay = Math.pow(2, i) * 2000;
+        console.warn(`Reintentando en ${delay}ms... (${errorMsg})`);
+        await sleep(delay);
+        continue;
+      }
+      throw new Error(errorMsg);
+    } catch (err) {
+      if (i === retries - 1) throw err;
+      await sleep(2000);
+    }
+  }
+}
+
 export async function publishToFacebook({ text, link, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-fb-' + Date.now() };
+
   const pageId = process.env.META_PAGE_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
   const version = process.env.META_GRAPH_API_VERSION || 'v21.0';
 
-  if (dryRun) {
-    console.log(`[DRY-RUN FB] Publicando: ${text.slice(0, 50)}... URL: ${link}`);
-    return { id: 'dry-run-fb-' + Date.now() };
-  }
-
-  if (!pageId || !accessToken) {
-    throw new Error('Faltan credenciales de Facebook (META_PAGE_ID, META_PAGE_ACCESS_TOKEN)');
-  }
+  if (!pageId || !accessToken) throw new Error('Credenciales faltantes');
 
   const url = `https://graph.facebook.com/${version}/${pageId}/feed`;
-  const message = text.replace('[URL]', link);
-
-  const response = await fetch(url, {
+  return callMetaWithRetry(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      message: message,
-      link: link,
-      access_token: accessToken
-    })
+    body: JSON.stringify({ message: text.replace('[URL]', link), link, access_token: accessToken })
   });
-
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(`Facebook API Error: ${data.error?.message || response.statusText}`);
-  }
-
-  return data;
 }
 
-/**
- * Publica en Instagram Business.
- * Requiere dos pasos: crear contenedor y publicar.
- */
 export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-ig-' + Date.now() };
+
   const igUserId = process.env.META_IG_USER_ID;
-  const accessToken = process.env.META_PAGE_ACCESS_TOKEN; // Usualmente el mismo token de página funciona si están vinculadas
+  const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
   const version = process.env.META_GRAPH_API_VERSION || 'v21.0';
 
-  if (dryRun) {
-    console.log(`[DRY-RUN IG] Publicando: ${text.slice(0, 50)}... Image: ${imageUrl}`);
-    return { id: 'dry-run-ig-' + Date.now() };
-  }
+  if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 
-  if (!igUserId || !accessToken) {
-    throw new Error('Faltan credenciales de Instagram (META_IG_USER_ID, META_PAGE_ACCESS_TOKEN)');
-  }
-
-  // 1. Crear contenedor de media
   const containerUrl = `https://graph.facebook.com/${version}/${igUserId}/media`;
-  const containerRes = await fetch(containerUrl, {
+  const containerData = await callMetaWithRetry(containerUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      image_url: imageUrl,
-      caption: text,
-      access_token: accessToken
-    })
+    body: JSON.stringify({ image_url: imageUrl, caption: text, access_token: accessToken })
   });
 
-  const containerData = await containerRes.json();
-  if (!containerRes.ok) {
-    throw new Error(`Instagram Container Error: ${containerData.error?.message || containerRes.statusText}`);
-  }
-
-  const creationId = containerData.id;
-
-  // 2. Publicar el contenedor
   const publishUrl = `https://graph.facebook.com/${version}/${igUserId}/media_publish`;
-  const publishRes = await fetch(publishUrl, {
+  return callMetaWithRetry(publishUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      creation_id: creationId,
-      access_token: accessToken
-    })
+    body: JSON.stringify({ creation_id: containerData.id, access_token: accessToken })
   });
-
-  const publishData = await publishRes.json();
-  if (!publishRes.ok) {
-    throw new Error(`Instagram Publish Error: ${publishData.error?.message || publishRes.statusText}`);
-  }
-
-  return publishData;
 }
