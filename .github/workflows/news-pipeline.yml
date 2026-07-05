@@ -70,10 +70,18 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Solo detectar noticias urgentes que han sido modificadas o añadidas en este commit (HEAD)
-          if git diff HEAD~1 HEAD --unified=0 | grep -q "urgent: true"; then
-            echo "Se detectaron nuevas noticias urgentes. Disparando workflow social..."
-            gh workflow run social-publish.yml -f dry_run=false
-          else
-            echo "No hay noticias urgentes nuevas."
+          # Detectar si se añadieron o modificaron líneas con 'urgent: true' en noticias en el último commit
+          # Solo si hubo commit nuevo (evita disparar en runs sin cambios)
+          if git rev-parse HEAD >/dev/null 2>&1; then
+            FILES=$(git diff-tree --no-commit-id --name-only -r HEAD | grep 'src/content/noticias/' || true)
+            if [ -n "$FILES" ]; then
+              if git diff HEAD~1 HEAD -- $FILES | grep '^+.*urgent: true' > /dev/null; then
+                echo "Se detectó nueva noticia urgente. Disparando workflow social..."
+                gh workflow run social-publish.yml -f dry_run=false
+              else
+                echo "No hay noticias urgentes en este commit."
+              fi
+            else
+              echo "No hay cambios en noticias."
+            fi
           fi
