@@ -63,3 +63,12 @@ jobs:
           git commit -m "Actualización automática de noticias"
           git pull --rebase origin main
           git push origin main
+
+      - name: Disparar publicación social inmediata si hay urgentes
+        if: success()
+        run: |
+          # Buscar si se crearon archivos con 'urgent: true'
+          if grep -q "urgent: true" src/content/noticias/*.md; then
+            echo "Se detectaron noticias urgentes. Disparando workflow social..."
+            gh workflow run social-publish.yml -f dry_run=false
+          fi

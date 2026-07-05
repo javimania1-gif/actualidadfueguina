@@ -10,14 +10,15 @@
     "news:collect": "node scripts/collect-news.mjs",
     "news:digest": "node scripts/daily-digest.mjs",
     "news:cleanup": "node scripts/cleanup-drafts.mjs",
+    "news:social": "node scripts/social-publisher.mjs",
     "health": "node scripts/health-check.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0",
     "cheerio": "^1.0.0",
+    "gray-matter": "^4.0.3",
     "rss-parser": "^3.13.0",
-    "turndown": "^7.2.0",
-    "gray-matter": "^4.0.3"
-  },
-  "devDependencies": {}
+    "sharp": "^0.35.3",
+    "turndown": "^7.2.0"
+  }
 }
