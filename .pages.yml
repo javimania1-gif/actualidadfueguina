@@ -1,0 +1,79 @@
+media:
+  input: public/uploads
+  output: /uploads
+  rename: true
+  categories: [image]
+
+content:
+  - name: noticias
+    label: Noticias
+    type: collection
+    path: src/content/noticias
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: date
+    view:
+      primary: title
+      fields: [date, category, location, featured]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: description
+        label: Bajada / descripción SEO
+        type: text
+        required: true
+        options:
+          minlength: 80
+          maxlength: 180
+      - name: date
+        label: Fecha de publicación
+        type: date
+        required: true
+        options:
+          time: true
+      - name: category
+        label: Categoría
+        type: select
+        required: true
+        options:
+          values: [Provincia, Río Grande, Ushuaia, Tolhuin, Malvinas, Antártida, Política, Economía, Sociedad, Policiales, Institucional]
+      - name: location
+        label: Ubicación
+        type: string
+      - name: tags
+        label: Etiquetas
+        type: string
+        list: true
+      - name: image
+        label: Imagen principal
+        type: image
+        options:
+          media: public/uploads
+      - name: imageAlt
+        label: Texto alternativo de imagen
+        type: string
+      - name: author
+        label: Autor
+        type: string
+      - name: featured
+        label: Destacar en portada
+        type: boolean
+      - name: body
+        label: Cuerpo de la noticia
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: public/uploads
+          path: public/uploads
+          rename: true
+          switcher: true
+
+settings:
+  content:
+    merge: true

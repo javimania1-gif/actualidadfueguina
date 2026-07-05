@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+export async function getStaticPaths() {
+  const noticias = await getCollection('noticias');
+  const tags = [...new Set(noticias.flatMap((n) => n.data.tags || []))];
+  return tags.map((tag) => ({ params: { tag: slugify(tag) }, props: { tag } }));
+}
+
+const { tag } = Astro.props;
+const noticias = (await getCollection('noticias'))
+  .filter((n) => (n.data.tags || []).some((t) => slugify(t) === slugify(tag)))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title={`Etiqueta: ${tag}`} description={`Noticias etiquetadas como ${tag} en Actualidad Fueguina.`}>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h1 class="title-lg">Etiqueta: {tag}</h1></div>
+      <div class="grid">
+        {noticias.map((nota) => (
+          <article class="card news-card">
+            <a href={`/noticias/${nota.slug}/`}>
+              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <div class="card-content">
+                <span class="eyebrow">{nota.data.category}</span>
+                <h2 class="title-md">{nota.data.title}</h2>
+                <p>{nota.data.description}</p>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

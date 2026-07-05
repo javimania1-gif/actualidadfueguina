@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const noticias = await getCollection('noticias');
+  return noticias.map((nota) => ({
+    params: { slug: nota.slug },
+    props: { nota }
+  }));
+}
+
+const { nota } = Astro.props;
+const { Content } = await render(nota);
+const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: nota.data.title,
+  description: nota.data.description,
+  datePublished: nota.data.date.toISOString(),
+  dateModified: nota.data.date.toISOString(),
+  author: { '@type': 'Organization', name: nota.data.author },
+  publisher: { '@type': 'Organization', name: 'Actualidad Fueguina', logo: { '@type': 'ImageObject', url: new URL('/logo-af.jpg', Astro.site).toString() } },
+  image: nota.data.image ? new URL(nota.data.image, Astro.site).toString() : new URL('/logo-af.jpg', Astro.site).toString(),
+  mainEntityOfPage: Astro.url.href
+};
+---
+<BaseLayout title={nota.data.title} description={nota.data.description} image={nota.data.image || '/logo-af.jpg'} canonical={Astro.url.href}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="article">
+    <header class="article-header">
+      <span class="eyebrow">{nota.data.category}</span>
+      <h1>{nota.data.title}</h1>
+      <p class="lead">{nota.data.description}</p>
+      <div class="meta"><span>{fmt.format(nota.data.date)}</span>{nota.data.location && <span>{nota.data.location}</span>}<span>{nota.data.author}</span></div>
+    </header>
+    <figure class="article-cover">
+      <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="eager" />
+    </figure>
+    <div class="article-body">
+      <Content />
+      {nota.data.tags?.length > 0 && (
+        <div class="tags">
+          {nota.data.tags.map((tag) => <a class="tag" href={`/etiquetas/${tag.toLowerCase().replaceAll(' ', '-')}/`}>{tag}</a>)}
+        </div>
+      )}
+    </div>
+  </article>
+</BaseLayout>

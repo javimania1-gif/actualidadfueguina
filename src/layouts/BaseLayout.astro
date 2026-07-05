@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import { SITE } from '../data/site';
+
+const {
+  title = SITE.name,
+  description = SITE.description,
+  image = SITE.logo,
+  canonical = Astro.url.href
+} = Astro.props;
+
+const pageTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.name}`;
+const absoluteImage = new URL(image, SITE.url).toString();
+---
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+    <link rel="icon" href="/logo-af.jpg" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name} RSS`} href="/rss.xml" />
+  </head>
+  <body>
+    <a href="#contenido" class="skip">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label={SITE.name}>
+          <img src={SITE.logo} alt="Logo de Actualidad Fueguina" width="96" height="96" />
+          <span>{SITE.name}</span>
+        </a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/categorias/rio-grande/">Río Grande</a>
+          <a href="/categorias/ushuaia/">Ushuaia</a>
+          <a href="/categorias/tolhuin/">Tolhuin</a>
+          <a href="/categorias/provincia/">Provincia</a>
+          <a href="/categorias/malvinas/">Malvinas</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </div>
+    </header>
+    <div class="breaking">
+      <div class="container"><span>AF</span> Noticias de Tierra del Fuego AIAS, Malvinas y Antártida.</div>
+    </div>
+    <main id="contenido">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p><strong>{SITE.name}</strong> — Portal provincial de noticias. Río Grande, Tolhuin, Ushuaia, Islas Malvinas y Antártida.</p>
+        <p>© {new Date().getFullYear()} Actualidad Fueguina. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

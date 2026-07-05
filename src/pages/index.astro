@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+
+const noticias = (await getCollection('noticias'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const principal = noticias.find((n) => n.data.featured) ?? noticias[0];
+const secundarias = noticias.filter((n) => n.id !== principal?.id).slice(0, 2);
+const ultimas = noticias.filter((n) => n.id !== principal?.id).slice(0, 9);
+const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
+---
+<BaseLayout title={SITE.name} description={SITE.description}>
+  <section class="hero">
+    <div class="container hero-grid">
+      {principal ? (
+        <article class="card featured">
+          <a href={`/noticias/${principal.slug}/`}>
+            <img class="cover" src={principal.data.image || '/logo-af.jpg'} alt={principal.data.imageAlt || principal.data.title} loading="eager" />
+            <div class="card-content">
+              <span class="eyebrow">{principal.data.category}</span>
+              <h1 class="title-xl">{principal.data.title}</h1>
+              <p class="lead">{principal.data.description}</p>
+              <div class="meta"><span>{fmt.format(principal.data.date)}</span>{principal.data.location && <span>{principal.data.location}</span>}</div>
+            </div>
+          </a>
+        </article>
+      ) : (
+        <div class="empty">Todavía no hay noticias cargadas.</div>
+      )}
+      <div class="side-stack" style="display:grid; gap:18px;">
+        {secundarias.map((nota) => (
+          <article class="card news-card">
+            <a href={`/noticias/${nota.slug}/`}>
+              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <div class="card-content">
+                <span class="eyebrow">{nota.data.category}</span>
+                <h2 class="title-md">{nota.data.title}</h2>
+                <p class="lead">{nota.data.description}</p>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Últimas noticias</h2>
+        <p class="lead">Actualidad provincial, política, comunidad, economía y agenda pública.</p>
+      </div>
+      <div class="grid">
+        {ultimas.map((nota) => (
+          <article class="card news-card">
+            <a href={`/noticias/${nota.slug}/`}>
+              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <div class="card-content">
+                <span class="eyebrow">{nota.data.category}</span>
+                <h3 class="title-md">{nota.data.title}</h3>
+                <p>{nota.data.description}</p>
+                <div class="meta"><span>{fmt.format(nota.data.date)}</span>{nota.data.location && <span>{nota.data.location}</span>}</div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
