@@ -5,8 +5,73 @@ media:
   categories: [image]
 
 content:
+  - name: borradores
+    label: Borradores automáticos
+    type: collection
+    path: src/content/borradores
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: date
+    view:
+      primary: title
+      fields: [date, category, location, sourceName, status]
+      sort: detectedAt
+      order: desc
+    fields:
+      - name: title
+        label: Título detectado
+        type: string
+        required: true
+      - name: description
+        label: Resumen
+        type: text
+        required: true
+      - name: date
+        label: Fecha de la fuente
+        type: date
+        required: true
+        options:
+          time: true
+      - name: category
+        label: Categoría sugerida
+        type: select
+        required: true
+        options:
+          values: [Provincia, Río Grande, Ushuaia, Tolhuin, Malvinas, Antártida, Política, Economía, Sociedad, Policiales, Institucional]
+      - name: location
+        label: Ubicación
+        type: string
+      - name: sourceName
+        label: Fuente detectada
+        type: string
+      - name: sourceUrl
+        label: URL original
+        type: string
+      - name: originalImage
+        label: Imagen original de referencia
+        type: string
+      - name: status
+        label: Estado
+        type: select
+        options:
+          values: [draft, review, approved]
+      - name: detectedAt
+        label: Detectado
+        type: date
+        options:
+          time: true
+      - name: mode
+        label: Modo de ingreso
+        type: string
+      - name: body
+        label: Material fuente para revisión
+        type: rich-text
+        options:
+          format: markdown
+
   - name: noticias
-    label: Noticias
+    label: Noticias publicadas
     type: collection
     path: src/content/noticias
     format: yaml-frontmatter
@@ -15,7 +80,7 @@ content:
       field: date
     view:
       primary: title
-      fields: [date, category, location, featured]
+      fields: [date, category, location, featured, automated]
       sort: date
       order: desc
     fields:
@@ -62,6 +127,18 @@ content:
         type: string
       - name: featured
         label: Destacar en portada
+        type: boolean
+      - name: sourceName
+        label: Fuente interna
+        type: string
+      - name: sourceUrl
+        label: URL fuente interna
+        type: string
+      - name: automated
+        label: Publicación automatizada
+        type: boolean
+      - name: dailyDigest
+        label: Resumen diario
         type: boolean
       - name: body
         label: Cuerpo de la noticia

@@ -1,0 +1,86 @@
+{
+  "officialDomains": [
+    "tierradelfuego.gob.ar",
+    "www.tierradelfuego.gob.ar",
+    "riogrande.gob.ar",
+    "www.riogrande.gob.ar",
+    "info.riogrande.gob.ar",
+    "ushuaia.gob.ar",
+    "www.ushuaia.gob.ar",
+    "tolhuin.gob.ar",
+    "www.tolhuin.gob.ar"
+  ],
+  "sources": [
+    {
+      "id": "rio-grande-oficial",
+      "name": "Municipio de Río Grande",
+      "type": "rss",
+      "url": "https://info.riogrande.gob.ar/feed/",
+      "location": "Río Grande",
+      "defaultCategory": "Río Grande",
+      "mode": "official-auto",
+      "maxItems": 4
+    },
+    {
+      "id": "ushuaia-oficial",
+      "name": "Municipalidad de Ushuaia",
+      "type": "html-index",
+      "url": "https://www.ushuaia.gob.ar/noticias",
+      "linkPattern": "/noticias/",
+      "location": "Ushuaia",
+      "defaultCategory": "Ushuaia",
+      "mode": "official-auto",
+      "maxItems": 4
+    },
+    {
+      "id": "google-tdf",
+      "name": "Google News — Tierra del Fuego",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=%22Tierra+del+Fuego%22&hl=es-419&gl=AR&ceid=AR%3Aes-419",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 4
+    },
+    {
+      "id": "google-rio-grande",
+      "name": "Google News — Río Grande",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=%22R%C3%ADo+Grande%22+%22Tierra+del+Fuego%22&hl=es-419&gl=AR&ceid=AR%3Aes-419",
+      "location": "Río Grande",
+      "defaultCategory": "Río Grande",
+      "mode": "discovery-draft",
+      "maxItems": 3
+    },
+    {
+      "id": "google-ushuaia",
+      "name": "Google News — Ushuaia",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=Ushuaia&hl=es-419&gl=AR&ceid=AR%3Aes-419",
+      "location": "Ushuaia",
+      "defaultCategory": "Ushuaia",
+      "mode": "discovery-draft",
+      "maxItems": 3
+    },
+    {
+      "id": "google-tolhuin",
+      "name": "Google News — Tolhuin",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=Tolhuin&hl=es-419&gl=AR&ceid=AR%3Aes-419",
+      "location": "Tolhuin",
+      "defaultCategory": "Tolhuin",
+      "mode": "discovery-draft",
+      "maxItems": 3
+    },
+    {
+      "id": "google-malvinas-antartida",
+      "name": "Google News — Malvinas y Antártida",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=(%22Islas+Malvinas%22+OR+%22Ant%C3%A1rtida+Argentina%22)&hl=es-419&gl=AR&ceid=AR%3Aes-419",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Malvinas",
+      "mode": "discovery-draft",
+      "maxItems": 4
+    }
+  ]
+}

@@ -1,15 +1,23 @@
 {
   "name": "actualidad-fueguina-static",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "news:collect": "node scripts/collect-news.mjs",
+    "news:digest": "node scripts/daily-digest.mjs",
+    "news:cleanup": "node scripts/cleanup-drafts.mjs",
+    "health": "node scripts/health-check.mjs"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "cheerio": "^1.0.0",
+    "rss-parser": "^3.13.0",
+    "turndown": "^7.2.0",
+    "gray-matter": "^4.0.3"
   },
   "devDependencies": {}
 }

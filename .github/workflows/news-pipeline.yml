@@ -1,0 +1,65 @@
+name: Actualidad Fueguina - Noticias automáticas
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 08:17, 11:47, 15:17, 18:47 y 22:17 de Tierra del Fuego (UTC-3)
+    - cron: '17 11 * * *'
+    - cron: '47 14 * * *'
+    - cron: '17 18 * * *'
+    - cron: '47 21 * * *'
+    - cron: '17 1 * * *'
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: actualidad-fueguina-news-pipeline
+  cancel-in-progress: false
+
+jobs:
+  collect-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AF_MODEL: openai/gpt-4o-mini
+      AF_MAX_AI_PER_RUN: '6'
+      AF_MAX_DRAFTS_PER_RUN: '8'
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Recolectar, redactar y clasificar
+        run: npm run news:collect
+
+      - name: Limpiar borradores viejos
+        run: npm run news:cleanup
+
+      - name: Verificar compilación
+        run: npm run build
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json
+          if git diff --cached --quiet; then
+            echo "No hay novedades para guardar."
+            exit 0
+          fi
+          git commit -m "Actualización automática de noticias"
+          git pull --rebase origin main
+          git push origin main

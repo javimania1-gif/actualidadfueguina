@@ -1,0 +1,49 @@
+name: Actualidad Fueguina - Resumen diario
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 21:23 de Tierra del Fuego (00:23 UTC)
+    - cron: '23 0 * * *'
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: actualidad-fueguina-daily-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AF_MODEL: openai/gpt-4o-mini
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - run: npm install
+      - run: npm run news:digest
+      - run: npm run build
+
+      - name: Guardar resumen
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add src/content/noticias
+          if git diff --cached --quiet; then
+            echo "No se generó resumen."
+            exit 0
+          fi
+          git commit -m "Resumen diario automático"
+          git pull --rebase origin main
+          git push origin main

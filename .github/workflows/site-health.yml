@@ -1,0 +1,28 @@
+name: Actualidad Fueguina - Control técnico diario
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 07:37 de Tierra del Fuego (10:37 UTC)
+    - cron: '37 10 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - run: npm install
+      - name: Verificar build local
+        run: npm run build
+      - name: Verificar sitio en producción
+        run: npm run health

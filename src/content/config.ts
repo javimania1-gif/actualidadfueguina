@@ -12,8 +12,29 @@ const noticias = defineCollection({
     imageAlt: z.string().optional(),
     author: z.string().default('Actualidad Fueguina'),
     featured: z.boolean().default(false),
-    location: z.string().optional()
+    location: z.string().optional(),
+    sourceName: z.string().optional(),
+    sourceUrl: z.string().url().optional(),
+    automated: z.boolean().default(false),
+    dailyDigest: z.boolean().default(false)
   })
 });
 
-export const collections = { noticias };
+const borradores = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().max(180),
+    date: z.coerce.date(),
+    category: z.string(),
+    location: z.string().optional(),
+    sourceName: z.string(),
+    sourceUrl: z.string().url(),
+    originalImage: z.string().optional(),
+    status: z.enum(['draft', 'review', 'approved']).default('draft'),
+    detectedAt: z.coerce.date(),
+    mode: z.string().optional()
+  })
+});
+
+export const collections = { noticias, borradores };
