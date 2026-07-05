@@ -7,7 +7,7 @@ tags: ["Actualidad Fueguina", "Tierra del Fuego", "Noticias"]
 image: "/logo-af.jpg"
 imageAlt: "Logo de Actualidad Fueguina"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 location: "Tierra del Fuego AIAS"
 ---
 
