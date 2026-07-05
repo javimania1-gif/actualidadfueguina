@@ -4,6 +4,7 @@ import path from 'node:path';
 import { ROOT, callModel, extractJsonObject, cleanText, sleep } from './news-utils.mjs';
 
 export const SOCIAL_DATA_PATH = path.join(ROOT, 'data/social-posts.json');
+export const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || 'v21.0';
 
 /**
  * Escapa caracteres especiales para XML/SVG.
@@ -23,9 +24,19 @@ export function escapeXml(unsafe) {
 export async function loadSocialData() {
   try {
     const content = await fs.readFile(SOCIAL_DATA_PATH, 'utf8');
-    return JSON.parse(content);
+    const data = JSON.parse(content);
+    // Migración de array a objeto si es necesario
+    if (Array.isArray(data.posts)) {
+      const posts = {};
+      data.posts.forEach(p => {
+        const key = `${p.slug}|${p.platform}`;
+        posts[key] = p;
+      });
+      data.posts = posts;
+    }
+    return data;
   } catch {
-    return { version: 1, posts: [] };
+    return { version: 2, posts: {} };
   }
 }
 
@@ -34,10 +45,13 @@ export async function loadSocialData() {
  */
 export async function saveSocialData(data) {
   await fs.mkdir(path.dirname(SOCIAL_DATA_PATH), { recursive: true });
-  // Ordenar por fecha descendente y mantener los últimos 1000 registros
-  data.posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  if (data.posts.length > 1000) {
-    data.posts = data.posts.slice(0, 1000);
+  // Limpieza básica si hay demasiados
+  const keys = Object.keys(data.posts);
+  if (keys.length > 2000) {
+    const sorted = keys.sort((a, b) => new Date(data.posts[b].date).getTime() - new Date(data.posts[a].date).getTime());
+    const newPosts = {};
+    sorted.slice(0, 1000).forEach(k => newPosts[k] = data.posts[k]);
+    data.posts = newPosts;
   }
   await fs.writeFile(SOCIAL_DATA_PATH, JSON.stringify(data, null, 2), 'utf8');
 }
@@ -217,7 +231,7 @@ export async function publishToFacebook({ text, link, dryRun = false }) {
 
   const pageId = process.env.META_PAGE_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
-  const version = process.env.META_GRAPH_API_VERSION || 'v21.0';
+  const version = META_GRAPH_API_VERSION;
 
   if (!pageId || !accessToken) throw new Error('Credenciales faltantes');
 
@@ -234,7 +248,7 @@ export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
 
   const igUserId = process.env.META_IG_USER_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
-  const version = process.env.META_GRAPH_API_VERSION || 'v21.0';
+  const version = META_GRAPH_API_VERSION;
 
   if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 

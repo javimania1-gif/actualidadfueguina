@@ -28,10 +28,15 @@ async function main() {
 
     if (data.social?.enabled === false) continue;
 
-    // Buscar historial de esta noticia
-    const history = socialData.posts.filter(p => p.slug === slug);
-    const fbPublished = history.some(p => p.platform === 'facebook' && p.status === 'published');
-    const igPublished = history.some(p => p.platform === 'instagram' && p.status === 'published');
+    // Buscar historial determinista
+    const fbKey = `${slug}|facebook`;
+    const igKey = `${slug}|instagram`;
+
+    const fbRecord = socialData.posts[fbKey];
+    const igRecord = socialData.posts[igKey];
+
+    const fbPublished = fbRecord?.status === 'published';
+    const igPublished = igRecord?.status === 'published';
 
     if (fbPublished && igPublished) continue;
 
@@ -50,11 +55,11 @@ async function main() {
       body,
       fbPublished,
       igPublished,
-      history
+      fbRecord,
+      igRecord
     });
   }
 
-  // Lógica de franja horaria para Tierra del Fuego
   const hourTDF = new Date(new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Argentina/Ushuaia',
     hour: 'numeric',
@@ -82,20 +87,22 @@ async function main() {
 
     // FACEBOOK
     if (!item.fbPublished) {
+      const key = `${item.slug}|facebook`;
       try {
         console.log('- Generando copy Facebook...');
         const fbText = await generateSocialCopy({ ...item, platform: 'facebook' });
         const result = await publishToFacebook({ text: fbText, link: newsUrl, dryRun: DRY_RUN });
 
         if (!DRY_RUN) {
-          socialData.posts.push({
+          socialData.posts[key] = {
             slug: item.slug,
             platform: 'facebook',
             date: new Date().toISOString(),
             status: 'published',
             remoteId: result.id,
-            attempts: 1
-          });
+            attempts: (item.fbRecord?.attempts || 0) + 1,
+            publishedAt: new Date().toISOString()
+          };
           console.log('✓ Publicado en Facebook');
         } else {
           console.log('[DRY-RUN] Facebook: ' + fbText.slice(0, 60) + '...');
@@ -103,14 +110,14 @@ async function main() {
       } catch (error) {
         console.error(`✗ Error Facebook: ${error.message}`);
         if (!DRY_RUN) {
-          socialData.posts.push({
+          socialData.posts[key] = {
             slug: item.slug,
             platform: 'facebook',
             date: new Date().toISOString(),
             status: 'failed',
             lastError: error.message,
-            attempts: (item.history.find(h => h.platform === 'facebook')?.attempts || 0) + 1
-          });
+            attempts: (item.fbRecord?.attempts || 0) + 1
+          };
         }
       }
       await sleep(1000);
@@ -118,32 +125,39 @@ async function main() {
 
     // INSTAGRAM
     if (!item.igPublished && item.importance >= 5) {
+      const key = `${item.slug}|instagram`;
       try {
         const plateFilename = `plate-${item.slug}.jpg`;
         const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
-        const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
 
+        // Verificar si el asset es accesible públicamente
         let imageUrl = null;
-        if (plateExists) {
-          imageUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
+
+        if (item.image && item.image.startsWith('http')) {
+          imageUrl = item.image;
         } else {
-          console.log('- Generando placa Instagram...');
-          const generated = await generateInstagramPlate({
-            title: item.title,
-            category: item.category,
-            imagePath: item.image,
-            outputPath: platePath
-          });
-
-          if (generated && !DRY_RUN) {
-             console.log('! Placa generada. Se publicará en el siguiente run tras el commit.');
-          } else if (generated && DRY_RUN) {
-             console.log('[DRY-RUN] Placa generada (no guardada persistentemente)');
-             await fs.unlink(platePath).catch(() => {});
-          }
-
-          if (item.image && item.image.startsWith('http')) {
-            imageUrl = item.image;
+          // Intentar placa local
+          const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
+          if (plateExists) {
+            const publicUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
+            console.log(`- Verificando disponibilidad de asset: ${publicUrl}`);
+            const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
+            if (check.ok) {
+              imageUrl = publicUrl;
+            } else {
+              console.log('! Asset aún no disponible públicamente en Cloudflare.');
+            }
+          } else {
+            console.log('- Generando placa Instagram...');
+            const generated = await generateInstagramPlate({
+              title: item.title,
+              category: item.category,
+              imagePath: item.image,
+              outputPath: platePath
+            });
+            if (generated) {
+              console.log('! Placa generada. Estará disponible tras el commit y deploy.');
+            }
           }
         }
 
@@ -153,32 +167,42 @@ async function main() {
           const result = await publishToInstagram({ text: igText, imageUrl, dryRun: DRY_RUN });
 
           if (!DRY_RUN) {
-            socialData.posts.push({
+            socialData.posts[key] = {
               slug: item.slug,
               platform: 'instagram',
               date: new Date().toISOString(),
               status: 'published',
               remoteId: result.id,
-              attempts: 1
-            });
+              attempts: (item.igRecord?.attempts || 0) + 1,
+              publishedAt: new Date().toISOString()
+            };
             console.log('✓ Publicado en Instagram');
           } else {
             console.log('[DRY-RUN] Instagram: ' + igText.slice(0, 60) + '...');
           }
         } else {
-          console.log('! Saltando Instagram: falta asset público (esperando placa o imagen remota).');
+          console.log('! Saltando Instagram: esperando disponibilidad del asset.');
+          if (!DRY_RUN && !item.igRecord) {
+             socialData.posts[key] = {
+               slug: item.slug,
+               platform: 'instagram',
+               date: new Date().toISOString(),
+               status: 'pending-asset',
+               attempts: 0
+             };
+          }
         }
       } catch (error) {
         console.error(`✗ Error Instagram: ${error.message}`);
         if (!DRY_RUN) {
-          socialData.posts.push({
+          socialData.posts[key] = {
             slug: item.slug,
             platform: 'instagram',
             date: new Date().toISOString(),
             status: 'failed',
             lastError: error.message,
-            attempts: (item.history.find(h => h.platform === 'instagram')?.attempts || 0) + 1
-          });
+            attempts: (item.igRecord?.attempts || 0) + 1
+          };
         }
       }
       await sleep(1000);

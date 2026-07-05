@@ -22,11 +22,12 @@ jobs:
           if [ -z "$META_PAGE_ID" ]; then echo "❌ Falta META_PAGE_ID"; exit 1; fi
           if [ -z "$META_IG_USER_ID" ]; then echo "❌ Falta META_IG_USER_ID"; exit 1; fi
 
-          echo "Consultando Graph API..."
-          RES=$(curl -s "https://graph.facebook.com/v21.0/$META_PAGE_ID?fields=name,has_added_app&access_token=$META_PAGE_ACCESS_TOKEN")
+          VERSION=${META_GRAPH_API_VERSION:-v21.0}
+          echo "Consultando Graph API ($VERSION)..."
+          RES=$(curl -s "https://graph.facebook.com/$VERSION/$META_PAGE_ID?fields=name,has_added_app&access_token=$META_PAGE_ACCESS_TOKEN")
           echo "$RES" | grep -q "name" || (echo "❌ Error en token o ID: $RES"; exit 1)
           echo "✅ Facebook OK: $(echo $RES | jq -r .name)"
 
-          RES_IG=$(curl -s "https://graph.facebook.com/v21.0/$META_IG_USER_ID?fields=username&access_token=$META_PAGE_ACCESS_TOKEN")
+          RES_IG=$(curl -s "https://graph.facebook.com/$VERSION/$META_IG_USER_ID?fields=username&access_token=$META_PAGE_ACCESS_TOKEN")
           echo "$RES_IG" | grep -q "username" || (echo "❌ Error en Instagram ID: $RES_IG"; exit 1)
           echo "✅ Instagram OK: $(echo $RES_IG | jq -r .username)"
