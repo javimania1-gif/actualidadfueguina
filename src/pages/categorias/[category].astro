@@ -5,9 +5,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 export async function getStaticPaths() {
+  const slugifyPath = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const noticias = await getCollection('noticias');
   const categorias = [...new Set(noticias.map((n) => n.data.category))];
-  return categorias.map((category) => ({ params: { category: slugify(category) }, props: { category } }));
+  return categorias.map((category) => ({ params: { category: slugifyPath(category) }, props: { category } }));
 }
 
 const { category } = Astro.props;
