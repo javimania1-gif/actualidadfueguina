@@ -51,9 +51,9 @@ async function main() {
         const fbRecord = socialData.posts[fbKey];
         const igRecord = socialData.posts[igKey];
 
-        // Excluir si ya fue publicado, está en proceso de publicación, o requiere reconciliación
-        const fbExcluded = fbRecord && ['published', 'publishing', 'unknown', 'needs-reconciliation'].includes(fbRecord.status);
-        const igExcluded = igRecord && ['published', 'publishing', 'unknown', 'needs-reconciliation'].includes(igRecord.status);
+        // Excluir si ya fue publicado, está en proceso de publicación, preparado, o requiere reconciliación
+        const fbExcluded = fbRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(fbRecord.status);
+        const igExcluded = igRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(igRecord.status);
 
         if (fbExcluded && igExcluded) continue;
 
@@ -98,6 +98,8 @@ async function main() {
       const toReserve = candidates.slice(0, MAX_POSTS_PER_RUN);
       console.log(`Candidatos disponibles: ${candidates.length}. Reservando: ${toReserve.length}`);
 
+      const runId = process.env.GITHUB_RUN_ID || `local-${Date.now()}`;
+
       for (const item of toReserve) {
         console.log(`Reservando noticia: "${item.title}"`);
         
@@ -108,9 +110,10 @@ async function main() {
             platform: 'facebook',
             date: new Date().toISOString(),
             status: 'publishing',
-            attempts: (item.fbRecord?.attempts || 0) + 1
+            attempts: (item.fbRecord?.attempts || 0) + 1,
+            runId: runId
           };
-          console.log(`- Reservado Facebook para slug: ${item.slug}`);
+          console.log(`- Reservado Facebook para slug: ${item.slug} (runId: ${runId})`);
         }
         
         if (!item.igPublished) {
@@ -121,9 +124,10 @@ async function main() {
             date: new Date().toISOString(),
             status: 'publishing',
             attempts: (item.igRecord?.attempts || 0) + 1,
-            creationId: item.igRecord?.creationId || null
+            creationId: item.igRecord?.creationId || null,
+            runId: runId
           };
-          console.log(`- Reservado Instagram para slug: ${item.slug}`);
+          console.log(`- Reservado Instagram para slug: ${item.slug} (runId: ${runId})`);
         }
       }
 
@@ -142,6 +146,8 @@ async function main() {
     const reservedPosts = [];
     let hasChanges = false;
 
+    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+
     for (const record of Object.values(socialData.posts)) {
       if (record.status === 'publishing') {
         const reservedDate = new Date(record.date);
@@ -156,7 +162,20 @@ async function main() {
             hasChanges = true;
           }
         } else {
-          reservedPosts.push(record);
+          // Validar que la reserva pertenezca a la ejecución actual para evitar colisiones entre runs paralelos o desfasados
+          const isLocalRun = record.runId && record.runId.startsWith('local');
+          const isCurrentRun = record.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+          
+          if (!isCurrentRun) {
+            console.warn(`! Reserva pertenece a otra ejecución (runId: ${record.runId}, actual: ${currentRunId}). Marcando como 'unknown' para evitar duplicaciones.`);
+            if (!DRY_RUN) {
+              record.status = 'unknown';
+              record.lastError = 'Reserva pertenece a otra ejecución diferente';
+              hasChanges = true;
+            }
+          } else {
+            reservedPosts.push(record);
+          }
         }
       }
     }
@@ -240,20 +259,27 @@ async function main() {
         if (imageUrl) {
           console.log('- Generando copy Instagram...');
           const igText = await generateSocialCopy({ ...item, platform: 'instagram' });
-          console.log('- Creando contenedor en Instagram...');
-          const containerData = await createInstagramContainer({ text: igText, imageUrl, dryRun: DRY_RUN });
+          
+          let creationId = record.creationId;
+          if (!creationId) {
+            console.log('- Creando contenedor en Instagram...');
+            const containerData = await createInstagramContainer({ text: igText, imageUrl, dryRun: DRY_RUN });
+            creationId = containerData.id;
+          } else {
+            console.log(`- Reutilizando contenedor existente de Instagram (creationId: ${creationId})`);
+          }
           
           if (!DRY_RUN) {
             socialData.posts[key] = {
               ...socialData.posts[key],
               status: 'prepared',
-              creationId: containerData.id,
+              creationId: creationId,
               preparedAt: new Date().toISOString()
             };
             await saveSocialData(socialData);
-            console.log(`✓ Contenedor Instagram preparado (creationId: ${containerData.id}) y guardado.`);
+            console.log(`✓ Contenedor Instagram preparado (creationId: ${creationId}) y guardado.`);
           } else {
-            console.log(`[DRY-RUN] Contenedor Instagram preparado: ${containerData.id}`);
+            console.log(`[DRY-RUN] Contenedor Instagram preparado: ${creationId}`);
           }
         } else {
           console.log('! Saltando Instagram: esperando disponibilidad del asset.');
@@ -283,8 +309,13 @@ async function main() {
   if (RUN_PUBLISH || EXECUTE_ALL) {
     console.log('\n--- FASE 3: PUBLICACIÓN ---');
 
-    // Procesar Facebook (lee los 'publishing' de Facebook)
-    const fbReserved = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'facebook');
+    // Procesar Facebook (lee los 'publishing' de Facebook del run actual)
+    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+    const fbReserved = Object.values(socialData.posts).filter(p => {
+      if (p.status !== 'publishing' || p.platform !== 'facebook') return false;
+      const isLocalRun = p.runId && p.runId.startsWith('local');
+      return p.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+    });
     console.log(`Reservas de Facebook listas para publicar: ${fbReserved.length}`);
 
     for (const record of fbReserved) {
@@ -352,8 +383,13 @@ async function main() {
       await sleep(1000);
     }
 
-    // Procesar Instagram (lee los 'prepared' de Instagram)
-    const igPrepared = Object.values(socialData.posts).filter(p => p.status === 'prepared' && p.platform === 'instagram');
+    // Procesar Instagram (lee los 'prepared' de Instagram del run actual)
+    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+    const igPrepared = Object.values(socialData.posts).filter(p => {
+      if (p.status !== 'prepared' || p.platform !== 'instagram') return false;
+      const isLocalRun = p.runId && p.runId.startsWith('local');
+      return p.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+    });
     console.log(`Reservas de Instagram listas para publicar: ${igPrepared.length}`);
 
     for (const record of igPrepared) {
