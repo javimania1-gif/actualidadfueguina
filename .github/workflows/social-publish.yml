@@ -31,7 +31,7 @@ jobs:
       META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
       META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-      META_GRAPH_API_VERSION: 'v21.0'
+      META_GRAPH_API_VERSION: 'v25.0'
 
     steps:
       - name: Descargar repositorio
@@ -49,14 +49,14 @@ jobs:
 
       - name: Ejecutar publicación social (Fase 1 - Reserva)
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; }; then
-            echo "Modo DRY-RUN detectado, se salta reserva individual"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ env.META_PAGE_ACCESS_TOKEN }}" ]; }; then
+            echo "Modo DRY-RUN detectado, se salta reserva"
           else
             node scripts/social-publisher.mjs --reserve
           fi
 
       - name: Guardar reserva social en GitHub (Fase 1 - Commit)
-        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || secrets.META_PAGE_ACCESS_TOKEN != '') }}
+        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || env.META_PAGE_ACCESS_TOKEN != '') }}
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
@@ -69,17 +69,16 @@ jobs:
             echo "No hay nuevas reservas."
           fi
 
-      - name: Ejecutar publicación social (Fase 2 - Publicación)
+      - name: Ejecutar publicación social (Fase 2 - Preparación)
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; }; then
-            echo "Ejecutando simulación DRY-RUN completa"
-            node scripts/social-publisher.mjs --dry-run
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ env.META_PAGE_ACCESS_TOKEN }}" ]; }; then
+            echo "Modo DRY-RUN detectado, se salta preparación"
           else
-            node scripts/social-publisher.mjs --publish
+            node scripts/social-publisher.mjs --prepare
           fi
 
-      - name: Guardar cambios finales en GitHub (Fase 2 - Commit)
-        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || secrets.META_PAGE_ACCESS_TOKEN != '') }}
+      - name: Guardar preparación en GitHub (Fase 2 - Commit)
+        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || env.META_PAGE_ACCESS_TOKEN != '') }}
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
@@ -88,7 +87,30 @@ jobs:
             git add public/uploads/social/
           fi
           if ! git diff --cached --quiet; then
-            git commit -m "Publicación social y placas [skip ci]"
+            git commit -m "Preparación social y placas [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "Sin cambios en la preparación."
+          fi
+
+      - name: Ejecutar publicación social (Fase 3 - Publicación)
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ env.META_PAGE_ACCESS_TOKEN }}" ]; }; then
+            echo "Ejecutando simulación DRY-RUN completa"
+            node scripts/social-publisher.mjs --dry-run
+          else
+            node scripts/social-publisher.mjs --publish
+          fi
+
+      - name: Guardar cambios finales en GitHub (Fase 3 - Commit)
+        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || env.META_PAGE_ACCESS_TOKEN != '') }}
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add data/social-posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publicación social completada [skip ci]"
             git pull --rebase origin main
             git push origin main
           else
