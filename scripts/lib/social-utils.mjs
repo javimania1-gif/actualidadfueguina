@@ -60,6 +60,17 @@ export async function saveSocialData(data) {
  * Genera textos para redes sociales usando IA.
  */
 export async function generateSocialCopy({ title, description, category, location, tags, body, platform }) {
+  // Fallback sin conexión o local si falta el token de IA de GitHub
+  if (!process.env.GITHUB_TOKEN) {
+    console.log('! GITHUB_TOKEN no configurado localmente. Utilizando generador de copy fallback.');
+    if (platform === 'facebook') {
+      return `${title}\n\n${description}\n\nLeé la nota completa en: [URL]`;
+    } else {
+      const hashtags = [category, location, ...tags].map(t => '#' + t.replace(/[^a-zA-Z0-9]/g, '')).slice(0, 5).join(' ');
+      return `${title}\n\n${description}\n\n🔗 Leé la nota completa en el enlace de nuestra bio.\n\n${hashtags}`;
+    }
+  }
+
   const system = `Sos el Community Manager de Actualidad Fueguina.
 Tu tarea es escribir el copy para una publicación de ${platform.toUpperCase()}.
 Actualidad Fueguina es un medio serio, cercano y profesional de Tierra del Fuego.
@@ -132,6 +143,8 @@ export async function generateInstagramPlate({ title, category, imagePath, outpu
   const height = 1350;
 
   try {
+    // Asegurar que el directorio padre del archivo de salida exista
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
     let baseImage;
     if (imagePath && imagePath.startsWith('/')) {
       const fullPath = path.join(ROOT, 'public', imagePath);
@@ -199,30 +212,60 @@ export async function generateInstagramPlate({ title, category, imagePath, outpu
   }
 }
 
+export class MetaError extends Error {
+  constructor(message, { status, isAmbiguous }) {
+    super(message);
+    this.name = 'MetaError';
+    this.status = status;
+    this.isAmbiguous = isAmbiguous;
+  }
+}
+
 /**
- * Llama a la API con reintentos para errores recuperables.
+ * Ejecuta una petición POST a la API de Meta sin reintentos automáticos para evitar duplicados.
+ * Clasifica los errores en ambiguos o definitivos.
  */
-async function callMetaWithRetry(url, options, retries = 3) {
-  for (let i = 0; i < retries; i++) {
+export async function callMetaPost(url, options) {
+  try {
+    const res = await fetch(url, {
+      ...options,
+      method: 'POST'
+    });
+
+    let data;
     try {
-      const res = await fetch(url, options);
-      const data = await res.json();
-      if (res.ok) return data;
-
-      const errorMsg = data.error?.message || res.statusText;
-      const isRecoverable = [408, 429, 500, 502, 503, 504].includes(res.status) || errorMsg.includes('limit');
-
-      if (isRecoverable && i < retries - 1) {
-        const delay = Math.pow(2, i) * 2000;
-        console.warn(`Reintentando en ${delay}ms... (${errorMsg})`);
-        await sleep(delay);
-        continue;
-      }
-      throw new Error(errorMsg);
-    } catch (err) {
-      if (i === retries - 1) throw err;
-      await sleep(2000);
+      data = await res.json();
+    } catch {
+      const isAmbiguous = res.status >= 500 || res.status === 408 || res.status === 429;
+      throw new MetaError(`Respuesta no JSON de Meta (HTTP ${res.status})`, {
+        status: res.status,
+        isAmbiguous
+      });
     }
+
+    if (res.ok) {
+      return data;
+    }
+
+    const errorMsg = data.error?.message || res.statusText;
+    const errorCode = data.error?.code;
+
+    // Errores 5xx de Meta y códigos de error temporal/red/rate-limit son ambiguos.
+    const isAmbiguous = res.status >= 500 || [1, 2, 4, 10, 17, 341].includes(errorCode);
+
+    throw new MetaError(errorMsg, {
+      status: res.status,
+      isAmbiguous
+    });
+  } catch (err) {
+    if (err instanceof MetaError) {
+      throw err;
+    }
+    // Caídas de conexión, fallos DNS o timeouts de fetch son ambiguos
+    throw new MetaError(err.message, {
+      status: 0,
+      isAmbiguous: true
+    });
   }
 }
 
@@ -236,15 +279,14 @@ export async function publishToFacebook({ text, link, dryRun = false }) {
   if (!pageId || !accessToken) throw new Error('Credenciales faltantes');
 
   const url = `https://graph.facebook.com/${version}/${pageId}/feed`;
-  return callMetaWithRetry(url, {
-    method: 'POST',
+  return callMetaPost(url, {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: text.replace('[URL]', link), link, access_token: accessToken })
   });
 }
 
-export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
-  if (dryRun) return { id: 'dry-run-ig-' + Date.now() };
+export async function createInstagramContainer({ text, imageUrl, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-ig-container-' + Date.now() };
 
   const igUserId = process.env.META_IG_USER_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
@@ -253,16 +295,24 @@ export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
   if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 
   const containerUrl = `https://graph.facebook.com/${version}/${igUserId}/media`;
-  const containerData = await callMetaWithRetry(containerUrl, {
-    method: 'POST',
+  return callMetaPost(containerUrl, {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ image_url: imageUrl, caption: text, access_token: accessToken })
   });
+}
+
+export async function publishInstagramContainer({ creationId, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-ig-publish-' + Date.now() };
+
+  const igUserId = process.env.META_IG_USER_ID;
+  const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
+  const version = META_GRAPH_API_VERSION;
+
+  if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 
   const publishUrl = `https://graph.facebook.com/${version}/${igUserId}/media_publish`;
-  return callMetaWithRetry(publishUrl, {
-    method: 'POST',
+  return callMetaPost(publishUrl, {
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ creation_id: containerData.id, access_token: accessToken })
+    body: JSON.stringify({ creation_id: creationId, access_token: accessToken })
   });
 }
