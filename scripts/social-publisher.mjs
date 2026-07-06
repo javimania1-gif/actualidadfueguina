@@ -21,6 +21,15 @@ const SITE_URL = 'https://actualidadfueguina.com.ar';
 async function main() {
   console.log(`\n=== INICIO PROCESO SOCIAL ${DRY_RUN ? '(DRY RUN)' : ''} ===`);
 
+  // Identificador único de este intento de ejecución. Combina RUN_ID y RUN_ATTEMPT
+  // para que un re-run del mismo workflow no reconozca como propia una reserva anterior.
+  function buildRunId() {
+    const id = process.env.GITHUB_RUN_ID;
+    const attempt = process.env.GITHUB_RUN_ATTEMPT;
+    if (id && attempt) return `${id}-${attempt}`;
+    return `local-${Date.now()}`;
+  }
+
   const socialData = await loadSocialData();
 
   // FASE 1: RESERVA
@@ -98,7 +107,7 @@ async function main() {
       const toReserve = candidates.slice(0, MAX_POSTS_PER_RUN);
       console.log(`Candidatos disponibles: ${candidates.length}. Reservando: ${toReserve.length}`);
 
-      const runId = process.env.GITHUB_RUN_ID || `local-${Date.now()}`;
+      const runId = buildRunId();
 
       for (const item of toReserve) {
         console.log(`Reservando noticia: "${item.title}"`);
@@ -146,7 +155,7 @@ async function main() {
     const reservedPosts = [];
     let hasChanges = false;
 
-    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+    const currentRunId = buildRunId();
 
     for (const record of Object.values(socialData.posts)) {
       if (record.status === 'publishing') {
@@ -309,12 +318,12 @@ async function main() {
   if (RUN_PUBLISH || EXECUTE_ALL) {
     console.log('\n--- FASE 3: PUBLICACIÓN ---');
 
-    // Procesar Facebook (lee los 'publishing' de Facebook del run actual)
-    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+    // Procesar Facebook e Instagram usando el mismo runId del intento actual
+    const currentRunId = buildRunId();
     const fbReserved = Object.values(socialData.posts).filter(p => {
       if (p.status !== 'publishing' || p.platform !== 'facebook') return false;
       const isLocalRun = p.runId && p.runId.startsWith('local');
-      return p.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+      return p.runId === currentRunId || (currentRunId.startsWith('local') && isLocalRun);
     });
     console.log(`Reservas de Facebook listas para publicar: ${fbReserved.length}`);
 
@@ -383,12 +392,11 @@ async function main() {
       await sleep(1000);
     }
 
-    // Procesar Instagram (lee los 'prepared' de Instagram del run actual)
-    const currentRunId = process.env.GITHUB_RUN_ID || 'local';
+    // Procesar Instagram (lee los 'prepared' de Instagram del mismo runId)
     const igPrepared = Object.values(socialData.posts).filter(p => {
       if (p.status !== 'prepared' || p.platform !== 'instagram') return false;
       const isLocalRun = p.runId && p.runId.startsWith('local');
-      return p.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+      return p.runId === currentRunId || (currentRunId.startsWith('local') && isLocalRun);
     });
     console.log(`Reservas de Instagram listas para publicar: ${igPrepared.length}`);
 
