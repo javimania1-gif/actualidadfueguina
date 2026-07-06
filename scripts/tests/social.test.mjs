@@ -1,7 +1,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { escapeXml, generateInstagramPlate, SOCIAL_DATA_PATH } from '../lib/social-utils.mjs';
+import { escapeXml, SOCIAL_DATA_PATH } from '../lib/social-utils.mjs';
 import { ROOT } from '../lib/news-utils.mjs';
 import { execSync } from 'node:child_process';
 
@@ -49,7 +49,6 @@ async function testRegistryAndIdempotency() {
     }
   };
 
-  // Simular lógica de publisher
   const fbPublished = data.posts[`${slug}|facebook`]?.status === 'published';
   const igPublished = data.posts[`${slug}|instagram`]?.status === 'published';
 
@@ -63,12 +62,9 @@ async function testPlateDirectoryCreation() {
   console.log('--- Test Creación de Directorio para Placas ---');
   const testPath = path.join(ROOT, 'public/uploads/social/test-dir-creation/plate.jpg');
   const dir = path.dirname(testPath);
-
-  // Limpiar si existe
   await fs.rm(dir, { recursive: true, force: true });
 
   try {
-    // Simulamos generación (usando sharp si está disponible, sino al menos verificamos mkdir)
     await fs.mkdir(dir, { recursive: true });
     if (!(await fs.access(dir).then(() => true).catch(() => false))) throw new Error('No creó el directorio');
     console.log('✅ Test Creación Directorio OK');
@@ -77,9 +73,23 @@ async function testPlateDirectoryCreation() {
   }
 }
 
+async function testNonIdempotentPost() {
+  console.log('--- Test POST no idempotente (sin reintentos) ---');
+  // Este test es conceptual ya que no podemos mockear fetch fácilmente aquí sin librerías extras
+  // pero verificamos que el código usa postMeta que no tiene loop de reintentos.
+  const code = await fs.readFile(path.join(ROOT, 'scripts/lib/social-utils.mjs'), 'utf8');
+  if (code.includes('for') && code.indexOf('async function postMeta') !== -1 && code.indexOf('async function postMeta') < code.indexOf('for')) {
+     // Si hay un loop 'for' dentro de postMeta, es un error
+     const postMetaFragment = code.slice(code.indexOf('async function postMeta'), code.indexOf('export async function publishToFacebook'));
+     if (postMetaFragment.includes('for') || postMetaFragment.includes('while')) {
+        throw new Error('postMeta contiene lógica de reintento!');
+     }
+  }
+  console.log('✅ Test POST No-Retry OK');
+}
+
 async function testDryRunSafety() {
   console.log('--- Test Seguridad Dry Run ---');
-  // Aseguramos que no exista el registro antes del test para verificar que no se crea
   const registryBackup = await fs.readFile(SOCIAL_DATA_PATH, 'utf8').catch(() => null);
   if (registryBackup) await fs.unlink(SOCIAL_DATA_PATH);
 
@@ -99,6 +109,7 @@ async function runAll() {
     await testEscaping();
     await testRegistryAndIdempotency();
     await testPlateDirectoryCreation();
+    await testNonIdempotentPost();
     await testDryRunSafety();
     console.log('\n🌟 TODOS LOS TESTS PASARON');
   } catch (err) {

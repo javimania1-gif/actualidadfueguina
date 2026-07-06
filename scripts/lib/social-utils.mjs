@@ -201,21 +201,18 @@ export async function generateInstagramPlate({ title, category, imagePath, outpu
 }
 
 /**
- * Llama a la API con reintentos para errores recuperables.
+ * Realiza una petición GET con reintentos. Seguro para operaciones idempotentes.
  */
-async function callMetaWithRetry(url, options, retries = 3) {
+export async function fetchMeta(url, options = {}, retries = 3) {
   for (let i = 0; i < retries; i++) {
     try {
       const res = await fetch(url, options);
       const data = await res.json();
       if (res.ok) return data;
-
       const errorMsg = data.error?.message || res.statusText;
       const isRecoverable = [408, 429, 500, 502, 503, 504].includes(res.status) || errorMsg.includes('limit');
-
       if (isRecoverable && i < retries - 1) {
         const delay = Math.pow(2, i) * 2000;
-        console.warn(`Reintentando en ${delay}ms... (${errorMsg})`);
         await sleep(delay);
         continue;
       }
@@ -227,43 +224,41 @@ async function callMetaWithRetry(url, options, retries = 3) {
   }
 }
 
-export async function publishToFacebook({ text, link, dryRun = false }) {
-  if (dryRun) return { id: 'dry-run-fb-' + Date.now() };
-
-  const pageId = process.env.META_PAGE_ID;
-  const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
-  const version = META_GRAPH_API_VERSION;
-
-  if (!pageId || !accessToken) throw new Error('Credenciales faltantes');
-
-  const url = `https://graph.facebook.com/${version}/${pageId}/feed`;
-  return callMetaWithRetry(url, {
+/**
+ * Realiza una petición POST sin reintentos automáticos para evitar duplicados en operaciones no idempotentes.
+ */
+async function postMeta(url, body) {
+  const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: text.replace('[URL]', link), link, access_token: accessToken })
+    body: JSON.stringify(body)
   });
+  const data = await res.json();
+  if (!res.ok) {
+    throw new Error(data.error?.message || res.statusText);
+  }
+  return data;
+}
+
+export async function publishToFacebook({ text, link, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-fb-' + Date.now() };
+  const pageId = process.env.META_PAGE_ID;
+  const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
+  if (!pageId || !accessToken) throw new Error('Credenciales faltantes');
+
+  const url = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${pageId}/feed`;
+  return postMeta(url, { message: text.replace('[URL]', link), link, access_token: accessToken });
 }
 
 export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
   if (dryRun) return { id: 'dry-run-ig-' + Date.now() };
-
   const igUserId = process.env.META_IG_USER_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
-  const version = META_GRAPH_API_VERSION;
-
   if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 
-  const containerUrl = `https://graph.facebook.com/${version}/${igUserId}/media`;
-  const containerData = await callMetaWithRetry(containerUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ image_url: imageUrl, caption: text, access_token: accessToken })
-  });
+  const containerUrl = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media`;
+  const containerData = await postMeta(containerUrl, { image_url: imageUrl, caption: text, access_token: accessToken });
 
-  const publishUrl = `https://graph.facebook.com/${version}/${igUserId}/media_publish`;
-  return callMetaWithRetry(publishUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ creation_id: containerData.id, access_token: accessToken })
-  });
+  const publishUrl = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media_publish`;
+  return postMeta(publishUrl, { creation_id: containerData.id, access_token: accessToken });
 }
