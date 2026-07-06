@@ -25,7 +25,7 @@ concurrency:
 jobs:
   social-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       AF_MODEL: openai/gpt-4o-mini
@@ -48,32 +48,54 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar publicación social
+      - name: "[FASE 1] Reservar publicación"
+        id: fase1
         run: |
           DRY_RUN="${{ github.event.inputs.dry_run }}"
           TOKEN="${{ secrets.META_PAGE_ACCESS_TOKEN }}"
 
           if [ "$DRY_RUN" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "$TOKEN" ]; }; then
             echo "Ejecutando en modo DRY-RUN"
-            node scripts/social-publisher.mjs --dry-run
+            node scripts/social-publisher.mjs --reserve --dry-run
           else
-            node scripts/social-publisher.mjs
+            node scripts/social-publisher.mjs --reserve
           fi
 
-      - name: Guardar cambios en registro y placas
+      - name: Persistir Reserva
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
           git add data/social-posts.json
-          if [ -d "public/uploads/social" ]; then
-            git add public/uploads/social/
+          if [ -d "public/uploads/social" ]; then git add public/uploads/social/; fi
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Reserva de publicación social [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No hay nuevas reservas."
           fi
 
-          if git diff --cached --quiet; then
-            echo "No hay cambios en el registro social."
-            exit 0
+      - name: "[FASE 2] Ejecutar publicación"
+        run: |
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+          TOKEN="${{ secrets.META_PAGE_ACCESS_TOKEN }}"
+
+          if [ "$DRY_RUN" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "$TOKEN" ]; }; then
+            node scripts/social-publisher.mjs --publish --dry-run
+          else
+            node scripts/social-publisher.mjs --publish
           fi
-          git commit -m "Actualización de registro social y placas [skip ci]"
-          git pull --rebase origin main
-          git push origin main
+
+      - name: Guardar Resultados Finales
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git add data/social-posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Resultados de publicación social [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "Sin cambios finales."
+          fi
