@@ -5,7 +5,7 @@ date: "2026-07-06T13:54:55.000Z"
 category: "Ushuaia"
 location: "Ushuaia"
 tags: ["Ushuaia", "Cultura", "Noche mas larga", "Rock", "Musica local"]
-image: "https://www.ushuaia.gob.ar/image/company_logo?img_id=521900&t=1778713521516"
+image: "/uploads/auto/2026-07-06-56ed2d7bf7a709bc94.jpg"
 imageAlt: "Fiesta de la Noche Más Larga en Ushuaia"
 author: "Actualidad Fueguina"
 featured: false
