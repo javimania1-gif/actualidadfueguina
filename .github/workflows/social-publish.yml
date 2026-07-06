@@ -48,25 +48,50 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar publicación social
+      - name: Ejecutar publicación social (Fase 1 - Reserva)
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" && -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; then
-            echo "Ejecutando en modo DRY-RUN"
-            node scripts/social-publisher.mjs --dry-run
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; }; then
+            echo "Modo DRY-RUN detectado, se salta reserva individual"
           else
-            node scripts/social-publisher.mjs
+            node scripts/social-publisher.mjs --reserve
           fi
 
-      - name: Guardar cambios en registro y placas
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+      - name: Guardar reserva social en GitHub (Fase 1 - Commit)
+        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || secrets.META_PAGE_ACCESS_TOKEN != '') }}
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
-          git add data/social-posts.json public/uploads/social/
-          if git diff --cached --quiet; then
-            echo "No hay cambios en el registro social."
-            exit 0
+          git add data/social-posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Reserva social [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No hay nuevas reservas."
           fi
-          git commit -m "Actualización de registro social y placas [skip ci]"
-          git pull --rebase origin main
-          git push origin main
+
+      - name: Ejecutar publicación social (Fase 2 - Publicación)
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; }; then
+            echo "Ejecutando simulación DRY-RUN completa"
+            node scripts/social-publisher.mjs --dry-run
+          else
+            node scripts/social-publisher.mjs --publish
+          fi
+
+      - name: Guardar cambios finales en GitHub (Fase 2 - Commit)
+        if: ${{ github.event.inputs.dry_run != 'true' && (github.event_name != 'schedule' || secrets.META_PAGE_ACCESS_TOKEN != '') }}
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add data/social-posts.json
+          if [ -d "public/uploads/social" ]; then
+            git add public/uploads/social/
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Publicación social y placas [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "Sin cambios finales que registrar."
+          fi
