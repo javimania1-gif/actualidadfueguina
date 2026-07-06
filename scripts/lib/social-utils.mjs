@@ -4,7 +4,7 @@ import path from 'node:path';
 import { ROOT, callModel, extractJsonObject, cleanText, sleep } from './news-utils.mjs';
 
 export const SOCIAL_DATA_PATH = path.join(ROOT, 'data/social-posts.json');
-export const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || 'v21.0';
+export const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || 'v25.0';
 
 /**
  * Escapa caracteres especiales para XML/SVG.

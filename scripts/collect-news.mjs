@@ -77,8 +77,8 @@ for (const source of config.sources) {
     }
 
     const enoughMaterial = (article.text || '').length >= 400;
-    // Publicación 100% automática: omitimos la restricción de dominio oficial
-    const canAutoPublish = enoughMaterial && aiCount < MAX_AI_PER_RUN;
+    const official = source.mode === 'official-auto' || isOfficialDomain(article.finalUrl, config.officialDomains);
+    const canAutoPublish = official && enoughMaterial && aiCount < MAX_AI_PER_RUN;
 
     if (canAutoPublish) {
       try {

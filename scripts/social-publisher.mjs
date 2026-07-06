@@ -9,9 +9,10 @@ import {
 } from './lib/social-utils.mjs';
 
 const RUN_RESERVE = process.argv.includes('--reserve');
+const RUN_PREPARE = process.argv.includes('--prepare');
 const RUN_PUBLISH = process.argv.includes('--publish');
-// Si no se especifica ninguna opción, por defecto se ejecutan ambas consecutivamente
-const EXECUTE_ALL = !RUN_RESERVE && !RUN_PUBLISH;
+// Si no se especifica ninguna opción, por defecto se ejecutan todas consecutivamente
+const EXECUTE_ALL = !RUN_RESERVE && !RUN_PREPARE && !RUN_PUBLISH;
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const MAX_POSTS_PER_RUN = 1;
@@ -133,22 +134,164 @@ async function main() {
     }
   }
 
-  // FASE 2: PUBLICACIÓN
-  if (RUN_PUBLISH || EXECUTE_ALL) {
-    console.log('\n--- FASE 2: PUBLICACIÓN ---');
+  // FASE 2: PREPARACIÓN
+  if (RUN_PREPARE || EXECUTE_ALL) {
+    console.log('\n--- FASE 2: PREPARACIÓN ---');
 
-    // Buscar posts en estado 'publishing'
-    const reservedPosts = Object.values(socialData.posts).filter(p => p.status === 'publishing');
-    console.log(`Reservas activas encontradas para publicar: ${reservedPosts.length}`);
+    const now = new Date();
+    const reservedPosts = [];
+    let hasChanges = false;
+
+    for (const record of Object.values(socialData.posts)) {
+      if (record.status === 'publishing') {
+        const reservedDate = new Date(record.date);
+        const diffMs = now.getTime() - reservedDate.getTime();
+        const diffHours = diffMs / (1000 * 60 * 60);
+
+        if (diffHours > 1) {
+          console.warn(`! Reserva huérfana detectada para [${record.platform.toUpperCase()}] ${record.slug} (creada hace ${diffHours.toFixed(1)} horas). Marcando como 'unknown' para evitar duplicación.`);
+          if (!DRY_RUN) {
+            record.status = 'unknown';
+            record.lastError = 'Reserva huérfana no procesada por caída de ejecución anterior';
+            hasChanges = true;
+          }
+        } else {
+          reservedPosts.push(record);
+        }
+      }
+    }
+
+    if (hasChanges && !DRY_RUN) {
+      await saveSocialData(socialData);
+    }
+
+    console.log(`Reservas activas encontradas para preparar: ${reservedPosts.length}`);
 
     for (const record of reservedPosts) {
       const slug = record.slug;
       const platform = record.platform;
       const key = `${slug}|${platform}`;
 
-      console.log(`\nProcesando publicación para [${platform.toUpperCase()}]: ${slug}`);
+      // Facebook no necesita preparación
+      if (platform === 'facebook') {
+        console.log(`[FACEBOOK] ${slug}: Se saltará la preparación (listo directo para publicar).`);
+        continue;
+      }
 
-      // Leer archivo markdown de la noticia para obtener los textos frescos
+      console.log(`\nPreparando [${platform.toUpperCase()}]: ${slug}`);
+
+      let item;
+      try {
+        const fullPath = path.join(NEWS_DIR, `${slug}.md`);
+        const content = await fs.readFile(fullPath, 'utf8');
+        const { data, content: body } = matter(content);
+        item = {
+          slug,
+          title: data.title,
+          description: data.description,
+          category: data.category,
+          location: data.location,
+          tags: data.tags || [],
+          image: data.image,
+          body
+        };
+      } catch (err) {
+        console.error(`✗ Error al leer archivo de la noticia para ${slug}: ${err.message}`);
+        if (!DRY_RUN) {
+          socialData.posts[key].status = 'failed';
+          socialData.posts[key].lastError = `No se encontró el archivo markdown: ${err.message}`;
+          await saveSocialData(socialData);
+        }
+        continue;
+      }
+
+      try {
+        const plateFilename = `plate-${slug}.jpg`;
+        const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
+        let imageUrl = null;
+
+        if (item.image && item.image.startsWith('http')) {
+          imageUrl = item.image;
+        } else {
+          const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
+          if (plateExists) {
+            const publicUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
+            console.log(`- Verificando disponibilidad de asset: ${publicUrl}`);
+            const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
+            if (check.ok) {
+              imageUrl = publicUrl;
+            } else {
+              console.log('! Asset aún no disponible públicamente en Cloudflare.');
+            }
+          } else {
+            console.log('- Generando placa Instagram...');
+            const generated = await generateInstagramPlate({
+              title: item.title,
+              category: item.category,
+              imagePath: item.image,
+              outputPath: platePath
+            });
+            if (generated) {
+              console.log('! Placa generada. Estará disponible tras el commit y deploy.');
+            }
+          }
+        }
+
+        if (imageUrl) {
+          console.log('- Generando copy Instagram...');
+          const igText = await generateSocialCopy({ ...item, platform: 'instagram' });
+          console.log('- Creando contenedor en Instagram...');
+          const containerData = await createInstagramContainer({ text: igText, imageUrl, dryRun: DRY_RUN });
+          
+          if (!DRY_RUN) {
+            socialData.posts[key] = {
+              ...socialData.posts[key],
+              status: 'prepared',
+              creationId: containerData.id,
+              preparedAt: new Date().toISOString()
+            };
+            await saveSocialData(socialData);
+            console.log(`✓ Contenedor Instagram preparado (creationId: ${containerData.id}) y guardado.`);
+          } else {
+            console.log(`[DRY-RUN] Contenedor Instagram preparado: ${containerData.id}`);
+          }
+        } else {
+          console.log('! Saltando Instagram: esperando disponibilidad del asset.');
+          if (!DRY_RUN) {
+            socialData.posts[key].status = 'pending-asset';
+            await saveSocialData(socialData);
+          }
+        }
+      } catch (error) {
+        console.error(`✗ Error al preparar Instagram: ${error.message}`);
+        if (!DRY_RUN) {
+          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: isAmbiguous ? 'unknown' : 'failed',
+            lastError: error.message
+          };
+          await saveSocialData(socialData);
+          console.log(`Estado Instagram actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
+        }
+      }
+      await sleep(1000);
+    }
+  }
+
+  // FASE 3: PUBLICACIÓN
+  if (RUN_PUBLISH || EXECUTE_ALL) {
+    console.log('\n--- FASE 3: PUBLICACIÓN ---');
+
+    // Procesar Facebook (lee los 'publishing' de Facebook)
+    const fbReserved = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'facebook');
+    console.log(`Reservas de Facebook listas para publicar: ${fbReserved.length}`);
+
+    for (const record of fbReserved) {
+      const slug = record.slug;
+      const key = `${slug}|facebook`;
+      console.log(`\nPublicando [FACEBOOK]: ${slug}`);
+
       let item;
       try {
         const fullPath = path.join(NEWS_DIR, `${slug}.md`);
@@ -176,140 +319,103 @@ async function main() {
 
       const newsUrl = `${SITE_URL}/noticias/${slug}/`;
 
-      if (platform === 'facebook') {
-        try {
-          console.log('- Generando copy Facebook...');
-          const fbText = await generateSocialCopy({ ...item, platform: 'facebook' });
-          const result = await publishToFacebook({ text: fbText, link: newsUrl, dryRun: DRY_RUN });
+      try {
+        console.log('- Generando copy Facebook...');
+        const fbText = await generateSocialCopy({ ...item, platform: 'facebook' });
+        const result = await publishToFacebook({ text: fbText, link: newsUrl, dryRun: DRY_RUN });
 
-          if (!DRY_RUN) {
-            socialData.posts[key] = {
-              ...socialData.posts[key],
-              status: 'published',
-              remoteId: result.id,
-              publishedAt: new Date().toISOString()
-            };
-            console.log('✓ Publicado en Facebook');
-          } else {
-            console.log('[DRY-RUN] Facebook: ' + fbText.slice(0, 60) + '...');
-          }
-        } catch (error) {
-          console.error(`✗ Error Facebook: ${error.message}`);
-          if (!DRY_RUN) {
-            const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
-            socialData.posts[key] = {
-              ...socialData.posts[key],
-              status: isAmbiguous ? 'unknown' : 'failed',
-              lastError: error.message
-            };
-            console.log(`Estado Facebook actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
-          }
+        if (!DRY_RUN) {
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: 'published',
+            remoteId: result.id,
+            publishedAt: new Date().toISOString()
+          };
+          await saveSocialData(socialData);
+          console.log('✓ Publicado en Facebook');
+        } else {
+          console.log('[DRY-RUN] Facebook: ' + fbText.slice(0, 60) + '...');
         }
-        await sleep(1000);
-      }
-
-      if (platform === 'instagram') {
-        try {
-          const plateFilename = `plate-${slug}.jpg`;
-          const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
-
-          let imageUrl = null;
-
-          if (item.image && item.image.startsWith('http')) {
-            imageUrl = item.image;
-          } else {
-            const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
-            if (plateExists) {
-              const publicUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
-              console.log(`- Verificando disponibilidad de asset: ${publicUrl}`);
-              const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
-              if (check.ok) {
-                imageUrl = publicUrl;
-              } else {
-                console.log('! Asset aún no disponible públicamente en Cloudflare.');
-              }
-            } else {
-              console.log('- Generando placa Instagram...');
-              const generated = await generateInstagramPlate({
-                title: item.title,
-                category: item.category,
-                imagePath: item.image,
-                outputPath: platePath
-              });
-              if (generated) {
-                console.log('! Placa generada. Estará disponible tras el commit y deploy.');
-              }
-            }
-          }
-
-          if (imageUrl) {
-            console.log('- Generando copy Instagram...');
-            const igText = await generateSocialCopy({ ...item, platform: 'instagram' });
-            
-            let creationId = record.creationId;
-
-            // FASE 2.1: Crear contenedor de Instagram si no existe
-            if (!creationId) {
-              console.log('- Creando contenedor en Instagram...');
-              const containerData = await createInstagramContainer({ text: igText, imageUrl, dryRun: DRY_RUN });
-              creationId = containerData.id;
-              
-              if (!DRY_RUN) {
-                socialData.posts[key].creationId = creationId;
-                await saveSocialData(socialData);
-                console.log(`- Contenedor creado exitosamente (creationId: ${creationId}) y guardado.`);
-              } else {
-                console.log(`[DRY-RUN] Contenedor creado: ${creationId}`);
-              }
-            } else {
-              console.log(`- Reutilizando contenedor existente de Instagram (creationId: ${creationId})`);
-            }
-
-            // FASE 2.2: Publicar el contenedor en Instagram
-            console.log('- Publicando contenedor en Instagram...');
-            const result = await publishInstagramContainer({ creationId, dryRun: DRY_RUN });
-
-            if (!DRY_RUN) {
-              socialData.posts[key] = {
-                ...socialData.posts[key],
-                status: 'published',
-                remoteId: result.id,
-                publishedAt: new Date().toISOString()
-              };
-              console.log('✓ Publicado en Instagram');
-            } else {
-              console.log('[DRY-RUN] Instagram publicado: ' + igText.slice(0, 60) + '...');
-            }
-          } else {
-            console.log('! Saltando Instagram: esperando disponibilidad del asset.');
-            if (!DRY_RUN) {
-              // Si no está disponible el asset, lo dejamos en pending-asset para que vuelva a seleccionarse
-              socialData.posts[key] = {
-                ...socialData.posts[key],
-                status: 'pending-asset'
-              };
-            }
-          }
-        } catch (error) {
-          console.error(`✗ Error Instagram: ${error.message}`);
-          if (!DRY_RUN) {
-            const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
-            socialData.posts[key] = {
-              ...socialData.posts[key],
-              status: isAmbiguous ? 'unknown' : 'failed',
-              lastError: error.message
-              // Conservamos el creationId en el registro si ya existía, por si era un error temporal
-            };
-            console.log(`Estado Instagram actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
-          }
+      } catch (error) {
+        console.error(`✗ Error Facebook: ${error.message}`);
+        if (!DRY_RUN) {
+          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: isAmbiguous ? 'unknown' : 'failed',
+            lastError: error.message
+          };
+          await saveSocialData(socialData);
+          console.log(`Estado Facebook actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
         }
-        await sleep(1000);
+      }
+      await sleep(1000);
+    }
+
+    // Procesar Instagram (lee los 'prepared' de Instagram)
+    const igPrepared = Object.values(socialData.posts).filter(p => p.status === 'prepared' && p.platform === 'instagram');
+    console.log(`Reservas de Instagram listas para publicar: ${igPrepared.length}`);
+
+    for (const record of igPrepared) {
+      const slug = record.slug;
+      const key = `${slug}|instagram`;
+      console.log(`\nPublicando [INSTAGRAM]: ${slug}`);
+
+      let item;
+      try {
+        const fullPath = path.join(NEWS_DIR, `${slug}.md`);
+        const content = await fs.readFile(fullPath, 'utf8');
+        const { data, content: body } = matter(content);
+        item = {
+          slug,
+          title: data.title,
+          description: data.description,
+          category: data.category,
+          location: data.location,
+          tags: data.tags || [],
+          image: data.image,
+          body
+        };
+      } catch (err) {
+        console.error(`✗ Error al leer archivo de la noticia para ${slug}: ${err.message}`);
+        continue;
       }
 
-      // Guardar el estado de este post procesado de forma incremental
-      if (!DRY_RUN) {
-        await saveSocialData(socialData);
+      try {
+        const creationId = record.creationId;
+        if (!creationId) {
+          throw new Error('No se encontró creationId en el post preparado');
+        }
+
+        console.log('- Publicando contenedor en Instagram...');
+        const result = await publishInstagramContainer({ creationId, dryRun: DRY_RUN });
+
+        if (!DRY_RUN) {
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: 'published',
+            remoteId: result.id,
+            publishedAt: new Date().toISOString()
+          };
+          await saveSocialData(socialData);
+          console.log('✓ Publicado en Instagram');
+        } else {
+          console.log(`[DRY-RUN] Instagram publicado con container: ${creationId}`);
+        }
+      } catch (error) {
+        console.error(`✗ Error Instagram: ${error.message}`);
+        if (!DRY_RUN) {
+          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: isAmbiguous ? 'unknown' : 'failed',
+            lastError: error.message
+          };
+          await saveSocialData(socialData);
+          console.log(`Estado Instagram actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
+        }
       }
+      await sleep(1000);
     }
   }
 
