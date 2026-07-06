@@ -7,6 +7,18 @@ export const SOCIAL_DATA_PATH = path.join(ROOT, 'data/social-posts.json');
 export const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || 'v21.0';
 
 /**
+ * Error personalizado para la API de Meta.
+ */
+export class MetaError extends Error {
+  constructor(message, status, isAmbiguous = false) {
+    super(message);
+    this.name = 'MetaError';
+    this.status = status;
+    this.isAmbiguous = isAmbiguous;
+  }
+}
+
+/**
  * Escapa caracteres especiales para XML/SVG.
  */
 export function escapeXml(unsafe) {
@@ -25,7 +37,6 @@ export async function loadSocialData() {
   try {
     const content = await fs.readFile(SOCIAL_DATA_PATH, 'utf8');
     const data = JSON.parse(content);
-    // Migración de array a objeto si es necesario
     if (Array.isArray(data.posts)) {
       const posts = {};
       data.posts.forEach(p => {
@@ -45,7 +56,6 @@ export async function loadSocialData() {
  */
 export async function saveSocialData(data) {
   await fs.mkdir(path.dirname(SOCIAL_DATA_PATH), { recursive: true });
-  // Limpieza básica si hay demasiados
   const keys = Object.keys(data.posts);
   if (keys.length > 2000) {
     const sorted = keys.sort((a, b) => new Date(data.posts[b].date).getTime() - new Date(data.posts[a].date).getTime());
@@ -212,30 +222,40 @@ export async function fetchMeta(url, options = {}, retries = 3) {
       const errorMsg = data.error?.message || res.statusText;
       const isRecoverable = [408, 429, 500, 502, 503, 504].includes(res.status) || errorMsg.includes('limit');
       if (isRecoverable && i < retries - 1) {
-        const delay = Math.pow(2, i) * 2000;
-        await sleep(delay);
+        await sleep(Math.pow(2, i) * 2000);
         continue;
       }
-      throw new Error(errorMsg);
+      throw new MetaError(errorMsg, res.status, isRecoverable);
     } catch (err) {
-      if (i === retries - 1) throw err;
+      if (err instanceof MetaError) throw err;
+      if (i === retries - 1) throw new MetaError(err.message, 0, true); // Error de red es ambiguo
       await sleep(2000);
     }
   }
 }
 
 /**
- * Realiza una petición POST sin reintentos automáticos para evitar duplicados en operaciones no idempotentes.
+ * Realiza una petición POST sin reintentos automáticos para evitar duplicados.
  */
 async function postMeta(url, body) {
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
-  });
-  const data = await res.json();
+  let res;
+  try {
+    res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+  } catch (err) {
+    // Error de red/timeout en POST es ambiguo: ¿llegó a Meta?
+    throw new MetaError(err.message, 0, true);
+  }
+
+  const data = await res.json().catch(() => ({}));
   if (!res.ok) {
-    throw new Error(data.error?.message || res.statusText);
+    const errorMsg = data.error?.message || res.statusText;
+    // 5xx es ambiguo en POST
+    const isAmbiguous = res.status >= 500 || res.status === 408;
+    throw new MetaError(errorMsg, res.status, isAmbiguous);
   }
   return data;
 }
@@ -250,15 +270,22 @@ export async function publishToFacebook({ text, link, dryRun = false }) {
   return postMeta(url, { message: text.replace('[URL]', link), link, access_token: accessToken });
 }
 
-export async function publishToInstagram({ text, imageUrl, dryRun = false }) {
-  if (dryRun) return { id: 'dry-run-ig-' + Date.now() };
+export async function createInstagramContainer({ imageUrl, caption, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-ig-container-' + Date.now() };
   const igUserId = process.env.META_IG_USER_ID;
   const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
   if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
 
-  const containerUrl = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media`;
-  const containerData = await postMeta(containerUrl, { image_url: imageUrl, caption: text, access_token: accessToken });
+  const url = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media`;
+  return postMeta(url, { image_url: imageUrl, caption, access_token: accessToken });
+}
 
-  const publishUrl = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media_publish`;
-  return postMeta(publishUrl, { creation_id: containerData.id, access_token: accessToken });
+export async function publishInstagramContainer({ creationId, dryRun = false }) {
+  if (dryRun) return { id: 'dry-run-ig-publish-' + Date.now() };
+  const igUserId = process.env.META_IG_USER_ID;
+  const accessToken = process.env.META_PAGE_ACCESS_TOKEN;
+  if (!igUserId || !accessToken) throw new Error('Credenciales faltantes');
+
+  const url = `https://graph.facebook.com/${META_GRAPH_API_VERSION}/${igUserId}/media_publish`;
+  return postMeta(url, { creation_id: creationId, access_token: accessToken });
 }
