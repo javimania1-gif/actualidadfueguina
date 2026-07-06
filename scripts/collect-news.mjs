@@ -20,6 +20,39 @@ let aiCount = 0;
 let draftCount = 0;
 let publishedCount = 0;
 
+const existingUrls = new Set();
+const existingTitles = new Set();
+
+async function indexExistingDocs(dir) {
+  try {
+    for (const file of await fs.readdir(dir)) {
+      if (!file.endsWith('.md')) continue;
+      const content = await fs.readFile(path.join(dir, file), 'utf8');
+      const urlMatch = content.match(/^sourceUrl:\s*['"]?(.*?)['"]?$/m);
+      if (urlMatch) existingUrls.add(urlMatch[1].trim());
+      const titleMatch = content.match(/^title:\s*['"]?(.*?)['"]?$/m);
+      if (titleMatch) existingTitles.add(titleMatch[1].trim().toLowerCase());
+    }
+  } catch (error) {}
+}
+
+function isSimilarTitle(newTitle) {
+  if (!newTitle) return false;
+  const words1 = new Set(newTitle.toLowerCase().match(/\b\w{4,}\b/g) || []);
+  if (words1.size < 3) return existingTitles.has(newTitle.toLowerCase());
+  for (const oldTitle of existingTitles) {
+    const words2 = new Set(oldTitle.match(/\b\w{4,}\b/g) || []);
+    const intersection = [...words1].filter(x => words2.has(x)).length;
+    const union = new Set([...words1, ...words2]).size;
+    if (union > 0 && (intersection / union) > 0.45) return true;
+  }
+  return false;
+}
+
+await indexExistingDocs(NEWS_DIR);
+await indexExistingDocs(DRAFTS_DIR);
+console.log(`Índice de desduplicación: ${existingUrls.size} URLs y ${existingTitles.size} títulos registrados.`);
+
 async function readSource(source) {
   if (source.type === 'rss') {
     const feed = await parser.parseURL(source.url);
@@ -70,15 +103,19 @@ for (const source of config.sources) {
       continue;
     }
 
-    const canonicalKey = hash(article.finalUrl || item.link);
-    if (seen.items[canonicalKey]) {
+    const finalUrl = article.finalUrl || item.link;
+    const canonicalKey = hash(finalUrl);
+    const currentTitle = (article.title || item.title || '').trim();
+
+    if (seen.items[canonicalKey] || existingUrls.has(finalUrl) || isSimilarTitle(currentTitle)) {
       seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
       continue;
     }
 
     const enoughMaterial = (article.text || '').length >= 400;
     const official = source.mode === 'official-auto' || isOfficialDomain(article.finalUrl, config.officialDomains);
-    const canAutoPublish = official && enoughMaterial && aiCount < MAX_AI_PER_RUN;
+    // El usuario solicitó explícitamente publicar de TODAS las fuentes si tienen suficiente material
+    const canAutoPublish = enoughMaterial && aiCount < MAX_AI_PER_RUN;
 
     if (canAutoPublish) {
       try {
