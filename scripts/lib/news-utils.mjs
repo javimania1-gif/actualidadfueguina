@@ -305,6 +305,8 @@ ${sourceText.slice(0, 14000)}`;
 }
 
 export function makeNewsMarkdown({ ai, date, image, sourceName, sourceUrl, featured = false, automated = true }) {
+  const importance = ai.importance || 5;
+  const urgent = importance >= 9;
   return `---
 title: ${yamlString(ai.title)}
 description: ${yamlString(ai.description)}
@@ -316,6 +318,10 @@ image: ${yamlString(image || '')}
 imageAlt: ${yamlString(ai.imageAlt || ai.title)}
 author: "Actualidad Fueguina"
 featured: ${featured ? 'true' : 'false'}
+importance: ${importance}
+social:
+  enabled: true
+  urgent: ${urgent ? 'true' : 'false'}
 sourceName: ${yamlString(sourceName)}
 sourceUrl: ${yamlString(sourceUrl)}
 automated: ${automated ? 'true' : 'false'}

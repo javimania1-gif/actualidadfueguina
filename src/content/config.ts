@@ -16,7 +16,12 @@ const noticias = defineCollection({
     sourceName: z.string().optional(),
     sourceUrl: z.string().url().optional(),
     automated: z.boolean().default(false),
-    dailyDigest: z.boolean().default(false)
+    dailyDigest: z.boolean().default(false),
+    importance: z.number().min(1).max(10).default(5),
+    social: z.object({
+      enabled: z.boolean().default(true),
+      urgent: z.boolean().default(false)
+    }).default({ enabled: true, urgent: false })
   })
 });
 

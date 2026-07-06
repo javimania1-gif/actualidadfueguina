@@ -52,14 +52,34 @@ jobs:
         run: npm run build
 
       - name: Guardar cambios
+        id: guardar
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
           git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json
+
           if git diff --cached --quiet; then
             echo "No hay novedades para guardar."
+            echo "urgent_added=false" >> $GITHUB_OUTPUT
             exit 0
           fi
+
+          # Detectar si se añadieron o modificaron líneas con 'urgent: true' en el diff staged
+          if git diff --cached --unified=0 -- src/content/noticias | grep '^+.*urgent: true' > /dev/null; then
+            echo "urgent_added=true" >> $GITHUB_OUTPUT
+          else
+            echo "urgent_added=false" >> $GITHUB_OUTPUT
+          fi
+
           git commit -m "Actualización automática de noticias"
           git pull --rebase origin main
           git push origin main
+
+      - name: Disparar publicación social inmediata si hay urgentes
+        if: success() && steps.guardar.outputs.urgent_added == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Se detectó nueva noticia urgente en el commit actual. Disparando workflow social..."
+          gh workflow run social-publish.yml -f dry_run=false

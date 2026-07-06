@@ -1,0 +1,72 @@
+name: Actualidad Fueguina - Publicación en Redes
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Modo simulación (no publica realmente)'
+        type: boolean
+        default: true
+  schedule:
+    # 09:15, 12:45, 16:15, 20:45 de Tierra del Fuego (UTC-3)
+    - cron: '15 12 * * *'
+    - cron: '45 15 * * *'
+    - cron: '15 19 * * *'
+    - cron: '45 23 * * *'
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: actualidad-fueguina-social-publish
+  cancel-in-progress: false
+
+jobs:
+  social-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AF_MODEL: openai/gpt-4o-mini
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+      META_GRAPH_API_VERSION: ${{ vars.META_GRAPH_API_VERSION || secrets.META_GRAPH_API_VERSION }}
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar publicación social
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" && -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; then
+            echo "Ejecutando en modo DRY-RUN"
+            node scripts/social-publisher.mjs --dry-run
+          else
+            node scripts/social-publisher.mjs
+          fi
+
+      - name: Guardar cambios en registro y placas
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add data/social-posts.json public/uploads/social/
+          if git diff --cached --quiet; then
+            echo "No hay cambios en el registro social."
+            exit 0
+          fi
+          git commit -m "Actualización de registro social y placas [skip ci]"
+          git pull --rebase origin main
+          git push origin main
