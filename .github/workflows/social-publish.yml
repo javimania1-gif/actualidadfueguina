@@ -8,11 +8,10 @@ on:
         type: boolean
         default: true
   schedule:
-    # 09:15, 12:45, 16:15, 20:45 de Tierra del Fuego (UTC-3)
-    - cron: '15 12 * * *'
-    - cron: '45 15 * * *'
-    - cron: '15 19 * * *'
-    - cron: '45 23 * * *'
+    # 3 veces al día (08:45, 15:45 y 22:45 de Tierra del Fuego / UTC-3)
+    - cron: '45 11 * * *'
+    - cron: '45 18 * * *'
+    - cron: '45 1 * * *'
 
 permissions:
   contents: write
