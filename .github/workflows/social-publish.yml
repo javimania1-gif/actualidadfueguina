@@ -63,7 +63,9 @@ jobs:
           git add data/social-posts.json
           if ! git diff --cached --quiet; then
             git commit -m "Reserva social [skip ci]"
+            git stash --include-untracked || true
             git pull --rebase origin main
+            git stash pop || true
             git push origin main
           else
             echo "No hay nuevas reservas."
@@ -88,7 +90,9 @@ jobs:
           fi
           if ! git diff --cached --quiet; then
             git commit -m "Preparación social y placas [skip ci]"
+            git stash --include-untracked || true
             git pull --rebase origin main
+            git stash pop || true
             git push origin main
           else
             echo "Sin cambios en la preparación."
@@ -111,7 +115,9 @@ jobs:
           git add data/social-posts.json
           if ! git diff --cached --quiet; then
             git commit -m "Publicación social completada [skip ci]"
+            git stash --include-untracked || true
             git pull --rebase origin main
+            git stash pop || true
             git push origin main
           else
             echo "Sin cambios finales que registrar."

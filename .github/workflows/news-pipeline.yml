@@ -70,7 +70,12 @@ jobs:
           fi
 
           git commit -m "Actualización automática de noticias"
+
+          # Guardar cambios residuales que el script pudo generar fuera de las rutas explícitas
+          git stash --include-untracked || true
           git pull --rebase origin main
+          git stash pop || true
+
           git push origin main
 
       - name: Disparar publicación social inmediata si hay urgentes
