@@ -5,7 +5,7 @@ date: "2026-07-06T13:54:55.000Z"
 category: "Ushuaia"
 location: "Ushuaia"
 tags: ["Ushuaia", "Muralismo", "Cultura", "Turismo", "Casa Pena"]
-image: "/uploads/auto/plate-2026-07-06-murales.jpg"
+image: "/uploads/auto/2026-07-06-56e8ede022a62ec916.jpg"
 imageAlt: "Presentación del circuito de muralismo EMUSH"
 author: "Actualidad Fueguina"
 featured: false

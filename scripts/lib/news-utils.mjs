@@ -441,3 +441,27 @@ export async function generateWebPlate({ title, category, outputPath }) {
     return null;
   }
 }
+
+export async function searchWebImage(query) {
+  try {
+    const url = `https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=${encodeURIComponent(query)}&gsrlimit=10&prop=imageinfo&iiprop=url&format=json&origin=*`;
+    const res = await fetch(url, { headers: { 'user-agent': 'ActualidadFueguinaBot/1.0' } });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const pages = data.query?.pages || {};
+    const urls = Object.values(pages)
+      .map(p => p.imageinfo?.[0]?.url)
+      .filter(Boolean)
+      .filter(u => {
+        const lower = u.toLowerCase();
+        return lower.endsWith('.jpg') || lower.endsWith('.jpeg') || lower.endsWith('.png');
+      });
+    if (urls.length > 0) {
+      const randomIndex = Math.floor(Math.random() * Math.min(urls.length, 5));
+      return urls[randomIndex];
+    }
+  } catch (error) {
+    console.warn('Error buscando imagen en Commons:', error.message);
+  }
+  return null;
+}

@@ -6,7 +6,7 @@ import {
   ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
   isOfficialDomain, downloadImage, callModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
-  generateWebPlate
+  generateWebPlate, searchWebImage
 } from './lib/news-utils.mjs';
 
 const parser = new Parser();
@@ -96,6 +96,16 @@ for (const source of config.sources) {
         let image = await downloadImage(article.image, article.finalUrl);
         const pubDate = safeDate(article.date || item.pubDate || new Date());
         
+        if (!image) {
+          // Intentar buscar una imagen real de la ubicación o tema en Wikimedia Commons
+          console.log(`! Buscando foto real para: ${ai.location} ${ai.category}`);
+          const commonsUrl = await searchWebImage(`${ai.location} ${ai.category}`);
+          if (commonsUrl) {
+            console.log(`! Foto real encontrada en Commons: ${commonsUrl}. Descargando...`);
+            image = await downloadImage(commonsUrl, article.finalUrl);
+          }
+        }
+
         // Generar una placa de portada web automatizada si no hay imagen real (o si fue descartada por ser institucional)
         if (!image) {
           const plateFilename = `plate-${datePrefix(pubDate)}-${canonicalKey.slice(0, 8)}.jpg`;
