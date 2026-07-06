@@ -5,7 +5,8 @@ import Parser from 'rss-parser';
 import {
   ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
-  isOfficialDomain, downloadImage, callModel, makeNewsMarkdown, makeDraftMarkdown, sleep
+  isOfficialDomain, downloadImage, callModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
+  generateWebPlate
 } from './lib/news-utils.mjs';
 
 const parser = new Parser();
@@ -92,8 +93,23 @@ for (const source of config.sources) {
         });
         aiCount += 1;
 
-        const image = await downloadImage(article.image, article.finalUrl);
+        let image = await downloadImage(article.image, article.finalUrl);
         const pubDate = safeDate(article.date || item.pubDate || new Date());
+        
+        // Generar una placa de portada web automatizada si no hay imagen real (o si fue descartada por ser institucional)
+        if (!image) {
+          const plateFilename = `plate-${datePrefix(pubDate)}-${canonicalKey.slice(0, 8)}.jpg`;
+          const localPath = path.join(ROOT, 'public/uploads/auto', plateFilename);
+          const plateResult = await generateWebPlate({
+            title: ai.title,
+            category: ai.category,
+            outputPath: localPath
+          });
+          if (plateResult) {
+            image = `/uploads/auto/${plateFilename}`;
+          }
+        }
+
         const filename = `${datePrefix(pubDate)}-${slugify(ai.title)}.md`;
         const target = path.join(NEWS_DIR, filename);
         const featured = ai.importance >= 9;

@@ -197,6 +197,14 @@ export function isOfficialDomain(url, domains = []) {
 
 export async function downloadImage(url, seed) {
   if (!url) return '';
+  
+  // Descartar imágenes corporativas de gacetillas repetitivas
+  const lowerUrl = url.toLowerCase();
+  if (lowerUrl.includes('company_logo') || lowerUrl.includes('logo-af') || lowerUrl.includes('/logo') || lowerUrl.includes('favicon') || lowerUrl.includes('avatar')) {
+    console.log(`! Descartando imagen corporativa: ${url}`);
+    return '';
+  }
+
   try {
     const response = await fetch(url, {
       redirect: 'follow',
@@ -352,4 +360,84 @@ mode: ${yamlString(mode)}
 
 ${material || 'No se pudo extraer el cuerpo completo. Revisar la URL de origen antes de publicar.'}
 `;
+}
+
+export function escapeXml(unsafe) {
+  return String(unsafe || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+export async function generateWebPlate({ title, category, outputPath }) {
+  let sharp;
+  try {
+    sharp = (await import('sharp')).default;
+  } catch (e) {
+    console.warn('Sharp no disponible para placas web.');
+    return null;
+  }
+
+  const width = 800;
+  const height = 450;
+
+  try {
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    
+    const background = { create: { width, height, channels: 4, background: { r: 0, g: 48, b: 87, alpha: 1 } } };
+
+    const words = title.split(' ');
+    let lines = [''];
+    let currentLine = 0;
+    for (const word of words) {
+      if ((lines[currentLine] + word).length < 28) {
+        lines[currentLine] += (lines[currentLine] ? ' ' : '') + word;
+      } else if (currentLine < 2) {
+        currentLine++;
+        lines[currentLine] = word;
+      } else {
+        if (!lines[currentLine].endsWith('...')) lines[currentLine] += '...';
+        break;
+      }
+    }
+
+    const logoPath = path.join(ROOT, 'public/logo-af.jpg');
+    const hasLogo = await fs.access(logoPath).then(() => true).catch(() => false);
+    const composites = [];
+
+    if (hasLogo) {
+      const logoBuffer = await sharp(logoPath).resize(80, 80).toBuffer();
+      composites.push({ input: logoBuffer, top: 25, left: 695 });
+    }
+
+    const escapedCategory = escapeXml(category.toUpperCase());
+    const escapedLines = lines.map(escapeXml);
+
+    const overlaySvg = `
+      <svg width="${width}" height="${height}">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#003057;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#001529;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grad)" />
+        <text x="40" y="60" font-family="sans-serif" font-size="20" font-weight="bold" fill="#38bdf8" letter-spacing="1">${escapedCategory}</text>
+        <text x="40" y="200" font-family="sans-serif" font-size="36" font-weight="bold" fill="#ffffff">${escapedLines[0]}</text>
+        ${escapedLines[1] ? `<text x="40" y="260" font-family="sans-serif" font-size="36" font-weight="bold" fill="#ffffff">${escapedLines[1]}</text>` : ''}
+        ${escapedLines[2] ? `<text x="40" y="320" font-family="sans-serif" font-size="36" font-weight="bold" fill="#ffffff">${escapedLines[2]}</text>` : ''}
+        <text x="40" y="410" font-family="sans-serif" font-size="18" fill="#94a3b8">actualidadfueguina.com.ar</text>
+      </svg>
+    `;
+
+    composites.push({ input: Buffer.from(overlaySvg), top: 0, left: 0 });
+
+    await sharp(background).composite(composites).toFile(outputPath);
+    return outputPath;
+  } catch (error) {
+    console.error('Error generando placa web:', error);
+    return null;
+  }
 }
