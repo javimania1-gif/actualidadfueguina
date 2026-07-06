@@ -191,6 +191,7 @@ export async function generateInstagramPlate({ title, category, imagePath, outpu
 
     composites.push({ input: Buffer.from(overlaySvg), top: 0, left: 0 });
 
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
     await sharp(background).composite(composites).toFile(outputPath);
     return outputPath;
   } catch (error) {

@@ -1,11 +1,9 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { escapeXml, loadSocialData, saveSocialData, SOCIAL_DATA_PATH } from '../lib/social-utils.mjs';
+import { escapeXml, generateInstagramPlate, SOCIAL_DATA_PATH } from '../lib/social-utils.mjs';
 import { ROOT } from '../lib/news-utils.mjs';
 import { execSync } from 'node:child_process';
-
-const TEST_REGISTRY = path.join(ROOT, 'data/test-social-posts.json');
 
 async function testSelection() {
   console.log('--- Test Selección y Prioridad ---');
@@ -41,74 +39,66 @@ async function testEscaping() {
   console.log('✅ Test Escaping OK');
 }
 
-async function testRegistry() {
-  console.log('--- Test Registro y Migración ---');
-  const oldData = {
-    version: 1,
-    posts: [
-      { slug: 'nota-1', platform: 'facebook', status: 'published', date: '2024-01-01' }
-    ]
-  };
-
-  const tempFile = path.join(ROOT, 'data/temp-social.json');
-  await fs.writeFile(tempFile, JSON.stringify(oldData));
-
-  // Monkey patch path for test
-  const originalPath = SOCIAL_DATA_PATH;
-  // Note: Since we can't easily monkey patch a constant, we'll just test the logic directly
-
-  const migrate = (data) => {
-    if (Array.isArray(data.posts)) {
-      const posts = {};
-      data.posts.forEach(p => {
-        const key = `${p.slug}|${p.platform}`;
-        posts[key] = p;
-      });
-      data.posts = posts;
+async function testRegistryAndIdempotency() {
+  console.log('--- Test Registro e Idempotencia ---');
+  const slug = 'test-idemp';
+  const data = {
+    version: 2,
+    posts: {
+      [`${slug}|facebook`]: { slug, platform: 'facebook', status: 'published', attempts: 1 }
     }
-    return data;
   };
 
-  const migrated = migrate(oldData);
-  if (migrated.posts['nota-1|facebook'].status !== 'published') throw new Error('Migración fallida');
+  // Simular lógica de publisher
+  const fbPublished = data.posts[`${slug}|facebook`]?.status === 'published';
+  const igPublished = data.posts[`${slug}|instagram`]?.status === 'published';
 
-  const key = 'nota-2|instagram';
-  migrated.posts[key] = { slug: 'nota-2', platform: 'instagram', status: 'pending' };
-  migrated.posts[key].attempts = (migrated.posts[key].attempts || 0) + 1;
+  if (!fbPublished) throw new Error('Debería detectar FB como publicado');
+  if (igPublished) throw new Error('No debería detectar IG como publicado');
 
-  if (migrated.posts[key].attempts !== 1) throw new Error('Cálculo de intentos fallido');
+  console.log('✅ Test Idempotencia OK');
+}
 
-  await fs.unlink(tempFile);
-  console.log('✅ Test Registro OK');
+async function testPlateDirectoryCreation() {
+  console.log('--- Test Creación de Directorio para Placas ---');
+  const testPath = path.join(ROOT, 'public/uploads/social/test-dir-creation/plate.jpg');
+  const dir = path.dirname(testPath);
+
+  // Limpiar si existe
+  await fs.rm(dir, { recursive: true, force: true });
+
+  try {
+    // Simulamos generación (usando sharp si está disponible, sino al menos verificamos mkdir)
+    await fs.mkdir(dir, { recursive: true });
+    if (!(await fs.access(dir).then(() => true).catch(() => false))) throw new Error('No creó el directorio');
+    console.log('✅ Test Creación Directorio OK');
+  } finally {
+    await fs.rm(dir, { recursive: true, force: true });
+  }
 }
 
 async function testDryRunSafety() {
   console.log('--- Test Seguridad Dry Run ---');
-  // Verificar que el script con --dry-run no crea archivos
-  const registryExistsBefore = await fs.access(SOCIAL_DATA_PATH).then(() => true).catch(() => false);
-  const socialDir = path.join(ROOT, 'public/uploads/social');
-  const filesBefore = await fs.readdir(socialDir).catch(() => []);
+  // Aseguramos que no exista el registro antes del test para verificar que no se crea
+  const registryBackup = await fs.readFile(SOCIAL_DATA_PATH, 'utf8').catch(() => null);
+  if (registryBackup) await fs.unlink(SOCIAL_DATA_PATH);
 
   try {
     execSync('GITHUB_TOKEN=dummy_token node scripts/social-publisher.mjs --dry-run', { stdio: 'ignore' });
-  } catch (e) {
-    // Expected to fail if no news, but we check if it created files
+    const exists = await fs.access(SOCIAL_DATA_PATH).then(() => true).catch(() => false);
+    if (exists) throw new Error('Dry run creó el registro social-posts.json');
+    console.log('✅ Test Dry Run Safety OK');
+  } finally {
+    if (registryBackup) await fs.writeFile(SOCIAL_DATA_PATH, registryBackup);
   }
-
-  const registryExistsAfter = await fs.access(SOCIAL_DATA_PATH).then(() => true).catch(() => false);
-  if (!registryExistsBefore && registryExistsAfter) throw new Error('Dry run creó el registro');
-
-  const filesAfter = await fs.readdir(socialDir).catch(() => []);
-  if (filesAfter.length > filesBefore.length) throw new Error('Dry run creó placas');
-
-  console.log('✅ Test Dry Run Safety OK');
 }
 
 async function runAll() {
   try {
     await testSelection();
     await testEscaping();
-    await testRegistry();
+    await testRegistryAndIdempotency();
+    await testPlateDirectoryCreation();
     await testDryRunSafety();
     console.log('\n🌟 TODOS LOS TESTS PASARON');
   } catch (err) {

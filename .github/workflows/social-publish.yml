@@ -50,7 +50,10 @@ jobs:
 
       - name: Ejecutar publicación social
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" && -z "${{ secrets.META_PAGE_ACCESS_TOKEN }}" ]; then
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+          TOKEN="${{ secrets.META_PAGE_ACCESS_TOKEN }}"
+
+          if [ "$DRY_RUN" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ -z "$TOKEN" ]; }; then
             echo "Ejecutando en modo DRY-RUN"
             node scripts/social-publisher.mjs --dry-run
           else
@@ -62,7 +65,11 @@ jobs:
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
-          git add data/social-posts.json public/uploads/social/
+          git add data/social-posts.json
+          if [ -d "public/uploads/social" ]; then
+            git add public/uploads/social/
+          fi
+
           if git diff --cached --quiet; then
             echo "No hay cambios en el registro social."
             exit 0
