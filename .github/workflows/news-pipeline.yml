@@ -3,10 +3,11 @@ name: Actualidad Fueguina - Noticias automáticas
 on:
   workflow_dispatch:
   schedule:
-    # 3 veces al día (08:00, 15:00 y 22:00 de Tierra del Fuego / UTC-3)
+    # 4 veces al día (08:00, 14:00, 20:00 y 02:00 de Tierra del Fuego / UTC-3)
     - cron: '0 11 * * *'
-    - cron: '0 18 * * *'
-    - cron: '0 1 * * *'
+    - cron: '0 17 * * *'
+    - cron: '0 23 * * *'
+    - cron: '0 5 * * *'
 
 permissions:
   contents: write
@@ -23,8 +24,10 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       AF_MODEL: openai/gpt-4o-mini
-      AF_MAX_AI_PER_RUN: '6'
-      AF_MAX_DRAFTS_PER_RUN: '8'
+      AF_MAX_AI_PER_RUN: '8'
+      AF_MAX_DRAFTS_PER_RUN: '10'
+      AF_MAX_PER_SOURCE: '2'
+      AF_SITE_URL: 'https://actualidadfueguina.com.ar'
 
     steps:
       - name: Descargar repositorio

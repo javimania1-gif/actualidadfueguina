@@ -15,8 +15,11 @@ const RUN_PUBLISH = process.argv.includes('--publish');
 const EXECUTE_ALL = !RUN_RESERVE && !RUN_PREPARE && !RUN_PUBLISH;
 
 const DRY_RUN = process.argv.includes('--dry-run');
-const MAX_POSTS_PER_RUN = 1;
-const SITE_URL = 'https://actualidadfueguina.com.ar';
+const MAX_FB_PER_RUN = Number(process.env.AF_MAX_FB_PER_RUN || 2);
+const MAX_IG_PER_RUN = Number(process.env.AF_MAX_IG_PER_RUN || 2);
+const SITE_URL = process.env.AF_SITE_URL || 'https://actualidadfueguina.com.ar';
+// Antigüedad máxima para publicación en redes (48 horas), en ms
+const MAX_AGE_SOCIAL_MS = 48 * 60 * 60 * 1000;
 
 async function main() {
   console.log(`\n=== INICIO PROCESO SOCIAL ${DRY_RUN ? '(DRY RUN)' : ''} ===`);
@@ -35,13 +38,21 @@ async function main() {
   // FASE 1: RESERVA
   if (RUN_RESERVE || EXECUTE_ALL) {
     console.log('\n--- FASE 1: RESERVA ---');
-    
-    // Comprobar si ya existe alguna reserva activa en el registro
-    const activeReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing');
-    
-    if (activeReservations.length > 0) {
-      console.log(`Ya existe una reserva activa para: ${activeReservations.map(r => r.slug).join(', ')}.`);
-      console.log('Se salta la reserva de un nuevo candidato.');
+
+    const now = new Date();
+    const runId = buildRunId();
+
+    // Contar reservas activas de Facebook e Instagram
+    const activeFbReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'facebook');
+    const activeIgReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'instagram');
+
+    const fbSlotsAvailable = Math.max(0, MAX_FB_PER_RUN - activeFbReservations.length);
+    const igSlotsAvailable = Math.max(0, MAX_IG_PER_RUN - activeIgReservations.length);
+
+    console.log(`Slots disponibles: Facebook ${fbSlotsAvailable}/${MAX_FB_PER_RUN}, Instagram ${igSlotsAvailable}/${MAX_IG_PER_RUN}`);
+
+    if (fbSlotsAvailable === 0 && igSlotsAvailable === 0) {
+      console.log('Todos los slots de reserva están ocupados. Se salta la reserva.');
     } else {
       const files = (await fs.readdir(NEWS_DIR)).filter(f => f.endsWith('.md'));
       const candidates = [];
@@ -54,13 +65,17 @@ async function main() {
 
         if (data.social?.enabled === false) continue;
 
+        // Verificar antigüedad: no publicar noticias con más de 48h (excepto urgentes)
+        const newsDate = data.date ? new Date(data.date) : new Date(0);
+        const ageMs = now - newsDate;
+        if (!data.social?.urgent && ageMs > MAX_AGE_SOCIAL_MS) continue;
+
         const fbKey = `${slug}|facebook`;
         const igKey = `${slug}|instagram`;
 
         const fbRecord = socialData.posts[fbKey];
         const igRecord = socialData.posts[igKey];
 
-        // Excluir si ya fue publicado, está en proceso de publicación, preparado, o requiere reconciliación
         const fbExcluded = fbRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(fbRecord.status);
         const igExcluded = igRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(igRecord.status);
 
@@ -77,70 +92,74 @@ async function main() {
           importance: data.importance || 5,
           urgent: data.social?.urgent || false,
           dailyDigest: !!data.dailyDigest,
+          date: newsDate,
           image: data.image,
           body,
           fbPublished: fbExcluded,
-          igPublished: igExcluded || (data.importance < 5), // IG requiere importancia >= 5
+          igPublished: igExcluded || (data.importance < 5),
           fbRecord,
           igRecord
         });
       }
 
-      const hourTDF = new Date(new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/Argentina/Ushuaia',
-        hour: 'numeric',
-        hour12: false
-      }).format(new Date())).getHours();
-
-      const isNight = hourTDF >= 20 || hourTDF < 6;
-
+      // Ordenar: urgentes primero → fecha de noticia más reciente → importancia
       candidates.sort((a, b) => {
         if (a.urgent && !b.urgent) return -1;
         if (!a.urgent && b.urgent) return 1;
-        if (isNight) {
-          if (a.dailyDigest && !b.dailyDigest) return -1;
-          if (!a.dailyDigest && b.dailyDigest) return 1;
-        }
+        const dateDiff = (b.date || new Date(0)) - (a.date || new Date(0));
+        if (Math.abs(dateDiff) > 30 * 60 * 1000) return dateDiff; // diferencia > 30min: priorizar reciente
         return b.importance - a.importance;
       });
 
-      const toReserve = candidates.slice(0, MAX_POSTS_PER_RUN);
-      console.log(`Candidatos disponibles: ${candidates.length}. Reservando: ${toReserve.length}`);
+      console.log(`Candidatos disponibles: ${candidates.length}`);
 
-      const runId = buildRunId();
+      let fbReserved = 0;
+      let igReserved = 0;
 
-      for (const item of toReserve) {
-        console.log(`Reservando noticia: "${item.title}"`);
-        
-        if (!item.fbPublished) {
+      for (const item of candidates) {
+        if (fbReserved >= fbSlotsAvailable && igReserved >= igSlotsAvailable) break;
+
+        let reservedSomething = false;
+
+        if (!item.fbPublished && fbReserved < fbSlotsAvailable) {
           const key = `${item.slug}|facebook`;
           socialData.posts[key] = {
             slug: item.slug,
             platform: 'facebook',
-            date: new Date().toISOString(),
+            date: now.toISOString(),
             status: 'publishing',
             attempts: (item.fbRecord?.attempts || 0) + 1,
-            runId: runId
+            runId
           };
-          console.log(`- Reservado Facebook para slug: ${item.slug} (runId: ${runId})`);
+          console.log(`- Reservado Facebook: "${item.title}" (runId: ${runId})`);
+          fbReserved++;
+          reservedSomething = true;
         }
-        
-        if (!item.igPublished) {
+
+        if (!item.igPublished && igReserved < igSlotsAvailable) {
           const key = `${item.slug}|instagram`;
           socialData.posts[key] = {
             slug: item.slug,
             platform: 'instagram',
-            date: new Date().toISOString(),
+            date: now.toISOString(),
             status: 'publishing',
             attempts: (item.igRecord?.attempts || 0) + 1,
             creationId: item.igRecord?.creationId || null,
-            runId: runId
+            runId
           };
-          console.log(`- Reservado Instagram para slug: ${item.slug} (runId: ${runId})`);
+          console.log(`- Reservado Instagram: "${item.title}" (runId: ${runId})`);
+          igReserved++;
+          reservedSomething = true;
+        }
+
+        if (reservedSomething) {
+          console.log(`  Reservando noticia: "${item.title}"`);
         }
       }
 
-      if (toReserve.length > 0 && !DRY_RUN) {
+      console.log(`Reservas realizadas: FB ${fbReserved}, IG ${igReserved}`);
+
+      if ((fbReserved > 0 || igReserved > 0) && !DRY_RUN) {
         await saveSocialData(socialData);
         console.log('✓ Reservas guardadas en disco.');
       }
@@ -193,7 +212,78 @@ async function main() {
       await saveSocialData(socialData);
     }
 
+    // RECOVERY: Procesar pending-asset de Instagram antes de reservas normales
+    const pendingAssets = Object.values(socialData.posts).filter(
+      p => p.platform === 'instagram' && p.status === 'pending-asset'
+    );
+    if (pendingAssets.length > 0) {
+      console.log(`\nRecuperando ${pendingAssets.length} post(s) de Instagram con pending-asset...`);
+      for (const record of pendingAssets) {
+        const key = `${record.slug}|instagram`;
+        const plateFilename = `plate-${record.slug}.jpg`;
+        const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
+
+        let recoveredUrl = null;
+
+        // Verificar si la imagen original ya está pública
+        try {
+          const fullPath = path.join(NEWS_DIR, `${record.slug}.md`);
+          const content = await fs.readFile(fullPath, 'utf8');
+          const { data } = matter(content);
+          if (data.image && data.image.startsWith('/uploads/')) {
+            const publicUrl = `${SITE_URL}${data.image}`;
+            const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
+            if (check.ok) {
+              recoveredUrl = publicUrl;
+              console.log(`✓ Imagen original disponible para recovery: ${publicUrl}`);
+            }
+          }
+        } catch {}
+
+        // Verificar si la placa social ya está pública
+        if (!recoveredUrl) {
+          const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
+          if (plateExists) {
+            const publicUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
+            const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
+            if (check.ok) {
+              recoveredUrl = publicUrl;
+              console.log(`✓ Placa disponible para recovery: ${publicUrl}`);
+            }
+          }
+        }
+
+        if (recoveredUrl && !DRY_RUN) {
+          // Crear contenedor Instagram ahora que tenemos imagen
+          try {
+            const fullPath = path.join(NEWS_DIR, `${record.slug}.md`);
+            const content = await fs.readFile(fullPath, 'utf8');
+            const { data, content: body } = matter(content);
+            const igText = await generateSocialCopy({
+              slug: record.slug, title: data.title, description: data.description,
+              category: data.category, location: data.location, tags: data.tags || [],
+              image: data.image, body, platform: 'instagram'
+            });
+            const containerData = await createInstagramContainer({ text: igText, imageUrl: recoveredUrl, dryRun: DRY_RUN });
+            socialData.posts[key] = {
+              ...socialData.posts[key],
+              status: 'prepared',
+              creationId: containerData.id,
+              preparedAt: new Date().toISOString()
+            };
+            await saveSocialData(socialData);
+            console.log(`✓ Recovery completado: ${record.slug} → prepared (creationId: ${containerData.id})`);
+          } catch (err) {
+            console.error(`✗ Recovery fallido para ${record.slug}: ${err.message}`);
+          }
+        } else if (!recoveredUrl) {
+          console.log(`! ${record.slug}: asset aún no disponible, se mantiene pending-asset.`);
+        }
+      }
+    }
+
     console.log(`Reservas activas encontradas para preparar: ${reservedPosts.length}`);
+
 
     for (const record of reservedPosts) {
       const slug = record.slug;
@@ -238,32 +328,50 @@ async function main() {
         const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
         let imageUrl = null;
 
+        // 1. Imagen HTTP directa
         if (item.image && item.image.startsWith('http')) {
           imageUrl = item.image;
-        } else {
+        }
+        // 2. Imagen relativa /uploads/ → construir URL absoluta y verificar disponibilidad
+        else if (item.image && item.image.startsWith('/uploads/')) {
+          const publicUrl = `${SITE_URL}${item.image}`;
+          console.log(`- Verificando imagen relativa como URL pública: ${publicUrl}`);
+          const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
+          if (check.ok) {
+            imageUrl = publicUrl;
+            console.log(`- Imagen pública disponible, se usará directamente.`);
+          } else {
+            console.log(`! Imagen relativa aún no disponible públicamente.`);
+          }
+        }
+        // 3. Si hay placa ya generada, verificarla
+        if (!imageUrl) {
           const plateExists = await fs.access(platePath).then(() => true).catch(() => false);
           if (plateExists) {
             const publicUrl = `${SITE_URL}/uploads/social/${plateFilename}`;
-            console.log(`- Verificando disponibilidad de asset: ${publicUrl}`);
+            console.log(`- Verificando disponibilidad de placa: ${publicUrl}`);
             const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
             if (check.ok) {
               imageUrl = publicUrl;
             } else {
-              console.log('! Asset aún no disponible públicamente en Cloudflare.');
-            }
-          } else {
-            console.log('- Generando placa Instagram...');
-            const generated = await generateInstagramPlate({
-              title: item.title,
-              category: item.category,
-              imagePath: item.image,
-              outputPath: platePath
-            });
-            if (generated) {
-              console.log('! Placa generada. Estará disponible tras el commit y deploy.');
+              console.log('! Placa existente aún no disponible públicamente en Cloudflare.');
             }
           }
         }
+        // 4. Generar nueva placa si no hay imagen disponible
+        if (!imageUrl) {
+          console.log('- Generando placa Instagram...');
+          const generated = await generateInstagramPlate({
+            title: item.title,
+            category: item.category,
+            imagePath: item.image,
+            outputPath: platePath
+          });
+          if (generated) {
+            console.log('! Placa generada. Estará disponible tras el commit y deploy.');
+          }
+        }
+
 
         if (imageUrl) {
           console.log('- Generando copy Instagram...');

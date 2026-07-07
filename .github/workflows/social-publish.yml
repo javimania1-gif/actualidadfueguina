@@ -8,10 +8,12 @@ on:
         type: boolean
         default: true
   schedule:
-    # 3 veces al día (08:45, 15:45 y 22:45 de Tierra del Fuego / UTC-3)
-    - cron: '45 11 * * *'
-    - cron: '45 18 * * *'
-    - cron: '45 1 * * *'
+    # 5 veces al día (09:30, 13:30, 17:30, 21:30, 01:30 de Tierra del Fuego / UTC-3)
+    - cron: '30 12 * * *'
+    - cron: '30 16 * * *'
+    - cron: '30 20 * * *'
+    - cron: '30 0 * * *'
+    - cron: '30 4 * * *'
 
 permissions:
   contents: write
@@ -28,6 +30,9 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       AF_MODEL: openai/gpt-4o-mini
+      AF_MAX_FB_PER_RUN: '2'
+      AF_MAX_IG_PER_RUN: '2'
+      AF_SITE_URL: 'https://actualidadfueguina.com.ar'
       META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
       META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}

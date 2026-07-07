@@ -40,7 +40,7 @@
       "location": "Tierra del Fuego AIAS",
       "defaultCategory": "Provincia",
       "mode": "discovery-draft",
-      "maxItems": 4
+      "maxItems": 5
     },
     {
       "id": "bing-rio-grande",
@@ -50,23 +50,23 @@
       "location": "Río Grande",
       "defaultCategory": "Río Grande",
       "mode": "discovery-draft",
-      "maxItems": 3
+      "maxItems": 4
     },
     {
       "id": "bing-ushuaia",
       "name": "Bing News — Ushuaia",
       "type": "rss",
-      "url": "https://www.bing.com/news/search?q=Ushuaia&format=rss",
+      "url": "https://www.bing.com/news/search?q=Ushuaia+%22Tierra+del+Fuego%22&format=rss",
       "location": "Ushuaia",
       "defaultCategory": "Ushuaia",
       "mode": "discovery-draft",
-      "maxItems": 3
+      "maxItems": 4
     },
     {
       "id": "bing-tolhuin",
       "name": "Bing News — Tolhuin",
       "type": "rss",
-      "url": "https://www.bing.com/news/search?q=Tolhuin&format=rss",
+      "url": "https://www.bing.com/news/search?q=Tolhuin+%22Tierra+del+Fuego%22&format=rss",
       "location": "Tolhuin",
       "defaultCategory": "Tolhuin",
       "mode": "discovery-draft",
@@ -81,6 +81,39 @@
       "defaultCategory": "Malvinas",
       "mode": "discovery-draft",
       "maxItems": 4
+    },
+    {
+      "id": "infobae-argentina",
+      "name": "Infobae Argentina",
+      "type": "rss",
+      "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
+      "location": "Argentina",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+    },
+    {
+      "id": "perfil-argentina",
+      "name": "Perfil Argentina",
+      "type": "rss",
+      "url": "https://www.perfil.com/rss/",
+      "location": "Argentina",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+    },
+    {
+      "id": "clarin-argentina",
+      "name": "Clarín Argentina",
+      "type": "rss",
+      "url": "https://www.clarin.com/rss/lo-ultimo/",
+      "location": "Argentina",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
     }
   ]
 }
