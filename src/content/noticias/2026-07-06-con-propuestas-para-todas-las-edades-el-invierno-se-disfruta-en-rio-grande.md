@@ -5,8 +5,8 @@ date: "2026-07-06T13:14:48.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["Rio Grande", "Vacaciones de invierno", "Municipio", "Cultura", "Deportes"]
-image: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5071081944275160106_x.jpg"
-imageAlt: "Invierno en Rio Grande"
+image: "/uploads/auto/2026-07-06-45055474a390fb1ed7.jpg"
+imageAlt: "Actividades de invierno en Río Grande"
 author: "Actualidad Fueguina"
 featured: false
 importance: 7
