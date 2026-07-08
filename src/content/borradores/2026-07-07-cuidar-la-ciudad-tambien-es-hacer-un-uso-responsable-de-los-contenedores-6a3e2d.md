@@ -8,7 +8,7 @@ sourceName: "Municipio de Río Grande"
 sourceUrl: "https://info.riogrande.gob.ar/cuidar-la-ciudad-tambien-es-hacer-un-uso-responsable-de-los-contenedores"
 originalImage: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5073333744088845423_y.jpg"
 status: "draft"
-detectedAt: "2026-07-08T15:47:17.197Z"
+detectedAt: "2026-07-08T17:13:59.032Z"
 mode: "official-review"
 ---
 

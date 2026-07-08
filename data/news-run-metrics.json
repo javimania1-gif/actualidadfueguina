@@ -1,65 +1,52 @@
 {
-  "generatedAt": "2026-07-08T15:47:17.222Z",
+  "generatedAt": "2026-07-08T17:13:59.046Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "28955787804",
-    "headSha": "ab15c6b1879baa75a2ed389fc7871d46bdba9957"
+    "runId": "28961457073",
+    "headSha": "79d098220809aa975742619632543dc2edb62261"
   },
   "metrics": {
     "sourcesConsulted": 16,
-    "candidatesDetected": 35,
+    "candidatesDetected": 36,
     "discardedDuplicate": 3,
-    "discardedQuality": 2,
+    "discardedQuality": 12,
     "discardedGenericTitle": 1,
-    "eventsGrouped": 28,
-    "verified": 13,
-    "pendingVerification": 14,
-    "conflicting": 1,
-    "published": 4,
-    "drafts": 6,
+    "eventsGrouped": 19,
+    "verified": 8,
+    "pendingVerification": 11,
+    "conflicting": 0,
+    "published": 2,
+    "drafts": 3,
     "modelErrors": 0,
-    "factualValidationErrors": 0,
+    "factualValidationErrors": 1,
     "discardedImportance": 2,
-    "discardedSourceLimit": 1,
-    "discardedNoAiBudget": 6,
+    "discardedSourceLimit": 0,
+    "discardedNoAiBudget": 2,
+    "discardedPublicationLimit": 1,
     "extractErrors": 0,
     "imageErrors": 0,
     "aiAttempts": 6,
     "aiCalls": 6,
     "imageSelections": [
       {
-        "title": "El Centro Municipal de Salud N.° 3 de Río Grande expande sus servicios y equipamiento",
+        "title": "La Juegoteca Municipal de Río Grande ofrece actividades recreativas para las vacaciones de invierno",
         "strategy": "article-og",
-        "query": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
+        "query": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
         "score": 82,
-        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875970_y.jpg"
+        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875994_x.jpg"
       },
       {
-        "title": "Pronóstico del tiempo en Río Grande para el 8 de julio de 2026",
+        "title": "La Cámara de Comercio de Ushuaia lanza PAIX para el desarrollo antártico",
         "strategy": "article-og",
-        "query": "Clima hoy en Río Grande, Tierra del Fuego: el pronóstico del tiempo para este miércoles 8 julio de 2026",
+        "query": "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias",
         "score": 82,
-        "source": "https://www.clarin.com/img/2025/04/30/ocaRtzj4M_2000x1500__1.jpg"
-      },
-      {
-        "title": "Pronóstico del tiempo en Ushuaia para el 8 de julio de 2026",
-        "strategy": "article-og",
-        "query": "Clima hoy en Ushuaia, Tierra del Fuego: el pronóstico del tiempo para este miércoles 8 julio de 2026",
-        "score": 82,
-        "source": "https://www.clarin.com/img/2025/04/30/Hm-nGLi3-_2000x1500__1.jpg"
-      },
-      {
-        "title": "Muestra 'Objetos de nuestra historia' en Río Grande",
-        "strategy": "article-og",
-        "query": "“Objetos de nuestra historia”: recorré una muestra que pone en valor el patrimonio de Río Grande",
-        "score": 82,
-        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5073333744088845487_y.jpg"
+        "source": "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/42/2674242_192f154ed153582fc483200ee57cd29c1441f32b14b8433d109f166d7668c4ce/sm.jpg"
       }
     ],
     "byCategory": {
-      "Río Grande": 3,
+      "Río Grande": 1,
       "Ushuaia": 1
     }
   },
@@ -69,16 +56,19 @@
     "officialAiBudget": 4,
     "discoveryAiUsed": 4,
     "discoveryAiBudget": 4,
-    "candidatesMaterialized": 35,
-    "totalCandidatesBeforeLimit": 35
+    "targetPublishedPerRun": 2,
+    "maxNormalPublishedPerRun": 3,
+    "extraSlotMinImportance": 8,
+    "candidatesMaterialized": 36,
+    "totalCandidatesBeforeLimit": 36
   },
   "reasonNoMorePublished": [
-    "14 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
+    "11 evento(s) quedaron pendientes de segunda fuente",
     "3 candidato(s) descartados por duplicado/similitud",
-    "2 candidato(s) descartados por calidad o fuente invalida",
+    "12 candidato(s) descartados por calidad o fuente invalida",
     "2 candidato(s) descartados por importancia editorial",
-    "1 candidato(s) quedaron por limite por fuente",
-    "6 candidato(s) quedaron sin presupuesto IA"
+    "2 candidato(s) quedaron sin presupuesto IA",
+    "1 candidato(s) quedaron por cupo editorial de corrida",
+    "1 candidato(s) bloqueados por validacion factual"
   ]
 }
