@@ -172,6 +172,28 @@ test('5 victimas bloquea salida que altera a 50 victimas', () => {
   assert.equal(validation.code, 'BLOCKED_FACTUAL_MISMATCH');
 });
 
+test('la validacion no exige hechos secundarios ruidosos en la salida', () => {
+  const validation = validateArticleAgainstFacts(
+    {
+      title: 'La provincia analiza una nueva agenda institucional',
+      description: 'La medida fue informada por fuentes oficiales.',
+      body: 'El informe describe la agenda provincial y no agrega cifras sensibles.'
+    },
+    {
+      verifiedFacts: {
+        teams: [],
+        scores: [],
+        people: ['Fuego Piden'],
+        places: ['Tierra del Fuego AIAS'],
+        numbers: ['07', '08'],
+        dates: ['2026-07-08']
+      },
+      conflicts: []
+    }
+  );
+  assert.equal(validation.ok, true);
+});
+
 test('dos titulos distintos del mismo evento generan misma clave base', () => {
   const a = extractFacts({
     article: {

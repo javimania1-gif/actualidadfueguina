@@ -74,7 +74,10 @@ export function isEventAlreadyPublished(title, publishedFingerprints = new Set()
 
 export function isRetryEligible(seenItem, now = Date.now()) {
   if (!seenItem) return false;
-  if (['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seenItem.status)) {
+  if (seenItem.status === 'discarded-editorial') {
+    return isRecoverableEditorialDiscard(seenItem, now);
+  }
+  if (['published', 'duplicate', 'stale'].includes(seenItem.status)) {
     return false;
   }
   if (![
@@ -89,6 +92,14 @@ export function isRetryEligible(seenItem, now = Date.now()) {
   if (seenItem.nextRetryAt) return now >= new Date(seenItem.nextRetryAt).getTime();
   const seenAt = new Date(seenItem.seenAt || 0).getTime();
   return (now - seenAt) < STALE_AFTER_MS;
+}
+
+export function isRecoverableEditorialDiscard(seenItem, now = Date.now()) {
+  if (!seenItem || seenItem.status !== 'discarded-editorial') return false;
+  if (seenItem.validationVersion) return false;
+  if (!String(seenItem.lastError || '').startsWith('BLOCKED_FACTUAL_MISMATCH')) return false;
+  const seenAt = new Date(seenItem.seenAt || 0).getTime();
+  return Number.isFinite(seenAt) && (now - seenAt) < STALE_AFTER_MS;
 }
 
 export function getNextRetryAt(attempts, now = Date.now()) {

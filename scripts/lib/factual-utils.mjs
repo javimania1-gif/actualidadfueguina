@@ -34,6 +34,8 @@ const KNOWN_PLACES = [
   'Islas Malvinas', 'Malvinas', 'Antartida', 'Antártida', 'Argentina'
 ];
 
+export const FACTUAL_VALIDATION_VERSION = 2;
+
 const CRITICAL_FIELDS = [
   'teams',
   'people',
@@ -79,14 +81,15 @@ function pickKnown(text, dictionary) {
 }
 
 function extractCapitalizedPhrases(text) {
-  const matches = cleanText(text).match(/\b[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+){0,3}/g) || [];
+  const normalizedText = cleanText(text).replace(/\s+/g, ' ');
+  const matches = normalizedText.match(/\b[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+){0,3}/g) || [];
   return unique(matches)
     .filter((value) => !/^(El|La|Los|Las|Un|Una|En|Del|Con|Actualidad Fueguina)$/.test(value))
     .slice(0, 12);
 }
 
 function extractNumbers(text) {
-  const values = cleanText(text).match(/\b\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:%|por ciento|millones?|pesos?|dolares?|usuarios?|victimas?|heridos?)?\b/gi) || [];
+  const values = cleanText(text).match(/\b\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:%|por ciento|millones?|pesos?|d[óo]lares?|usuarios?|v[íi]ctimas?|heridos?|fallecidos?|muertos?)?\b/gi) || [];
   return unique(values).slice(0, 12);
 }
 
@@ -201,19 +204,38 @@ function setsEqual(a, b) {
   return [...a].every((value) => b.has(value));
 }
 
+function isCriticalNumber(value) {
+  const normalized = normalizeText(value);
+  return /\b(victima|victimas|herido|heridos|fallecido|fallecidos|muerto|muertos|%|por ciento|millones?|pesos?|dolares?|usuarios?)\b/.test(normalized);
+}
+
+function isCriticalDate(value) {
+  const normalized = normalizeText(value);
+  if (!normalized || /^\d{4}-\d{2}-\d{2}$/.test(normalized)) return false;
+  return /\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|\d{1,2}\/\d{1,2}\/\d{2,4})\b/.test(normalized);
+}
+
+function comparableFactValues(field, values = []) {
+  if (field === 'numbers') return unique(values).filter(isCriticalNumber);
+  if (field === 'dates') return unique(values).filter(isCriticalDate);
+  return unique(values);
+}
+
 function diffValues(field, a = [], b = []) {
-  const setA = normalizedSet(a);
-  const setB = normalizedSet(b);
+  const leftValues = comparableFactValues(field, a);
+  const rightValues = comparableFactValues(field, b);
+  const setA = normalizedSet(leftValues);
+  const setB = normalizedSet(rightValues);
   if (setA.size === 0 || setB.size === 0) return [];
   if (setsEqual(setA, setB)) return [];
 
   if (['teams', 'scores', 'numbers', 'dates', 'laws'].includes(field)) {
-    return [...a, ...b].filter(Boolean);
+    return [...leftValues, ...rightValues].filter(Boolean);
   }
 
   const shared = [...setA].some((value) => setB.has(value));
   if (shared) return [];
-  return [...a, ...b].filter(Boolean);
+  return [...leftValues, ...rightValues].filter(Boolean);
 }
 
 export function findFactConflicts(factSets = []) {
@@ -223,6 +245,7 @@ export function findFactConflicts(factSets = []) {
       const left = factSets[i];
       const right = factSets[j];
       for (const field of ['teams', 'scores', 'numbers', 'dates', 'laws']) {
+        if (field === 'teams' && left.eventType !== 'sports-result' && right.eventType !== 'sports-result') continue;
         const values = diffValues(field, left[field], right[field]);
         if (values.length > 0) {
           conflicts.push({
@@ -388,16 +411,23 @@ export function selectBaseCandidate(candidates = []) {
 export function validateArticleAgainstFacts(ai = {}, verification = {}) {
   const text = normalizeText(`${ai.title || ''}\n${ai.description || ''}\n${ai.body || ''}`);
   const verifiedFacts = verification.verifiedFacts || verification;
+  const eventType = verification.eventType || verifiedFacts.eventType || 'general';
   const mismatches = [];
 
-  for (const field of CRITICAL_FIELDS) {
-    for (const value of verifiedFacts[field] || []) {
+  if (eventType === 'sports-result') {
+    for (const value of verifiedFacts.teams || []) {
       const normalized = normalizeText(value);
       if (!normalized || normalized.length < 2) continue;
-      if (field === 'dates' && /^\d{4}-\d{2}-\d{2}$/.test(normalized)) continue;
       if (!text.includes(normalized)) {
-        mismatches.push({ field, value, reason: 'missing-verified-fact' });
+        mismatches.push({ field: 'teams', value, reason: 'missing-critical-sports-fact' });
       }
+    }
+  }
+
+  for (const value of verifiedFacts.laws || []) {
+    const normalized = normalizeText(value);
+    if (normalized && normalized.length >= 2 && !text.includes(normalized)) {
+      mismatches.push({ field: 'laws', value, reason: 'missing-critical-law' });
     }
   }
 
@@ -409,7 +439,8 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
 
   for (const team of KNOWN_TEAMS_AND_COUNTRIES) {
     const normalized = normalizeText(team);
-    if (text.includes(normalized) && !allowedTeams.has(normalized)) {
+    const hasSportsFacts = eventType === 'sports-result' || (verifiedFacts.teams || []).length > 0;
+    if (hasSportsFacts && text.includes(normalized) && !allowedTeams.has(normalized)) {
       mismatches.push({ field: 'teams', value: team, reason: 'unsupported-critical-term' });
     }
   }
@@ -422,21 +453,17 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
     }
   }
 
-  const allowedNumbers = normalizedSet(verifiedFacts.numbers || []);
-  const outputNumbers = extractNumbers(text).filter((value) => {
-    const normalized = normalizeText(value);
-    if (!normalized) return false;
-    return /\b(victima|victimas|herido|heridos|fallecido|fallecidos|muerto|muertos|%|por ciento)\b/.test(normalized);
-  });
+  const allowedNumbers = normalizedSet((verifiedFacts.numbers || []).filter(isCriticalNumber));
+  const outputNumbers = extractNumbers(text).filter(isCriticalNumber);
   for (const value of outputNumbers) {
     const normalized = normalizeText(value);
-    if (allowedNumbers.size > 0 && normalized && !allowedNumbers.has(normalized)) {
+    if (normalized && !allowedNumbers.has(normalized)) {
       mismatches.push({ field: 'numbers', value, reason: 'unsupported-critical-number' });
     }
   }
 
-  const allowedDates = normalizedSet(verifiedFacts.dates || []);
-  for (const date of extractDates(text)) {
+  const allowedDates = normalizedSet((verifiedFacts.dates || []).filter(isCriticalDate));
+  for (const date of extractDates(text).filter(isCriticalDate)) {
     const normalized = normalizeText(date);
     if (allowedDates.size > 0 && normalized && !allowedDates.has(normalized)) {
       mismatches.push({ field: 'dates', value: date, reason: 'unsupported-critical-date' });

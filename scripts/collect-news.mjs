@@ -33,7 +33,8 @@ import {
   corroborateEvent,
   selectBaseCandidate,
   validateArticleAgainstFacts,
-  buildEventRecord
+  buildEventRecord,
+  FACTUAL_VALIDATION_VERSION
 } from './lib/factual-utils.mjs';
 import { selectImageForNews, logImageSelection } from './lib/image-plan.mjs';
 
@@ -87,11 +88,13 @@ const metrics = {
   published: 0,
   drafts: 0,
   modelErrors: 0,
+  factualValidationErrors: 0,
   discardedImportance: 0,
   discardedSourceLimit: 0,
   discardedNoAiBudget: 0,
   extractErrors: 0,
   imageErrors: 0,
+  aiAttempts: 0,
   aiCalls: 0,
   imageSelections: [],
   byCategory: {}
@@ -306,7 +309,15 @@ for (const candidate of candidatesToMaterialize) {
   const canonicalKey = hash(sourceRef.url || finalUrl);
 
   // Descartar si URL canónica ya vista como publicada
-  if (seen.items[canonicalKey] && ['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seen.items[canonicalKey].status)) {
+  const canonicalSeen = seen.items[canonicalKey];
+  const canonicalStatus = canonicalSeen?.status || '';
+  if (
+    canonicalSeen &&
+    (
+      ['published', 'duplicate', 'stale'].includes(canonicalStatus) ||
+      (canonicalStatus === 'discarded-editorial' && !isRetryEligible(canonicalSeen))
+    )
+  ) {
     seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
     metrics.discardedDuplicate++;
     continue;
@@ -533,6 +544,10 @@ for (const candidate of verifiedCandidates) {
 
   if (canPublish) {
     try {
+      if (isOfficial) officialAiUsed++;
+      else discoveryAiUsed++;
+      metrics.aiAttempts++;
+
       const ai = await writeArticleWithModel({
         sourceName: source.name,
         sourceUrl: sourceRef.url || article.finalUrl,
@@ -543,10 +558,14 @@ for (const candidate of verifiedCandidates) {
         defaultLocation: source.location,
         verifiedFacts: verification?.verifiedFacts || null
       });
+      metrics.aiCalls++;
 
       const factualValidation = validateArticleAgainstFacts(ai, verification || {});
       if (!factualValidation.ok) {
-        throw new Error(`${factualValidation.code}: ${JSON.stringify(factualValidation.mismatches).slice(0, 300)}`);
+        const validationError = new Error(`${factualValidation.code}: ${JSON.stringify(factualValidation.mismatches).slice(0, 300)}`);
+        validationError.code = factualValidation.code;
+        validationError.mismatches = factualValidation.mismatches;
+        throw validationError;
       }
 
       // Si la fuente tiene forceCategory, sobreescribir la categoría IA
@@ -555,16 +574,16 @@ for (const candidate of verifiedCandidates) {
       // Si la fuente tiene minImportance, descartar si la IA le dio importancia menor
       if (source.minImportance && ai.importance < source.minImportance) {
         console.log(`  DESCARTADA por threshold editorial (importance ${ai.importance} < ${source.minImportance}): ${ai.title}`);
-        if (isOfficial) officialAiUsed++; else discoveryAiUsed++; // se consumíó presupuesto igual
-        metrics.aiCalls++;
         metrics.discardedImportance++;
-        seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'discarded-editorial', source: source.id };
+        seen.items[canonicalKey] = {
+          seenAt: new Date().toISOString(),
+          status: 'discarded-editorial',
+          source: source.id,
+          editorialReason: 'importance-threshold'
+        };
+        seen.items[initialKey] = seen.items[canonicalKey];
         continue;
       }
-
-      if (isOfficial) officialAiUsed++;
-      else discoveryAiUsed++;
-      metrics.aiCalls++;
 
       if (!PERSIST_OUTPUTS) {
         console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
@@ -640,24 +659,27 @@ for (const candidate of verifiedCandidates) {
 
     } catch (error) {
       console.warn(`Falló redacción automática (${source.name}): ${error.message}`);
-      metrics.modelErrors++;
-      
-      if (error.message.includes('FACT_CHECK_FAILED') || error.message.includes('BLOCKED_FACTUAL_MISMATCH')) {
-        seen.items[initialKey] = {
+      if (error.code === 'BLOCKED_FACTUAL_MISMATCH' || error.message.includes('FACT_CHECK_FAILED') || error.message.includes('BLOCKED_FACTUAL_MISMATCH')) {
+        metrics.factualValidationErrors++;
+        seen.items[canonicalKey] = {
           seenAt: new Date().toISOString(),
           status: 'discarded-editorial',
           source: source.id,
+          validationVersion: FACTUAL_VALIDATION_VERSION,
           lastError: error.message.slice(0, 200)
         };
+        seen.items[initialKey] = seen.items[canonicalKey];
         continue; // descartar permanentemente
       }
 
-      seen.items[initialKey] = {
+      metrics.modelErrors++;
+      seen.items[canonicalKey] = {
         seenAt: new Date().toISOString(),
         status: 'model-error',
         source: source.id,
         lastError: error.message.slice(0, 200)
       };
+      seen.items[initialKey] = seen.items[canonicalKey];
       // Caer en borrador
     }
   }
@@ -730,10 +752,12 @@ console.log(`
   Eventos verificados: ${metrics.verified}
   Pending-verification: ${metrics.pendingVerification}
   Conflictos: ${metrics.conflicting}
+  Bloqueos de validacion factual: ${metrics.factualValidationErrors}
+  Errores reales de modelo: ${metrics.modelErrors}
   Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
   Borradores generados: ${metrics.drafts}
-  IA usada: ${metrics.aiCalls}/${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
+  IA intentada/respondida: ${metrics.aiAttempts}/${metrics.aiCalls} de ${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
   Por categoría: ${categoryStr}
 `);
 
@@ -765,7 +789,8 @@ function explainNoMorePublished(currentMetrics, extra = {}) {
   if (currentMetrics.discardedImportance > 0) reasons.push(`${currentMetrics.discardedImportance} candidato(s) descartados por importancia editorial`);
   if (currentMetrics.discardedSourceLimit > 0) reasons.push(`${currentMetrics.discardedSourceLimit} candidato(s) quedaron por limite por fuente`);
   if (currentMetrics.discardedNoAiBudget > 0) reasons.push(`${currentMetrics.discardedNoAiBudget} candidato(s) quedaron sin presupuesto IA`);
-  if (currentMetrics.modelErrors > 0) reasons.push(`${currentMetrics.modelErrors} error(es) de modelo`);
+  if (currentMetrics.factualValidationErrors > 0) reasons.push(`${currentMetrics.factualValidationErrors} candidato(s) bloqueados por validacion factual`);
+  if (currentMetrics.modelErrors > 0) reasons.push(`${currentMetrics.modelErrors} error(es) reales de modelo`);
   if ((extra.totalCandidatesBeforeLimit || 0) > (extra.candidatesMaterialized || 0)) {
     reasons.push(`${extra.totalCandidatesBeforeLimit - extra.candidatesMaterialized} candidato(s) no se materializaron por limite anti-timeout`);
   }
