@@ -4,7 +4,8 @@
  * Para cada fuente informa: items fetched, links resolved, articles extracted,
  * valid articles (body >= 400), generic titles, extract errors, avg body length.
  *
- * Una fuente UNHEALTHY (0 artículos válidos) no debe consumir presupuesto IA en collect-news.
+ * Este chequeo es diagnostico/preflight. collect-news no consume unhealthyIds
+ * como filtro duro salvo que se implemente explicitamente esa lectura.
  *
  * Uso: npm run news:sources-health
  *       node scripts/sources-health.mjs [--json]

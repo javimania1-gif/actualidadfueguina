@@ -5,6 +5,11 @@ import {
   escapeXml, callMetaPost, publishToFacebook,
   createInstagramContainer, publishInstagramContainer, MetaError
 } from '../lib/social-utils.mjs';
+import {
+  SOCIAL_STATUS,
+  shouldExcludeFromReservation,
+  statusForMetaError
+} from '../lib/social-state.mjs';
 
 const originalFetch = globalThis.fetch;
 let fetchCalls = [];
@@ -55,7 +60,13 @@ async function testSelection() {
   }
 
   // Comprobar exclusión de estados
-  const excludedStatuses = ['published', 'publishing', 'unknown', 'needs-reconciliation'];
+  const excludedStatuses = [
+    SOCIAL_STATUS.PUBLISHED,
+    SOCIAL_STATUS.RESERVED,
+    SOCIAL_STATUS.PREPARED,
+    SOCIAL_STATUS.NEEDS_RECONCILIATION,
+    SOCIAL_STATUS.CANCELLED
+  ];
   const testPosts = {};
   
   excludedStatuses.forEach((status, idx) => {
@@ -64,12 +75,12 @@ async function testSelection() {
 
   // Una plataforma excluida y la otra no
   testPosts['slug-mixed|facebook'] = { status: 'published' };
-  testPosts['slug-mixed|instagram'] = { status: 'failed' }; // No excluido
+  testPosts['slug-mixed|instagram'] = { status: SOCIAL_STATUS.FAILED_RETRYABLE }; // No excluido
 
   // Verificar lógica de exclusión
   const testCandidateFn = (slug, platform) => {
     const record = testPosts[`${slug}|${platform}`];
-    return record && excludedStatuses.includes(record.status);
+    return shouldExcludeFromReservation(record);
   };
 
   excludedStatuses.forEach((status, idx) => {
