@@ -8,12 +8,13 @@ on:
         type: boolean
         default: true
   schedule:
-    # 5 veces al día (09:30, 13:30, 17:30, 21:30, 01:30 de Tierra del Fuego / UTC-3)
+    # 5 veces al dia: 03:30, 09:30, 15:30, 21:30 y 00:30 de Tierra del Fuego / UTC-3.
+    # Las cuatro primeras quedan ~90 min despues de cada lote de noticias; 00:30 absorbe atraso.
+    - cron: '30 6 * * *'
     - cron: '30 12 * * *'
-    - cron: '30 16 * * *'
-    - cron: '30 20 * * *'
+    - cron: '30 18 * * *'
     - cron: '30 0 * * *'
-    - cron: '30 4 * * *'
+    - cron: '30 3 * * *'
 
 permissions:
   contents: write

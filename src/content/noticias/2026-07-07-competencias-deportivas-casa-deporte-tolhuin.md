@@ -9,12 +9,12 @@ tags:
   - Municipio
   - Comunidad
   - Eventos
-image: "/uploads/auto/2026-07-08-d1f4843f0ef9980f56.webp"
-imageAlt: "Interior de la Casa del Deporte de Tolhuin durante trabajos en su cancha"
-imageLicense: "Fuente oficial; uso editorial con procedencia registrada"
-imageCredit: "Gobierno de Tierra del Fuego"
-imageSourceUrl: "https://www.tierradelfuego.gob.ar/blog/2023/11/12/inicio-la-colocacoon-del-piso-en-la-cancha-de-la-casa-de-deporte-de-tolhuin/"
-imageStrategy: "media-library"
+image: "/uploads/auto/2026-07-08-2b5840b66a1d4ed81f.webp"
+imageAlt: "Competencia deportiva en la Casa del Deporte de Tolhuin"
+imageLicense: "Imagen del articulo fuente; procedencia registrada"
+imageCredit: "Sur54"
+imageSourceUrl: "https://www.sur54.com/gobierno-llevo-a-cabo-una-jornada-de-competencias-en-la-casa-del-deporte-de-tolhuin"
+imageStrategy: "article-og"
 importance: 5
 featured: false
 sourceName: "Actualidad Fueguina - archivo"

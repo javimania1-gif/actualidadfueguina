@@ -10,7 +10,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import Parser from 'rss-parser';
 import {
-  ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
+  ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify, cleanText,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
   isOfficialDomain, writeArticleWithModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
   generateWebPlate
@@ -22,7 +22,10 @@ import {
   isEventAlreadyPublished as isEventAlreadyPublishedShared,
   isRetryEligible as isRetryEligibleShared,
   getNextRetryAt as getNextRetryAtShared,
-  editorialScore as editorialScoreShared
+  editorialScore as editorialScoreShared,
+  canPublishWithinRunLimit,
+  isStaleRoutineWeatherForecast,
+  isStaleDatedDiscoveryCandidate
 } from './lib/pipeline-utils.mjs';
 import { buildSourceRef, validateArticleSource } from './lib/source-policy.mjs';
 import {
@@ -51,6 +54,9 @@ const MAX_AI_PER_RUN = Number(process.env.AF_MAX_AI_PER_RUN || 8);
 const MAX_DRAFTS_PER_RUN = Number(process.env.AF_MAX_DRAFTS_PER_RUN || 10);
 const MAX_PER_SOURCE = Number(process.env.AF_MAX_PER_SOURCE || 2);
 const MAX_MATERIALIZE_PER_RUN = Number(process.env.AF_MAX_MATERIALIZE_PER_RUN || 36);
+const TARGET_PUBLISHED_PER_RUN = Number(process.env.AF_TARGET_PUBLISHED_PER_RUN || 2);
+const MAX_NORMAL_PUBLISHED_PER_RUN = Number(process.env.AF_MAX_NORMAL_PUBLISHED_PER_RUN || 3);
+const EXTRA_SLOT_MIN_IMPORTANCE = Number(process.env.AF_EXTRA_SLOT_MIN_IMPORTANCE || 8);
 const RSS_TIMEOUT_MS = Number(process.env.AF_RSS_TIMEOUT_MS || 15000);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
@@ -92,6 +98,7 @@ const metrics = {
   discardedImportance: 0,
   discardedSourceLimit: 0,
   discardedNoAiBudget: 0,
+  discardedPublicationLimit: 0,
   extractErrors: 0,
   imageErrors: 0,
   aiAttempts: 0,
@@ -293,6 +300,21 @@ for (const candidate of candidatesToMaterialize) {
   }
 
   const currentTitle = (article.title || item.title || '').trim();
+  if (isStaleDatedDiscoveryCandidate({
+    source,
+    title: currentTitle,
+    description: article.description || item.description || '',
+    pubDate: article.date || item.pubDate || ''
+  })) {
+    seen.items[initialKey] = {
+      status: 'discarded-quality',
+      reason: 'stale-dated-discovery',
+      seenAt: new Date().toISOString(),
+      source: source.id
+    };
+    metrics.discardedQuality++;
+    continue;
+  }
   const sourceRef = buildSourceRef({ source, item, article, officialDomains: config.officialDomains });
   const facts = extractFacts({
     article,
@@ -300,6 +322,16 @@ for (const candidate of candidatesToMaterialize) {
     source,
     category: source.forceCategory || source.defaultCategory
   });
+  if (isStaleRoutineWeatherForecast(facts)) {
+    seen.items[initialKey] = {
+      status: 'discarded-quality',
+      reason: 'stale-weather-forecast',
+      seenAt: new Date().toISOString(),
+      source: source.id
+    };
+    metrics.discardedQuality++;
+    continue;
+  }
   const eventKey = generateEventKey({
     facts,
     title: currentTitle,
@@ -400,6 +432,96 @@ for (const candidate of extracted) {
 metrics.eventsGrouped = eventsByKey.size;
 const verifiedCandidates = [];
 
+function uniqueStrings(values = []) {
+  const seen = new Set();
+  const out = [];
+  for (const value of values.map((item) => cleanText(item)).filter(Boolean)) {
+    const key = value.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(value);
+  }
+  return out;
+}
+
+function formatForecastDate(dateKey = '') {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateKey)) return 'la jornada';
+  const [year, month, day] = dateKey.split('-');
+  const months = {
+    '01': 'enero',
+    '02': 'febrero',
+    '03': 'marzo',
+    '04': 'abril',
+    '05': 'mayo',
+    '06': 'junio',
+    '07': 'julio',
+    '08': 'agosto',
+    '09': 'septiembre',
+    '10': 'octubre',
+    '11': 'noviembre',
+    '12': 'diciembre'
+  };
+  return `${Number(day)} de ${months[month] || month} de ${year}`;
+}
+
+function buildProvincialWeatherCandidate(group = [], verification = {}) {
+  const base = selectBaseCandidate(group);
+  if (base?.facts?.eventType !== 'weather-forecast') return base;
+
+  const forecastDateKey = base.facts.weatherForecastDateKey || group.find((candidate) => candidate.facts?.weatherForecastDateKey)?.facts.weatherForecastDateKey || '';
+  const forecastDateLabel = formatForecastDate(forecastDateKey);
+  const locations = uniqueStrings(
+    group.flatMap((candidate) => [
+      candidate.source?.location,
+      ...(candidate.facts?.places || [])
+    ])
+  ).filter((value) => !/^argentina$/i.test(value) && !/^tierra del fuego/i.test(value));
+
+  const sections = group.map((candidate) => {
+    const location = candidate.source?.location || (candidate.facts?.places || [])[0] || 'Tierra del Fuego';
+    return [
+      `LOCALIDAD: ${location}`,
+      `FUENTE: ${candidate.sourceRef?.sourceName || candidate.source?.name || ''}`,
+      `URL: ${candidate.sourceRef?.url || candidate.article?.finalUrl || candidate.item?.link || ''}`,
+      `TITULO: ${candidate.article?.title || candidate.item?.title || ''}`,
+      `RESUMEN: ${candidate.article?.description || candidate.item?.description || ''}`,
+      `TEXTO: ${String(candidate.article?.text || '').slice(0, 3000)}`
+    ].join('\n');
+  }).join('\n\n---\n\n');
+
+  return {
+    ...base,
+    title: `Pronóstico del tiempo en Tierra del Fuego para ${forecastDateLabel}`,
+    source: {
+      ...base.source,
+      defaultCategory: 'Provincia',
+      forceCategory: '',
+      location: 'Tierra del Fuego AIAS'
+    },
+    article: {
+      ...base.article,
+      title: `Pronóstico del tiempo en Tierra del Fuego para ${forecastDateLabel}`,
+      description: `Resumen provincial del tiempo para ${forecastDateLabel}${locations.length ? ` en ${locations.join(', ')}` : ''}.`,
+      text: [
+        'TIPO: PRONOSTICO_PROVINCIAL',
+        'INSTRUCCION EDITORIAL: redactar una sola nota provincial, no una nota por localidad. Usar secciones internas para cada localidad con datos disponibles.',
+        `FECHA DEL PRONOSTICO: ${forecastDateLabel}`,
+        `LOCALIDADES DETECTADAS: ${locations.join(', ') || 'Tierra del Fuego'}`,
+        '',
+        sections
+      ].join('\n'),
+      image: base.article?.image || group.find((candidate) => candidate.article?.image)?.article.image || ''
+    },
+    facts: {
+      ...(base.facts || {}),
+      eventType: 'weather-forecast',
+      places: uniqueStrings(['Tierra del Fuego', ...locations]),
+      weatherForecastDateKey: forecastDateKey
+    },
+    relatedCandidates: group
+  };
+}
+
 for (const [eventKey, group] of eventsByKey) {
   const existingEvent = events.events?.[eventKey] || {};
   const persistedCandidates = (existingEvent.factsBySource || []).map((entry) => ({
@@ -463,7 +585,7 @@ for (const [eventKey, group] of eventsByKey) {
   }
 
   metrics.verified++;
-  const baseCandidate = selectBaseCandidate(group);
+  const baseCandidate = buildProvincialWeatherCandidate(group, verification);
   baseCandidate.verification = verification;
   verifiedCandidates.push(baseCandidate);
 }
@@ -518,6 +640,7 @@ console.log(`\n=== FASE C: Redacción y publicación (presupuesto IA: ${MAX_AI_P
 let officialAiUsed = 0;
 let discoveryAiUsed = 0;
 let draftCount = 0;
+let normalPublished = 0;
 
 for (const candidate of verifiedCandidates) {
   const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate, sourceRef, verification } = candidate;
@@ -585,8 +708,27 @@ for (const candidate of verifiedCandidates) {
         continue;
       }
 
+      const publicationLimit = canPublishWithinRunLimit({
+        importance: ai.importance,
+        normalPublished,
+        target: TARGET_PUBLISHED_PER_RUN,
+        maxNormal: MAX_NORMAL_PUBLISHED_PER_RUN,
+        extraSlotMinImportance: EXTRA_SLOT_MIN_IMPORTANCE
+      });
+      const isUrgent = publicationLimit.urgent;
+      if (!publicationLimit.ok) {
+        metrics.discardedPublicationLimit++;
+        if (draftCount < MAX_DRAFTS_PER_RUN) {
+          await saveDraft(candidate, publicationLimit.reason);
+          draftCount++;
+          metrics.drafts++;
+        }
+        continue;
+      }
+
       if (!PERSIST_OUTPUTS) {
         console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
+        if (!isUrgent) normalPublished++;
         continue;
       }
 
@@ -643,6 +785,7 @@ for (const candidate of verifiedCandidates) {
 
       publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
       metrics.published++;
+      if (!isUrgent) normalPublished++;
       metrics.byCategory[ai.category] = (metrics.byCategory[ai.category] || 0) + 1;
 
       seen.items[canonicalKey] = {
@@ -652,6 +795,17 @@ for (const candidate of verifiedCandidates) {
         file: path.relative(ROOT, target)
       };
       seen.items[initialKey] = seen.items[canonicalKey];
+      for (const related of candidate.relatedCandidates || []) {
+        const relatedRecord = {
+          seenAt: new Date().toISOString(),
+          status: 'published',
+          source: related.source?.id || source.id,
+          file: path.relative(ROOT, target),
+          eventKey: candidate.eventKey
+        };
+        if (related.canonicalKey) seen.items[related.canonicalKey] = relatedRecord;
+        if (related.initialKey) seen.items[related.initialKey] = relatedRecord;
+      }
 
       console.log(`✓ PUBLICADA [${source.id}]: ${ai.title}`);
       await sleep(1200);
@@ -726,6 +880,9 @@ if (PERSIST_OUTPUTS) {
     officialAiBudget,
     discoveryAiUsed,
     discoveryAiBudget,
+    targetPublishedPerRun: TARGET_PUBLISHED_PER_RUN,
+    maxNormalPublishedPerRun: MAX_NORMAL_PUBLISHED_PER_RUN,
+    extraSlotMinImportance: EXTRA_SLOT_MIN_IMPORTANCE,
     candidatesMaterialized: candidatesToMaterialize.length,
     totalCandidatesBeforeLimit: allCandidates.length
   });
@@ -756,8 +913,10 @@ console.log(`
   Errores reales de modelo: ${metrics.modelErrors}
   Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
+  Descartados por cupo editorial de corrida: ${metrics.discardedPublicationLimit}
   Borradores generados: ${metrics.drafts}
   IA intentada/respondida: ${metrics.aiAttempts}/${metrics.aiCalls} de ${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
+  Cupo editorial: objetivo ${TARGET_PUBLISHED_PER_RUN}, maximo normal ${MAX_NORMAL_PUBLISHED_PER_RUN}, extra desde importancia ${EXTRA_SLOT_MIN_IMPORTANCE}
   Por categoría: ${categoryStr}
 `);
 
@@ -789,6 +948,7 @@ function explainNoMorePublished(currentMetrics, extra = {}) {
   if (currentMetrics.discardedImportance > 0) reasons.push(`${currentMetrics.discardedImportance} candidato(s) descartados por importancia editorial`);
   if (currentMetrics.discardedSourceLimit > 0) reasons.push(`${currentMetrics.discardedSourceLimit} candidato(s) quedaron por limite por fuente`);
   if (currentMetrics.discardedNoAiBudget > 0) reasons.push(`${currentMetrics.discardedNoAiBudget} candidato(s) quedaron sin presupuesto IA`);
+  if (currentMetrics.discardedPublicationLimit > 0) reasons.push(`${currentMetrics.discardedPublicationLimit} candidato(s) quedaron por cupo editorial de corrida`);
   if (currentMetrics.factualValidationErrors > 0) reasons.push(`${currentMetrics.factualValidationErrors} candidato(s) bloqueados por validacion factual`);
   if (currentMetrics.modelErrors > 0) reasons.push(`${currentMetrics.modelErrors} error(es) reales de modelo`);
   if ((extra.totalCandidatesBeforeLimit || 0) > (extra.candidatesMaterialized || 0)) {

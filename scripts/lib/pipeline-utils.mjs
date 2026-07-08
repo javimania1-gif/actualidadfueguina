@@ -125,3 +125,59 @@ export function editorialScore(candidate, byCategory = {}) {
   const diversityBonus = byCategory[category] ? 0 : 15;
   return recencyScore + qualityScore + localScore + diversityBonus;
 }
+
+export function canPublishWithinRunLimit({
+  importance = 5,
+  normalPublished = 0,
+  target = 2,
+  maxNormal = 3,
+  extraSlotMinImportance = 8
+} = {}) {
+  const isUrgent = Number(importance) >= 9;
+  if (isUrgent) return { ok: true, urgent: true, reason: 'urgent-outside-normal-cap' };
+  if (normalPublished >= maxNormal) return { ok: false, urgent: false, reason: 'max-normal-cap' };
+  if (normalPublished >= target && Number(importance) < extraSlotMinImportance) {
+    return { ok: false, urgent: false, reason: 'target-reached-low-importance' };
+  }
+  return { ok: true, urgent: false, reason: 'within-normal-cap' };
+}
+
+export function isStaleRoutineWeatherForecast(facts = {}, now = Date.now()) {
+  if (facts.eventType !== 'weather-forecast') return false;
+
+  const forecastDateKey = facts.weatherForecastDateKey || '';
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(forecastDateKey)) return true;
+
+  const forecastNoon = new Date(`${forecastDateKey}T12:00:00Z`).getTime();
+  const minForecastTime = now - 36 * 60 * 60 * 1000;
+  const maxForecastTime = now + 48 * 60 * 60 * 1000;
+
+  return forecastNoon < minForecastTime || forecastNoon > maxForecastTime;
+}
+
+export function isStaleDatedDiscoveryCandidate({
+  source = {},
+  title = '',
+  description = '',
+  pubDate = '',
+  now = Date.now()
+} = {}) {
+  if (source.mode !== 'discovery-draft') return false;
+
+  const currentYear = new Date(now).getUTCFullYear();
+  const leadText = `${title}\n${description}`;
+  const explicitYears = [...String(leadText).matchAll(/\b(19\d{2}|20\d{2})\b/g)]
+    .map((match) => Number(match[1]))
+    .filter(Number.isFinite);
+  const hasOldYear = explicitYears.some((year) => year < currentYear);
+  const hasCurrentOrFutureYear = explicitYears.some((year) => year >= currentYear);
+  if (hasOldYear && !hasCurrentOrFutureYear) return true;
+
+  if (pubDate) {
+    const publishedAt = new Date(pubDate).getTime();
+    const maxAgeMs = 14 * 24 * 60 * 60 * 1000;
+    if (Number.isFinite(publishedAt) && now - publishedAt > maxAgeMs) return true;
+  }
+
+  return false;
+}

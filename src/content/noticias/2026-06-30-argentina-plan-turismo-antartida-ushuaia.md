@@ -10,8 +10,12 @@ tags:
   - Ushuaia
   - Política Nacional
   - Medio Ambiente
-image: "/uploads/auto/plate-2026-06-30-argentina-plan-turismo-antartida-ushuaia.jpg"
-imageAlt: "Paisaje antártico con la bandera argentina"
+image: "/uploads/auto/2026-07-08-22fcadf0345a5398bb.webp"
+imageAlt: "Cartel de la Base Marambio en la Antártida Argentina"
+imageStrategy: "curated-commons"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Base_marambio_cartel.jpg"
+imageCredit: "Casa Rosada / Wikimedia Commons"
+imageLicense: "CC BY 2.5 AR"
 importance: 7
 featured: false
 sourceName: "Bing News — Antártida"

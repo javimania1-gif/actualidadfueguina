@@ -47,6 +47,21 @@ const CRITICAL_FIELDS = [
   'laws'
 ];
 
+const MONTHS_ES = new Map([
+  ['enero', '01'],
+  ['febrero', '02'],
+  ['marzo', '03'],
+  ['abril', '04'],
+  ['mayo', '05'],
+  ['junio', '06'],
+  ['julio', '07'],
+  ['agosto', '08'],
+  ['septiembre', '09'],
+  ['octubre', '10'],
+  ['noviembre', '11'],
+  ['diciembre', '12']
+]);
+
 export async function loadEvents() {
   try {
     return JSON.parse(await fs.readFile(EVENTS_PATH, 'utf8'));
@@ -104,6 +119,36 @@ function extractDates(text, articleDate = '') {
   return unique(values).slice(0, 8);
 }
 
+export function isOrdinaryWeatherForecastText(text = '') {
+  const normalized = normalizeText(text);
+  if (!/\b(clima|pronostico|temperaturas?|servicio meteorologico|smn)\b/.test(normalized)) return false;
+  return !/\b(alerta|temporal|nevadas? extraordinarias?|viento fuerte|sismo|evacuacion|naufragio|corte de ruta|emergencia)\b/.test(normalized);
+}
+
+export function getWeatherForecastDateKey(text = '', fallbackDates = []) {
+  const normalized = normalizeText(text);
+  const monthAlternatives = [...MONTHS_ES.keys()].join('|');
+  const wordDate = normalized.match(new RegExp(`\\b(\\d{1,2})(?:\\s+de)?\\s+(${monthAlternatives})(?:\\s+(?:de\\s+)?(\\d{4}))?\\b`, 'i'));
+  if (wordDate) {
+    const day = String(wordDate[1]).padStart(2, '0');
+    const month = MONTHS_ES.get(wordDate[2]) || '01';
+    const fallbackYear = String(fallbackDates.find((value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value))) || '').slice(0, 4);
+    const year = wordDate[3] || fallbackYear || new Date().getFullYear();
+    return `${year}-${month}-${day}`;
+  }
+
+  const slashDate = normalized.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{2,4})\b/);
+  if (slashDate) {
+    const day = String(slashDate[1]).padStart(2, '0');
+    const month = String(slashDate[2]).padStart(2, '0');
+    const year = slashDate[3].length === 2 ? `20${slashDate[3]}` : slashDate[3];
+    return `${year}-${month}-${day}`;
+  }
+
+  const iso = fallbackDates.find((value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value)));
+  return iso || '';
+}
+
 export function classifyRisk({ title = '', text = '', category = '', source = {}, aiRisk = '' }) {
   const combined = `${title}\n${text.slice(0, 3000)}\n${category}`;
   const reasons = [];
@@ -130,19 +175,25 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   const risk = classifyRisk({ title, text, category: category || source.defaultCategory, source });
   const capitalized = extractCapitalizedPhrases(`${title}\n${article.description || ''}`);
   const teams = unique(pickKnown(text, KNOWN_TEAMS_AND_COUNTRIES));
+  const inferredEventType = inferEventType(text);
+  const dates = extractDates(text, article.date || item.pubDate);
+  const weatherForecastDateKey = inferredEventType === 'weather-forecast'
+    ? getWeatherForecastDateKey(text, dates)
+    : '';
 
   return {
     title,
     riskLevel: risk.level,
     riskReasons: risk.reasons,
-    eventType: risk.level === 'high' ? inferEventType(text) : 'general',
+    eventType: risk.level === 'high' || inferredEventType === 'weather-forecast' ? inferredEventType : 'general',
     teams,
     people: capitalized.filter((value) => !teams.some((team) => normalizeText(team) === normalizeText(value))).slice(0, 8),
     organizations: unique(capitalized.filter((value) => /(Municipio|Municipalidad|Gobierno|Discord|ONU|UTN|Justicia|Legislatura)/i.test(value))),
     places: unique([...pickKnown(text, KNOWN_PLACES), source.location || '']).slice(0, 8),
     numbers: extractNumbers(text),
     scores: extractScores(text),
-    dates: extractDates(text, article.date || item.pubDate),
+    dates,
+    weatherForecastDateKey,
     action: inferAction(title || text),
     rawSummary: cleanText(article.description || item.description || '').slice(0, 500)
   };
@@ -154,6 +205,7 @@ function inferEventType(text) {
   if (/\b(eleccion|electoral|votos|convencionales)\b/.test(value)) return 'election';
   if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(value)) return 'crime';
   if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(value)) return 'weather';
+  if (isOrdinaryWeatherForecastText(value)) return 'weather-forecast';
   if (/\b(ciencia|cientifico|investigacion|hallazgo|conicet)\b/.test(value)) return 'scientific';
   if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(value)) return 'casualty';
   if (/\b(legislatura|senado|diputados|sesion|proyecto de ley)\b/.test(value)) return 'legislative';
@@ -174,6 +226,11 @@ function inferAction(text) {
 }
 
 export function generateEventKey({ facts = {}, title = '', sourceRef = {} }) {
+  if (facts.eventType === 'weather-forecast') {
+    const date = facts.weatherForecastDateKey || getWeatherForecastDateKey(`${title}\n${facts.rawSummary || ''}`, facts.dates || []);
+    return ['weather-forecast', date || 'sin-fecha', 'tierra-del-fuego'].join('|').slice(0, 180);
+  }
+
   if (facts.eventType === 'sports-result' && (facts.teams || []).length > 0) {
     const primary = (facts.teams || []).map(normalizeText).sort()[0];
     const date = (facts.dates || []).map(normalizeText).find(Boolean) || '';

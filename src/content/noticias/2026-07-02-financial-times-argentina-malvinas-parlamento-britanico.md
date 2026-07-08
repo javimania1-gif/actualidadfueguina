@@ -10,8 +10,12 @@ tags:
   - Reino Unido
   - Parlamento Británico
   - Medios Internacionales
-image: "/uploads/auto/plate-2026-07-02-financial-times-argentina-malvinas-parlamento-britanico.jpg"
-imageAlt: "Sede del Parlamento británico en Londres"
+image: "/uploads/auto/2026-07-08-9f1d2ad5f5ee5ef696.webp"
+imageAlt: "Palacio de Westminster, sede del Parlamento británico"
+imageStrategy: "curated-commons"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Houses.of.parliament.overall.arp.jpg"
+imageCredit: "Adrian Pingstone / Wikimedia Commons"
+imageLicense: "Public domain"
 importance: 7
 featured: false
 sourceName: "Bing News — Malvinas"

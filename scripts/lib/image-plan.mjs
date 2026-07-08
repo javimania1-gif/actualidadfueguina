@@ -57,6 +57,62 @@ function textIncludesAny(text, values = []) {
   });
 }
 
+export function evaluateImageContext(entry = {}, contextText = '') {
+  const context = normalizeText(contextText);
+  const assetContext = normalizeText([
+    entry.label,
+    entry.alt,
+    ...(entry.tags || []),
+    ...(entry.contextTags || []),
+    entry.rightsNote,
+    entry.sourceUrl
+  ].filter(Boolean).join(' '));
+  const reasons = [];
+  let penalty = 0;
+
+  const has = (text, patterns = []) => patterns.some((pattern) => pattern.test(text));
+
+  if (
+    has(assetContext, [/\b(obra|construccion|colocacion|piso|cancha en obra|trabajos)\b/]) &&
+    has(context, [/\b(competencia|competencias|partido|torneo|futsal|basquet|voley|actividad deportiva)\b/]) &&
+    !has(context, [/\b(obra|construccion|ampliacion|inauguracion|refaccion)\b/])
+  ) {
+    penalty -= 160;
+    reasons.push('construction-context-for-sports-event');
+  }
+
+  if (
+    has(assetContext, [/\b(turismo|conectividad|infraestructura|lammens|reunion anterior)\b/]) &&
+    has(context, [/\b(reforma constitucional|convencionales|constituyente|justicia electoral|carta magna)\b/]) &&
+    !has(context, [/\b(turismo|conectividad|infraestructura)\b/])
+  ) {
+    penalty -= 140;
+    reasons.push('person-match-but-wrong-political-context');
+  }
+
+  if (
+    has(assetContext, [/\b(memoria verdad justicia|conmemorativo|pancarta|homenaje)\b/]) &&
+    has(context, [/\b(argentina|egipto|mundial|seleccion|partido|deportes|futbol)\b/])
+  ) {
+    penalty -= 140;
+    reasons.push('commemorative-context-for-sports-story');
+  }
+
+  if (
+    has(assetContext, [/\b(rival|oponente|gol del rival|festejo rival)\b/]) &&
+    has(context, [/\b(argentina vencio|argentina gano|argentina elimino|triunfo argentino)\b/])
+  ) {
+    penalty -= 120;
+    reasons.push('opponent-celebration-for-argentina-win');
+  }
+
+  return {
+    ok: penalty > -100,
+    penalty,
+    reasons
+  };
+}
+
 export function buildImagePlan({
   title = '',
   verifiedFacts = {},
@@ -151,6 +207,8 @@ export function scoreMediaAsset(entry = {}, plan = [], contextText = '') {
   ].filter(Boolean).join(' '));
   let score = Number(entry.priority || 0);
   let matchedQuery = '';
+  const imageContext = evaluateImageContext(entry, contextText);
+  score += imageContext.penalty;
 
   for (const intent of plan) {
     const query = normalizeText(intent.query);
@@ -175,8 +233,9 @@ export function scoreMediaAsset(entry = {}, plan = [], contextText = '') {
   }
 
   if (!matchedQuery) score -= 50;
+  if (!imageContext.ok) score -= 100;
   if (textIncludesAny(`${entry.label} ${(entry.tags || []).join(' ')}`, ['logo']) && !textIncludesAny(contextText, ['discord'])) score -= 80;
-  return { score, matchedQuery };
+  return { score, matchedQuery, contextReasons: imageContext.reasons };
 }
 
 function commonsMetadataText(page = {}) {

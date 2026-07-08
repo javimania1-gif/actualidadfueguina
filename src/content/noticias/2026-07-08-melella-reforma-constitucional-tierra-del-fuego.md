@@ -8,12 +8,12 @@ tags:
   - Política
   - Reforma Constitucional
   - Elecciones
-image: "/uploads/auto/2026-07-08-ab6d6c4a649073c447.webp"
-imageAlt: "Gustavo Melella en una reunión institucional"
-imageLicense: "CC BY 4.0"
-imageCredit: "Argentina.gob.ar"
-imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Lammens_y_Melella.jpg"
-imageStrategy: "media-library"
+image: "/uploads/auto/2026-07-08-d20ef7c6671d230e95.webp"
+imageAlt: "Gustavo Melella en la cobertura sobre la reforma constitucional fueguina"
+imageLicense: "Imagen del articulo fuente; procedencia registrada"
+imageCredit: "TN / Telam"
+imageSourceUrl: "https://tn.com.ar/politica/2026/07/07/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica/"
+imageStrategy: "article-og"
 author: "Actualidad Fueguina"
 featured: true
 importance: 8

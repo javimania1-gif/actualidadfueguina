@@ -10,8 +10,12 @@ tags:
   - Política Exterior
   - Reino Unido
   - Descolonización
-image: "/uploads/auto/plate-2026-06-24-onu-exige-reino-unido-negociar-soberania-malvinas.jpg"
-imageAlt: "Bandera argentina y mapa de las Islas Malvinas"
+image: "/uploads/auto/2026-07-08-7401f3fc57ae289cbe.webp"
+imageAlt: "Recinto de la Asamblea General de las Naciones Unidas"
+imageStrategy: "curated-commons"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:The_General_Assembly,_United_Nations_(926057573).jpg"
+imageCredit: "Rob Young / Wikimedia Commons"
+imageLicense: "CC BY 2.0"
 importance: 8
 featured: true
 sourceName: "Bing News — Malvinas"

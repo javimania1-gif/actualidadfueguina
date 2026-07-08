@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import { ROOT, normalizeImageBuffer, normalizeImageAsset } from '../lib/news-utils.mjs';
-import { buildImagePlan, scoreMediaAsset } from '../lib/image-plan.mjs';
+import { buildImagePlan, scoreMediaAsset, evaluateImageContext } from '../lib/image-plan.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -134,6 +134,83 @@ await test('score de biblioteca favorece lugar exacto y no categoria generica', 
     priority: 20
   }, plan, 'Parque Termal Municipal de Tolhuin');
   assert(exact.score > generic.score);
+});
+
+await test('contexto visual rechaza obra para competencia deportiva en Casa del Deporte', async () => {
+  const result = evaluateImageContext({
+    label: 'Casa del Deporte de Tolhuin',
+    contextTags: ['obra', 'construccion', 'cancha en obra'],
+    alt: 'Interior de la Casa del Deporte durante trabajos en su cancha'
+  }, 'Competencias deportivas en la Casa del Deporte de Tolhuin con partidos de futsal y voley');
+  assert.equal(result.ok, false);
+  assert(result.reasons.includes('construction-context-for-sports-event'));
+});
+
+await test('contexto visual acepta obra si la noticia trata sobre construccion o inauguracion', async () => {
+  const result = evaluateImageContext({
+    label: 'Casa del Deporte de Tolhuin',
+    contextTags: ['obra', 'construccion', 'cancha en obra']
+  }, 'Avanza la obra de ampliacion de la Casa del Deporte de Tolhuin');
+  assert.equal(result.ok, true);
+});
+
+await test('contexto visual rechaza foto de reunion turistica para reforma constitucional', async () => {
+  const result = evaluateImageContext({
+    label: 'Gustavo Melella',
+    contextTags: ['reunion anterior', 'turismo', 'lammens']
+  }, 'Melella reactiva la reforma constitucional y convoca elecciones de convencionales constituyentes');
+  assert.equal(result.ok, false);
+  assert(result.reasons.includes('person-match-but-wrong-political-context'));
+});
+
+await test('contexto visual acepta Termas como lugar para capacitacion realizada alli', async () => {
+  const result = evaluateImageContext({
+    label: 'Termas de Tolhuin',
+    contextTags: ['lugar exacto', 'parque termal']
+  }, 'Capacitacion para operadores en el Parque Termal de Tolhuin');
+  assert.equal(result.ok, true);
+});
+
+await test('biblioteca prioriza ONU para nota de descolonizacion de Malvinas', async () => {
+  const plan = buildImagePlan({
+    title: 'La ONU exige negociar la soberania de las Islas Malvinas',
+    verifiedFacts: { organizations: ['ONU'], places: ['Islas Malvinas'] },
+    category: 'Malvinas'
+  });
+  const onu = scoreMediaAsset({
+    label: 'Asamblea General de Naciones Unidas',
+    aliases: ['onu', 'naciones unidas', 'asamblea general', 'comite de descolonizacion'],
+    tags: ['malvinas', 'onu', 'soberania', 'descolonizacion'],
+    priority: 88
+  }, plan, 'Comite de Descolonizacion de la ONU exige al Reino Unido negociar por Malvinas');
+  const generic = scoreMediaAsset({
+    label: 'Bandera argentina',
+    aliases: ['argentina'],
+    tags: ['soberania'],
+    priority: 20
+  }, plan, 'Comite de Descolonizacion de la ONU exige al Reino Unido negociar por Malvinas');
+  assert(onu.score > generic.score);
+});
+
+await test('biblioteca prioriza Base Marambio para Antartida Argentina', async () => {
+  const plan = buildImagePlan({
+    title: 'Argentina presenta un plan de turismo antartico',
+    verifiedFacts: { places: ['Antartida Argentina', 'Base Marambio'] },
+    category: 'Antartida'
+  });
+  const marambio = scoreMediaAsset({
+    label: 'Base Marambio',
+    aliases: ['base marambio', 'antartida argentina'],
+    tags: ['antartida', 'antartida argentina', 'turismo antartico'],
+    priority: 90
+  }, plan, 'Plan nacional de turismo en la Antartida Argentina y bases argentinas');
+  const plate = scoreMediaAsset({
+    label: 'Placa Antartida',
+    aliases: ['antartida'],
+    tags: ['antartida'],
+    priority: 15
+  }, plan, 'Plan nacional de turismo en la Antartida Argentina y bases argentinas');
+  assert(marambio.score > plate.score);
 });
 
 globalThis.fetch = originalFetch;
