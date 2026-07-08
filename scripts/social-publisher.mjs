@@ -1,12 +1,18 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { ROOT, NEWS_DIR, sleep, downloadImage } from './lib/news-utils.mjs';
+import { ROOT, NEWS_DIR, sleep } from './lib/news-utils.mjs';
 import {
   loadSocialData, saveSocialData, generateSocialCopy,
   generateInstagramPlate, publishToFacebook,
   createInstagramContainer, publishInstagramContainer, MetaError
 } from './lib/social-utils.mjs';
+import {
+  SOCIAL_STATUS,
+  ACTIVE_SOCIAL_STATUSES,
+  shouldExcludeFromReservation,
+  statusForMetaError
+} from './lib/social-state.mjs';
 
 const RUN_RESERVE = process.argv.includes('--reserve');
 const RUN_PREPARE = process.argv.includes('--prepare');
@@ -14,7 +20,11 @@ const RUN_PUBLISH = process.argv.includes('--publish');
 // Si no se especifica ninguna opción, por defecto se ejecutan todas consecutivamente
 const EXECUTE_ALL = !RUN_RESERVE && !RUN_PREPARE && !RUN_PUBLISH;
 
-const DRY_RUN = process.argv.includes('--dry-run');
+const ALLOW_LOCAL_SOCIAL_WRITE =
+  process.env.GITHUB_ACTIONS === 'true' ||
+  process.env.AF_WRITE_STATE === 'true' ||
+  process.argv.includes('--write-state');
+const DRY_RUN = process.argv.includes('--dry-run') || !ALLOW_LOCAL_SOCIAL_WRITE;
 const MAX_FB_PER_RUN = Number(process.env.AF_MAX_FB_PER_RUN || 2);
 const MAX_IG_PER_RUN = Number(process.env.AF_MAX_IG_PER_RUN || 2);
 const SITE_URL = process.env.AF_SITE_URL || 'https://actualidadfueguina.com.ar';
@@ -43,8 +53,8 @@ async function main() {
     const now = new Date();
 
     // Contar reservas activas de Facebook e Instagram
-    const activeFbReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'facebook');
-    const activeIgReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'instagram');
+    const activeFbReservations = Object.values(socialData.posts).filter(p => ACTIVE_SOCIAL_STATUSES.has(p.status) && p.platform === 'facebook');
+    const activeIgReservations = Object.values(socialData.posts).filter(p => ACTIVE_SOCIAL_STATUSES.has(p.status) && p.platform === 'instagram');
 
     const fbSlotsAvailable = Math.max(0, MAX_FB_PER_RUN - activeFbReservations.length);
     const igSlotsAvailable = Math.max(0, MAX_IG_PER_RUN - activeIgReservations.length);
@@ -76,8 +86,8 @@ async function main() {
         const fbRecord = socialData.posts[fbKey];
         const igRecord = socialData.posts[igKey];
 
-        const fbExcluded = fbRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(fbRecord.status);
-        const igExcluded = igRecord && ['published', 'publishing', 'prepared', 'unknown', 'needs-reconciliation'].includes(igRecord.status);
+        const fbExcluded = shouldExcludeFromReservation(fbRecord);
+        const igExcluded = shouldExcludeFromReservation(igRecord);
 
         if (fbExcluded && igExcluded) continue;
 
@@ -127,7 +137,7 @@ async function main() {
             slug: item.slug,
             platform: 'facebook',
             date: now.toISOString(),
-            status: 'publishing',
+            status: SOCIAL_STATUS.RESERVED,
             attempts: (item.fbRecord?.attempts || 0) + 1,
             runId: GLOBAL_RUN_ID
           };
@@ -142,7 +152,7 @@ async function main() {
             slug: item.slug,
             platform: 'instagram',
             date: now.toISOString(),
-            status: 'publishing',
+            status: SOCIAL_STATUS.RESERVED,
             attempts: (item.igRecord?.attempts || 0) + 1,
             creationId: item.igRecord?.creationId || null,
             runId: GLOBAL_RUN_ID
@@ -175,15 +185,15 @@ async function main() {
     let hasChanges = false;
 
     for (const record of Object.values(socialData.posts)) {
-      if (record.status === 'publishing') {
+      if (record.status === SOCIAL_STATUS.RESERVED || record.status === SOCIAL_STATUS.PREPARING) {
         const reservedDate = new Date(record.date);
         const diffMs = now.getTime() - reservedDate.getTime();
         const diffHours = diffMs / (1000 * 60 * 60);
 
         if (diffHours > 1) {
-          console.warn(`! Reserva huérfana detectada para [${record.platform.toUpperCase()}] ${record.slug} (creada hace ${diffHours.toFixed(1)} horas). Marcando como 'unknown' para evitar duplicación.`);
+          console.warn(`! Reserva huerfana detectada para [${record.platform.toUpperCase()}] ${record.slug} (creada hace ${diffHours.toFixed(1)} horas). Marcando como '${SOCIAL_STATUS.NEEDS_RECONCILIATION}'.`);
           if (!DRY_RUN) {
-            record.status = 'unknown';
+            record.status = SOCIAL_STATUS.NEEDS_RECONCILIATION;
             record.lastError = 'Reserva huérfana no procesada por caída de ejecución anterior';
             hasChanges = true;
           }
@@ -193,9 +203,9 @@ async function main() {
           const isCurrentRun = record.runId === GLOBAL_RUN_ID || (GLOBAL_RUN_ID.startsWith('local') && isLocalRun);
           
           if (!isCurrentRun) {
-            console.warn(`! Reserva pertenece a otra ejecución (runId: ${record.runId}, actual: ${GLOBAL_RUN_ID}). Marcando como 'unknown' para evitar duplicaciones.`);
+            console.warn(`! Reserva pertenece a otra ejecucion (runId: ${record.runId}, actual: ${GLOBAL_RUN_ID}). Marcando como '${SOCIAL_STATUS.NEEDS_RECONCILIATION}'.`);
             if (!DRY_RUN) {
-              record.status = 'unknown';
+              record.status = SOCIAL_STATUS.NEEDS_RECONCILIATION;
               record.lastError = 'Reserva pertenece a otra ejecución diferente';
               hasChanges = true;
             }
@@ -212,7 +222,7 @@ async function main() {
 
     // RECOVERY: Procesar pending-asset de Instagram antes de reservas normales
     const pendingAssets = Object.values(socialData.posts).filter(
-      p => p.platform === 'instagram' && p.status === 'pending-asset'
+      p => p.platform === 'instagram' && p.status === SOCIAL_STATUS.PENDING_ASSET
     );
     if (pendingAssets.length > 0) {
       console.log(`\nRecuperando ${pendingAssets.length} post(s) de Instagram con pending-asset...`);
@@ -265,7 +275,7 @@ async function main() {
             const containerData = await createInstagramContainer({ text: igText, imageUrl: recoveredUrl, dryRun: DRY_RUN });
             socialData.posts[key] = {
               ...socialData.posts[key],
-              status: 'prepared',
+              status: SOCIAL_STATUS.PREPARED,
               creationId: containerData.id,
               preparedAt: new Date().toISOString()
             };
@@ -291,6 +301,14 @@ async function main() {
       // Facebook no necesita preparación
       if (platform === 'facebook') {
         console.log(`[FACEBOOK] ${slug}: Se saltará la preparación (listo directo para publicar).`);
+        if (!DRY_RUN) {
+          socialData.posts[key] = {
+            ...socialData.posts[key],
+            status: SOCIAL_STATUS.PREPARED,
+            preparedAt: new Date().toISOString()
+          };
+          await saveSocialData(socialData);
+        }
         continue;
       }
 
@@ -314,7 +332,7 @@ async function main() {
       } catch (err) {
         console.error(`✗ Error al leer archivo de la noticia para ${slug}: ${err.message}`);
         if (!DRY_RUN) {
-          socialData.posts[key].status = 'failed';
+          socialData.posts[key].status = SOCIAL_STATUS.CANCELLED;
           socialData.posts[key].lastError = `No se encontró el archivo markdown: ${err.message}`;
           await saveSocialData(socialData);
         }
@@ -328,6 +346,10 @@ async function main() {
 
         // 1. Imagen HTTP directa -> Descargar localmente para evitar hotlinking
         if (item.image && item.image.startsWith('http')) {
+          console.log(`- Imagen externa detectada; se usara placa local para evitar hotlinking: ${item.image}`);
+          item.image = '';
+        }
+        if (false && item.image && item.image.startsWith('http')) {
           console.log(`- Descargando imagen externa: ${item.image}`);
           const localPath = await downloadImage(item.image, item.slug);
           if (localPath) {
@@ -392,7 +414,7 @@ async function main() {
           if (!DRY_RUN) {
             socialData.posts[key] = {
               ...socialData.posts[key],
-              status: 'prepared',
+              status: SOCIAL_STATUS.PREPARED,
               creationId: creationId,
               preparedAt: new Date().toISOString()
             };
@@ -404,21 +426,20 @@ async function main() {
         } else {
           console.log('! Saltando Instagram: esperando disponibilidad del asset.');
           if (!DRY_RUN) {
-            socialData.posts[key].status = 'pending-asset';
+            socialData.posts[key].status = SOCIAL_STATUS.PENDING_ASSET;
             await saveSocialData(socialData);
           }
         }
       } catch (error) {
         console.error(`✗ Error al preparar Instagram: ${error.message}`);
         if (!DRY_RUN) {
-          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
           socialData.posts[key] = {
             ...socialData.posts[key],
-            status: isAmbiguous ? 'unknown' : 'failed',
+            status: error instanceof MetaError ? statusForMetaError(error) : SOCIAL_STATUS.NEEDS_RECONCILIATION,
             lastError: error.message
           };
           await saveSocialData(socialData);
-          console.log(`Estado Instagram actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
+          console.log(`Estado Instagram actualizado a: ${socialData.posts[key].status}`);
         }
       }
       await sleep(1000);
@@ -432,7 +453,7 @@ async function main() {
     // Procesar Facebook e Instagram usando el mismo runId del intento actual
     const currentRunId = GLOBAL_RUN_ID;
     const fbReserved = Object.values(socialData.posts).filter(p => {
-      if (p.status !== 'publishing' || p.platform !== 'facebook') return false;
+      if (p.status !== SOCIAL_STATUS.PREPARED || p.platform !== 'facebook') return false;
       const isLocalRun = p.runId && p.runId.startsWith('local');
       return p.runId === currentRunId || (currentRunId.startsWith('local') && isLocalRun);
     });
@@ -461,7 +482,7 @@ async function main() {
       } catch (err) {
         console.error(`✗ Error al leer archivo de la noticia para ${slug}: ${err.message}`);
         if (!DRY_RUN) {
-          socialData.posts[key].status = 'failed';
+          socialData.posts[key].status = SOCIAL_STATUS.CANCELLED;
           socialData.posts[key].lastError = `No se encontró el archivo markdown: ${err.message}`;
           await saveSocialData(socialData);
         }
@@ -490,14 +511,13 @@ async function main() {
       } catch (error) {
         console.error(`✗ Error Facebook: ${error.message}`);
         if (!DRY_RUN) {
-          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
           socialData.posts[key] = {
             ...socialData.posts[key],
-            status: isAmbiguous ? 'unknown' : 'failed',
+            status: error instanceof MetaError ? statusForMetaError(error) : SOCIAL_STATUS.NEEDS_RECONCILIATION,
             lastError: error.message
           };
           await saveSocialData(socialData);
-          console.log(`Estado Facebook actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
+          console.log(`Estado Facebook actualizado a: ${socialData.posts[key].status}`);
         }
       }
       await sleep(1000);
@@ -505,7 +525,7 @@ async function main() {
 
     // Procesar Instagram (lee los 'prepared' de Instagram del mismo runId)
     const igPrepared = Object.values(socialData.posts).filter(p => {
-      if (p.status !== 'prepared' || p.platform !== 'instagram') return false;
+      if (p.status !== SOCIAL_STATUS.PREPARED || p.platform !== 'instagram') return false;
       const isLocalRun = p.runId && p.runId.startsWith('local');
       return p.runId === currentRunId || (currentRunId.startsWith('local') && isLocalRun);
     });
@@ -560,14 +580,13 @@ async function main() {
       } catch (error) {
         console.error(`✗ Error Instagram: ${error.message}`);
         if (!DRY_RUN) {
-          const isAmbiguous = error instanceof MetaError ? error.isAmbiguous : true;
           socialData.posts[key] = {
             ...socialData.posts[key],
-            status: isAmbiguous ? 'unknown' : 'failed',
+            status: error instanceof MetaError ? statusForMetaError(error) : SOCIAL_STATUS.NEEDS_RECONCILIATION,
             lastError: error.message
           };
           await saveSocialData(socialData);
-          console.log(`Estado Instagram actualizado a: ${isAmbiguous ? 'unknown' : 'failed'}`);
+          console.log(`Estado Instagram actualizado a: ${socialData.posts[key].status}`);
         }
       }
       await sleep(1000);

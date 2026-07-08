@@ -43,11 +43,12 @@
       "slug": "2026-07-06-capacitacion-para-productores-de-alimentos-en-rio-grande",
       "platform": "instagram",
       "date": "2026-07-07T13:54:39.491Z",
-      "status": "prepared",
+      "status": "failed-retryable",
       "attempts": 1,
-      "creationId": "17906839086442188",
+      "creationId": null,
       "runId": "28871656281-1",
-      "preparedAt": "2026-07-07T18:28:46.238Z"
+      "preparedAt": "2026-07-07T18:28:46.238Z",
+      "lastError": "Contenedor prepared de run anterior sin remoteId; reintentar con asset/creationId nuevo."
     },
     "2026-07-06-inscripciones-abiertas-para-carreras-del-iurp-en-rio-grande|facebook": {
       "slug": "2026-07-06-inscripciones-abiertas-para-carreras-del-iurp-en-rio-grande",
@@ -141,20 +142,23 @@
       "slug": "2026-07-07-argentina-cuartos-final-mundial-2026",
       "platform": "facebook",
       "date": "2026-07-08T03:54:22.653Z",
-      "status": "published",
+      "status": "needs-reconciliation",
       "attempts": 1,
       "runId": "28916243920-1",
       "remoteId": "583685431494870_122200751534790697",
-      "publishedAt": "2026-07-08T03:54:45.518Z"
+      "publishedAt": "2026-07-08T03:54:45.518Z",
+      "lastError": "Registro indica publicacion de una nota factual falsa; requiere verificacion remota y retiro/correccion segura."
     },
     "2026-07-07-argentina-cuartos-final-mundial-2026|instagram": {
       "slug": "2026-07-07-argentina-cuartos-final-mundial-2026",
       "platform": "instagram",
       "date": "2026-07-08T03:54:22.653Z",
-      "status": "unknown",
+      "status": "cancelled",
       "attempts": 1,
       "creationId": null,
-      "runId": "28916243920-1"
+      "runId": "28916243920-1",
+      "cancelledAt": "2026-07-08T00:00:00.000Z",
+      "cancelReason": "Nota falsa retirada; no debe recuperarse ni publicarse en Instagram."
     },
     "2026-07-08-discord-ia-baneos-masivos|facebook": {
       "slug": "2026-07-08-discord-ia-baneos-masivos",
@@ -170,68 +174,70 @@
       "slug": "2026-07-08-discord-ia-baneos-masivos",
       "platform": "instagram",
       "date": "2026-07-08T03:54:22.653Z",
-      "status": "unknown",
+      "status": "failed-retryable",
       "attempts": 1,
       "creationId": null,
       "runId": "28916243920-1",
-      "lastError": "Only photo or video can be accepted as media type."
+      "lastError": "Only photo or video can be accepted as media type.",
+      "nextAction": "Regenerar asset local compatible antes de publicar Instagram."
     },
     "2026-07-08-errata-argentina-egipto|facebook": {
       "slug": "2026-07-08-errata-argentina-egipto",
       "platform": "facebook",
       "date": "2026-07-08T04:29:25.381Z",
-      "status": "unknown",
+      "status": "needs-reconciliation",
       "attempts": 1,
       "runId": "local-1783484965381",
-      "lastError": "Reserva pertenece a otra ejecución diferente"
+      "lastError": "Correccion editorial pendiente de decision tras verificar estado remoto de Facebook."
     },
     "2026-07-08-errata-argentina-egipto|instagram": {
       "slug": "2026-07-08-errata-argentina-egipto",
       "platform": "instagram",
       "date": "2026-07-08T04:29:25.381Z",
-      "status": "unknown",
+      "status": "cancelled",
       "attempts": 1,
       "creationId": null,
       "runId": "local-1783484965381",
-      "lastError": "Reserva pertenece a otra ejecución diferente"
+      "lastError": "No publicar correccion en Instagram sin evidencia de que la falsedad haya llegado a esa plataforma.",
+      "cancelledAt": "2026-07-08T00:00:00.000Z"
     },
     "2026-07-08-melella-reforma-constitucional-tierra-del-fuego|facebook": {
       "slug": "2026-07-08-melella-reforma-constitucional-tierra-del-fuego",
       "platform": "facebook",
       "date": "2026-07-08T04:29:25.381Z",
-      "status": "unknown",
+      "status": "cancelled",
       "attempts": 1,
       "runId": "local-1783484965381",
-      "lastError": "Reserva pertenece a otra ejecución diferente"
+      "lastError": "Reserva generada por corrida local; no se publica hasta verificacion factual/social."
     },
     "2026-07-08-melella-reforma-constitucional-tierra-del-fuego|instagram": {
       "slug": "2026-07-08-melella-reforma-constitucional-tierra-del-fuego",
       "platform": "instagram",
       "date": "2026-07-08T04:29:25.381Z",
-      "status": "unknown",
+      "status": "cancelled",
       "attempts": 1,
       "creationId": null,
       "runId": "local-1783484965381",
-      "lastError": "Reserva pertenece a otra ejecución diferente"
+      "lastError": "Reserva generada por corrida local; no se publica hasta verificacion factual/social."
     },
     "2026-07-06-con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande|facebook": {
       "slug": "2026-07-06-con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande",
       "platform": "facebook",
       "date": "2026-07-08T04:30:16.815Z",
-      "status": "unknown",
+      "status": "failed-retryable",
       "attempts": 1,
       "runId": "local-1783485016815",
-      "lastError": "Credenciales faltantes"
+      "lastError": "Corrida local sin credenciales; reintento permitido en workflow con secretos."
     },
     "2026-07-06-con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande|instagram": {
       "slug": "2026-07-06-con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande",
       "platform": "instagram",
       "date": "2026-07-08T04:30:16.815Z",
-      "status": "unknown",
+      "status": "failed-retryable",
       "attempts": 1,
       "creationId": null,
       "runId": "local-1783485016815",
-      "lastError": "Credenciales faltantes"
+      "lastError": "Corrida local sin credenciales; reintento permitido en workflow con secretos."
     }
   }
 }

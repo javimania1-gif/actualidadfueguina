@@ -8,7 +8,7 @@ tags:
   - Fe de Erratas
   - Aclaración
   - Deportes
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Argentina.svg"
+image: "/uploads/auto/plate-2026-07-08-errata-argentina-egipto.jpg"
 imageAlt: "Bandera de Argentina"
 author: "Actualidad Fueguina"
 featured: false
@@ -27,6 +27,6 @@ Actualidad Fueguina informa a sus lectores que en una publicación reciente titu
 
 El hecho verdadero es que **Argentina jugó y venció a Egipto**, no a Ecuador, logrando así su pase a los cuartos de final del Mundial 2026. 
 
-El error se debió a una falla en el proceso de carga de contenido de prueba durante una actualización de nuestros sistemas editoriales. La nota incorrecta ya ha sido retirada de nuestro portal y confirmamos que no llegó a ser distribuida en nuestras redes sociales (Facebook e Instagram).
+El error se debio a una falla en el proceso de carga de contenido de prueba durante una actualizacion de nuestros sistemas editoriales. La nota incorrecta ya fue retirada del portal. Segun el registro tecnico disponible, tambien fue distribuida en Facebook; no contamos con evidencia de publicacion en Instagram.
 
 Pedimos disculpas a nuestros lectores por la confusión generada. Nuestro compromiso con la verdad y la precisión periodística es fundamental, y estamos implementando nuevas capas de verificación factual estructurada en nuestro pipeline para garantizar que un error de esta naturaleza no vuelva a ocurrir.

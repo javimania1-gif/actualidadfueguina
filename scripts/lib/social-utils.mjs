@@ -1,7 +1,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { ROOT, callModel, extractJsonObject, cleanText, sleep } from './news-utils.mjs';
+import { ROOT, extractJsonObject, cleanText, sleep } from './news-utils.mjs';
 
 export const SOCIAL_DATA_PATH = path.join(ROOT, 'data/social-posts.json');
 export const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || 'v25.0';
