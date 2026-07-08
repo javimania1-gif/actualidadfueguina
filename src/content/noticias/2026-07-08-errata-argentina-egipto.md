@@ -8,8 +8,12 @@ tags:
   - Fe de Erratas
   - Aclaración
   - Deportes
-image: "/uploads/auto/plate-2026-07-08-errata-argentina-egipto.jpg"
-imageAlt: "Bandera de Argentina"
+image: "/uploads/auto/2026-07-08-747ee82a94772fe1dc.webp"
+imageAlt: "La Selección Argentina de fútbol en una formación de archivo"
+imageLicense: "CC BY 4.0"
+imageCredit: "Argentina.gob.ar"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Argentina_national_football_team_-_1_-_2022.jpg"
+imageStrategy: "media-library"
 author: "Actualidad Fueguina"
 featured: false
 importance: 10

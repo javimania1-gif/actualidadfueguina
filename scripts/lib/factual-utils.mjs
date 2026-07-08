@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { ROOT, cleanText } from './news-utils.mjs';
-import { SOURCE_TIERS, countIndependentEditorialSources } from './source-policy.mjs';
+import { SOURCE_TIERS, countIndependentEditorialSources, isSourceCompetentForEvent } from './source-policy.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
 
 export const EVENTS_PATH = path.join(ROOT, 'data/events.json');
@@ -13,7 +13,9 @@ const HIGH_RISK_PATTERNS = [
   /\b(judicial|condena|imputado|denuncia penal|causa)\b/i,
   /\b(inflacion|dolar|tarifa|salario|paritaria|reforma constitucional)\b/i,
   /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/i,
-  /\b(ley|decreto|resolucion|norma|vigencia)\b/i
+  /\b(ley|decreto|resolucion|norma|vigencia)\b/i,
+  /\b(policiales?|homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido)\b/i,
+  /\b(incendio grave|sismo|evacuacion|alerta meteorologica severa|naufragio|violencia|busqueda de personas)\b/i
 ];
 
 const LOW_RISK_PATTERNS = [
@@ -147,17 +149,23 @@ function inferEventType(text) {
   const value = normalizeText(text);
   if (/\b(resultado|marcador|vencio|derroto|elimino|clasifico|octavos|cuartos)\b/.test(value)) return 'sports-result';
   if (/\b(eleccion|electoral|votos|convencionales)\b/.test(value)) return 'election';
+  if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(value)) return 'crime';
+  if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(value)) return 'weather';
+  if (/\b(ciencia|cientifico|investigacion|hallazgo|conicet)\b/.test(value)) return 'scientific';
   if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(value)) return 'casualty';
+  if (/\b(legislatura|senado|diputados|sesion|proyecto de ley)\b/.test(value)) return 'legislative';
   if (/\b(ley|decreto|resolucion|norma|reforma constitucional)\b/.test(value)) return 'legal-policy';
   return 'high-risk';
 }
 
 function inferAction(text) {
   const value = normalizeText(text);
+  if (value.includes('reforma constitucional')) return 'reforma-constitucional';
   const candidates = [
     'vencio', 'derroto', 'elimino', 'clasifico', 'convoca', 'reactiva',
     'anuncia', 'presenta', 'lanza', 'investiga', 'aprueba', 'rechaza',
-    'suspende', 'restaura', 'capacita'
+    'suspende', 'restaura', 'capacita', 'inaugura', 'abre', 'inscribe',
+    'convoca', 'advierte', 'denuncia', 'detiene'
   ];
   return candidates.find((word) => value.includes(word)) || 'informa';
 }
@@ -188,12 +196,23 @@ function normalizedSet(values = []) {
   return new Set(values.map(normalizeText).filter(Boolean));
 }
 
-function diffValues(a = [], b = []) {
+function setsEqual(a, b) {
+  if (a.size !== b.size) return false;
+  return [...a].every((value) => b.has(value));
+}
+
+function diffValues(field, a = [], b = []) {
   const setA = normalizedSet(a);
   const setB = normalizedSet(b);
   if (setA.size === 0 || setB.size === 0) return [];
-  const shared = [...setA].filter((value) => setB.has(value));
-  if (shared.length > 0) return [];
+  if (setsEqual(setA, setB)) return [];
+
+  if (['teams', 'scores', 'numbers', 'dates', 'laws'].includes(field)) {
+    return [...a, ...b].filter(Boolean);
+  }
+
+  const shared = [...setA].some((value) => setB.has(value));
+  if (shared) return [];
   return [...a, ...b].filter(Boolean);
 }
 
@@ -203,8 +222,8 @@ export function findFactConflicts(factSets = []) {
     for (let j = i + 1; j < factSets.length; j++) {
       const left = factSets[i];
       const right = factSets[j];
-      for (const field of ['teams', 'scores', 'dates']) {
-        const values = diffValues(left[field], right[field]);
+      for (const field of ['teams', 'scores', 'numbers', 'dates', 'laws']) {
+        const values = diffValues(field, left[field], right[field]);
         if (values.length > 0) {
           conflicts.push({
             field,
@@ -218,6 +237,25 @@ export function findFactConflicts(factSets = []) {
   return conflicts;
 }
 
+function consensusValues(factSets = [], field) {
+  if (factSets.length === 0) return [];
+  if (factSets.length === 1) return unique(factSets[0]?.[field] || []);
+  const counts = new Map();
+  const original = new Map();
+  for (const facts of factSets) {
+    for (const value of unique(facts?.[field] || [])) {
+      const key = normalizeText(value);
+      if (!key) continue;
+      counts.set(key, (counts.get(key) || 0) + 1);
+      if (!original.has(key)) original.set(key, value);
+    }
+  }
+  return [...counts.entries()]
+    .filter(([, count]) => count >= 2)
+    .map(([key]) => original.get(key))
+    .filter(Boolean);
+}
+
 export function mergeVerifiedFacts(factSets = []) {
   const merged = {};
   for (const field of CRITICAL_FIELDS) {
@@ -229,12 +267,40 @@ export function mergeVerifiedFacts(factSets = []) {
   return merged;
 }
 
+export function compareFactSets(factSets = []) {
+  const unionFacts = mergeVerifiedFacts(factSets);
+  const consensusFacts = {};
+  for (const field of CRITICAL_FIELDS) {
+    consensusFacts[field] = consensusValues(factSets, field);
+  }
+  consensusFacts.eventType = unionFacts.eventType;
+  consensusFacts.action = unionFacts.action;
+  consensusFacts.rawSummary = unionFacts.rawSummary;
+
+  return {
+    unionFacts,
+    consensusFacts,
+    sourceSpecificFacts: factSets.map((facts) => {
+      const sourceFacts = {};
+      for (const field of CRITICAL_FIELDS) sourceFacts[field] = unique(facts[field] || []);
+      sourceFacts.eventType = facts.eventType || 'general';
+      sourceFacts.action = facts.action || 'informa';
+      sourceFacts.rawSummary = facts.rawSummary || '';
+      return sourceFacts;
+    }),
+    conflictingFacts: findFactConflicts(factSets)
+  };
+}
+
 export function corroborateEvent({ eventKey, candidates = [] }) {
   const factSets = candidates.map((candidate) => candidate.facts);
   const sourceRefs = candidates.map((candidate) => candidate.sourceRef);
   const riskLevel = factSets.some((facts) => facts.riskLevel === 'high') ? 'high' : 'low';
-  const conflicts = findFactConflicts(factSets);
+  const comparison = compareFactSets(factSets);
+  const conflicts = comparison.conflictingFacts;
   const hasCriticalConflict = conflicts.some((conflict) => conflict.severity === 'critical');
+  const eventType = factSets.find((facts) => facts.eventType)?.eventType || 'general';
+  const verifiedFacts = riskLevel === 'high' ? comparison.consensusFacts : comparison.unionFacts;
 
   if (hasCriticalConflict) {
     return {
@@ -243,11 +309,14 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       riskLevel,
       verified: false,
       conflicts,
-      verifiedFacts: mergeVerifiedFacts(factSets)
+      consensusFacts: comparison.consensusFacts,
+      sourceSpecificFacts: comparison.sourceSpecificFacts,
+      conflictingFacts: conflicts,
+      verifiedFacts
     };
   }
 
-  const hasTierA = sourceRefs.some((ref) => ref.tier === SOURCE_TIERS.A);
+  const hasCompetentTierA = sourceRefs.some((ref) => ref.tier === SOURCE_TIERS.A && isSourceCompetentForEvent(ref, eventType));
   const independentTierB = countIndependentEditorialSources(sourceRefs);
 
   if (riskLevel === 'low') {
@@ -257,18 +326,24 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       riskLevel,
       verified: true,
       conflicts: [],
-      verifiedFacts: mergeVerifiedFacts(factSets)
+      consensusFacts: comparison.consensusFacts,
+      sourceSpecificFacts: comparison.sourceSpecificFacts,
+      conflictingFacts: [],
+      verifiedFacts
     };
   }
 
-  if (hasTierA) {
+  if (hasCompetentTierA) {
     return {
       eventKey,
       status: 'verified-tier-a',
       riskLevel,
       verified: true,
       conflicts: [],
-      verifiedFacts: mergeVerifiedFacts(factSets)
+      consensusFacts: comparison.consensusFacts,
+      sourceSpecificFacts: comparison.sourceSpecificFacts,
+      conflictingFacts: [],
+      verifiedFacts
     };
   }
 
@@ -279,7 +354,10 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       riskLevel,
       verified: true,
       conflicts: [],
-      verifiedFacts: mergeVerifiedFacts(factSets)
+      consensusFacts: comparison.consensusFacts,
+      sourceSpecificFacts: comparison.sourceSpecificFacts,
+      conflictingFacts: [],
+      verifiedFacts
     };
   }
 
@@ -289,7 +367,10 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
     riskLevel,
     verified: false,
     conflicts: [],
-    verifiedFacts: mergeVerifiedFacts(factSets)
+    consensusFacts: comparison.consensusFacts,
+    sourceSpecificFacts: comparison.sourceSpecificFacts,
+    conflictingFacts: [],
+    verifiedFacts
   };
 }
 
@@ -330,6 +411,35 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
     const normalized = normalizeText(team);
     if (text.includes(normalized) && !allowedTeams.has(normalized)) {
       mismatches.push({ field: 'teams', value: team, reason: 'unsupported-critical-term' });
+    }
+  }
+
+  const allowedScores = normalizedSet(verifiedFacts.scores || []);
+  for (const score of extractScores(text)) {
+    const normalized = normalizeText(score);
+    if (allowedScores.size > 0 && normalized && !allowedScores.has(normalized)) {
+      mismatches.push({ field: 'scores', value: score, reason: 'unsupported-score' });
+    }
+  }
+
+  const allowedNumbers = normalizedSet(verifiedFacts.numbers || []);
+  const outputNumbers = extractNumbers(text).filter((value) => {
+    const normalized = normalizeText(value);
+    if (!normalized) return false;
+    return /\b(victima|victimas|herido|heridos|fallecido|fallecidos|muerto|muertos|%|por ciento)\b/.test(normalized);
+  });
+  for (const value of outputNumbers) {
+    const normalized = normalizeText(value);
+    if (allowedNumbers.size > 0 && normalized && !allowedNumbers.has(normalized)) {
+      mismatches.push({ field: 'numbers', value, reason: 'unsupported-critical-number' });
+    }
+  }
+
+  const allowedDates = normalizedSet(verifiedFacts.dates || []);
+  for (const date of extractDates(text)) {
+    const normalized = normalizeText(date);
+    if (allowedDates.size > 0 && normalized && !allowedDates.has(normalized)) {
+      mismatches.push({ field: 'dates', value: date, reason: 'unsupported-critical-date' });
     }
   }
 
@@ -374,6 +484,9 @@ export function buildEventRecord({ existing = {}, eventKey, candidates = [], ver
       facts: candidate.facts
     })),
     conflicts: verification.conflicts || [],
+    consensusFacts: verification.consensusFacts || {},
+    sourceSpecificFacts: verification.sourceSpecificFacts || [],
+    conflictingFacts: verification.conflictingFacts || verification.conflicts || [],
     verifiedFacts: verification.verifiedFacts || {}
   };
 }

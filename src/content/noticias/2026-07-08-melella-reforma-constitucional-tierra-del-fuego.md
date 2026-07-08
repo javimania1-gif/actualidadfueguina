@@ -8,8 +8,12 @@ tags:
   - Política
   - Reforma Constitucional
   - Elecciones
-image: "/uploads/auto/plate-2026-07-08-melella-reforma-constitucional-tierra-del-fuego.jpg"
-imageAlt: "Gustavo Melella en un acto oficial"
+image: "/uploads/auto/2026-07-08-ab6d6c4a649073c447.webp"
+imageAlt: "Gustavo Melella en una reunión institucional"
+imageLicense: "CC BY 4.0"
+imageCredit: "Argentina.gob.ar"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Lammens_y_Melella.jpg"
+imageStrategy: "media-library"
 author: "Actualidad Fueguina"
 featured: true
 importance: 8

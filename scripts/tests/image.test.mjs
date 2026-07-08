@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import { ROOT, normalizeImageBuffer, normalizeImageAsset } from '../lib/news-utils.mjs';
+import { buildImagePlan, scoreMediaAsset } from '../lib/image-plan.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -103,6 +104,36 @@ await test('bytes corruptos se rechazan', async () => {
   });
   assert.equal(result.ok, false);
   assert(result.reason.startsWith('decode-error'));
+});
+
+await test('plan semantico prioriza entidad principal Melella', async () => {
+  const plan = buildImagePlan({
+    title: 'Melella reactiva la reforma constitucional en Tierra del Fuego',
+    verifiedFacts: { people: ['Gustavo Melella'], places: ['Tierra del Fuego'] },
+    category: 'Provincia'
+  });
+  assert.equal(plan[0].query, 'Gustavo Melella');
+});
+
+await test('score de biblioteca favorece lugar exacto y no categoria generica', async () => {
+  const plan = buildImagePlan({
+    title: 'Parque Termal Municipal de Tolhuin cierra temporada de invierno',
+    verifiedFacts: { places: ['Tolhuin'] },
+    category: 'Tolhuin'
+  });
+  const exact = scoreMediaAsset({
+    label: 'Termas de Tolhuin',
+    aliases: ['termas de tolhuin', 'parque termal tolhuin'],
+    tags: ['tolhuin', 'termas', 'parque termal'],
+    priority: 90
+  }, plan, 'Parque Termal Municipal de Tolhuin');
+  const generic = scoreMediaAsset({
+    label: 'Tolhuin',
+    aliases: ['tolhuin'],
+    tags: ['tolhuin'],
+    priority: 20
+  }, plan, 'Parque Termal Municipal de Tolhuin');
+  assert(exact.score > generic.score);
 });
 
 globalThis.fetch = originalFetch;

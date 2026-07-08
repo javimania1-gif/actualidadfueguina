@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ github.token }}
       AF_MODEL: openai/gpt-4o-mini
       AF_MAX_FB_PER_RUN: '2'
       AF_MAX_IG_PER_RUN: '2'

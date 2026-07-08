@@ -12,8 +12,8 @@ import Parser from 'rss-parser';
 import {
   ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
-  isOfficialDomain, downloadImage, writeArticleWithModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
-  generateWebPlate, searchWebImage, isHomepage
+  isOfficialDomain, writeArticleWithModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
+  generateWebPlate
 } from './lib/news-utils.mjs';
 import {
   extractFingerprint as extractFingerprintShared,
@@ -35,6 +35,7 @@ import {
   validateArticleAgainstFacts,
   buildEventRecord
 } from './lib/factual-utils.mjs';
+import { selectImageForNews, logImageSelection } from './lib/image-plan.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
@@ -48,6 +49,8 @@ await ensureDirs();
 const MAX_AI_PER_RUN = Number(process.env.AF_MAX_AI_PER_RUN || 8);
 const MAX_DRAFTS_PER_RUN = Number(process.env.AF_MAX_DRAFTS_PER_RUN || 10);
 const MAX_PER_SOURCE = Number(process.env.AF_MAX_PER_SOURCE || 2);
+const MAX_MATERIALIZE_PER_RUN = Number(process.env.AF_MAX_MATERIALIZE_PER_RUN || 36);
+const RSS_TIMEOUT_MS = Number(process.env.AF_RSS_TIMEOUT_MS || 15000);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
 const PERSIST_OUTPUTS =
@@ -83,9 +86,14 @@ const metrics = {
   conflicting: 0,
   published: 0,
   drafts: 0,
+  modelErrors: 0,
+  discardedImportance: 0,
+  discardedSourceLimit: 0,
+  discardedNoAiBudget: 0,
   extractErrors: 0,
   imageErrors: 0,
   aiCalls: 0,
+  imageSelections: [],
   byCategory: {}
 };
 
@@ -145,7 +153,8 @@ console.log(`Índice de deduplicación (solo publicadas): ${existingUrls.size} U
 
 async function readSource(source) {
   if (source.type === 'rss') {
-    const feed = await parser.parseURL(source.url);
+    const { text } = await fetchText(source.url, { timeoutMs: source.timeoutMs || RSS_TIMEOUT_MS });
+    const feed = await parser.parseString(text);
     let items = (feed.items || []).map((item) => ({
       title: item.title || '',
       link: item.link || item.guid || '',
@@ -229,6 +238,10 @@ await Promise.all(config.sources.map(async (source) => {
 
 console.log(`Candidatos pre-filtro de todas las fuentes: ${allCandidates.length}`);
 metrics.candidatesDetected = allCandidates.length;
+if (allCandidates.length > MAX_MATERIALIZE_PER_RUN) {
+  console.log(`Limitando materializacion a ${MAX_MATERIALIZE_PER_RUN}/${allCandidates.length} candidatos para evitar timeout operativo.`);
+}
+const candidatesToMaterialize = allCandidates.slice(0, MAX_MATERIALIZE_PER_RUN);
 
 
 // ==============================================================
@@ -239,7 +252,7 @@ console.log(`\n=== FASE B: Extracción y ranking ===`);
 
 // Extraer contenido de cada candidato (en serie para no saturar)
 const extracted = [];
-for (const candidate of allCandidates) {
+for (const candidate of candidatesToMaterialize) {
   const { source, item, initialKey } = candidate;
   let article;
   try {
@@ -501,6 +514,7 @@ for (const candidate of verifiedCandidates) {
   // Verificar límite por fuente
   const sourceCount = publishedPerSource[source.id] || 0;
   if (sourceCount >= MAX_PER_SOURCE) {
+    metrics.discardedSourceLimit++;
     // Guardar como borrador por límite de fuente, reintentable
     if (draftCount < MAX_DRAFTS_PER_RUN) {
       await saveDraft(candidate, 'source-limit');
@@ -515,6 +529,7 @@ for (const candidate of verifiedCandidates) {
   const totalUsed = officialAiUsed + discoveryAiUsed;
 
   const canPublish = totalUsed < MAX_AI_PER_RUN && used < budget;
+  if (!canPublish) metrics.discardedNoAiBudget++;
 
   if (canPublish) {
     try {
@@ -542,6 +557,7 @@ for (const candidate of verifiedCandidates) {
         console.log(`  DESCARTADA por threshold editorial (importance ${ai.importance} < ${source.minImportance}): ${ai.title}`);
         if (isOfficial) officialAiUsed++; else discoveryAiUsed++; // se consumíó presupuesto igual
         metrics.aiCalls++;
+        metrics.discardedImportance++;
         seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'discarded-editorial', source: source.id };
         continue;
       }
@@ -555,23 +571,41 @@ for (const candidate of verifiedCandidates) {
         continue;
       }
 
-      let image = await downloadImage(article.image, article.finalUrl);
-      if (article.image && !image) metrics.imageErrors++;
-
-      if (!image) {
-        console.log(`! Buscando foto real para: ${ai.location} ${ai.category}`);
-        const commonsUrl = await searchWebImage(`${ai.location} ${ai.category}`);
-        if (commonsUrl) {
-          console.log(`! Foto Commons encontrada. Descargando...`);
-          image = await downloadImage(commonsUrl, article.finalUrl);
+      const imageSelection = await selectImageForNews({
+        article,
+        ai,
+        verification,
+        sourceArticle: {
+          title: article.title || item.title,
+          description: article.description || item.description
         }
-      }
+      });
+      let image = imageSelection.image;
+      let imageMeta = imageSelection.meta;
+      if (imageSelection.imageAlt) ai.imageAlt = imageSelection.imageAlt;
+      logImageSelection(imageSelection);
+      metrics.imageSelections.push({
+        title: ai.title,
+        strategy: imageMeta?.strategy || '',
+        query: imageMeta?.query || '',
+        score: imageMeta?.score || 0,
+        source: imageMeta?.sourceUrl || ''
+      });
+      if (!image || imageMeta?.strategy === 'fallback-plate') metrics.imageErrors++;
 
       if (!image) {
         const plateFilename = `plate-${datePrefix(pubDate)}-${canonicalKey.slice(0, 8)}.jpg`;
         const localPath = path.join(ROOT, 'public/uploads/auto', plateFilename);
         const plateResult = await generateWebPlate({ title: ai.title, category: ai.category, outputPath: localPath });
         if (plateResult) image = `/uploads/auto/${plateFilename}`;
+        imageMeta = {
+          strategy: 'fallback-plate',
+          query: imageMeta?.query || ai.title,
+          score: 0,
+          sourceUrl: '',
+          credit: 'Actualidad Fueguina',
+          license: 'Imagen generada internamente'
+        };
       }
 
       const filename = `${datePrefix(pubDate)}-${slugify(ai.title)}.md`;
@@ -580,7 +614,7 @@ for (const candidate of verifiedCandidates) {
 
       await fs.writeFile(target, makeNewsMarkdown({
         ai, date: pubDate, image,
-        sourceName: source.name, sourceUrl: sourceRef.url || article.finalUrl, featured
+        sourceName: source.name, sourceUrl: sourceRef.url || article.finalUrl, featured, imageMeta
       }), 'utf8');
 
       // Actualizar índice en memoria para deduplicar dentro del mismo run
@@ -606,6 +640,7 @@ for (const candidate of verifiedCandidates) {
 
     } catch (error) {
       console.warn(`Falló redacción automática (${source.name}): ${error.message}`);
+      metrics.modelErrors++;
       
       if (error.message.includes('FACT_CHECK_FAILED') || error.message.includes('BLOCKED_FACTUAL_MISMATCH')) {
         seen.items[initialKey] = {
@@ -663,6 +698,15 @@ async function saveDraft(candidate, reason) {
 if (PERSIST_OUTPUTS) {
   await saveSeen(seen);
   await saveEvents(events);
+  await saveRunMetrics(metrics, {
+    maxAiPerRun: MAX_AI_PER_RUN,
+    officialAiUsed,
+    officialAiBudget,
+    discoveryAiUsed,
+    discoveryAiBudget,
+    candidatesMaterialized: candidatesToMaterialize.length,
+    totalCandidatesBeforeLimit: allCandidates.length
+  });
 } else {
   console.log('Modo diagnostico: seen.json y events.json no fueron modificados.');
 }
@@ -692,3 +736,38 @@ console.log(`
   IA usada: ${metrics.aiCalls}/${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
   Por categoría: ${categoryStr}
 `);
+
+async function saveRunMetrics(currentMetrics, extra = {}) {
+  const metricsPath = path.join(ROOT, 'data/news-run-metrics.json');
+  const payload = {
+    generatedAt: new Date().toISOString(),
+    run: {
+      persistOutputs: PERSIST_OUTPUTS,
+      githubActions: process.env.GITHUB_ACTIONS === 'true',
+      eventName: process.env.GITHUB_EVENT_NAME || '',
+      runId: process.env.GITHUB_RUN_ID || '',
+      headSha: process.env.GITHUB_SHA || ''
+    },
+    metrics: currentMetrics,
+    budget: extra,
+    reasonNoMorePublished: explainNoMorePublished(currentMetrics, extra)
+  };
+  await fs.mkdir(path.dirname(metricsPath), { recursive: true });
+  await fs.writeFile(metricsPath, JSON.stringify(payload, null, 2) + '\n', 'utf8');
+}
+
+function explainNoMorePublished(currentMetrics, extra = {}) {
+  const reasons = [];
+  if (currentMetrics.pendingVerification > 0) reasons.push(`${currentMetrics.pendingVerification} evento(s) quedaron pendientes de segunda fuente`);
+  if (currentMetrics.conflicting > 0) reasons.push(`${currentMetrics.conflicting} evento(s) tuvieron conflicto factual`);
+  if (currentMetrics.discardedDuplicate > 0) reasons.push(`${currentMetrics.discardedDuplicate} candidato(s) descartados por duplicado/similitud`);
+  if (currentMetrics.discardedQuality > 0) reasons.push(`${currentMetrics.discardedQuality} candidato(s) descartados por calidad o fuente invalida`);
+  if (currentMetrics.discardedImportance > 0) reasons.push(`${currentMetrics.discardedImportance} candidato(s) descartados por importancia editorial`);
+  if (currentMetrics.discardedSourceLimit > 0) reasons.push(`${currentMetrics.discardedSourceLimit} candidato(s) quedaron por limite por fuente`);
+  if (currentMetrics.discardedNoAiBudget > 0) reasons.push(`${currentMetrics.discardedNoAiBudget} candidato(s) quedaron sin presupuesto IA`);
+  if (currentMetrics.modelErrors > 0) reasons.push(`${currentMetrics.modelErrors} error(es) de modelo`);
+  if ((extra.totalCandidatesBeforeLimit || 0) > (extra.candidatesMaterialized || 0)) {
+    reasons.push(`${extra.totalCandidatesBeforeLimit - extra.candidatesMaterialized} candidato(s) no se materializaron por limite anti-timeout`);
+  }
+  return reasons.length ? reasons : ['No habia mas candidatos verificados y publicables en este run'];
+}

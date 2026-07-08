@@ -9,7 +9,8 @@ import {
   extractFacts,
   generateEventKey,
   corroborateEvent,
-  validateArticleAgainstFacts
+  validateArticleAgainstFacts,
+  buildEventRecord
 } from '../lib/factual-utils.mjs';
 
 let passed = 0;
@@ -86,11 +87,22 @@ test('fuente Tier A puede verificar dentro de su competencia', () => {
   const event = corroborateEvent({
     eventKey: 'official|agenda',
     candidates: [{
-      sourceRef: { tier: 'A', publisherDomain: 'riogrande.gob.ar', url: 'https://info.riogrande.gob.ar/nota' },
-      facts: { riskLevel: 'high', organizations: ['Municipio de Rio Grande'], dates: ['2026-07-08'] }
+      sourceRef: { tier: 'A', competence: ['municipal'], publisherDomain: 'riogrande.gob.ar', url: 'https://info.riogrande.gob.ar/nota' },
+      facts: { riskLevel: 'high', eventType: 'legal-policy', organizations: ['Municipio de Rio Grande'], dates: ['2026-07-08'] }
     }]
   });
   assert.equal(event.status, 'verified-tier-a');
+});
+
+test('Tier A fuera de competencia no verifica resultados deportivos', () => {
+  const event = corroborateEvent({
+    eventKey: 'sports|argentina',
+    candidates: [{
+      sourceRef: { tier: 'A', competence: ['municipal'], publisherDomain: 'riogrande.gob.ar', url: 'https://info.riogrande.gob.ar/nota' },
+      facts: { riskLevel: 'high', eventType: 'sports-result', teams: ['Argentina', 'Egipto'], scores: ['3-2'], dates: ['2026-07-08'] }
+    }]
+  });
+  assert.equal(event.status, 'pending-verification');
 });
 
 test('conflictos criticos bloquean', () => {
@@ -110,6 +122,24 @@ test('conflictos criticos bloquean', () => {
   assert.equal(event.status, 'conflicting-sources');
 });
 
+test('Argentina-Egipto 3-2 vs Argentina-Ecuador 3-2 bloquea por rival distinto', () => {
+  const event = corroborateEvent({
+    eventKey: 'sports|argentina',
+    candidates: [
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/nota' },
+        facts: { riskLevel: 'high', eventType: 'sports-result', teams: ['Argentina', 'Egipto'], scores: ['3-2'] }
+      },
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'clarin.com', url: 'https://clarin.com/nota' },
+        facts: { riskLevel: 'high', eventType: 'sports-result', teams: ['Argentina', 'Ecuador'], scores: ['3-2'] }
+      }
+    ]
+  });
+  assert.equal(event.status, 'conflicting-sources');
+  assert.equal(event.verified, false);
+});
+
 test('Argentina vs Egipto bloquea salida que inventa Ecuador', () => {
   const validation = validateArticleAgainstFacts(
     {
@@ -119,6 +149,22 @@ test('Argentina vs Egipto bloquea salida que inventa Ecuador', () => {
     },
     {
       verifiedFacts: { teams: ['Argentina', 'Egipto'], scores: [], dates: [], places: [], people: [] },
+      conflicts: []
+    }
+  );
+  assert.equal(validation.ok, false);
+  assert.equal(validation.code, 'BLOCKED_FACTUAL_MISMATCH');
+});
+
+test('5 victimas bloquea salida que altera a 50 victimas', () => {
+  const validation = validateArticleAgainstFacts(
+    {
+      title: 'El accidente dejo 50 victimas',
+      description: 'El parte oficial informo victimas.',
+      body: 'El hecho dejo 50 victimas y movilizo a equipos de emergencia.'
+    },
+    {
+      verifiedFacts: { teams: [], scores: [], dates: [], places: [], people: [], numbers: ['5 victimas'] },
       conflicts: []
     }
   );
@@ -142,6 +188,126 @@ test('dos titulos distintos del mismo evento generan misma clave base', () => {
   const keyA = generateEventKey({ facts: a, title: a.title, sourceRef: { publisherDomain: 'a.com' } });
   const keyB = generateEventKey({ facts: b, title: b.title, sourceRef: { publisherDomain: 'b.com' } });
   assert.equal(keyA, keyB);
+});
+
+function fixtureCandidate({ title, text, sourceRef }) {
+  const article = {
+    title,
+    description: text.slice(0, 180),
+    text: `${title}. ${text} `.repeat(12),
+    date: '2026-07-08'
+  };
+  const facts = extractFacts({ article, source: { defaultCategory: 'Provincia' } });
+  const eventKey = generateEventKey({ facts, title, sourceRef });
+  return { title, facts, eventKey, sourceRef, bodyLength: article.text.length, pubDate: new Date(article.date) };
+}
+
+function groupAndVerify(candidates) {
+  const groups = new Map();
+  for (const candidate of candidates) {
+    if (!groups.has(candidate.eventKey)) groups.set(candidate.eventKey, []);
+    groups.get(candidate.eventKey).push(candidate);
+  }
+  return [...groups.entries()].map(([eventKey, group]) => ({
+    eventKey,
+    group,
+    verification: corroborateEvent({ eventKey, candidates: group })
+  }));
+}
+
+test('integracion A: dos Tier B mismo hecho con titulos distintos verifican un evento', () => {
+  const candidates = [
+    fixtureCandidate({
+      title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+      text: 'La Seleccion Argentina derroto a Egipto por 3-2 en julio de 2026.',
+      sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/a' }
+    }),
+    fixtureCandidate({
+      title: 'La Seleccion derroto a Egipto y clasifico',
+      text: 'Argentina vencio a Egipto por 3-2 y avanzo a cuartos en julio de 2026.',
+      sourceRef: { tier: 'B', publisherDomain: 'clarin.com', url: 'https://clarin.com/a' }
+    })
+  ];
+  const groups = groupAndVerify(candidates);
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].verification.verified, true);
+});
+
+test('integracion B: rival deportivo distinto queda conflictivo y sin publicacion', () => {
+  const candidates = [
+    fixtureCandidate({
+      title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+      text: 'Argentina vencio a Egipto por 3-2 en julio de 2026.',
+      sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/b' }
+    }),
+    fixtureCandidate({
+      title: 'Argentina vencio a Ecuador 3-2 y paso a cuartos',
+      text: 'Argentina vencio a Ecuador por 3-2 en julio de 2026.',
+      sourceRef: { tier: 'B', publisherDomain: 'clarin.com', url: 'https://clarin.com/b' }
+    })
+  ];
+  const groups = groupAndVerify(candidates);
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].verification.status, 'conflicting-sources');
+  assert.equal(groups[0].verification.verified, false);
+});
+
+test('integracion C: pending persistido verifica al aparecer segunda fuente concordante', () => {
+  const first = fixtureCandidate({
+    title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+    text: 'Argentina vencio a Egipto por 3-2 en julio de 2026.',
+    sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/c' }
+  });
+  const firstVerification = corroborateEvent({ eventKey: first.eventKey, candidates: [first] });
+  assert.equal(firstVerification.status, 'pending-verification');
+
+  const record = buildEventRecord({ eventKey: first.eventKey, candidates: [first], verification: firstVerification });
+  const persisted = {
+    sourceRef: { ...record.sources[0], publisherDomain: record.factsBySource[0].publisherDomain, url: record.factsBySource[0].url },
+    facts: record.factsBySource[0].facts
+  };
+  const second = fixtureCandidate({
+    title: 'La Seleccion derroto a Egipto y clasifico',
+    text: 'Argentina vencio a Egipto por 3-2 en julio de 2026.',
+    sourceRef: { tier: 'B', publisherDomain: 'clarin.com', url: 'https://clarin.com/c' }
+  });
+  const secondVerification = corroborateEvent({ eventKey: first.eventKey, candidates: [persisted, second] });
+  assert.equal(secondVerification.verified, true);
+});
+
+test('integracion D: dos hechos diferentes en Rio Grande no se agrupan', () => {
+  const candidates = [
+    fixtureCandidate({
+      title: 'Rio Grande inaugura un centro de monitoreo urbano',
+      text: 'El Municipio de Rio Grande inaugura un centro de monitoreo urbano el 8 de julio.',
+      sourceRef: { tier: 'A', competence: ['municipal'], publisherDomain: 'riogrande.gob.ar', url: 'https://riogrande.gob.ar/d1' }
+    }),
+    fixtureCandidate({
+      title: 'Rio Grande abre inscripciones para carreras del IURP',
+      text: 'El Municipio de Rio Grande abre inscripciones para carreras del IURP el 8 de julio.',
+      sourceRef: { tier: 'A', competence: ['municipal'], publisherDomain: 'riogrande.gob.ar', url: 'https://riogrande.gob.ar/d2' }
+    })
+  ];
+  assert.notEqual(candidates[0].eventKey, candidates[1].eventKey);
+});
+
+test('integracion E: mismo acontecimiento politico con entidades secundarias distintas se asocia', () => {
+  const candidates = [
+    fixtureCandidate({
+      title: 'Melella convoca elecciones para la reforma constitucional',
+      text: 'Melella convoca elecciones para la reforma constitucional el 9 de agosto con debate legislativo.',
+      sourceRef: { tier: 'B', publisherDomain: 'tn.com.ar', url: 'https://tn.com.ar/e' }
+    }),
+    fixtureCandidate({
+      title: 'Melella reactiva la reforma constitucional fueguina',
+      text: 'Melella convoca elecciones para la reforma constitucional el 9 de agosto con cuestionamientos opositores.',
+      sourceRef: { tier: 'B', publisherDomain: 'perfil.com', url: 'https://perfil.com/e' }
+    })
+  ];
+  assert.equal(candidates[0].eventKey, candidates[1].eventKey);
+  const verification = corroborateEvent({ eventKey: candidates[0].eventKey, candidates });
+  assert.equal(verification.verified, true);
+  assert(verification.consensusFacts.people.some((value) => value.includes('Melella')));
 });
 
 console.log(`\n=== FACTUAL TESTS: ${passed} pasados, ${failed} fallados ===`);

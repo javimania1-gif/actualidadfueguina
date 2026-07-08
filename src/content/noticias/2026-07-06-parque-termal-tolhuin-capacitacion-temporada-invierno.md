@@ -9,8 +9,12 @@ tags:
   - Parque Termal
   - Capacitación
   - Municipio
-image: "/uploads/auto/plate-2026-07-06-parque-termal-tolhuin-capacitacion-temporada-invierno.jpg"
-imageAlt: "Vista del Parque Termal de Tolhuin rodeado de bosque"
+image: "/uploads/auto/2026-07-08-cd11adb33f625a5c7d.webp"
+imageAlt: "Termas de Tolhuin en una imagen oficial del Municipio"
+imageLicense: "Fuente oficial; uso editorial con procedencia registrada"
+imageCredit: "Municipio de Tolhuin"
+imageSourceUrl: "https://tolhuin.gob.ar/termas-de-tolhuin-abrimos-al-publico/"
+imageStrategy: "media-library"
 importance: 5
 featured: false
 sourceName: "Actualidad Fueguina - archivo"

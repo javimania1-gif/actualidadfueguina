@@ -24,8 +24,13 @@ export async function callAiJson({ system, user, temperature = 0.35, env = proce
   const token = env.GITHUB_TOKEN;
   if (!token) throw new Error('Falta GITHUB_TOKEN');
 
+  const timeoutMs = Number(env.AF_AI_TIMEOUT_MS || 45000);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
   const response = await fetch('https://models.github.ai/inference/chat/completions', {
     method: 'POST',
+    signal: controller.signal,
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`
@@ -38,7 +43,7 @@ export async function callAiJson({ system, user, temperature = 0.35, env = proce
         { role: 'user', content: user }
       ]
     })
-  });
+  }).finally(() => clearTimeout(timeout));
 
   if (!response.ok) {
     const details = await response.text();

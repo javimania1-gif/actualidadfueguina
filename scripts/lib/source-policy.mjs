@@ -101,11 +101,13 @@ export function buildSourceRef({ source = {}, item = {}, article = {}, officialD
   const publisherDomain = getDomain(finalUrl);
   const tier = classifySourceTier({ source, finalUrl, officialDomains });
   const discoveredBy = isAggregatorDomain(item.link || '') ? getDomain(item.link) : '';
+  const competence = inferSourceCompetence({ source, publisherDomain, finalUrl });
   return {
     sourceId: source.id || '',
     sourceName: source.name || '',
     sourceMode: source.mode || '',
     tier,
+    competence,
     publisherDomain,
     discoveredBy,
     url: finalUrl,
@@ -113,6 +115,48 @@ export function buildSourceRef({ source = {}, item = {}, article = {}, officialD
     title: article.title || item.title || '',
     publishedAt: article.date || item.pubDate || ''
   };
+}
+
+export function inferSourceCompetence({ source = {}, publisherDomain = '', finalUrl = '' } = {}) {
+  const text = normalizeText([
+    source.id,
+    source.name,
+    source.mode,
+    publisherDomain,
+    finalUrl
+  ].filter(Boolean).join(' '));
+  const competence = new Set();
+
+  if (/\b(riogrande|ushuaia|tolhuin|municipio|municipalidad)\b/.test(text)) competence.add('municipal');
+  if (/\b(tierradelfuego|gobierno|provincia|gobernacion)\b/.test(text)) competence.add('provincial');
+  if (/\b(electoral|juzgado electoral|camara nacional electoral)\b/.test(text)) competence.add('electoral');
+  if (/\b(justicia|judicial|ministerio publico|policia|fiscalia)\b/.test(text)) competence.add('judicial');
+  if (/\b(afa|fifa|conmebol|deportes|club|federacion)\b/.test(text)) competence.add('sports');
+  if (/\b(servicio meteorologico|smn|weather|meteorologico)\b/.test(text)) competence.add('weather');
+  if (/\b(conicet|universidad|cientifico|ciencia|investigacion)\b/.test(text)) competence.add('scientific');
+  if (/\b(legislatura|congreso|senado|diputados|boletin oficial)\b/.test(text)) competence.add('legislative');
+
+  return [...competence];
+}
+
+export function isSourceCompetentForEvent(sourceRef = {}, eventType = 'general') {
+  const competence = new Set(sourceRef.competence || []);
+  if (sourceRef.tier !== SOURCE_TIERS.A) return false;
+  if (eventType === 'general') return competence.has('municipal') || competence.has('provincial');
+  if (eventType === 'agenda') return competence.has('municipal') || competence.has('provincial');
+  if (eventType === 'sports-result') return competence.has('sports');
+  if (eventType === 'election') return competence.has('electoral');
+  if (eventType === 'crime') return competence.has('judicial');
+  if (eventType === 'weather') return competence.has('weather');
+  if (eventType === 'scientific') return competence.has('scientific');
+  if (eventType === 'legislative') return competence.has('legislative');
+  if (eventType === 'legal-policy') {
+    return competence.has('provincial') || competence.has('municipal') || competence.has('legislative');
+  }
+  if (eventType === 'casualty') {
+    return competence.has('judicial') || competence.has('provincial') || competence.has('municipal');
+  }
+  return competence.size > 0;
 }
 
 export function validateArticleSource({ article = {}, item = {}, source = {}, finalUrl = '' }) {

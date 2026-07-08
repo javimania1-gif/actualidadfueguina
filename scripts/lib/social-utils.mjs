@@ -101,8 +101,11 @@ UBICACIÓN: ${location}
 TAGS: ${tags.join(', ')}
 CUERPO: ${body.slice(0, 4000)}`;
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), Number(process.env.AF_AI_TIMEOUT_MS || 45000));
   const response = await fetch('https://models.github.ai/inference/chat/completions', {
     method: 'POST',
+    signal: controller.signal,
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
@@ -115,7 +118,7 @@ CUERPO: ${body.slice(0, 4000)}`;
         { role: 'user', content: user }
       ]
     })
-  });
+  }).finally(() => clearTimeout(timeout));
 
   if (!response.ok) {
     throw new Error(`Error IA Social: ${response.status}`);

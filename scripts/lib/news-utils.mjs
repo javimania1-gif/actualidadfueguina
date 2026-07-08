@@ -236,7 +236,8 @@ export async function normalizeImageBuffer({
   outputDir = UPLOADS_DIR,
   minWidth = 400,
   minHeight = 300,
-  maxBytes = 8_000_000
+  maxBytes = 8_000_000,
+  canvasBackground = ''
 }) {
   const mime = String(contentType || '').split(';')[0].trim().toLowerCase();
   if (!mime || !mime.startsWith('image/')) return { ok: false, reason: 'not-image-content-type' };
@@ -252,7 +253,7 @@ export async function normalizeImageBuffer({
   }
 
   if (!metadata?.width || !metadata?.height) return { ok: false, reason: 'missing-dimensions' };
-  if (metadata.width < minWidth || metadata.height < minHeight) {
+  if (!canvasBackground && (metadata.width < minWidth || metadata.height < minHeight)) {
     return { ok: false, reason: 'image-too-small', width: metadata.width, height: metadata.height };
   }
 
@@ -262,9 +263,27 @@ export async function normalizeImageBuffer({
   const fullPath = path.join(outputDir, filename);
   await fs.mkdir(path.dirname(fullPath), { recursive: true });
 
-  let pipeline = sharp(buffer, { animated: false, limitInputPixels: 40_000_000 })
-    .rotate()
-    .resize({ width: 1600, height: 1200, fit: 'inside', withoutEnlargement: true });
+  let pipeline;
+
+  if (canvasBackground) {
+    const canvasWidth = 1600;
+    const canvasHeight = 900;
+    const logoBuffer = await sharp(buffer, { animated: false, limitInputPixels: 40_000_000 })
+      .resize({ width: 980, height: 520, fit: 'inside', withoutEnlargement: true })
+      .toBuffer();
+    pipeline = sharp({
+      create: {
+        width: canvasWidth,
+        height: canvasHeight,
+        channels: 4,
+        background: canvasBackground
+      }
+    }).composite([{ input: logoBuffer, gravity: 'center' }]);
+  } else {
+    pipeline = sharp(buffer, { animated: false, limitInputPixels: 40_000_000 })
+      .rotate()
+      .resize({ width: 1600, height: 1200, fit: 'inside', withoutEnlargement: true });
+  }
 
   if (format === 'jpeg') {
     pipeline = pipeline.flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true });
@@ -272,6 +291,7 @@ export async function normalizeImageBuffer({
     pipeline = pipeline.webp({ quality: 82 });
   }
 
+  await fs.rm(fullPath, { force: true }).catch(() => {});
   await pipeline.toFile(fullPath);
   const finalMetadata = await sharp(fullPath).metadata();
   return {
@@ -290,13 +310,13 @@ export async function normalizeImageAsset(url, options = {}) {
   if (!url) return { ok: false, reason: 'missing-url' };
 
   const lowerUrl = url.toLowerCase();
-  if (
+  if (!options.allowLogos && (
     lowerUrl.includes('company_logo') ||
     lowerUrl.includes('logo-af') ||
     lowerUrl.includes('/logo') ||
     lowerUrl.includes('favicon') ||
     lowerUrl.includes('avatar')
-  ) {
+  )) {
     return { ok: false, reason: 'corporate-or-logo-image' };
   }
 
@@ -323,7 +343,8 @@ export async function normalizeImageAsset(url, options = {}) {
       outputDir: options.outputDir || UPLOADS_DIR,
       minWidth: options.minWidth || 400,
       minHeight: options.minHeight || 300,
-      maxBytes
+      maxBytes,
+      canvasBackground: options.canvasBackground || ''
     });
   } catch (error) {
     return { ok: false, reason: `fetch-error:${error.message}` };
@@ -564,9 +585,15 @@ ${sourceText.slice(0, 14000)}`;
   };
 }
 
-export function makeNewsMarkdown({ ai, date, image, sourceName, sourceUrl, featured = false, automated = true }) {
+export function makeNewsMarkdown({ ai, date, image, sourceName, sourceUrl, featured = false, automated = true, imageMeta = null }) {
   const importance = ai.importance || 5;
   const urgent = importance >= 9;
+  const imageSourceLines = [];
+  if (imageMeta?.strategy) imageSourceLines.push(`imageStrategy: ${yamlString(imageMeta.strategy)}`);
+  if (imageMeta?.sourceUrl) imageSourceLines.push(`imageSourceUrl: ${yamlString(imageMeta.sourceUrl)}`);
+  if (imageMeta?.credit) imageSourceLines.push(`imageCredit: ${yamlString(imageMeta.credit)}`);
+  if (imageMeta?.license) imageSourceLines.push(`imageLicense: ${yamlString(imageMeta.license)}`);
+  const imageSourceBlock = imageSourceLines.length ? `${imageSourceLines.join('\n')}\n` : '';
   return `---
 title: ${yamlString(ai.title)}
 description: ${yamlString(ai.description)}
@@ -576,7 +603,7 @@ location: ${yamlString(ai.location)}
 tags: ${yamlArray(ai.tags)}
 image: ${yamlString(image || '')}
 imageAlt: ${yamlString(ai.imageAlt || ai.title)}
-author: "Actualidad Fueguina"
+${imageSourceBlock}author: "Actualidad Fueguina"
 featured: ${featured ? 'true' : 'false'}
 importance: ${importance}
 social:

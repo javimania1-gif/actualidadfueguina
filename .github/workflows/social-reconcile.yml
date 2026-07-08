@@ -1,0 +1,88 @@
+name: Actualidad Fueguina - Reconciliacion Social
+
+on:
+  workflow_dispatch:
+    inputs:
+      key:
+        description: 'Clave local: slug|facebook'
+        required: false
+        type: string
+      remote_id:
+        description: 'Remote ID de Meta si no se usa key'
+        required: false
+        type: string
+      delete_remote:
+        description: 'Eliminar remotamente el post verificado'
+        required: true
+        type: boolean
+        default: false
+      delete_confirmation:
+        description: 'Para borrar, escribir DELETE_REMOTE_POST'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+      META_GRAPH_API_VERSION: 'v25.0'
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Verificar o reconciliar post remoto
+        env:
+          INPUT_KEY: ${{ inputs.key }}
+          INPUT_REMOTE_ID: ${{ inputs.remote_id }}
+          INPUT_DELETE_REMOTE: ${{ inputs.delete_remote }}
+          INPUT_DELETE_CONFIRMATION: ${{ inputs.delete_confirmation }}
+        run: |
+          set -euo pipefail
+
+          args=()
+          if [ -n "$INPUT_KEY" ]; then
+            args+=("--key=$INPUT_KEY")
+          elif [ -n "$INPUT_REMOTE_ID" ]; then
+            args+=("--remote-id=$INPUT_REMOTE_ID")
+          else
+            echo "Se requiere key o remote_id."
+            exit 2
+          fi
+
+          if [ "$INPUT_DELETE_REMOTE" = "true" ]; then
+            if [ "$INPUT_DELETE_CONFIRMATION" != "DELETE_REMOTE_POST" ]; then
+              echo "Borrado remoto bloqueado: falta confirmacion exacta DELETE_REMOTE_POST."
+              exit 2
+            fi
+            args+=("--delete" "--apply")
+          fi
+
+          node scripts/social-reconcile.mjs "${args[@]}"
+
+      - name: Guardar cambios locales si hubo borrado confirmado
+        if: ${{ inputs.delete_remote == true && inputs.delete_confirmation == 'DELETE_REMOTE_POST' }}
+        run: |
+          git config user.name "Actualidad Fueguina Bot"
+          git config user.email "bot@actualidadfueguina.com.ar"
+          git add data/social-posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconciliacion social [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "Sin cambios locales que guardar."
+          fi

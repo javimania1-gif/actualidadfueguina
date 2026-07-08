@@ -8,8 +8,12 @@ tags:
   - Tecnología
   - Inteligencia Artificial
   - Redes Sociales
-image: "/uploads/auto/plate-2026-07-08-discord-ia-baneos-masivos.jpg"
-imageAlt: "Logo de Discord en un teléfono móvil"
+image: "/uploads/auto/2026-07-08-cfdd8978a39c7d5c5f.webp"
+imageAlt: "Logo oficial de Discord sobre fondo violeta"
+imageLicense: "Public domain; trademarked"
+imageCredit: "Discord Inc. / Wikimedia Commons"
+imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Discord_Color_Text_Logo_(2015-2021).svg"
+imageStrategy: "media-library"
 author: "Actualidad Fueguina"
 featured: false
 importance: 7

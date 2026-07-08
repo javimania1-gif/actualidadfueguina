@@ -38,7 +38,8 @@ function isGenericTitle(title) {
 
 async function readSourceItems(source) {
   if (source.type === 'rss') {
-    const feed = await parser.parseURL(source.url);
+    const { text } = await fetchText(source.url, { timeoutMs: source.timeoutMs || 15000 });
+    const feed = await parser.parseString(text);
     let items = (feed.items || []).map(item => ({
       title: item.title || '',
       link: item.link || item.guid || '',
