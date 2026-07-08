@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { ROOT, NEWS_DIR, sleep } from './lib/news-utils.mjs';
+import { ROOT, NEWS_DIR, sleep, downloadImage } from './lib/news-utils.mjs';
 import {
   loadSocialData, saveSocialData, generateSocialCopy,
   generateInstagramPlate, publishToFacebook,
@@ -34,13 +34,13 @@ async function main() {
   }
 
   const socialData = await loadSocialData();
+  const GLOBAL_RUN_ID = buildRunId();
 
   // FASE 1: RESERVA
   if (RUN_RESERVE || EXECUTE_ALL) {
     console.log('\n--- FASE 1: RESERVA ---');
 
     const now = new Date();
-    const runId = buildRunId();
 
     // Contar reservas activas de Facebook e Instagram
     const activeFbReservations = Object.values(socialData.posts).filter(p => p.status === 'publishing' && p.platform === 'facebook');
@@ -129,9 +129,9 @@ async function main() {
             date: now.toISOString(),
             status: 'publishing',
             attempts: (item.fbRecord?.attempts || 0) + 1,
-            runId
+            runId: GLOBAL_RUN_ID
           };
-          console.log(`- Reservado Facebook: "${item.title}" (runId: ${runId})`);
+          console.log(`- Reservado Facebook: "${item.title}" (runId: ${GLOBAL_RUN_ID})`);
           fbReserved++;
           reservedSomething = true;
         }
@@ -145,9 +145,9 @@ async function main() {
             status: 'publishing',
             attempts: (item.igRecord?.attempts || 0) + 1,
             creationId: item.igRecord?.creationId || null,
-            runId
+            runId: GLOBAL_RUN_ID
           };
-          console.log(`- Reservado Instagram: "${item.title}" (runId: ${runId})`);
+          console.log(`- Reservado Instagram: "${item.title}" (runId: ${GLOBAL_RUN_ID})`);
           igReserved++;
           reservedSomething = true;
         }
@@ -174,8 +174,6 @@ async function main() {
     const reservedPosts = [];
     let hasChanges = false;
 
-    const currentRunId = buildRunId();
-
     for (const record of Object.values(socialData.posts)) {
       if (record.status === 'publishing') {
         const reservedDate = new Date(record.date);
@@ -192,10 +190,10 @@ async function main() {
         } else {
           // Validar que la reserva pertenezca a la ejecución actual para evitar colisiones entre runs paralelos o desfasados
           const isLocalRun = record.runId && record.runId.startsWith('local');
-          const isCurrentRun = record.runId === currentRunId || (currentRunId === 'local' && isLocalRun);
+          const isCurrentRun = record.runId === GLOBAL_RUN_ID || (GLOBAL_RUN_ID.startsWith('local') && isLocalRun);
           
           if (!isCurrentRun) {
-            console.warn(`! Reserva pertenece a otra ejecución (runId: ${record.runId}, actual: ${currentRunId}). Marcando como 'unknown' para evitar duplicaciones.`);
+            console.warn(`! Reserva pertenece a otra ejecución (runId: ${record.runId}, actual: ${GLOBAL_RUN_ID}). Marcando como 'unknown' para evitar duplicaciones.`);
             if (!DRY_RUN) {
               record.status = 'unknown';
               record.lastError = 'Reserva pertenece a otra ejecución diferente';
@@ -328,12 +326,17 @@ async function main() {
         const platePath = path.join(ROOT, 'public/uploads/social', plateFilename);
         let imageUrl = null;
 
-        // 1. Imagen HTTP directa
+        // 1. Imagen HTTP directa -> Descargar localmente para evitar hotlinking
         if (item.image && item.image.startsWith('http')) {
-          imageUrl = item.image;
+          console.log(`- Descargando imagen externa: ${item.image}`);
+          const localPath = await downloadImage(item.image, item.slug);
+          if (localPath) {
+            item.image = localPath; // Se transformó en relativa
+          }
         }
-        // 2. Imagen relativa /uploads/ → construir URL absoluta y verificar disponibilidad
-        else if (item.image && item.image.startsWith('/uploads/')) {
+        
+        // 2. Imagen relativa /uploads/ -> construir URL absoluta y verificar disponibilidad
+        if (item.image && item.image.startsWith('/uploads/')) {
           const publicUrl = `${SITE_URL}${item.image}`;
           console.log(`- Verificando imagen relativa como URL pública: ${publicUrl}`);
           const check = await fetch(publicUrl, { method: 'HEAD' }).catch(() => ({ ok: false }));
@@ -427,7 +430,7 @@ async function main() {
     console.log('\n--- FASE 3: PUBLICACIÓN ---');
 
     // Procesar Facebook e Instagram usando el mismo runId del intento actual
-    const currentRunId = buildRunId();
+    const currentRunId = GLOBAL_RUN_ID;
     const fbReserved = Object.values(socialData.posts).filter(p => {
       if (p.status !== 'publishing' || p.platform !== 'facebook') return false;
       const isLocalRun = p.runId && p.runId.startsWith('local');

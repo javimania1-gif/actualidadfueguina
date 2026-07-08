@@ -13,7 +13,7 @@ import {
   ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
   isOfficialDomain, downloadImage, callModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
-  generateWebPlate, searchWebImage
+  generateWebPlate, searchWebImage, isHomepage
 } from './lib/news-utils.mjs';
 
 const parser = new Parser();
@@ -59,8 +59,37 @@ const metrics = {
 // Índice de deduplicación — SOLO de noticias PUBLICADAS
 // Los borradores NO bloquean futuras publicaciones
 // ============================================================
+// ============================================================
+// Índice de deduplicación — SOLO de noticias PUBLICADAS
+// Los borradores NO bloquean futuras publicaciones
+// ============================================================
 const existingUrls = new Set();
 const existingTitles = new Set();
+const publishedEventFingerprints = new Set();
+
+function extractFingerprint(title) {
+  const stopwords = new Set(['que', 'con', 'para', 'por', 'una', 'del', 'los', 'las', 'sus', 'fue', 'son', 'este', 'esta', 'pero', 'como']);
+  const words = (title || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length >= 5 && !stopwords.has(w) && !GENERIC_TITLE_WORDS.has(w));
+  return words.sort().join('|');
+}
+
+function isEventAlreadyPublished(title) {
+  if (!title) return false;
+  const words = new Set(extractFingerprint(title).split('|').filter(Boolean));
+  if (words.size < 2) return false;
+  for (const fp of publishedEventFingerprints) {
+    const fpWords = new Set(fp.split('|').filter(Boolean));
+    if (fpWords.size < 2) continue;
+    const intersection = [...words].filter(w => fpWords.has(w)).length;
+    if (intersection >= 3) return true;
+  }
+  return false;
+}
+
 
 async function indexPublishedDocs() {
   try {
@@ -70,7 +99,12 @@ async function indexPublishedDocs() {
       const urlMatch = content.match(/^sourceUrl:\s*['"](.*?)['"]$/m);
       if (urlMatch) existingUrls.add(urlMatch[1].trim());
       const titleMatch = content.match(/^title:\s*['"](.*?)['"]$/m);
-      if (titleMatch) existingTitles.add(titleMatch[1].trim().toLowerCase());
+      if (titleMatch) {
+        const titleStr = titleMatch[1].trim();
+        existingTitles.add(titleStr.toLowerCase());
+        const fp = extractFingerprint(titleStr);
+        if (fp) publishedEventFingerprints.add(fp);
+      }
     }
   } catch {}
 }
@@ -186,33 +220,6 @@ await Promise.all(config.sources.map(async (source) => {
 console.log(`Candidatos pre-filtro de todas las fuentes: ${allCandidates.length}`);
 metrics.candidatesDetected = allCandidates.length;
 
-// ==============================================================
-// Event fingerprint — deduplicación por acontecimiento (capa 2)
-// ==============================================================
-const publishedEventFingerprints = new Set();
-
-function extractFingerprint(title) {
-  const stopwords = new Set(['que', 'con', 'para', 'por', 'una', 'del', 'los', 'las', 'sus', 'fue', 'son', 'este', 'esta', 'pero', 'como']);
-  const words = (title || '').toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(w => w.length >= 5 && !stopwords.has(w) && !GENERIC_TITLE_WORDS.has(w));
-  return words.sort().join('|');
-}
-
-function isEventAlreadyPublished(title) {
-  if (!title) return false;
-  const words = new Set(extractFingerprint(title).split('|').filter(Boolean));
-  if (words.size < 2) return false;
-  for (const fp of publishedEventFingerprints) {
-    const fpWords = new Set(fp.split('|').filter(Boolean));
-    if (fpWords.size < 2) continue;
-    const intersection = [...words].filter(w => fpWords.has(w)).length;
-    if (intersection >= 3) return true;
-  }
-  return false;
-}
 
 // ==============================================================
 // FASE B — Extracción, ranking, deduplicación y balance
@@ -245,6 +252,14 @@ for (const candidate of allCandidates) {
   }
 
   const finalUrl = article.finalUrl || item.link;
+  
+  if (isHomepage(finalUrl)) {
+    console.log(`[${source.name}] Descartado por ser homepage: ${finalUrl}`);
+    seen.items[initialKey] = { status: 'discarded-quality', reason: 'homepage', seenAt: new Date().toISOString() };
+    metrics.discardedQuality++;
+    continue;
+  }
+
   const canonicalKey = hash(finalUrl);
   const currentTitle = (article.title || item.title || '').trim();
 
@@ -310,6 +325,10 @@ for (const candidate of allCandidates) {
     pubDate: safeDate(article.date || item.pubDate || new Date()),
     bodyLength
   });
+  
+  // Agregar al índice de eventos para deduplicar siguientes candidatos de la misma corrida
+  const fp = extractFingerprint(currentTitle);
+  if (fp) publishedEventFingerprints.add(fp);
 }
 
 console.log(`Candidatos válidos después de extracción: ${extracted.length}`);
@@ -463,6 +482,17 @@ for (const candidate of extracted) {
 
     } catch (error) {
       console.warn(`Falló redacción automática (${source.name}): ${error.message}`);
+      
+      if (error.message.includes('FACT_CHECK_FAILED')) {
+        seen.items[initialKey] = {
+          seenAt: new Date().toISOString(),
+          status: 'discarded-editorial',
+          source: source.id,
+          lastError: error.message.slice(0, 200)
+        };
+        continue; // descartar permanentemente
+      }
+
       seen.items[initialKey] = {
         seenAt: new Date().toISOString(),
         status: 'model-error',

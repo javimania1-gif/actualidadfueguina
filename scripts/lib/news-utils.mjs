@@ -1,8 +1,8 @@
-
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import * as cheerio from 'cheerio';
+import sharp from 'sharp';
 import TurndownService from 'turndown';
 
 export const ROOT = process.cwd();
@@ -195,6 +195,17 @@ export function isOfficialDomain(url, domains = []) {
   }
 }
 
+export function isHomepage(urlStr) {
+  try {
+    const url = new URL(urlStr);
+    const path = url.pathname.replace(/\/$/, '');
+    return path === '' || path === '/home' || path === '/noticias';
+  } catch {
+    return true; // invalid URLs are considered generic/homepages
+  }
+}
+
+
 export async function downloadImage(url, seed) {
   if (!url) return '';
   
@@ -215,6 +226,18 @@ export async function downloadImage(url, seed) {
     if (!contentType.startsWith('image/')) return '';
     const buffer = Buffer.from(await response.arrayBuffer());
     if (buffer.length > 6_000_000) return '';
+
+    try {
+      const metadata = await sharp(buffer).metadata();
+      if (!metadata || !metadata.width || !metadata.height) return '';
+      if (metadata.width < 400 || metadata.height < 300) {
+        console.log(`! Descartando imagen por dimensiones pequeñas (${metadata.width}x${metadata.height}): ${url}`);
+        return '';
+      }
+    } catch (sharpError) {
+      console.warn(`! Sharp no pudo decodificar la imagen ${url}: ${sharpError.message}`);
+      return '';
+    }
 
     const extMap = {
       'image/jpeg': '.jpg',
@@ -248,24 +271,43 @@ export async function callModel({ sourceName, sourceUrl, sourceTitle, sourceDesc
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error('Falta GITHUB_TOKEN');
 
-  const system = `Sos editor periodístico de Actualidad Fueguina, portal provincial de Tierra del Fuego AIAS.
-Tu tarea es transformar material fuente en una nota periodística ORIGINAL, factual y útil.
-Reglas obligatorias:
-- No copies frases extensas ni la estructura del texto fuente.
-- No inventes datos, citas, cifras, antecedentes ni consecuencias.
-- Si un dato no está en el material, no lo afirmes.
-- No menciones "según el texto" ni expliques el proceso de IA.
-- Para noticias locales y provinciales, mantené el enfoque fueguino.
-- Para noticias nacionales, cubrí hechos relevantes para Argentina.
-- Para noticias mundiales, cubrí acontecimientos internacionales de alto impacto para una audiencia argentina y fueguina. NUNCA inventes o fuerces una consecuencia local que no esté respaldada por los hechos.
-- Título informativo y atractivo, sin clickbait engañoso.
-- Bajada SEO entre 100 y 170 caracteres.
-- Cuerpo en Markdown, de 5 a 9 párrafos breves; podés usar un subtítulo si mejora la lectura.
-- Cerrá, solo cuando corresponda naturalmente, con una pregunta o invitación breve a la comunidad.
-- Elegí una categoría de: Provincia, Río Grande, Ushuaia, Tolhuin, Malvinas, Antártida, Nacionales, Mundo, Política, Economía, Sociedad, Policiales, Institucional.
-- Entregá exclusivamente JSON válido con: title, description, category, location, tags, imageAlt, body, importance.
-- tags debe ser un array de 3 a 6 strings.
-- importance debe ser un entero de 1 a 10.`;
+  const system = `Sos un editor periodístico riguroso de Actualidad Fueguina, enfocado en FACTUALIDAD y precisión.
+Tu tarea se divide en DOS pasos obligatorios:
+PASO 1: EXTRACCIÓN Y VERIFICACIÓN FACTUAL. Extraé los hechos estructurados del material fuente. Evaluá si la información es coherente, si tiene calidad suficiente y determiná su nivel de riesgo.
+- Riesgo Bajo: agenda, comunicados oficiales, cortes programados, cursos, eventos.
+- Riesgo Alto: resultados deportivos, elecciones, fallecimientos, accidentes, causas judiciales, estadísticas, conflictos.
+
+PASO 2: REDACCIÓN. Solo si los hechos son sólidos, redactá una nota periodística ORIGINAL basada EXCLUSIVAMENTE en los hechos verificados.
+Reglas de redacción:
+- No inventes datos, citas, cifras, ni consecuencias que no estén en el texto.
+- No uses frases como "según el texto".
+- Título informativo y atractivo, sin clickbait. Bajada SEO (100-170 chars).
+- Cuerpo en Markdown (5-9 párrafos).
+
+Entregá EXCLUSIVAMENTE un JSON válido con esta estructura exacta:
+{
+  "verificacion": {
+    "protagonistas": ["..."],
+    "acontecimiento": "...",
+    "lugar": "...",
+    "fecha": "...",
+    "cifras_clave": ["..."],
+    "riesgo": "bajo" | "alto",
+    "coherencia_titulo_cuerpo": true | false,
+    "calidad_suficiente": true | false,
+    "falta_info_central": true | false
+  },
+  "news": {
+    "title": "...",
+    "description": "...",
+    "category": "Provincia|Río Grande|Ushuaia|Tolhuin|Malvinas|Antártida|Nacionales|Mundo|Política|Economía|Sociedad|Policiales|Institucional",
+    "location": "...",
+    "tags": ["...", "...", "..."],
+    "imageAlt": "...",
+    "body": "...",
+    "importance": 1-10
+  }
+}`;
 
   const user = `FUENTE: ${sourceName}
 URL: ${sourceUrl}
@@ -301,16 +343,28 @@ ${sourceText.slice(0, 14000)}`;
   const payload = await response.json();
   const content = payload?.choices?.[0]?.message?.content;
   const parsed = extractJsonObject(content);
+  
+  if (!parsed.verificacion || !parsed.news) {
+    throw new Error('Estructura JSON inválida: falta verificacion o news');
+  }
+  
+  const v = parsed.verificacion;
+  if (!v.coherencia_titulo_cuerpo) throw new Error('FACT_CHECK_FAILED: Baja coherencia entre título y cuerpo');
+  if (!v.calidad_suficiente) throw new Error('FACT_CHECK_FAILED: Calidad insuficiente de extracción');
+  if (v.falta_info_central) throw new Error('FACT_CHECK_FAILED: Falta información central del acontecimiento');
+  if (v.riesgo === 'alto') throw new Error('HIGH_RISK_REQUIRES_CORROBORATION: Riesgo alto detectado por IA, requiere corroboración humana o fuente cruzada');
 
+  const n = parsed.news;
   return {
-    title: cleanText(parsed.title),
-    description: cleanText(parsed.description).slice(0, 180),
-    category: cleanText(parsed.category || defaultCategory || 'Provincia'),
-    location: cleanText(parsed.location || defaultLocation || 'Tierra del Fuego AIAS'),
-    tags: Array.isArray(parsed.tags) ? parsed.tags.map(cleanText).filter(Boolean).slice(0, 6) : [],
-    imageAlt: cleanText(parsed.imageAlt || parsed.title),
-    body: cleanText(parsed.body),
-    importance: Math.max(1, Math.min(10, Number(parsed.importance) || 5))
+    title: cleanText(n.title),
+    description: cleanText(n.description).slice(0, 180),
+    category: cleanText(n.category || defaultCategory || 'Provincia'),
+    location: cleanText(n.location || defaultLocation || 'Tierra del Fuego AIAS'),
+    tags: Array.isArray(n.tags) ? n.tags.map(cleanText).filter(Boolean).slice(0, 6) : [],
+    imageAlt: cleanText(n.imageAlt || n.title),
+    body: cleanText(n.body),
+    importance: Math.max(1, Math.min(10, Number(n.importance) || 5)),
+    facts: v
   };
 }
 
