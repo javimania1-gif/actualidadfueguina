@@ -11,6 +11,10 @@ const {
 
 const pageTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.name}`;
 const absoluteImage = new URL(image, SITE.url).toString();
+
+// Detectar página activa para resaltar en nav
+const currentPath = new URL(canonical).pathname;
+const isActive = (href: string) => currentPath.startsWith(href);
 ---
 <!doctype html>
 <html lang="es-AR">
@@ -42,13 +46,18 @@ const absoluteImage = new URL(image, SITE.url).toString();
           <img src={SITE.logo} alt="Logo de Actualidad Fueguina" width="96" height="96" />
           <span>{SITE.name}</span>
         </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" />
+        <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </label>
         <nav class="nav" aria-label="Principal">
-          <a href="/categorias/rio-grande/">Río Grande</a>
-          <a href="/categorias/ushuaia/">Ushuaia</a>
-          <a href="/categorias/tolhuin/">Tolhuin</a>
-          <a href="/categorias/provincia/">Provincia</a>
-          <a href="/categorias/malvinas/">Malvinas</a>
-          <a href="/rss.xml">RSS</a>
+          <a href="/categorias/rio-grande/" class:list={['nav-link', { active: isActive('/categorias/rio-grande') }]}>Río Grande</a>
+          <a href="/categorias/ushuaia/" class:list={['nav-link', { active: isActive('/categorias/ushuaia') }]}>Ushuaia</a>
+          <a href="/categorias/tolhuin/" class:list={['nav-link', { active: isActive('/categorias/tolhuin') }]}>Tolhuin</a>
+          <a href="/categorias/provincia/" class:list={['nav-link', { active: isActive('/categorias/provincia') }]}>Provincia</a>
+          <a href="/malvinas-antartica/" class:list={['nav-link', { active: isActive('/malvinas-antartica') }]}>Malvinas y Antártida</a>
+          <a href="/categorias/nacionales/" class:list={['nav-link', { active: isActive('/categorias/nacionales') }]}>Nacionales</a>
+          <a href="/categorias/mundo/" class:list={['nav-link', { active: isActive('/categorias/mundo') }]}>Mundo</a>
         </nav>
       </div>
     </header>
@@ -62,7 +71,82 @@ const absoluteImage = new URL(image, SITE.url).toString();
       <div class="container">
         <p><strong>{SITE.name}</strong> — Portal provincial de noticias. Río Grande, Tolhuin, Ushuaia, Islas Malvinas y Antártida.</p>
         <p>© {new Date().getFullYear()} Actualidad Fueguina. Todos los derechos reservados.</p>
+        <p class="footer-rss">
+          <a href="/rss.xml" title="Feed RSS de Actualidad Fueguina">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <circle cx="6.18" cy="17.82" r="2.18"/>
+              <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+            </svg>
+            RSS
+          </a>
+        </p>
       </div>
     </footer>
   </body>
 </html>
+
+<style>
+  /* Mobile hamburger menu */
+  .nav-toggle-input { display: none; }
+  .nav-toggle-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 100;
+  }
+  .nav-toggle-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text, #111);
+    transition: transform 0.25s, opacity 0.25s;
+    border-radius: 2px;
+  }
+  .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(2) { opacity: 0; }
+  .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    .nav-toggle-btn { display: flex; }
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-bg, #fff);
+      border-top: 1px solid var(--color-border, #e5e7eb);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.5rem;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+    .nav-toggle-input:checked ~ .nav { display: flex; }
+    .header-inner { position: relative; flex-wrap: wrap; }
+  }
+
+  .nav-link.active {
+    font-weight: 700;
+    color: var(--color-accent, #e63946);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .footer-rss {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .footer-rss a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-text-muted, #6b7280);
+    opacity: 0.75;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .footer-rss a:hover { opacity: 1; }
+</style>

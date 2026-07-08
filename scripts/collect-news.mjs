@@ -37,8 +37,9 @@ const GENERIC_TITLE_WORDS = new Set([
   'novedades', 'actualidad', 'informacion'
 ]);
 
-// Retry window para items en draft/extract-error (en ms)
-const DRAFT_RETRY_WINDOW_MS = 12 * 60 * 60 * 1000; // 12 horas
+// Retry window e backoff
+const DRAFT_RETRY_WINDOWS_MS = [3 * 60 * 60 * 1000, 6 * 60 * 60 * 1000, 12 * 60 * 60 * 1000]; // 3h, 6h, 12h
+const STALE_AFTER_MS = 48 * 60 * 60 * 1000; // 48h → pasa a stale
 
 // Métricas
 const metrics = {
@@ -137,15 +138,22 @@ async function materialize(item) {
   return extractArticle(text, finalUrl);
 }
 
-// Verificar si un item en seen.json es elegible para retry
+// Verificar si un item en seen.json es elegible para retry (con backoff)
 function isRetryEligible(seenItem) {
   if (!seenItem) return false;
-  if (['published', 'duplicate'].includes(seenItem.status)) return false;
-  if (['draft', 'extract-error', 'model-error'].includes(seenItem.status)) {
-    const seenAt = new Date(seenItem.seenAt || 0).getTime();
-    return (Date.now() - seenAt) < DRAFT_RETRY_WINDOW_MS;
-  }
-  return false;
+  if (['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seenItem.status)) return false;
+  if (!['draft', 'extract-error', 'model-error', 'temporary-error'].includes(seenItem.status)) return false;
+  const now = Date.now();
+  // Si tiene nextRetryAt explícito, respetarlo
+  if (seenItem.nextRetryAt) return now >= new Date(seenItem.nextRetryAt).getTime();
+  // Fallback: si fue visto hace menos de 48h, es elegible
+  const seenAt = new Date(seenItem.seenAt || 0).getTime();
+  return (now - seenAt) < STALE_AFTER_MS;
+}
+
+function getNextRetryAt(attempts) {
+  const windowMs = DRAFT_RETRY_WINDOWS_MS[Math.min(attempts, DRAFT_RETRY_WINDOWS_MS.length - 1)];
+  return new Date(Date.now() + windowMs).toISOString();
 }
 
 console.log(`\n=== FASE A: Recolección global de ${config.sources.length} fuentes ===`);
@@ -178,9 +186,37 @@ await Promise.all(config.sources.map(async (source) => {
 console.log(`Candidatos pre-filtro de todas las fuentes: ${allCandidates.length}`);
 metrics.candidatesDetected = allCandidates.length;
 
-// ============================================================
+// ==============================================================
+// Event fingerprint — deduplicación por acontecimiento (capa 2)
+// ==============================================================
+const publishedEventFingerprints = new Set();
+
+function extractFingerprint(title) {
+  const stopwords = new Set(['que', 'con', 'para', 'por', 'una', 'del', 'los', 'las', 'sus', 'fue', 'son', 'este', 'esta', 'pero', 'como']);
+  const words = (title || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length >= 5 && !stopwords.has(w) && !GENERIC_TITLE_WORDS.has(w));
+  return words.sort().join('|');
+}
+
+function isEventAlreadyPublished(title) {
+  if (!title) return false;
+  const words = new Set(extractFingerprint(title).split('|').filter(Boolean));
+  if (words.size < 2) return false;
+  for (const fp of publishedEventFingerprints) {
+    const fpWords = new Set(fp.split('|').filter(Boolean));
+    if (fpWords.size < 2) continue;
+    const intersection = [...words].filter(w => fpWords.has(w)).length;
+    if (intersection >= 3) return true;
+  }
+  return false;
+}
+
+// ==============================================================
 // FASE B — Extracción, ranking, deduplicación y balance
-// ============================================================
+// ==============================================================
 
 console.log(`\n=== FASE B: Extracción y ranking ===`);
 
@@ -195,10 +231,14 @@ for (const candidate of allCandidates) {
   } catch (error) {
     console.warn(`[${source.name}] Error extracción ${item.link}: ${error.message}`);
     metrics.extractErrors++;
+    const attempts = (seen.items[initialKey]?.attempts || 0) + 1;
     seen.items[initialKey] = {
       seenAt: new Date().toISOString(),
       status: 'extract-error',
       source: source.id,
+      attempts,
+      lastAttemptAt: new Date().toISOString(),
+      nextRetryAt: getNextRetryAt(attempts),
       lastError: error.message.slice(0, 200)
     };
     continue;
@@ -209,7 +249,7 @@ for (const candidate of allCandidates) {
   const currentTitle = (article.title || item.title || '').trim();
 
   // Descartar si URL canónica ya vista como publicada
-  if (seen.items[canonicalKey] && ['published', 'duplicate'].includes(seen.items[canonicalKey].status)) {
+  if (seen.items[canonicalKey] && ['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seen.items[canonicalKey].status)) {
     seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
     metrics.discardedDuplicate++;
     continue;
@@ -236,13 +276,24 @@ for (const candidate of allCandidates) {
     continue;
   }
 
+  // Deduplicación por evento (acontecimiento)
+  if (isEventAlreadyPublished(currentTitle)) {
+    seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
+    metrics.discardedDuplicate++;
+    continue;
+  }
+
   const bodyLength = (article.text || '').length;
   if (bodyLength < 400) {
     metrics.discardedQuality++;
+    const attempts = (seen.items[initialKey]?.attempts || 0) + 1;
     seen.items[initialKey] = {
       seenAt: new Date().toISOString(),
       status: 'extract-error',
       source: source.id,
+      attempts,
+      lastAttemptAt: new Date().toISOString(),
+      nextRetryAt: getNextRetryAt(attempts),
       lastError: `Texto insuficiente: ${bodyLength} chars`
     };
     continue;
@@ -263,12 +314,38 @@ for (const candidate of allCandidates) {
 
 console.log(`Candidatos válidos después de extracción: ${extracted.length}`);
 
-// Ordenar: más reciente primero, luego mayor cuerpo (proxy de importancia)
-extracted.sort((a, b) => {
-  const dateDiff = b.pubDate - a.pubDate;
-  if (Math.abs(dateDiff) > 60 * 60 * 1000) return dateDiff; // Diferencia > 1h: priorizar más reciente
-  return b.bodyLength - a.bodyLength;
-});
+// ==============================================================
+// Scoring editorial — factores: recencia, calidad, localidad, diversidad
+// ==============================================================
+function editorialScore(candidate) {
+  const now = Date.now();
+  const ageMs = now - (candidate.pubDate || new Date()).getTime();
+  const ageHours = ageMs / (1000 * 60 * 60);
+
+  // Recencia (0-40): decae linealmente en 48h
+  const recencyScore = Math.max(0, 40 - (ageHours / 48) * 40);
+
+  // Calidad de extracción (0-20): más texto = mejor
+  const bodyLen = candidate.bodyLength || 0;
+  const qualityScore = Math.min(20, (bodyLen / 2000) * 20);
+
+  // Relevancia local (0-20): fuentes fueguinas valen más
+  let localScore = 0;
+  const srcMode = candidate.source?.mode;
+  if (srcMode === 'official-auto') localScore = 20;
+  else if (candidate.source?.id?.startsWith('bing-')) localScore = 15;
+  else if (['infobae-tdf', 'perfil-tdf', 'clarin-tdf'].includes(candidate.source?.id)) localScore = 10;
+  else localScore = 5; // nacionales, mundo
+
+  // Bonus diversidad territorial (0-15): categoría no vista aún en este run
+  const cat = candidate.source?.defaultCategory;
+  const diversityBonus = metrics.byCategory[cat] ? 0 : 15;
+
+  return recencyScore + qualityScore + localScore + diversityBonus;
+}
+
+// Ordenar usando scoring editorial
+extracted.sort((a, b) => editorialScore(b) - editorialScore(a));
 
 // Calcular presupuesto IA por tipo de fuente
 const officialAiBudget = Math.ceil(MAX_AI_PER_RUN * OFFICIAL_AI_BUDGET_FRACTION);
@@ -316,9 +393,21 @@ for (const candidate of extracted) {
         sourceTitle: article.title || item.title,
         sourceDescription: article.description || item.description,
         sourceText: article.text,
-        defaultCategory: source.defaultCategory,
+        defaultCategory: source.forceCategory || source.defaultCategory,
         defaultLocation: source.location
       });
+
+      // Si la fuente tiene forceCategory, sobreescribir la categoría IA
+      if (source.forceCategory) ai.category = source.forceCategory;
+
+      // Si la fuente tiene minImportance, descartar si la IA le dio importancia menor
+      if (source.minImportance && ai.importance < source.minImportance) {
+        console.log(`  DESCARTADA por threshold editorial (importance ${ai.importance} < ${source.minImportance}): ${ai.title}`);
+        if (isOfficial) officialAiUsed++; else discoveryAiUsed++; // se consumíó presupuesto igual
+        metrics.aiCalls++;
+        seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'discarded-editorial', source: source.id };
+        continue;
+      }
 
       if (isOfficial) officialAiUsed++;
       else discoveryAiUsed++;
@@ -354,6 +443,7 @@ for (const candidate of extracted) {
       // Actualizar índice en memoria para deduplicar dentro del mismo run
       existingUrls.add(article.finalUrl);
       existingTitles.add(ai.title.toLowerCase());
+      publishedEventFingerprints.add(extractFingerprint(ai.title));
 
       publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
       metrics.published++;

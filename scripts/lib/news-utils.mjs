@@ -255,12 +255,14 @@ Reglas obligatorias:
 - No inventes datos, citas, cifras, antecedentes ni consecuencias.
 - Si un dato no está en el material, no lo afirmes.
 - No menciones "según el texto" ni expliques el proceso de IA.
-- Priorizá el impacto concreto para lectores de Río Grande, Ushuaia, Tolhuin, Malvinas y Antártida.
+- Para noticias locales y provinciales, mantené el enfoque fueguino.
+- Para noticias nacionales, cubrí hechos relevantes para Argentina.
+- Para noticias mundiales, cubrí acontecimientos internacionales de alto impacto para una audiencia argentina y fueguina. NUNCA inventes o fuerces una consecuencia local que no esté respaldada por los hechos.
 - Título informativo y atractivo, sin clickbait engañoso.
 - Bajada SEO entre 100 y 170 caracteres.
 - Cuerpo en Markdown, de 5 a 9 párrafos breves; podés usar un subtítulo si mejora la lectura.
 - Cerrá, solo cuando corresponda naturalmente, con una pregunta o invitación breve a la comunidad.
-- Elegí una categoría de: Provincia, Río Grande, Ushuaia, Tolhuin, Malvinas, Antártida, Política, Economía, Sociedad, Policiales, Institucional.
+- Elegí una categoría de: Provincia, Río Grande, Ushuaia, Tolhuin, Malvinas, Antártida, Nacionales, Mundo, Política, Economía, Sociedad, Policiales, Institucional.
 - Entregá exclusivamente JSON válido con: title, description, category, location, tags, imageAlt, body, importance.
 - tags debe ser un array de 3 a 6 strings.
 - importance debe ser un entero de 1 a 10.`;

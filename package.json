@@ -11,7 +11,8 @@
     "news:digest": "node scripts/daily-digest.mjs",
     "news:cleanup": "node scripts/cleanup-drafts.mjs",
     "news:social": "node scripts/social-publisher.mjs",
-    "test": "node scripts/tests/social.test.mjs",
+    "news:sources-health": "node scripts/sources-health.mjs",
+    "test": "node scripts/tests/social.test.mjs && node scripts/tests/news.test.mjs",
     "health": "node scripts/health-check.mjs"
   },
   "dependencies": {

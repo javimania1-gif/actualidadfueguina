@@ -73,47 +73,117 @@
       "maxItems": 3
     },
     {
-      "id": "bing-malvinas-antartida",
-      "name": "Bing News — Malvinas y Antártida",
+      "id": "bing-malvinas",
+      "name": "Bing News — Islas Malvinas",
       "type": "rss",
-      "url": "https://www.bing.com/news/search?q=(%22Islas+Malvinas%22+OR+%22Ant%C3%A1rtida+Argentina%22)&format=rss",
-      "location": "Tierra del Fuego AIAS",
+      "url": "https://www.bing.com/news/search?q=%22Islas+Malvinas%22&format=rss",
+      "location": "Islas Malvinas",
       "defaultCategory": "Malvinas",
       "mode": "discovery-draft",
-      "maxItems": 4
+      "maxItems": 3
     },
     {
-      "id": "infobae-argentina",
-      "name": "Infobae Argentina",
+      "id": "bing-antartida",
+      "name": "Bing News — Antártida Argentina",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=%22Ant%C3%A1rtida+Argentina%22&format=rss",
+      "location": "Antártida Argentina",
+      "defaultCategory": "Antártida",
+      "mode": "discovery-draft",
+      "maxItems": 3
+    },
+    {
+      "id": "infobae-tdf",
+      "name": "Infobae — Cobertura TdF",
+      "type": "rss",
+      "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+    },
+    {
+      "id": "perfil-tdf",
+      "name": "Perfil — Cobertura TdF",
+      "type": "rss",
+      "url": "https://www.perfil.com/rss/",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+    },
+    {
+      "id": "clarin-tdf",
+      "name": "Clarín — Cobertura TdF",
+      "type": "rss",
+      "url": "https://www.clarin.com/rss/lo-ultimo/",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+    },
+    {
+      "id": "nacionales-infobae",
+      "name": "Infobae — Nacionales",
       "type": "rss",
       "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
       "location": "Argentina",
-      "defaultCategory": "Provincia",
+      "defaultCategory": "Nacionales",
       "mode": "discovery-draft",
       "maxItems": 3,
-      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+      "minImportance": 7,
+      "forceCategory": "Nacionales"
     },
     {
-      "id": "perfil-argentina",
-      "name": "Perfil Argentina",
+      "id": "nacionales-perfil",
+      "name": "Perfil — Nacionales",
       "type": "rss",
       "url": "https://www.perfil.com/rss/",
       "location": "Argentina",
-      "defaultCategory": "Provincia",
+      "defaultCategory": "Nacionales",
       "mode": "discovery-draft",
-      "maxItems": 3,
-      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+      "maxItems": 2,
+      "minImportance": 7,
+      "forceCategory": "Nacionales"
     },
     {
-      "id": "clarin-argentina",
-      "name": "Clarín Argentina",
+      "id": "mundo-google",
+      "name": "Google News — Mundo",
       "type": "rss",
-      "url": "https://www.clarin.com/rss/lo-ultimo/",
-      "location": "Argentina",
-      "defaultCategory": "Provincia",
+      "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=es-419&gl=AR&ceid=AR:es-419",
+      "location": "Internacional",
+      "defaultCategory": "Mundo",
       "mode": "discovery-draft",
       "maxItems": 3,
-      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Malvinas", "Antártida", "Patagonia"]
+      "minImportance": 8,
+      "forceCategory": "Mundo"
+    },
+    {
+      "id": "mundo-clarin",
+      "name": "Clarín — Mundo",
+      "type": "rss",
+      "url": "https://www.clarin.com/rss/mundo/",
+      "location": "Internacional",
+      "defaultCategory": "Mundo",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "minImportance": 8,
+      "forceCategory": "Mundo"
+    },
+    {
+      "id": "mundo-bing",
+      "name": "Bing News — Mundo",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=noticias+internacionales+mundo&format=rss",
+      "location": "Internacional",
+      "defaultCategory": "Mundo",
+      "mode": "discovery-draft",
+      "maxItems": 3,
+      "minImportance": 8,
+      "forceCategory": "Mundo"
     }
   ]
 }

@@ -2,34 +2,30 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-
-export async function getStaticPaths() {
-  const slugifyPath = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const noticias = await getCollection('noticias');
-  
-  // Todas las categorías editoriales base (siempre generadas para evitar 404)
-  const baseCategories = ['Río Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antártida', 'Nacionales', 'Mundo'];
-  const newsCategories = noticias.map((n) => n.data.category).filter(Boolean);
-  const uniqueCategories = [...new Set([...baseCategories, ...newsCategories])];
-
-  return uniqueCategories.map((category) => ({ params: { category: slugifyPath(category) }, props: { category } }));
-}
-
-const { category } = Astro.props;
 const noticias = (await getCollection('noticias'))
-  .filter((n) => slugify(n.data.category) === slugify(category))
+  .filter(n => n.data.category === 'Malvinas' || n.data.category === 'Antártida')
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
 const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
 ---
-<BaseLayout title={category} description={`Noticias de ${category} en Actualidad Fueguina.`}>
+<BaseLayout
+  title="Malvinas y Antártida"
+  description="Cobertura de Actualidad Fueguina sobre las Islas Malvinas y la Antártida Argentina."
+>
   <section class="section">
     <div class="container">
-      <div class="section-head"><h1 class="title-lg">{category}</h1><p class="lead">Cobertura de Actualidad Fueguina.</p></div>
+      <div class="section-head">
+        <h1 class="title-lg">Malvinas y Antártida</h1>
+        <p class="lead">Soberanía, política exterior e identidad nacional.</p>
+      </div>
+      <div class="cat-tabs">
+        <a href="/categorias/malvinas/" class="cat-tab">Islas Malvinas</a>
+        <a href="/categorias/antartica/" class="cat-tab">Antártida Argentina</a>
+      </div>
       <div class="grid">
         {noticias.length === 0 ? (
           <p class="lead" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; color: var(--color-text-muted); font-style: italic;">
-            Por el momento no hay noticias publicadas en la categoría "{category}".
+            Por el momento no hay noticias publicadas en Malvinas y Antártida.
           </p>
         ) : (
           noticias.map((nota) => (
@@ -50,3 +46,26 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .cat-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .cat-tab {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--color-text, #111);
+    transition: background 0.2s, color 0.2s;
+  }
+  .cat-tab:hover {
+    background: var(--color-accent, #e63946);
+    color: #fff;
+    border-color: var(--color-accent, #e63946);
+  }
+</style>
