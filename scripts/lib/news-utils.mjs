@@ -4,6 +4,7 @@ import path from 'node:path';
 import * as cheerio from 'cheerio';
 import sharp from 'sharp';
 import TurndownService from 'turndown';
+import { callAiJson } from './ai-provider.mjs';
 
 export const ROOT = process.cwd();
 export const NEWS_DIR = path.join(ROOT, 'src/content/noticias');
@@ -176,13 +177,23 @@ export function extractArticle(html, finalUrl) {
     try { absoluteImage = new URL(image, finalUrl).toString(); } catch { absoluteImage = ''; }
   }
 
+  let canonicalUrl = finalUrl;
+  const canonical =
+    $('link[rel="canonical"]').attr('href') ||
+    $('meta[property="og:url"]').attr('content') ||
+    '';
+  if (canonical) {
+    try { canonicalUrl = new URL(canonical, finalUrl).toString(); } catch {}
+  }
+
   return {
     title,
     description,
     date,
     image: absoluteImage,
     text: markdown.slice(0, 16000),
-    finalUrl
+    finalUrl,
+    canonicalUrl
   };
 }
 
@@ -199,14 +210,136 @@ export function isHomepage(urlStr) {
   try {
     const url = new URL(urlStr);
     const path = url.pathname.replace(/\/$/, '');
-    return path === '' || path === '/home' || path === '/noticias';
+    return path === '' || path === '/home' || path === '/inicio' || path === '/noticias';
   } catch {
     return true; // invalid URLs are considered generic/homepages
   }
 }
 
+const SUPPORTED_IMAGE_TYPES = new Set([
+  'image/jpeg',
+  'image/jpg',
+  'image/png',
+  'image/webp',
+  'image/gif',
+  'image/svg+xml',
+  'image/avif',
+  'image/tiff'
+]);
+
+export async function normalizeImageBuffer({
+  buffer,
+  contentType,
+  seed,
+  sourceUrl = '',
+  purpose = 'web',
+  outputDir = UPLOADS_DIR,
+  minWidth = 400,
+  minHeight = 300,
+  maxBytes = 8_000_000
+}) {
+  const mime = String(contentType || '').split(';')[0].trim().toLowerCase();
+  if (!mime || !mime.startsWith('image/')) return { ok: false, reason: 'not-image-content-type' };
+  if (!SUPPORTED_IMAGE_TYPES.has(mime)) return { ok: false, reason: `unsupported-content-type:${mime}` };
+  if (!buffer || buffer.length === 0) return { ok: false, reason: 'empty-buffer' };
+  if (buffer.length > maxBytes) return { ok: false, reason: 'image-too-large' };
+
+  let metadata;
+  try {
+    metadata = await sharp(buffer, { animated: false, limitInputPixels: 40_000_000 }).metadata();
+  } catch (error) {
+    return { ok: false, reason: `decode-error:${error.message}` };
+  }
+
+  if (!metadata?.width || !metadata?.height) return { ok: false, reason: 'missing-dimensions' };
+  if (metadata.width < minWidth || metadata.height < minHeight) {
+    return { ok: false, reason: 'image-too-small', width: metadata.width, height: metadata.height };
+  }
+
+  const format = purpose === 'meta' ? 'jpeg' : 'webp';
+  const ext = format === 'jpeg' ? '.jpg' : '.webp';
+  const filename = `${datePrefix()}-${hash(seed || sourceUrl || buffer.subarray(0, 32).toString('hex'))}${ext}`;
+  const fullPath = path.join(outputDir, filename);
+  await fs.mkdir(path.dirname(fullPath), { recursive: true });
+
+  let pipeline = sharp(buffer, { animated: false, limitInputPixels: 40_000_000 })
+    .rotate()
+    .resize({ width: 1600, height: 1200, fit: 'inside', withoutEnlargement: true });
+
+  if (format === 'jpeg') {
+    pipeline = pipeline.flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true });
+  } else {
+    pipeline = pipeline.webp({ quality: 82 });
+  }
+
+  await pipeline.toFile(fullPath);
+  const finalMetadata = await sharp(fullPath).metadata();
+  return {
+    ok: true,
+    sourceUrl,
+    originalContentType: mime,
+    format,
+    width: finalMetadata.width,
+    height: finalMetadata.height,
+    filePath: fullPath,
+    publicPath: `/uploads/auto/${filename}`
+  };
+}
+
+export async function normalizeImageAsset(url, options = {}) {
+  if (!url) return { ok: false, reason: 'missing-url' };
+
+  const lowerUrl = url.toLowerCase();
+  if (
+    lowerUrl.includes('company_logo') ||
+    lowerUrl.includes('logo-af') ||
+    lowerUrl.includes('/logo') ||
+    lowerUrl.includes('favicon') ||
+    lowerUrl.includes('avatar')
+  ) {
+    return { ok: false, reason: 'corporate-or-logo-image' };
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), options.timeoutMs || 20000);
+  try {
+    const response = await fetch(url, {
+      redirect: 'follow',
+      signal: controller.signal,
+      headers: { 'user-agent': 'ActualidadFueguinaBot/1.0 (+https://actualidadfueguina.com.ar)' }
+    });
+    if (!response.ok) return { ok: false, reason: `http-${response.status}` };
+    const contentType = response.headers.get('content-type') || '';
+    const contentLength = Number(response.headers.get('content-length') || 0);
+    const maxBytes = options.maxBytes || 8_000_000;
+    if (contentLength && contentLength > maxBytes) return { ok: false, reason: 'image-too-large' };
+    const buffer = Buffer.from(await response.arrayBuffer());
+    return normalizeImageBuffer({
+      buffer,
+      contentType,
+      seed: options.seed || url,
+      sourceUrl: response.url || url,
+      purpose: options.purpose || 'web',
+      outputDir: options.outputDir || UPLOADS_DIR,
+      minWidth: options.minWidth || 400,
+      minHeight: options.minHeight || 300,
+      maxBytes
+    });
+  } catch (error) {
+    return { ok: false, reason: `fetch-error:${error.message}` };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
 export async function downloadImage(url, seed) {
+  const result = await normalizeImageAsset(url, { seed, purpose: 'web' });
+  if (!result.ok) {
+    if (url) console.warn(`No se pudo normalizar imagen ${url}: ${result.reason}`);
+    return '';
+  }
+  return result.publicPath;
+
   if (!url) return '';
   
   // Descartar imágenes corporativas de gacetillas repetitivas
@@ -267,7 +400,70 @@ export function extractJsonObject(value) {
   throw new Error('La IA no devolvió JSON válido');
 }
 
-export async function callModel({ sourceName, sourceUrl, sourceTitle, sourceDescription, sourceText, defaultCategory, defaultLocation }) {
+export async function writeArticleWithModel({
+  sourceName,
+  sourceUrl,
+  sourceTitle,
+  sourceDescription,
+  sourceText,
+  defaultCategory,
+  defaultLocation,
+  verifiedFacts = null
+}) {
+  const system = `Sos un editor periodistico riguroso de Actualidad Fueguina.
+Redacta una nota original basada exclusivamente en el material fuente y, cuando se entreguen, en los hechos verificados.
+No inventes datos, citas, cifras, consecuencias ni contexto no respaldado.
+Si los hechos verificados contradicen o limitan el material, obedecen los hechos verificados.
+No agregues rivales, resultados, fechas, cifras, cargos, victimas ni organismos que no esten respaldados.
+Usa titulo informativo, bajada SEO de 100 a 170 caracteres y cuerpo en Markdown de 5 a 9 parrafos.
+
+Entrega exclusivamente JSON con esta estructura:
+{
+  "news": {
+    "title": "...",
+    "description": "...",
+    "category": "Provincia|Rio Grande|Ushuaia|Tolhuin|Malvinas|Antartida|Nacionales|Mundo|Politica|Economia|Sociedad|Policiales|Institucional",
+    "location": "...",
+    "tags": ["...", "..."],
+    "imageAlt": "...",
+    "body": "...",
+    "importance": 1
+  }
+}`;
+
+  const user = `FUENTE: ${sourceName}
+URL: ${sourceUrl}
+TITULO FUENTE: ${sourceTitle}
+DESCRIPCION FUENTE: ${sourceDescription || ''}
+CATEGORIA SUGERIDA: ${defaultCategory || 'Provincia'}
+UBICACION SUGERIDA: ${defaultLocation || 'Tierra del Fuego AIAS'}
+
+HECHOS VERIFICADOS:
+${verifiedFacts ? JSON.stringify(verifiedFacts, null, 2) : 'No hay registro externo adicional; no agregues hechos fuera del material fuente.'}
+
+MATERIAL FUENTE:
+${String(sourceText || '').slice(0, 14000)}`;
+
+  const parsed = await callAiJson({ system, user, temperature: 0.35 });
+  if (!parsed.news) throw new Error('Estructura JSON invalida: falta news');
+
+  const n = parsed.news;
+  return {
+    title: cleanText(n.title),
+    description: cleanText(n.description).slice(0, 180),
+    category: cleanText(n.category || defaultCategory || 'Provincia'),
+    location: cleanText(n.location || defaultLocation || 'Tierra del Fuego AIAS'),
+    tags: Array.isArray(n.tags) ? n.tags.map(cleanText).filter(Boolean).slice(0, 6) : [],
+    imageAlt: cleanText(n.imageAlt || n.title),
+    body: cleanText(n.body),
+    importance: Math.max(1, Math.min(10, Number(n.importance) || 5)),
+    facts: verifiedFacts || null
+  };
+}
+
+export async function callModel(args) {
+  return writeArticleWithModel(args);
+
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error('Falta GITHUB_TOKEN');
 

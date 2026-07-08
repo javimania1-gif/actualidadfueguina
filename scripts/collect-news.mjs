@@ -12,13 +12,34 @@ import Parser from 'rss-parser';
 import {
   ROOT, NEWS_DIR, DRAFTS_DIR, ensureDirs, loadSeen, saveSeen, hash, slugify,
   safeDate, datePrefix, fetchText, stripHtml, extractIndexLinks, extractArticle,
-  isOfficialDomain, downloadImage, callModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
+  isOfficialDomain, downloadImage, writeArticleWithModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
   generateWebPlate, searchWebImage, isHomepage
 } from './lib/news-utils.mjs';
+import {
+  extractFingerprint as extractFingerprintShared,
+  isGenericTitle as isGenericTitleShared,
+  isSimilarTitle as isSimilarTitleShared,
+  isEventAlreadyPublished as isEventAlreadyPublishedShared,
+  isRetryEligible as isRetryEligibleShared,
+  getNextRetryAt as getNextRetryAtShared,
+  editorialScore as editorialScoreShared
+} from './lib/pipeline-utils.mjs';
+import { buildSourceRef, validateArticleSource } from './lib/source-policy.mjs';
+import {
+  loadEvents,
+  saveEvents,
+  extractFacts,
+  generateEventKey,
+  corroborateEvent,
+  selectBaseCandidate,
+  validateArticleAgainstFacts,
+  buildEventRecord
+} from './lib/factual-utils.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
 const seen = await loadSeen();
+const events = await loadEvents();
 await ensureDirs();
 
 // ============================================================
@@ -29,6 +50,14 @@ const MAX_DRAFTS_PER_RUN = Number(process.env.AF_MAX_DRAFTS_PER_RUN || 10);
 const MAX_PER_SOURCE = Number(process.env.AF_MAX_PER_SOURCE || 2);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
+const PERSIST_OUTPUTS =
+  process.env.GITHUB_ACTIONS === 'true' ||
+  process.env.AF_WRITE_STATE === 'true' ||
+  process.argv.includes('--write-state');
+
+if (!PERSIST_OUTPUTS) {
+  console.log('Modo diagnostico local: no se escribiran noticias, borradores ni estado persistente. Usar AF_WRITE_STATE=true o --write-state para persistir.');
+}
 
 // Títulos genéricos que NO deben usarse para deduplicación (evitar falsos positivos)
 const GENERIC_TITLE_WORDS = new Set([
@@ -48,9 +77,14 @@ const metrics = {
   discardedDuplicate: 0,
   discardedQuality: 0,
   discardedGenericTitle: 0,
+  eventsGrouped: 0,
+  verified: 0,
+  pendingVerification: 0,
+  conflicting: 0,
   published: 0,
   drafts: 0,
   extractErrors: 0,
+  imageErrors: 0,
   aiCalls: 0,
   byCategory: {}
 };
@@ -68,26 +102,11 @@ const existingTitles = new Set();
 const publishedEventFingerprints = new Set();
 
 function extractFingerprint(title) {
-  const stopwords = new Set(['que', 'con', 'para', 'por', 'una', 'del', 'los', 'las', 'sus', 'fue', 'son', 'este', 'esta', 'pero', 'como']);
-  const words = (title || '').toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(w => w.length >= 5 && !stopwords.has(w) && !GENERIC_TITLE_WORDS.has(w));
-  return words.sort().join('|');
+  return extractFingerprintShared(title);
 }
 
 function isEventAlreadyPublished(title) {
-  if (!title) return false;
-  const words = new Set(extractFingerprint(title).split('|').filter(Boolean));
-  if (words.size < 2) return false;
-  for (const fp of publishedEventFingerprints) {
-    const fpWords = new Set(fp.split('|').filter(Boolean));
-    if (fpWords.size < 2) continue;
-    const intersection = [...words].filter(w => fpWords.has(w)).length;
-    if (intersection >= 3) return true;
-  }
-  return false;
+  return isEventAlreadyPublishedShared(title, publishedEventFingerprints);
 }
 
 
@@ -110,24 +129,11 @@ async function indexPublishedDocs() {
 }
 
 function isGenericTitle(title) {
-  if (!title || title.length < 15) return true;
-  const words = (title.toLowerCase().match(/\b\w{4,}\b/g) || []);
-  const meaningfulWords = words.filter(w => !GENERIC_TITLE_WORDS.has(w));
-  return meaningfulWords.length < 2;
+  return isGenericTitleShared(title);
 }
 
 function isSimilarTitle(newTitle) {
-  if (!newTitle || isGenericTitle(newTitle)) return false;
-  const words1 = new Set(newTitle.toLowerCase().match(/\b\w{5,}\b/g) || []);
-  if (words1.size < 2) return existingTitles.has(newTitle.toLowerCase());
-  for (const oldTitle of existingTitles) {
-    const words2 = new Set(oldTitle.match(/\b\w{5,}\b/g) || []);
-    if (words2.size < 2) continue;
-    const intersection = [...words1].filter(x => words2.has(x)).length;
-    const union = new Set([...words1, ...words2]).size;
-    if (union > 0 && (intersection / union) > 0.55) return true;
-  }
-  return false;
+  return isSimilarTitleShared(newTitle, existingTitles);
 }
 
 await indexPublishedDocs();
@@ -174,6 +180,8 @@ async function materialize(item) {
 
 // Verificar si un item en seen.json es elegible para retry (con backoff)
 function isRetryEligible(seenItem) {
+  return isRetryEligibleShared(seenItem);
+
   if (!seenItem) return false;
   if (['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seenItem.status)) return false;
   if (!['draft', 'extract-error', 'model-error', 'temporary-error'].includes(seenItem.status)) return false;
@@ -186,6 +194,8 @@ function isRetryEligible(seenItem) {
 }
 
 function getNextRetryAt(attempts) {
+  return getNextRetryAtShared(attempts);
+
   const windowMs = DRAFT_RETRY_WINDOWS_MS[Math.min(attempts, DRAFT_RETRY_WINDOWS_MS.length - 1)];
   return new Date(Date.now() + windowMs).toISOString();
 }
@@ -252,16 +262,35 @@ for (const candidate of allCandidates) {
   }
 
   const finalUrl = article.finalUrl || item.link;
-  
-  if (isHomepage(finalUrl)) {
-    console.log(`[${source.name}] Descartado por ser homepage: ${finalUrl}`);
-    seen.items[initialKey] = { status: 'discarded-quality', reason: 'homepage', seenAt: new Date().toISOString() };
+
+  const sourceValidation = validateArticleSource({ article, item, source, finalUrl });
+  if (!sourceValidation.ok) {
+    console.log(`[${source.name}] Descartado por fuente invalida (${sourceValidation.errors.join(', ')}): ${sourceValidation.url}`);
+    seen.items[initialKey] = {
+      status: 'discarded-quality',
+      reason: sourceValidation.errors.join(','),
+      seenAt: new Date().toISOString(),
+      source: source.id
+    };
     metrics.discardedQuality++;
     continue;
   }
 
-  const canonicalKey = hash(finalUrl);
   const currentTitle = (article.title || item.title || '').trim();
+  const sourceRef = buildSourceRef({ source, item, article, officialDomains: config.officialDomains });
+  const facts = extractFacts({
+    article,
+    item,
+    source,
+    category: source.forceCategory || source.defaultCategory
+  });
+  const eventKey = generateEventKey({
+    facts,
+    title: currentTitle,
+    sourceRef
+  });
+
+  const canonicalKey = hash(sourceRef.url || finalUrl);
 
   // Descartar si URL canónica ya vista como publicada
   if (seen.items[canonicalKey] && ['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seen.items[canonicalKey].status)) {
@@ -320,6 +349,9 @@ for (const candidate of allCandidates) {
     article,
     initialKey,
     canonicalKey,
+    sourceRef,
+    facts,
+    eventKey,
     title: currentTitle,
     isOfficial: source.mode === 'official-auto' || isOfficialDomain(finalUrl, config.officialDomains),
     pubDate: safeDate(article.date || item.pubDate || new Date()),
@@ -327,8 +359,7 @@ for (const candidate of allCandidates) {
   });
   
   // Agregar al índice de eventos para deduplicar siguientes candidatos de la misma corrida
-  const fp = extractFingerprint(currentTitle);
-  if (fp) publishedEventFingerprints.add(fp);
+  // Intentionally left out: this index is only updated after publication.
 }
 
 console.log(`Candidatos válidos después de extracción: ${extracted.length}`);
@@ -336,7 +367,88 @@ console.log(`Candidatos válidos después de extracción: ${extracted.length}`);
 // ==============================================================
 // Scoring editorial — factores: recencia, calidad, localidad, diversidad
 // ==============================================================
+const eventsByKey = new Map();
+for (const candidate of extracted) {
+  if (!eventsByKey.has(candidate.eventKey)) eventsByKey.set(candidate.eventKey, []);
+  eventsByKey.get(candidate.eventKey).push(candidate);
+}
+
+metrics.eventsGrouped = eventsByKey.size;
+const verifiedCandidates = [];
+
+for (const [eventKey, group] of eventsByKey) {
+  const existingEvent = events.events?.[eventKey] || {};
+  const persistedCandidates = (existingEvent.factsBySource || []).map((entry) => ({
+    sourceRef: {
+      ...(existingEvent.sources || []).find((source) => source.url === entry.url),
+      publisherDomain: entry.publisherDomain,
+      url: entry.url
+    },
+    facts: entry.facts || {},
+    bodyLength: 0,
+    pubDate: new Date(existingEvent.lastSeenAt || 0)
+  }));
+
+  const seenUrls = new Set();
+  const combinedForVerification = [...persistedCandidates, ...group].filter((candidate) => {
+    const url = candidate.sourceRef?.url || '';
+    if (url && seenUrls.has(url)) return false;
+    if (url) seenUrls.add(url);
+    return true;
+  });
+
+  const verification = corroborateEvent({ eventKey, candidates: combinedForVerification });
+  events.events[eventKey] = buildEventRecord({
+    existing: existingEvent,
+    eventKey,
+    candidates: combinedForVerification,
+    verification
+  });
+
+  if (verification.status === 'conflicting-sources') {
+    metrics.conflicting++;
+    for (const candidate of group) {
+      seen.items[candidate.canonicalKey] = {
+        seenAt: new Date().toISOString(),
+        status: 'conflicting-sources',
+        source: candidate.source.id,
+        eventKey,
+        lastError: 'Conflicto factual critico entre fuentes'
+      };
+      seen.items[candidate.initialKey] = seen.items[candidate.canonicalKey];
+    }
+    continue;
+  }
+
+  if (!verification.verified) {
+    metrics.pendingVerification++;
+    for (const candidate of group) {
+      seen.items[candidate.canonicalKey] = {
+        seenAt: new Date().toISOString(),
+        status: 'pending-verification',
+        source: candidate.source.id,
+        eventKey,
+        riskLevel: verification.riskLevel,
+        nextRetryAt: events.events[eventKey].nextRetryAt,
+        expiresAt: events.events[eventKey].expiresAt
+      };
+      seen.items[candidate.initialKey] = seen.items[candidate.canonicalKey];
+    }
+    console.log(`  PENDIENTE VERIFICACION [${eventKey}]: ${group.map(c => c.title).join(' | ')}`);
+    continue;
+  }
+
+  metrics.verified++;
+  const baseCandidate = selectBaseCandidate(group);
+  baseCandidate.verification = verification;
+  verifiedCandidates.push(baseCandidate);
+}
+
+console.log(`Eventos agrupados: ${metrics.eventsGrouped}; verificados: ${metrics.verified}; pendientes: ${metrics.pendingVerification}; conflictos: ${metrics.conflicting}`);
+
 function editorialScore(candidate) {
+  return editorialScoreShared(candidate, metrics.byCategory);
+
   const now = Date.now();
   const ageMs = now - (candidate.pubDate || new Date()).getTime();
   const ageHours = ageMs / (1000 * 60 * 60);
@@ -364,7 +476,7 @@ function editorialScore(candidate) {
 }
 
 // Ordenar usando scoring editorial
-extracted.sort((a, b) => editorialScore(b) - editorialScore(a));
+verifiedCandidates.sort((a, b) => editorialScore(b) - editorialScore(a));
 
 // Calcular presupuesto IA por tipo de fuente
 const officialAiBudget = Math.ceil(MAX_AI_PER_RUN * OFFICIAL_AI_BUDGET_FRACTION);
@@ -383,8 +495,8 @@ let officialAiUsed = 0;
 let discoveryAiUsed = 0;
 let draftCount = 0;
 
-for (const candidate of extracted) {
-  const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate } = candidate;
+for (const candidate of verifiedCandidates) {
+  const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate, sourceRef, verification } = candidate;
 
   // Verificar límite por fuente
   const sourceCount = publishedPerSource[source.id] || 0;
@@ -406,15 +518,21 @@ for (const candidate of extracted) {
 
   if (canPublish) {
     try {
-      const ai = await callModel({
+      const ai = await writeArticleWithModel({
         sourceName: source.name,
-        sourceUrl: article.finalUrl,
+        sourceUrl: sourceRef.url || article.finalUrl,
         sourceTitle: article.title || item.title,
         sourceDescription: article.description || item.description,
         sourceText: article.text,
         defaultCategory: source.forceCategory || source.defaultCategory,
-        defaultLocation: source.location
+        defaultLocation: source.location,
+        verifiedFacts: verification?.verifiedFacts || null
       });
+
+      const factualValidation = validateArticleAgainstFacts(ai, verification || {});
+      if (!factualValidation.ok) {
+        throw new Error(`${factualValidation.code}: ${JSON.stringify(factualValidation.mismatches).slice(0, 300)}`);
+      }
 
       // Si la fuente tiene forceCategory, sobreescribir la categoría IA
       if (source.forceCategory) ai.category = source.forceCategory;
@@ -432,7 +550,13 @@ for (const candidate of extracted) {
       else discoveryAiUsed++;
       metrics.aiCalls++;
 
+      if (!PERSIST_OUTPUTS) {
+        console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
+        continue;
+      }
+
       let image = await downloadImage(article.image, article.finalUrl);
+      if (article.image && !image) metrics.imageErrors++;
 
       if (!image) {
         console.log(`! Buscando foto real para: ${ai.location} ${ai.category}`);
@@ -456,7 +580,7 @@ for (const candidate of extracted) {
 
       await fs.writeFile(target, makeNewsMarkdown({
         ai, date: pubDate, image,
-        sourceName: source.name, sourceUrl: article.finalUrl, featured
+        sourceName: source.name, sourceUrl: sourceRef.url || article.finalUrl, featured
       }), 'utf8');
 
       // Actualizar índice en memoria para deduplicar dentro del mismo run
@@ -483,7 +607,7 @@ for (const candidate of extracted) {
     } catch (error) {
       console.warn(`Falló redacción automática (${source.name}): ${error.message}`);
       
-      if (error.message.includes('FACT_CHECK_FAILED')) {
+      if (error.message.includes('FACT_CHECK_FAILED') || error.message.includes('BLOCKED_FACTUAL_MISMATCH')) {
         seen.items[initialKey] = {
           seenAt: new Date().toISOString(),
           status: 'discarded-editorial',
@@ -517,6 +641,10 @@ async function saveDraft(candidate, reason) {
   const pubDate = safeDate(article.date || item.pubDate || new Date());
   const filename = `${datePrefix(pubDate)}-${slugify(title)}-${canonicalKey.slice(0, 6)}.md`;
   const target = path.join(DRAFTS_DIR, filename);
+  if (!PERSIST_OUTPUTS) {
+    console.log(`  DIAGNOSTICO BORRADOR [${reason}]: ${title}`);
+    return;
+  }
   await fs.writeFile(target, makeDraftMarkdown({
     item, article, source,
     mode: isOfficial ? 'official-review' : 'discovery-review'
@@ -532,7 +660,12 @@ async function saveDraft(candidate, reason) {
   console.log(`  BORRADOR [${reason}]: ${title}`);
 }
 
-await saveSeen(seen);
+if (PERSIST_OUTPUTS) {
+  await saveSeen(seen);
+  await saveEvents(events);
+} else {
+  console.log('Modo diagnostico: seen.json y events.json no fueron modificados.');
+}
 
 // ============================================================
 // Métricas del run (visibles en GitHub Actions)
@@ -549,6 +682,11 @@ console.log(`
   Descartados (genérico): ${metrics.discardedGenericTitle}
   Descartados (calidad): ${metrics.discardedQuality}
   Errores de extracción: ${metrics.extractErrors}
+  Eventos agrupados: ${metrics.eventsGrouped}
+  Eventos verificados: ${metrics.verified}
+  Pending-verification: ${metrics.pendingVerification}
+  Conflictos: ${metrics.conflicting}
+  Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
   Borradores generados: ${metrics.drafts}
   IA usada: ${metrics.aiCalls}/${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
