@@ -1,48 +1,84 @@
 {
-  "generatedAt": "2026-07-08T15:30:48.101Z",
+  "generatedAt": "2026-07-08T15:47:17.222Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "28954607417",
-    "headSha": "c7eba2bd36aec0bbbc0b5be2e0e744ea57129183"
+    "runId": "28955787804",
+    "headSha": "ab15c6b1879baa75a2ed389fc7871d46bdba9957"
   },
   "metrics": {
     "sourcesConsulted": 16,
-    "candidatesDetected": 39,
-    "discardedDuplicate": 2,
+    "candidatesDetected": 35,
+    "discardedDuplicate": 3,
     "discardedQuality": 2,
-    "discardedGenericTitle": 3,
-    "eventsGrouped": 27,
-    "verified": 11,
-    "pendingVerification": 16,
-    "conflicting": 0,
-    "published": 0,
-    "drafts": 0,
-    "modelErrors": 11,
-    "discardedImportance": 0,
-    "discardedSourceLimit": 0,
-    "discardedNoAiBudget": 0,
-    "extractErrors": 1,
+    "discardedGenericTitle": 1,
+    "eventsGrouped": 28,
+    "verified": 13,
+    "pendingVerification": 14,
+    "conflicting": 1,
+    "published": 4,
+    "drafts": 6,
+    "modelErrors": 0,
+    "factualValidationErrors": 0,
+    "discardedImportance": 2,
+    "discardedSourceLimit": 1,
+    "discardedNoAiBudget": 6,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiCalls": 0,
-    "imageSelections": [],
-    "byCategory": {}
+    "aiAttempts": 6,
+    "aiCalls": 6,
+    "imageSelections": [
+      {
+        "title": "El Centro Municipal de Salud N.° 3 de Río Grande expande sus servicios y equipamiento",
+        "strategy": "article-og",
+        "query": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
+        "score": 82,
+        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875970_y.jpg"
+      },
+      {
+        "title": "Pronóstico del tiempo en Río Grande para el 8 de julio de 2026",
+        "strategy": "article-og",
+        "query": "Clima hoy en Río Grande, Tierra del Fuego: el pronóstico del tiempo para este miércoles 8 julio de 2026",
+        "score": 82,
+        "source": "https://www.clarin.com/img/2025/04/30/ocaRtzj4M_2000x1500__1.jpg"
+      },
+      {
+        "title": "Pronóstico del tiempo en Ushuaia para el 8 de julio de 2026",
+        "strategy": "article-og",
+        "query": "Clima hoy en Ushuaia, Tierra del Fuego: el pronóstico del tiempo para este miércoles 8 julio de 2026",
+        "score": 82,
+        "source": "https://www.clarin.com/img/2025/04/30/Hm-nGLi3-_2000x1500__1.jpg"
+      },
+      {
+        "title": "Muestra 'Objetos de nuestra historia' en Río Grande",
+        "strategy": "article-og",
+        "query": "“Objetos de nuestra historia”: recorré una muestra que pone en valor el patrimonio de Río Grande",
+        "score": 82,
+        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5073333744088845487_y.jpg"
+      }
+    ],
+    "byCategory": {
+      "Río Grande": 3,
+      "Ushuaia": 1
+    }
   },
   "budget": {
     "maxAiPerRun": 8,
-    "officialAiUsed": 0,
+    "officialAiUsed": 2,
     "officialAiBudget": 4,
-    "discoveryAiUsed": 0,
+    "discoveryAiUsed": 4,
     "discoveryAiBudget": 4,
-    "candidatesMaterialized": 36,
-    "totalCandidatesBeforeLimit": 39
+    "candidatesMaterialized": 35,
+    "totalCandidatesBeforeLimit": 35
   },
   "reasonNoMorePublished": [
-    "16 evento(s) quedaron pendientes de segunda fuente",
-    "2 candidato(s) descartados por duplicado/similitud",
+    "14 evento(s) quedaron pendientes de segunda fuente",
+    "1 evento(s) tuvieron conflicto factual",
+    "3 candidato(s) descartados por duplicado/similitud",
     "2 candidato(s) descartados por calidad o fuente invalida",
-    "11 error(es) de modelo",
-    "3 candidato(s) no se materializaron por limite anti-timeout"
+    "2 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) quedaron por limite por fuente",
+    "6 candidato(s) quedaron sin presupuesto IA"
   ]
 }
