@@ -5,7 +5,7 @@ date: "2026-07-05T16:43:00.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["Rio Grande", "Medio ambiente", "Educacion", "Aves rapaces", "Ecoturismo"]
-image: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5069160573475425277_y.jpg"
+image: "/uploads/auto/2026-07-08-2e35a1c05fcd57f61a.webp"
 imageAlt: "Centro de Interpretación Ambiental de Río Grande"
 author: "Actualidad Fueguina"
 featured: false

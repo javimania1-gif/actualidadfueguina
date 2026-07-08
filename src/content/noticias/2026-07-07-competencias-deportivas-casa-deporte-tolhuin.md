@@ -9,12 +9,12 @@ tags:
   - Municipio
   - Comunidad
   - Eventos
-image: ""
+image: "/uploads/auto/plate-2026-07-07-competencias-deportivas-casa-deporte-tolhuin.jpg"
 imageAlt: "Casa del Deporte de Tolhuin durante una jornada de actividades"
 importance: 5
 featured: false
-sourceName: "Municipio de Tolhuin"
-sourceUrl: "https://www.tolhuin.gob.ar/"
+sourceName: "Actualidad Fueguina - archivo"
+sourceUrl: "https://actualidadfueguina.com.ar/noticias/2026-07-07-competencias-deportivas-casa-deporte-tolhuin/"
 social:
   enabled: false
 ---

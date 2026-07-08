@@ -5,7 +5,7 @@ date: "2026-07-04T20:41:00.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["Rio Grande", "Gastronomia", "Comercio local", "Aniversario", "Turismo"]
-image: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5066623712387337270_y.jpg"
+image: "/uploads/auto/2026-07-08-d997ae42454b4728e8.webp"
 imageAlt: "Circuito gastronómico en Río Grande"
 author: "Actualidad Fueguina"
 featured: false

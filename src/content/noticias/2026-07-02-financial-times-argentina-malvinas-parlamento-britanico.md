@@ -10,7 +10,7 @@ tags:
   - Reino Unido
   - Parlamento Británico
   - Medios Internacionales
-image: ""
+image: "/uploads/auto/plate-2026-07-02-financial-times-argentina-malvinas-parlamento-britanico.jpg"
 imageAlt: "Sede del Parlamento británico en Londres"
 importance: 7
 featured: false

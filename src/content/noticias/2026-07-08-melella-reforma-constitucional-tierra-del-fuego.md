@@ -8,7 +8,7 @@ tags:
   - Política
   - Reforma Constitucional
   - Elecciones
-image: "https://tn.com.ar/resizer/v2/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica-foto-telam-Z7PGUJ4J2BBJJJBUWDTXMRTVDQ.jpg"
+image: "/uploads/auto/plate-2026-07-08-melella-reforma-constitucional-tierra-del-fuego.jpg"
 imageAlt: "Gustavo Melella en un acto oficial"
 author: "Actualidad Fueguina"
 featured: true

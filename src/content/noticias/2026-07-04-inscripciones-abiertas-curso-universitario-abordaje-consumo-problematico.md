@@ -5,7 +5,7 @@ date: "2026-07-04T16:39:00.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["Rio Grande", "Salud mental", "Universidad Nacional de La Plata", "Capacitacion", "Consumo problemático"]
-image: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5064371912573651920_y.jpg"
+image: "/uploads/auto/2026-07-08-2e0c09d500f2394f4f.webp"
 imageAlt: "Curso universitario sobre consumo problemático"
 author: "Actualidad Fueguina"
 featured: false

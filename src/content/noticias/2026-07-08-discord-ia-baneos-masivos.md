@@ -8,7 +8,7 @@ tags:
   - Tecnología
   - Inteligencia Artificial
   - Redes Sociales
-image: "https://www.infobae.com/resizer/v2/GAFMT5L7EBCTNPW5MWTM3WNICQ.JPG"
+image: "/uploads/auto/plate-2026-07-08-discord-ia-baneos-masivos.jpg"
 imageAlt: "Logo de Discord en un teléfono móvil"
 author: "Actualidad Fueguina"
 featured: false

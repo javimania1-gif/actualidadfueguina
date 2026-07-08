@@ -10,7 +10,7 @@ tags:
   - Ushuaia
   - Política Nacional
   - Medio Ambiente
-image: ""
+image: "/uploads/auto/plate-2026-06-30-argentina-plan-turismo-antartida-ushuaia.jpg"
 imageAlt: "Paisaje antártico con la bandera argentina"
 importance: 7
 featured: false
