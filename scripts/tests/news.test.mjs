@@ -18,6 +18,10 @@ import {
 import {
   makeNewsMarkdown
 } from '../lib/news-utils.mjs';
+import {
+  buildEditorialAgenda,
+  scoreCandidateNewsworthiness
+} from '../lib/editorial-agenda.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -258,6 +262,72 @@ test('markdown separa fecha de publicacion y fecha original de fuente', () => {
 
   assert.match(md, /date: "2026-07-09T13:47:08\.000Z"/);
   assert.match(md, /sourcePublishedAt: "2026-06-30T12:00:00\.000Z"/);
+});
+
+test('newsworthiness prioriza historia local util frente a nacional menor', () => {
+  const local = scoreCandidateNewsworthiness({
+    title: 'Tolhuin abre inscripciones para cursos de invierno',
+    facts: {
+      eventType: 'agenda',
+      editorialLane: 'fast',
+      places: ['Tolhuin'],
+      dates: ['10 de julio'],
+      times: ['20 horas'],
+      rawSummary: 'Inscripciones abiertas para cursos y actividades.'
+    },
+    source: { mode: 'official-auto', defaultCategory: 'Tolhuin', location: 'Tolhuin' },
+    sourceRef: { tier: 'A', publisherDomain: 'tolhuin.gob.ar' },
+    pubDate: new Date()
+  });
+  const nationalMinor = scoreCandidateNewsworthiness({
+    title: 'Una celebridad internacional compartio una foto viral',
+    facts: {
+      eventType: 'general',
+      countries: ['Estados Unidos'],
+      rawSummary: 'Contenido liviano sin impacto provincial directo.'
+    },
+    source: { mode: 'discovery-draft', defaultCategory: 'Mundo' },
+    sourceRef: { tier: 'B', publisherDomain: 'example.com' },
+    pubDate: new Date()
+  });
+
+  assert.equal(local.topic, 'agenda');
+  assert.equal(local.territory, 'Tolhuin');
+  assert(local.newsworthinessScore > nationalMinor.newsworthinessScore);
+});
+
+test('agenda editorial registra historias con tema territorio y score', () => {
+  const events = {
+    events: {
+      'agenda|tolhuin|cursos': {
+        eventKey: 'agenda|tolhuin|cursos',
+        firstDetectedAt: '2026-07-09T12:00:00.000Z',
+        lastSeenAt: '2026-07-09T13:00:00.000Z',
+        editorialLane: 'fast',
+        status: 'verified-fast-lane',
+        sources: [{ tier: 'A', publisherDomain: 'tolhuin.gob.ar', sourceMode: 'official-auto' }],
+        verifiedFacts: {
+          eventType: 'agenda',
+          places: ['Tolhuin'],
+          dates: ['10 de julio'],
+          rawSummary: 'Inscripciones abiertas para cursos de invierno.'
+        },
+        factsBySource: [{
+          facts: {
+            title: 'Tolhuin abre inscripciones para cursos de invierno',
+            eventType: 'agenda',
+            places: ['Tolhuin'],
+            rawSummary: 'Inscripciones abiertas para cursos de invierno.'
+          }
+        }]
+      }
+    }
+  };
+  const agenda = buildEditorialAgenda(events, { now: new Date('2026-07-09T14:00:00.000Z') });
+  assert.equal(agenda.summary.totalStories, 1);
+  assert.equal(agenda.stories[0].topic, 'agenda');
+  assert.equal(agenda.stories[0].territory, 'Tolhuin');
+  assert(agenda.stories[0].newsworthinessScore > 0);
 });
 
 console.log(`\n=== NEWS TESTS: ${passed} pasados, ${failed} fallados ===`);

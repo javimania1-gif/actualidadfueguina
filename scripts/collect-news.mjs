@@ -42,6 +42,11 @@ import {
   FACTUAL_VALIDATION_VERSION
 } from './lib/factual-utils.mjs';
 import { selectImageForNews, logImageSelection } from './lib/image-plan.mjs';
+import {
+  buildEditorialAgenda,
+  saveEditorialAgenda,
+  scoreCandidateNewsworthiness
+} from './lib/editorial-agenda.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
@@ -115,6 +120,9 @@ const metrics = {
   aiAttempts: 0,
   aiCalls: 0,
   imageSelections: [],
+  agendaStories: 0,
+  newsworthinessAverage: 0,
+  newsworthinessTop: [],
   byCategory: {}
 };
 
@@ -699,12 +707,19 @@ for (const [eventKey, group] of eventsByKey) {
   incrementMap(metrics.verifiedByLane, getLane(verification.editorialLane));
   const baseCandidate = buildProvincialWeatherCandidate(group, verification);
   baseCandidate.verification = verification;
+  baseCandidate.newsworthiness = scoreCandidateNewsworthiness(baseCandidate, {
+    verification,
+    byCategory: metrics.byCategory
+  });
   verifiedCandidates.push(baseCandidate);
 }
 
 console.log(`Eventos agrupados: ${metrics.eventsGrouped}; verificados: ${metrics.verified}; pendientes: ${metrics.pendingVerification}; conflictos: ${metrics.conflicting}`);
 
 function editorialScore(candidate) {
+  if (Number.isFinite(candidate.newsworthiness?.newsworthinessScore)) {
+    return candidate.newsworthiness.newsworthinessScore;
+  }
   return editorialScoreShared(candidate, metrics.byCategory);
 
   const now = Date.now();
@@ -735,6 +750,18 @@ function editorialScore(candidate) {
 
 // Ordenar usando scoring editorial
 verifiedCandidates.sort((a, b) => editorialScore(b) - editorialScore(a));
+if (verifiedCandidates.length > 0) {
+  const scores = verifiedCandidates.map((candidate) => editorialScore(candidate));
+  metrics.newsworthinessAverage = Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
+  metrics.newsworthinessTop = verifiedCandidates.slice(0, 10).map((candidate) => ({
+    title: candidate.title,
+    eventKey: candidate.eventKey,
+    score: editorialScore(candidate),
+    topic: candidate.newsworthiness?.topic || '',
+    territory: candidate.newsworthiness?.territory || '',
+    lane: getLane(candidate.verification?.editorialLane)
+  }));
+}
 
 // Calcular presupuesto IA por tipo de fuente
 const officialAiBudget = Math.ceil(MAX_AI_PER_RUN * OFFICIAL_AI_BUDGET_FRACTION);
@@ -771,7 +798,7 @@ metrics.dailyTarget = {
 };
 
 for (const candidate of verifiedCandidates) {
-  const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate, sourceRef, verification } = candidate;
+  const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate, sourceRef, verification, eventKey } = candidate;
 
   // Verificar límite por fuente
   const sourceCount = publishedPerSource[source.id] || 0;
@@ -922,6 +949,13 @@ for (const candidate of verifiedCandidates) {
         sourcePublishedAt: pubDate
       }), 'utf8');
 
+      if (events.events?.[eventKey]) {
+        events.events[eventKey].status = 'published';
+        events.events[eventKey].publishedAt = publicationDate.toISOString();
+        events.events[eventKey].publishedFile = path.relative(ROOT, target);
+        events.events[eventKey].newsworthiness = candidate.newsworthiness || null;
+      }
+
       // Actualizar índice en memoria para deduplicar dentro del mismo run
       existingUrls.add(article.finalUrl);
       existingTitles.add(ai.title.toLowerCase());
@@ -1016,9 +1050,17 @@ async function saveDraft(candidate, reason) {
   console.log(`  BORRADOR [${reason}]: ${title}`);
 }
 
+const agenda = buildEditorialAgenda(events, {
+  verifiedCandidates,
+  metrics
+});
+metrics.agendaStories = agenda.summary.totalStories;
+metrics.agendaTop = agenda.summary.topStories.slice(0, 5);
+
 if (PERSIST_OUTPUTS) {
   await saveSeen(seen);
   await saveEvents(events);
+  await saveEditorialAgenda(agenda);
   await saveRunMetrics(metrics, {
     maxAiPerRun: MAX_AI_PER_RUN,
     officialAiUsed,
@@ -1063,6 +1105,8 @@ console.log(`
   Errores reales de modelo: ${metrics.modelErrors}
   Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
+  Historias en agenda: ${metrics.agendaStories}
+  Newsworthiness promedio verificado: ${metrics.newsworthinessAverage}
   Descartados por cupo editorial de corrida: ${metrics.discardedPublicationLimit}
   Borradores generados: ${metrics.drafts}
   IA intentada/respondida: ${metrics.aiAttempts}/${metrics.aiCalls} de ${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
@@ -1077,6 +1121,8 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
   pendingByLane: metrics.pendingByLane,
   publishedByLane: metrics.publishedByLane,
   pendingMatchedFromHistory: metrics.pendingMatchedFromHistory,
+  agendaStories: metrics.agendaStories,
+  newsworthinessTop: metrics.newsworthinessTop,
   dailyTarget: metrics.dailyTarget
 }, null, 2));
 

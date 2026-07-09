@@ -81,7 +81,7 @@ jobs:
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
-          git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json data/events.json data/sources-health.json data/news-run-metrics.json
+          git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json data/events.json data/sources-health.json data/news-run-metrics.json data/editorial-agenda.json
 
           if git diff --cached --quiet; then
             echo "No hay novedades para guardar."

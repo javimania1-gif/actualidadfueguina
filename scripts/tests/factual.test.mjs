@@ -61,6 +61,75 @@ test('title-body mismatch no bloquea articulo con descripcion concordante', () =
   assert.equal(result.ok, true);
 });
 
+test('extractFacts separa agenda cultural sin convertir palabras genericas en personas', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Musica, danza y sabores locales: hoy hay Pena de la Independencia en Tolhuin',
+      description: 'La actividad se realizara el 9 de julio desde las 20 horas en el Polideportivo Ezequiel Rivero.',
+      text: 'La agenda cultural por el Dia de la Independencia Argentina incluye musica, danza y sabores locales en Tolhuin. '.repeat(8),
+      date: '2026-07-09T12:00:00.000Z'
+    },
+    source: { mode: 'discovery-draft', defaultCategory: 'Tolhuin', location: 'Tolhuin' }
+  });
+
+  assert.equal(facts.eventType, 'agenda');
+  assert.deepEqual(facts.teams, []);
+  assert.deepEqual(facts.sportsTeams, []);
+  assert(facts.countries.includes('Argentina'));
+  assert(facts.places.includes('Tolhuin'));
+  assert(!facts.people.some((value) => /musica|pena|independencia|invierno|nacional/i.test(value)));
+  assert(facts.dates.includes('9 de julio'));
+  assert(!facts.dates.some((value) => /^julio$/i.test(value)));
+  assert(facts.times.some((value) => /20/.test(value)));
+  assert(!facts.numbers.some((value) => /^(9|20)$/i.test(value)));
+});
+
+test('extractFacts usa paises como equipos solo en resultado deportivo', () => {
+  const cultural = extractFacts({
+    article: {
+      title: 'Argentina sera parte de una feria cultural en Tolhuin',
+      text: 'Argentina sera mencionada en una actividad cultural abierta a la comunidad. '.repeat(10),
+      date: '2026-07-09'
+    },
+    source: { defaultCategory: 'Tolhuin' }
+  });
+  assert(cultural.countries.includes('Argentina'));
+  assert.deepEqual(cultural.sportsTeams, []);
+
+  const sports = extractFacts({
+    article: {
+      title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+      text: 'La Seleccion Argentina derroto a Egipto por 3-2 en julio de 2026. '.repeat(10),
+      date: '2026-07-09'
+    },
+    source: { defaultCategory: 'Deportes' }
+  });
+  assert.equal(sports.eventType, 'sports-result');
+  assert(sports.sportsTeams.includes('Argentina'));
+  assert(sports.sportsTeams.includes('Egipto'));
+  assert.deepEqual(sports.teams, sports.sportsTeams);
+});
+
+test('extractFacts separa dinero porcentajes horarios victimas leyes y numeros semanticos', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Productores reclaman 600 millones tras un incendio rural',
+      description: 'El pedido menciona 80% de danos, sin heridos y una audiencia a las 20:30.',
+      text: 'El reclamo por 600 millones de pesos se vincula con 200 hectareas afectadas. No hubo heridos. La resolucion 123/26 fue citada el 10 de julio. '.repeat(6),
+      date: '2026-07-10'
+    },
+    source: { defaultCategory: 'Provincia' }
+  });
+
+  assert(facts.money.some((value) => /600 millones/i.test(value)));
+  assert(facts.percentages.includes('80%'));
+  assert(facts.casualties.some((value) => /sin heridos|no hubo heridos/i.test(value)));
+  assert(facts.times.includes('20:30'));
+  assert(facts.laws.some((value) => /resolucion 123\/26/i.test(value)));
+  assert(facts.numbers.some((value) => /200 hectareas/i.test(value)));
+  assert(facts.dates.includes('10 de julio'));
+});
+
 test('dos agregadores al mismo publisher cuentan como una fuente editorial', () => {
   const refs = [
     { tier: 'B', publisherDomain: 'clarin.com', url: 'https://www.clarin.com/mundo/nota.html' },

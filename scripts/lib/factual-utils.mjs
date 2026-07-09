@@ -28,18 +28,51 @@ const LOW_RISK_PATTERNS = [
   /\b(fiesta|festival|muestra|propuesta cultural|convocatoria)\b/i
 ];
 
-const KNOWN_TEAMS_AND_COUNTRIES = [
+const KNOWN_COUNTRIES = [
   'Argentina', 'Egipto', 'Ecuador', 'Brasil', 'Chile', 'Uruguay', 'Paraguay',
   'Bolivia', 'Peru', 'Colombia', 'Venezuela', 'Mexico', 'Estados Unidos',
   'Reino Unido', 'Inglaterra', 'Francia', 'Alemania', 'Italia', 'Espana'
 ];
 
-const KNOWN_PLACES = [
-  'Rio Grande', 'Río Grande', 'Ushuaia', 'Tolhuin', 'Tierra del Fuego',
-  'Islas Malvinas', 'Malvinas', 'Antartida', 'Antártida', 'Argentina'
+const KNOWN_SPORTS_TEAMS = [
+  'Boca Juniors', 'River Plate', 'Rosario Central', 'Independiente',
+  'Racing', 'San Lorenzo'
 ];
 
-export const FACTUAL_VALIDATION_VERSION = 2;
+const KNOWN_PLACES = [
+  'Rio Grande', 'Río Grande', 'Ushuaia', 'Tolhuin', 'Tierra del Fuego',
+  'Tierra del Fuego AIAS', 'Islas Malvinas', 'Malvinas', 'Antartida',
+  'Antártida', 'Cerro Castor', 'Pasaje Drake', 'Casa de Gobierno',
+  'Polideportivo Ezequiel Rivero', 'Buenos Aires', 'Atlantico Sur',
+  'Atlántico Sur', 'Hito XIII', 'Zaporiyia', 'Moscu', 'Moscú',
+  'Paris', 'París', 'Londres', 'Kansas', 'La Guaira', 'Jalisco'
+];
+
+const KNOWN_PEOPLE = [
+  'Melella', 'Gustavo Melella', 'Martin Perez', 'Martín Perez',
+  'Walter Vuoto', 'Daniel Harrington', 'Javier Milei', 'Milei',
+  'Villarruel', 'Donald Trump', 'Giorgia Meloni', 'Delcy Rodriguez',
+  'Delcy Rodríguez', 'Carlos III', 'Lionel Messi'
+];
+
+const GENERIC_ENTITY_WORDS = new Set([
+  'actualidad', 'actualidad tdf', 'ai', 'ambos', 'alerta', 'ano', 'anos',
+  'actividad', 'actividades', 'banco', 'copa', 'cultura', 'de', 'del',
+  'dia', 'durante', 'el', 'en', 'es', 'este', 'festival', 'fiesta',
+  'fuego', 'futbol', 'gobierno', 'independencia', 'invierno', 'julio',
+  'la', 'las', 'los', 'mayo', 'monitoreo', 'mundial', 'musica',
+  'nacional', 'no', 'otro', 'pena', 'provincia', 'rio', 'se', 'sismo',
+  'su', 'tierra', 'total', 'tras', 'un', 'una', 'vivo'
+]);
+
+const ORGANIZATION_HINTS = [
+  'gobierno', 'municipio', 'municipalidad', 'concejo', 'legislatura',
+  'justicia', 'ministerio', 'secretaria', 'universidad', 'utn', 'uom',
+  'onu', 'otan', 'anses', 'smn', 'banco', 'camara', 'sindicato',
+  'club', 'federacion', 'policia', 'fiscalia', 'conicet'
+];
+
+export const FACTUAL_VALIDATION_VERSION = 3;
 
 export const EDITORIAL_LANES = Object.freeze({
   FAST: 'fast',
@@ -49,11 +82,17 @@ export const EDITORIAL_LANES = Object.freeze({
 
 const CRITICAL_FIELDS = [
   'teams',
+  'sportsTeams',
   'people',
   'organizations',
   'places',
+  'countries',
   'numbers',
+  'money',
+  'percentages',
   'dates',
+  'times',
+  'casualties',
   'scores',
   'laws'
 ];
@@ -130,6 +169,16 @@ function pickKnown(text, dictionary) {
   return dictionary.filter((value) => normalized.includes(normalizeText(value)));
 }
 
+function normalizedIncludesAny(value = '', dictionary = []) {
+  const normalized = normalizeText(value);
+  return dictionary.some((item) => normalized === normalizeText(item));
+}
+
+function hasAnyToken(value = '', dictionary = []) {
+  const normalized = normalizeText(value);
+  return dictionary.some((item) => new RegExp(`\\b${normalizeText(item)}\\b`).test(normalized));
+}
+
 function extractCapitalizedPhrases(text) {
   const normalizedText = cleanText(text).replace(/\s+/g, ' ');
   const matches = normalizedText.match(/\b[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+){0,3}/g) || [];
@@ -138,18 +187,130 @@ function extractCapitalizedPhrases(text) {
     .slice(0, 12);
 }
 
-function extractNumbers(text) {
-  const values = cleanText(text).match(/\b\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:%|por ciento|millones?|pesos?|d[óo]lares?|usuarios?|v[íi]ctimas?|heridos?|fallecidos?|muertos?)?\b/gi) || [];
-  return unique(values).slice(0, 12);
-}
-
 function extractScores(text) {
   const values = cleanText(text).match(/\b\d{1,2}\s?[-–]\s?\d{1,2}\b/g) || [];
   return unique(values);
 }
 
+function hasOrganizationSignal(value = '') {
+  const normalized = normalizeText(value);
+  return ORGANIZATION_HINTS.some((hint) => new RegExp(`\\b${hint}\\b`).test(normalized));
+}
+
+function isGenericEntityPhrase(value = '') {
+  const normalized = normalizeText(value);
+  if (!normalized) return true;
+  if (normalized.includes('actualidad tdf')) return true;
+  const words = normalized.split(/\s+/).filter(Boolean);
+  if (words.length === 0) return true;
+  return words.every((word) => GENERIC_ENTITY_WORDS.has(word));
+}
+
+function isKnownPlace(value = '') {
+  return normalizedIncludesAny(value, KNOWN_PLACES);
+}
+
+function isKnownCountry(value = '') {
+  return normalizedIncludesAny(value, KNOWN_COUNTRIES);
+}
+
+function extractOrganizations(text, capitalized = []) {
+  const normalizedText = cleanText(text).replace(/\s+/g, ' ');
+  const explicit = normalizedText.match(/\b(?:Gobierno|Municipio|Municipalidad|Concejo|Legislatura|Justicia|Ministerio|Secretar(?:ia|ía)|Universidad|UTN|UOM|ONU|OTAN|ANSES|SMN|Banco|C[aá]mara|Sindicato|Club|Federaci[oó]n|Polic[ií]a|Fiscal[ií]a|CONICET)(?:\s+(?:de|del|la|las|los|y|[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñ]+)){0,5}/g) || [];
+  const fromPhrases = capitalized.filter((value) => hasOrganizationSignal(value));
+  return unique([...explicit, ...fromPhrases]).slice(0, 10);
+}
+
+function looksLikePersonName(value = '') {
+  if (!normalizeText(value)) return false;
+  if (normalizedIncludesAny(value, KNOWN_PEOPLE)) return true;
+  if (isGenericEntityPhrase(value) || isKnownCountry(value) || isKnownPlace(value)) return false;
+  if (hasOrganizationSignal(value)) return false;
+  if (hasAnyToken(value, ['cerro', 'polideportivo', 'pasaje', 'casa', 'hito', 'atlantico', 'banco', 'copa', 'mundial'])) return false;
+  const words = cleanText(value).split(/\s+/).filter(Boolean);
+  if (words.length < 2 || words.length > 4) return false;
+  const normalizedWords = words.map(normalizeText);
+  if (normalizedWords.some((word) => GENERIC_ENTITY_WORDS.has(word))) return false;
+  return true;
+}
+
+function extractPeople(capitalized = []) {
+  return unique(capitalized.filter(looksLikePersonName)).slice(0, 8);
+}
+
+function extractSportsTeams(text, eventType) {
+  if (eventType !== 'sports-result') return [];
+  return unique([
+    ...pickKnown(text, KNOWN_SPORTS_TEAMS),
+    ...pickKnown(text, KNOWN_COUNTRIES)
+  ]).slice(0, 8);
+}
+
+function extractMoney(text) {
+  const values = cleanText(text).match(/\b(?:[$]\s*)?\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:millones?|millon|pesos?|d[óo]lares?|usd|ars)(?:\s+de\s+(?:pesos?|d[óo]lares?))?\b/gi) || [];
+  return unique(values).slice(0, 10);
+}
+
+function extractPercentages(text) {
+  const values = cleanText(text).match(/\b\d{1,3}(?:[.,]\d+)?\s?%|\b\d{1,3}(?:[.,]\d+)?\s?por ciento\b/gi) || [];
+  return unique(values).slice(0, 10);
+}
+
+function extractCasualties(text) {
+  const values = cleanText(text).match(/\b(?:sin|no hubo)\s+(?:v[íi]ctimas?|heridos?|fallecidos?|muertos?)\b|\b\d{1,4}(?:[.,]\d{3})?\s?(?:v[íi]ctimas?|heridos?|fallecidos?|muertos?)\b/gi) || [];
+  return unique(values).slice(0, 10);
+}
+
+function extractTimes(text) {
+  const values = cleanText(text).match(/\b(?:[01]?\d|2[0-3])[:.]\d{2}\b|\b\d{1,2}\s?(?:h|hs|horas)\b/gi) || [];
+  return unique(values).slice(0, 10);
+}
+
+function extractLaws(text) {
+  const values = cleanText(text).match(/\b(?:ley|decreto|resoluci[óo]n|ordenanza)\s+(?:n[°º.]?\s*)?\d{1,6}(?:[\/-]\d{1,4})?\b|\breforma constitucional\b/gi) || [];
+  return unique(values).slice(0, 10);
+}
+
+function extractNumbers(text, { money = [], percentages = [], casualties = [], times = [], scores = [] } = {}) {
+  const values = cleanText(text).match(/\b\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:personas?|familias?|vecinos?|usuarios?|estudiantes?|trabajadores?|viviendas?|hect[aá]reas?|kil[oó]metros?|km|metros?|vuelos?|dias?|días?|meses?|a[ñn]os?)\b/gi) || [];
+  const excluded = new Set([...money, ...percentages, ...casualties, ...times, ...scores].map(normalizeText));
+  return unique(values).filter((value) => !excluded.has(normalizeText(value))).slice(0, 12);
+}
+
+function extractCountries(text) {
+  return unique(pickKnown(text, KNOWN_COUNTRIES)).slice(0, 12);
+}
+
+function extractPlaces(text, source = {}) {
+  const values = [
+    ...pickKnown(text, KNOWN_PLACES),
+    source.location || ''
+  ].filter((value) => value && !isKnownCountry(value));
+  return unique(values).slice(0, 10);
+}
+
+function extractSemanticFacts(text, eventType, source = {}) {
+  const scores = extractScores(text);
+  const money = extractMoney(text);
+  const percentages = extractPercentages(text);
+  const casualties = extractCasualties(text);
+  const times = extractTimes(text);
+  return {
+    sportsTeams: extractSportsTeams(text, eventType),
+    countries: extractCountries(text),
+    places: extractPlaces(text, source),
+    money,
+    percentages,
+    times,
+    casualties,
+    scores,
+    laws: extractLaws(text),
+    numbers: extractNumbers(text, { money, percentages, casualties, times, scores })
+  };
+}
+
 function extractDates(text, articleDate = '') {
-  const values = cleanText(text).match(/\b(?:\d{1,2}\s+de\s+)?(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)(?:\s+de\s+\d{4})?|\b\d{1,2}\/\d{1,2}\/\d{2,4}\b/gi) || [];
+  const values = cleanText(text).match(/\b\d{1,2}\s+de\s+(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)(?:\s+de\s+\d{4})?|\b(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+de\s+\d{4}\b|\b\d{1,2}\/\d{1,2}\/\d{2,4}\b/gi) || [];
   if (articleDate) values.push(String(articleDate).slice(0, 10));
   return unique(values).slice(0, 8);
 }
@@ -247,8 +408,12 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   const text = `${title}\n${article.description || item.description || ''}\n${article.text || ''}`;
   const risk = classifyRisk({ title, text, category: category || source.defaultCategory, source });
   const capitalized = extractCapitalizedPhrases(`${title}\n${article.description || ''}`);
-  const teams = unique(pickKnown(text, KNOWN_TEAMS_AND_COUNTRIES));
   const inferredEventType = inferEventType(text);
+  const eventType = risk.level === 'high' || ['weather-forecast', 'agenda', 'service'].includes(inferredEventType)
+    ? inferredEventType
+    : 'general';
+  const semanticFacts = extractSemanticFacts(text, eventType, source);
+  const teams = semanticFacts.sportsTeams;
   const dates = extractDates(text, article.date || item.pubDate);
   const weatherForecastDateKey = inferredEventType === 'weather-forecast'
     ? getWeatherForecastDateKey(text, dates)
@@ -259,14 +424,21 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
     riskLevel: risk.level,
     riskReasons: risk.reasons,
     editorialLane: risk.editorialLane || EDITORIAL_LANES.STANDARD,
-    eventType: risk.level === 'high' || inferredEventType === 'weather-forecast' ? inferredEventType : 'general',
+    eventType,
     teams,
-    people: capitalized.filter((value) => !teams.some((team) => normalizeText(team) === normalizeText(value))).slice(0, 8),
-    organizations: unique(capitalized.filter((value) => /(Municipio|Municipalidad|Gobierno|Discord|ONU|UTN|Justicia|Legislatura)/i.test(value))),
-    places: unique([...pickKnown(text, KNOWN_PLACES), source.location || '']).slice(0, 8),
-    numbers: extractNumbers(text),
-    scores: extractScores(text),
+    sportsTeams: semanticFacts.sportsTeams,
+    people: extractPeople(capitalized),
+    organizations: extractOrganizations(text, capitalized),
+    places: semanticFacts.places,
+    countries: semanticFacts.countries,
+    numbers: semanticFacts.numbers,
+    money: semanticFacts.money,
+    percentages: semanticFacts.percentages,
     dates,
+    times: semanticFacts.times,
+    casualties: semanticFacts.casualties,
+    scores: semanticFacts.scores,
+    laws: semanticFacts.laws,
     weatherForecastDateKey,
     action: inferAction(title || text),
     rawSummary: cleanText(article.description || item.description || '').slice(0, 500)
@@ -280,6 +452,8 @@ function inferEventType(text) {
   if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(value)) return 'crime';
   if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(value)) return 'weather';
   if (isOrdinaryWeatherForecastText(value)) return 'weather-forecast';
+  if (/\b(agenda|inscripcion|inscripciones|curso|cursos|taller|capacitacion|actividad|actividades|feria|muestra|festival|fiesta|pena|convocatoria|agenda cultural)\b/.test(value)) return 'agenda';
+  if (/\b(servicio|servicios|tramite|tramites|beca|becas|empleo|corte programado|operativo|rutas?|vuelos?|transporte|escuelas?|salud|tarifas?)\b/.test(value)) return 'service';
   if (/\b(ciencia|cientifico|investigacion|hallazgo|conicet)\b/.test(value)) return 'scientific';
   if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(value)) return 'casualty';
   if (/\b(legislatura|senado|diputados|sesion|proyecto de ley)\b/.test(value)) return 'legislative';
@@ -305,18 +479,20 @@ export function generateEventKey({ facts = {}, title = '', sourceRef = {} }) {
     return ['weather-forecast', date || 'sin-fecha', 'tierra-del-fuego'].join('|').slice(0, 180);
   }
 
-  if (facts.eventType === 'sports-result' && (facts.teams || []).length > 0) {
-    const primary = (facts.teams || []).map(normalizeText).sort()[0];
+  const sportsTeams = facts.sportsTeams || facts.teams || [];
+  if (facts.eventType === 'sports-result' && sportsTeams.length > 0) {
+    const primary = sportsTeams.map(normalizeText).sort()[0];
     const date = (facts.dates || []).map(normalizeText).find(Boolean) || '';
     return ['sports-result', primary, date].filter(Boolean).join('|').slice(0, 180);
   }
 
   const important = [
     facts.eventType,
-    ...((facts.teams || []).length ? facts.teams : []),
+    ...((facts.sportsTeams || []).length ? facts.sportsTeams : []),
     ...((facts.organizations || []).slice(0, 3)),
     ...((facts.people || []).slice(0, 3)),
     ...((facts.places || []).slice(0, 2)),
+    ...((facts.countries || []).slice(0, 2)),
     facts.action,
     (facts.dates || [])[0]
   ].filter(Boolean);
@@ -349,6 +525,7 @@ function isCriticalDate(value) {
 function comparableFactValues(field, values = []) {
   if (field === 'numbers') return unique(values).filter(isCriticalNumber);
   if (field === 'dates') return unique(values).filter(isCriticalDate);
+  if (['sportsTeams', 'teams', 'scores', 'money', 'percentages', 'casualties', 'laws'].includes(field)) return unique(values);
   return unique(values);
 }
 
@@ -360,7 +537,7 @@ function diffValues(field, a = [], b = []) {
   if (setA.size === 0 || setB.size === 0) return [];
   if (setsEqual(setA, setB)) return [];
 
-  if (['teams', 'scores', 'numbers', 'dates', 'laws'].includes(field)) {
+  if (['teams', 'sportsTeams', 'scores', 'numbers', 'money', 'percentages', 'dates', 'casualties', 'laws'].includes(field)) {
     return [...leftValues, ...rightValues].filter(Boolean);
   }
 
@@ -375,8 +552,8 @@ export function findFactConflicts(factSets = []) {
     for (let j = i + 1; j < factSets.length; j++) {
       const left = factSets[i];
       const right = factSets[j];
-      for (const field of ['teams', 'scores', 'numbers', 'dates', 'laws']) {
-        if (field === 'teams' && left.eventType !== 'sports-result' && right.eventType !== 'sports-result') continue;
+      for (const field of ['sportsTeams', 'teams', 'scores', 'money', 'percentages', 'casualties', 'numbers', 'dates', 'laws']) {
+        if (['sportsTeams', 'teams'].includes(field) && left.eventType !== 'sports-result' && right.eventType !== 'sports-result') continue;
         const values = diffValues(field, left[field], right[field]);
         if (values.length > 0) {
           conflicts.push({
@@ -570,13 +747,14 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
   const verifiedFacts = verification.verifiedFacts || verification;
   const eventType = verification.eventType || verifiedFacts.eventType || 'general';
   const mismatches = [];
+  const sportsFacts = unique([...(verifiedFacts.sportsTeams || []), ...(verifiedFacts.teams || [])]);
 
   if (eventType === 'sports-result') {
-    for (const value of verifiedFacts.teams || []) {
+    for (const value of sportsFacts) {
       const normalized = normalizeText(value);
       if (!normalized || normalized.length < 2) continue;
       if (!text.includes(normalized)) {
-        mismatches.push({ field: 'teams', value, reason: 'missing-critical-sports-fact' });
+        mismatches.push({ field: 'sportsTeams', value, reason: 'missing-critical-sports-fact' });
       }
     }
   }
@@ -588,17 +766,13 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
     }
   }
 
-  const allowedTeams = normalizedSet([
-    ...(verifiedFacts.teams || []),
-    ...(verifiedFacts.places || []),
-    ...(verifiedFacts.people || [])
-  ]);
+  const allowedTeams = normalizedSet(sportsFacts);
 
-  for (const team of KNOWN_TEAMS_AND_COUNTRIES) {
+  for (const team of unique([...KNOWN_SPORTS_TEAMS, ...KNOWN_COUNTRIES])) {
     const normalized = normalizeText(team);
-    const hasSportsFacts = eventType === 'sports-result' || (verifiedFacts.teams || []).length > 0;
+    const hasSportsFacts = eventType === 'sports-result' || sportsFacts.length > 0;
     if (hasSportsFacts && text.includes(normalized) && !allowedTeams.has(normalized)) {
-      mismatches.push({ field: 'teams', value: team, reason: 'unsupported-critical-term' });
+      mismatches.push({ field: 'sportsTeams', value: team, reason: 'unsupported-critical-term' });
     }
   }
 
@@ -610,12 +784,47 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
     }
   }
 
+  const outputScores = extractScores(text);
+  const money = extractMoney(text);
+  const percentages = extractPercentages(text);
+  const casualties = extractCasualties(text);
+  const times = extractTimes(text);
+  const outputNumbers = extractNumbers(text, { money, percentages, casualties, times, scores: outputScores }).filter(isCriticalNumber);
   const allowedNumbers = normalizedSet((verifiedFacts.numbers || []).filter(isCriticalNumber));
-  const outputNumbers = extractNumbers(text).filter(isCriticalNumber);
   for (const value of outputNumbers) {
     const normalized = normalizeText(value);
     if (normalized && !allowedNumbers.has(normalized)) {
       mismatches.push({ field: 'numbers', value, reason: 'unsupported-critical-number' });
+    }
+  }
+
+  const semanticChecks = [
+    {
+      field: 'money',
+      allowed: unique([...(verifiedFacts.money || []), ...(verifiedFacts.numbers || []).filter(isCriticalNumber)]),
+      output: money,
+      reason: 'unsupported-money'
+    },
+    {
+      field: 'percentages',
+      allowed: unique([...(verifiedFacts.percentages || []), ...(verifiedFacts.numbers || []).filter(isCriticalNumber)]),
+      output: percentages,
+      reason: 'unsupported-percentage'
+    },
+    {
+      field: 'casualties',
+      allowed: unique([...(verifiedFacts.casualties || []), ...(verifiedFacts.numbers || []).filter(isCriticalNumber)]),
+      output: casualties,
+      reason: 'unsupported-casualty'
+    }
+  ];
+  for (const check of semanticChecks) {
+    const allowed = normalizedSet(check.allowed || []);
+    for (const value of check.output || []) {
+      const normalized = normalizeText(value);
+      if (normalized && !allowed.has(normalized)) {
+        mismatches.push({ field: check.field, value, reason: check.reason });
+      }
     }
   }
 
