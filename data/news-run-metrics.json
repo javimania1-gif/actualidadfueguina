@@ -1,89 +1,145 @@
 {
-  "generatedAt": "2026-07-09T16:05:18.445Z",
+  "generatedAt": "2026-07-09T16:51:55.020Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "29031924044",
-    "headSha": "db8b073dcf71aea04052259855fd5ac8cb86096f"
+    "runId": "29034820090",
+    "headSha": "53e9ad99d204d9bf25da25280f1f8e2a53fa44b7"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 50,
-    "discardedDuplicate": 2,
-    "discardedQuality": 32,
+    "candidatesDetected": 33,
+    "discardedDuplicate": 1,
+    "discardedQuality": 23,
     "discardedQualityByReason": {
-      "evergreen-or-stale-outside-news-window": 12,
-      "stale-hard-news": 4,
-      "stale-weather-forecast": 2,
-      "stale-dated-discovery": 10,
       "weak-title,short-body": 3,
-      "listing-url,weak-title": 1
+      "listing-url,weak-title": 1,
+      "evergreen-or-stale-outside-news-window": 4,
+      "stale-hard-news": 2,
+      "stale-weather-forecast": 1,
+      "stale-dated-discovery": 12
     },
     "discardedGenericTitle": 2,
-    "discardedEvergreen": 22,
-    "eventsGrouped": 12,
-    "verified": 3,
-    "pendingVerification": 9,
+    "discardedEvergreen": 16,
+    "eventsGrouped": 7,
+    "verified": 2,
+    "pendingVerification": 5,
     "pendingMatchedFromHistory": 0,
     "conflicting": 0,
-    "published": 2,
+    "published": 1,
     "publishedByLane": {
-      "fast": 2
+      "fast": 1
     },
     "verifiedByLane": {
-      "fast": 3
+      "fast": 1,
+      "standard": 1
     },
     "pendingByLane": {
-      "standard": 7,
-      "strict": 2
+      "strict": 3,
+      "standard": 2
     },
-    "drafts": 1,
-    "modelErrors": 1,
+    "drafts": 0,
+    "modelErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 0,
+    "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 3,
+    "aiAttempts": 2,
     "aiCalls": 2,
     "imageSelections": [
       {
-        "title": "Peña de la Independencia en Tolhuin: Música y Cultura Local",
+        "title": "Sismo de 5.9 en el Pasaje Drake afectó a Ushuaia sin causar daños",
         "strategy": "article-og",
-        "query": "Música, danza y sabores locales: hoy hay Peña de la Independencia en Tolhuin - Actualidad TDF",
+        "query": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
         "score": 82,
-        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/9-de-julio-tolhuin.jpeg"
+        "source": "https://cdn.eldestapeweb.com/eldestape/072026/1783434233513.jpg?&cw=1200&ch=675"
+      }
+    ],
+    "agendaStories": 109,
+    "newsworthinessAverage": 81,
+    "newsworthinessTop": [
+      {
+        "title": "Pronóstico del tiempo en Tierra del Fuego para 9 de julio de 2026",
+        "eventKey": "weather-forecast|2026-07-09|tierra-del-fuego",
+        "score": 96,
+        "topic": "servicios",
+        "territory": "Provincia",
+        "lane": "standard"
       },
       {
-        "title": "Fiesta Nacional del Invierno en Cerro Castor: Celebración y Actividades para Todos",
-        "strategy": "article-og",
-        "query": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
-        "score": 82,
-        "source": "https://elrompehielos.com.ar/wp-content/uploads/2026/07/16725.jpg"
+        "title": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
+        "eventKey": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
+        "score": 66,
+        "topic": "sociedad",
+        "territory": "Rio Grande",
+        "lane": "fast"
       }
     ],
     "byCategory": {
-      "Provincia": 2
+      "Ushuaia": 1
     },
-    "publishedLast24hBeforeRun": 7,
+    "publishedLast24hBeforeRun": 9,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 7,
-      "remainingToMin": 5,
-      "slotsRemaining": 9,
+      "publishedLast24hBeforeRun": 9,
+      "remainingToMin": 3,
+      "slotsRemaining": 7,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
-    }
+    },
+    "agendaTop": [
+      {
+        "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
+        "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
+        "topic": "servicios",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
+      {
+        "storyId": "weather|argentina|chile|reino unido|polemica|malvinas la|hms medway|rio grande|islas malvinas|informa|07 08 900",
+        "headlineSeed": "Polémica por el paso de un buque de guerra británico por aguas territoriales argentinas tras zarpar de Malvinas",
+        "topic": "servicios",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
+      {
+        "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
+        "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
+        "topic": "servicios",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
+      {
+        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
+        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
+        "topic": "turismo",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "verified"
+      },
+      {
+        "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
+        "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
+        "topic": "salud",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "verified"
+      }
+    ]
   },
   "budget": {
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 3,
+    "discoveryAiUsed": 2,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -92,15 +148,14 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 48,
-    "totalCandidatesBeforeLimit": 50
+    "publishedLast24hBeforeRun": 9,
+    "candidatesMaterialized": 33,
+    "totalCandidatesBeforeLimit": 33
   },
   "reasonNoMorePublished": [
-    "9 evento(s) quedaron pendientes de segunda fuente",
-    "2 candidato(s) descartados por duplicado/similitud",
-    "32 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 12, stale-hard-news: 4, stale-weather-forecast: 2, stale-dated-discovery: 10, weak-title,short-body: 3, listing-url,weak-title: 1)",
-    "1 error(es) reales de modelo",
-    "2 candidato(s) no se materializaron por limite anti-timeout"
+    "5 evento(s) quedaron pendientes de segunda fuente",
+    "1 candidato(s) descartados por duplicado/similitud",
+    "23 candidato(s) descartados por causas especificas (weak-title,short-body: 3, listing-url,weak-title: 1, evergreen-or-stale-outside-news-window: 4, stale-hard-news: 2, stale-weather-forecast: 1, stale-dated-discovery: 12)",
+    "1 candidato(s) descartados por importancia editorial"
   ]
 }
