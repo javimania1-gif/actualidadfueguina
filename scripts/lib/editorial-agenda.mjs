@@ -327,15 +327,21 @@ export function validateAgendaStoryCoherence(story = {}) {
   ].join(' '));
 
   if (eventType === 'high-risk') reasons.push('eventtype-risk-confusion');
+  const weatherKey = story.storyId?.startsWith('weather|') || story.storyId?.startsWith('weather-forecast|');
+  const weatherHeadline = /\b(clima|pronostico|meteorologico|temperatura|viento|nieve|lluvia|alerta|sismo|temblor|epicentro|magnitud|temporal)\b/.test(text);
+  const sovereigntyHeadline = /\b(buque|fragata|hms|britanic|reino unido|malvinas|soberania|aguas territoriales)\b/.test(text);
+
   if (story.storyId?.startsWith('weather-forecast|') && eventType !== 'weather-forecast') {
     reasons.push('story-headline-mismatch');
   }
-  if (story.storyId?.startsWith('weather-forecast|') && !/\b(clima|pronostico|meteorologico|temperatura|viento|nieve|lluvia|alerta)\b/.test(text)) {
+  if (weatherKey && (!weatherHeadline || sovereigntyHeadline)) {
     reasons.push('story-headline-mismatch');
   }
   if (topic === 'servicios' && ['crime', 'election', 'legal-policy', 'international-conflict', 'territorial-sovereignty', 'defense', 'casualty'].includes(eventType)) {
     reasons.push('topic-event-mismatch');
   }
+  if (topic === 'servicios' && sovereigntyHeadline) reasons.push('topic-event-mismatch');
+  if (eventType === 'weather' && sovereigntyHeadline) reasons.push('topic-event-mismatch');
   if (eventType === 'crime' && topic !== 'policiales') reasons.push('topic-event-mismatch');
   if (eventType === 'international-conflict' && territory !== 'Mundo') reasons.push('territory-conflict');
   if (territory === 'Provincia' && /\b(cdmx|mexico|colombia|cuba|iran|teheran|moscu|ucrania|rusia|fmi|milei|villa allende|chaco|cordoba)\b/.test(text)) {

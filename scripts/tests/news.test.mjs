@@ -404,5 +404,36 @@ test('agenda invalida historias incoherentes y las excluye del top', () => {
   assert.equal(agenda.summary.topStories.length, 0);
 });
 
+test('agenda invalida claves weather heredadas para buques y Malvinas', () => {
+  const agenda = buildEditorialAgenda({
+    events: {
+      'weather|argentina|chile|reino unido|polemica|malvinas': {
+        eventKey: 'weather|argentina|chile|reino unido|polemica|malvinas',
+        status: 'pending-verification',
+        lastSeenAt: '2026-07-09T22:00:00.000Z',
+        verifiedFacts: {
+          eventType: 'weather',
+          places: ['Rio Grande', 'Islas Malvinas'],
+          countries: ['Reino Unido'],
+          rawSummary: 'Polemica por el paso de un buque de guerra britanico por aguas territoriales argentinas tras zarpar de Malvinas.'
+        },
+        factsBySource: [{
+          facts: {
+            title: 'Polemica por el paso de un buque de guerra britanico por aguas territoriales argentinas tras zarpar de Malvinas',
+            eventType: 'weather',
+            places: ['Rio Grande', 'Islas Malvinas'],
+            countries: ['Reino Unido']
+          }
+        }]
+      }
+    }
+  }, { now: new Date('2026-07-09T23:00:00.000Z') });
+
+  assert.equal(agenda.summary.invalidStories, 1);
+  assert.equal(agenda.summary.topStories.length, 0);
+  assert(agenda.stories[0].validationReasons.includes('story-headline-mismatch'));
+  assert(agenda.stories[0].validationReasons.includes('topic-event-mismatch'));
+});
+
 console.log(`\n=== NEWS TESTS: ${passed} pasados, ${failed} fallados ===`);
 if (failed > 0) process.exit(1);
