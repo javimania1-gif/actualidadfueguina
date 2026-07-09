@@ -1,40 +1,66 @@
 {
-  "generatedAt": "2026-07-09T18:54:16.329Z",
+  "generatedAt": "2026-07-09T22:47:39.997Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29042254330",
-    "headSha": "7753d9399d6cf2847c21cc5260bc95d51d63e94b"
+    "eventName": "push",
+    "runId": "29055427001",
+    "headSha": "03cb16ecf99ec5afc128befaf6fb2c875b040a9e"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 33,
-    "discardedDuplicate": 2,
-    "discardedQuality": 24,
+    "candidatesDetected": 41,
+    "discardedDuplicate": 5,
+    "discardedQuality": 19,
     "discardedQualityByReason": {
-      "weak-title,short-body": 3,
-      "stale-hard-news": 4,
-      "stale-dated-discovery": 13,
+      "stale-dated-discovery": 11,
+      "stale-hard-news": 3,
       "evergreen-or-stale-outside-news-window": 2,
-      "stale-weather-forecast": 1,
+      "weak-title,short-body": 2,
       "listing-url,weak-title": 1
     },
-    "discardedGenericTitle": 2,
-    "discardedEvergreen": 15,
-    "eventsGrouped": 5,
+    "discardedBySourceAndReason": {
+      "bing-antartida": {
+        "stale-dated-discovery": 3
+      },
+      "bing-ushuaia": {
+        "stale-dated-discovery": 1
+      },
+      "bing-tdf": {
+        "stale-hard-news": 3,
+        "stale-dated-discovery": 1
+      },
+      "bing-rio-grande": {
+        "evergreen-or-stale-outside-news-window": 2,
+        "weak-title,short-body": 1
+      },
+      "bing-malvinas": {
+        "stale-dated-discovery": 3
+      },
+      "bing-tolhuin": {
+        "stale-dated-discovery": 2
+      },
+      "mundo-bing": {
+        "weak-title,short-body": 1,
+        "listing-url,weak-title": 1,
+        "stale-dated-discovery": 1
+      }
+    },
+    "discardedGenericTitle": 3,
+    "discardedEvergreen": 13,
+    "eventsGrouped": 14,
     "verified": 0,
-    "pendingVerification": 5,
+    "pendingVerification": 13,
     "pendingMatchedFromHistory": 0,
-    "conflicting": 0,
+    "conflicting": 1,
     "published": 0,
     "publishedByLane": {},
     "verifiedByLane": {},
     "pendingByLane": {
-      "strict": 1,
-      "fast": 2,
-      "standard": 2
+      "standard": 8,
+      "strict": 5
     },
+    "fastPendingAudit": [],
     "drafts": 0,
     "modelErrors": 0,
     "factualValidationErrors": 0,
@@ -47,11 +73,20 @@
     "aiAttempts": 0,
     "aiCalls": 0,
     "imageSelections": [],
-    "agendaStories": 118,
+    "agendaStories": 132,
     "newsworthinessAverage": 0,
     "newsworthinessTop": [],
+    "corroborationSearches": 3,
+    "corroborationFound": 1,
+    "corroborationVerified": 0,
+    "corroborationConflicts": 1,
+    "corroborationNoResult": 2,
     "byCategory": {},
+    "publishedLast3hBeforeRun": 0,
+    "publishedLast6hBeforeRun": 1,
+    "publishedLast12hBeforeRun": 5,
     "publishedLast24hBeforeRun": 7,
+    "hoursSinceLastPublicationBeforeRun": 5.9,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -63,36 +98,22 @@
     },
     "agendaTop": [
       {
-        "storyId": "agenda|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|07 09 900",
-        "headlineSeed": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
-        "topic": "agenda",
-        "territory": "Provincia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification"
-      },
-      {
-        "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
-        "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
-        "topic": "servicios",
-        "territory": "Provincia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification"
-      },
-      {
-        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
-        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
-        "topic": "agenda",
-        "territory": "Provincia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification"
-      },
-      {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
         "topic": "servicios",
         "territory": "Rio Grande",
         "newsworthinessScore": 100,
-        "status": "pending-verification"
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
       },
       {
         "storyId": "weather|argentina|chile|reino unido|polemica|malvinas la|hms medway|rio grande|islas malvinas|informa|07 08 900",
@@ -100,9 +121,76 @@
         "topic": "servicios",
         "territory": "Rio Grande",
         "newsworthinessScore": 100,
-        "status": "pending-verification"
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
+        "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
+        "topic": "servicios",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 9,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
+        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
+        "topic": "turismo",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "verified",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "serviceValue": 15,
+          "socialPotential": 15,
+          "searchPotential": 13,
+          "recency": 9,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
+        "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
+        "topic": "salud",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "verified",
+        "scoreBreakdown": {
+          "publicInterest": 17,
+          "localRelevance": 25,
+          "serviceValue": 15,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 9,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
       }
-    ]
+    ],
+    "agendaInvalidStories": 14,
+    "technicalSuccess": true,
+    "editorialOutcome": "verification-starved"
   },
   "budget": {
     "maxAiPerRun": 10,
@@ -118,12 +206,13 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 33,
-    "totalCandidatesBeforeLimit": 33
+    "candidatesMaterialized": 41,
+    "totalCandidatesBeforeLimit": 41
   },
   "reasonNoMorePublished": [
-    "5 evento(s) quedaron pendientes de segunda fuente",
-    "2 candidato(s) descartados por duplicado/similitud",
-    "24 candidato(s) descartados por causas especificas (weak-title,short-body: 3, stale-hard-news: 4, stale-dated-discovery: 13, evergreen-or-stale-outside-news-window: 2, stale-weather-forecast: 1, listing-url,weak-title: 1)"
+    "13 evento(s) quedaron pendientes de segunda fuente",
+    "1 evento(s) tuvieron conflicto factual",
+    "5 candidato(s) descartados por duplicado/similitud",
+    "19 candidato(s) descartados por causas especificas (stale-dated-discovery: 11, stale-hard-news: 3, evergreen-or-stale-outside-news-window: 2, weak-title,short-body: 2, listing-url,weak-title: 1)"
   ]
 }
