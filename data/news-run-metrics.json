@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-09T16:58:55.151Z",
+  "generatedAt": "2026-07-09T18:54:16.329Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "push",
-    "runId": "29035279690",
-    "headSha": "f78706f190820f5bda8a324a2efdb291117d9bbe"
+    "eventName": "schedule",
+    "runId": "29042254330",
+    "headSha": "7753d9399d6cf2847c21cc5260bc95d51d63e94b"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 29,
+    "candidatesDetected": 33,
     "discardedDuplicate": 2,
-    "discardedQuality": 22,
+    "discardedQuality": 24,
     "discardedQualityByReason": {
+      "weak-title,short-body": 3,
+      "stale-hard-news": 4,
       "stale-dated-discovery": 13,
-      "weak-title,short-body": 2,
-      "evergreen-or-stale-outside-news-window": 3,
-      "listing-url,weak-title": 1,
-      "stale-hard-news": 2,
-      "stale-weather-forecast": 1
+      "evergreen-or-stale-outside-news-window": 2,
+      "stale-weather-forecast": 1,
+      "listing-url,weak-title": 1
     },
-    "discardedGenericTitle": 0,
-    "discardedEvergreen": 16,
+    "discardedGenericTitle": 2,
+    "discardedEvergreen": 15,
     "eventsGrouped": 5,
     "verified": 0,
     "pendingVerification": 5,
@@ -31,8 +31,9 @@
     "publishedByLane": {},
     "verifiedByLane": {},
     "pendingByLane": {
-      "standard": 3,
-      "strict": 2
+      "strict": 1,
+      "fast": 2,
+      "standard": 2
     },
     "drafts": 0,
     "modelErrors": 0,
@@ -46,21 +47,29 @@
     "aiAttempts": 0,
     "aiCalls": 0,
     "imageSelections": [],
-    "agendaStories": 113,
+    "agendaStories": 118,
     "newsworthinessAverage": 0,
     "newsworthinessTop": [],
     "byCategory": {},
-    "publishedLast24hBeforeRun": 10,
+    "publishedLast24hBeforeRun": 7,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 10,
-      "remainingToMin": 2,
-      "slotsRemaining": 6,
+      "publishedLast24hBeforeRun": 7,
+      "remainingToMin": 5,
+      "slotsRemaining": 9,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
     "agendaTop": [
+      {
+        "storyId": "agenda|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|07 09 900",
+        "headlineSeed": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
+        "topic": "agenda",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
       {
         "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
         "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
@@ -92,14 +101,6 @@
         "territory": "Rio Grande",
         "newsworthinessScore": 100,
         "status": "pending-verification"
-      },
-      {
-        "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
-        "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "pending-verification"
       }
     ]
   },
@@ -116,13 +117,13 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 10,
-    "candidatesMaterialized": 29,
-    "totalCandidatesBeforeLimit": 29
+    "publishedLast24hBeforeRun": 7,
+    "candidatesMaterialized": 33,
+    "totalCandidatesBeforeLimit": 33
   },
   "reasonNoMorePublished": [
     "5 evento(s) quedaron pendientes de segunda fuente",
     "2 candidato(s) descartados por duplicado/similitud",
-    "22 candidato(s) descartados por causas especificas (stale-dated-discovery: 13, weak-title,short-body: 2, evergreen-or-stale-outside-news-window: 3, listing-url,weak-title: 1, stale-hard-news: 2, stale-weather-forecast: 1)"
+    "24 candidato(s) descartados por causas especificas (weak-title,short-body: 3, stale-hard-news: 4, stale-dated-discovery: 13, evergreen-or-stale-outside-news-window: 2, stale-weather-forecast: 1, listing-url,weak-title: 1)"
   ]
 }
