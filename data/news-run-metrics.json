@@ -1,64 +1,73 @@
 {
-  "generatedAt": "2026-07-08T18:23:41.752Z",
+  "generatedAt": "2026-07-09T00:05:07.294Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "28965775450",
-    "headSha": "cf041b40176641023720b34f6e77e66078346c82"
+    "runId": "28984245639",
+    "headSha": "f5595fb7dcf29d690aa59dfd3b0e18454e17e86a"
   },
   "metrics": {
     "sourcesConsulted": 16,
-    "candidatesDetected": 33,
-    "discardedDuplicate": 4,
+    "candidatesDetected": 38,
+    "discardedDuplicate": 5,
     "discardedQuality": 12,
     "discardedGenericTitle": 1,
-    "eventsGrouped": 15,
-    "verified": 6,
-    "pendingVerification": 9,
+    "eventsGrouped": 17,
+    "verified": 5,
+    "pendingVerification": 12,
     "conflicting": 0,
-    "published": 1,
-    "drafts": 1,
+    "published": 2,
+    "drafts": 2,
     "modelErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 4,
+    "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 1,
-    "discardedPublicationLimit": 0,
+    "discardedPublicationLimit": 1,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 5,
-    "aiCalls": 5,
+    "aiAttempts": 4,
+    "aiCalls": 4,
     "imageSelections": [
       {
-        "title": "Río Grande celebra su 105º aniversario con actividades para toda la familia",
+        "title": "Identificación de hantavirus en roedores de Tierra del Fuego",
         "strategy": "article-og",
-        "query": "Río Grande celebra su 105º aniversario con propuestas para toda la familia",
+        "query": "Identificaron hantavirus en roedores de Tierra del Fuego sin relación con el brote del crucero | El Dia",
         "score": 82,
-        "source": "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306876012_y.jpg"
+        "source": "https://cdn1.eldia.com/072026/1783553729316.jpg?&cw=1200&ch=630"
+      },
+      {
+        "title": "Cerro Castor abre la temporada de esquí en Ushuaia",
+        "strategy": "article-og",
+        "query": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
+        "score": 82,
+        "source": "https://fotos.perfil.com/2026/07/08/trim/1140/641/cerro-castor-2278923.jpg"
       }
     ],
     "byCategory": {
-      "Río Grande": 1
+      "Provincia": 2
     }
   },
   "budget": {
     "maxAiPerRun": 8,
-    "officialAiUsed": 1,
+    "officialAiUsed": 0,
     "officialAiBudget": 4,
     "discoveryAiUsed": 4,
     "discoveryAiBudget": 4,
     "targetPublishedPerRun": 2,
     "maxNormalPublishedPerRun": 3,
     "extraSlotMinImportance": 8,
-    "candidatesMaterialized": 33,
-    "totalCandidatesBeforeLimit": 33
+    "candidatesMaterialized": 36,
+    "totalCandidatesBeforeLimit": 38
   },
   "reasonNoMorePublished": [
-    "9 evento(s) quedaron pendientes de segunda fuente",
-    "4 candidato(s) descartados por duplicado/similitud",
+    "12 evento(s) quedaron pendientes de segunda fuente",
+    "5 candidato(s) descartados por duplicado/similitud",
     "12 candidato(s) descartados por calidad o fuente invalida",
-    "4 candidato(s) descartados por importancia editorial",
-    "1 candidato(s) quedaron sin presupuesto IA"
+    "1 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) quedaron sin presupuesto IA",
+    "1 candidato(s) quedaron por cupo editorial de corrida",
+    "2 candidato(s) no se materializaron por limite anti-timeout"
   ]
 }
