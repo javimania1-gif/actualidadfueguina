@@ -1,53 +1,36 @@
 {
-  "generatedAt": "2026-07-09T00:05:07.294Z",
+  "generatedAt": "2026-07-09T08:21:39.765Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "28984245639",
-    "headSha": "f5595fb7dcf29d690aa59dfd3b0e18454e17e86a"
+    "runId": "29004313474",
+    "headSha": "6a6e7a9d63d8fe456a3eff17c633a948b146b378"
   },
   "metrics": {
     "sourcesConsulted": 16,
-    "candidatesDetected": 38,
+    "candidatesDetected": 36,
     "discardedDuplicate": 5,
-    "discardedQuality": 12,
-    "discardedGenericTitle": 1,
-    "eventsGrouped": 17,
+    "discardedQuality": 16,
+    "discardedGenericTitle": 2,
+    "eventsGrouped": 13,
     "verified": 5,
-    "pendingVerification": 12,
+    "pendingVerification": 8,
     "conflicting": 0,
-    "published": 2,
+    "published": 0,
     "drafts": 2,
-    "modelErrors": 0,
-    "factualValidationErrors": 0,
+    "modelErrors": 1,
+    "factualValidationErrors": 2,
     "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 1,
-    "discardedPublicationLimit": 1,
+    "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
     "aiAttempts": 4,
-    "aiCalls": 4,
-    "imageSelections": [
-      {
-        "title": "Identificación de hantavirus en roedores de Tierra del Fuego",
-        "strategy": "article-og",
-        "query": "Identificaron hantavirus en roedores de Tierra del Fuego sin relación con el brote del crucero | El Dia",
-        "score": 82,
-        "source": "https://cdn1.eldia.com/072026/1783553729316.jpg?&cw=1200&ch=630"
-      },
-      {
-        "title": "Cerro Castor abre la temporada de esquí en Ushuaia",
-        "strategy": "article-og",
-        "query": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
-        "score": 82,
-        "source": "https://fotos.perfil.com/2026/07/08/trim/1140/641/cerro-castor-2278923.jpg"
-      }
-    ],
-    "byCategory": {
-      "Provincia": 2
-    }
+    "aiCalls": 3,
+    "imageSelections": [],
+    "byCategory": {}
   },
   "budget": {
     "maxAiPerRun": 8,
@@ -59,15 +42,15 @@
     "maxNormalPublishedPerRun": 3,
     "extraSlotMinImportance": 8,
     "candidatesMaterialized": 36,
-    "totalCandidatesBeforeLimit": 38
+    "totalCandidatesBeforeLimit": 36
   },
   "reasonNoMorePublished": [
-    "12 evento(s) quedaron pendientes de segunda fuente",
+    "8 evento(s) quedaron pendientes de segunda fuente",
     "5 candidato(s) descartados por duplicado/similitud",
-    "12 candidato(s) descartados por calidad o fuente invalida",
+    "16 candidato(s) descartados por calidad o fuente invalida",
     "1 candidato(s) descartados por importancia editorial",
     "1 candidato(s) quedaron sin presupuesto IA",
-    "1 candidato(s) quedaron por cupo editorial de corrida",
-    "2 candidato(s) no se materializaron por limite anti-timeout"
+    "2 candidato(s) bloqueados por validacion factual",
+    "1 error(es) reales de modelo"
   ]
 }

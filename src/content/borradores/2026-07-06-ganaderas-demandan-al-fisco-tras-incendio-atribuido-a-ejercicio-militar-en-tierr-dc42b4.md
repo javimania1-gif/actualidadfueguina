@@ -8,7 +8,7 @@ sourceName: "Bing News — Tierra del Fuego"
 sourceUrl: "https://www.emol.com/noticias/Economia/2026/07/06/1204795/ganaderas-demandan-fisco-militares-incendio.html"
 originalImage: "https://static.emol.cl/emol50/Fotos/2026/07/06/file_20260706114450.png"
 status: "draft"
-detectedAt: "2026-07-09T00:05:07.280Z"
+detectedAt: "2026-07-09T08:21:39.751Z"
 mode: "discovery-review"
 ---
 
