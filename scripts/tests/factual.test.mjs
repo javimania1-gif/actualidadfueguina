@@ -3,10 +3,13 @@ import {
   isHomepage,
   isGenericListingUrl,
   validateArticleSource,
-  countIndependentEditorialSources
+  countIndependentEditorialSources,
+  buildSourceRef,
+  isTrustedLocalRoutineSource
 } from '../lib/source-policy.mjs';
 import {
   extractFacts,
+  refreshPersistedFacts,
   generateEventKey,
   corroborateEvent,
   validateArticleAgainstFacts,
@@ -136,6 +139,43 @@ test('dos agregadores al mismo publisher cuentan como una fuente editorial', () 
     { tier: 'B', publisherDomain: 'clarin.com', url: 'https://www.clarin.com/mundo/nota.html' }
   ];
   assert.equal(countIndependentEditorialSources(refs), 1);
+});
+
+test('Bing News local no cuenta como fuente local rutinaria ni competencia municipal', () => {
+  const ref = buildSourceRef({
+    source: { id: 'bing-ushuaia', name: 'Bing News - Ushuaia', mode: 'discovery-draft' },
+    item: { link: 'https://www.bing.com/news/apiclick.aspx?url=https%3A%2F%2Fwww.eldestapeweb.com%2Fsociedad%2Fnota' },
+    article: {
+      title: 'Alerta por un sismo en Ushuaia',
+      finalUrl: 'https://www.eldestapeweb.com/sociedad/nota',
+      date: '2026-07-07'
+    }
+  });
+
+  assert.equal(isTrustedLocalRoutineSource(ref), false);
+  assert.equal(ref.competence.includes('municipal'), false);
+});
+
+test('facts persistidos viejos se reevalúan antes de verificar eventos sensibles', () => {
+  const refreshed = refreshPersistedFacts(
+    {
+      title: 'Alerta por un sismo de 5.9 que afecto a Ushuaia',
+      riskLevel: 'low',
+      editorialLane: EDITORIAL_LANES.FAST,
+      eventType: 'general',
+      rawSummary: 'Sismo de 5.9 en el Pasaje Drake sentido en Ushuaia. No hubo danos ni alerta de tsunami.'
+    },
+    {
+      sourceId: 'bing-ushuaia',
+      sourceName: 'Bing News - Ushuaia',
+      sourceMode: 'discovery-draft',
+      publishedAt: '2026-07-07T15:25:00.000Z'
+    }
+  );
+
+  assert.equal(refreshed.eventType, 'weather');
+  assert.equal(refreshed.riskLevel, 'high');
+  assert.equal(refreshed.editorialLane, EDITORIAL_LANES.STANDARD);
 });
 
 test('una Tier B high-risk queda pending-verification', () => {

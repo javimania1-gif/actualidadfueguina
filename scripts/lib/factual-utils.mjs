@@ -445,6 +445,33 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   };
 }
 
+export function refreshPersistedFacts(facts = {}, sourceRef = {}) {
+  const article = {
+    title: facts.title || sourceRef.title || '',
+    description: facts.rawSummary || '',
+    text: facts.rawSummary || '',
+    date: (facts.dates || []).find((value) => /^\d{4}-\d{2}-\d{2}/.test(String(value))) || sourceRef.publishedAt || ''
+  };
+  const source = {
+    id: sourceRef.sourceId || '',
+    name: sourceRef.sourceName || '',
+    mode: sourceRef.sourceMode || '',
+    defaultCategory: '',
+    location: ''
+  };
+  const refreshed = extractFacts({ article, source });
+  const merged = {
+    ...facts,
+    ...refreshed,
+    title: facts.title || refreshed.title,
+    rawSummary: facts.rawSummary || refreshed.rawSummary
+  };
+  for (const field of CRITICAL_FIELDS) {
+    merged[field] = unique([...(facts[field] || []), ...(refreshed[field] || [])]);
+  }
+  return merged;
+}
+
 function inferEventType(text) {
   const value = normalizeText(text);
   if (/\b(resultado|marcador|vencio|derroto|elimino|clasifico|octavos|cuartos)\b/.test(value)) return 'sports-result';

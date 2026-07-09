@@ -118,13 +118,18 @@ export function buildSourceRef({ source = {}, item = {}, article = {}, officialD
 }
 
 export function inferSourceCompetence({ source = {}, publisherDomain = '', finalUrl = '' } = {}) {
-  const text = normalizeText([
-    source.id,
-    source.name,
-    source.mode,
+  const publisherText = normalizeText([
     publisherDomain,
     finalUrl
   ].filter(Boolean).join(' '));
+  const sourceText = normalizeText([
+    source.id,
+    source.name,
+    source.mode
+  ].filter(Boolean).join(' '));
+  const text = source.mode === 'official-auto'
+    ? `${sourceText} ${publisherText}`
+    : publisherText;
   const competence = new Set();
 
   if (/\b(riogrande|ushuaia|tolhuin|municipio|municipalidad)\b/.test(text)) competence.add('municipal');
@@ -161,6 +166,9 @@ export function isSourceCompetentForEvent(sourceRef = {}, eventType = 'general')
 
 export function isTrustedLocalRoutineSource(sourceRef = {}) {
   if (sourceRef.tier !== SOURCE_TIERS.B) return false;
+  if (/^(bing|google)-/i.test(sourceRef.sourceId || '') || /\b(bing news|google news)\b/i.test(sourceRef.sourceName || '')) {
+    return false;
+  }
   const text = normalizeText([
     sourceRef.sourceId,
     sourceRef.sourceName,

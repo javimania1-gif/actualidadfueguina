@@ -36,6 +36,7 @@ import {
   extractFacts,
   generateEventKey,
   corroborateEvent,
+  refreshPersistedFacts,
   selectBaseCandidate,
   validateArticleAgainstFacts,
   buildEventRecord,
@@ -640,16 +641,19 @@ function buildProvincialWeatherCandidate(group = [], verification = {}) {
 
 for (const [eventKey, group] of eventsByKey) {
   const existingEvent = events.events?.[eventKey] || {};
-  const persistedCandidates = (existingEvent.factsBySource || []).map((entry) => ({
-    sourceRef: {
+  const persistedCandidates = (existingEvent.factsBySource || []).map((entry) => {
+    const sourceRef = {
       ...(existingEvent.sources || []).find((source) => source.url === entry.url),
       publisherDomain: entry.publisherDomain,
       url: entry.url
-    },
-    facts: entry.facts || {},
-    bodyLength: 0,
-    pubDate: new Date(existingEvent.lastSeenAt || 0)
-  }));
+    };
+    return {
+      sourceRef,
+      facts: refreshPersistedFacts(entry.facts || {}, sourceRef),
+      bodyLength: 0,
+      pubDate: new Date(existingEvent.lastSeenAt || 0)
+    };
+  });
 
   const seenUrls = new Set();
   const combinedForVerification = [...persistedCandidates, ...group].filter((candidate) => {
