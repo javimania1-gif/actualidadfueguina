@@ -1,63 +1,45 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T22:47:39.960Z",
+  "generatedAt": "2026-07-09T22:53:17.749Z",
   "summary": {
-    "totalStories": 132,
+    "totalStories": 136,
     "byStatus": {
-      "pending-verification": 79,
+      "pending-verification": 80,
+      "agenda-invalid": 16,
       "verified": 33,
-      "conflicting-sources": 2,
-      "agenda-invalid": 14,
+      "conflicting-sources": 3,
       "verified-local-routine": 3,
       "published": 1
     },
     "byTopic": {
-      "servicios": 9,
-      "turismo": 6,
+      "servicios": 10,
+      "turismo": 7,
       "salud": 3,
       "agenda": 3,
-      "sociedad": 46,
+      "sociedad": 47,
       "politica": 18,
       "policiales": 15,
       "cultura": 2,
-      "deportes": 26,
+      "deportes": 27,
       "economia": 3,
       "educacion": 1
     },
     "byTerritory": {
       "Rio Grande": 30,
-      "Ushuaia": 8,
+      "Ushuaia": 9,
       "Antartida": 1,
       "Provincia": 6,
-      "Mundo": 47,
+      "Mundo": 50,
       "Nacionales": 33,
       "Tolhuin": 2,
       "Malvinas": 4,
       "unknown": 1
     },
-    "invalidStories": 14,
+    "invalidStories": 16,
     "topStories": [
       {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 25,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "weather|argentina|chile|reino unido|polemica|malvinas la|hms medway|rio grande|islas malvinas|informa|07 08 900",
-        "headlineSeed": "Polémica por el paso de un buque de guerra británico por aguas territoriales argentinas tras zarpar de Malvinas",
         "topic": "servicios",
         "territory": "Rio Grande",
         "newsworthinessScore": 100,
@@ -146,19 +128,19 @@
         }
       },
       {
-        "storyId": "weather|argentina|venezuela|antartida argentina|antartida|tierra del fuego|antartida|informa|julio",
-        "headlineSeed": "El valor estratégico de la Antártida Argentina: más de un siglo de presencia",
-        "topic": "servicios",
-        "territory": "Antartida",
-        "newsworthinessScore": 98,
-        "status": "pending-verification",
+        "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+        "topic": "turismo",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 97,
+        "status": "conflicting-sources",
         "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 22,
-          "serviceValue": 20,
-          "socialPotential": 7,
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "serviceValue": 12,
+          "socialPotential": 13,
           "searchPotential": 13,
-          "recency": 9,
+          "recency": 15,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -213,6 +195,24 @@
           "socialPotential": 9,
           "searchPotential": 15,
           "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|cerro castor|el rompehielos la fiesta|nacional|tierra del fuego|tierra del fuego aias|informa|10 de julio",
+        "headlineSeed": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
+        "topic": "turismo",
+        "territory": "Provincia",
+        "newsworthinessScore": 93,
+        "status": "verified-local-routine",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 22,
+          "serviceValue": 15,
+          "socialPotential": 12,
+          "searchPotential": 13,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -311,8 +311,12 @@
         "diversity": 4
       },
       "newsworthinessScore": 100,
-      "status": "pending-verification",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "story-headline-mismatch",
+        "topic-event-mismatch"
+      ]
     },
     {
       "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
@@ -525,7 +529,52 @@
         "diversity": 4
       },
       "newsworthinessScore": 98,
-      "status": "pending-verification",
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
+    {
+      "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Cerro Castor",
+        "Argentina",
+        "Brasil"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T22:53:17.499Z",
+      "lastSeenAt": "2026-07-09T22:53:17.499Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 12,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "serviceValue": 12,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 97,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -867,45 +916,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
-      "headlineSeed": "Detrás del respaldo a la gestión, el FMI le viene a exigir a Milei tres puntos clave para sostener el programa conjunto",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-09T08:20:33.482Z",
-      "lastSeenAt": "2026-07-09T16:51:37.969Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 12,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 12,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 12,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard",
-      "validationReasons": [
-        "story-headline-mismatch"
-      ]
-    },
-    {
       "storyId": "casualty|otro|rio grande|actualidad tdf durante|rio grande|tierra del fuego aias|informa|2026-07-08",
       "headlineSeed": "Otro accidente de tránsito en Río Grande - Actualidad TDF",
       "topic": "sociedad",
@@ -1093,6 +1103,45 @@
       "validationReasons": []
     },
     {
+      "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
+      "headlineSeed": "Detrás del respaldo a la gestión, el FMI le viene a exigir a Milei tres puntos clave para sostener el programa conjunto",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-09T08:20:33.482Z",
+      "lastSeenAt": "2026-07-09T16:51:37.969Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 12,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 12,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 12,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 85,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
+    {
       "storyId": "general|ecuador|uruguay|paraguay|bolivia|gobierno|china|gobierno|argentina|informa|mayo",
       "headlineSeed": "China golpea al principal producto de exportación de Ecuador con la suspensión de siete plantas camaroneras",
       "topic": "salud",
@@ -1134,6 +1183,46 @@
       },
       "newsworthinessScore": 85,
       "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|brasil|peru|informa|9 de julio",
+      "headlineSeed": "Lima: este es el precio de la gasolina este jueves 9 de julio",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Brasil",
+        "Peru",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-09T22:53:17.748Z",
+      "lastSeenAt": "2026-07-09T22:53:17.748Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 12,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 12,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -1922,142 +2011,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|policia de|fiscalia|policia del chaco|axel gonzalez|maria gomez|informa|9 de julio",
-      "headlineSeed": "La madre de Axel González buscó a Zdero y apuntó contra la \"corrupción policial\": “Tiene que limpiar la mugre”",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Axel González",
-        "María Gómez",
-        "Policía de",
-        "Fiscalía",
-        "Policía Del Chaco",
-        "Policía"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-09T16:51:37.970Z",
-      "lastSeenAt": "2026-07-09T16:51:37.970Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "election|sindicato de petroleros y gas privado|gobierno|ministerio de economia|milei|argentina|egipto|informa|02 11 900",
-      "headlineSeed": "La CGT, entre su pelea contra Milei y una interna que no se apaga",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Sindicato de Petroleros y Gas Privado",
-        "Gobierno",
-        "Ministerio de Economía",
-        "Argentina",
-        "Egipto"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-09T16:51:37.970Z",
-      "lastSeenAt": "2026-07-09T16:51:37.970Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "high-risk|uom de|uom|uom seccional rio grande|obrera metalurgica|oscar martinez|rio grande|tierra del fuego aias|denuncia|2026-07-08",
-      "headlineSeed": "La UOM denuncia entre 20 y 30 despidos de trabajadores efectivos en Mirgor - Actualidad TDF",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Obrera Metalúrgica",
-        "Oscar Martínez",
-        "UOM de",
-        "UOM",
-        "UOM Seccional Río Grande",
-        "Sindicato",
-        "Ministerio de Trabajo",
-        "La UOM",
-        "Rio Grande",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "high-risk",
-      "firstSeenAt": "2026-07-09T16:51:37.970Z",
-      "lastSeenAt": "2026-07-09T16:51:37.970Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "eventtype-risk-confusion"
-      ]
-    },
-    {
       "storyId": "general|ganaderas|tierra|fuego piden|tierra del fuego|tierra del fuego aias|informa|2026-07-06",
       "headlineSeed": "Ganaderas demandan al fisco tras incendio atribuido a ejercicio militar en Tierra del Fuego",
       "topic": "economia",
@@ -2367,51 +2320,140 @@
       ]
     },
     {
-      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
-      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
+      "storyId": "crime|policia de|fiscalia|policia del chaco|axel gonzalez|maria gomez|informa|9 de julio",
+      "headlineSeed": "La madre de Axel González buscó a Zdero y apuntó contra la \"corrupción policial\": “Tiene que limpiar la mugre”",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Municipalidad de Ushuaia",
-        "Gobierno de Milei y de",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida",
-        "Pasaje Drake",
-        "Atlantico Sur",
-        "Argentina",
-        "Inglaterra"
+        "Axel González",
+        "María Gómez",
+        "Policía de",
+        "Fiscalía",
+        "Policía Del Chaco",
+        "Policía"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:51:37.966Z",
-      "lastSeenAt": "2026-07-09T16:51:37.966Z",
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-09T16:51:37.970Z",
+      "lastSeenAt": "2026-07-09T16:51:37.970Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "fast",
-      "freshness": "breaking",
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|sindicato de petroleros y gas privado|gobierno|ministerio de economia|milei|argentina|egipto|informa|02 11 900",
+      "headlineSeed": "La CGT, entre su pelea contra Milei y una interna que no se apaga",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Sindicato de Petroleros y Gas Privado",
+        "Gobierno",
+        "Ministerio de Economía",
+        "Argentina",
+        "Egipto"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T16:51:37.970Z",
+      "lastSeenAt": "2026-07-09T16:51:37.970Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "high-risk|uom de|uom|uom seccional rio grande|obrera metalurgica|oscar martinez|rio grande|tierra del fuego aias|denuncia|2026-07-08",
+      "headlineSeed": "La UOM denuncia entre 20 y 30 despidos de trabajadores efectivos en Mirgor - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Obrera Metalúrgica",
+        "Oscar Martínez",
+        "UOM de",
+        "UOM",
+        "UOM Seccional Río Grande",
+        "Sindicato",
+        "Ministerio de Trabajo",
+        "La UOM",
+        "Rio Grande",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "high-risk",
+      "firstSeenAt": "2026-07-09T16:51:37.970Z",
+      "lastSeenAt": "2026-07-09T16:51:37.970Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
       "publicInterestScore": 8,
       "localRelevanceScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 8,
+      "socialPotentialScore": 11,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
         "publicInterest": 8,
         "localRelevance": 25,
         "serviceValue": 3,
-        "socialPotential": 8,
+        "socialPotential": 11,
         "searchPotential": 8,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 74,
-      "status": "published",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "eventtype-risk-confusion"
+      ]
     },
     {
       "storyId": "general|argentina|egipto|alerta|ushuaia|patagonia|rio grande|ushuaia|informa|07 de julio",
@@ -2589,6 +2631,53 @@
       },
       "newsworthinessScore": 72,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
+      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Municipalidad de Ushuaia",
+        "Gobierno de Milei y de",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Pasaje Drake",
+        "Atlantico Sur",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T16:51:37.966Z",
+      "lastSeenAt": "2026-07-09T16:51:37.966Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -4717,6 +4806,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|mexico|informa|9 de julio",
+      "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy jueves 9 de julio: se activa Alerta Naranja por lluvias intensas en la capital",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Clima CDMX",
+        "República Mexicana",
+        "Secretaría de Gestión Integral de Riesgos",
+        "SMN",
+        "Mexico"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T22:53:17.499Z",
+      "lastSeenAt": "2026-07-09T22:53:17.499Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 52,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|municipalidad|concejo deliberante|corredor maipu|espana|informa|07 09 900",
       "headlineSeed": "El misterio del Corredor Maipú llegó a su fin: Se develó el misterio de las columnas del puente",
       "topic": "sociedad",
@@ -5052,6 +5183,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|ministerio de salud|argentina|brasil|informa|2026-07-09",
+      "headlineSeed": "Apuestas en el Mundial 2026: cómo reconocer si tienes una adicción y qué hacer para evitarlo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio de Salud",
+        "Argentina",
+        "Brasil",
+        "Peru",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-09T22:53:17.749Z",
+      "lastSeenAt": "2026-07-09T22:53:17.749Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 51,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|francia|2026-07-09",
       "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
       "topic": "deportes",
@@ -5066,48 +5240,6 @@
       "eventType": "sports-result",
       "firstSeenAt": "2026-07-09T16:58:55.113Z",
       "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 51,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|francia|5 de julio de 2026",
-      "headlineSeed": "FIFA da fuerte castigo Jarell Quansah tras la roja contra México en el Mundial 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Jarell Quansah",
-        "Jesús Gallardo",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T16:51:37.967Z",
-      "lastSeenAt": "2026-07-09T16:51:37.967Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -5265,6 +5397,48 @@
         "diversity": 4
       },
       "newsworthinessScore": 51,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|francia|5 de julio de 2026",
+      "headlineSeed": "FIFA da fuerte castigo Jarell Quansah tras la roja contra México en el Mundial 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Jarell Quansah",
+        "Jesús Gallardo",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T16:51:37.967Z",
+      "lastSeenAt": "2026-07-09T16:51:37.967Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 48,
       "status": "pending-verification",
       "validationReasons": []
     },
