@@ -1,64 +1,106 @@
 {
-  "generatedAt": "2026-07-09T14:44:58.689Z",
+  "generatedAt": "2026-07-09T16:05:18.445Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "29026492442",
-    "headSha": "7bec01afc3456fed80d0af8614143b9b1e11db72"
+    "runId": "29031924044",
+    "headSha": "db8b073dcf71aea04052259855fd5ac8cb86096f"
   },
   "metrics": {
-    "sourcesConsulted": 16,
-    "candidatesDetected": 35,
-    "discardedDuplicate": 5,
-    "discardedQuality": 17,
+    "sourcesConsulted": 20,
+    "candidatesDetected": 50,
+    "discardedDuplicate": 2,
+    "discardedQuality": 32,
+    "discardedQualityByReason": {
+      "evergreen-or-stale-outside-news-window": 12,
+      "stale-hard-news": 4,
+      "stale-weather-forecast": 2,
+      "stale-dated-discovery": 10,
+      "weak-title,short-body": 3,
+      "listing-url,weak-title": 1
+    },
     "discardedGenericTitle": 2,
-    "eventsGrouped": 11,
+    "discardedEvergreen": 22,
+    "eventsGrouped": 12,
     "verified": 3,
-    "pendingVerification": 7,
-    "conflicting": 1,
-    "published": 1,
-    "drafts": 0,
-    "modelErrors": 0,
+    "pendingVerification": 9,
+    "pendingMatchedFromHistory": 0,
+    "conflicting": 0,
+    "published": 2,
+    "publishedByLane": {
+      "fast": 2
+    },
+    "verifiedByLane": {
+      "fast": 3
+    },
+    "pendingByLane": {
+      "standard": 7,
+      "strict": 2
+    },
+    "drafts": 1,
+    "modelErrors": 1,
     "factualValidationErrors": 0,
-    "discardedImportance": 2,
+    "discardedImportance": 0,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
     "aiAttempts": 3,
-    "aiCalls": 3,
+    "aiCalls": 2,
     "imageSelections": [
       {
-        "title": "Ganaderas demandan al fisco por incendio en Tierra del Fuego",
+        "title": "Peña de la Independencia en Tolhuin: Música y Cultura Local",
         "strategy": "article-og",
-        "query": "Ganaderas demandan al fisco tras incendio atribuido a ejercicio militar en Tierra del Fuego",
+        "query": "Música, danza y sabores locales: hoy hay Peña de la Independencia en Tolhuin - Actualidad TDF",
         "score": 82,
-        "source": "https://static.emol.cl/emol50/Fotos/2026/07/06/file_20260706114450.png"
+        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/9-de-julio-tolhuin.jpeg"
+      },
+      {
+        "title": "Fiesta Nacional del Invierno en Cerro Castor: Celebración y Actividades para Todos",
+        "strategy": "article-og",
+        "query": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
+        "score": 82,
+        "source": "https://elrompehielos.com.ar/wp-content/uploads/2026/07/16725.jpg"
       }
     ],
     "byCategory": {
-      "Provincia": 1
+      "Provincia": 2
+    },
+    "publishedLast24hBeforeRun": 7,
+    "dailyTarget": {
+      "min": 12,
+      "max": 16,
+      "publishedLast24hBeforeRun": 7,
+      "remainingToMin": 5,
+      "slotsRemaining": 9,
+      "effectiveRunTarget": 3,
+      "effectiveRunMaxNormal": 4
     }
   },
   "budget": {
-    "maxAiPerRun": 8,
+    "maxAiPerRun": 10,
     "officialAiUsed": 0,
-    "officialAiBudget": 4,
+    "officialAiBudget": 5,
     "discoveryAiUsed": 3,
-    "discoveryAiBudget": 4,
-    "targetPublishedPerRun": 2,
-    "maxNormalPublishedPerRun": 3,
+    "discoveryAiBudget": 5,
+    "targetPublishedPerRun": 3,
+    "effectiveRunTarget": 3,
+    "maxNormalPublishedPerRun": 4,
+    "effectiveRunMaxNormal": 4,
     "extraSlotMinImportance": 8,
-    "candidatesMaterialized": 35,
-    "totalCandidatesBeforeLimit": 35
+    "dailyTargetMin": 12,
+    "dailyTargetMax": 16,
+    "publishedLast24hBeforeRun": 7,
+    "candidatesMaterialized": 48,
+    "totalCandidatesBeforeLimit": 50
   },
   "reasonNoMorePublished": [
-    "7 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "5 candidato(s) descartados por duplicado/similitud",
-    "17 candidato(s) descartados por calidad o fuente invalida",
-    "2 candidato(s) descartados por importancia editorial"
+    "9 evento(s) quedaron pendientes de segunda fuente",
+    "2 candidato(s) descartados por duplicado/similitud",
+    "32 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 12, stale-hard-news: 4, stale-weather-forecast: 2, stale-dated-discovery: 10, weak-title,short-body: 3, listing-url,weak-title: 1)",
+    "1 error(es) reales de modelo",
+    "2 candidato(s) no se materializaron por limite anti-timeout"
   ]
 }
