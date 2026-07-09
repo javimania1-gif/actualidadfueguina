@@ -1,36 +1,46 @@
 {
-  "generatedAt": "2026-07-09T08:21:39.765Z",
+  "generatedAt": "2026-07-09T13:47:04.281Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29004313474",
-    "headSha": "6a6e7a9d63d8fe456a3eff17c633a948b146b378"
+    "runId": "29022520889",
+    "headSha": "a45a504e4fdf7e1baa7ce2be8d63a5138fc69824"
   },
   "metrics": {
     "sourcesConsulted": 16,
-    "candidatesDetected": 36,
+    "candidatesDetected": 35,
     "discardedDuplicate": 5,
     "discardedQuality": 16,
     "discardedGenericTitle": 2,
-    "eventsGrouped": 13,
-    "verified": 5,
+    "eventsGrouped": 12,
+    "verified": 4,
     "pendingVerification": 8,
     "conflicting": 0,
-    "published": 0,
-    "drafts": 2,
-    "modelErrors": 1,
-    "factualValidationErrors": 2,
-    "discardedImportance": 1,
+    "published": 1,
+    "drafts": 0,
+    "modelErrors": 0,
+    "factualValidationErrors": 1,
+    "discardedImportance": 2,
     "discardedSourceLimit": 0,
-    "discardedNoAiBudget": 1,
+    "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
     "aiAttempts": 4,
-    "aiCalls": 3,
-    "imageSelections": [],
-    "byCategory": {}
+    "aiCalls": 4,
+    "imageSelections": [
+      {
+        "title": "Alejandra Lizardo: Voces Femeninas en la Historia de Río Grande",
+        "strategy": "article-og",
+        "query": "Alejandra Lizardo: las voces de mujeres que escriben la historia de Río Grande – La 97 Radio Fueguina",
+        "score": 82,
+        "source": "https://www.radiofueguina.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-29-at-17.08.59.jpeg"
+      }
+    ],
+    "byCategory": {
+      "Río Grande": 1
+    }
   },
   "budget": {
     "maxAiPerRun": 8,
@@ -41,16 +51,14 @@
     "targetPublishedPerRun": 2,
     "maxNormalPublishedPerRun": 3,
     "extraSlotMinImportance": 8,
-    "candidatesMaterialized": 36,
-    "totalCandidatesBeforeLimit": 36
+    "candidatesMaterialized": 35,
+    "totalCandidatesBeforeLimit": 35
   },
   "reasonNoMorePublished": [
     "8 evento(s) quedaron pendientes de segunda fuente",
     "5 candidato(s) descartados por duplicado/similitud",
     "16 candidato(s) descartados por calidad o fuente invalida",
-    "1 candidato(s) descartados por importancia editorial",
-    "1 candidato(s) quedaron sin presupuesto IA",
-    "2 candidato(s) bloqueados por validacion factual",
-    "1 error(es) reales de modelo"
+    "2 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) bloqueados por validacion factual"
   ]
 }
