@@ -1,98 +1,82 @@
 {
-  "generatedAt": "2026-07-09T16:51:55.020Z",
+  "generatedAt": "2026-07-09T16:58:55.151Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "29034820090",
-    "headSha": "53e9ad99d204d9bf25da25280f1f8e2a53fa44b7"
+    "runId": "29035279690",
+    "headSha": "f78706f190820f5bda8a324a2efdb291117d9bbe"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 33,
-    "discardedDuplicate": 1,
-    "discardedQuality": 23,
+    "candidatesDetected": 29,
+    "discardedDuplicate": 2,
+    "discardedQuality": 22,
     "discardedQualityByReason": {
-      "weak-title,short-body": 3,
+      "stale-dated-discovery": 13,
+      "weak-title,short-body": 2,
+      "evergreen-or-stale-outside-news-window": 3,
       "listing-url,weak-title": 1,
-      "evergreen-or-stale-outside-news-window": 4,
       "stale-hard-news": 2,
-      "stale-weather-forecast": 1,
-      "stale-dated-discovery": 12
+      "stale-weather-forecast": 1
     },
-    "discardedGenericTitle": 2,
+    "discardedGenericTitle": 0,
     "discardedEvergreen": 16,
-    "eventsGrouped": 7,
-    "verified": 2,
+    "eventsGrouped": 5,
+    "verified": 0,
     "pendingVerification": 5,
     "pendingMatchedFromHistory": 0,
     "conflicting": 0,
-    "published": 1,
-    "publishedByLane": {
-      "fast": 1
-    },
-    "verifiedByLane": {
-      "fast": 1,
-      "standard": 1
-    },
+    "published": 0,
+    "publishedByLane": {},
+    "verifiedByLane": {},
     "pendingByLane": {
-      "strict": 3,
-      "standard": 2
+      "standard": 3,
+      "strict": 2
     },
     "drafts": 0,
     "modelErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 1,
+    "discardedImportance": 0,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 2,
-    "aiCalls": 2,
-    "imageSelections": [
-      {
-        "title": "Sismo de 5.9 en el Pasaje Drake afectó a Ushuaia sin causar daños",
-        "strategy": "article-og",
-        "query": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-        "score": 82,
-        "source": "https://cdn.eldestapeweb.com/eldestape/072026/1783434233513.jpg?&cw=1200&ch=675"
-      }
-    ],
-    "agendaStories": 109,
-    "newsworthinessAverage": 81,
-    "newsworthinessTop": [
-      {
-        "title": "Pronóstico del tiempo en Tierra del Fuego para 9 de julio de 2026",
-        "eventKey": "weather-forecast|2026-07-09|tierra-del-fuego",
-        "score": 96,
-        "topic": "servicios",
-        "territory": "Provincia",
-        "lane": "standard"
-      },
-      {
-        "title": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-        "eventKey": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
-        "score": 66,
-        "topic": "sociedad",
-        "territory": "Rio Grande",
-        "lane": "fast"
-      }
-    ],
-    "byCategory": {
-      "Ushuaia": 1
-    },
-    "publishedLast24hBeforeRun": 9,
+    "aiAttempts": 0,
+    "aiCalls": 0,
+    "imageSelections": [],
+    "agendaStories": 113,
+    "newsworthinessAverage": 0,
+    "newsworthinessTop": [],
+    "byCategory": {},
+    "publishedLast24hBeforeRun": 10,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 9,
-      "remainingToMin": 3,
-      "slotsRemaining": 7,
+      "publishedLast24hBeforeRun": 10,
+      "remainingToMin": 2,
+      "slotsRemaining": 6,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
     "agendaTop": [
+      {
+        "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
+        "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
+      {
+        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+        "topic": "agenda",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
       {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -116,22 +100,6 @@
         "territory": "Rio Grande",
         "newsworthinessScore": 100,
         "status": "pending-verification"
-      },
-      {
-        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
-        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
-        "topic": "turismo",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified"
-      },
-      {
-        "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
-        "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
-        "topic": "salud",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified"
       }
     ]
   },
@@ -139,7 +107,7 @@
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 2,
+    "discoveryAiUsed": 0,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -148,14 +116,13 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 9,
-    "candidatesMaterialized": 33,
-    "totalCandidatesBeforeLimit": 33
+    "publishedLast24hBeforeRun": 10,
+    "candidatesMaterialized": 29,
+    "totalCandidatesBeforeLimit": 29
   },
   "reasonNoMorePublished": [
     "5 evento(s) quedaron pendientes de segunda fuente",
-    "1 candidato(s) descartados por duplicado/similitud",
-    "23 candidato(s) descartados por causas especificas (weak-title,short-body: 3, listing-url,weak-title: 1, evergreen-or-stale-outside-news-window: 4, stale-hard-news: 2, stale-weather-forecast: 1, stale-dated-discovery: 12)",
-    "1 candidato(s) descartados por importancia editorial"
+    "2 candidato(s) descartados por duplicado/similitud",
+    "22 candidato(s) descartados por causas especificas (stale-dated-discovery: 13, weak-title,short-body: 2, evergreen-or-stale-outside-news-window: 3, listing-url,weak-title: 1, stale-hard-news: 2, stale-weather-forecast: 1)"
   ]
 }

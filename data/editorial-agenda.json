@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T16:51:54.986Z",
+  "generatedAt": "2026-07-09T16:58:55.114Z",
   "summary": {
-    "totalStories": 109,
+    "totalStories": 113,
     "byStatus": {
-      "pending-verification": 68,
+      "pending-verification": 72,
       "verified": 34,
       "verified-standard": 1,
       "verified-local-routine": 3,
@@ -13,28 +13,45 @@
       "published": 1
     },
     "byTopic": {
-      "servicios": 6,
+      "servicios": 7,
+      "agenda": 1,
       "turismo": 5,
       "salud": 3,
-      "sociedad": 41,
-      "politica": 11,
-      "policiales": 16,
+      "sociedad": 42,
+      "politica": 12,
+      "policiales": 15,
       "cultura": 2,
-      "deportes": 21,
+      "deportes": 22,
       "economia": 3,
       "educacion": 1
     },
     "byTerritory": {
+      "Provincia": 11,
       "Rio Grande": 28,
       "Ushuaia": 6,
-      "Provincia": 8,
       "Antartida": 1,
-      "Nacionales": 41,
+      "Nacionales": 42,
       "Tolhuin": 2,
       "Malvinas": 3,
       "Mundo": 20
     },
     "topStories": [
+      {
+        "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
+        "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
+      {
+        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+        "topic": "agenda",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification"
+      },
       {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -98,26 +115,72 @@
         "territory": "Antartida",
         "newsworthinessScore": 98,
         "status": "pending-verification"
-      },
-      {
-        "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
-        "headlineSeed": "Pronóstico del tiempo en Tierra del Fuego para 9 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Provincia",
-        "newsworthinessScore": 96,
-        "status": "verified-standard"
-      },
-      {
-        "storyId": "general|cerro castor|el rompehielos la fiesta|nacional|tierra del fuego|tierra del fuego aias|informa|10 de julio",
-        "headlineSeed": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
-        "topic": "turismo",
-        "territory": "Provincia",
-        "newsworthinessScore": 96,
-        "status": "verified-local-routine"
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
+      "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Clima CDMX",
+        "República Mexicana",
+        "Gobierno de Yucatán",
+        "Secretaría de Gestión Integral de Riesgos",
+        "SMN",
+        "Jalisco",
+        "Mexico"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "newsworthinessScore": 100,
+      "status": "pending-verification"
+    },
+    {
+      "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+      "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "OTAN",
+        "Moscu",
+        "Estados Unidos"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 13,
+      "newsworthinessScore": 100,
+      "status": "pending-verification"
+    },
     {
       "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
       "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -384,9 +447,9 @@
     },
     {
       "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
-      "headlineSeed": "Pronóstico del tiempo en Tierra del Fuego para 9 de julio de 2026",
+      "headlineSeed": "Detrás del respaldo a la gestión, el FMI le viene a exigir a Milei tres puntos clave para sostener el programa conjunto",
       "topic": "servicios",
-      "subtopic": "clima",
+      "subtopic": "servicios",
       "territory": "Provincia",
       "primaryEntities": [],
       "eventType": "weather-forecast",
@@ -650,39 +713,6 @@
       "searchPotentialScore": 15,
       "newsworthinessScore": 88,
       "status": "verified"
-    },
-    {
-      "storyId": "crime|justicia federal|rio grande|tierra del fuego|argentina|chile|informa|26 de junio",
-      "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Justicia Federal",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Hito XIII",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Chile"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-09T16:51:37.965Z",
-      "lastSeenAt": "2026-07-09T16:51:37.965Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "newsworthinessScore": 86,
-      "status": "pending-verification"
     },
     {
       "storyId": "legislative|reino unido|tierra|fuego|casa rosada|rio grande|ushuaia|informa|octubre",
@@ -1292,6 +1322,42 @@
       "status": "pending-verification"
     },
     {
+      "storyId": "election|banco central la|banco central|banco|milei|julie kozack|buenos aires|argentina|informa|12 09 900",
+      "headlineSeed": "El FMI elogió el plan financiero del gobierno de Milei y la reforma del Banco Central",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Julie Kozack",
+        "Banco Central La",
+        "Banco Central",
+        "Banco",
+        "Banco Central de la República Argentina",
+        "Gobierno",
+        "ANSES",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "newsworthinessScore": 77,
+      "status": "pending-verification"
+    },
+    {
       "storyId": "election|sindicato de petroleros y gas privado|gobierno|ministerio de economia|milei|argentina|egipto|informa|02 11 900",
       "headlineSeed": "La CGT, entre su pelea contra Milei y una interna que no se apaga",
       "topic": "politica",
@@ -1496,6 +1562,75 @@
       "status": "pending-verification"
     },
     {
+      "storyId": "crime|justicia federal|rio grande|tierra del fuego|argentina|chile|informa|26 de junio",
+      "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Justicia Federal",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Hito XIII",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Chile"
+      ],
+      "eventType": "high-risk",
+      "firstSeenAt": "2026-07-09T16:51:37.965Z",
+      "lastSeenAt": "2026-07-09T16:58:55.112Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "newsworthinessScore": 74,
+      "status": "pending-verification"
+    },
+    {
+      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
+      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Municipalidad de Ushuaia",
+        "Gobierno de Milei y de",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Pasaje Drake",
+        "Atlantico Sur",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T16:51:37.966Z",
+      "lastSeenAt": "2026-07-09T16:51:37.966Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "newsworthinessScore": 74,
+      "status": "published"
+    },
+    {
       "storyId": "crime|mexico|adolescentes|jalisco|familiares|argentina|informa|30 de junio",
       "headlineSeed": "Adolescentes de secundaria reportados como desaparecidos regresan a casa en Jalisco: acudieron a “trabajar a la sierra”",
       "topic": "policiales",
@@ -1631,6 +1766,36 @@
       "searchPotentialScore": 8,
       "newsworthinessScore": 74,
       "status": "verified"
+    },
+    {
+      "storyId": "sports-result|francia|2026-07-09",
+      "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Francia Con",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 5,
+      "newsworthinessScore": 72,
+      "status": "pending-verification"
     },
     {
       "storyId": "sports-result|francia|5 de julio de 2026",
@@ -2425,42 +2590,6 @@
       "searchPotentialScore": 8,
       "newsworthinessScore": 64,
       "status": "verified"
-    },
-    {
-      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
-      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Municipalidad de Ushuaia",
-        "Gobierno de Milei y de",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida",
-        "Pasaje Drake",
-        "Atlantico Sur",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:51:37.966Z",
-      "lastSeenAt": "2026-07-09T16:51:37.966Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "useful-institutional",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "newsworthinessScore": 62,
-      "status": "published"
     },
     {
       "storyId": "sports-result|espana|octubre",
