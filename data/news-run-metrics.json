@@ -1,91 +1,452 @@
 {
-  "generatedAt": "2026-07-09T22:53:17.778Z",
+  "generatedAt": "2026-07-09T23:58:43.951Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "29055710580",
-    "headSha": "911eed628799e3ea04259782fe0947010e177e9d"
+    "runId": "29058689340",
+    "headSha": "9268375312cebfc0d22252c410f0a32c088a2988"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 29,
-    "discardedDuplicate": 5,
-    "discardedQuality": 19,
+    "candidatesDetected": 32,
+    "discardedDuplicate": 2,
+    "discardedQuality": 18,
     "discardedQualityByReason": {
-      "stale-dated-discovery": 11,
-      "evergreen-or-stale-outside-news-window": 2,
-      "weak-title,short-body": 2,
-      "listing-url,weak-title": 1,
-      "stale-hard-news": 3
+      "stale-dated-discovery": 7,
+      "evergreen-or-stale-outside-news-window": 4,
+      "stale-hard-news": 5,
+      "short-body": 1,
+      "listing-url": 1
     },
     "discardedBySourceAndReason": {
       "bing-antartida": {
         "stale-dated-discovery": 3
       },
       "bing-tolhuin": {
-        "stale-dated-discovery": 2
-      },
-      "bing-malvinas": {
-        "stale-dated-discovery": 3
-      },
-      "bing-rio-grande": {
-        "evergreen-or-stale-outside-news-window": 2,
-        "weak-title,short-body": 1
-      },
-      "bing-ushuaia": {
-        "stale-dated-discovery": 1
-      },
-      "mundo-bing": {
-        "weak-title,short-body": 1,
-        "listing-url,weak-title": 1,
-        "stale-dated-discovery": 1
+        "evergreen-or-stale-outside-news-window": 1
       },
       "bing-tdf": {
         "stale-hard-news": 3,
+        "evergreen-or-stale-outside-news-window": 1
+      },
+      "bing-ushuaia": {
+        "stale-hard-news": 1
+      },
+      "mundo-clarin": {
         "stale-dated-discovery": 1
+      },
+      "bing-rio-grande": {
+        "evergreen-or-stale-outside-news-window": 1,
+        "stale-dated-discovery": 1
+      },
+      "bing-malvinas": {
+        "stale-dated-discovery": 1,
+        "evergreen-or-stale-outside-news-window": 1
+      },
+      "mundo-google": {
+        "short-body": 1
+      },
+      "mundo-bing": {
+        "stale-dated-discovery": 1,
+        "stale-hard-news": 1,
+        "listing-url": 1
       }
     },
-    "discardedGenericTitle": 1,
-    "discardedEvergreen": 13,
-    "eventsGrouped": 4,
-    "verified": 0,
-    "pendingVerification": 3,
-    "pendingMatchedFromHistory": 0,
-    "conflicting": 1,
-    "published": 0,
-    "publishedByLane": {},
-    "verifiedByLane": {},
-    "pendingByLane": {
-      "standard": 3
+    "discardedGenericTitle": 0,
+    "discardedEvergreen": 11,
+    "eventsGrouped": 12,
+    "verified": 2,
+    "pendingVerification": 10,
+    "pendingMatchedFromHistory": 2,
+    "conflicting": 0,
+    "published": 1,
+    "publishedByLane": {
+      "strict": 1
     },
-    "fastPendingAudit": [],
+    "verifiedByLane": {
+      "strict": 1,
+      "standard": 1
+    },
+    "pendingByLane": {
+      "strict": 3,
+      "fast": 1,
+      "standard": 6
+    },
+    "fastPendingAudit": [
+      {
+        "eventKey": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|07 de julio de 2026",
+        "title": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
+        "sourceId": "bing-tolhuin",
+        "publisherDomain": "sur54.com",
+        "tier": "B",
+        "competence": [
+          "municipal",
+          "provincial"
+        ],
+        "territory": "Rio Grande",
+        "topic": "deportes",
+        "eventType": "agenda",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      }
+    ],
+    "freshCandidates": 14,
+    "staleDiscarded": 16,
+    "sourceHealth": {
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "tolhuin-oficial": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-tdf": {
+        "detected": 5,
+        "materialized": 5,
+        "freshCandidates": 1,
+        "qualityDiscarded": 4,
+        "staleDiscarded": 4,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.2,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.8
+      },
+      "bing-ushuaia": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.5,
+        "publicationContributionRate": 0.5,
+        "staleDiscardRate": 0.5
+      },
+      "el-rompehielos": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 2,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.5
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 1,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
+      },
+      "infobae-tdf": {
+        "detected": 1,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-antartida": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 3,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 1
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-google": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-bing": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
+      },
+      "gobierno-tdf-oficial": {
+        "detected": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "actualidad-tdf": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "rio-grande-oficial": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      }
+    },
+    "sourceDeprioritized": [],
     "drafts": 0,
     "modelErrors": 0,
-    "factualValidationErrors": 0,
+    "factualValidationErrors": 1,
     "discardedImportance": 0,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 0,
-    "aiCalls": 0,
-    "imageSelections": [],
-    "agendaStories": 136,
-    "newsworthinessAverage": 0,
-    "newsworthinessTop": [],
-    "corroborationSearches": 2,
-    "corroborationFound": 1,
-    "corroborationVerified": 0,
-    "corroborationConflicts": 1,
-    "corroborationNoResult": 1,
-    "byCategory": {},
+    "aiAttempts": 2,
+    "aiCalls": 2,
+    "imageSelections": [
+      {
+        "title": "Nuevo vuelo directo entre San Pablo y Ushuaia: un hito para el turismo fueguino",
+        "strategy": "article-og",
+        "query": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+        "score": 82,
+        "source": "https://media.diariopopular.com.ar/p/e2599d942785357fd5ce20cd1d9b7f4f/adjuntos/143/imagenes/008/248/0008248166/1200x675/smart/multimedianormalb51ece2b52de00a3bm9ybwfslndlyna.webp"
+      }
+    ],
+    "agendaStories": 146,
+    "newsworthinessAverage": 90,
+    "newsworthinessTop": [
+      {
+        "title": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+        "eventKey": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
+        "score": 100,
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "lane": "strict"
+      },
+      {
+        "title": "Israel proyecta abrir un consulado en Ushuaia | El Dia",
+        "eventKey": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
+        "score": 80,
+        "topic": "politica",
+        "territory": "Ushuaia",
+        "lane": "standard"
+      }
+    ],
+    "corroborationSearches": 3,
+    "corroborationFound": 2,
+    "corroborationVerified": 1,
+    "corroborationConflicts": 0,
+    "corroborationNoResult": 2,
+    "corroborationAttempts": [
+      {
+        "eventKey": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
+        "title": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+        "priorityRank": 1,
+        "corroborationQuery": "San Pablo Ushuaia Lo Gobierno Argentina Brasil Ushuaia Tierra del Fuego celebro directo nuevo pablo scioli vuelo",
+        "corroborationReason": "newsworthiness=100; freshness=8h; territory=Ushuaia; impact=19; corroborability=10; pendingAge=8h; attempts=0",
+        "found": 2,
+        "verified": true,
+        "status": "verified-strict"
+      },
+      {
+        "eventKey": "service|gobierno|fogon patrio|argentina|informa|07 09 900",
+        "title": "Llaryora: \"Se está cayendo el empleo, es muy difícil llegar a fin de mes\"",
+        "priorityRank": 2,
+        "corroborationQuery": "Fogón Patrio Gobierno Argentina cayendo dificil empleo llaryora llegar",
+        "corroborationReason": "newsworthiness=94; freshness=1h; territory=Nacionales; impact=19; corroborability=10; pendingAge=1h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|9 de julio",
+        "title": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
+        "priorityRank": 3,
+        "corroborationQuery": "Martín Pérez Argentina Rio Grande Tierra del Fuego animo fecha honramos intendente produccion radiouniversidad",
+        "corroborationReason": "newsworthiness=86; freshness=14h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=14h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      }
+    ],
+    "conflictsByField": {
+      "dates": 3,
+      "percentages": 1
+    },
+    "criticalConflicts": 0,
+    "nonCriticalDifferences": 4,
+    "resolvedComplementaryFacts": 20,
+    "latency": {
+      "discoveryToVerificationMinutes": {
+        "count": 2,
+        "avg": 35.4,
+        "p50": 70.8,
+        "max": 70.8
+      },
+      "verificationToPublicationMinutes": {
+        "count": 2,
+        "avg": 0.2,
+        "p50": 0.3,
+        "max": 0.3
+      },
+      "discoveryToPublicationMinutes": {
+        "count": 2,
+        "avg": 0.2,
+        "p50": 0.3,
+        "max": 0.3
+      }
+    },
+    "byCategory": {
+      "Ushuaia": 1
+    },
     "publishedLast3hBeforeRun": 0,
     "publishedLast6hBeforeRun": 0,
     "publishedLast12hBeforeRun": 5,
     "publishedLast24hBeforeRun": 7,
-    "hoursSinceLastPublicationBeforeRun": 6,
+    "hoursSinceLastPublicationBeforeRun": 7.1,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -187,15 +548,15 @@
         }
       }
     ],
-    "agendaInvalidStories": 16,
+    "agendaInvalidStories": 18,
     "technicalSuccess": true,
-    "editorialOutcome": "verification-starved"
+    "editorialOutcome": "published"
   },
   "budget": {
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 0,
+    "discoveryAiUsed": 2,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -205,13 +566,13 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 29,
-    "totalCandidatesBeforeLimit": 29
+    "candidatesMaterialized": 32,
+    "totalCandidatesBeforeLimit": 32
   },
   "reasonNoMorePublished": [
-    "3 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "5 candidato(s) descartados por duplicado/similitud",
-    "19 candidato(s) descartados por causas especificas (stale-dated-discovery: 11, evergreen-or-stale-outside-news-window: 2, weak-title,short-body: 2, listing-url,weak-title: 1, stale-hard-news: 3)"
+    "10 evento(s) quedaron pendientes de segunda fuente",
+    "2 candidato(s) descartados por duplicado/similitud",
+    "18 candidato(s) descartados por causas especificas (stale-dated-discovery: 7, evergreen-or-stale-outside-news-window: 4, stale-hard-news: 5, short-body: 1, listing-url: 1)",
+    "1 candidato(s) bloqueados por validacion factual"
   ]
 }

@@ -1,41 +1,42 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T22:53:17.749Z",
+  "generatedAt": "2026-07-09T23:58:43.904Z",
   "summary": {
-    "totalStories": 136,
+    "totalStories": 146,
     "byStatus": {
-      "pending-verification": 80,
-      "agenda-invalid": 16,
+      "agenda-invalid": 18,
+      "pending-verification": 87,
       "verified": 33,
       "conflicting-sources": 3,
       "verified-local-routine": 3,
+      "verified-standard": 1,
       "published": 1
     },
     "byTopic": {
-      "servicios": 10,
+      "servicios": 12,
       "turismo": 7,
       "salud": 3,
       "agenda": 3,
-      "sociedad": 47,
-      "politica": 18,
-      "policiales": 15,
+      "politica": 20,
+      "sociedad": 50,
+      "policiales": 16,
+      "deportes": 29,
       "cultura": 2,
-      "deportes": 27,
       "economia": 3,
       "educacion": 1
     },
     "byTerritory": {
-      "Rio Grande": 30,
-      "Ushuaia": 9,
+      "Ushuaia": 10,
+      "Rio Grande": 33,
       "Antartida": 1,
-      "Provincia": 6,
-      "Mundo": 50,
-      "Nacionales": 33,
+      "Provincia": 7,
+      "Nacionales": 34,
+      "Mundo": 53,
       "Tolhuin": 2,
       "Malvinas": 4,
-      "unknown": 1
+      "unknown": 2
     },
-    "invalidStories": 16,
+    "invalidStories": 18,
     "topStories": [
       {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
@@ -164,35 +165,17 @@
         }
       },
       {
-        "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
-        "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+        "storyId": "service|gobierno|fogon patrio|argentina|informa|07 09 900",
+        "headlineSeed": "Llaryora: \"Se está cayendo el empleo, es muy difícil llegar a fin de mes\"",
         "topic": "servicios",
-        "territory": "Mundo",
+        "territory": "Nacionales",
         "newsworthinessScore": 94,
         "status": "pending-verification",
         "scoreBreakdown": {
-          "publicInterest": 23,
-          "localRelevance": 7,
+          "publicInterest": 18,
+          "localRelevance": 12,
           "serviceValue": 20,
           "socialPotential": 7,
-          "searchPotential": 15,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
-        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
-        "topic": "agenda",
-        "territory": "Mundo",
-        "newsworthinessScore": 93,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 7,
-          "serviceValue": 20,
-          "socialPotential": 9,
           "searchPotential": 15,
           "recency": 15,
           "sourceStrength": 3,
@@ -216,10 +199,75 @@
           "sourceStrength": 3,
           "diversity": 4
         }
+      },
+      {
+        "storyId": "service|onu|nueva york|estados unidos|informa|7 de julio de 2026",
+        "headlineSeed": "¿Cómo un rascacielos en el corazón de Manhattan pudo quedar tan cerca del colapso?",
+        "topic": "servicios",
+        "territory": "Mundo",
+        "newsworthinessScore": 92,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 21,
+          "localRelevance": 7,
+          "serviceValue": 20,
+          "socialPotential": 7,
+          "searchPotential": 15,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
+      "headlineSeed": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+      "topic": "servicios",
+      "subtopic": "movilidad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "San Pablo",
+        "Gobierno",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Malvinas",
+        "Argentina",
+        "Brasil"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-09T23:58:25.817Z",
+      "lastSeenAt": "2026-07-09T23:58:25.817Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 100,
+      "status": "agenda-invalid",
+      "sourceStatus": "published",
+      "validationReasons": [
+        "topic-event-mismatch"
+      ]
+    },
     {
       "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
       "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -667,23 +715,19 @@
       ]
     },
     {
-      "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
-      "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+      "storyId": "service|gobierno|fogon patrio|argentina|informa|07 09 900",
+      "headlineSeed": "Llaryora: \"Se está cayendo el empleo, es muy difícil llegar a fin de mes\"",
       "topic": "servicios",
-      "subtopic": "clima",
-      "territory": "Mundo",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Clima CDMX",
-        "República Mexicana",
-        "Gobierno de Yucatán",
-        "Secretaría de Gestión Integral de Riesgos",
-        "SMN",
-        "Jalisco",
-        "Mexico"
+        "Fogón Patrio",
+        "Gobierno",
+        "Argentina"
       ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "eventType": "service",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -691,14 +735,14 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
+      "publicInterestScore": 18,
+      "localRelevanceScore": 12,
       "serviceValueScore": 20,
       "socialPotentialScore": 7,
       "searchPotentialScore": 15,
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
+        "publicInterest": 18,
+        "localRelevance": 12,
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
@@ -707,46 +751,6 @@
         "diversity": 4
       },
       "newsworthinessScore": 94,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
-      "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "OTAN",
-        "Moscu",
-        "Estados Unidos"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "serviceValue": 20,
-        "socialPotential": 9,
-        "searchPotential": 15,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -830,6 +834,135 @@
         "diversity": 4
       },
       "newsworthinessScore": 92,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather|gobierno de yucatan|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|jalisco|mexico|informa|9 de julio",
+      "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy 9 de julio: estados con lluvias intensas, tormentas eléctricas y posible granizo",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Clima CDMX",
+        "República Mexicana",
+        "Gobierno de Yucatán",
+        "Secretaría de Gestión Integral de Riesgos",
+        "SMN",
+        "Jalisco",
+        "Mexico"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+      "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "OTAN",
+        "Moscu",
+        "Estados Unidos"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 9,
+        "searchPotential": 15,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 90,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|9 de julio",
+      "headlineSeed": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Martín Pérez",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Atlantico Sur",
+        "Argentina"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -1186,6 +1319,100 @@
       "validationReasons": []
     },
     {
+      "storyId": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|07 de julio de 2026",
+      "headlineSeed": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Dirección Provincial",
+        "Desarrollo Deportivo",
+        "Gobierno",
+        "Secretaría de Deportes de la",
+        "Municipio",
+        "Secretaría",
+        "Rio Grande",
+        "Ushuaia",
+        "Tolhuin",
+        "Tierra del Fuego"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|argentina|08 de julio de 2026",
+      "headlineSeed": "\"Estamos en el camino correcto para posicionar a Tierra del Fuego a nivel internacional” | Sur54.com | Portal de noticias",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Mónica Urquiza",
+        "Instituto Fueguino",
+        "Dante Querciali",
+        "Alberto Fajerman",
+        "Gobierno",
+        "Legislatura Provincial",
+        "Municipio",
+        "Argentina",
+        "Brasil",
+        "Rio Grande"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T23:58:25.817Z",
+      "lastSeenAt": "2026-07-09T23:58:25.817Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "service|brasil|peru|informa|9 de julio",
       "headlineSeed": "Lima: este es el precio de la gasolina este jueves 9 de julio",
       "topic": "servicios",
@@ -1217,53 +1444,6 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 12,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
-      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Buenos Aires",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.960Z",
-      "lastSeenAt": "2026-07-09T22:47:39.960Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -1602,6 +1782,52 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
+      "headlineSeed": "Israel proyecta abrir un consulado en Ushuaia | El Dia",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Buenos Aires",
+        "Atlantico Sur",
+        "Argentina",
+        "Reino Unido"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T22:47:39.960Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 80,
+      "status": "verified-standard",
+      "validationReasons": []
     },
     {
       "storyId": "general|objetos|rio grande noticias|rio grande|rio grande|informa|julio",
@@ -1964,53 +2190,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|banco central la|banco central|banco|milei|julie kozack|buenos aires|argentina|informa|12 09 900",
-      "headlineSeed": "El FMI elogió el plan financiero del gobierno de Milei y la reforma del Banco Central",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Julie Kozack",
-        "Banco Central La",
-        "Banco Central",
-        "Banco",
-        "Banco Central de la República Argentina",
-        "Gobierno",
-        "ANSES",
-        "Buenos Aires",
-        "Argentina"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|ganaderas|tierra|fuego piden|tierra del fuego|tierra del fuego aias|informa|2026-07-06",
       "headlineSeed": "Ganaderas demandan al fisco tras incendio atribuido a ejercicio militar en Tierra del Fuego",
       "topic": "economia",
@@ -2273,51 +2452,51 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|justicia federal|rio grande|tierra del fuego|argentina|chile|informa|26 de junio",
-      "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
+      "storyId": "election|banco central la|banco central|banco|milei|julie kozack|buenos aires|argentina|informa|12 09 900",
+      "headlineSeed": "El FMI elogió el plan financiero del gobierno de Milei y la reforma del Banco Central",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Justicia Federal",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Hito XIII",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Chile"
+        "Milei",
+        "Julie Kozack",
+        "Banco Central La",
+        "Banco Central",
+        "Banco",
+        "Banco Central de la República Argentina",
+        "Gobierno",
+        "ANSES",
+        "Buenos Aires",
+        "Argentina"
       ],
-      "eventType": "high-risk",
-      "firstSeenAt": "2026-07-09T16:51:37.965Z",
-      "lastSeenAt": "2026-07-09T16:58:55.112Z",
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
       "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
+        "publicInterest": 23,
+        "localRelevance": 12,
         "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 15,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 74,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "eventtype-risk-confusion"
-      ]
+      "status": "pending-verification",
+      "validationReasons": []
     },
     {
       "storyId": "crime|policia de|fiscalia|policia del chaco|axel gonzalez|maria gomez|informa|9 de julio",
@@ -2632,6 +2811,53 @@
       "newsworthinessScore": 72,
       "status": "pending-verification",
       "validationReasons": []
+    },
+    {
+      "storyId": "crime|justicia federal|rio grande|tierra del fuego|argentina|chile|informa|26 de junio",
+      "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Justicia Federal",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Hito XIII",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Chile"
+      ],
+      "eventType": "high-risk",
+      "firstSeenAt": "2026-07-09T16:51:37.965Z",
+      "lastSeenAt": "2026-07-09T16:58:55.112Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "eventtype-risk-confusion"
+      ]
     },
     {
       "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
@@ -3175,6 +3401,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|fiscalia|fiscalia regional coatzacoalcos|caso roxana guzman|argentina|venezuela|informa|2 de junio de 2026",
+      "headlineSeed": "Caso Roxana Guzmán: Fiscalía logra vincular a proceso a los 8 detenidos por el secuestro y asesinato",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Caso Roxana Guzmán",
+        "Fiscalía",
+        "Fiscalía Regional Coatzacoalcos",
+        "Argentina",
+        "Venezuela",
+        "Mexico"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-09T23:58:25.819Z",
+      "lastSeenAt": "2026-07-09T23:58:25.819Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|camara|camara de representantes|fiscalia|cambio radical|colombia|estados unidos|informa|21 de junio de 2026",
       "headlineSeed": "Congresista de Cambio Radical le pidió a Cepeda no asumir curul como senador: “Desconfía de nuestras instituciones, pero sí se quiere posesionar”",
       "topic": "politica",
@@ -3488,6 +3757,47 @@
         "diversity": 4
       },
       "newsworthinessScore": 68,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|paris|tierra del fuego aias|argentina|estados unidos|informa|2026-07-09",
+      "headlineSeed": "El árbol de la Patagonia argentina que desafía el tiempo: su especie es la segunda más antigua del mundo",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Paris",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -4191,49 +4501,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|espana|2026-07-09",
-      "headlineSeed": "Cuatro detenidos tras una persecución en Alicante por posesión de ocho fusiles de guerra",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Cuatro",
-        "Alicante",
-        "Estados Unidos",
-        "Francia",
-        "Espana",
-        "Argentina"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T08:20:33.480Z",
-      "lastSeenAt": "2026-07-09T08:20:33.480Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|argentina|diciembre",
       "headlineSeed": "Zelarayán: \"Se vienen desafíos importantes y este grupo sigue con hambre de gloria\"",
       "topic": "deportes",
@@ -4323,6 +4590,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|banco central|banco central de la republica argentina|banco|argentina|informa|06 12 900",
+      "headlineSeed": "Los préstamos al consumo no despegan, en un contexto de altísima morosidad",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco Central",
+        "Banco Central de la República Argentina",
+        "Banco",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 58,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|07 07 900",
       "headlineSeed": "Milei confirmó que la Selección Argentina está invitada a la Casa Rosada \"sin interferencia política\"",
       "topic": "deportes",
@@ -4368,6 +4676,45 @@
       "newsworthinessScore": 57,
       "status": "pending-verification",
       "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|espana|2026-07-09",
+      "headlineSeed": "Cuatro detenidos tras una persecución en Alicante por posesión de ocho fusiles de guerra",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-09T08:20:33.480Z",
+      "lastSeenAt": "2026-07-09T23:58:25.819Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 4,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 4,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "sports-result|mexico|9 de julio",
@@ -4806,6 +5153,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|the new york times|daily news|inteligencia artificial|internacional|estados unidos|informa|2026-07-09",
+      "headlineSeed": "Dura batalla legal de los medios de comunicación contra OpenAI por el uso sin pagar de contenidos bajo derecho de autor",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "The New York Times",
+        "Daily News",
+        "Inteligencia Artificial",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 52,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|secretaria de gestion integral de riesgos|smn|clima cdmx|republica mexicana|mexico|informa|9 de julio",
       "headlineSeed": "EN VIVO | Clima CDMX y resto de México hoy jueves 9 de julio: se activa Alerta Naranja por lluvias intensas en la capital",
       "topic": "sociedad",
@@ -5183,6 +5572,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|torneo clausura|brasil|chile|informa|9 de julio",
+      "headlineSeed": "El “cooling break” llegaría a la Liga 1: la poderosa razón por la cual se instalaría en el torneo peruano",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Torneo Clausura",
+        "Brasil",
+        "Chile",
+        "Peru",
+        "Mexico",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T23:58:25.820Z",
+      "lastSeenAt": "2026-07-09T23:58:25.820Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 51,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "service|ministerio de salud|argentina|brasil|informa|2026-07-09",
       "headlineSeed": "Apuestas en el Mundial 2026: cómo reconocer si tienes una adicción y qué hacer para evitarlo",
       "topic": "deportes",
@@ -5217,47 +5649,6 @@
         "serviceValue": 3,
         "socialPotential": 9,
         "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 51,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|francia|2026-07-09",
-      "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Francia Con",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -5397,6 +5788,47 @@
         "diversity": 4
       },
       "newsworthinessScore": 51,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|francia|2026-07-09",
+      "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Francia Con",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 48,
       "status": "pending-verification",
       "validationReasons": []
     },
