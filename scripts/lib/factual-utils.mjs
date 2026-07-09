@@ -632,8 +632,32 @@ function diffValues(field, a = [], b = []) {
   return [...leftValues, ...rightValues].filter(Boolean);
 }
 
-export function findFactConflicts(factSets = []) {
-  const conflicts = [];
+function strictEventType(eventType = '') {
+  return ['sports-result', 'casualty', 'crime', 'election', 'legal-policy', 'legislative', 'international-conflict'].includes(eventType);
+}
+
+function classifyDifferenceSeverity(field, left = {}, right = {}) {
+  const eventTypes = new Set([left.eventType || 'general', right.eventType || 'general']);
+  if (field === 'scores') return 'critical';
+  if (['teams', 'sportsTeams'].includes(field)) {
+    return eventTypes.has('sports-result') ? 'critical' : 'non-critical';
+  }
+  if (field === 'casualties') return 'critical';
+  if (field === 'laws') return eventTypes.has('legal-policy') || eventTypes.has('legislative') || eventTypes.has('election') ? 'critical' : 'non-critical';
+  if (field === 'dates') {
+    return [...eventTypes].some((eventType) => ['sports-result', 'casualty', 'crime', 'election', 'legal-policy', 'legislative', 'weather-forecast'].includes(eventType))
+      ? 'critical'
+      : 'non-critical';
+  }
+  if (['money', 'percentages', 'numbers'].includes(field)) {
+    return [...eventTypes].some(strictEventType) ? 'critical' : 'non-critical';
+  }
+  return 'non-critical';
+}
+
+export function findFactDifferences(factSets = []) {
+  const criticalConflicts = [];
+  const nonCriticalDifferences = [];
   for (let i = 0; i < factSets.length; i++) {
     for (let j = i + 1; j < factSets.length; j++) {
       const left = factSets[i];
@@ -642,16 +666,34 @@ export function findFactConflicts(factSets = []) {
         if (['sportsTeams', 'teams'].includes(field) && left.eventType !== 'sports-result' && right.eventType !== 'sports-result') continue;
         const values = diffValues(field, left[field], right[field]);
         if (values.length > 0) {
-          conflicts.push({
+          const difference = {
             field,
             values: unique(values),
-            severity: 'critical'
-          });
+            severity: classifyDifferenceSeverity(field, left, right)
+          };
+          if (difference.severity === 'critical') criticalConflicts.push(difference);
+          else nonCriticalDifferences.push(difference);
         }
       }
     }
   }
-  return conflicts;
+  return { criticalConflicts, nonCriticalDifferences };
+}
+
+export function findFactConflicts(factSets = []) {
+  return findFactDifferences(factSets).criticalConflicts;
+}
+
+function findComplementaryFacts(factSets = [], consensusFacts = {}) {
+  if (factSets.length < 2) return [];
+  const complementary = [];
+  for (const field of CRITICAL_FIELDS) {
+    const consensus = normalizedSet(consensusFacts[field] || []);
+    const values = unique(factSets.flatMap((facts) => facts[field] || []))
+      .filter((value) => !consensus.has(normalizeText(value)));
+    if (values.length > 0) complementary.push({ field, values });
+  }
+  return complementary;
 }
 
 function consensusValues(factSets = [], field) {
@@ -693,6 +735,7 @@ export function compareFactSets(factSets = []) {
   consensusFacts.eventType = unionFacts.eventType;
   consensusFacts.action = unionFacts.action;
   consensusFacts.rawSummary = unionFacts.rawSummary;
+  const differences = findFactDifferences(factSets);
 
   return {
     unionFacts,
@@ -705,7 +748,9 @@ export function compareFactSets(factSets = []) {
       sourceFacts.rawSummary = facts.rawSummary || '';
       return sourceFacts;
     }),
-    conflictingFacts: findFactConflicts(factSets)
+    conflictingFacts: differences.criticalConflicts,
+    nonCriticalDifferences: differences.nonCriticalDifferences,
+    resolvedComplementaryFacts: findComplementaryFacts(factSets, consensusFacts)
   };
 }
 
@@ -723,6 +768,10 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
   const hasCriticalConflict = conflicts.some((conflict) => conflict.severity === 'critical');
   const eventType = factSets.find((facts) => isSpecificEventType(facts.eventType))?.eventType || 'general';
   const verifiedFacts = riskLevel === 'high' ? comparison.consensusFacts : comparison.unionFacts;
+  const diagnostics = {
+    nonCriticalDifferences: comparison.nonCriticalDifferences,
+    resolvedComplementaryFacts: comparison.resolvedComplementaryFacts
+  };
 
   if (hasCriticalConflict) {
     return {
@@ -735,7 +784,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       consensusFacts: comparison.consensusFacts,
       sourceSpecificFacts: comparison.sourceSpecificFacts,
       conflictingFacts: conflicts,
-      verifiedFacts
+      verifiedFacts,
+      ...diagnostics
     };
   }
 
@@ -755,7 +805,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
         consensusFacts: comparison.consensusFacts,
         sourceSpecificFacts: comparison.sourceSpecificFacts,
         conflictingFacts: [],
-        verifiedFacts
+        verifiedFacts,
+        ...diagnostics
       };
     }
 
@@ -769,7 +820,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       consensusFacts: comparison.consensusFacts,
       sourceSpecificFacts: comparison.sourceSpecificFacts,
       conflictingFacts: [],
-      verifiedFacts
+      verifiedFacts,
+      ...diagnostics
     };
   }
 
@@ -784,7 +836,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       consensusFacts: comparison.consensusFacts,
       sourceSpecificFacts: comparison.sourceSpecificFacts,
       conflictingFacts: [],
-      verifiedFacts
+      verifiedFacts,
+      ...diagnostics
     };
   }
 
@@ -799,7 +852,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       consensusFacts: comparison.consensusFacts,
       sourceSpecificFacts: comparison.sourceSpecificFacts,
       conflictingFacts: [],
-      verifiedFacts
+      verifiedFacts,
+      ...diagnostics
     };
   }
 
@@ -813,7 +867,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
     consensusFacts: comparison.consensusFacts,
     sourceSpecificFacts: comparison.sourceSpecificFacts,
     conflictingFacts: [],
-    verifiedFacts
+    verifiedFacts,
+    ...diagnostics
   };
 }
 
@@ -941,6 +996,7 @@ export function validateArticleAgainstFacts(ai = {}, verification = {}) {
 export function buildEventRecord({ existing = {}, eventKey, candidates = [], verification }) {
   const now = new Date();
   const firstDetectedAt = existing.firstDetectedAt || now.toISOString();
+  const verifiedAt = verification.verified ? (existing.verifiedAt || now.toISOString()) : existing.verifiedAt || null;
   const expiresAt = existing.expiresAt || new Date(now.getTime() + 48 * 60 * 60 * 1000).toISOString();
   const nextRetryAt = verification.verified
     ? null
@@ -949,6 +1005,7 @@ export function buildEventRecord({ existing = {}, eventKey, candidates = [], ver
   return {
     eventKey,
     firstDetectedAt,
+    verifiedAt,
     lastSeenAt: now.toISOString(),
     lastAttemptAt: now.toISOString(),
     nextRetryAt,
@@ -964,9 +1021,15 @@ export function buildEventRecord({ existing = {}, eventKey, candidates = [], ver
       facts: candidate.facts
     })),
     conflicts: verification.conflicts || [],
+    nonCriticalDifferences: verification.nonCriticalDifferences || [],
+    resolvedComplementaryFacts: verification.resolvedComplementaryFacts || [],
     consensusFacts: verification.consensusFacts || {},
     sourceSpecificFacts: verification.sourceSpecificFacts || [],
     conflictingFacts: verification.conflictingFacts || verification.conflicts || [],
-    verifiedFacts: verification.verifiedFacts || {}
+    verifiedFacts: verification.verifiedFacts || {},
+    corroborationAttempts: existing.corroborationAttempts || 0,
+    lastCorroborationQuery: existing.lastCorroborationQuery || '',
+    corroborationPriorityRank: existing.corroborationPriorityRank || null,
+    corroborationReason: existing.corroborationReason || ''
   };
 }

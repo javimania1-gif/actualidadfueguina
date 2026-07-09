@@ -25,6 +25,11 @@ import {
   validateAgendaStoryCoherence,
   scoreCandidateNewsworthiness
 } from '../lib/editorial-agenda.mjs';
+import {
+  buildCorroborationQuery,
+  findMatchingPendingEventKeyInRecords,
+  scoreCorroborationPriority
+} from '../lib/corroboration-utils.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -402,6 +407,145 @@ test('agenda invalida historias incoherentes y las excluye del top', () => {
   }, { now: new Date('2026-07-09T14:00:00.000Z') });
   assert.equal(agenda.summary.invalidStories, 1);
   assert.equal(agenda.summary.topStories.length, 0);
+});
+
+test('query de corroboracion no agrega Tierra del Fuego fuera de historias provinciales', () => {
+  const provincial = buildCorroborationQuery({
+    title: 'Melella reactiva la reforma constitucional fueguina',
+    facts: {
+      eventType: 'legal-policy',
+      people: ['Gustavo Melella'],
+      places: ['Tierra del Fuego']
+    },
+    source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' }
+  }, { territory: 'Provincia' });
+  assert.match(provincial, /Tierra del Fuego/);
+
+  const national = buildCorroborationQuery({
+    title: 'Milei se reune con el FMI por el Banco Central',
+    facts: {
+      eventType: 'legal-policy',
+      people: ['Javier Milei'],
+      organizations: ['FMI', 'Banco Central']
+    },
+    source: { defaultCategory: 'Nacionales' }
+  }, { territory: 'Nacionales' });
+  assert.match(national, /Milei|Javier Milei/);
+  assert.doesNotMatch(national, /Tierra del Fuego/);
+
+  const world = buildCorroborationQuery({
+    title: 'Iran lanza misiles y Khamenei advierte por el conflicto',
+    facts: {
+      eventType: 'international-conflict',
+      people: ['Khamenei'],
+      countries: ['Iran']
+    },
+    source: { defaultCategory: 'Mundo' }
+  }, { territory: 'Mundo' });
+  assert.doesNotMatch(world, /Tierra del Fuego/);
+
+  const sports = buildCorroborationQuery({
+    title: 'Argentina vencio a Egipto en el Mundial',
+    facts: {
+      eventType: 'sports-result',
+      sportsTeams: ['Argentina', 'Egipto'],
+      countries: ['Argentina', 'Egipto']
+    },
+    source: { defaultCategory: 'Deportes' }
+  }, { territory: 'Nacionales' });
+  assert.match(sports, /resultado/);
+  assert.doesNotMatch(sports, /Tierra del Fuego/);
+});
+
+test('prioridad de corroboracion favorece pendiente provincial fresco e importante', () => {
+  const provincial = scoreCorroborationPriority({
+    base: {
+      title: 'Tolhuin anuncia cortes de ruta por obras',
+      pubDate: new Date('2026-07-09T13:00:00Z'),
+      facts: { places: ['Tolhuin'], eventType: 'service' },
+      source: { defaultCategory: 'Tolhuin' }
+    },
+    newsworthiness: { territory: 'Tolhuin', newsworthinessScore: 90, publicInterestScore: 18, serviceValueScore: 20 },
+    existingEvent: { firstDetectedAt: '2026-07-09T12:00:00Z' },
+    now: new Date('2026-07-09T14:00:00Z')
+  });
+  const marginalWorld = scoreCorroborationPriority({
+    base: {
+      title: 'Celebridad comparte una foto viral',
+      pubDate: new Date('2026-07-08T12:00:00Z'),
+      facts: { countries: ['Estados Unidos'], eventType: 'general' },
+      source: { defaultCategory: 'Mundo' }
+    },
+    newsworthiness: { territory: 'Mundo', newsworthinessScore: 45, publicInterestScore: 6, serviceValueScore: 0 },
+    existingEvent: { firstDetectedAt: '2026-07-08T12:00:00Z' },
+    now: new Date('2026-07-09T14:00:00Z')
+  });
+  assert(provincial.score > marginalWorld.score);
+});
+
+test('pending historico matchea misma historia con titulos distintos', () => {
+  const records = {
+    'legal-policy|melella|reforma': {
+      status: 'pending-verification',
+      publisherDomains: ['tn.com.ar'],
+      factsBySource: [{
+        facts: {
+          title: 'Melella convoca elecciones por la reforma constitucional',
+          eventType: 'legal-policy',
+          people: ['Gustavo Melella'],
+          organizations: ['Legislatura'],
+          places: ['Tierra del Fuego']
+        }
+      }]
+    }
+  };
+  const match = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'generated-new-key',
+    title: 'Melella reactiva la reforma constitucional fueguina',
+    facts: {
+      eventType: 'legal-policy',
+      people: ['Gustavo Melella'],
+      organizations: ['Legislatura'],
+      places: ['Tierra del Fuego']
+    },
+    sourceRef: { publisherDomain: 'perfil.com' }
+  });
+  assert.equal(match, 'legal-policy|melella|reforma');
+});
+
+test('pending historico no une hechos distintos con misma persona o municipio', () => {
+  const records = {
+    'rio-grande|obra': {
+      status: 'pending-verification',
+      publisherDomains: ['local-a.com'],
+      factsBySource: [{
+        facts: {
+          title: 'Rio Grande inaugura un centro de monitoreo',
+          eventType: 'general',
+          people: ['Martin Perez'],
+          places: ['Rio Grande']
+        }
+      }]
+    }
+  };
+  const samePersonDifferentStory = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'new-person-story',
+    title: 'Martin Perez presenta el presupuesto municipal',
+    facts: { eventType: 'general', people: ['Martin Perez'], places: ['Rio Grande'] },
+    sourceRef: { publisherDomain: 'local-b.com' }
+  });
+  assert.equal(samePersonDifferentStory, 'new-person-story');
+
+  const sameMunicipalityDifferentEvent = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'new-municipality-story',
+    title: 'Rio Grande abre inscripciones para talleres culturales',
+    facts: { eventType: 'agenda', places: ['Rio Grande'] },
+    sourceRef: { publisherDomain: 'local-b.com' }
+  });
+  assert.equal(sameMunicipalityDifferentEvent, 'new-municipality-story');
 });
 
 test('agenda invalida claves weather heredadas para buques y Malvinas', () => {

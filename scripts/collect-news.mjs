@@ -48,6 +48,12 @@ import {
   saveEditorialAgenda,
   scoreCandidateNewsworthiness
 } from './lib/editorial-agenda.mjs';
+import {
+  buildCorroborationQuery,
+  findMatchingPendingEventKeyInRecords,
+  isCompatibleCorroboration,
+  scoreCorroborationPriority
+} from './lib/corroboration-utils.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
@@ -113,6 +119,10 @@ const metrics = {
   verifiedByLane: {},
   pendingByLane: {},
   fastPendingAudit: [],
+  freshCandidates: 0,
+  staleDiscarded: 0,
+  sourceHealth: {},
+  sourceDeprioritized: [],
   drafts: 0,
   modelErrors: 0,
   factualValidationErrors: 0,
@@ -133,6 +143,12 @@ const metrics = {
   corroborationVerified: 0,
   corroborationConflicts: 0,
   corroborationNoResult: 0,
+  corroborationAttempts: [],
+  conflictsByField: {},
+  criticalConflicts: 0,
+  nonCriticalDifferences: 0,
+  resolvedComplementaryFacts: 0,
+  latency: {},
   byCategory: {}
 };
 
@@ -141,12 +157,32 @@ function incrementMap(target, key, amount = 1) {
   target[normalized] = (target[normalized] || 0) + amount;
 }
 
+function sourceHealth(sourceId = '') {
+  const id = sourceId || 'unknown';
+  metrics.sourceHealth[id] ||= {
+    detected: 0,
+    materialized: 0,
+    freshCandidates: 0,
+    qualityDiscarded: 0,
+    staleDiscarded: 0,
+    verifiedContribution: 0,
+    publicationContribution: 0
+  };
+  return metrics.sourceHealth[id];
+}
+
 function recordQualityDiscard(reason, { evergreen = false, sourceId = '' } = {}) {
   metrics.discardedQuality++;
   incrementMap(metrics.discardedQualityByReason, reason);
   if (sourceId) {
     metrics.discardedBySourceAndReason[sourceId] ||= {};
     incrementMap(metrics.discardedBySourceAndReason[sourceId], reason);
+    const health = sourceHealth(sourceId);
+    health.qualityDiscarded++;
+    if (/^(stale|evergreen)/.test(reason)) {
+      health.staleDiscarded++;
+      metrics.staleDiscarded++;
+    }
   }
   if (evergreen) metrics.discardedEvergreen++;
 }
@@ -233,40 +269,14 @@ function isSimilarTitle(newTitle) {
   return isSimilarTitleShared(newTitle, existingTitles);
 }
 
-function overlapCount(left = [], right = []) {
-  const a = new Set(left.map(normalizeText).filter(Boolean));
-  const b = new Set(right.map(normalizeText).filter(Boolean));
-  return [...a].filter((value) => b.has(value)).length;
-}
-
-function fingerprintOverlap(leftTitle = '', rightTitle = '') {
-  const left = extractFingerprint(leftTitle).split('|').filter(Boolean);
-  const right = extractFingerprint(rightTitle).split('|').filter(Boolean);
-  return overlapCount(left, right);
-}
-
 function findMatchingPendingEventKey({ eventKey, facts = {}, title = '', sourceRef = {} }) {
-  if (events.events?.[eventKey]?.status === 'pending-verification') return eventKey;
-  const now = Date.now();
-  for (const [existingKey, record] of Object.entries(events.events || {})) {
-    if (record.status !== 'pending-verification') continue;
-    if (record.expiresAt && new Date(record.expiresAt).getTime() < now) continue;
-    const existingDomains = new Set(record.publisherDomains || []);
-    if (sourceRef.publisherDomain && existingDomains.has(sourceRef.publisherDomain)) continue;
-    const existingFacts = record.verifiedFacts || record.consensusFacts || record.factsBySource?.[0]?.facts || {};
-    const sameType = (existingFacts.eventType || 'general') === (facts.eventType || 'general');
-    if (!sameType) continue;
-
-    const titles = (record.factsBySource || []).map((entry) => entry.facts?.title || '').filter(Boolean);
-    const titleMatch = titles.some((existingTitle) => fingerprintOverlap(title, existingTitle) >= 3);
-    const entityOverlap =
-      overlapCount(facts.organizations, existingFacts.organizations) > 0 ||
-      overlapCount(facts.people, existingFacts.people) > 0 ||
-      overlapCount(facts.places, existingFacts.places) > 0;
-
-    if (titleMatch && entityOverlap) return existingKey;
-  }
-  return eventKey;
+  return findMatchingPendingEventKeyInRecords({
+    records: events.events || {},
+    eventKey,
+    facts,
+    title,
+    sourceRef
+  });
 }
 
 await indexPublishedDocs();
@@ -279,6 +289,45 @@ metrics.publishedLast24hBeforeRun = publishedLast24hBeforeRun;
 metrics.hoursSinceLastPublicationBeforeRun = latestPublishedBeforeRun
   ? Math.round(((Date.now() - latestPublishedBeforeRun.getTime()) / (60 * 60 * 1000)) * 10) / 10
   : null;
+
+async function loadPreviousRunMetrics() {
+  try {
+    const payload = JSON.parse(await fs.readFile(path.join(ROOT, 'data/news-run-metrics.json'), 'utf8'));
+    return payload.metrics || {};
+  } catch {
+    return {};
+  }
+}
+
+const previousRunMetrics = await loadPreviousRunMetrics();
+
+function bingFreshUrl(url = '') {
+  if (!/bing\.com\/news\/search/i.test(url)) return url;
+  const parsed = new URL(url);
+  parsed.searchParams.set('format', 'rss');
+  parsed.searchParams.set('setlang', 'es-AR');
+  parsed.searchParams.set('cc', 'AR');
+  parsed.searchParams.set('freshness', 'Day');
+  parsed.searchParams.set('sortBy', 'Date');
+  return parsed.toString();
+}
+
+function sourcePenalty(source = {}) {
+  const previous = previousRunMetrics.sourceHealth?.[source.id] || {};
+  const persistentStale = (previous.detected || 0) >= 3 && (previous.staleDiscardRate || 0) >= 0.7 && (previous.freshCandidateRate || 0) <= 0.3;
+  if (persistentStale && /^bing-/.test(source.id || '')) return 30;
+  return 0;
+}
+
+function serviceRecoveryScore(candidate = {}) {
+  if ((metrics.hoursSinceLastPublicationBeforeRun ?? 999) < 6) return 0;
+  const text = normalizeText(`${candidate.item?.title || ''} ${candidate.item?.description || ''} ${candidate.source?.defaultCategory || ''}`);
+  let score = 0;
+  if (candidate.source?.mode === 'official-auto') score += 20;
+  if (/\b(agenda|actividad|actividades|curso|inscripcion|servicio|corte|ruta|vuelo|transporte|salud|educacion|cultura|turismo|municipio)\b/.test(text)) score += 15;
+  if (['Rio Grande', 'Ushuaia', 'Tolhuin', 'Provincia'].includes(candidate.source?.defaultCategory)) score += 8;
+  return score;
+}
 console.log(`Índice de deduplicación (solo publicadas): ${existingUrls.size} URLs y ${existingTitles.size} títulos.`);
 
 // ============================================================
@@ -287,7 +336,7 @@ console.log(`Índice de deduplicación (solo publicadas): ${existingUrls.size} U
 
 async function readSource(source) {
   if (source.type === 'rss') {
-    const { text } = await fetchText(source.url, { timeoutMs: source.timeoutMs || RSS_TIMEOUT_MS });
+    const { text } = await fetchText(bingFreshUrl(source.url), { timeoutMs: source.timeoutMs || RSS_TIMEOUT_MS });
     const feed = await parser.parseString(text);
     let items = (feed.items || []).map((item) => ({
       title: item.title || '',
@@ -323,48 +372,29 @@ async function materialize(item) {
 
 let corroborationSearchesUsed = 0;
 
-function buildCorroborationQuery(base = {}) {
-  const facts = base.facts || {};
-  const entities = [
-    ...(facts.people || []),
-    ...(facts.organizations || []),
-    ...(facts.places || []),
-    ...(facts.countries || [])
-  ].slice(0, 4);
-  const titleWords = extractFingerprint(base.title || facts.title || '')
-    .split('|')
-    .filter((word) => word.length > 4)
-    .slice(0, 6);
-  return uniqueStrings([...entities, ...titleWords, 'Tierra del Fuego']).join(' ').slice(0, 180);
-}
-
-function isCompatibleCorroboration(base = {}, candidate = {}, existingDomains = new Set()) {
-  const domain = candidate.sourceRef?.publisherDomain || '';
-  if (!domain || existingDomains.has(domain)) return false;
-  const baseType = base.facts?.eventType || 'general';
-  const candidateType = candidate.facts?.eventType || 'general';
-  if (baseType !== 'general' && candidateType !== 'general' && baseType !== candidateType) return false;
-  const titleOverlap = fingerprintOverlap(base.title || base.facts?.title || '', candidate.title || candidate.facts?.title || '');
-  const entityOverlap =
-    overlapCount(base.facts?.organizations, candidate.facts?.organizations) > 0 ||
-    overlapCount(base.facts?.people, candidate.facts?.people) > 0 ||
-    overlapCount(base.facts?.places, candidate.facts?.places) > 0 ||
-    overlapCount(base.facts?.countries, candidate.facts?.countries) > 0;
-  return titleOverlap >= 2 || entityOverlap;
-}
-
-async function findActiveCorroborationCandidates({ eventKey, group = [], verification = {} } = {}) {
+async function findActiveCorroborationCandidates({ eventKey, group = [], verification = {}, query = '', priorityRank = null, priorityReason = '' } = {}) {
   if (corroborationSearchesUsed >= MAX_CORROBORATION_SEARCHES) return [];
   const base = selectBaseCandidate(group);
   if (!base) return [];
   const score = scoreCandidateNewsworthiness(base, { verification, byCategory: metrics.byCategory });
   if ((score.newsworthinessScore || 0) < 65) return [];
-  const query = buildCorroborationQuery(base);
-  if (!query) return [];
+  const corroborationQuery = query || buildCorroborationQuery(base, score);
+  if (!corroborationQuery) return [];
 
   corroborationSearchesUsed++;
   metrics.corroborationSearches++;
-  const searchUrl = `https://www.bing.com/news/search?q=${encodeURIComponent(query)}&format=rss&setlang=es-AR&cc=AR&freshness=Day`;
+  const attemptMetric = {
+    eventKey,
+    title: base.title || base.facts?.title || '',
+    priorityRank,
+    corroborationQuery,
+    corroborationReason: priorityReason,
+    found: 0,
+    verified: false,
+    status: 'searching'
+  };
+  metrics.corroborationAttempts.push(attemptMetric);
+  const searchUrl = `https://www.bing.com/news/search?q=${encodeURIComponent(corroborationQuery)}&format=rss&setlang=es-AR&cc=AR&freshness=Day&sortBy=Date`;
   const existingDomains = new Set(group.map((candidate) => candidate.sourceRef?.publisherDomain).filter(Boolean));
   const found = [];
 
@@ -412,15 +442,18 @@ async function findActiveCorroborationCandidates({ eventKey, group = [], verific
         existingDomains.add(sourceRef.publisherDomain);
         found.push(candidate);
         metrics.corroborationFound++;
+        attemptMetric.found++;
       } catch {
         // Corroboration is opportunistic; individual fetch failures should not block the run.
       }
     }
   } catch {
     metrics.corroborationNoResult++;
+    attemptMetric.status = 'fetch-error';
   }
 
   if (found.length === 0) metrics.corroborationNoResult++;
+  if (attemptMetric.status === 'searching') attemptMetric.status = found.length > 0 ? 'found' : 'no-result';
   return found;
 }
 
@@ -461,6 +494,7 @@ await Promise.all(config.sources.map(async (source) => {
   }
   for (const item of items) {
     if (!item.link) continue;
+    sourceHealth(source.id).detected++;
     const initialKey = hash(item.link);
     const seenItem = seen.items[initialKey];
 
@@ -475,6 +509,16 @@ await Promise.all(config.sources.map(async (source) => {
 
 console.log(`Candidatos pre-filtro de todas las fuentes: ${allCandidates.length}`);
 metrics.candidatesDetected = allCandidates.length;
+allCandidates.sort((a, b) => {
+  const recovery = serviceRecoveryScore(b) - serviceRecoveryScore(a);
+  if (recovery !== 0) return recovery;
+  const penalty = sourcePenalty(a.source) - sourcePenalty(b.source);
+  if (penalty !== 0) return penalty;
+  return 0;
+});
+metrics.sourceDeprioritized = [...new Set(allCandidates
+  .filter((candidate) => sourcePenalty(candidate.source) > 0)
+  .map((candidate) => candidate.source.id))];
 if (allCandidates.length > MAX_MATERIALIZE_PER_RUN) {
   console.log(`Limitando materializacion a ${MAX_MATERIALIZE_PER_RUN}/${allCandidates.length} candidatos para evitar timeout operativo.`);
 }
@@ -494,6 +538,7 @@ for (const candidate of candidatesToMaterialize) {
   let article;
   try {
     article = await materialize(item);
+    sourceHealth(source.id).materialized++;
     await sleep(300);
   } catch (error) {
     console.warn(`[${source.name}] Error extracción ${item.link}: ${error.message}`);
@@ -581,6 +626,8 @@ for (const candidate of candidatesToMaterialize) {
     recordQualityDiscard('stale-weather-forecast', { sourceId: source.id });
     continue;
   }
+  sourceHealth(source.id).freshCandidates++;
+  metrics.freshCandidates++;
   const generatedEventKey = generateEventKey({
     facts,
     title: currentTitle,
@@ -778,6 +825,8 @@ function buildProvincialWeatherCandidate(group = [], verification = {}) {
   };
 }
 
+const eventContexts = [];
+
 for (const [eventKey, group] of eventsByKey) {
   const existingEvent = events.events?.[eventKey] || {};
   const persistedCandidates = (existingEvent.factsBySource || []).map((entry) => {
@@ -802,18 +851,75 @@ for (const [eventKey, group] of eventsByKey) {
     return true;
   });
 
-  let verification = corroborateEvent({ eventKey, candidates: combinedForVerification });
-  if (!verification.verified && verification.status !== 'conflicting-sources') {
-    const activeCandidates = await findActiveCorroborationCandidates({ eventKey, group: combinedForVerification, verification });
-    if (activeCandidates.length > 0) {
-      combinedForVerification = [...combinedForVerification, ...activeCandidates];
-      verification = corroborateEvent({ eventKey, candidates: combinedForVerification });
-      if (verification.verified) metrics.corroborationVerified++;
-      if (verification.status === 'conflicting-sources') metrics.corroborationConflicts++;
+  const verification = corroborateEvent({ eventKey, candidates: combinedForVerification });
+  const base = selectBaseCandidate(combinedForVerification);
+  const newsworthiness = base
+    ? scoreCandidateNewsworthiness(base, { verification, byCategory: metrics.byCategory })
+    : {};
+  const priority = scoreCorroborationPriority({ base, verification, newsworthiness, existingEvent });
+  eventContexts.push({
+    eventKey,
+    group,
+    existingEvent,
+    combinedForVerification,
+    verification,
+    newsworthiness,
+    corroborationQuery: base ? buildCorroborationQuery(base, newsworthiness) : '',
+    corroborationPriority: priority
+  });
+}
+
+const pendingForCorroboration = eventContexts
+  .filter((context) => !context.verification.verified && context.verification.status !== 'conflicting-sources')
+  .sort((a, b) => (b.corroborationPriority?.score || 0) - (a.corroborationPriority?.score || 0));
+
+for (const [index, context] of pendingForCorroboration.entries()) {
+  if (corroborationSearchesUsed >= MAX_CORROBORATION_SEARCHES) break;
+  const priorityRank = index + 1;
+  const priorityReason = (context.corroborationPriority?.reasons || []).join('; ');
+  const activeCandidates = await findActiveCorroborationCandidates({
+    eventKey: context.eventKey,
+    group: context.combinedForVerification,
+    verification: context.verification,
+    query: context.corroborationQuery,
+    priorityRank,
+    priorityReason
+  });
+  if (activeCandidates.length > 0) {
+    context.combinedForVerification = [...context.combinedForVerification, ...activeCandidates];
+    context.verification = corroborateEvent({ eventKey: context.eventKey, candidates: context.combinedForVerification });
+    const attemptMetric = metrics.corroborationAttempts.find((attempt) => attempt.eventKey === context.eventKey && attempt.priorityRank === priorityRank);
+    if (attemptMetric) {
+      attemptMetric.verified = Boolean(context.verification.verified);
+      attemptMetric.status = context.verification.status;
     }
+    if (context.verification.verified) metrics.corroborationVerified++;
+    if (context.verification.status === 'conflicting-sources') metrics.corroborationConflicts++;
   }
+}
+
+for (const context of eventContexts) {
+  const { eventKey, group, existingEvent } = context;
+  const combinedForVerification = context.combinedForVerification;
+  const verification = context.verification;
+  for (const conflict of verification.conflictingFacts || verification.conflicts || []) {
+    incrementMap(metrics.conflictsByField, conflict.field || 'unknown');
+    if (conflict.severity === 'critical') metrics.criticalConflicts++;
+  }
+  for (const difference of verification.nonCriticalDifferences || []) {
+    incrementMap(metrics.conflictsByField, difference.field || 'unknown');
+    metrics.nonCriticalDifferences++;
+  }
+  metrics.resolvedComplementaryFacts += (verification.resolvedComplementaryFacts || []).length;
+
   events.events[eventKey] = buildEventRecord({
-    existing: existingEvent,
+    existing: {
+      ...existingEvent,
+      corroborationAttempts: (existingEvent.corroborationAttempts || 0) + (metrics.corroborationAttempts.some((attempt) => attempt.eventKey === eventKey) ? 1 : 0),
+      lastCorroborationQuery: context.corroborationQuery,
+      corroborationPriorityRank: metrics.corroborationAttempts.find((attempt) => attempt.eventKey === eventKey)?.priorityRank || existingEvent.corroborationPriorityRank || null,
+      corroborationReason: metrics.corroborationAttempts.find((attempt) => attempt.eventKey === eventKey)?.corroborationReason || existingEvent.corroborationReason || ''
+    },
     eventKey,
     candidates: combinedForVerification,
     verification
@@ -843,10 +949,15 @@ for (const [eventKey, group] of eventsByKey) {
       metrics.fastPendingAudit.push({
         eventKey,
         title: basePending?.title || '',
-        source: basePending?.source?.id || '',
+        sourceId: basePending?.source?.id || '',
         publisherDomain: basePending?.sourceRef?.publisherDomain || '',
         tier: basePending?.sourceRef?.tier || '',
         competence: basePending?.sourceRef?.competence || [],
+        territory: context.corroborationPriority?.territory || '',
+        topic: context.newsworthiness?.topic || '',
+        eventType: basePending?.facts?.eventType || 'general',
+        riskLevel: verification.riskLevel,
+        pendingReason: verification.status,
         status: verification.status
       });
     }
@@ -869,6 +980,9 @@ for (const [eventKey, group] of eventsByKey) {
 
   metrics.verified++;
   incrementMap(metrics.verifiedByLane, getLane(verification.editorialLane));
+  for (const candidate of group) {
+    sourceHealth(candidate.source?.id).verifiedContribution++;
+  }
   const baseCandidate = buildProvincialWeatherCandidate(group, verification);
   baseCandidate.verification = verification;
   baseCandidate.newsworthiness = scoreCandidateNewsworthiness(baseCandidate, {
@@ -1053,6 +1167,7 @@ for (const candidate of verifiedCandidates) {
         existingTitles.add(ai.title.toLowerCase());
         publishedEventFingerprints.add(extractFingerprint(ai.title));
         publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
+        sourceHealth(source.id).publicationContribution++;
         incrementMap(metrics.publishedByLane, getLane(verification?.editorialLane));
         metrics.published++;
         if (!isUrgent) normalPublished++;
@@ -1126,6 +1241,7 @@ for (const candidate of verifiedCandidates) {
       publishedEventFingerprints.add(extractFingerprint(ai.title));
 
       publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
+      sourceHealth(source.id).publicationContribution++;
       metrics.published++;
       incrementMap(metrics.publishedByLane, getLane(verification?.editorialLane));
       if (!isUrgent) normalPublished++;
@@ -1224,6 +1340,61 @@ metrics.agendaInvalidStories = agenda.summary.invalidStories || 0;
 metrics.technicalSuccess = true;
 metrics.editorialOutcome = classifyEditorialOutcome(metrics);
 
+function finalizeSourceHealth() {
+  for (const health of Object.values(metrics.sourceHealth)) {
+    health.freshCandidateRate = health.detected ? Math.round((health.freshCandidates / health.detected) * 100) / 100 : 0;
+    health.materializationSuccessRate = health.detected ? Math.round((health.materialized / health.detected) * 100) / 100 : 0;
+    health.verificationContributionRate = health.detected ? Math.round((health.verifiedContribution / health.detected) * 100) / 100 : 0;
+    health.publicationContributionRate = health.detected ? Math.round((health.publicationContribution / health.detected) * 100) / 100 : 0;
+    health.staleDiscardRate = health.detected ? Math.round((health.staleDiscarded / health.detected) * 100) / 100 : 0;
+  }
+}
+
+function minutesBetween(start, end) {
+  const startMs = new Date(start || 0).getTime();
+  const endMs = new Date(end || 0).getTime();
+  if (!Number.isFinite(startMs) || !Number.isFinite(endMs) || !startMs || !endMs || endMs < startMs) return null;
+  return Math.round(((endMs - startMs) / (60 * 1000)) * 10) / 10;
+}
+
+function summarizeLatency() {
+  const values = {
+    discoveryToVerificationMinutes: [],
+    verificationToPublicationMinutes: [],
+    discoveryToPublicationMinutes: []
+  };
+  for (const event of Object.values(events.events || {})) {
+    if (event.verifiedAt) {
+      const value = minutesBetween(event.firstDetectedAt, event.verifiedAt);
+      if (value !== null) values.discoveryToVerificationMinutes.push(value);
+    }
+    if (event.publishedAt) {
+      const verificationToPublication = minutesBetween(event.verifiedAt || event.firstDetectedAt, event.publishedAt);
+      const discoveryToPublication = minutesBetween(event.firstDetectedAt, event.publishedAt);
+      if (verificationToPublication !== null) values.verificationToPublicationMinutes.push(verificationToPublication);
+      if (discoveryToPublication !== null) values.discoveryToPublicationMinutes.push(discoveryToPublication);
+    }
+  }
+  const summarize = (items) => {
+    if (!items.length) return { count: 0, avg: null, p50: null, max: null };
+    const sorted = [...items].sort((a, b) => a - b);
+    return {
+      count: sorted.length,
+      avg: Math.round((sorted.reduce((sum, value) => sum + value, 0) / sorted.length) * 10) / 10,
+      p50: sorted[Math.floor(sorted.length / 2)],
+      max: sorted[sorted.length - 1]
+    };
+  };
+  metrics.latency = {
+    discoveryToVerificationMinutes: summarize(values.discoveryToVerificationMinutes),
+    verificationToPublicationMinutes: summarize(values.verificationToPublicationMinutes),
+    discoveryToPublicationMinutes: summarize(values.discoveryToPublicationMinutes)
+  };
+}
+
+finalizeSourceHealth();
+summarizeLatency();
+
 if (PERSIST_OUTPUTS) {
   await saveSeen(seen);
   await saveEvents(events);
@@ -1288,6 +1459,10 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
   verifiedByLane: metrics.verifiedByLane,
   pendingByLane: metrics.pendingByLane,
   fastPendingAudit: metrics.fastPendingAudit,
+  freshCandidates: metrics.freshCandidates,
+  staleDiscarded: metrics.staleDiscarded,
+  sourceHealth: metrics.sourceHealth,
+  sourceDeprioritized: metrics.sourceDeprioritized,
   publishedByLane: metrics.publishedByLane,
   pendingMatchedFromHistory: metrics.pendingMatchedFromHistory,
   corroboration: {
@@ -1295,8 +1470,14 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
     found: metrics.corroborationFound,
     verified: metrics.corroborationVerified,
     conflicts: metrics.corroborationConflicts,
-    noResult: metrics.corroborationNoResult
+    noResult: metrics.corroborationNoResult,
+    attempts: metrics.corroborationAttempts
   },
+  conflictsByField: metrics.conflictsByField,
+  criticalConflicts: metrics.criticalConflicts,
+  nonCriticalDifferences: metrics.nonCriticalDifferences,
+  resolvedComplementaryFacts: metrics.resolvedComplementaryFacts,
+  latency: metrics.latency,
   agendaStories: metrics.agendaStories,
   agendaInvalidStories: metrics.agendaInvalidStories,
   newsworthinessTop: metrics.newsworthinessTop,

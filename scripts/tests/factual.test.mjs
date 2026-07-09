@@ -325,6 +325,86 @@ test('Argentina-Egipto 3-2 vs Argentina-Ecuador 3-2 bloquea por rival distinto',
   assert.equal(event.verified, false);
 });
 
+test('mismo partido deportivo con score distinto queda en conflicto', () => {
+  const event = corroborateEvent({
+    eventKey: 'sports|argentina|egipto',
+    candidates: [
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/score-a' },
+        facts: { riskLevel: 'high', eventType: 'sports-result', teams: ['Argentina', 'Egipto'], scores: ['3-2'] }
+      },
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'clarin.com', url: 'https://clarin.com/score-b' },
+        facts: { riskLevel: 'high', eventType: 'sports-result', teams: ['Argentina', 'Egipto'], scores: ['2-1'] }
+      }
+    ]
+  });
+  assert.equal(event.status, 'conflicting-sources');
+  assert(event.conflictingFacts.some((conflict) => conflict.field === 'scores'));
+});
+
+test('diferencias secundarias entre fuentes independientes no bloquean verificacion', () => {
+  const event = corroborateEvent({
+    eventKey: 'turismo|gol|ushuaia',
+    candidates: [
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'local-a.com', url: 'https://local-a.com/gol' },
+        facts: {
+          riskLevel: 'high',
+          eventType: 'general',
+          organizations: ['GOL'],
+          places: ['Ushuaia'],
+          numbers: ['3 vuelos'],
+          dates: ['10 de julio']
+        }
+      },
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'local-b.com', url: 'https://local-b.com/gol' },
+        facts: {
+          riskLevel: 'high',
+          eventType: 'general',
+          organizations: ['GOL'],
+          places: ['Ushuaia'],
+          numbers: ['4 vuelos'],
+          dates: ['11 de julio']
+        }
+      }
+    ]
+  });
+  assert.equal(event.verified, true);
+  assert.equal(event.status, 'verified-standard');
+  assert.equal(event.conflictingFacts.length, 0);
+  assert(event.nonCriticalDifferences.length >= 1);
+});
+
+test('fecha central de decision legal sigue siendo conflicto critico', () => {
+  const event = corroborateEvent({
+    eventKey: 'legal-policy|reforma',
+    candidates: [
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'local-a.com', url: 'https://local-a.com/reforma' },
+        facts: {
+          riskLevel: 'high',
+          eventType: 'legal-policy',
+          people: ['Gustavo Melella'],
+          dates: ['10 de julio']
+        }
+      },
+      {
+        sourceRef: { tier: 'B', publisherDomain: 'local-b.com', url: 'https://local-b.com/reforma' },
+        facts: {
+          riskLevel: 'high',
+          eventType: 'legal-policy',
+          people: ['Gustavo Melella'],
+          dates: ['11 de julio']
+        }
+      }
+    ]
+  });
+  assert.equal(event.status, 'conflicting-sources');
+  assert(event.conflictingFacts.some((conflict) => conflict.field === 'dates' && conflict.severity === 'critical'));
+});
+
 test('Argentina vs Egipto bloquea salida que inventa Ecuador', () => {
   const validation = validateArticleAgainstFacts(
     {
