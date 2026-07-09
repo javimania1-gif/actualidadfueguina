@@ -31,7 +31,8 @@ const LOW_RISK_PATTERNS = [
 const KNOWN_COUNTRIES = [
   'Argentina', 'Egipto', 'Ecuador', 'Brasil', 'Chile', 'Uruguay', 'Paraguay',
   'Bolivia', 'Peru', 'Colombia', 'Venezuela', 'Mexico', 'Estados Unidos',
-  'Reino Unido', 'Inglaterra', 'Francia', 'Alemania', 'Italia', 'Espana'
+  'Reino Unido', 'Inglaterra', 'Francia', 'Alemania', 'Italia', 'Espana',
+  'Cuba'
 ];
 
 const KNOWN_SPORTS_TEAMS = [
@@ -368,6 +369,12 @@ export function classifyEditorialLane({ title = '', text = '', category = '', so
   }
 
   if (matchesAny(combined, FAST_LANE_PATTERNS)) {
+    const sourceText = normalizeText(`${source.id || ''} ${source.name || ''} ${source.location || ''} ${source.defaultCategory || ''}`);
+    const hasLocalSignal = /\b(rio grande|ushuaia|tolhuin|tierra del fuego|malvinas|antartida|tdf|fueguin)\b/.test(`${combined} ${sourceText}`);
+    const hasForeignSignal = /\b(cdmx|mexico|colombia|cuba|iran|teheran|moscu|rusia|ucrania|francia|estados unidos|reino unido|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(combined);
+    if (hasForeignSignal && !hasLocalSignal && source.mode !== 'official-auto') {
+      return { lane: EDITORIAL_LANES.STANDARD, reasons: ['foreign-routine-standard'] };
+    }
     reasons.push(source.mode === 'official-auto' ? 'official-routine-fast-lane' : 'routine-fast-lane');
     return { lane: EDITORIAL_LANES.FAST, reasons };
   }
@@ -408,9 +415,11 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   const text = `${title}\n${article.description || item.description || ''}\n${article.text || ''}`;
   const risk = classifyRisk({ title, text, category: category || source.defaultCategory, source });
   const capitalized = extractCapitalizedPhrases(`${title}\n${article.description || ''}`);
-  const inferredEventType = inferEventType(text);
-  const eventType = risk.level === 'high' || ['weather-forecast', 'agenda', 'service'].includes(inferredEventType)
-    ? inferredEventType
+  const eventTypeText = `${title}\n${article.description || item.description || ''}\n${(article.text || '').slice(0, 1200)}`;
+  const inferredEventType = inferEventType(eventTypeText);
+  const safeInferredEventType = inferredEventType === 'high-risk' ? 'general' : inferredEventType;
+  const eventType = risk.level === 'high' || ['weather-forecast', 'agenda', 'service'].includes(safeInferredEventType)
+    ? safeInferredEventType
     : 'general';
   const semanticFacts = extractSemanticFacts(text, eventType, source);
   const teams = semanticFacts.sportsTeams;
@@ -445,6 +454,42 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   };
 }
 
+function isSpecificEventType(eventType = '') {
+  return Boolean(eventType && !['general', 'high-risk'].includes(eventType));
+}
+
+function resolveEventType(previous = 'general', refreshed = 'general') {
+  const left = previous === 'high-risk' ? 'general' : previous;
+  const right = refreshed === 'high-risk' ? 'general' : refreshed;
+  if (isSpecificEventType(left) && isSpecificEventType(right) && left !== right) {
+    return { eventType: right, conflict: { field: 'eventType', previous: left, refreshed: right } };
+  }
+  if (isSpecificEventType(right)) return { eventType: right, conflict: null };
+  if (isSpecificEventType(left)) return { eventType: left, conflict: null };
+  return { eventType: 'general', conflict: null };
+}
+
+function mergePersistedFactValues(field, previous = [], refreshed = []) {
+  const oldValues = unique(previous);
+  const newValues = unique(refreshed);
+  if (['sportsTeams', 'teams', 'scores', 'money', 'percentages', 'casualties', 'laws'].includes(field)) {
+    return newValues;
+  }
+  if (field === 'numbers' || field === 'dates' || field === 'times') {
+    return newValues.length ? unique([...newValues, ...oldValues].slice(0, 12)) : oldValues;
+  }
+  return unique([...oldValues, ...newValues]);
+}
+
+function stricterLane(left = EDITORIAL_LANES.STANDARD, right = EDITORIAL_LANES.STANDARD) {
+  const rank = {
+    [EDITORIAL_LANES.FAST]: 1,
+    [EDITORIAL_LANES.STANDARD]: 2,
+    [EDITORIAL_LANES.STRICT]: 3
+  };
+  return (rank[right] || 2) > (rank[left] || 2) ? right : left;
+}
+
 export function refreshPersistedFacts(facts = {}, sourceRef = {}) {
   const article = {
     title: facts.title || sourceRef.title || '',
@@ -460,32 +505,46 @@ export function refreshPersistedFacts(facts = {}, sourceRef = {}) {
     location: ''
   };
   const refreshed = extractFacts({ article, source });
+  const eventTypeResolution = resolveEventType(facts.eventType || 'general', refreshed.eventType || 'general');
+  const semanticConflicts = unique([
+    ...(facts.semanticConflicts || []),
+    eventTypeResolution.conflict ? `${eventTypeResolution.conflict.field}:${eventTypeResolution.conflict.previous}->${eventTypeResolution.conflict.refreshed}` : ''
+  ]);
   const merged = {
     ...facts,
     ...refreshed,
     title: facts.title || refreshed.title,
-    rawSummary: facts.rawSummary || refreshed.rawSummary
+    eventType: eventTypeResolution.eventType,
+    editorialLane: stricterLane(facts.editorialLane, refreshed.editorialLane),
+    riskLevel: facts.riskLevel === 'high' || refreshed.riskLevel === 'high' ? 'high' : refreshed.riskLevel,
+    rawSummary: facts.rawSummary || refreshed.rawSummary,
+    semanticConflicts
   };
   for (const field of CRITICAL_FIELDS) {
-    merged[field] = unique([...(facts[field] || []), ...(refreshed[field] || [])]);
+    merged[field] = mergePersistedFactValues(field, facts[field] || [], refreshed[field] || []);
   }
   return merged;
 }
 
 function inferEventType(text) {
   const value = normalizeText(text);
+  const lead = normalizeText(cleanText(text).split(/\n/).slice(0, 2).join(' '));
   if (/\b(resultado|marcador|vencio|derroto|elimino|clasifico|octavos|cuartos)\b/.test(value)) return 'sports-result';
   if (/\b(eleccion|electoral|votos|convencionales)\b/.test(value)) return 'election';
   if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(value)) return 'crime';
+  if (/\b(guerra|ataque|misiles?|iran|teheran|conflicto internacional|crisis internacional)\b/.test(value)) return 'international-conflict';
+  if (/\b(buque|fragata|warship|britanic[oa]|reino unido|malvinas|soberania)\b/.test(value)) return 'territorial-sovereignty';
+  if (/\b(antartida|antartico)\b/.test(value) && /\b(estrategic[oa]|militar|defensa|geopolitic[oa]|base)\b/.test(value)) return 'defense';
   if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(value)) return 'weather';
   if (isOrdinaryWeatherForecastText(value)) return 'weather-forecast';
+  if (/\b(servicio|servicios|tramite|tramites|beca|becas|empleo|corte programado|operativo|rutas?|vuelos?|transporte|escuelas?|salud|hospital|medicos?|sanitaria|tarifas?)\b/.test(lead)) return 'service';
   if (/\b(agenda|inscripcion|inscripciones|curso|cursos|taller|capacitacion|actividad|actividades|feria|muestra|festival|fiesta|pena|convocatoria|agenda cultural)\b/.test(value)) return 'agenda';
   if (/\b(servicio|servicios|tramite|tramites|beca|becas|empleo|corte programado|operativo|rutas?|vuelos?|transporte|escuelas?|salud|tarifas?)\b/.test(value)) return 'service';
   if (/\b(ciencia|cientifico|investigacion|hallazgo|conicet)\b/.test(value)) return 'scientific';
   if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(value)) return 'casualty';
   if (/\b(legislatura|senado|diputados|sesion|proyecto de ley)\b/.test(value)) return 'legislative';
   if (/\b(ley|decreto|resolucion|norma|reforma constitucional)\b/.test(value)) return 'legal-policy';
-  return 'high-risk';
+  return 'general';
 }
 
 function inferAction(text) {
@@ -619,7 +678,7 @@ export function mergeVerifiedFacts(factSets = []) {
   for (const field of CRITICAL_FIELDS) {
     merged[field] = unique(factSets.flatMap((facts) => facts[field] || []));
   }
-  merged.eventType = factSets.find((facts) => facts.eventType)?.eventType || 'general';
+  merged.eventType = factSets.find((facts) => isSpecificEventType(facts.eventType))?.eventType || 'general';
   merged.action = factSets.find((facts) => facts.action)?.action || 'informa';
   merged.rawSummary = cleanText(factSets.map((facts) => facts.rawSummary).filter(Boolean).join(' ')).slice(0, 1000);
   return merged;
@@ -641,7 +700,7 @@ export function compareFactSets(factSets = []) {
     sourceSpecificFacts: factSets.map((facts) => {
       const sourceFacts = {};
       for (const field of CRITICAL_FIELDS) sourceFacts[field] = unique(facts[field] || []);
-      sourceFacts.eventType = facts.eventType || 'general';
+      sourceFacts.eventType = facts.eventType === 'high-risk' ? 'general' : (facts.eventType || 'general');
       sourceFacts.action = facts.action || 'informa';
       sourceFacts.rawSummary = facts.rawSummary || '';
       return sourceFacts;
@@ -662,7 +721,7 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
   const comparison = compareFactSets(factSets);
   const conflicts = comparison.conflictingFacts;
   const hasCriticalConflict = conflicts.some((conflict) => conflict.severity === 'critical');
-  const eventType = factSets.find((facts) => facts.eventType)?.eventType || 'general';
+  const eventType = factSets.find((facts) => isSpecificEventType(facts.eventType))?.eventType || 'general';
   const verifiedFacts = riskLevel === 'high' ? comparison.consensusFacts : comparison.unionFacts;
 
   if (hasCriticalConflict) {

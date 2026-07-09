@@ -12,11 +12,8 @@ on:
       - "package.json"
       - "package-lock.json"
   schedule:
-    # 4 veces al día (08:00, 14:00, 20:00 y 02:00 de Tierra del Fuego / UTC-3)
-    - cron: '0 11 * * *'
-    - cron: '0 17 * * *'
-    - cron: '0 23 * * *'
-    - cron: '0 5 * * *'
+    # Cada 2 horas para sostener frescura sin forzar cuotas por corrida.
+    - cron: '0 */2 * * *'
 
 permissions:
   contents: write
@@ -43,7 +40,9 @@ jobs:
       AF_EXTRA_SLOT_MIN_IMPORTANCE: '8'
       AF_DAILY_TARGET_MIN: '12'
       AF_DAILY_TARGET_MAX: '16'
-      AF_EXPECTED_RUNS_PER_DAY: '4'
+      AF_EXPECTED_RUNS_PER_DAY: '12'
+      AF_MAX_CORROBORATION_SEARCHES: '3'
+      AF_CORROBORATION_ITEMS_PER_SEARCH: '3'
       AF_SITE_URL: 'https://actualidadfueguina.com.ar'
 
     steps:

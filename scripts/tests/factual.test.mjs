@@ -517,5 +517,65 @@ test('integracion E: mismo acontecimiento politico con entidades secundarias dis
   assert(verification.consensusFacts.people.some((value) => value.includes('Melella')));
 });
 
+test('eventType nunca queda como high-risk generico', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Iran lanza misiles y escala el conflicto internacional',
+      description: 'El ataque genero alarma internacional.',
+      text: 'Iran lanza misiles y escala el conflicto internacional con nuevas advertencias.'
+    },
+    source: { defaultCategory: 'Mundo' }
+  });
+  assert.equal(facts.eventType, 'international-conflict');
+  assert.notEqual(facts.eventType, 'high-risk');
+});
+
+test('fast lane no captura rutina extranjera sin senal fueguina', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'EPM alerta por bloqueos que ponen en riesgo hidroelectricas en Colombia',
+      description: 'La empresa informo posibles bloqueos operativos.',
+      text: 'EPM alerta por bloqueos que ponen en riesgo cinco hidroelectricas en Colombia.'
+    },
+    source: { id: 'nacionales-infobae', name: 'Infobae', defaultCategory: 'Nacionales' }
+  });
+  assert.equal(facts.editorialLane, EDITORIAL_LANES.STANDARD);
+  assert.equal(facts.riskLevel, 'high');
+});
+
+test('texto lateral de agenda no contamina tipo de evento internacional', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Equipos rotos y medicos exhaustos: el sistema de salud de Cuba esta al borde del colapso',
+      description: 'Hospitales cubanos atraviesan una crisis de recursos.',
+      text: `${'La nota describe la crisis sanitaria en Cuba. '.repeat(20)} Agenda cultural cursos actividades servicios municipales`
+    },
+    source: { id: 'mundo-clarin', name: 'Clarin Mundo', defaultCategory: 'Mundo' }
+  });
+  assert.equal(facts.eventType, 'service');
+  assert.notEqual(facts.editorialLane, EDITORIAL_LANES.FAST);
+});
+
+test('refreshPersistedFacts reemplaza evento generico por especifico sin unir basura critica', () => {
+  const refreshed = refreshPersistedFacts({
+    title: 'Incautan cigarrillos de contrabando en la provincia',
+    eventType: 'general',
+    editorialLane: EDITORIAL_LANES.FAST,
+    riskLevel: 'low',
+    rawSummary: 'El operativo detecto contrabando de cigarrillos.',
+    numbers: ['3 usuarios'],
+    money: ['10 millones de pesos']
+  }, {
+    sourceId: 'local-a',
+    sourceName: 'Local A',
+    publisherDomain: 'local-a.com',
+    title: 'Incautan cigarrillos de contrabando en la provincia'
+  });
+  assert.equal(refreshed.eventType, 'crime');
+  assert.equal(refreshed.editorialLane, EDITORIAL_LANES.STRICT);
+  assert.equal(refreshed.riskLevel, 'high');
+  assert.deepEqual(refreshed.money, []);
+});
+
 console.log(`\n=== FACTUAL TESTS: ${passed} pasados, ${failed} fallados ===`);
 if (failed > 0) process.exit(1);

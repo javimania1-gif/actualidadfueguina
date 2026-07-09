@@ -63,6 +63,7 @@ export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {})
   const text = factText(facts, title, category);
   if (eventType === 'sports-result' || hasAny(text, ['deportes', 'futbol', 'mundial', 'club'])) return 'deportes';
   if (eventType === 'crime') return 'policiales';
+  if (['international-conflict', 'territorial-sovereignty', 'defense'].includes(eventType)) return 'politica';
   if (eventType === 'weather' || eventType === 'weather-forecast' || eventType === 'service') return 'servicios';
   if (eventType === 'agenda') return 'agenda';
   if (eventType === 'election' || eventType === 'legislative' || eventType === 'legal-policy') return 'politica';
@@ -75,10 +76,13 @@ export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {})
   return 'sociedad';
 }
 
-export function inferAgendaTerritory({ facts = {}, source = {}, category = '' } = {}) {
+export function inferAgendaTerritory({ facts = {}, source = {}, category = '', title = '' } = {}) {
   const text = normalizeText([
     category,
+    source.defaultCategory,
     source.location,
+    title,
+    facts.rawSummary,
     ...(facts.places || []),
     ...(facts.countries || [])
   ].join(' '));
@@ -87,10 +91,12 @@ export function inferAgendaTerritory({ facts = {}, source = {}, category = '' } 
   if (/\btolhuin\b/.test(text)) return 'Tolhuin';
   if (/\bmalvinas\b/.test(text)) return 'Malvinas';
   if (/\bantartida\b/.test(text)) return 'Antartida';
-  if (/\btierra del fuego\b|\bprovincia\b|\bfueguin/.test(text)) return 'Provincia';
+  if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
+  if (/\b(cdmx|mexico|mexico df|colombia|cuba|iran|teheran|moscu|ucrania|rusia|estados unidos|reino unido|inglaterra|francia|alemania|italia|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(text)) return 'Mundo';
   if (/\bmundo\b|\binternacional\b/.test(text)) return 'Mundo';
-  if (/\bnacionales\b|\bargentina\b/.test(text)) return 'Nacionales';
-  return 'Provincia';
+  if (/\b(nacionales|argentina|milei|fmi|villa allende|chaco|cordoba|buenos aires|congreso|senado|diputados)\b/.test(text)) return 'Nacionales';
+  if (/\bprovincia\b/.test(text) && (source.mode === 'official-auto' || /\b(provincial|gobierno|tdf)\b/.test(text))) return 'Provincia';
+  return 'unknown';
 }
 
 function inferSubtopic({ topic, facts = {}, title = '', category = '' }) {
@@ -121,7 +127,7 @@ function scoreLocalRelevance(territory) {
   if (['Provincia', 'Malvinas', 'Antartida'].includes(territory)) return 22;
   if (territory === 'Nacionales') return 12;
   if (territory === 'Mundo') return 7;
-  return 15;
+  return 4;
 }
 
 function scoreServiceValue({ topic = '', eventType = '', facts = {} }) {
@@ -175,7 +181,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
   const title = candidate.title || candidate.article?.title || candidate.item?.title || facts.title || '';
   const topic = inferAgendaTopic({ facts, title, category });
   const subtopic = inferSubtopic({ topic, facts, title, category });
-  const territory = inferAgendaTerritory({ facts, source, category });
+  const territory = inferAgendaTerritory({ facts, source, category, title });
   const eventType = facts.eventType || 'general';
   const lane = verification.editorialLane || candidate.verification?.editorialLane || facts.editorialLane || 'standard';
   const freshness = freshnessFromHours(hoursOld(candidate.pubDate || candidate.article?.date || now, now), lane);
@@ -215,6 +221,16 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     searchPotentialScore,
     sourceStrengthScore,
     recencyScore: freshness.score,
+    scoreBreakdown: {
+      publicInterest: publicInterestScore,
+      localRelevance: localRelevanceScore,
+      serviceValue: serviceValueScore,
+      socialPotential: socialPotentialScore,
+      searchPotential: searchPotentialScore,
+      recency: freshness.score,
+      sourceStrength: sourceStrengthScore,
+      diversity: diversityBonus
+    },
     newsworthinessScore
   };
 }
@@ -262,7 +278,7 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
     ...(facts.countries || [])
   ]).slice(0, 10);
 
-  return {
+  const story = {
     storyId: eventKey,
     headlineSeed,
     topic: score.topic,
@@ -282,9 +298,52 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
     serviceValueScore: score.serviceValueScore,
     socialPotentialScore: score.socialPotentialScore,
     searchPotentialScore: score.searchPotentialScore,
+    scoreBreakdown: score.scoreBreakdown,
     newsworthinessScore: score.newsworthinessScore,
     status: event.status || 'unknown'
   };
+  const validation = validateAgendaStoryCoherence(story);
+  if (!validation.ok) {
+    story.sourceStatus = story.status;
+    story.status = 'agenda-invalid';
+    story.validationReasons = validation.reasons;
+  } else {
+    story.validationReasons = [];
+  }
+  return story;
+}
+
+export function validateAgendaStoryCoherence(story = {}) {
+  const reasons = [];
+  const eventType = story.eventType || 'general';
+  const topic = story.topic || '';
+  const territory = story.territory || '';
+  const text = normalizeText([
+    story.storyId,
+    story.headlineSeed,
+    topic,
+    territory,
+    ...(story.primaryEntities || [])
+  ].join(' '));
+
+  if (eventType === 'high-risk') reasons.push('eventtype-risk-confusion');
+  if (story.storyId?.startsWith('weather-forecast|') && eventType !== 'weather-forecast') {
+    reasons.push('story-headline-mismatch');
+  }
+  if (story.storyId?.startsWith('weather-forecast|') && !/\b(clima|pronostico|meteorologico|temperatura|viento|nieve|lluvia|alerta)\b/.test(text)) {
+    reasons.push('story-headline-mismatch');
+  }
+  if (topic === 'servicios' && ['crime', 'election', 'legal-policy', 'international-conflict', 'territorial-sovereignty', 'defense', 'casualty'].includes(eventType)) {
+    reasons.push('topic-event-mismatch');
+  }
+  if (eventType === 'crime' && topic !== 'policiales') reasons.push('topic-event-mismatch');
+  if (eventType === 'international-conflict' && territory !== 'Mundo') reasons.push('territory-conflict');
+  if (territory === 'Provincia' && /\b(cdmx|mexico|colombia|cuba|iran|teheran|moscu|ucrania|rusia|fmi|milei|villa allende|chaco|cordoba)\b/.test(text)) {
+    reasons.push('foreign-story-local-territory');
+  }
+  if (territory === 'unknown' && story.newsworthinessScore >= 70) reasons.push('territory-conflict');
+
+  return { ok: reasons.length === 0, reasons: unique(reasons) };
 }
 
 function countBy(stories = [], field) {
@@ -316,6 +375,7 @@ export function buildEditorialAgenda(events = {}, { verifiedCandidates = [], met
     if (score !== 0) return score;
     return String(b.lastSeenAt || '').localeCompare(String(a.lastSeenAt || ''));
   });
+  const rankableStories = stories.filter((story) => story.status !== 'agenda-invalid');
 
   return {
     version: 1,
@@ -325,13 +385,15 @@ export function buildEditorialAgenda(events = {}, { verifiedCandidates = [], met
       byStatus: countBy(stories, 'status'),
       byTopic: countBy(stories, 'topic'),
       byTerritory: countBy(stories, 'territory'),
-      topStories: stories.slice(0, 10).map((story) => ({
+      invalidStories: stories.filter((story) => story.status === 'agenda-invalid').length,
+      topStories: rankableStories.slice(0, 10).map((story) => ({
         storyId: story.storyId,
         headlineSeed: story.headlineSeed,
         topic: story.topic,
         territory: story.territory,
         newsworthinessScore: story.newsworthinessScore,
-        status: story.status
+        status: story.status,
+        scoreBreakdown: story.scoreBreakdown
       }))
     },
     stories: stories.slice(0, 300)

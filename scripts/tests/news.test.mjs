@@ -20,6 +20,9 @@ import {
 } from '../lib/news-utils.mjs';
 import {
   buildEditorialAgenda,
+  inferAgendaTerritory,
+  inferAgendaTopic,
+  validateAgendaStoryCoherence,
   scoreCandidateNewsworthiness
 } from '../lib/editorial-agenda.mjs';
 
@@ -328,6 +331,77 @@ test('agenda editorial registra historias con tema territorio y score', () => {
   assert.equal(agenda.stories[0].topic, 'agenda');
   assert.equal(agenda.stories[0].territory, 'Tolhuin');
   assert(agenda.stories[0].newsworthinessScore > 0);
+});
+
+test('agenda territorial no cae a Provincia para noticias externas', () => {
+  assert.equal(inferAgendaTerritory({
+    title: 'Sismo en CDMX deja demoras en servicios',
+    facts: { countries: ['Mexico'], places: ['CDMX'] },
+    category: 'Mundo'
+  }), 'Mundo');
+  assert.equal(inferAgendaTerritory({
+    title: 'Milei y el FMI revisan metas del acuerdo',
+    facts: { people: ['Javier Milei'], organizations: ['FMI'] },
+    category: 'Nacionales'
+  }), 'Nacionales');
+  assert.equal(inferAgendaTerritory({
+    title: 'Villa Allende y Chaco definen nuevas medidas',
+    facts: { places: ['Villa Allende', 'Chaco'] },
+    category: 'Nacionales'
+  }), 'Nacionales');
+});
+
+test('agenda clasifica contrabando como policiales y defensa internacional como politica', () => {
+  assert.equal(inferAgendaTopic({
+    facts: { eventType: 'crime', rawSummary: 'Contrabando de cigarrillos detectado en un operativo.' },
+    title: 'Incautan cigarrillos de contrabando'
+  }), 'policiales');
+  assert.equal(inferAgendaTopic({
+    facts: { eventType: 'territorial-sovereignty', rawSummary: 'Buque britanico cerca de Malvinas.' },
+    title: 'Advierten por buque britanico en el Atlantico Sur'
+  }), 'politica');
+});
+
+test('agenda invalida historias incoherentes y las excluye del top', () => {
+  const story = {
+    storyId: 'weather-forecast|2026-07-10|tierra-del-fuego',
+    headlineSeed: 'Buque britanico vuelve a operar cerca de Malvinas',
+    topic: 'servicios',
+    territory: 'Provincia',
+    primaryEntities: ['Malvinas', 'Reino Unido'],
+    eventType: 'territorial-sovereignty',
+    newsworthinessScore: 95
+  };
+  const validation = validateAgendaStoryCoherence(story);
+  assert.equal(validation.ok, false);
+  assert(validation.reasons.includes('story-headline-mismatch'));
+  assert(validation.reasons.includes('topic-event-mismatch'));
+
+  const agenda = buildEditorialAgenda({
+    events: {
+      'weather-forecast|2026-07-10|tierra-del-fuego': {
+        eventKey: 'weather-forecast|2026-07-10|tierra-del-fuego',
+        status: 'pending-verification',
+        lastSeenAt: '2026-07-09T13:00:00.000Z',
+        verifiedFacts: {
+          eventType: 'territorial-sovereignty',
+          places: ['Malvinas'],
+          countries: ['Reino Unido'],
+          rawSummary: 'Buque britanico vuelve a operar cerca de Malvinas.'
+        },
+        factsBySource: [{
+          facts: {
+            title: 'Buque britanico vuelve a operar cerca de Malvinas',
+            eventType: 'territorial-sovereignty',
+            places: ['Malvinas'],
+            countries: ['Reino Unido']
+          }
+        }]
+      }
+    }
+  }, { now: new Date('2026-07-09T14:00:00.000Z') });
+  assert.equal(agenda.summary.invalidStories, 1);
+  assert.equal(agenda.summary.topStories.length, 0);
 });
 
 console.log(`\n=== NEWS TESTS: ${passed} pasados, ${failed} fallados ===`);
