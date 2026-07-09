@@ -1,7 +1,8 @@
 ---
 title: "La Juegoteca Municipal de Río Grande ofrece actividades recreativas para las vacaciones de invierno"
 description: "La Juegoteca Municipal realizará actividades recreativas en Tierra de Teatro los días 17 y 24 de julio para niñas y niños de Río Grande."
-date: "2026-07-08T16:10:36.000Z"
+date: "2026-07-08T17:14:02.000Z"
+sourcePublishedAt: "2026-07-08T16:10:36.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["Juegoteca Municipal", "vacaciones de invierno", "Tierra de Teatro"]

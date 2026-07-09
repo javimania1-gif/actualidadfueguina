@@ -754,8 +754,10 @@ for (const candidate of verifiedCandidates) {
       });
       if (!image || imageMeta?.strategy === 'fallback-plate') metrics.imageErrors++;
 
+      const publicationDate = new Date();
+
       if (!image) {
-        const plateFilename = `plate-${datePrefix(pubDate)}-${canonicalKey.slice(0, 8)}.jpg`;
+        const plateFilename = `plate-${datePrefix(publicationDate)}-${canonicalKey.slice(0, 8)}.jpg`;
         const localPath = path.join(ROOT, 'public/uploads/auto', plateFilename);
         const plateResult = await generateWebPlate({ title: ai.title, category: ai.category, outputPath: localPath });
         if (plateResult) image = `/uploads/auto/${plateFilename}`;
@@ -769,13 +771,19 @@ for (const candidate of verifiedCandidates) {
         };
       }
 
-      const filename = `${datePrefix(pubDate)}-${slugify(ai.title)}.md`;
+      const filename = `${datePrefix(publicationDate)}-${slugify(ai.title)}.md`;
       const target = path.join(NEWS_DIR, filename);
       const featured = ai.importance >= 9;
 
       await fs.writeFile(target, makeNewsMarkdown({
-        ai, date: pubDate, image,
-        sourceName: source.name, sourceUrl: sourceRef.url || article.finalUrl, featured, imageMeta
+        ai,
+        date: publicationDate,
+        image,
+        sourceName: source.name,
+        sourceUrl: sourceRef.url || article.finalUrl,
+        featured,
+        imageMeta,
+        sourcePublishedAt: pubDate
       }), 'utf8');
 
       // Actualizar índice en memoria para deduplicar dentro del mismo run

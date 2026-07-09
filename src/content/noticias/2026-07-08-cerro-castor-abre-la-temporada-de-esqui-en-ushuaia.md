@@ -1,7 +1,8 @@
 ---
 title: "Cerro Castor abre la temporada de esquí en Ushuaia"
 description: "El centro de esquí más austral del mundo inicia su temporada con mejoras en infraestructura y eventos especiales."
-date: "2026-07-08T22:00:00.000Z"
+date: "2026-07-09T00:05:10.000Z"
+sourcePublishedAt: "2026-07-08T22:00:00.000Z"
 category: "Provincia"
 location: "Tierra del Fuego AIAS"
 tags: ["Cerro Castor", "esquí", "Ushuaia", "temporada invernal"]

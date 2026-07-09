@@ -1,7 +1,8 @@
 ---
 title: "La Cámara de Comercio de Ushuaia lanza PAIX para el desarrollo antártico"
 description: "La Cámara de Comercio de Ushuaia presentó PAIX, una plataforma para potenciar el desarrollo antártico y diversificar la economía de Tierra del Fuego."
-date: "2026-07-08T05:29:00.000Z"
+date: "2026-07-08T17:14:02.000Z"
+sourcePublishedAt: "2026-07-08T05:29:00.000Z"
 category: "Ushuaia"
 location: "Ushuaia"
 tags: ["Cámara de Comercio", "PAIX", "Antártida", "Tierra del Fuego"]

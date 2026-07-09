@@ -6,6 +6,7 @@ const noticias = defineCollection({
     title: z.string(),
     description: z.string().max(180),
     date: z.coerce.date(),
+    sourcePublishedAt: z.coerce.date().optional(),
     category: z.string(),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),

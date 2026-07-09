@@ -14,6 +14,9 @@ import {
   generateEventKey,
   isOrdinaryWeatherForecastText
 } from '../lib/factual-utils.mjs';
+import {
+  makeNewsMarkdown
+} from '../lib/news-utils.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -176,6 +179,29 @@ test('cupo editorial permite dos normales, tercer cupo importante y urgentes apa
     canPublishWithinRunLimit({ importance: 9, normalPublished: 3, target: 2, maxNormal: 3, extraSlotMinImportance: 8 }).urgent,
     true
   );
+});
+
+test('markdown separa fecha de publicacion y fecha original de fuente', () => {
+  const md = makeNewsMarkdown({
+    ai: {
+      title: 'Nueva actividad cultural en Rio Grande',
+      description: 'El municipio anuncio una actividad cultural abierta a la comunidad durante esta semana.',
+      category: 'Rio Grande',
+      location: 'Rio Grande',
+      tags: ['cultura', 'Rio Grande'],
+      imageAlt: 'Actividad cultural',
+      body: 'El municipio informo una nueva actividad cultural abierta a la comunidad.',
+      importance: 4
+    },
+    date: new Date('2026-07-09T13:47:08.000Z'),
+    sourcePublishedAt: new Date('2026-06-30T12:00:00.000Z'),
+    image: '/uploads/auto/prueba.webp',
+    sourceName: 'Fuente local',
+    sourceUrl: 'https://example.com/nota'
+  });
+
+  assert.match(md, /date: "2026-07-09T13:47:08\.000Z"/);
+  assert.match(md, /sourcePublishedAt: "2026-06-30T12:00:00\.000Z"/);
 });
 
 console.log(`\n=== NEWS TESTS: ${passed} pasados, ${failed} fallados ===`);

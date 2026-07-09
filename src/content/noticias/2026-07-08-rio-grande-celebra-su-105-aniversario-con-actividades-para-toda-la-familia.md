@@ -1,7 +1,8 @@
 ---
 title: "Río Grande celebra su 105º aniversario con actividades para toda la familia"
 description: "El Municipio de Río Grande organiza kermesses y un mercado especial para festejar su 105º aniversario con propuestas recreativas para todos."
-date: "2026-07-08T18:01:05.000Z"
+date: "2026-07-08T18:23:45.000Z"
+sourcePublishedAt: "2026-07-08T18:01:05.000Z"
 category: "Río Grande"
 location: "Río Grande"
 tags: ["aniversario", "actividades familiares", "Río Grande"]

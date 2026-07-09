@@ -586,7 +586,17 @@ ${sourceText.slice(0, 14000)}`;
   };
 }
 
-export function makeNewsMarkdown({ ai, date, image, sourceName, sourceUrl, featured = false, automated = true, imageMeta = null }) {
+export function makeNewsMarkdown({
+  ai,
+  date,
+  image,
+  sourceName,
+  sourceUrl,
+  featured = false,
+  automated = true,
+  imageMeta = null,
+  sourcePublishedAt = null
+}) {
   const importance = ai.importance || 5;
   const urgent = importance >= 9;
   const imageSourceLines = [];
@@ -595,11 +605,15 @@ export function makeNewsMarkdown({ ai, date, image, sourceName, sourceUrl, featu
   if (imageMeta?.credit) imageSourceLines.push(`imageCredit: ${yamlString(imageMeta.credit)}`);
   if (imageMeta?.license) imageSourceLines.push(`imageLicense: ${yamlString(imageMeta.license)}`);
   const imageSourceBlock = imageSourceLines.length ? `${imageSourceLines.join('\n')}\n` : '';
+  const sourceDate = sourcePublishedAt ? new Date(sourcePublishedAt) : null;
+  const sourcePublishedAtBlock = sourceDate && !Number.isNaN(sourceDate.valueOf())
+    ? `sourcePublishedAt: ${yamlString(sourceDate.toISOString())}\n`
+    : '';
   return `---
 title: ${yamlString(ai.title)}
 description: ${yamlString(ai.description)}
 date: ${yamlString(safeDate(date).toISOString())}
-category: ${yamlString(ai.category)}
+${sourcePublishedAtBlock}category: ${yamlString(ai.category)}
 location: ${yamlString(ai.location)}
 tags: ${yamlArray(ai.tags)}
 image: ${yamlString(image || '')}
