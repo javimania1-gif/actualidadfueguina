@@ -5,6 +5,8 @@ export const DRAFT_RETRY_WINDOWS_MS = [
 ];
 
 export const STALE_AFTER_MS = 48 * 60 * 60 * 1000;
+export const HARD_NEWS_MAX_AGE_MS = 36 * 60 * 60 * 1000;
+export const INSTITUTIONAL_MAX_AGE_MS = 72 * 60 * 60 * 1000;
 
 export const GENERIC_TITLE_WORDS = new Set([
   'noticias', 'inicio', 'home', 'bienvenido', 'portada', 'hoy',
@@ -131,15 +133,50 @@ export function canPublishWithinRunLimit({
   normalPublished = 0,
   target = 2,
   maxNormal = 3,
-  extraSlotMinImportance = 8
+  extraSlotMinImportance = 8,
+  dailyPublished = 0,
+  dailyTargetMax = Infinity
 } = {}) {
   const isUrgent = Number(importance) >= 9;
   if (isUrgent) return { ok: true, urgent: true, reason: 'urgent-outside-normal-cap' };
+  if (Number.isFinite(dailyTargetMax) && dailyPublished >= dailyTargetMax) {
+    return { ok: false, urgent: false, reason: 'daily-target-max' };
+  }
   if (normalPublished >= maxNormal) return { ok: false, urgent: false, reason: 'max-normal-cap' };
   if (normalPublished >= target && Number(importance) < extraSlotMinImportance) {
     return { ok: false, urgent: false, reason: 'target-reached-low-importance' };
   }
   return { ok: true, urgent: false, reason: 'within-normal-cap' };
+}
+
+export function classifyCandidateFreshness({
+  source = {},
+  facts = {},
+  pubDate = null,
+  sourceHasDate = true,
+  hasExplicitDate = false,
+  now = Date.now()
+} = {}) {
+  const timestamp = pubDate ? new Date(pubDate).getTime() : NaN;
+  const sourceMode = source.mode || '';
+  const lane = facts.editorialLane || 'standard';
+
+  if (!sourceHasDate || !Number.isFinite(timestamp)) {
+    if (sourceMode === 'official-auto') return { ok: true, reason: 'official-undated', lane };
+    return { ok: false, reason: 'undated-discovery', lane, bucket: 'quality' };
+  }
+
+  const ageMs = now - timestamp;
+  if (ageMs < -6 * 60 * 60 * 1000) return { ok: false, reason: 'future-dated-source', lane, bucket: 'quality' };
+
+  const maxAgeMs = lane === 'fast' ? INSTITUTIONAL_MAX_AGE_MS : HARD_NEWS_MAX_AGE_MS;
+  if (ageMs <= maxAgeMs) return { ok: true, reason: lane === 'fast' ? 'fresh-institutional' : 'fresh-hard-news', lane };
+
+  if (hasExplicitDate || ageMs > INSTITUTIONAL_MAX_AGE_MS) {
+    return { ok: false, reason: 'evergreen-or-stale-outside-news-window', lane, bucket: 'evergreen' };
+  }
+
+  return { ok: false, reason: lane === 'fast' ? 'stale-institutional' : 'stale-hard-news', lane, bucket: 'quality' };
 }
 
 export function isStaleRoutineWeatherForecast(facts = {}, now = Date.now()) {

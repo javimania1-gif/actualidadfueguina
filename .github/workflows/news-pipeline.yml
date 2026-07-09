@@ -34,13 +34,16 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
       AF_MODEL: openai/gpt-4o-mini
       AF_AI_TIMEOUT_MS: '45000'
-      AF_MAX_AI_PER_RUN: '8'
+      AF_MAX_AI_PER_RUN: '10'
       AF_MAX_DRAFTS_PER_RUN: '10'
-      AF_MAX_MATERIALIZE_PER_RUN: '36'
+      AF_MAX_MATERIALIZE_PER_RUN: '48'
       AF_MAX_PER_SOURCE: '2'
-      AF_TARGET_PUBLISHED_PER_RUN: '2'
-      AF_MAX_NORMAL_PUBLISHED_PER_RUN: '3'
+      AF_TARGET_PUBLISHED_PER_RUN: '3'
+      AF_MAX_NORMAL_PUBLISHED_PER_RUN: '4'
       AF_EXTRA_SLOT_MIN_IMPORTANCE: '8'
+      AF_DAILY_TARGET_MIN: '12'
+      AF_DAILY_TARGET_MAX: '16'
+      AF_EXPECTED_RUNS_PER_DAY: '4'
       AF_SITE_URL: 'https://actualidadfueguina.com.ar'
 
     steps:

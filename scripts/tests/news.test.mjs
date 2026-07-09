@@ -7,7 +7,8 @@ import {
   isEventAlreadyPublished,
   canPublishWithinRunLimit,
   isStaleRoutineWeatherForecast,
-  isStaleDatedDiscoveryCandidate
+  isStaleDatedDiscoveryCandidate,
+  classifyCandidateFreshness
 } from '../lib/pipeline-utils.mjs';
 import {
   extractFacts,
@@ -178,6 +179,61 @@ test('cupo editorial permite dos normales, tercer cupo importante y urgentes apa
   assert.equal(
     canPublishWithinRunLimit({ importance: 9, normalPublished: 3, target: 2, maxNormal: 3, extraSlotMinImportance: 8 }).urgent,
     true
+  );
+});
+
+test('cupo editorial respeta maximo diario sin bloquear urgentes', () => {
+  assert.equal(
+    canPublishWithinRunLimit({ importance: 4, normalPublished: 0, target: 4, maxNormal: 5, dailyPublished: 16, dailyTargetMax: 16 }).reason,
+    'daily-target-max'
+  );
+  assert.equal(
+    canPublishWithinRunLimit({ importance: 9, normalPublished: 5, target: 4, maxNormal: 5, dailyPublished: 16, dailyTargetMax: 16 }).urgent,
+    true
+  );
+});
+
+test('frescura separa hard news, institucional y evergreen', () => {
+  const now = new Date('2026-07-09T14:00:00Z').getTime();
+  assert.equal(
+    classifyCandidateFreshness({
+      source: { mode: 'discovery-draft' },
+      facts: { editorialLane: 'standard' },
+      pubDate: new Date('2026-07-08T08:30:00Z'),
+      sourceHasDate: true,
+      now
+    }).ok,
+    true
+  );
+  assert.equal(
+    classifyCandidateFreshness({
+      source: { mode: 'discovery-draft' },
+      facts: { editorialLane: 'standard' },
+      pubDate: new Date('2026-07-06T12:00:00Z'),
+      sourceHasDate: true,
+      now
+    }).reason,
+    'evergreen-or-stale-outside-news-window'
+  );
+  assert.equal(
+    classifyCandidateFreshness({
+      source: { mode: 'official-auto' },
+      facts: { editorialLane: 'fast' },
+      pubDate: new Date('2026-07-07T08:00:00Z'),
+      sourceHasDate: true,
+      now
+    }).ok,
+    true
+  );
+  assert.equal(
+    classifyCandidateFreshness({
+      source: { mode: 'discovery-draft' },
+      facts: { editorialLane: 'standard' },
+      pubDate: new Date('2026-07-09T14:00:00Z'),
+      sourceHasDate: false,
+      now
+    }).reason,
+    'undated-discovery'
   );
 });
 

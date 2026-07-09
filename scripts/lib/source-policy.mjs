@@ -159,6 +159,17 @@ export function isSourceCompetentForEvent(sourceRef = {}, eventType = 'general')
   return competence.size > 0;
 }
 
+export function isTrustedLocalRoutineSource(sourceRef = {}) {
+  if (sourceRef.tier !== SOURCE_TIERS.B) return false;
+  const text = normalizeText([
+    sourceRef.sourceId,
+    sourceRef.sourceName,
+    sourceRef.publisherDomain,
+    sourceRef.url
+  ].filter(Boolean).join(' '));
+  return /\b(actualidadtdf|elrompehielos|radiofueguina|sur54|fueguina|fueguino|riogrande|rio grande|ushuaia|tolhuin|tdf)\b/.test(text);
+}
+
 export function validateArticleSource({ article = {}, item = {}, source = {}, finalUrl = '' }) {
   const url = article.canonicalUrl || finalUrl || article.finalUrl || item.link || '';
   const title = article.title || item.title || '';
@@ -172,10 +183,13 @@ export function validateArticleSource({ article = {}, item = {}, source = {}, fi
   if (!text || text.length < 400) errors.push('short-body');
 
   const titleNorm = normalizeText(title);
-  const bodyNorm = normalizeText(text.slice(0, 2000));
-  const titleWords = titleNorm.split(/\s+/).filter((word) => word.length >= 5);
+  const bodyNorm = normalizeText(`${article.description || item.description || ''}\n${text.slice(0, 3000)}`);
+  const titleWords = titleNorm
+    .split(/\s+/)
+    .filter((word) => word.length >= 5 && !GENERIC_PATH_SEGMENTS.has(word));
   const matchingWords = titleWords.filter((word) => bodyNorm.includes(word));
-  if (titleWords.length >= 3 && matchingWords.length === 0) {
+  const matchRatio = titleWords.length ? matchingWords.length / titleWords.length : 1;
+  if (source.mode !== 'official-auto' && titleWords.length >= 5 && matchRatio < 0.15 && text.length < 1200) {
     errors.push('title-body-mismatch');
   }
 

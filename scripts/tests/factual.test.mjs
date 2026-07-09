@@ -10,7 +10,8 @@ import {
   generateEventKey,
   corroborateEvent,
   validateArticleAgainstFacts,
-  buildEventRecord
+  buildEventRecord,
+  EDITORIAL_LANES
 } from '../lib/factual-utils.mjs';
 
 let passed = 0;
@@ -42,6 +43,19 @@ test('articulo especifico pasa validacion basica de fuente', () => {
       title: 'Argentina anuncia una medida nacional con impacto federal',
       text: 'Argentina anuncia una medida nacional con impacto federal. '.repeat(20),
       finalUrl: 'https://www.infobae.com/politica/2026/07/08/una-noticia-real/'
+    }
+  });
+  assert.equal(result.ok, true);
+});
+
+test('title-body mismatch no bloquea articulo con descripcion concordante', () => {
+  const result = validateArticleSource({
+    finalUrl: 'https://www.actualidadtdf.com.ar/nota-local/',
+    article: {
+      title: 'El Municipio habilito una nueva obra vial en Rio Grande',
+      description: 'El Municipio habilito una nueva obra vial en Rio Grande.',
+      text: 'La intervencion mejora la circulacion barrial y forma parte del plan de infraestructura urbana. '.repeat(8),
+      finalUrl: 'https://www.actualidadtdf.com.ar/nota-local/'
     }
   });
   assert.equal(result.ok, true);
@@ -92,6 +106,68 @@ test('fuente Tier A puede verificar dentro de su competencia', () => {
     }]
   });
   assert.equal(event.status, 'verified-tier-a');
+});
+
+test('fast lane oficial rutinario verifica con una Tier A competente', () => {
+  const article = {
+    title: 'Rio Grande abre inscripciones para cursos de invierno',
+    description: 'El Municipio abre inscripciones para cursos y actividades.',
+    text: 'El Municipio de Rio Grande abre inscripciones para cursos y actividades de invierno. '.repeat(10),
+    date: '2026-07-09'
+  };
+  const source = { mode: 'official-auto', defaultCategory: 'Rio Grande' };
+  const facts = extractFacts({ article, source });
+  assert.equal(facts.editorialLane, EDITORIAL_LANES.FAST);
+
+  const event = corroborateEvent({
+    eventKey: 'fast|rio-grande|cursos',
+    candidates: [{
+      sourceRef: { tier: 'A', competence: ['municipal'], publisherDomain: 'riogrande.gob.ar', url: 'https://riogrande.gob.ar/cursos' },
+      facts
+    }]
+  });
+  assert.equal(event.status, 'verified-fast-lane');
+  assert.equal(event.verified, true);
+});
+
+test('rutina local no sensible puede verificar con fuente local Tier B', () => {
+  const article = {
+    title: 'Abren inscripciones para cursos de invierno en Rio Grande',
+    description: 'La agenda incluye talleres y cursos.',
+    text: 'Abren inscripciones para cursos de invierno en Rio Grande. '.repeat(10),
+    date: '2026-07-09'
+  };
+  const facts = extractFacts({ article, source: { mode: 'discovery-draft', defaultCategory: 'Rio Grande' } });
+  assert.equal(facts.editorialLane, EDITORIAL_LANES.FAST);
+
+  const event = corroborateEvent({
+    eventKey: 'fast|rio-grande|cursos-local',
+    candidates: [{
+      sourceRef: { tier: 'B', sourceName: 'Actualidad TDF', publisherDomain: 'actualidadtdf.com.ar', url: 'https://actualidadtdf.com.ar/cursos' },
+      facts
+    }]
+  });
+  assert.equal(event.status, 'verified-local-routine');
+  assert.equal(event.verified, true);
+});
+
+test('rutina no local Tier B no se publica sola', () => {
+  const article = {
+    title: 'Abren inscripciones para cursos de invierno en Rio Grande',
+    description: 'La agenda incluye talleres y cursos.',
+    text: 'Abren inscripciones para cursos de invierno en Rio Grande. '.repeat(10),
+    date: '2026-07-09'
+  };
+  const facts = extractFacts({ article, source: { mode: 'discovery-draft', defaultCategory: 'Rio Grande' } });
+
+  const event = corroborateEvent({
+    eventKey: 'fast|rio-grande|cursos-no-local',
+    candidates: [{
+      sourceRef: { tier: 'B', sourceName: 'Medio nacional', publisherDomain: 'medio-nacional.com', url: 'https://medio-nacional.com/cursos' },
+      facts
+    }]
+  });
+  assert.equal(event.status, 'pending-verification');
 });
 
 test('Tier A fuera de competencia no verifica resultados deportivos', () => {

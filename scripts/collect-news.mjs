@@ -25,7 +25,9 @@ import {
   editorialScore as editorialScoreShared,
   canPublishWithinRunLimit,
   isStaleRoutineWeatherForecast,
-  isStaleDatedDiscoveryCandidate
+  isStaleDatedDiscoveryCandidate,
+  classifyCandidateFreshness,
+  normalizeText
 } from './lib/pipeline-utils.mjs';
 import { buildSourceRef, validateArticleSource } from './lib/source-policy.mjs';
 import {
@@ -57,6 +59,9 @@ const MAX_MATERIALIZE_PER_RUN = Number(process.env.AF_MAX_MATERIALIZE_PER_RUN ||
 const TARGET_PUBLISHED_PER_RUN = Number(process.env.AF_TARGET_PUBLISHED_PER_RUN || 2);
 const MAX_NORMAL_PUBLISHED_PER_RUN = Number(process.env.AF_MAX_NORMAL_PUBLISHED_PER_RUN || 3);
 const EXTRA_SLOT_MIN_IMPORTANCE = Number(process.env.AF_EXTRA_SLOT_MIN_IMPORTANCE || 8);
+const DAILY_TARGET_MIN = Number(process.env.AF_DAILY_TARGET_MIN || 12);
+const DAILY_TARGET_MAX = Number(process.env.AF_DAILY_TARGET_MAX || 16);
+const EXPECTED_RUNS_PER_DAY = Number(process.env.AF_EXPECTED_RUNS_PER_DAY || 4);
 const RSS_TIMEOUT_MS = Number(process.env.AF_RSS_TIMEOUT_MS || 15000);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
@@ -86,12 +91,18 @@ const metrics = {
   candidatesDetected: 0,
   discardedDuplicate: 0,
   discardedQuality: 0,
+  discardedQualityByReason: {},
   discardedGenericTitle: 0,
+  discardedEvergreen: 0,
   eventsGrouped: 0,
   verified: 0,
   pendingVerification: 0,
+  pendingMatchedFromHistory: 0,
   conflicting: 0,
   published: 0,
+  publishedByLane: {},
+  verifiedByLane: {},
+  pendingByLane: {},
   drafts: 0,
   modelErrors: 0,
   factualValidationErrors: 0,
@@ -106,6 +117,21 @@ const metrics = {
   imageSelections: [],
   byCategory: {}
 };
+
+function incrementMap(target, key, amount = 1) {
+  const normalized = String(key || 'unspecified');
+  target[normalized] = (target[normalized] || 0) + amount;
+}
+
+function recordQualityDiscard(reason, { evergreen = false } = {}) {
+  metrics.discardedQuality++;
+  incrementMap(metrics.discardedQualityByReason, reason);
+  if (evergreen) metrics.discardedEvergreen++;
+}
+
+function getLane(value) {
+  return value || 'standard';
+}
 
 // ============================================================
 // Índice de deduplicación — SOLO de noticias PUBLICADAS
@@ -146,6 +172,21 @@ async function indexPublishedDocs() {
   } catch {}
 }
 
+async function countPublishedSince(sinceDate) {
+  let count = 0;
+  try {
+    for (const file of await fs.readdir(NEWS_DIR)) {
+      if (!file.endsWith('.md')) continue;
+      const content = await fs.readFile(path.join(NEWS_DIR, file), 'utf8');
+      const dateMatch = content.match(/^date:\s*['"]?([^'"\n]+)['"]?$/m);
+      if (!dateMatch) continue;
+      const publishedAt = new Date(dateMatch[1].trim());
+      if (!Number.isNaN(publishedAt.valueOf()) && publishedAt >= sinceDate) count++;
+    }
+  } catch {}
+  return count;
+}
+
 function isGenericTitle(title) {
   return isGenericTitleShared(title);
 }
@@ -154,7 +195,45 @@ function isSimilarTitle(newTitle) {
   return isSimilarTitleShared(newTitle, existingTitles);
 }
 
+function overlapCount(left = [], right = []) {
+  const a = new Set(left.map(normalizeText).filter(Boolean));
+  const b = new Set(right.map(normalizeText).filter(Boolean));
+  return [...a].filter((value) => b.has(value)).length;
+}
+
+function fingerprintOverlap(leftTitle = '', rightTitle = '') {
+  const left = extractFingerprint(leftTitle).split('|').filter(Boolean);
+  const right = extractFingerprint(rightTitle).split('|').filter(Boolean);
+  return overlapCount(left, right);
+}
+
+function findMatchingPendingEventKey({ eventKey, facts = {}, title = '', sourceRef = {} }) {
+  if (events.events?.[eventKey]?.status === 'pending-verification') return eventKey;
+  const now = Date.now();
+  for (const [existingKey, record] of Object.entries(events.events || {})) {
+    if (record.status !== 'pending-verification') continue;
+    if (record.expiresAt && new Date(record.expiresAt).getTime() < now) continue;
+    const existingDomains = new Set(record.publisherDomains || []);
+    if (sourceRef.publisherDomain && existingDomains.has(sourceRef.publisherDomain)) continue;
+    const existingFacts = record.verifiedFacts || record.consensusFacts || record.factsBySource?.[0]?.facts || {};
+    const sameType = (existingFacts.eventType || 'general') === (facts.eventType || 'general');
+    if (!sameType) continue;
+
+    const titles = (record.factsBySource || []).map((entry) => entry.facts?.title || '').filter(Boolean);
+    const titleMatch = titles.some((existingTitle) => fingerprintOverlap(title, existingTitle) >= 3);
+    const entityOverlap =
+      overlapCount(facts.organizations, existingFacts.organizations) > 0 ||
+      overlapCount(facts.people, existingFacts.people) > 0 ||
+      overlapCount(facts.places, existingFacts.places) > 0;
+
+    if (titleMatch && entityOverlap) return existingKey;
+  }
+  return eventKey;
+}
+
 await indexPublishedDocs();
+const publishedLast24hBeforeRun = await countPublishedSince(new Date(Date.now() - 24 * 60 * 60 * 1000));
+metrics.publishedLast24hBeforeRun = publishedLast24hBeforeRun;
 console.log(`Índice de deduplicación (solo publicadas): ${existingUrls.size} URLs y ${existingTitles.size} títulos.`);
 
 // ============================================================
@@ -288,14 +367,15 @@ for (const candidate of candidatesToMaterialize) {
 
   const sourceValidation = validateArticleSource({ article, item, source, finalUrl });
   if (!sourceValidation.ok) {
+    const reason = sourceValidation.errors.join(',');
     console.log(`[${source.name}] Descartado por fuente invalida (${sourceValidation.errors.join(', ')}): ${sourceValidation.url}`);
     seen.items[initialKey] = {
       status: 'discarded-quality',
-      reason: sourceValidation.errors.join(','),
+      reason,
       seenAt: new Date().toISOString(),
       source: source.id
     };
-    metrics.discardedQuality++;
+    recordQualityDiscard(reason);
     continue;
   }
 
@@ -312,7 +392,7 @@ for (const candidate of candidatesToMaterialize) {
       seenAt: new Date().toISOString(),
       source: source.id
     };
-    metrics.discardedQuality++;
+    recordQualityDiscard('stale-dated-discovery', { evergreen: true });
     continue;
   }
   const sourceRef = buildSourceRef({ source, item, article, officialDomains: config.officialDomains });
@@ -322,6 +402,27 @@ for (const candidate of candidatesToMaterialize) {
     source,
     category: source.forceCategory || source.defaultCategory
   });
+  const sourceDateValue = article.date || item.pubDate || '';
+  const pubDate = safeDate(sourceDateValue || new Date());
+  const explicitDatedText = `${currentTitle}\n${article.description || item.description || ''}`;
+  const freshness = classifyCandidateFreshness({
+    source,
+    facts,
+    pubDate,
+    sourceHasDate: Boolean(sourceDateValue),
+    hasExplicitDate: /\b(19\d{2}|20\d{2})\b/.test(explicitDatedText)
+  });
+  if (!freshness.ok) {
+    seen.items[initialKey] = {
+      status: 'discarded-quality',
+      reason: freshness.reason,
+      seenAt: new Date().toISOString(),
+      source: source.id,
+      editorialLane: getLane(facts.editorialLane)
+    };
+    recordQualityDiscard(freshness.reason, { evergreen: freshness.bucket === 'evergreen' });
+    continue;
+  }
   if (isStaleRoutineWeatherForecast(facts)) {
     seen.items[initialKey] = {
       status: 'discarded-quality',
@@ -329,14 +430,21 @@ for (const candidate of candidatesToMaterialize) {
       seenAt: new Date().toISOString(),
       source: source.id
     };
-    metrics.discardedQuality++;
+    recordQualityDiscard('stale-weather-forecast');
     continue;
   }
-  const eventKey = generateEventKey({
+  const generatedEventKey = generateEventKey({
     facts,
     title: currentTitle,
     sourceRef
   });
+  const eventKey = findMatchingPendingEventKey({
+    eventKey: generatedEventKey,
+    facts,
+    title: currentTitle,
+    sourceRef
+  });
+  if (eventKey !== generatedEventKey) metrics.pendingMatchedFromHistory++;
 
   const canonicalKey = hash(sourceRef.url || finalUrl);
 
@@ -385,7 +493,7 @@ for (const candidate of candidatesToMaterialize) {
 
   const bodyLength = (article.text || '').length;
   if (bodyLength < 400) {
-    metrics.discardedQuality++;
+    recordQualityDiscard('short-body');
     const attempts = (seen.items[initialKey]?.attempts || 0) + 1;
     seen.items[initialKey] = {
       seenAt: new Date().toISOString(),
@@ -410,7 +518,7 @@ for (const candidate of candidatesToMaterialize) {
     eventKey,
     title: currentTitle,
     isOfficial: source.mode === 'official-auto' || isOfficialDomain(finalUrl, config.officialDomains),
-    pubDate: safeDate(article.date || item.pubDate || new Date()),
+    pubDate,
     bodyLength
   });
   
@@ -559,6 +667,7 @@ for (const [eventKey, group] of eventsByKey) {
         status: 'conflicting-sources',
         source: candidate.source.id,
         eventKey,
+        editorialLane: getLane(verification.editorialLane),
         lastError: 'Conflicto factual critico entre fuentes'
       };
       seen.items[candidate.initialKey] = seen.items[candidate.canonicalKey];
@@ -568,12 +677,14 @@ for (const [eventKey, group] of eventsByKey) {
 
   if (!verification.verified) {
     metrics.pendingVerification++;
+    incrementMap(metrics.pendingByLane, getLane(verification.editorialLane));
     for (const candidate of group) {
       seen.items[candidate.canonicalKey] = {
         seenAt: new Date().toISOString(),
         status: 'pending-verification',
         source: candidate.source.id,
         eventKey,
+        editorialLane: getLane(verification.editorialLane),
         riskLevel: verification.riskLevel,
         nextRetryAt: events.events[eventKey].nextRetryAt,
         expiresAt: events.events[eventKey].expiresAt
@@ -585,6 +696,7 @@ for (const [eventKey, group] of eventsByKey) {
   }
 
   metrics.verified++;
+  incrementMap(metrics.verifiedByLane, getLane(verification.editorialLane));
   const baseCandidate = buildProvincialWeatherCandidate(group, verification);
   baseCandidate.verification = verification;
   verifiedCandidates.push(baseCandidate);
@@ -641,6 +753,22 @@ let officialAiUsed = 0;
 let discoveryAiUsed = 0;
 let draftCount = 0;
 let normalPublished = 0;
+const remainingToDailyMin = Math.max(0, DAILY_TARGET_MIN - publishedLast24hBeforeRun);
+const dailySlotsRemaining = Math.max(0, DAILY_TARGET_MAX - publishedLast24hBeforeRun);
+const effectiveRunTarget = Math.min(
+  MAX_NORMAL_PUBLISHED_PER_RUN,
+  Math.max(TARGET_PUBLISHED_PER_RUN, Math.ceil(remainingToDailyMin / Math.max(1, EXPECTED_RUNS_PER_DAY)))
+);
+const effectiveRunMaxNormal = Math.min(MAX_NORMAL_PUBLISHED_PER_RUN, dailySlotsRemaining);
+metrics.dailyTarget = {
+  min: DAILY_TARGET_MIN,
+  max: DAILY_TARGET_MAX,
+  publishedLast24hBeforeRun,
+  remainingToMin: remainingToDailyMin,
+  slotsRemaining: dailySlotsRemaining,
+  effectiveRunTarget,
+  effectiveRunMaxNormal
+};
 
 for (const candidate of verifiedCandidates) {
   const { source, item, article, initialKey, canonicalKey, title, isOfficial, pubDate, sourceRef, verification } = candidate;
@@ -711,9 +839,11 @@ for (const candidate of verifiedCandidates) {
       const publicationLimit = canPublishWithinRunLimit({
         importance: ai.importance,
         normalPublished,
-        target: TARGET_PUBLISHED_PER_RUN,
-        maxNormal: MAX_NORMAL_PUBLISHED_PER_RUN,
-        extraSlotMinImportance: EXTRA_SLOT_MIN_IMPORTANCE
+        target: effectiveRunTarget,
+        maxNormal: effectiveRunMaxNormal,
+        extraSlotMinImportance: EXTRA_SLOT_MIN_IMPORTANCE,
+        dailyPublished: publishedLast24hBeforeRun + normalPublished,
+        dailyTargetMax: DAILY_TARGET_MAX
       });
       const isUrgent = publicationLimit.urgent;
       if (!publicationLimit.ok) {
@@ -728,6 +858,12 @@ for (const candidate of verifiedCandidates) {
 
       if (!PERSIST_OUTPUTS) {
         console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
+        existingUrls.add(article.finalUrl);
+        existingTitles.add(ai.title.toLowerCase());
+        publishedEventFingerprints.add(extractFingerprint(ai.title));
+        publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
+        incrementMap(metrics.publishedByLane, getLane(verification?.editorialLane));
+        metrics.published++;
         if (!isUrgent) normalPublished++;
         continue;
       }
@@ -793,6 +929,7 @@ for (const candidate of verifiedCandidates) {
 
       publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
       metrics.published++;
+      incrementMap(metrics.publishedByLane, getLane(verification?.editorialLane));
       if (!isUrgent) normalPublished++;
       metrics.byCategory[ai.category] = (metrics.byCategory[ai.category] || 0) + 1;
 
@@ -889,8 +1026,13 @@ if (PERSIST_OUTPUTS) {
     discoveryAiUsed,
     discoveryAiBudget,
     targetPublishedPerRun: TARGET_PUBLISHED_PER_RUN,
+    effectiveRunTarget,
     maxNormalPublishedPerRun: MAX_NORMAL_PUBLISHED_PER_RUN,
+    effectiveRunMaxNormal,
     extraSlotMinImportance: EXTRA_SLOT_MIN_IMPORTANCE,
+    dailyTargetMin: DAILY_TARGET_MIN,
+    dailyTargetMax: DAILY_TARGET_MAX,
+    publishedLast24hBeforeRun,
     candidatesMaterialized: candidatesToMaterialize.length,
     totalCandidatesBeforeLimit: allCandidates.length
   });
@@ -928,6 +1070,16 @@ console.log(`
   Por categoría: ${categoryStr}
 `);
 
+console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
+  discardedQualityByReason: metrics.discardedQualityByReason,
+  discardedEvergreen: metrics.discardedEvergreen,
+  verifiedByLane: metrics.verifiedByLane,
+  pendingByLane: metrics.pendingByLane,
+  publishedByLane: metrics.publishedByLane,
+  pendingMatchedFromHistory: metrics.pendingMatchedFromHistory,
+  dailyTarget: metrics.dailyTarget
+}, null, 2));
+
 async function saveRunMetrics(currentMetrics, extra = {}) {
   const metricsPath = path.join(ROOT, 'data/news-run-metrics.json');
   const payload = {
@@ -952,7 +1104,12 @@ function explainNoMorePublished(currentMetrics, extra = {}) {
   if (currentMetrics.pendingVerification > 0) reasons.push(`${currentMetrics.pendingVerification} evento(s) quedaron pendientes de segunda fuente`);
   if (currentMetrics.conflicting > 0) reasons.push(`${currentMetrics.conflicting} evento(s) tuvieron conflicto factual`);
   if (currentMetrics.discardedDuplicate > 0) reasons.push(`${currentMetrics.discardedDuplicate} candidato(s) descartados por duplicado/similitud`);
-  if (currentMetrics.discardedQuality > 0) reasons.push(`${currentMetrics.discardedQuality} candidato(s) descartados por calidad o fuente invalida`);
+  if (currentMetrics.discardedQuality > 0) {
+    const detail = Object.entries(currentMetrics.discardedQualityByReason || {})
+      .map(([reason, count]) => `${reason}: ${count}`)
+      .join(', ');
+    reasons.push(`${currentMetrics.discardedQuality} candidato(s) descartados por causas especificas (${detail || 'sin detalle'})`);
+  }
   if (currentMetrics.discardedImportance > 0) reasons.push(`${currentMetrics.discardedImportance} candidato(s) descartados por importancia editorial`);
   if (currentMetrics.discardedSourceLimit > 0) reasons.push(`${currentMetrics.discardedSourceLimit} candidato(s) quedaron por limite por fuente`);
   if (currentMetrics.discardedNoAiBudget > 0) reasons.push(`${currentMetrics.discardedNoAiBudget} candidato(s) quedaron sin presupuesto IA`);

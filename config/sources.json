@@ -33,6 +33,48 @@
       "maxItems": 4
     },
     {
+      "id": "gobierno-tdf-oficial",
+      "name": "Gobierno de Tierra del Fuego",
+      "type": "rss",
+      "url": "https://www.tierradelfuego.gob.ar/feed/",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "official-auto",
+      "maxItems": 5
+    },
+    {
+      "id": "tolhuin-oficial",
+      "name": "Municipio de Tolhuin",
+      "type": "rss",
+      "url": "https://tolhuin.gob.ar/feed/",
+      "location": "Tolhuin",
+      "defaultCategory": "Tolhuin",
+      "mode": "official-auto",
+      "maxItems": 4
+    },
+    {
+      "id": "actualidad-tdf",
+      "name": "Actualidad TDF",
+      "type": "rss",
+      "url": "https://www.actualidadtdf.com.ar/feed/",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 5,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Rio Grande", "Tolhuin", "Malvinas", "Antártida", "Antartida"]
+    },
+    {
+      "id": "el-rompehielos",
+      "name": "El Rompehielos",
+      "type": "rss",
+      "url": "https://www.elrompehielos.com.ar/feed/",
+      "location": "Tierra del Fuego AIAS",
+      "defaultCategory": "Provincia",
+      "mode": "discovery-draft",
+      "maxItems": 4,
+      "filterKeywords": ["Tierra del Fuego", "Ushuaia", "Río Grande", "Rio Grande", "Tolhuin", "Malvinas", "Antártida", "Antartida", "Cerro Castor"]
+    },
+    {
       "id": "bing-tdf",
       "name": "Bing News — Tierra del Fuego",
       "type": "rss",

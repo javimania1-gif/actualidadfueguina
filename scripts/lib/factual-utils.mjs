@@ -1,7 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { ROOT, cleanText } from './news-utils.mjs';
-import { SOURCE_TIERS, countIndependentEditorialSources, isSourceCompetentForEvent } from './source-policy.mjs';
+import {
+  SOURCE_TIERS,
+  countIndependentEditorialSources,
+  isSourceCompetentForEvent,
+  isTrustedLocalRoutineSource
+} from './source-policy.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
 
 export const EVENTS_PATH = path.join(ROOT, 'data/events.json');
@@ -36,6 +41,12 @@ const KNOWN_PLACES = [
 
 export const FACTUAL_VALIDATION_VERSION = 2;
 
+export const EDITORIAL_LANES = Object.freeze({
+  FAST: 'fast',
+  STANDARD: 'standard',
+  STRICT: 'strict'
+});
+
 const CRITICAL_FIELDS = [
   'teams',
   'people',
@@ -61,6 +72,30 @@ const MONTHS_ES = new Map([
   ['noviembre', '11'],
   ['diciembre', '12']
 ]);
+
+const STRICT_LANE_PATTERNS = [
+  /\b(resultados?|marcador|vencio|derroto|elimino|clasifico|final|cuartos|octavos)\b/,
+  /\b(fallecio|murio|muerte|victimas?|heridos?|accidente fatal|femicidio)\b/,
+  /\b(eleccion|elecciones|electoral|votos?|escrutinio|convencionales?)\b/,
+  /\b(policial|policiales|homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido)\b/,
+  /\b(judicial|condena|imputado|denuncia penal|causa judicial|demanda judicial)\b/,
+  /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/
+];
+
+const STANDARD_LANE_PATTERNS = [
+  /\b(politica|gobernador|intendenta?|legislatura|concejo|senado|diputados)\b/,
+  /\b(economia|inflacion|dolar|tarifa|salario|paritaria|millones?|pesos?|presupuesto)\b/,
+  /\b(declaraciones?|critico|cuestiono|denuncio|reclamo|oposicion)\b/,
+  /\b(ley|decreto|resolucion|norma|boletin oficial|reforma constitucional)\b/,
+  /\b(decision administrativa|licitacion|adjudicacion|fisco|ministerio)\b/
+];
+
+const FAST_LANE_PATTERNS = [
+  /\b(agenda|inscripcion|inscripciones|curso|cursos|taller|talleres|capacitacion|capacitaciones)\b/,
+  /\b(actividad|actividades|servicio|servicios|atencion|operativo|cronograma)\b/,
+  /\b(convocatoria|convoca|feria|muestra|festival|fiesta|pena|propuesta cultural)\b/,
+  /\b(programa|programas|obra|obras|pavimentad[oa]|inaugura|habilita|presenta|lanza|abre)\b/
+];
 
 export async function loadEvents() {
   try {
@@ -149,8 +184,44 @@ export function getWeatherForecastDateKey(text = '', fallbackDates = []) {
   return iso || '';
 }
 
+function matchesAny(value = '', patterns = []) {
+  return patterns.some((pattern) => pattern.test(value));
+}
+
+export function classifyEditorialLane({ title = '', text = '', category = '', source = {}, aiRisk = '' }) {
+  const combined = normalizeText(`${title}\n${text.slice(0, 3000)}\n${category}`);
+  const reasons = [];
+
+  if (aiRisk === 'alto') {
+    return { lane: EDITORIAL_LANES.STRICT, reasons: ['ai-high'] };
+  }
+
+  if (matchesAny(combined, STRICT_LANE_PATTERNS)) {
+    reasons.push('strict-sensitive-topic');
+    return { lane: EDITORIAL_LANES.STRICT, reasons };
+  }
+
+  if (matchesAny(combined, STANDARD_LANE_PATTERNS)) {
+    reasons.push('standard-sensitive-institutional');
+    return { lane: EDITORIAL_LANES.STANDARD, reasons };
+  }
+
+  if (matchesAny(combined, FAST_LANE_PATTERNS)) {
+    reasons.push(source.mode === 'official-auto' ? 'official-routine-fast-lane' : 'routine-fast-lane');
+    return { lane: EDITORIAL_LANES.FAST, reasons };
+  }
+
+  if (source.mode === 'official-auto') {
+    reasons.push('official-routine-default');
+    return { lane: EDITORIAL_LANES.FAST, reasons };
+  }
+
+  return { lane: EDITORIAL_LANES.STANDARD, reasons: ['default-standard'] };
+}
+
 export function classifyRisk({ title = '', text = '', category = '', source = {}, aiRisk = '' }) {
   const combined = `${title}\n${text.slice(0, 3000)}\n${category}`;
+  const lane = classifyEditorialLane({ title, text, category, source, aiRisk });
   const reasons = [];
 
   if (aiRisk === 'alto') reasons.push('ai-high');
@@ -158,15 +229,17 @@ export function classifyRisk({ title = '', text = '', category = '', source = {}
     if (pattern.test(combined)) reasons.push(pattern.source);
   }
 
-  if (reasons.length > 0) return { level: 'high', reasons };
+  if (lane.lane !== EDITORIAL_LANES.FAST) {
+    return { level: 'high', reasons: unique([...lane.reasons, ...reasons]), editorialLane: lane.lane };
+  }
 
   if (source.mode === 'official-auto') {
     for (const pattern of LOW_RISK_PATTERNS) {
-      if (pattern.test(combined)) return { level: 'low', reasons: ['official-routine'] };
+      if (pattern.test(combined)) return { level: 'low', reasons: unique(['official-routine', ...lane.reasons]), editorialLane: lane.lane };
     }
   }
 
-  return { level: 'low', reasons: ['default-low'] };
+  return { level: 'low', reasons: unique(['fast-lane', ...lane.reasons]), editorialLane: lane.lane };
 }
 
 export function extractFacts({ article = {}, item = {}, source = {}, category = '' }) {
@@ -185,6 +258,7 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
     title,
     riskLevel: risk.level,
     riskReasons: risk.reasons,
+    editorialLane: risk.editorialLane || EDITORIAL_LANES.STANDARD,
     eventType: risk.level === 'high' || inferredEventType === 'weather-forecast' ? inferredEventType : 'general',
     teams,
     people: capitalized.filter((value) => !teams.some((team) => normalizeText(team) === normalizeText(value))).slice(0, 8),
@@ -375,7 +449,12 @@ export function compareFactSets(factSets = []) {
 export function corroborateEvent({ eventKey, candidates = [] }) {
   const factSets = candidates.map((candidate) => candidate.facts);
   const sourceRefs = candidates.map((candidate) => candidate.sourceRef);
-  const riskLevel = factSets.some((facts) => facts.riskLevel === 'high') ? 'high' : 'low';
+  const editorialLane = factSets.some((facts) => facts.editorialLane === EDITORIAL_LANES.STRICT)
+    ? EDITORIAL_LANES.STRICT
+    : factSets.some((facts) => facts.editorialLane === EDITORIAL_LANES.STANDARD || (!facts.editorialLane && facts.riskLevel === 'high'))
+      ? EDITORIAL_LANES.STANDARD
+      : EDITORIAL_LANES.FAST;
+  const riskLevel = editorialLane === EDITORIAL_LANES.FAST ? 'low' : 'high';
   const comparison = compareFactSets(factSets);
   const conflicts = comparison.conflictingFacts;
   const hasCriticalConflict = conflicts.some((conflict) => conflict.severity === 'critical');
@@ -386,6 +465,7 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
     return {
       eventKey,
       status: 'conflicting-sources',
+      editorialLane,
       riskLevel,
       verified: false,
       conflicts,
@@ -399,10 +479,27 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
   const hasCompetentTierA = sourceRefs.some((ref) => ref.tier === SOURCE_TIERS.A && isSourceCompetentForEvent(ref, eventType));
   const independentTierB = countIndependentEditorialSources(sourceRefs);
 
-  if (riskLevel === 'low') {
+  if (editorialLane === EDITORIAL_LANES.FAST) {
+    const hasTrustedLocalRoutineSource = sourceRefs.some(isTrustedLocalRoutineSource);
+    if (!hasCompetentTierA && !hasTrustedLocalRoutineSource) {
+      return {
+        eventKey,
+        status: 'pending-verification',
+        editorialLane,
+        riskLevel,
+        verified: false,
+        conflicts: [],
+        consensusFacts: comparison.consensusFacts,
+        sourceSpecificFacts: comparison.sourceSpecificFacts,
+        conflictingFacts: [],
+        verifiedFacts
+      };
+    }
+
     return {
       eventKey,
-      status: 'verified',
+      status: hasCompetentTierA ? 'verified-fast-lane' : 'verified-local-routine',
+      editorialLane,
       riskLevel,
       verified: true,
       conflicts: [],
@@ -417,6 +514,7 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
     return {
       eventKey,
       status: 'verified-tier-a',
+      editorialLane,
       riskLevel,
       verified: true,
       conflicts: [],
@@ -430,7 +528,8 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
   if (independentTierB >= 2) {
     return {
       eventKey,
-      status: 'verified',
+      status: editorialLane === EDITORIAL_LANES.STRICT ? 'verified-strict' : 'verified-standard',
+      editorialLane,
       riskLevel,
       verified: true,
       conflicts: [],
@@ -444,6 +543,7 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
   return {
     eventKey,
     status: 'pending-verification',
+    editorialLane,
     riskLevel,
     verified: false,
     conflicts: [],
@@ -558,6 +658,7 @@ export function buildEventRecord({ existing = {}, eventKey, candidates = [], ver
     lastAttemptAt: now.toISOString(),
     nextRetryAt,
     expiresAt,
+    editorialLane: verification.editorialLane || EDITORIAL_LANES.STANDARD,
     riskLevel: verification.riskLevel,
     status: verification.status,
     publisherDomains: unique(candidates.map((candidate) => candidate.sourceRef.publisherDomain)),
