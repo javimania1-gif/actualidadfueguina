@@ -1,60 +1,182 @@
 {
-  "generatedAt": "2026-07-10T07:39:58.235Z",
+  "generatedAt": "2026-07-10T10:59:04.776Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29077277566",
-    "headSha": "ede9d1bcc0e054175b3f179c2d914f69152a8dc7"
+    "runId": "29087904517",
+    "headSha": "0f472bb91a5c6d79955c59484c92334c777920c0"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 21,
-    "discardedDuplicate": 4,
-    "discardedQuality": 8,
+    "candidatesDetected": 29,
+    "discardedDuplicate": 1,
+    "discardedQuality": 20,
     "discardedQualityByReason": {
-      "stale-hard-news": 4,
+      "weak-title,short-body": 17,
       "stale-dated-discovery": 2,
-      "listing-url": 1,
       "evergreen-or-stale-outside-news-window": 1
     },
     "discardedBySourceAndReason": {
+      "bing-tolhuin": {
+        "weak-title,short-body": 2,
+        "evergreen-or-stale-outside-news-window": 1
+      },
       "bing-ushuaia": {
-        "stale-hard-news": 1
+        "weak-title,short-body": 3
       },
-      "mundo-bing": {
+      "bing-antartida": {
         "stale-dated-discovery": 1,
-        "stale-hard-news": 1,
-        "listing-url": 1
+        "weak-title,short-body": 2
       },
-      "actualidad-tdf": {
-        "stale-hard-news": 2
+      "nacionales-infobae": {
+        "stale-dated-discovery": 1
       },
       "bing-rio-grande": {
-        "evergreen-or-stale-outside-news-window": 1,
-        "stale-dated-discovery": 1
+        "weak-title,short-body": 4
+      },
+      "mundo-bing": {
+        "weak-title,short-body": 3
+      },
+      "bing-malvinas": {
+        "weak-title,short-body": 3
       }
     },
     "discardedGenericTitle": 1,
     "discardedEvergreen": 3,
-    "eventsGrouped": 8,
-    "verified": 0,
-    "pendingVerification": 8,
+    "eventsGrouped": 7,
+    "verified": 2,
+    "pendingVerification": 5,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "conflicting": 0,
     "published": 0,
     "publishedByLane": {},
-    "verifiedByLane": {},
+    "verifiedByLane": {
+      "strict": 1,
+      "standard": 1
+    },
     "pendingByLane": {
-      "standard": 4,
-      "strict": 4
+      "strict": 4,
+      "standard": 1
     },
     "fastPendingAudit": [],
-    "freshCandidates": 13,
-    "staleDiscarded": 7,
+    "freshCandidates": 9,
+    "staleDiscarded": 3,
     "sourceHealth": {
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "bing-ushuaia": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 1,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-antartida": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 0,
+        "qualityDiscarded": 4,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-bing": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
       "tolhuin-oficial": {
         "detected": 4,
         "materialized": 0,
@@ -69,73 +191,17 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 2,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.5
-      },
-      "bing-ushuaia": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 3,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.75,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
-      },
-      "mundo-clarin": {
-        "detected": 3,
+      "nacionales-perfil": {
+        "detected": 2,
         "materialized": 2,
         "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
-        "verificationContributionRate": 0,
+        "verificationContributionRate": 0.5,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -152,20 +218,6 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
-      },
-      "mundo-bing": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
       },
       "el-rompehielos": {
         "detected": 4,
@@ -197,17 +249,17 @@
       },
       "actualidad-tdf": {
         "detected": 4,
-        "materialized": 2,
+        "materialized": 0,
         "freshCandidates": 0,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.5,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.5
+        "staleDiscardRate": 0
       },
       "rio-grande-oficial": {
         "detected": 4,
@@ -224,46 +276,61 @@
         "staleDiscardRate": 0
       }
     },
-    "sourceDeprioritized": [
-      "bing-rio-grande"
-    ],
+    "sourceDeprioritized": [],
     "drafts": 0,
     "modelErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 0,
+    "discardedImportance": 2,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 0,
-    "aiCalls": 0,
+    "aiAttempts": 2,
+    "aiCalls": 2,
     "imageSelections": [],
-    "agendaStories": 162,
-    "newsworthinessAverage": 0,
-    "newsworthinessTop": [],
-    "corroborationSearches": 3,
-    "corroborationFound": 0,
-    "corroborationVerified": 0,
-    "corroborationConflicts": 0,
-    "corroborationNoResult": 3,
-    "corroborationAttempts": [
+    "agendaStories": 167,
+    "newsworthinessAverage": 87,
+    "newsworthinessTop": [
       {
-        "eventKey": "service|justicia de tucuman|policia de tucuman|justicia|espana|investiga|2026-07-10",
-        "title": "“Maté a mi hermana”: investigan a un hombre que le habría confesado un crimen a su hijo en Tucumán",
-        "priorityRank": 1,
-        "corroborationQuery": "Justicia de Tucumán Policía de Tucumán Justicia Ministerio Público Fiscal Fiscalía confesado crimen habria hermana hombre investigan",
-        "corroborationReason": "newsworthiness=91; freshness=0h; territory=Nacionales; impact=19; corroborability=10; pendingAge=0h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
+        "title": "La Comisión Europea acusa a Meta de exponer a los menores con el \"diseño adictivo\" de Instagram y Facebook",
+        "eventKey": "service|union europea|mark zuckerberg|servicios digitales|argentina|informa|2026-07-10",
+        "score": 94,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
       },
       {
-        "eventKey": "service|gobierno|ministerio de justicia|colombia|informa|2026-07-10",
-        "title": "Cédula en Colombia tendrá opciones no binario y transgénero: así será el cambio",
+        "title": "Ascienden a doce los muertos por un incendio forestal en Almería, España",
+        "eventKey": "crime|espana ocurrio|internacional|estados unidos|espana|informa|2026-07-09",
+        "score": 80,
+        "topic": "servicios",
+        "territory": "Mundo",
+        "lane": "strict"
+      }
+    ],
+    "corroborationSearches": 3,
+    "corroborationFound": 3,
+    "corroborationVerified": 2,
+    "corroborationConflicts": 0,
+    "corroborationNoResult": 1,
+    "corroborationAttempts": [
+      {
+        "eventKey": "service|union europea|mark zuckerberg|servicios digitales|argentina|informa|2026-07-10",
+        "title": "La Comisión Europea acusa a Meta de exponer a los menores con el \"diseño adictivo\" de Instagram y Facebook",
+        "priorityRank": 1,
+        "corroborationQuery": "Unión Europea Mark Zuckerberg Servicios Digitales Argentina acusa adictivo comision diseno europea exponer",
+        "corroborationReason": "newsworthiness=94; freshness=0h; territory=Nacionales; impact=21; corroborability=10; pendingAge=0h; attempts=0",
+        "found": 2,
+        "verified": true,
+        "status": "verified-standard"
+      },
+      {
+        "eventKey": "service|gobierno de milei|justicia|mario lugones|informa|2026-07-10",
+        "title": "De la Sota denunció al ministro Lugones: \"Todo tiene un límite, no vamos a ser indiferentes\"",
         "priorityRank": 2,
-        "corroborationQuery": "Gobierno Ministerio de Justicia Colombia binario cambio cedula opciones tendra",
-        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=21; corroborability=10; pendingAge=4h; attempts=0",
+        "corroborationQuery": "Mario Lugones Gobierno de Milei Justicia denuncio indiferentes limite lugones ministro tiene",
+        "corroborationReason": "newsworthiness=94; freshness=0h; territory=Nacionales; impact=19; corroborability=10; pendingAge=0h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
@@ -273,16 +340,20 @@
         "title": "Ascienden a doce los muertos por un incendio forestal en Almería, España",
         "priorityRank": 3,
         "corroborationQuery": "España Ocurrió Estados Unidos Espana almeria ascienden forestal incendio muertos",
-        "corroborationReason": "newsworthiness=89; freshness=5h; territory=Mundo; impact=19; corroborability=10; pendingAge=5h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
+        "corroborationReason": "newsworthiness=89; freshness=3h; territory=Mundo; impact=19; corroborability=10; pendingAge=9h; attempts=1",
+        "found": 1,
+        "verified": true,
+        "status": "verified-strict"
       }
     ],
-    "conflictsByField": {},
+    "conflictsByField": {
+      "money": 3,
+      "percentages": 2,
+      "dates": 1
+    },
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 0,
+    "nonCriticalDifferences": 6,
+    "resolvedComplementaryFacts": 16,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 3,
@@ -303,14 +374,14 @@
         "max": 216.5
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 6,
-        "avg": 398.2,
+        "count": 8,
+        "avg": 363,
         "p50": 70.8,
         "max": 2101.9
       },
       "cohort": {
         "comparablePublishedCount": 3,
-        "verifiedWithoutPublicationCount": 3,
+        "verifiedWithoutPublicationCount": 5,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
@@ -318,10 +389,10 @@
     },
     "byCategory": {},
     "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 2,
+    "publishedLast6hBeforeRun": 0,
     "publishedLast12hBeforeRun": 3,
     "publishedLast24hBeforeRun": 8,
-    "hoursSinceLastPublicationBeforeRun": 4,
+    "hoursSinceLastPublicationBeforeRun": 7.4,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -405,33 +476,33 @@
         }
       },
       {
-        "storyId": "general|argentina|cerro castor|ushuaia el|ushuaia|argentina|informa|07 08 900",
-        "headlineSeed": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
-        "topic": "turismo",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 96,
-        "status": "verified",
+        "storyId": "service|union europea|mark zuckerberg|servicios digitales|argentina|informa|2026-07-10",
+        "headlineSeed": "La Comisión Europea acusa a Meta de exponer a los menores con el \"diseño adictivo\" de Instagram y Facebook",
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "newsworthinessScore": 94,
+        "status": "verified-standard",
         "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "serviceValue": 15,
-          "socialPotential": 15,
-          "searchPotential": 13,
-          "recency": 9,
+          "publicInterest": 21,
+          "localRelevance": 12,
+          "serviceValue": 20,
+          "socialPotential": 7,
+          "searchPotential": 12,
+          "recency": 15,
           "sourceStrength": 3,
           "diversity": 4
         }
       }
     ],
-    "agendaInvalidStories": 18,
+    "agendaInvalidStories": 20,
     "technicalSuccess": true,
-    "editorialOutcome": "verification-starved"
+    "editorialOutcome": "quality-filter-dominated"
   },
   "budget": {
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 0,
+    "discoveryAiUsed": 2,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -441,12 +512,13 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 8,
-    "candidatesMaterialized": 21,
-    "totalCandidatesBeforeLimit": 21
+    "candidatesMaterialized": 29,
+    "totalCandidatesBeforeLimit": 29
   },
   "reasonNoMorePublished": [
-    "8 evento(s) quedaron pendientes de segunda fuente",
-    "4 candidato(s) descartados por duplicado/similitud",
-    "8 candidato(s) descartados por causas especificas (stale-hard-news: 4, stale-dated-discovery: 2, listing-url: 1, evergreen-or-stale-outside-news-window: 1)"
+    "5 evento(s) quedaron pendientes de segunda fuente",
+    "1 candidato(s) descartados por duplicado/similitud",
+    "20 candidato(s) descartados por causas especificas (weak-title,short-body: 17, stale-dated-discovery: 2, evergreen-or-stale-outside-news-window: 1)",
+    "2 candidato(s) descartados por importancia editorial"
   ]
 }
