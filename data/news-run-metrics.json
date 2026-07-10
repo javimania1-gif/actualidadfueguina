@@ -1,98 +1,89 @@
 {
-  "generatedAt": "2026-07-10T19:26:06.770Z",
+  "generatedAt": "2026-07-10T19:38:09.081Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "push",
-    "runId": "29117856483",
-    "headSha": "2968a0ee9c9bd8533a5b5a10f51fe53e15e7c7f0"
+    "eventName": "schedule",
+    "runId": "29118576407",
+    "headSha": "daac56d13c220977a6823e8e2fb34a3e5ca44174"
   },
   "metrics": {
     "sourcesConsulted": 20,
     "candidatesDetected": 58,
-    "candidatesIngested": 31,
-    "extractionSucceeded": 30,
-    "discardedDuplicate": 4,
+    "candidatesIngested": 5,
+    "extractionSucceeded": 5,
+    "discardedDuplicate": 1,
     "duplicateExactUrl": 1,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 1,
-    "discardedQuality": 17,
-    "discardedQualityByReason": {
-      "stale-dated-discovery": 7,
-      "evergreen-or-stale-outside-news-window": 7,
-      "listing-url": 1,
-      "stale-hard-news": 2
-    },
-    "discardedBySourceAndReason": {
-      "bing-malvinas": {
-        "stale-dated-discovery": 2
-      },
-      "bing-tolhuin": {
-        "evergreen-or-stale-outside-news-window": 2
-      },
-      "bing-rio-grande": {
-        "stale-dated-discovery": 1,
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "mundo-bing": {
-        "stale-dated-discovery": 1,
-        "evergreen-or-stale-outside-news-window": 1,
-        "listing-url": 1
-      },
-      "bing-antartida": {
-        "stale-dated-discovery": 3
-      },
-      "bing-tdf": {
-        "evergreen-or-stale-outside-news-window": 3,
-        "stale-hard-news": 2
-      }
-    },
+    "duplicatePublishedEvent": 0,
+    "discardedQuality": 0,
+    "discardedQualityByReason": {},
+    "discardedBySourceAndReason": {},
     "discardedGenericTitle": 1,
-    "discardedEvergreen": 14,
-    "eventsGrouped": 9,
-    "verified": 2,
-    "pendingVerification": 7,
+    "discardedEvergreen": 0,
+    "eventsGrouped": 4,
+    "verified": 0,
+    "pendingVerification": 4,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "conflicting": 0,
-    "published": 2,
-    "publishedByLane": {
-      "fast": 1,
-      "standard": 1
-    },
-    "verifiedByLane": {
-      "fast": 1,
-      "standard": 1
-    },
+    "published": 0,
+    "publishedByLane": {},
+    "verifiedByLane": {},
     "pendingByLane": {
-      "strict": 4,
-      "standard": 3
+      "strict": 1,
+      "fast": 2,
+      "standard": 1
     },
     "eventsByTerritory": {
-      "Mundo": 1,
-      "Nacionales": 5,
-      "Tolhuin": 1,
-      "Rio Grande": 2
+      "Nacionales": 3,
+      "Malvinas": 1
     },
-    "verifiedByTerritory": {
-      "Tolhuin": 1,
-      "Ushuaia": 1
-    },
-    "fastPendingAudit": [],
-    "freshCandidates": 13,
-    "staleDiscarded": 16,
+    "verifiedByTerritory": {},
+    "fastPendingAudit": [
+      {
+        "eventKey": "agenda|ecuador|espana|informa|2026-07-10",
+        "title": "Morante de la Puebla pone el reposo, fuera de contexto, en la vorágine sanferminera",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "tier": "B",
+        "competence": [],
+        "territory": "Nacionales",
+        "topic": "agenda",
+        "eventType": "agenda",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      },
+      {
+        "eventKey": "service|gobierno|informa|2026-07-10",
+        "title": "Combustible en Chaco: cuánto cuesta llenar el tanque y qué estaciones bajaron los precios",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "tier": "B",
+        "competence": [],
+        "territory": "Nacionales",
+        "topic": "servicios",
+        "eventType": "service",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      }
+    ],
+    "freshCandidates": 5,
+    "staleDiscarded": 0,
     "sourceHealth": {
       "mundo-clarin": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -113,103 +104,33 @@
       },
       "nacionales-infobae": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "bing-malvinas": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 0,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "bing-tolhuin": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 1,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0.33,
-        "staleDiscardRate": 0.67
-      },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 2,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.5
-      },
-      "mundo-bing": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "bing-antartida": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 3,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 1
-      },
-      "bing-tdf": {
-        "detected": 5,
-        "materialized": 5,
-        "freshCandidates": 0,
-        "qualityDiscarded": 5,
-        "staleDiscarded": 5,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 1
-      },
-      "mundo-google": {
         "detected": 3,
         "materialized": 1,
         "freshCandidates": 1,
@@ -225,28 +146,42 @@
       },
       "bing-ushuaia": {
         "detected": 4,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.75,
-        "materializationSuccessRate": 0.75,
-        "verificationContributionRate": 0.25,
-        "publicationContributionRate": 0.25,
-        "staleDiscardRate": 0
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-tdf": {
+        "detected": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -265,8 +200,50 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "gobierno-tdf-oficial": {
-        "detected": 5,
+      "bing-antartida": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-google": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-bing": {
+        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -306,12 +283,23 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "gobierno-tdf-oficial": {
+        "detected": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
       }
     },
-    "sourceDeprioritized": [
-      "bing-antartida",
-      "bing-tdf"
-    ],
+    "sourceDeprioritized": [],
     "drafts": 0,
     "modelErrors": 0,
     "publicationErrors": 0,
@@ -321,100 +309,54 @@
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
     "failedRetryable": 0,
-    "failedTerminal": 1,
+    "failedTerminal": 0,
     "failedRetryableByReason": {},
-    "failedTerminalByReason": {
-      "http-403": 1
-    },
+    "failedTerminalByReason": {},
     "aiReused": 0,
     "rescueQueued": 0,
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
-    "extractErrors": 1,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 2,
-    "aiCalls": 2,
-    "imageSelections": [
-      {
-        "title": "Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor",
-        "strategy": "article-og",
-        "query": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
-        "score": 82,
-        "source": "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/67/2676728_056b8158d82132e3fbf812b0f0eb49fa597a335cf6a10ec4f1861d6397a2fcdf/sm.jpg"
-      },
-      {
-        "title": "Nuevas conexiones aéreas directas entre Brasil y Ushuaia",
-        "strategy": "article-og",
-        "query": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
-        "score": 82,
-        "source": "https://ushuaia24.com.ar/download/multimedia.normal.a919afb19c3cf2a7.bm9ybWFsLndlYnA%3D.webp"
-      }
-    ],
-    "agendaStories": 196,
-    "newsworthinessAverage": 100,
-    "newsworthinessTop": [
-      {
-        "title": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
-        "eventKey": "agenda|municipio de tolhuin|secretaria de turismo y produccion|municipalidad de tolhuin|ushuaia|tolhuin|informa|2026-07-09",
-        "score": 100,
-        "topic": "agenda",
-        "territory": "Tolhuin",
-        "lane": "fast"
-      },
-      {
-        "title": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
-        "eventKey": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      }
-    ],
-    "corroborationSearches": 3,
-    "corroborationFound": 2,
-    "corroborationVerified": 2,
+    "aiAttempts": 0,
+    "aiCalls": 0,
+    "imageSelections": [],
+    "agendaStories": 200,
+    "newsworthinessAverage": 0,
+    "newsworthinessTop": [],
+    "corroborationSearches": 2,
+    "corroborationFound": 0,
+    "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 1,
+    "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
-        "title": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
+        "eventKey": "election|camara y|policia|gustavo petro|alejandro ocampo|pacto historico|colombia|venezuela|informa|2026-07-10",
+        "title": "Gustavo Petro insistió en la teoría de que jurados “muertos” habrían firmado actas en las elecciones presidenciales: “No han terminado los escrutinios”",
         "priorityRank": 1,
-        "corroborationQuery": "Ushuaia GOL Linhas Aéreas LATAM Brasil Municipio y Justicia Gobierno Rio Grande Ushuaia aerolineas brasilenas directo primera vuelan",
-        "corroborationReason": "newsworthiness=100; freshness=5h; territory=Rio Grande; impact=19; corroborability=10; pendingAge=5h; attempts=1",
-        "found": 1,
-        "verified": true,
-        "status": "verified-standard"
+        "corroborationQuery": "Gustavo Petro Alejandro Ocampo Pacto Histórico Cámara y Policía elecciones resultado actas escrutinios firmado gustavo habrian",
+        "corroborationReason": "newsworthiness=100; freshness=2h; territory=Nacionales; impact=13; corroborability=10; pendingAge=2h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
       },
       {
-        "eventKey": "agenda|municipio de tolhuin|secretaria de turismo y produccion|municipalidad de tolhuin|ushuaia|tolhuin|informa|2026-07-09",
-        "title": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
+        "eventKey": "territorial-sovereignty|gary lineker|ucv radio|islas malvinas|malvinas|argentina|egipto|informa|2026-07-10",
+        "title": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
         "priorityRank": 2,
-        "corroborationQuery": "Municipio de Tolhuin Secretaría de Turismo y Producción Municipalidad de Tolhuin El Municipio Ushuaia Tolhuin edicion fiesta invierno nacional nueva parte",
-        "corroborationReason": "newsworthiness=100; freshness=28h; territory=Tolhuin; impact=18; corroborability=10; pendingAge=28h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-local-routine"
-      },
-      {
-        "eventKey": "legislative|camara|otan|ley save america|estados unidos|informa|2026-07-10",
-        "title": "Trump deja entrar en vigor la ley de vivienda de Estados Unidos sin su firma",
-        "priorityRank": 3,
-        "corroborationQuery": "Ley SAVE America Cámara OTAN Estados Unidos entrar estados firma trump unidos vigor",
-        "corroborationReason": "newsworthiness=97; freshness=4h; territory=Nacionales; impact=13; corroborability=10; pendingAge=4h; attempts=0",
+        "corroborationQuery": "Gary Lineker UCV Radio Argentina Egipto Reino Unido Malvinas despues enfrenta football islas lineker llamar",
+        "corroborationReason": "newsworthiness=82; freshness=0h; territory=Malvinas; impact=12; corroborability=10; pendingAge=0h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "dates": 1
-    },
+    "conflictsByField": {},
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 15,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 0,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 6,
@@ -448,21 +390,18 @@
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Tolhuin": 1,
-      "Ushuaia": 1
-    },
-    "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 1,
-    "publishedLast12hBeforeRun": 1,
-    "publishedLast24hBeforeRun": 4,
-    "hoursSinceLastPublicationBeforeRun": 4.8,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 2,
+    "publishedLast6hBeforeRun": 3,
+    "publishedLast12hBeforeRun": 3,
+    "publishedLast24hBeforeRun": 6,
+    "hoursSinceLastPublicationBeforeRun": 0.2,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 4,
-      "remainingToMin": 8,
-      "slotsRemaining": 12,
+      "publishedLast24hBeforeRun": 6,
+      "remainingToMin": 6,
+      "slotsRemaining": 10,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -483,7 +422,7 @@
           "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -502,7 +441,7 @@
           "searchPotential": 13,
           "recency": 9,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -563,16 +502,16 @@
         }
       }
     ],
-    "agendaInvalidStories": 23,
+    "agendaInvalidStories": 24,
     "technicalSuccess": true,
-    "editorialOutcome": "published"
+    "editorialOutcome": "verification-starved"
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 2,
-    "discoveryAiBudget": 2,
+    "discoveryAiUsed": 0,
+    "discoveryAiBudget": 0,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -583,13 +522,12 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 4,
-    "candidatesMaterialized": 31,
-    "totalCandidatesBeforeLimit": 31
+    "publishedLast24hBeforeRun": 6,
+    "candidatesMaterialized": 5,
+    "totalCandidatesBeforeLimit": 5
   },
   "reasonNoMorePublished": [
-    "7 evento(s) quedaron pendientes de segunda fuente",
-    "4 candidato(s) descartados por duplicado/similitud",
-    "17 candidato(s) descartados por causas especificas (stale-dated-discovery: 7, evergreen-or-stale-outside-news-window: 7, listing-url: 1, stale-hard-news: 2)"
+    "4 evento(s) quedaron pendientes de segunda fuente",
+    "1 candidato(s) descartados por duplicado/similitud"
   ]
 }
