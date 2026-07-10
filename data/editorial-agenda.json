@@ -1,12 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-10T02:24:20.441Z",
+  "generatedAt": "2026-07-10T02:31:26.324Z",
   "summary": {
-    "totalStories": 153,
+    "totalStories": 155,
     "byStatus": {
+      "verified-standard": 1,
       "agenda-invalid": 17,
-      "pending-verification": 93,
       "verified": 33,
+      "pending-verification": 94,
       "conflicting-sources": 3,
       "verified-local-routine": 3,
       "verified-strict": 2,
@@ -17,8 +18,8 @@
       "turismo": 7,
       "salud": 3,
       "agenda": 3,
-      "politica": 22,
-      "sociedad": 51,
+      "politica": 23,
+      "sociedad": 52,
       "policiales": 17,
       "cultura": 2,
       "deportes": 30,
@@ -26,11 +27,11 @@
       "educacion": 1
     },
     "byTerritory": {
-      "Ushuaia": 15,
+      "Ushuaia": 14,
       "Rio Grande": 23,
       "Malvinas": 5,
       "Nacionales": 35,
-      "Mundo": 57,
+      "Mundo": 60,
       "Provincia": 7,
       "Antartida": 3,
       "Tolhuin": 6,
@@ -44,25 +45,7 @@
         "topic": "servicios",
         "territory": "Ushuaia",
         "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 25,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
-        "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
+        "status": "verified-standard",
         "scoreBreakdown": {
           "publicInterest": 20,
           "localRelevance": 25,
@@ -217,10 +200,73 @@
           "sourceStrength": 3,
           "diversity": 4
         }
+      },
+      {
+        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+        "topic": "agenda",
+        "territory": "Mundo",
+        "newsworthinessScore": 90,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 7,
+          "serviceValue": 20,
+          "socialPotential": 9,
+          "searchPotential": 15,
+          "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
+      "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Tierra",
+        "Fuego",
+        "Pasaje Drake",
+        "Ushuaia",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Antartida",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-08T15:28:59.144Z",
+      "lastSeenAt": "2026-07-10T02:30:54.457Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-standard",
+      "validationReasons": []
+    },
     {
       "storyId": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
       "headlineSeed": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
@@ -267,100 +313,6 @@
       "validationReasons": [
         "topic-event-mismatch"
       ]
-    },
-    {
-      "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
-      "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego",
-        "Pasaje Drake",
-        "Ushuaia",
-        "Argentina",
-        "Venezuela",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Antartida",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-08T15:28:59.144Z",
-      "lastSeenAt": "2026-07-09T14:44:24.833Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
-      "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego",
-        "Ushuaia",
-        "Noticias",
-        "El Chubut\nEl",
-        "Pasaje Drake",
-        "Chile",
-        "Venezuela",
-        "Rio Grande",
-        "Tierra del Fuego"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-08T15:28:59.144Z",
-      "lastSeenAt": "2026-07-08T18:23:00.502Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "pending-verification",
-      "validationReasons": []
     },
     {
       "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
@@ -922,6 +874,47 @@
       ]
     },
     {
+      "storyId": "service|fiscalia de jalisco|jalisco|mexico|espana|advierte|2026-07-10",
+      "headlineSeed": "Primer semestre de 2026 deja menos empleos y más cierres de empresas en Jalisco, advierte Coparmex",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Fiscalía de Jalisco",
+        "Jalisco",
+        "Mexico",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-10T02:31:26.323Z",
+      "lastSeenAt": "2026-07-10T02:31:26.323Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "service|ministerio de seguridad publica|policia de control de drogas de|sindicato de|costa rica|pacifico sur costa rica|pacifico sur|brasil|peru|detiene|2026-07-10",
       "headlineSeed": "Costa Rica decomisa 5,4 toneladas de droga y detiene a seis hombres en el Pacífico Sur",
       "topic": "servicios",
@@ -962,51 +955,6 @@
       },
       "newsworthinessScore": 89,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|2026-07-09",
-      "headlineSeed": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Martín Pérez",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Atlantico Sur",
-        "Argentina"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-10T02:23:54.108Z",
-      "lastSeenAt": "2026-07-10T02:23:54.108Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 86,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -1225,6 +1173,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|2026-07-09",
+      "headlineSeed": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Martín Pérez",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Atlantico Sur",
+        "Argentina"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-10T02:23:54.108Z",
+      "lastSeenAt": "2026-07-10T02:31:26.323Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "casualty|cono sur|volkswagen gol|volkswagen tera|rio grande|tierra del fuego aias|informa|2026-07-08",
       "headlineSeed": "Otro accidente de tránsito en Río Grande - Actualidad TDF",
       "topic": "sociedad",
@@ -1349,6 +1342,52 @@
       },
       "newsworthinessScore": 83,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
+      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Buenos Aires",
+        "Atlantico Sur",
+        "Argentina",
+        "Reino Unido"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T22:47:39.960Z",
+      "lastSeenAt": "2026-07-10T02:23:54.109Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 80,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -1714,52 +1753,6 @@
       },
       "newsworthinessScore": 78,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
-      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Buenos Aires",
-        "Atlantico Sur",
-        "Argentina",
-        "Reino Unido"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.960Z",
-      "lastSeenAt": "2026-07-10T02:23:54.109Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 76,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -4929,6 +4922,47 @@
       ]
     },
     {
+      "storyId": "international-conflict|pedro sola|jalisco|mexico|espana|informa|2026-07-10",
+      "headlineSeed": "Aseguran que Pedro Sola maltrató al perrito “Pay de Limón” durante grabación de Ventaneando",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Pedro Sola",
+        "Jalisco",
+        "Mexico",
+        "Espana"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-10T02:31:26.323Z",
+      "lastSeenAt": "2026-07-10T02:31:26.323Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|espana|2026-07-09",
       "headlineSeed": "Cuatro detenidos tras una persecución en Alicante por posesión de ocho fusiles de guerra",
       "topic": "politica",
@@ -5962,7 +5996,7 @@
     },
     {
       "storyId": "sports-result|argentina|29 de octubre de 2001",
-      "headlineSeed": "Argentina vs Suiza: de las abismales diferencias económicas a la batalla del fútbol que se viene",
+      "headlineSeed": "El emotivo encuentro del influencer Alonso con Pablo Aimar tras el triunfo de Argentina ante Egipto: “Lloré todo”",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Mundo",
@@ -6528,6 +6562,49 @@
       "validationReasons": [
         "eventtype-risk-confusion"
       ]
+    },
+    {
+      "storyId": "general|argentina|brasil|informa|2026-07-10",
+      "headlineSeed": "Día de Apreciación del Capibara: la efeméride que creció en redes sociales y busca visibilizar al mayor roedor del planeta",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Peru",
+        "Colombia",
+        "Venezuela"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T02:31:26.323Z",
+      "lastSeenAt": "2026-07-10T02:31:26.323Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 43,
+      "status": "pending-verification",
+      "validationReasons": []
     },
     {
       "storyId": "general|estados unidos|se|medio oriente|iran|internacional|informa|junio",
