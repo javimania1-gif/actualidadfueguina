@@ -1,44 +1,62 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-10T02:31:26.324Z",
+  "generatedAt": "2026-07-10T03:36:54.818Z",
   "summary": {
-    "totalStories": 155,
+    "totalStories": 159,
     "byStatus": {
+      "published": 3,
       "verified-standard": 1,
       "agenda-invalid": 17,
       "verified": 33,
-      "pending-verification": 94,
+      "pending-verification": 97,
       "conflicting-sources": 3,
-      "verified-local-routine": 3,
       "verified-strict": 2,
-      "published": 2
+      "verified-local-routine": 3
     },
     "byTopic": {
-      "servicios": 14,
+      "servicios": 15,
       "turismo": 7,
       "salud": 3,
       "agenda": 3,
       "politica": 23,
-      "sociedad": 52,
-      "policiales": 17,
+      "sociedad": 54,
+      "policiales": 18,
       "cultura": 2,
       "deportes": 30,
       "economia": 3,
       "educacion": 1
     },
     "byTerritory": {
-      "Ushuaia": 14,
+      "Ushuaia": 15,
       "Rio Grande": 23,
       "Malvinas": 5,
       "Nacionales": 35,
-      "Mundo": 60,
+      "Mundo": 62,
       "Provincia": 7,
       "Antartida": 3,
       "Tolhuin": 6,
-      "unknown": 2
+      "unknown": 3
     },
     "invalidStories": 17,
     "topStories": [
+      {
+        "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|2026-07-09",
+        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
       {
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -200,28 +218,53 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
-        "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
-        "topic": "agenda",
-        "territory": "Mundo",
-        "newsworthinessScore": 90,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 7,
-          "serviceValue": 20,
-          "socialPotential": 9,
-          "searchPotential": 15,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|2026-07-09",
+      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+      "topic": "servicios",
+      "subtopic": "movilidad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "San Pablo",
+        "Gobierno",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Argentina",
+        "Brasil"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-10T03:36:45.013Z",
+      "lastSeenAt": "2026-07-10T03:36:45.013Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 100,
+      "status": "published",
+      "validationReasons": []
+    },
     {
       "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
       "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
@@ -786,49 +829,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|cerro castor|el rompehielos la fiesta|nacional|tierra del fuego|tierra del fuego aias|informa|10 de julio",
-      "headlineSeed": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Cerro Castor",
-        "El Rompehielos La Fiesta",
-        "Nacional",
-        "Invierno",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:04:52.310Z",
-      "lastSeenAt": "2026-07-09T16:04:52.310Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 22,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 22,
-        "serviceValue": 15,
-        "socialPotential": 12,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
       "storyId": "weather|argentina|venezuela|antartida argentina|antartida|tierra del fuego|antartida|informa|julio",
       "headlineSeed": "El valor estratégico de la Antártida Argentina: más de un siglo de presencia",
       "topic": "servicios",
@@ -1040,6 +1040,49 @@
       },
       "newsworthinessScore": 86,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|cerro castor|el rompehielos la fiesta|nacional|tierra del fuego|tierra del fuego aias|informa|10 de julio",
+      "headlineSeed": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Cerro Castor",
+        "El Rompehielos La Fiesta",
+        "Nacional",
+        "Invierno",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T16:04:52.310Z",
+      "lastSeenAt": "2026-07-09T16:04:52.310Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 22,
+        "serviceValue": 15,
+        "socialPotential": 12,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -2111,53 +2154,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|2026-07-07",
-      "headlineSeed": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Dirección Provincial",
-        "Desarrollo Deportivo",
-        "Gobierno",
-        "Secretaría de Deportes de la",
-        "Municipio",
-        "Secretaría",
-        "Rio Grande",
-        "Ushuaia",
-        "Tolhuin",
-        "Tierra del Fuego"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-10T02:23:54.108Z",
-      "lastSeenAt": "2026-07-10T02:23:54.108Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|07 de julio de 2026",
       "headlineSeed": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
       "topic": "deportes",
@@ -2429,48 +2425,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|palm beach|palm beach international|ron desantis|internacional|estados unidos|informa|18 de agosto",
-      "headlineSeed": "El aeropuerto internacional de Palm Beach cambia de nombre y ahora se llama Donald Trump",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Palm Beach",
-        "Palm Beach International",
-        "Ron DeSantis",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-09T22:47:39.959Z",
-      "lastSeenAt": "2026-07-09T22:47:39.959Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "high-risk|cuidar|noticias|rio grande|rio grande|informa|2026-07-07",
       "headlineSeed": "Cuidar la ciudad también es hacer un uso responsable de los contenedores",
       "topic": "sociedad",
@@ -2512,6 +2466,53 @@
       "validationReasons": [
         "eventtype-risk-confusion"
       ]
+    },
+    {
+      "storyId": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|2026-07-07",
+      "headlineSeed": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Dirección Provincial",
+        "Desarrollo Deportivo",
+        "Gobierno",
+        "Secretaría de Deportes de la",
+        "Municipio",
+        "Secretaría",
+        "Rio Grande",
+        "Ushuaia",
+        "Tolhuin",
+        "Tierra del Fuego"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-10T02:23:54.108Z",
+      "lastSeenAt": "2026-07-10T03:36:45.013Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "pending-verification",
+      "validationReasons": []
     },
     {
       "storyId": "general|uom de|uom|uom seccional rio grande|obrera metalurgica|oscar martinez|rio grande|tierra del fuego aias|denuncia|2026-07-08",
@@ -3008,6 +3009,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "legal-policy|palm beach|palm beach international|ron desantis|internacional|estados unidos|informa|18 de agosto",
+      "headlineSeed": "El aeropuerto internacional de Palm Beach cambia de nombre y ahora se llama Donald Trump",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Palm Beach",
+        "Palm Beach International",
+        "Ron DeSantis",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-09T22:47:39.959Z",
+      "lastSeenAt": "2026-07-09T22:47:39.959Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|camara|camara de representantes|fiscalia|cambio radical|colombia|estados unidos|informa|21 de junio de 2026",
       "headlineSeed": "Congresista de Cambio Radical le pidió a Cepeda no asumir curul como senador: “Desconfía de nuestras instituciones, pero sí se quiere posesionar”",
       "topic": "politica",
@@ -3026,53 +3069,6 @@
       "eventType": "legislative",
       "firstSeenAt": "2026-07-09T22:47:39.959Z",
       "lastSeenAt": "2026-07-09T22:47:39.959Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 69,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|camara de los comunes|gobierno de|andy burnham|keir starmer|gran manchester|internacional|reino unido|inglaterra|informa|20 de julio",
-      "headlineSeed": "Andy Burnham está a un voto de quedarse con el liderazgo de los Laboristas y se perfila como el sucesor de Keir Starmer en el Reino Unido",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Andy Burnham",
-        "Keir Starmer",
-        "Gran Manchester",
-        "Partido Laborista",
-        "Carlos III",
-        "Cámara de los Comunes",
-        "Gobierno de",
-        "Internacional",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.958Z",
-      "lastSeenAt": "2026-07-09T22:47:39.958Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -3276,49 +3272,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|argentina|caso nisman|viviana fein la camara|federal|argentina|informa|18 de enero de 2015",
-      "headlineSeed": "Caso Nisman: confirmaron el procesamiento de Viviana Fein",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Caso Nisman",
-        "Viviana Fein La Cámara",
-        "Federal",
-        "Viviana Fein",
-        "Alberto Nisman",
-        "Argentina"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-08T15:45:51.571Z",
-      "lastSeenAt": "2026-07-08T15:45:51.571Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 68,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|mexico|estados unidos|encuentran|hidalgo|azoyatla|argentina|informa|5 de febrero de 2025",
       "headlineSeed": "Encuentran culpable a ex policía de Hidalgo mató a su pareja, madre y hermano, e hirió a otros familiares",
       "topic": "policiales",
@@ -3338,51 +3291,6 @@
       "eventType": "crime",
       "firstSeenAt": "2026-07-08T15:45:51.567Z",
       "lastSeenAt": "2026-07-08T15:45:51.567Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 68,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|juicio|loan|carlos schaefer|argentina|informa|junio de 2024",
-      "headlineSeed": "Juicio por Loan: el fiscal Carlos Schaefer denunció que plantaron la hipótesis del \"hombre encapuchado\"",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Juicio",
-        "Loan",
-        "Carlos Schaefer",
-        "Cámara Gesell",
-        "Apuntó",
-        "Huevo",
-        "Peña",
-        "Argentina"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-08T15:28:59.148Z",
-      "lastSeenAt": "2026-07-08T15:28:59.148Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -3771,6 +3679,93 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|ministerio publico|fiscalia|estados unidos|informa|2026-07-10",
+      "headlineSeed": "Renuncia otro abogado defensor del cirujano plástico guatemalteco que ocultó el cadáver de una paciente",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio Público",
+        "Fiscalía",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-10T03:36:45.012Z",
+      "lastSeenAt": "2026-07-10T03:36:45.012Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 66,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|camara de los comunes|gobierno de|andy burnham|keir starmer|gran manchester|internacional|reino unido|inglaterra|informa|20 de julio",
+      "headlineSeed": "Andy Burnham está a un voto de quedarse con el liderazgo de los Laboristas y se perfila como el sucesor de Keir Starmer en el Reino Unido",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Andy Burnham",
+        "Keir Starmer",
+        "Gran Manchester",
+        "Partido Laborista",
+        "Carlos III",
+        "Cámara de los Comunes",
+        "Gobierno de",
+        "Internacional",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T22:47:39.958Z",
+      "lastSeenAt": "2026-07-09T22:47:39.958Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 66,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|enero de 2025",
       "headlineSeed": "Abelardo De la Espriella nombra a su futuro canciller para \"reposicionar\" a Colombia como aliado de Estados Unidos",
       "topic": "politica",
@@ -3949,49 +3944,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentina|gobierno|kristalina georgieva|javier milei la|fmi|argentina|informa|junio",
-      "headlineSeed": "Kristalina Georgieva visitará la Argentina a fin de mes invitada por Javier Milei",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Kristalina Georgieva",
-        "Javier Milei\nLa",
-        "FMI",
-        "Gobierno",
-        "Luis Caputo",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:28:59.147Z",
-      "lastSeenAt": "2026-07-08T15:28:59.147Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 65,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|justicia federal|rio grande|tierra del fuego|argentina|chile|informa|26 de junio",
       "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
       "topic": "sociedad",
@@ -4083,6 +4035,94 @@
       },
       "newsworthinessScore": 64,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|argentina|caso nisman|viviana fein la camara|federal|argentina|informa|18 de enero de 2015",
+      "headlineSeed": "Caso Nisman: confirmaron el procesamiento de Viviana Fein",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Caso Nisman",
+        "Viviana Fein La Cámara",
+        "Federal",
+        "Viviana Fein",
+        "Alberto Nisman",
+        "Argentina"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-08T15:45:51.571Z",
+      "lastSeenAt": "2026-07-08T15:45:51.571Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 64,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|juicio|loan|carlos schaefer|argentina|informa|junio de 2024",
+      "headlineSeed": "Juicio por Loan: el fiscal Carlos Schaefer denunció que plantaron la hipótesis del \"hombre encapuchado\"",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Juicio",
+        "Loan",
+        "Carlos Schaefer",
+        "Cámara Gesell",
+        "Apuntó",
+        "Huevo",
+        "Peña",
+        "Argentina"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-08T15:28:59.148Z",
+      "lastSeenAt": "2026-07-08T15:28:59.148Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 64,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -4303,46 +4343,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|mexico|estados unidos|sheinbaum|mec|estados unidos el|argentina|informa|8 de julio",
-      "headlineSeed": "Sheinbaum pronostica que T-MEC se renovará por otros 16 años en los próximos años, destaca que México es el principal socio comercial de Estados Unidos",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
+      "storyId": "general|argentina|gobierno|kristalina georgieva|javier milei la|fmi|argentina|informa|junio",
+      "headlineSeed": "Kristalina Georgieva visitará la Argentina a fin de mes invitada por Javier Milei",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Sheinbaum",
-        "MEC",
-        "Estados Unidos\nEl",
-        "Mexico",
-        "Estados Unidos",
+        "Kristalina Georgieva",
+        "Javier Milei\nLa",
+        "FMI",
+        "Gobierno",
+        "Luis Caputo",
         "Argentina"
       ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-08T15:28:59.146Z",
-      "lastSeenAt": "2026-07-08T15:28:59.146Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:28:59.147Z",
+      "lastSeenAt": "2026-07-08T15:28:59.147Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 12,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
+        "publicInterest": 17,
+        "localRelevance": 12,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 63,
-      "status": "pending-verification",
+      "newsworthinessScore": 61,
+      "status": "verified",
       "validationReasons": []
     },
     {
@@ -4647,6 +4687,85 @@
         "diversity": 4
       },
       "newsworthinessScore": 59,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|mexico|estados unidos|sheinbaum|mec|estados unidos el|argentina|informa|8 de julio",
+      "headlineSeed": "Sheinbaum pronostica que T-MEC se renovará por otros 16 años en los próximos años, destaca que México es el principal socio comercial de Estados Unidos",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Sheinbaum",
+        "MEC",
+        "Estados Unidos\nEl",
+        "Mexico",
+        "Estados Unidos",
+        "Argentina"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-08T15:28:59.146Z",
+      "lastSeenAt": "2026-07-08T15:28:59.146Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 59,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|informa|2026-07-10",
+      "headlineSeed": "El Salvador: Condena a 53 integrantes de la MS-13 por homicidios, extorsión y drogas",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-10T03:36:45.012Z",
+      "lastSeenAt": "2026-07-10T03:36:45.012Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 58,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -5205,7 +5324,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 12,
       "localRelevanceScore": 7,
       "serviceValueScore": 15,
@@ -5217,7 +5336,7 @@
         "serviceValue": 15,
         "socialPotential": 12,
         "searchPotential": 15,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -5305,48 +5424,6 @@
         "diversity": 4
       },
       "newsworthinessScore": 54,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|the new york times|daily news|inteligencia artificial|internacional|estados unidos|informa|2026-07-09",
-      "headlineSeed": "Dura batalla legal de los medios de comunicación contra OpenAI por el uso sin pagar de contenidos bajo derecho de autor",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "The New York Times",
-        "Daily News",
-        "Inteligencia Artificial",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T23:58:25.818Z",
-      "lastSeenAt": "2026-07-09T23:58:25.818Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 52,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -5601,96 +5678,6 @@
       },
       "newsworthinessScore": 52,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|quiniela|en vivo|nacional|argentina|informa|8 de julio",
-      "headlineSeed": "Quiniela nacional hoy, 8 de julio EN VIVO: resultados de la Nacional y Provincia",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Quiniela",
-        "EN VIVO",
-        "Nacional",
-        "Provincia Conoce",
-        "Cuáles",
-        "Matutina",
-        "Vespertina",
-        "Nocturna",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:45:51.571Z",
-      "lastSeenAt": "2026-07-08T15:45:51.571Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 52,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|colombia|venezuela|francia|abelardo|espriella|cucuta|argentina|informa|7 de agosto de 2026",
-      "headlineSeed": "Abelardo de la Espriella comenzó en Cúcuta los empalmes regionales antes de su posesión presidencial: esto se sabe",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Abelardo",
-        "Espriella",
-        "Cúcuta",
-        "Colombia",
-        "Venezuela",
-        "Francia",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:28:59.146Z",
-      "lastSeenAt": "2026-07-08T15:28:59.146Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 52,
-      "status": "verified",
       "validationReasons": []
     },
     {
@@ -5949,6 +5936,89 @@
         "diversity": 4
       },
       "newsworthinessScore": 51,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|ministerio de la mujer y poblaciones|ministerio publico|brasil|peru|informa|2026-07-10",
+      "headlineSeed": "Kábala del jueves 9 de julio: ganadores del último sorteo",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio de la Mujer y Poblaciones",
+        "Ministerio Público",
+        "Brasil",
+        "Peru"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T03:36:45.013Z",
+      "lastSeenAt": "2026-07-10T03:36:45.013Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 49,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|the new york times|daily news|inteligencia artificial|internacional|estados unidos|informa|2026-07-09",
+      "headlineSeed": "Dura batalla legal de los medios de comunicación contra OpenAI por el uso sin pagar de contenidos bajo derecho de autor",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "The New York Times",
+        "Daily News",
+        "Inteligencia Artificial",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T23:58:25.818Z",
+      "lastSeenAt": "2026-07-10T03:36:45.012Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 49,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -6241,6 +6311,96 @@
       },
       "newsworthinessScore": 48,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|quiniela|en vivo|nacional|argentina|informa|8 de julio",
+      "headlineSeed": "Quiniela nacional hoy, 8 de julio EN VIVO: resultados de la Nacional y Provincia",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Quiniela",
+        "EN VIVO",
+        "Nacional",
+        "Provincia Conoce",
+        "Cuáles",
+        "Matutina",
+        "Vespertina",
+        "Nocturna",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:45:51.571Z",
+      "lastSeenAt": "2026-07-08T15:45:51.571Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 48,
+      "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|colombia|venezuela|francia|abelardo|espriella|cucuta|argentina|informa|7 de agosto de 2026",
+      "headlineSeed": "Abelardo de la Espriella comenzó en Cúcuta los empalmes regionales antes de su posesión presidencial: esto se sabe",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Abelardo",
+        "Espriella",
+        "Cúcuta",
+        "Colombia",
+        "Venezuela",
+        "Francia",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:28:59.146Z",
+      "lastSeenAt": "2026-07-08T15:28:59.146Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 48,
+      "status": "verified",
       "validationReasons": []
     },
     {
@@ -6789,51 +6949,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "high-risk|argentina|gobierno|fmi|kristalina georgieva|javier milei el|argentina|informa|mayo",
-      "headlineSeed": "La directora gerente del FMI, Kristalina Georgieva, visitará la Argentina a fin de mes por invitación del presidente Javier Milei",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "FMI",
-        "Kristalina Georgieva",
-        "Javier Milei\nEl",
-        "Gobierno",
-        "Argentina"
-      ],
-      "eventType": "high-risk",
-      "firstSeenAt": "2026-07-08T15:28:59.146Z",
-      "lastSeenAt": "2026-07-08T15:28:59.146Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 43,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "eventtype-risk-confusion"
-      ]
-    },
-    {
       "storyId": "sports-result|argentina|mayo",
       "headlineSeed": "La AFA sumó seis nuevos sponsors internacionales durante la Copa del Mundo",
       "topic": "deportes",
@@ -7016,6 +7131,51 @@
       "newsworthinessScore": 39,
       "status": "verified",
       "validationReasons": []
+    },
+    {
+      "storyId": "high-risk|argentina|gobierno|fmi|kristalina georgieva|javier milei el|argentina|informa|mayo",
+      "headlineSeed": "La directora gerente del FMI, Kristalina Georgieva, visitará la Argentina a fin de mes por invitación del presidente Javier Milei",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "FMI",
+        "Kristalina Georgieva",
+        "Javier Milei\nEl",
+        "Gobierno",
+        "Argentina"
+      ],
+      "eventType": "high-risk",
+      "firstSeenAt": "2026-07-08T15:28:59.146Z",
+      "lastSeenAt": "2026-07-08T15:28:59.146Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 39,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "eventtype-risk-confusion"
+      ]
     },
     {
       "storyId": "high-risk|estados unidos|trump|iran el|brent|internacional|anuncia|febrero",
