@@ -1,66 +1,144 @@
 {
-  "generatedAt": "2026-07-10T19:38:09.081Z",
+  "generatedAt": "2026-07-10T19:50:12.339Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29118576407",
-    "headSha": "daac56d13c220977a6823e8e2fb34a3e5ca44174"
+    "eventName": "push",
+    "runId": "29119238406",
+    "headSha": "139d235932244c7d3a7af32c05482252e084b795"
   },
   "metrics": {
     "sourcesConsulted": 20,
     "candidatesDetected": 58,
-    "candidatesIngested": 5,
-    "extractionSucceeded": 5,
-    "discardedDuplicate": 1,
-    "duplicateExactUrl": 1,
+    "candidatesIngested": 8,
+    "extractionSucceeded": 8,
+    "candidatesApproved": 6,
+    "discardedDuplicate": 2,
+    "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
     "duplicatePublishedEvent": 0,
-    "discardedQuality": 0,
-    "discardedQualityByReason": {},
-    "discardedBySourceAndReason": {},
+    "discardedQuality": 1,
+    "discardedQualityByReason": {
+      "evergreen-or-stale-outside-news-window": 1
+    },
+    "discardedBySourceAndReason": {
+      "bing-tolhuin": {
+        "evergreen-or-stale-outside-news-window": 1
+      }
+    },
     "discardedGenericTitle": 1,
-    "discardedEvergreen": 0,
-    "eventsGrouped": 4,
-    "verified": 0,
-    "pendingVerification": 4,
+    "discardedEvergreen": 1,
+    "eventsGrouped": 6,
+    "verified": 1,
+    "pendingVerification": 5,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
-    "conflicting": 0,
-    "published": 0,
-    "publishedByLane": {},
-    "verifiedByLane": {},
-    "pendingByLane": {
-      "strict": 1,
-      "fast": 2,
-      "standard": 1
-    },
-    "eventsByTerritory": {
-      "Nacionales": 3,
-      "Malvinas": 1
-    },
-    "verifiedByTerritory": {},
-    "fastPendingAudit": [
+    "pendingRecoveryAttempted": 3,
+    "pendingTerminalizedExpired": 30,
+    "pendingTerminalizedAttempts": 0,
+    "pendingAudit": [
       {
-        "eventKey": "agenda|ecuador|espana|informa|2026-07-10",
-        "title": "Morante de la Puebla pone el reposo, fuera de contexto, en la vorágine sanferminera",
+        "eventKey": "service|espana|informa|2026-07-10",
+        "title": "Reabierta la A-7 tras el corte por el incendio de Los Gallardos (Almería)",
         "sourceId": "nacionales-infobae",
         "publisherDomain": "infobae.com",
-        "tier": "B",
-        "competence": [],
-        "territory": "Nacionales",
-        "topic": "agenda",
-        "eventType": "agenda",
+        "category": "Nacionales",
+        "eventType": "service",
+        "lane": "fast",
         "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-10T22:50:02.773Z",
+        "expiresAt": "2026-07-12T19:50:02.773Z",
+        "corroborationAttempts": 0
       },
       {
-        "eventKey": "service|gobierno|informa|2026-07-10",
-        "title": "Combustible en Chaco: cuánto cuesta llenar el tanque y qué estaciones bajaron los precios",
+        "eventKey": "general|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|2026-07-09",
+        "title": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
         "sourceId": "nacionales-perfil",
         "publisherDomain": "perfil.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "fast",
+        "riskLevel": "low",
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-10T22:50:02.773Z",
+        "expiresAt": "2026-07-12T19:50:02.773Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "general|policia de la generalitat|gobierno|comunidad valenciana declarados|comunidad valenciana|espana|informa|2026-07-10",
+        "title": "Declarados esta tarde cinco incendios forestales en la Comunidad Valenciana",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "fast",
+        "riskLevel": "low",
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-10T22:50:02.774Z",
+        "expiresAt": "2026-07-12T19:50:02.774Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "international-conflict|onu|universidad autonoma de sinaloa|benjamin medrano|jalisco|mexico|estados unidos|informa|2026-07-10",
+        "title": "Asesinan a Benjamín Medrano, exedil de Fresnillo y primer alcalde que se declaró abiertamente gay en México",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "category": "Nacionales",
+        "eventType": "international-conflict",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-10T22:50:02.774Z",
+        "expiresAt": "2026-07-12T19:50:02.774Z",
+        "corroborationAttempts": 1
+      },
+      {
+        "eventKey": "general|mexico|estados unidos|informa|2026-07-10",
+        "title": "Luis de la Fuente acierta con Fabián: el andaluz mete el primero y encarrila a España a semifinales del Mundial 2026",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-10T22:50:02.774Z",
+        "expiresAt": "2026-07-12T19:50:02.774Z",
+        "corroborationAttempts": 0
+      }
+    ],
+    "conflicting": 0,
+    "published": 1,
+    "publishedByLane": {
+      "strict": 1
+    },
+    "verifiedByLane": {
+      "strict": 1
+    },
+    "pendingByLane": {
+      "fast": 3,
+      "strict": 2
+    },
+    "eventsByTerritory": {
+      "Nacionales": 5,
+      "Mundo": 1
+    },
+    "verifiedByTerritory": {
+      "Mundo": 1
+    },
+    "fastPendingAudit": [
+      {
+        "eventKey": "service|espana|informa|2026-07-10",
+        "title": "Reabierta la A-7 tras el corte por el incendio de Los Gallardos (Almería)",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
         "tier": "B",
         "competence": [],
         "territory": "Nacionales",
@@ -69,82 +147,42 @@
         "riskLevel": "low",
         "pendingReason": "pending-verification",
         "status": "pending-verification"
+      },
+      {
+        "eventKey": "general|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|2026-07-09",
+        "title": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "tier": "B",
+        "competence": [
+          "municipal"
+        ],
+        "territory": "Nacionales",
+        "topic": "sociedad",
+        "eventType": "general",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      },
+      {
+        "eventKey": "general|policia de la generalitat|gobierno|comunidad valenciana declarados|comunidad valenciana|espana|informa|2026-07-10",
+        "title": "Declarados esta tarde cinco incendios forestales en la Comunidad Valenciana",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "tier": "B",
+        "competence": [],
+        "territory": "Nacionales",
+        "topic": "sociedad",
+        "eventType": "general",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
       }
     ],
-    "freshCandidates": 5,
-    "staleDiscarded": 0,
+    "freshCandidates": 7,
+    "staleDiscarded": 1,
     "sourceHealth": {
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
       "tolhuin-oficial": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-tolhuin": {
-        "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-malvinas": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-ushuaia": {
         "detected": 4,
         "materialized": 0,
         "freshCandidates": 0,
@@ -172,16 +210,58 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 1,
-        "freshCandidates": 1,
+      "bing-antartida": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0.33,
+        "staleDiscardRate": 0
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-ushuaia": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -200,7 +280,21 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-antartida": {
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 4,
+        "freshCandidates": 4,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1.33,
+        "materializationSuccessRate": 1.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-bing": {
         "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
@@ -213,6 +307,20 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
       },
       "mundo-google": {
         "detected": 3,
@@ -228,8 +336,22 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-rio-grande": {
-        "detected": 4,
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -242,8 +364,8 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-bing": {
-        "detected": 3,
+      "gobierno-tdf-oficial": {
+        "detected": 5,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -283,20 +405,6 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
-      },
-      "gobierno-tdf-oficial": {
-        "detected": 5,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
       }
     },
     "sourceDeprioritized": [],
@@ -320,82 +428,106 @@
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 0,
-    "aiCalls": 0,
-    "imageSelections": [],
-    "agendaStories": 200,
-    "newsworthinessAverage": 0,
-    "newsworthinessTop": [],
+    "aiAttempts": 1,
+    "aiCalls": 1,
+    "articlesDrafted": 1,
+    "imagesResolved": 1,
+    "approvedForPublication": 1,
+    "imageSelections": [
+      {
+        "title": "Trump declara el fin del alto al fuego con Irán pero acepta continuar negociaciones",
+        "strategy": "article-og",
+        "query": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
+        "score": 82,
+        "source": "https://www.clarin.com/img/2026/07/10/RUMscKYq5_2000x1500__1.jpg"
+      }
+    ],
+    "agendaStories": 206,
+    "newsworthinessAverage": 88,
+    "newsworthinessTop": [
+      {
+        "title": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
+        "eventKey": "international-conflict|donald trump|internacional|egipto|estados unidos|informa|2026-07-10",
+        "score": 88,
+        "topic": "politica",
+        "territory": "Mundo",
+        "lane": "strict"
+      }
+    ],
     "corroborationSearches": 2,
-    "corroborationFound": 0,
-    "corroborationVerified": 0,
+    "corroborationFound": 1,
+    "corroborationVerified": 1,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 2,
+    "corroborationNoResult": 1,
     "corroborationAttempts": [
       {
-        "eventKey": "election|camara y|policia|gustavo petro|alejandro ocampo|pacto historico|colombia|venezuela|informa|2026-07-10",
-        "title": "Gustavo Petro insistió en la teoría de que jurados “muertos” habrían firmado actas en las elecciones presidenciales: “No han terminado los escrutinios”",
+        "eventKey": "international-conflict|onu|universidad autonoma de sinaloa|benjamin medrano|jalisco|mexico|estados unidos|informa|2026-07-10",
+        "title": "Asesinan a Benjamín Medrano, exedil de Fresnillo y primer alcalde que se declaró abiertamente gay en México",
         "priorityRank": 1,
-        "corroborationQuery": "Gustavo Petro Alejandro Ocampo Pacto Histórico Cámara y Policía elecciones resultado actas escrutinios firmado gustavo habrian",
-        "corroborationReason": "newsworthiness=100; freshness=2h; territory=Nacionales; impact=13; corroborability=10; pendingAge=2h; attempts=0",
+        "corroborationQuery": "Benjamín Medrano ONU Universidad Autónoma de Sinaloa Mexico Estados Unidos conflicto abiertamente alcalde asesinan benjamin declaro exedil",
+        "corroborationReason": "newsworthiness=99; freshness=1h; territory=Nacionales; impact=12; corroborability=10; pendingAge=1h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       },
       {
-        "eventKey": "territorial-sovereignty|gary lineker|ucv radio|islas malvinas|malvinas|argentina|egipto|informa|2026-07-10",
-        "title": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
+        "eventKey": "international-conflict|donald trump|internacional|egipto|estados unidos|informa|2026-07-10",
+        "title": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
         "priorityRank": 2,
-        "corroborationQuery": "Gary Lineker UCV Radio Argentina Egipto Reino Unido Malvinas despues enfrenta football islas lineker llamar",
-        "corroborationReason": "newsworthiness=82; freshness=0h; territory=Malvinas; impact=12; corroborability=10; pendingAge=0h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
+        "corroborationQuery": "Donald Trump Egipto Estados Unidos conflicto acepta conversando donald reitera seguir termino",
+        "corroborationReason": "newsworthiness=91; freshness=1h; territory=Mundo; impact=10; corroborability=10; pendingAge=1h; attempts=0",
+        "found": 1,
+        "verified": true,
+        "status": "verified-strict"
       }
     ],
-    "conflictsByField": {},
+    "conflictsByField": {
+      "dates": 1
+    },
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 0,
+    "nonCriticalDifferences": 1,
+    "resolvedComplementaryFacts": 7,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 6,
-        "avg": 60.4,
+        "count": 7,
+        "avg": 51.7,
         "p50": 0,
         "max": 291.3
       },
       "verificationToPublicationMinutes": {
-        "count": 6,
-        "avg": 24.4,
-        "p50": 0.2,
+        "count": 7,
+        "avg": 21,
+        "p50": 0.1,
         "max": 145.8
       },
       "discoveryToPublicationMinutes": {
-        "count": 6,
-        "avg": 84.8,
-        "p50": 0.3,
+        "count": 7,
+        "avg": 72.7,
+        "p50": 0.1,
         "max": 291.6
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 14,
-        "avg": 228.2,
+        "count": 15,
+        "avg": 213,
         "p50": 0,
         "max": 2101.9
       },
       "cohort": {
-        "comparablePublishedCount": 6,
+        "comparablePublishedCount": 7,
         "verifiedWithoutPublicationCount": 8,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {},
+    "byCategory": {
+      "Mundo": 1
+    },
     "publishedLast3hBeforeRun": 2,
     "publishedLast6hBeforeRun": 3,
     "publishedLast12hBeforeRun": 3,
     "publishedLast24hBeforeRun": 6,
-    "hoursSinceLastPublicationBeforeRun": 0.2,
+    "hoursSinceLastPublicationBeforeRun": 0.4,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -502,19 +634,21 @@
         }
       }
     ],
-    "agendaInvalidStories": 24,
+    "agendaInvalidStories": 25,
     "technicalSuccess": true,
-    "editorialOutcome": "verification-starved"
+    "editorialOutcome": "published"
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 0,
-    "discoveryAiBudget": 0,
+    "discoveryAiUsed": 1,
+    "discoveryAiBudget": 1,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
+    "maxPendingRecoveryPerRun": 4,
+    "maxPendingCorroborationAttempts": 4,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
@@ -523,11 +657,12 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 6,
-    "candidatesMaterialized": 5,
-    "totalCandidatesBeforeLimit": 5
+    "candidatesMaterialized": 8,
+    "totalCandidatesBeforeLimit": 8
   },
   "reasonNoMorePublished": [
-    "4 evento(s) quedaron pendientes de segunda fuente",
-    "1 candidato(s) descartados por duplicado/similitud"
+    "5 evento(s) quedaron pendientes de segunda fuente",
+    "2 candidato(s) descartados por duplicado/similitud",
+    "1 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 1)"
   ]
 }
