@@ -1,42 +1,43 @@
 {
-  "generatedAt": "2026-07-10T17:51:15.830Z",
+  "generatedAt": "2026-07-10T19:26:06.770Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29112307515",
-    "headSha": "d900b581b728245441b056c67a3e28cf0d20ec1a"
+    "eventName": "push",
+    "runId": "29117856483",
+    "headSha": "2968a0ee9c9bd8533a5b5a10f51fe53e15e7c7f0"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 40,
-    "discardedDuplicate": 5,
-    "discardedQuality": 18,
+    "candidatesDetected": 58,
+    "candidatesIngested": 31,
+    "extractionSucceeded": 30,
+    "discardedDuplicate": 4,
+    "duplicateExactUrl": 1,
+    "duplicateExactContent": 0,
+    "duplicatePublishedEvent": 1,
+    "discardedQuality": 17,
     "discardedQualityByReason": {
-      "evergreen-or-stale-outside-news-window": 6,
-      "stale-dated-discovery": 8,
-      "stale-hard-news": 3,
-      "listing-url": 1
+      "stale-dated-discovery": 7,
+      "evergreen-or-stale-outside-news-window": 7,
+      "listing-url": 1,
+      "stale-hard-news": 2
     },
     "discardedBySourceAndReason": {
-      "bing-ushuaia": {
-        "evergreen-or-stale-outside-news-window": 1
+      "bing-malvinas": {
+        "stale-dated-discovery": 2
       },
       "bing-tolhuin": {
-        "evergreen-or-stale-outside-news-window": 1,
-        "stale-dated-discovery": 1
+        "evergreen-or-stale-outside-news-window": 2
       },
       "bing-rio-grande": {
-        "evergreen-or-stale-outside-news-window": 1,
-        "stale-dated-discovery": 1
+        "stale-dated-discovery": 1,
+        "evergreen-or-stale-outside-news-window": 1
       },
       "mundo-bing": {
         "stale-dated-discovery": 1,
-        "stale-hard-news": 1,
+        "evergreen-or-stale-outside-news-window": 1,
         "listing-url": 1
-      },
-      "bing-malvinas": {
-        "stale-dated-discovery": 2
       },
       "bing-antartida": {
         "stale-dated-discovery": 3
@@ -48,36 +49,50 @@
     },
     "discardedGenericTitle": 1,
     "discardedEvergreen": 14,
-    "eventsGrouped": 15,
-    "verified": 1,
-    "pendingVerification": 14,
+    "eventsGrouped": 9,
+    "verified": 2,
+    "pendingVerification": 7,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "conflicting": 0,
-    "published": 0,
-    "publishedByLane": {},
+    "published": 2,
+    "publishedByLane": {
+      "fast": 1,
+      "standard": 1
+    },
     "verifiedByLane": {
-      "strict": 1
+      "fast": 1,
+      "standard": 1
     },
     "pendingByLane": {
-      "standard": 4,
-      "strict": 10
+      "strict": 4,
+      "standard": 3
+    },
+    "eventsByTerritory": {
+      "Mundo": 1,
+      "Nacionales": 5,
+      "Tolhuin": 1,
+      "Rio Grande": 2
+    },
+    "verifiedByTerritory": {
+      "Tolhuin": 1,
+      "Ushuaia": 1
     },
     "fastPendingAudit": [],
-    "freshCandidates": 21,
-    "staleDiscarded": 17,
+    "freshCandidates": 13,
+    "staleDiscarded": 16,
     "sourceHealth": {
       "mundo-clarin": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -95,6 +110,76 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 0,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 1,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0.33,
+        "staleDiscardRate": 0.67
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 2,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.5
+      },
+      "mundo-bing": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 0,
+        "qualityDiscarded": 3,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
       },
       "bing-antartida": {
         "detected": 3,
@@ -124,61 +209,33 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 1
       },
-      "nacionales-infobae": {
+      "mundo-google": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "bing-ushuaia": {
         "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 3,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.75,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
-      },
-      "bing-tolhuin": {
-        "detected": 3,
         "materialized": 3,
-        "freshCandidates": 1,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 2,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.5
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.75,
+        "materializationSuccessRate": 0.75,
+        "verificationContributionRate": 0.25,
+        "publicationContributionRate": 0.25,
+        "staleDiscardRate": 0
       },
       "nacionales-perfil": {
         "detected": 2,
@@ -194,77 +251,35 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-bing": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "mundo-google": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-malvinas": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 0,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
       "el-rompehielos": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "actualidad-tdf": {
-        "detected": 5,
-        "materialized": 5,
-        "freshCandidates": 5,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "gobierno-tdf-oficial": {
+        "detected": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "actualidad-tdf": {
         "detected": 5,
         "materialized": 0,
         "freshCandidates": 0,
@@ -299,108 +314,149 @@
     ],
     "drafts": 0,
     "modelErrors": 0,
+    "publicationErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 1,
+    "discardedImportance": 0,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
+    "budgetDeferred": 0,
+    "failedRetryable": 0,
+    "failedTerminal": 1,
+    "failedRetryableByReason": {},
+    "failedTerminalByReason": {
+      "http-403": 1
+    },
+    "aiReused": 0,
+    "rescueQueued": 0,
+    "rescueAttempted": 0,
+    "rescueSucceeded": 0,
+    "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 1,
     "imageErrors": 0,
-    "aiAttempts": 1,
-    "aiCalls": 1,
-    "imageSelections": [],
-    "agendaStories": 189,
-    "newsworthinessAverage": 93,
+    "aiAttempts": 2,
+    "aiCalls": 2,
+    "imageSelections": [
+      {
+        "title": "Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor",
+        "strategy": "article-og",
+        "query": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
+        "score": 82,
+        "source": "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/67/2676728_056b8158d82132e3fbf812b0f0eb49fa597a335cf6a10ec4f1861d6397a2fcdf/sm.jpg"
+      },
+      {
+        "title": "Nuevas conexiones aéreas directas entre Brasil y Ushuaia",
+        "strategy": "article-og",
+        "query": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
+        "score": 82,
+        "source": "https://ushuaia24.com.ar/download/multimedia.normal.a919afb19c3cf2a7.bm9ybWFsLndlYnA%3D.webp"
+      }
+    ],
+    "agendaStories": 196,
+    "newsworthinessAverage": 100,
     "newsworthinessTop": [
       {
-        "title": "Vacaciones de invierno 2026: cuánto cuesta una semana para una familia en los destinos más elegidos",
-        "eventKey": "weather|buenos aires|argentina|chile|informa|2026-07-10",
-        "score": 93,
+        "title": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
+        "eventKey": "agenda|municipio de tolhuin|secretaria de turismo y produccion|municipalidad de tolhuin|ushuaia|tolhuin|informa|2026-07-09",
+        "score": 100,
+        "topic": "agenda",
+        "territory": "Tolhuin",
+        "lane": "fast"
+      },
+      {
+        "title": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
+        "eventKey": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
+        "score": 100,
         "topic": "servicios",
-        "territory": "Nacionales",
-        "lane": "strict"
+        "territory": "Ushuaia",
+        "lane": "standard"
       }
     ],
     "corroborationSearches": 3,
-    "corroborationFound": 1,
-    "corroborationVerified": 1,
+    "corroborationFound": 2,
+    "corroborationVerified": 2,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 2,
+    "corroborationNoResult": 1,
     "corroborationAttempts": [
       {
-        "eventKey": "weather|buenos aires|argentina|chile|informa|2026-07-10",
-        "title": "Vacaciones de invierno 2026: cuánto cuesta una semana para una familia en los destinos más elegidos",
+        "eventKey": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
+        "title": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
         "priorityRank": 1,
-        "corroborationQuery": "Argentina Chile cuanto cuesta destinos elegidos familia invierno",
-        "corroborationReason": "newsworthiness=91; freshness=0h; territory=Mundo; impact=22; corroborability=10; pendingAge=0h; attempts=0",
+        "corroborationQuery": "Ushuaia GOL Linhas Aéreas LATAM Brasil Municipio y Justicia Gobierno Rio Grande Ushuaia aerolineas brasilenas directo primera vuelan",
+        "corroborationReason": "newsworthiness=100; freshness=5h; territory=Rio Grande; impact=19; corroborability=10; pendingAge=5h; attempts=1",
         "found": 1,
         "verified": true,
-        "status": "verified-strict"
+        "status": "verified-standard"
       },
       {
-        "eventKey": "crime|rio grande|tierra del fuego aias|informa|2026-07-10",
-        "title": "Procesaron a sujeto reincidente filmado y detenido por el robo a una pescadería en Río Grande - Actualidad TDF",
+        "eventKey": "agenda|municipio de tolhuin|secretaria de turismo y produccion|municipalidad de tolhuin|ushuaia|tolhuin|informa|2026-07-09",
+        "title": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
         "priorityRank": 2,
-        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS detenido filmado pescaderia procesaron reincidente sujeto",
-        "corroborationReason": "newsworthiness=86; freshness=1h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
+        "corroborationQuery": "Municipio de Tolhuin Secretaría de Turismo y Producción Municipalidad de Tolhuin El Municipio Ushuaia Tolhuin edicion fiesta invierno nacional nueva parte",
+        "corroborationReason": "newsworthiness=100; freshness=28h; territory=Tolhuin; impact=18; corroborability=10; pendingAge=28h; attempts=0",
+        "found": 1,
+        "verified": true,
+        "status": "verified-local-routine"
       },
       {
-        "eventKey": "crime|rio grande|tierra del fuego aias|denuncia|2026-07-10",
-        "title": "Excarcelaron a un hombre detenido por violento episodio tras no instarse la denuncia - Actualidad TDF",
+        "eventKey": "legislative|camara|otan|ley save america|estados unidos|informa|2026-07-10",
+        "title": "Trump deja entrar en vigor la ley de vivienda de Estados Unidos sin su firma",
         "priorityRank": 3,
-        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS denuncia detenido episodio excarcelaron hombre instarse",
-        "corroborationReason": "newsworthiness=86; freshness=3h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=3h; attempts=0",
+        "corroborationQuery": "Ley SAVE America Cámara OTAN Estados Unidos entrar estados firma trump unidos vigor",
+        "corroborationReason": "newsworthiness=97; freshness=4h; territory=Nacionales; impact=13; corroborability=10; pendingAge=4h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
-    "conflictsByField": {},
+    "conflictsByField": {
+      "dates": 1
+    },
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 4,
+    "nonCriticalDifferences": 1,
+    "resolvedComplementaryFacts": 15,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 4,
-        "avg": 17.7,
+        "count": 6,
+        "avg": 60.4,
         "p50": 0,
-        "max": 70.8
+        "max": 291.3
       },
       "verificationToPublicationMinutes": {
-        "count": 4,
-        "avg": 36.6,
-        "p50": 0.3,
+        "count": 6,
+        "avg": 24.4,
+        "p50": 0.2,
         "max": 145.8
       },
       "discoveryToPublicationMinutes": {
-        "count": 4,
-        "avg": 54.3,
+        "count": 6,
+        "avg": 84.8,
         "p50": 0.3,
-        "max": 216.5
+        "max": 291.6
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 12,
-        "avg": 242,
+        "count": 14,
+        "avg": 228.2,
         "p50": 0,
         "max": 2101.9
       },
       "cohort": {
-        "comparablePublishedCount": 4,
+        "comparablePublishedCount": 6,
         "verifiedWithoutPublicationCount": 8,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {},
+    "byCategory": {
+      "Tolhuin": 1,
+      "Ushuaia": 1
+    },
     "publishedLast3hBeforeRun": 0,
     "publishedLast6hBeforeRun": 1,
     "publishedLast12hBeforeRun": 1,
     "publishedLast24hBeforeRun": 4,
-    "hoursSinceLastPublicationBeforeRun": 3.3,
+    "hoursSinceLastPublicationBeforeRun": 4.8,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -412,6 +468,44 @@
     },
     "agendaTop": [
       {
+        "storyId": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
+        "headlineSeed": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
+      {
+        "storyId": "agenda|municipio de tolhuin|secretaria de turismo y produccion|municipalidad de tolhuin|ushuaia|tolhuin|informa|2026-07-09",
+        "headlineSeed": "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno | Sur54.com | Portal de noticias",
+        "topic": "agenda",
+        "territory": "Tolhuin",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 15,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 15,
+          "searchPotential": 13,
+          "recency": 9,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
+      {
         "storyId": "service|ushuaia|tierra del fuego|brasil|informa|2026-07-10",
         "headlineSeed": "Ushuaia más cerca: GOL vuelo directo desde São Paulo - Latitud2000",
         "topic": "servicios",
@@ -421,6 +515,7 @@
         "scoreBreakdown": {
           "publicInterest": 18,
           "localRelevance": 25,
+          "impactMagnitude": 0,
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
@@ -439,29 +534,12 @@
         "scoreBreakdown": {
           "publicInterest": 18,
           "localRelevance": 25,
+          "impactMagnitude": 0,
           "serviceValue": 20,
           "socialPotential": 11,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
-        "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
-        "topic": "salud",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 98,
-        "status": "verified",
-        "scoreBreakdown": {
-          "publicInterest": 17,
-          "localRelevance": 25,
-          "serviceValue": 15,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 8,
           "diversity": 4
         }
       },
@@ -470,11 +548,12 @@
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
         "topic": "servicios",
         "territory": "Ushuaia",
-        "newsworthinessScore": 97,
+        "newsworthinessScore": 100,
         "status": "verified-standard",
         "scoreBreakdown": {
           "publicInterest": 20,
           "localRelevance": 25,
+          "impactMagnitude": 23,
           "serviceValue": 20,
           "socialPotential": 11,
           "searchPotential": 13,
@@ -482,36 +561,21 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
-        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
-        "topic": "turismo",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 97,
-        "status": "verified",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "serviceValue": 15,
-          "socialPotential": 15,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
       }
     ],
     "agendaInvalidStories": 23,
     "technicalSuccess": true,
-    "editorialOutcome": "no-publishable-story"
+    "editorialOutcome": "published"
   },
   "budget": {
-    "maxAiPerRun": 10,
+    "maxAiPerRun": 16,
     "officialAiUsed": 0,
-    "officialAiBudget": 5,
-    "discoveryAiUsed": 1,
-    "discoveryAiBudget": 5,
+    "officialAiBudget": 0,
+    "discoveryAiUsed": 2,
+    "discoveryAiBudget": 2,
+    "aiConcurrency": 1,
+    "maxRetryAttempts": 3,
+    "maxRescuePerRun": 4,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
@@ -520,13 +584,12 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 4,
-    "candidatesMaterialized": 40,
-    "totalCandidatesBeforeLimit": 40
+    "candidatesMaterialized": 31,
+    "totalCandidatesBeforeLimit": 31
   },
   "reasonNoMorePublished": [
-    "14 evento(s) quedaron pendientes de segunda fuente",
-    "5 candidato(s) descartados por duplicado/similitud",
-    "18 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 6, stale-dated-discovery: 8, stale-hard-news: 3, listing-url: 1)",
-    "1 candidato(s) descartados por importancia editorial"
+    "7 evento(s) quedaron pendientes de segunda fuente",
+    "4 candidato(s) descartados por duplicado/similitud",
+    "17 candidato(s) descartados por causas especificas (stale-dated-discovery: 7, evergreen-or-stale-outside-news-window: 7, listing-url: 1, stale-hard-news: 2)"
   ]
 }
