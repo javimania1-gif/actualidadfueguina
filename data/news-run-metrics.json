@@ -1,84 +1,83 @@
 {
-  "generatedAt": "2026-07-10T14:35:02.261Z",
+  "generatedAt": "2026-07-10T17:51:15.830Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29100191392",
-    "headSha": "88f958344044532502d9fd0f65627f234cfaabc0"
+    "runId": "29112307515",
+    "headSha": "d900b581b728245441b056c67a3e28cf0d20ec1a"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 38,
+    "candidatesDetected": 40,
     "discardedDuplicate": 5,
-    "discardedQuality": 16,
+    "discardedQuality": 18,
     "discardedQualityByReason": {
-      "stale-hard-news": 4,
-      "stale-dated-discovery": 6,
-      "evergreen-or-stale-outside-news-window": 4,
-      "weak-title,short-body": 1,
-      "listing-url,weak-title": 1
+      "evergreen-or-stale-outside-news-window": 6,
+      "stale-dated-discovery": 8,
+      "stale-hard-news": 3,
+      "listing-url": 1
     },
     "discardedBySourceAndReason": {
-      "bing-tdf": {
-        "stale-hard-news": 3,
-        "evergreen-or-stale-outside-news-window": 2
-      },
-      "bing-antartida": {
-        "stale-dated-discovery": 3
+      "bing-ushuaia": {
+        "evergreen-or-stale-outside-news-window": 1
       },
       "bing-tolhuin": {
-        "evergreen-or-stale-outside-news-window": 2
+        "evergreen-or-stale-outside-news-window": 1,
+        "stale-dated-discovery": 1
       },
       "bing-rio-grande": {
-        "stale-dated-discovery": 1,
-        "weak-title,short-body": 1
-      },
-      "bing-malvinas": {
+        "evergreen-or-stale-outside-news-window": 1,
         "stale-dated-discovery": 1
       },
       "mundo-bing": {
         "stale-dated-discovery": 1,
-        "listing-url,weak-title": 1,
-        "stale-hard-news": 1
+        "stale-hard-news": 1,
+        "listing-url": 1
+      },
+      "bing-malvinas": {
+        "stale-dated-discovery": 2
+      },
+      "bing-antartida": {
+        "stale-dated-discovery": 3
+      },
+      "bing-tdf": {
+        "evergreen-or-stale-outside-news-window": 3,
+        "stale-hard-news": 2
       }
     },
-    "discardedGenericTitle": 3,
-    "discardedEvergreen": 10,
-    "eventsGrouped": 13,
-    "verified": 3,
-    "pendingVerification": 10,
+    "discardedGenericTitle": 1,
+    "discardedEvergreen": 14,
+    "eventsGrouped": 15,
+    "verified": 1,
+    "pendingVerification": 14,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "conflicting": 0,
-    "published": 1,
-    "publishedByLane": {
-      "fast": 1
-    },
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 1,
-      "fast": 1,
       "strict": 1
     },
     "pendingByLane": {
-      "standard": 5,
-      "strict": 5
+      "standard": 4,
+      "strict": 10
     },
     "fastPendingAudit": [],
     "freshCandidates": 21,
-    "staleDiscarded": 14,
+    "staleDiscarded": 17,
     "sourceHealth": {
       "mundo-clarin": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 3,
+        "freshCandidates": 3,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -97,34 +96,6 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-tolhuin": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 1,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
       "bing-antartida": {
         "detected": 3,
         "materialized": 3,
@@ -138,34 +109,6 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 1
-      },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 2,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
-      },
-      "bing-ushuaia": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 4,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.25,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
       },
       "bing-tdf": {
         "detected": 5,
@@ -181,19 +124,75 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 1
       },
-      "bing-malvinas": {
+      "nacionales-infobae": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 1,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-ushuaia": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 3,
         "qualityDiscarded": 1,
         "staleDiscarded": 1,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.67,
+        "freshCandidateRate": 0.75,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
+        "staleDiscardRate": 0.25
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 1,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 2,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.5
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
       },
       "mundo-bing": {
         "detected": 3,
@@ -209,33 +208,33 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.67
       },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
       "mundo-google": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 0,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.67
       },
       "el-rompehielos": {
         "detected": 4,
@@ -251,16 +250,16 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "rio-grande-oficial": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
+      "actualidad-tdf": {
+        "detected": 5,
+        "materialized": 5,
+        "freshCandidates": 5,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -279,114 +278,90 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "actualidad-tdf": {
-        "detected": 5,
-        "materialized": 3,
-        "freshCandidates": 3,
+      "rio-grande-oficial": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.6,
-        "materializationSuccessRate": 0.6,
-        "verificationContributionRate": 0.2,
-        "publicationContributionRate": 0.2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       }
     },
-    "sourceDeprioritized": [],
+    "sourceDeprioritized": [
+      "bing-antartida",
+      "bing-tdf"
+    ],
     "drafts": 0,
     "modelErrors": 0,
-    "factualValidationErrors": 1,
+    "factualValidationErrors": 0,
     "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 1,
     "imageErrors": 0,
-    "aiAttempts": 3,
-    "aiCalls": 3,
-    "imageSelections": [
-      {
-        "title": "Inauguración del vuelo Gol entre San Pablo y Ushuaia",
-        "strategy": "article-og",
-        "query": "Se inauguró el vuelo Gol entre San Pablo y Ushuaia - Actualidad TDF",
-        "score": 82,
-        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/Vuelo-inaugural-Gol-Brasil-Ushuaia-1.jpg"
-      }
-    ],
-    "agendaStories": 177,
-    "newsworthinessAverage": 98,
+    "aiAttempts": 1,
+    "aiCalls": 1,
+    "imageSelections": [],
+    "agendaStories": 189,
+    "newsworthinessAverage": 93,
     "newsworthinessTop": [
       {
-        "title": "Ushuaia más cerca: GOL vuelo directo desde São Paulo - Latitud2000",
-        "eventKey": "service|ushuaia|tierra del fuego|brasil|informa|2026-07-10",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      },
-      {
-        "title": "Se inauguró el vuelo Gol entre San Pablo y Ushuaia - Actualidad TDF",
-        "eventKey": "service|san pablo|poder ejecutivo|monica urquiza|ushuaia|tierra del fuego|argentina|brasil|informa|2026-07-10",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "fast"
-      },
-      {
-        "title": "Obras por 130 mil millones en Córdoba Capital: el detalle del convenio entre Llaryora y Passerini",
-        "eventKey": "service|gobierno|municipalidad de cordoba|gobierno de martin llaryora y la|cordoba capital|daniel passerini|martin llaryora|informa|2026-07-10",
-        "score": 94,
+        "title": "Vacaciones de invierno 2026: cuánto cuesta una semana para una familia en los destinos más elegidos",
+        "eventKey": "weather|buenos aires|argentina|chile|informa|2026-07-10",
+        "score": 93,
         "topic": "servicios",
         "territory": "Nacionales",
         "lane": "strict"
       }
     ],
     "corroborationSearches": 3,
-    "corroborationFound": 4,
-    "corroborationVerified": 2,
+    "corroborationFound": 1,
+    "corroborationVerified": 1,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 1,
+    "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "service|ushuaia|tierra del fuego|brasil|informa|2026-07-10",
-        "title": "Ushuaia más cerca: GOL vuelo directo desde São Paulo - Latitud2000",
+        "eventKey": "weather|buenos aires|argentina|chile|informa|2026-07-10",
+        "title": "Vacaciones de invierno 2026: cuánto cuesta una semana para una familia en los destinos más elegidos",
         "priorityRank": 1,
-        "corroborationQuery": "Brasil Ushuaia Tierra del Fuego cerca directo latitud2000 paulo vuelo",
-        "corroborationReason": "newsworthiness=100; freshness=5h; territory=Ushuaia; impact=19; corroborability=10; pendingAge=5h; attempts=0",
-        "found": 2,
-        "verified": true,
-        "status": "verified-standard"
-      },
-      {
-        "eventKey": "service|gobierno|municipalidad de cordoba|gobierno de martin llaryora y la|cordoba capital|daniel passerini|martin llaryora|informa|2026-07-10",
-        "title": "Obras por 130 mil millones en Córdoba Capital: el detalle del convenio entre Llaryora y Passerini",
-        "priorityRank": 2,
-        "corroborationQuery": "Córdoba Capital Daniel Passerini Martín Llaryora Gobierno Municipalidad de Córdoba capital convenio cordoba detalle llaryora millones",
-        "corroborationReason": "newsworthiness=100; freshness=1h; territory=Nacionales; impact=22; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 2,
+        "corroborationQuery": "Argentina Chile cuanto cuesta destinos elegidos familia invierno",
+        "corroborationReason": "newsworthiness=91; freshness=0h; territory=Mundo; impact=22; corroborability=10; pendingAge=0h; attempts=0",
+        "found": 1,
         "verified": true,
         "status": "verified-strict"
       },
       {
-        "eventKey": "territorial-sovereignty|municipio y|justicia|gobierno|ushuaia gol linhas aereas|latam brasil|rio grande|ushuaia|argentina|brasil|informa|2026-07-10",
-        "title": "Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia",
+        "eventKey": "crime|rio grande|tierra del fuego aias|informa|2026-07-10",
+        "title": "Procesaron a sujeto reincidente filmado y detenido por el robo a una pescadería en Río Grande - Actualidad TDF",
+        "priorityRank": 2,
+        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS detenido filmado pescaderia procesaron reincidente sujeto",
+        "corroborationReason": "newsworthiness=86; freshness=1h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=1h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "crime|rio grande|tierra del fuego aias|denuncia|2026-07-10",
+        "title": "Excarcelaron a un hombre detenido por violento episodio tras no instarse la denuncia - Actualidad TDF",
         "priorityRank": 3,
-        "corroborationQuery": "Ushuaia GOL Linhas Aéreas LATAM Brasil Municipio y Justicia Gobierno Rio Grande Ushuaia aerolineas brasilenas directo primera vuelan",
-        "corroborationReason": "newsworthiness=89; freshness=0h; territory=Ushuaia; impact=12; corroborability=10; pendingAge=0h; attempts=0",
+        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS denuncia detenido episodio excarcelaron hombre instarse",
+        "corroborationReason": "newsworthiness=86; freshness=3h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=3h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "dates": 6,
-      "percentages": 2
-    },
+    "conflictsByField": {},
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 8,
-    "resolvedComplementaryFacts": 17,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 4,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 4,
@@ -407,33 +382,31 @@
         "max": 216.5
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 11,
-        "avg": 264,
+        "count": 12,
+        "avg": 242,
         "p50": 0,
         "max": 2101.9
       },
       "cohort": {
         "comparablePublishedCount": 4,
-        "verifiedWithoutPublicationCount": 7,
+        "verifiedWithoutPublicationCount": 8,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Provincia": 1
-    },
+    "byCategory": {},
     "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 0,
+    "publishedLast6hBeforeRun": 1,
     "publishedLast12hBeforeRun": 1,
-    "publishedLast24hBeforeRun": 7,
-    "hoursSinceLastPublicationBeforeRun": 10.9,
+    "publishedLast24hBeforeRun": 4,
+    "hoursSinceLastPublicationBeforeRun": 3.3,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 7,
-      "remainingToMin": 5,
-      "slotsRemaining": 9,
+      "publishedLast24hBeforeRun": 4,
+      "remainingToMin": 8,
+      "slotsRemaining": 12,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -475,24 +448,6 @@
         }
       },
       {
-        "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
-        "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-standard",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 25,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
         "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
         "topic": "salud",
@@ -507,6 +462,24 @@
           "searchPotential": 13,
           "recency": 5,
           "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
+        "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 97,
+        "status": "verified-standard",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 1,
+          "sourceStrength": 3,
           "diversity": 4
         }
       },
@@ -529,15 +502,15 @@
         }
       }
     ],
-    "agendaInvalidStories": 22,
+    "agendaInvalidStories": 23,
     "technicalSuccess": true,
-    "editorialOutcome": "published"
+    "editorialOutcome": "no-publishable-story"
   },
   "budget": {
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 3,
+    "discoveryAiUsed": 1,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -546,15 +519,14 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 38,
-    "totalCandidatesBeforeLimit": 38
+    "publishedLast24hBeforeRun": 4,
+    "candidatesMaterialized": 40,
+    "totalCandidatesBeforeLimit": 40
   },
   "reasonNoMorePublished": [
-    "10 evento(s) quedaron pendientes de segunda fuente",
+    "14 evento(s) quedaron pendientes de segunda fuente",
     "5 candidato(s) descartados por duplicado/similitud",
-    "16 candidato(s) descartados por causas especificas (stale-hard-news: 4, stale-dated-discovery: 6, evergreen-or-stale-outside-news-window: 4, weak-title,short-body: 1, listing-url,weak-title: 1)",
-    "1 candidato(s) descartados por importancia editorial",
-    "1 candidato(s) bloqueados por validacion factual"
+    "18 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 6, stale-dated-discovery: 8, stale-hard-news: 3, listing-url: 1)",
+    "1 candidato(s) descartados por importancia editorial"
   ]
 }

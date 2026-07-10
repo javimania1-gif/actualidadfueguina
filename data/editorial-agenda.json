@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-10T14:35:02.203Z",
+  "generatedAt": "2026-07-10T17:51:15.758Z",
   "summary": {
-    "totalStories": 177,
+    "totalStories": 189,
     "byStatus": {
-      "agenda-invalid": 22,
+      "agenda-invalid": 23,
       "verified-standard": 2,
       "published": 3,
       "verified": 33,
       "verified-strict": 4,
+      "pending-verification": 118,
       "conflicting-sources": 3,
-      "pending-verification": 107,
       "verified-local-routine": 3
     },
     "byTopic": {
-      "servicios": 24,
+      "servicios": 25,
       "salud": 3,
       "turismo": 7,
+      "politica": 29,
       "agenda": 3,
-      "politica": 25,
-      "deportes": 31,
-      "sociedad": 60,
-      "policiales": 17,
+      "policiales": 19,
+      "deportes": 32,
+      "sociedad": 64,
       "cultura": 2,
       "economia": 4,
       "educacion": 1
     },
     "byTerritory": {
-      "Ushuaia": 19,
-      "Rio Grande": 24,
-      "Nacionales": 37,
-      "Malvinas": 5,
-      "Provincia": 7,
-      "Mundo": 69,
+      "Ushuaia": 20,
+      "Rio Grande": 26,
+      "Nacionales": 40,
+      "Malvinas": 6,
       "Antartida": 3,
+      "Mundo": 74,
+      "Provincia": 7,
       "unknown": 7,
       "Tolhuin": 6
     },
-    "invalidStories": 22,
+    "invalidStories": 23,
     "topStories": [
       {
         "storyId": "service|ushuaia|tierra del fuego|brasil|informa|2026-07-10",
@@ -76,24 +76,6 @@
         }
       },
       {
-        "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
-        "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-standard",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 25,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
         "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
         "topic": "salud",
@@ -108,6 +90,24 @@
           "searchPotential": 13,
           "recency": 5,
           "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
+        "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 97,
+        "status": "verified-standard",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 1,
+          "sourceStrength": 3,
           "diversity": 4
         }
       },
@@ -148,42 +148,6 @@
         }
       },
       {
-        "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
-        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-        "topic": "turismo",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 94,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "serviceValue": 12,
-          "socialPotential": 13,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
-        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-        "topic": "turismo",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 94,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "serviceValue": 12,
-          "socialPotential": 13,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "general|argentina|cerro castor|ushuaia el|ushuaia|argentina|informa|07 08 900",
         "headlineSeed": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
         "topic": "turismo",
@@ -215,6 +179,42 @@
           "socialPotential": 7,
           "searchPotential": 15,
           "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+        "topic": "turismo",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 91,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "serviceValue": 12,
+          "socialPotential": 13,
+          "searchPotential": 13,
+          "recency": 9,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+        "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+        "topic": "turismo",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 91,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "serviceValue": 12,
+          "socialPotential": 13,
+          "searchPotential": 13,
+          "recency": 9,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -263,7 +263,7 @@
         "searchPotential": 13,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "agenda-invalid",
@@ -358,51 +358,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
-      "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego",
-        "Pasaje Drake",
-        "Ushuaia",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Antartida",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-08T15:28:59.144Z",
-      "lastSeenAt": "2026-07-10T02:30:54.457Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
       "headlineSeed": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
       "topic": "servicios",
@@ -426,7 +381,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "serviceValueScore": 20,
@@ -438,7 +393,7 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -488,6 +443,51 @@
       },
       "newsworthinessScore": 98,
       "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
+      "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Tierra",
+        "Fuego",
+        "Pasaje Drake",
+        "Ushuaia",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Antartida",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-08T15:28:59.144Z",
+      "lastSeenAt": "2026-07-10T02:30:54.457Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 97,
+      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -576,90 +576,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
-      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Cerro Castor",
-        "Argentina",
-        "Brasil"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T22:53:17.499Z",
-      "lastSeenAt": "2026-07-09T22:53:17.499Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 12,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "serviceValue": 12,
-        "socialPotential": 13,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 94,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
-      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Cerro Castor",
-        "Argentina",
-        "Brasil"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T22:47:38.674Z",
-      "lastSeenAt": "2026-07-09T22:47:38.674Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 12,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "serviceValue": 12,
-        "socialPotential": 13,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 94,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "weather|argentina|chile|reino unido|polemica|malvinas la|hms medway|rio grande|islas malvinas|informa|07 08 900",
       "headlineSeed": "Polémica por el paso de un buque de guerra británico por aguas territoriales argentinas tras zarpar de Malvinas",
       "topic": "servicios",
@@ -711,6 +627,48 @@
       ]
     },
     {
+      "storyId": "weather|buenos aires|argentina|chile|informa|2026-07-10",
+      "headlineSeed": "Vacaciones de invierno 2026: cuánto cuesta una semana para una familia en los destinos más elegidos",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-10T17:51:03.673Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 93,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-strict",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
+    {
       "storyId": "general|argentina|cerro castor|ushuaia el|ushuaia|argentina|informa|07 08 900",
       "headlineSeed": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
       "topic": "turismo",
@@ -753,53 +711,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather-forecast|2026-07-07|tierra-del-fuego",
-      "headlineSeed": "El ambicioso túnel submarino que impulsan en Chile y reducirá a 7 minutos el cruce con Tierra del Fuego",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego El",
-        "Fuego",
-        "Argentina",
-        "Chile",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-08T17:12:57.826Z",
-      "lastSeenAt": "2026-07-08T17:12:57.826Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 22,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 22,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 92,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified",
-      "validationReasons": [
-        "story-headline-mismatch"
-      ]
-    },
-    {
       "storyId": "service|gobierno|fogon patrio|argentina|informa|07 09 900",
       "headlineSeed": "Llaryora: \"Se está cayendo el empleo, es muy difícil llegar a fin de mes\"",
       "topic": "servicios",
@@ -840,43 +751,87 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
-      "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "Mundo",
+      "storyId": "general|gobierno de tierra de|gobierno|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Ushuaia",
       "primaryEntities": [
-        "OTAN",
-        "Moscu",
-        "Estados Unidos"
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Cerro Castor",
+        "Argentina",
+        "Brasil"
       ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T22:53:17.499Z",
+      "lastSeenAt": "2026-07-09T22:53:17.499Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 15,
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 12,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "serviceValue": 20,
-        "socialPotential": 9,
-        "searchPotential": 15,
-        "recency": 12,
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "serviceValue": 12,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 90,
-      "status": "pending-verification",
+      "newsworthinessScore": 91,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|09 de julio de 2026",
+      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Cerro Castor",
+        "Argentina",
+        "Brasil"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T22:47:38.674Z",
+      "lastSeenAt": "2026-07-09T22:47:38.674Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 12,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "serviceValue": 12,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -1052,6 +1007,171 @@
         "diversity": 4
       },
       "newsworthinessScore": 88,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather-forecast|2026-07-07|tierra-del-fuego",
+      "headlineSeed": "El ambicioso túnel submarino que impulsan en Chile y reducirá a 7 minutos el cruce con Tierra del Fuego",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Tierra",
+        "Fuego El",
+        "Fuego",
+        "Argentina",
+        "Chile",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-08T17:12:57.826Z",
+      "lastSeenAt": "2026-07-08T17:12:57.826Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 22,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
+    {
+      "storyId": "agenda|otan|moscu|estados unidos|lanza|28 de febrero",
+      "headlineSeed": "El régimen de Irán difundió videos de supuestos lanzamientos de misiles con mensajes sobre Khamenei",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "OTAN",
+        "Moscu",
+        "Estados Unidos"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 9,
+        "searchPotential": 15,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|rio grande|tierra del fuego aias|informa|2026-07-10",
+      "headlineSeed": "Procesaron a sujeto reincidente filmado y detenido por el robo a una pescadería en Río Grande - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Rio Grande",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-10T17:51:03.674Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|rio grande|tierra del fuego aias|denuncia|2026-07-10",
+      "headlineSeed": "Excarcelaron a un hombre detenido por violento episodio tras no instarse la denuncia - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Rio Grande",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-10T17:51:03.674Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -1263,212 +1383,47 @@
       "validationReasons": []
     },
     {
-      "storyId": "legislative|argentina|estados unidos|reino unido|ushuaia|israel|el rompehielos israel|ushuaia|tierra del fuego|informa|febrero",
-      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
+      "storyId": "territorial-sovereignty|policia|gregoria matorras|malvinas argentinas|volkswagen gol|malvinas|tierra del fuego aias|argentina|informa|2026-07-10",
+      "headlineSeed": "Vehículo impactó contra una columna en un accidente sin heridos - Actualidad TDF",
       "topic": "politica",
       "subtopic": "politica",
-      "territory": "Ushuaia",
+      "territory": "Malvinas",
       "primaryEntities": [
-        "Ushuaia",
-        "Israel",
-        "El Rompehielos Israel",
+        "Gregoria Matorras",
+        "Malvinas Argentinas",
+        "Volkswagen Gol",
+        "Policia",
         "Malvinas",
-        "Argentina",
-        "Estados Unidos",
-        "Reino Unido",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Antartida"
+        "Tierra del Fuego AIAS",
+        "Argentina"
       ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-09T16:04:52.309Z",
-      "lastSeenAt": "2026-07-09T16:04:52.309Z",
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-10T17:51:03.674Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 22,
+      "localRelevanceScore": 22,
       "serviceValueScore": 3,
-      "socialPotentialScore": 11,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
+        "publicInterest": 22,
+        "localRelevance": 22,
         "serviceValue": 3,
-        "socialPotential": 11,
+        "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 12,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 86,
+      "newsworthinessScore": 84,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
-      "headlineSeed": "Detrás del respaldo a la gestión, el FMI le viene a exigir a Milei tres puntos clave para sostener el programa conjunto",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-09T08:20:33.482Z",
-      "lastSeenAt": "2026-07-09T16:51:37.969Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 12,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 12,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 12,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard",
-      "validationReasons": [
-        "story-headline-mismatch"
-      ]
-    },
-    {
-      "storyId": "service|union europea|mark zuckerberg|servicios digitales|argentina|informa|2026-07-10",
-      "headlineSeed": "La Comisión Europea acusa a Meta de exponer a los menores con el \"diseño adictivo\" de Instagram y Facebook",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Servicios Digitales"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-10T10:58:50.123Z",
-      "lastSeenAt": "2026-07-10T10:58:50.123Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 4,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 4,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
-      "storyId": "service|gobierno de milei|justicia|mario lugones|informa|2026-07-10",
-      "headlineSeed": "De la Sota denunció al ministro Lugones: \"Todo tiene un límite, no vamos a ser indiferentes\"",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Mario Lugones",
-        "Gobierno de Milei",
-        "Justicia"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-10T10:58:50.122Z",
-      "lastSeenAt": "2026-07-10T10:58:50.122Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 4,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 4,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
-      "storyId": "crime|espana ocurrio|internacional|estados unidos|espana|informa|2026-07-09",
-      "headlineSeed": "Ascienden a doce los muertos por un incendio forestal en Almería, España",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-10T02:23:54.107Z",
-      "lastSeenAt": "2026-07-10T10:58:50.122Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 12,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 7,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 12,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -1490,6 +1445,53 @@
       "eventType": "territorial-sovereignty",
       "firstSeenAt": "2026-07-09T23:58:25.818Z",
       "lastSeenAt": "2026-07-09T23:58:25.818Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|argentina|estados unidos|reino unido|ushuaia|israel|el rompehielos israel|ushuaia|tierra del fuego|informa|febrero",
+      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Israel",
+        "El Rompehielos Israel",
+        "Malvinas",
+        "Argentina",
+        "Estados Unidos",
+        "Reino Unido",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Antartida"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-09T16:04:52.309Z",
+      "lastSeenAt": "2026-07-09T16:04:52.309Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -1554,6 +1556,45 @@
       "newsworthinessScore": 82,
       "status": "agenda-invalid",
       "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
+    {
+      "storyId": "weather-forecast|2026-07-09|tierra-del-fuego",
+      "headlineSeed": "Detrás del respaldo a la gestión, el FMI le viene a exigir a Milei tres puntos clave para sostener el programa conjunto",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-09T08:20:33.482Z",
+      "lastSeenAt": "2026-07-09T16:51:37.969Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 12,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 12,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 12,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard",
       "validationReasons": [
         "story-headline-mismatch"
       ]
@@ -1650,6 +1691,90 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|union europea|mark zuckerberg|servicios digitales|argentina|informa|2026-07-10",
+      "headlineSeed": "La Comisión Europea acusa a Meta de exponer a los menores con el \"diseño adictivo\" de Instagram y Facebook",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Servicios Digitales"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-10T10:58:50.123Z",
+      "lastSeenAt": "2026-07-10T10:58:50.123Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
+      "storyId": "service|gobierno de milei|justicia|mario lugones|informa|2026-07-10",
+      "headlineSeed": "De la Sota denunció al ministro Lugones: \"Todo tiene un límite, no vamos a ser indiferentes\"",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Mario Lugones",
+        "Gobierno de Milei",
+        "Justicia"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-10T10:58:50.122Z",
+      "lastSeenAt": "2026-07-10T10:58:50.122Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 4,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 4,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|2026-07-09",
       "headlineSeed": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
       "topic": "politica",
@@ -1667,7 +1792,7 @@
       ],
       "eventType": "territorial-sovereignty",
       "firstSeenAt": "2026-07-10T02:23:54.108Z",
-      "lastSeenAt": "2026-07-10T14:34:30.775Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -1695,49 +1820,42 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
-      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Ushuaia",
+      "storyId": "crime|espana ocurrio|internacional|estados unidos|espana|informa|2026-07-09",
+      "headlineSeed": "Ascienden a doce los muertos por un incendio forestal en Almería, España",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Buenos Aires",
-        "Atlantico Sur",
-        "Argentina",
-        "Reino Unido"
+        "Estados Unidos",
+        "Espana"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.960Z",
-      "lastSeenAt": "2026-07-10T02:23:54.109Z",
+      "eventType": "service",
+      "firstSeenAt": "2026-07-10T02:23:54.107Z",
+      "lastSeenAt": "2026-07-10T10:58:50.122Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
+      "editorialLane": "strict",
       "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
+      "publicInterestScore": 18,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 12,
       "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
+        "publicInterest": 18,
+        "localRelevance": 7,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 12,
         "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 80,
-      "status": "published",
+      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -1860,53 +1978,6 @@
         "socialPotential": 11,
         "searchPotential": 8,
         "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legal-policy|argentina|reino unido|tierra|fuego|el rompehielos tierra|tierra del fuego|islas malvinas|informa|2026-07-09",
-      "headlineSeed": "Tierra del Fuego repudió el paso de un buque británico - El Rompehielos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego",
-        "El Rompehielos Tierra",
-        "HMS Medway",
-        "Atlántico Sur",
-        "Argentina",
-        "Reino Unido",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-09T16:04:52.309Z",
-      "lastSeenAt": "2026-07-09T16:04:52.309Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2151,52 +2222,6 @@
       ]
     },
     {
-      "storyId": "general|argentina|musica|pena|independencia|tolhuin|argentina|informa|9 de julio",
-      "headlineSeed": "Música, danza y sabores locales: hoy hay Peña de la Independencia en Tolhuin - Actualidad TDF",
-      "topic": "cultura",
-      "subtopic": "cultura",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Música",
-        "Peña",
-        "Independencia",
-        "Tolhuin",
-        "Actualidad TDF Tolhuin",
-        "Día",
-        "Polideportivo Ezequiel Rivero",
-        "Argentina",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:04:52.310Z",
-      "lastSeenAt": "2026-07-09T16:04:52.310Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|policia|estefania guevara|ushuaia|tierra del fuego aias|informa|2026-07-10",
       "headlineSeed": "Una mujer fue aprehendida tras provocar daños en una vivienda de Ushuaia - Actualidad TDF",
       "topic": "sociedad",
@@ -2210,7 +2235,7 @@
       ],
       "eventType": "general",
       "firstSeenAt": "2026-07-10T14:34:30.773Z",
-      "lastSeenAt": "2026-07-10T14:34:30.773Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -2235,6 +2260,99 @@
       },
       "newsworthinessScore": 77,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|justicia federal de tierra de|justicia de la nacion|justicia federal de|procurador general|direccion provincial|procuracion general|ushuaia|tierra del fuego|informa|2026-07",
+      "headlineSeed": "Procurador General de la Nación pidió al juez federal de Ushuaia que se haga responsable de la causa por el Puerto - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Procurador General",
+        "Dirección Provincial",
+        "Procuración General",
+        "Justicia Federal de Tierra de",
+        "Justicia de la Nación",
+        "Justicia Federal de",
+        "Justicia Federal",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T17:51:03.674Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 77,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
+      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Buenos Aires",
+        "Atlantico Sur",
+        "Argentina",
+        "Reino Unido"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T22:47:39.960Z",
+      "lastSeenAt": "2026-07-10T02:23:54.109Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 77,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -2278,45 +2396,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|gobierno|gobierno de tierra de|hms medway|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-09",
+      "storyId": "legal-policy|argentina|reino unido|tierra|fuego|el rompehielos tierra|tierra del fuego|islas malvinas|informa|2026-07-09",
       "headlineSeed": "Tierra del Fuego repudió el paso de un buque británico - El Rompehielos",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Malvinas",
       "primaryEntities": [
+        "Tierra",
+        "Fuego",
+        "El Rompehielos Tierra",
         "HMS Medway",
-        "Gobierno",
-        "Gobierno de Tierra de",
+        "Atlántico Sur",
+        "Argentina",
+        "Reino Unido",
         "Tierra del Fuego",
         "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Malvinas"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.959Z",
-      "lastSeenAt": "2026-07-10T14:34:30.773Z",
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-09T16:04:52.309Z",
+      "lastSeenAt": "2026-07-09T16:04:52.309Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
       "localRelevanceScore": 22,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 17,
+        "publicInterest": 20,
         "localRelevance": 22,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2369,26 +2487,32 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|objetos|rio grande noticias|rio grande|rio grande|informa|julio",
-      "headlineSeed": "“Objetos de nuestra historia”: recorré una muestra que pone en valor el patrimonio de Río Grande",
+      "storyId": "general|argentina|musica|pena|independencia|tolhuin|argentina|informa|9 de julio",
+      "headlineSeed": "Música, danza y sabores locales: hoy hay Peña de la Independencia en Tolhuin - Actualidad TDF",
       "topic": "cultura",
       "subtopic": "cultura",
-      "territory": "Rio Grande",
+      "territory": "Tolhuin",
       "primaryEntities": [
-        "Objetos",
-        "Río Grande Noticias",
-        "Río Grande"
+        "Música",
+        "Peña",
+        "Independencia",
+        "Tolhuin",
+        "Actualidad TDF Tolhuin",
+        "Día",
+        "Polideportivo Ezequiel Rivero",
+        "Argentina",
+        "Tierra del Fuego AIAS"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:45:51.572Z",
-      "lastSeenAt": "2026-07-08T15:45:51.572Z",
+      "firstSeenAt": "2026-07-09T16:04:52.310Z",
+      "lastSeenAt": "2026-07-09T16:04:52.310Z",
       "sourceCount": 1,
-      "independentPublisherCount": 0,
+      "independentPublisherCount": 1,
       "sourceTiers": [
-        "A"
+        "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 8,
       "localRelevanceScore": 25,
       "serviceValueScore": 3,
@@ -2400,12 +2524,12 @@
         "serviceValue": 3,
         "socialPotential": 15,
         "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 8,
+        "recency": 9,
+        "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 76,
-      "status": "verified",
+      "newsworthinessScore": 75,
+      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -2596,156 +2720,69 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|banco central la|banco central|banco|milei|julie kozack|buenos aires|argentina|informa|12 09 900",
-      "headlineSeed": "El FMI elogió el plan financiero del gobierno de Milei y la reforma del Banco Central",
+      "storyId": "international-conflict|gobierno|gobierno de tierra de|hms medway|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-09",
+      "headlineSeed": "Tierra del Fuego repudió el paso de un buque británico - El Rompehielos",
       "topic": "politica",
       "subtopic": "politica",
-      "territory": "Nacionales",
+      "territory": "Malvinas",
       "primaryEntities": [
-        "Milei",
-        "Julie Kozack",
-        "Banco Central La",
-        "Banco Central",
-        "Banco",
-        "Banco Central de la República Argentina",
+        "HMS Medway",
         "Gobierno",
-        "ANSES",
-        "Buenos Aires",
+        "Gobierno de Tierra de",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Antartida",
+        "Atlantico Sur",
+        "Tierra del Fuego AIAS",
         "Argentina"
       ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|policia de|fiscalia|policia del chaco|axel gonzalez|maria gomez|informa|9 de julio",
-      "headlineSeed": "La madre de Axel González buscó a Zdero y apuntó contra la \"corrupción policial\": “Tiene que limpiar la mugre”",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Axel González",
-        "María Gómez",
-        "Policía de",
-        "Fiscalía",
-        "Policía Del Chaco",
-        "Policía"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-09T16:51:37.970Z",
-      "lastSeenAt": "2026-07-09T16:51:37.970Z",
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-09T22:47:39.959Z",
+      "lastSeenAt": "2026-07-10T17:51:03.674Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
+        "publicInterest": 17,
+        "localRelevance": 22,
         "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
+        "searchPotential": 8,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 74,
+      "newsworthinessScore": 73,
       "status": "pending-verification",
       "validationReasons": []
     },
     {
-      "storyId": "election|sindicato de petroleros y gas privado|gobierno|ministerio de economia|milei|argentina|egipto|informa|02 11 900",
-      "headlineSeed": "La CGT, entre su pelea contra Milei y una interna que no se apaga",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Sindicato de Petroleros y Gas Privado",
-        "Gobierno",
-        "Ministerio de Economía",
-        "Argentina",
-        "Egipto"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-09T16:51:37.970Z",
-      "lastSeenAt": "2026-07-09T16:51:37.970Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "election|banco central de brasil|panorama internacional|lula cuando|internacional|brasil|venezuela|informa|2026-07-10",
-      "headlineSeed": "Panorama Internacional: Brasil, la guerra fría de juguete de los Bolsonaro contra Lula",
+      "storyId": "election|universidad de brasilia|ministerio de defensa de brasil y|ricardo lobato|argentina|brasil|informa|2026-07-10",
+      "headlineSeed": "Sociólogo brasileño atribuye el fin del jogo bonito a que 14 de los 22 jugadores son evangélicos",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Panorama Internacional",
-        "Lula Cuando",
-        "Banco Central de Brasil",
-        "Internacional",
+        "Ricardo Lobato",
+        "Universidad de Brasilia",
+        "Ministerio de Defensa de Brasil y",
+        "Argentina",
         "Brasil",
-        "Venezuela",
-        "Estados Unidos"
+        "Italia"
       ],
       "eventType": "election",
-      "firstSeenAt": "2026-07-10T10:58:50.122Z",
-      "lastSeenAt": "2026-07-10T10:58:50.122Z",
+      "firstSeenAt": "2026-07-10T17:51:03.673Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -2859,6 +2896,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|objetos|rio grande noticias|rio grande|rio grande|informa|julio",
+      "headlineSeed": "“Objetos de nuestra historia”: recorré una muestra que pone en valor el patrimonio de Río Grande",
+      "topic": "cultura",
+      "subtopic": "cultura",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Objetos",
+        "Río Grande Noticias",
+        "Río Grande"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:45:51.572Z",
+      "lastSeenAt": "2026-07-08T15:45:51.572Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|banco nacion|gobierno|informa|2026-07-10",
       "headlineSeed": "El dólar en Córdoba: a cuánto cotiza este viernes 10 de julio",
       "topic": "economia",
@@ -2898,43 +2975,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|mexico|adolescentes|jalisco|familiares|argentina|informa|30 de junio",
-      "headlineSeed": "Adolescentes de secundaria reportados como desaparecidos regresan a casa en Jalisco: acudieron a “trabajar a la sierra”",
-      "topic": "policiales",
-      "subtopic": "policiales",
+      "storyId": "election|banco central la|banco central|banco|milei|julie kozack|buenos aires|argentina|informa|12 09 900",
+      "headlineSeed": "El FMI elogió el plan financiero del gobierno de Milei y la reforma del Banco Central",
+      "topic": "politica",
+      "subtopic": "politica",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Adolescentes",
-        "Jalisco",
-        "Familiares",
-        "Justhin",
-        "Jordan",
-        "Christopher",
-        "Mexico",
+        "Milei",
+        "Julie Kozack",
+        "Banco Central La",
+        "Banco Central",
+        "Banco",
+        "Banco Central de la República Argentina",
+        "Gobierno",
+        "ANSES",
+        "Buenos Aires",
         "Argentina"
       ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-09T16:04:52.309Z",
-      "lastSeenAt": "2026-07-09T16:04:52.309Z",
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
       "localRelevanceScore": 12,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 20,
+        "publicInterest": 23,
         "localRelevance": 12,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2943,40 +3022,84 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|argentina|garcia cuerva|milei|buenos aires|argentina|informa|9 de julio",
-      "headlineSeed": "Garcia Cuerva muy duro frente a Milei: pidió \"terminar con los agravios y la crueldad\" y llamó a \"ser honestos\"",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
+      "storyId": "crime|policia de|fiscalia|policia del chaco|axel gonzalez|maria gomez|informa|9 de julio",
+      "headlineSeed": "La madre de Axel González buscó a Zdero y apuntó contra la \"corrupción policial\": “Tiene que limpiar la mugre”",
+      "topic": "policiales",
+      "subtopic": "policiales",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Garcia Cuerva",
-        "Milei",
-        "Buenos Aires",
-        "Lionel Messi",
-        "Argentina"
+        "Axel González",
+        "María Gómez",
+        "Policía de",
+        "Fiscalía",
+        "Policía Del Chaco",
+        "Policía"
       ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-09T16:04:52.308Z",
-      "lastSeenAt": "2026-07-09T16:04:52.308Z",
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-09T16:51:37.970Z",
+      "lastSeenAt": "2026-07-09T16:51:37.970Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|sindicato de petroleros y gas privado|gobierno|ministerio de economia|milei|argentina|egipto|informa|02 11 900",
+      "headlineSeed": "La CGT, entre su pelea contra Milei y una interna que no se apaga",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Sindicato de Petroleros y Gas Privado",
+        "Gobierno",
+        "Ministerio de Economía",
+        "Argentina",
+        "Egipto"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T16:51:37.970Z",
+      "lastSeenAt": "2026-07-09T16:51:37.970Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
       "localRelevanceScore": 12,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 20,
+        "publicInterest": 23,
         "localRelevance": 12,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -3024,53 +3147,6 @@
       },
       "newsworthinessScore": 71,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|07 de julio",
-      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Alerta",
-        "Ushuaia",
-        "Patagonia",
-        "Sismo",
-        "Pasaje Drake",
-        "No",
-        "Monitoreo",
-        "Argentina",
-        "Egipto",
-        "Rio Grande"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-08T15:28:59.147Z",
-      "lastSeenAt": "2026-07-09T14:44:24.831Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -3164,6 +3240,50 @@
         "diversity": 4
       },
       "newsworthinessScore": 70,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|banco central de brasil|panorama internacional|lula cuando|internacional|brasil|venezuela|informa|2026-07-10",
+      "headlineSeed": "Panorama Internacional: Brasil, la guerra fría de juguete de los Bolsonaro contra Lula",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Panorama Internacional",
+        "Lula Cuando",
+        "Banco Central de Brasil",
+        "Internacional",
+        "Brasil",
+        "Venezuela",
+        "Estados Unidos"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-10T10:58:50.122Z",
+      "lastSeenAt": "2026-07-10T10:58:50.122Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -3285,6 +3405,93 @@
         "socialPotential": 4,
         "searchPotential": 10,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 68,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|mexico|adolescentes|jalisco|familiares|argentina|informa|30 de junio",
+      "headlineSeed": "Adolescentes de secundaria reportados como desaparecidos regresan a casa en Jalisco: acudieron a “trabajar a la sierra”",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Adolescentes",
+        "Jalisco",
+        "Familiares",
+        "Justhin",
+        "Jordan",
+        "Christopher",
+        "Mexico",
+        "Argentina"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-09T16:04:52.309Z",
+      "lastSeenAt": "2026-07-09T16:04:52.309Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 68,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|argentina|garcia cuerva|milei|buenos aires|argentina|informa|9 de julio",
+      "headlineSeed": "Garcia Cuerva muy duro frente a Milei: pidió \"terminar con los agravios y la crueldad\" y llamó a \"ser honestos\"",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Garcia Cuerva",
+        "Milei",
+        "Buenos Aires",
+        "Lionel Messi",
+        "Argentina"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-09T16:04:52.308Z",
+      "lastSeenAt": "2026-07-09T16:04:52.308Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -3573,10 +3780,10 @@
       ]
     },
     {
-      "storyId": "general|argentina|egipto|alerta|ushuaia|patagonia|rio grande|ushuaia|informa|07 de julio",
+      "storyId": "sports-result|argentina|07 de julio",
       "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
+      "topic": "deportes",
+      "subtopic": "deportes",
       "territory": "Ushuaia",
       "primaryEntities": [
         "Alerta",
@@ -3590,33 +3797,33 @@
         "Egipto",
         "Rio Grande"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:04:52.308Z",
-      "lastSeenAt": "2026-07-09T16:04:52.308Z",
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-08T15:28:59.147Z",
+      "lastSeenAt": "2026-07-09T14:44:24.831Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 8,
       "localRelevanceScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 11,
+      "socialPotentialScore": 15,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
         "publicInterest": 8,
         "localRelevance": 25,
         "serviceValue": 3,
-        "socialPotential": 11,
+        "socialPotential": 15,
         "searchPotential": 8,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 67,
-      "status": "verified-local-routine",
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -3640,53 +3847,6 @@
       "eventType": "general",
       "firstSeenAt": "2026-07-09T00:04:30.691Z",
       "lastSeenAt": "2026-07-09T00:04:30.691Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|la camara|comercio|ushuaia|rio grande|ushuaia|informa|08 de julio de 2026",
-      "headlineSeed": "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "La Cámara",
-        "Comercio",
-        "Ushuaia",
-        "PAIX",
-        "Sur",
-        "Portal",
-        "Antártida",
-        "Tierra",
-        "Argentina",
-        "Rio Grande"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:28:59.146Z",
-      "lastSeenAt": "2026-07-08T17:12:57.824Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -3778,53 +3938,6 @@
       ],
       "eventType": "general",
       "firstSeenAt": "2026-07-08T15:28:59.146Z",
-      "lastSeenAt": "2026-07-08T15:45:51.568Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|la camara|comercio|ushuaia|ushuaia|tolhuin|informa|08 de julio de 2026",
-      "headlineSeed": "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "La Cámara",
-        "Comercio",
-        "Ushuaia",
-        "PAIX",
-        "Sur",
-        "Portal",
-        "Antártida",
-        "Tierra",
-        "Argentina",
-        "Tolhuin"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:45:51.568Z",
       "lastSeenAt": "2026-07-08T15:45:51.568Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
@@ -4033,96 +4146,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|enero de 2025",
-      "headlineSeed": "Abelardo De la Espriella nombra a su futuro canciller para \"reposicionar\" a Colombia como aliado de Estados Unidos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Omar Bula Escobar",
-        "Naciones Unidas",
-        "Gustavo Petro",
-        "Donald Trump",
-        "Internacional",
-        "Ecuador",
-        "Brasil",
-        "Colombia",
-        "Venezuela",
-        "Estados Unidos"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-09T18:54:16.279Z",
-      "lastSeenAt": "2026-07-09T18:54:16.279Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 66,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|reino unido|francia|europa|se|en paris|internacional|informa|junio",
-      "headlineSeed": "Europa vivió el junio más caluroso de su historia y los termómetros vuelven a trepar: Francia se derrite y crece la polémica por el aire acondicionado",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Europa",
-        "Se",
-        "En París",
-        "Reino Unido",
-        "Francia",
-        "Internacional"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-09T16:04:52.308Z",
-      "lastSeenAt": "2026-07-09T16:04:52.308Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 66,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|ganaderas|tierra|fuego piden|tierra del fuego|tierra del fuego aias|informa|2026-07-06",
       "headlineSeed": "Ganaderas demandan al fisco tras incendio atribuido a ejercicio militar en Tierra del Fuego",
       "topic": "economia",
@@ -4293,53 +4316,6 @@
       "validationReasons": [
         "eventtype-risk-confusion"
       ]
-    },
-    {
-      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
-      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Municipalidad de Ushuaia",
-        "Gobierno de Milei y de",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida",
-        "Pasaje Drake",
-        "Atlantico Sur",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T16:51:37.966Z",
-      "lastSeenAt": "2026-07-09T16:51:37.966Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 64,
-      "status": "published",
-      "validationReasons": []
     },
     {
       "storyId": "crime|mexico|estados unidos|ken salazar|claudia sheinbaum|el mayo zambada el|argentina|informa|mayo",
@@ -4645,6 +4621,143 @@
       "validationReasons": []
     },
     {
+      "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|enero de 2025",
+      "headlineSeed": "Abelardo De la Espriella nombra a su futuro canciller para \"reposicionar\" a Colombia como aliado de Estados Unidos",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Omar Bula Escobar",
+        "Naciones Unidas",
+        "Gustavo Petro",
+        "Donald Trump",
+        "Internacional",
+        "Ecuador",
+        "Brasil",
+        "Colombia",
+        "Venezuela",
+        "Estados Unidos"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-09T18:54:16.279Z",
+      "lastSeenAt": "2026-07-09T18:54:16.279Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 63,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|reino unido|francia|europa|se|en paris|internacional|informa|junio",
+      "headlineSeed": "Europa vivió el junio más caluroso de su historia y los termómetros vuelven a trepar: Francia se derrite y crece la polémica por el aire acondicionado",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Europa",
+        "Se",
+        "En París",
+        "Reino Unido",
+        "Francia",
+        "Internacional"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-09T16:04:52.308Z",
+      "lastSeenAt": "2026-07-09T16:04:52.308Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 63,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|egipto|alerta|ushuaia|patagonia|rio grande|ushuaia|informa|07 de julio",
+      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Alerta",
+        "Ushuaia",
+        "Patagonia",
+        "Sismo",
+        "Pasaje Drake",
+        "No",
+        "Monitoreo",
+        "Argentina",
+        "Egipto",
+        "Rio Grande"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T16:04:52.308Z",
+      "lastSeenAt": "2026-07-09T16:04:52.308Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 63,
+      "status": "verified-local-routine",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|venezuela|estados unidos|inglaterra|delcy rodriguez|banco|inglaterra tras|internacional|informa|enero",
       "headlineSeed": "Los terremotos golpean la nueva era económica en Venezuela y Delcy Rodríguez trata de recuperar el oro del Banco de Inglaterra",
       "topic": "politica",
@@ -4733,6 +4846,53 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|argentina|la camara|comercio|ushuaia|rio grande|ushuaia|informa|08 de julio de 2026",
+      "headlineSeed": "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "La Cámara",
+        "Comercio",
+        "Ushuaia",
+        "PAIX",
+        "Sur",
+        "Portal",
+        "Antártida",
+        "Tierra",
+        "Argentina",
+        "Rio Grande"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:28:59.146Z",
+      "lastSeenAt": "2026-07-08T17:12:57.824Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 63,
+      "status": "verified",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|argentina|chile|que|tolhuin|tierra|rio grande|ushuaia|informa|9 de octubre de 1972",
       "headlineSeed": "Qué hacer en Tolhuin, la aldea más joven de Tierra del Fuego rodeada de lagos andinos y bosques de lengas",
       "topic": "sociedad",
@@ -4753,6 +4913,53 @@
       "eventType": "general",
       "firstSeenAt": "2026-07-08T15:28:59.142Z",
       "lastSeenAt": "2026-07-08T15:45:51.569Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 63,
+      "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|la camara|comercio|ushuaia|ushuaia|tolhuin|informa|08 de julio de 2026",
+      "headlineSeed": "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "La Cámara",
+        "Comercio",
+        "Ushuaia",
+        "PAIX",
+        "Sur",
+        "Portal",
+        "Antártida",
+        "Tierra",
+        "Argentina",
+        "Tolhuin"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:45:51.568Z",
+      "lastSeenAt": "2026-07-08T15:45:51.568Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -4823,6 +5030,95 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|argentina|2026-07-10",
+      "headlineSeed": "Yakin sobre arbitraje ante Egipto: No creo que pasase nada, hay que demostrarlo en cancha",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Policía de Ecuador",
+        "Argentina",
+        "Egipto",
+        "Ecuador",
+        "Londres",
+        "Kansas"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-10T17:51:03.673Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|gobierno|justicia la anses|justicia|cristina kirchner|buenos aires|informa|2026-07-10",
+      "headlineSeed": "El Gobierno aplicará dos descuentos a la pensión de $15,6 millones de Cristina Kirchner que ordenó la Justicia",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Cristina Kirchner",
+        "Gobierno",
+        "Justicia La ANSES",
+        "Justicia",
+        "ANSES",
+        "Gobierno y la",
+        "Ministerio de Capital Humano",
+        "El Gobierno",
+        "Buenos Aires"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T17:51:03.673Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 14,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 14,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "agenda|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|07 09 900",
       "headlineSeed": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
       "topic": "agenda",
@@ -4845,7 +5141,7 @@
         "B"
       ],
       "editorialLane": "fast",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 12,
       "localRelevanceScore": 12,
       "serviceValueScore": 20,
@@ -4857,7 +5153,7 @@
         "serviceValue": 20,
         "socialPotential": 12,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -4866,48 +5162,50 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|espana|octubre",
-      "headlineSeed": "Mazón a Catalá a las 23:20 del 29O: \"Vale. Es horrible. Va a haber muchos muertos. Decenas seguro ya\"",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
+      "storyId": "general|municipalidad de ushuaia|gobierno de milei y de|rio grande|ushuaia|argentina|inglaterra|informa|07 de julio",
+      "headlineSeed": "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
       "primaryEntities": [
-        "Mazón",
-        "Catalá",
-        "Vale",
-        "Es",
-        "Va",
-        "Decenas",
-        "Espana",
-        "Argentina"
+        "Municipalidad de Ushuaia",
+        "Gobierno de Milei y de",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Pasaje Drake",
+        "Atlantico Sur",
+        "Argentina",
+        "Inglaterra"
       ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T16:04:52.309Z",
-      "lastSeenAt": "2026-07-09T16:04:52.309Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-09T16:51:37.966Z",
+      "lastSeenAt": "2026-07-09T16:51:37.966Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
+      "editorialLane": "fast",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 8,
-      "localRelevanceScore": 12,
+      "localRelevanceScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
         "publicInterest": 8,
-        "localRelevance": 12,
+        "localRelevance": 25,
         "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 60,
-      "status": "pending-verification",
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -4946,50 +5244,6 @@
         "socialPotential": 12,
         "searchPotential": 15,
         "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|chile|tierra|fuego el|fuego|tierra del fuego|argentina|informa|7 de julio de 2026",
-      "headlineSeed": "El ambicioso túnel submarino que impulsan en Chile y reducirá a 7 minutos el cruce con Tierra del Fuego",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego\nEl",
-        "Fuego",
-        "Argentina",
-        "Chile",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-08T15:28:59.144Z",
-      "lastSeenAt": "2026-07-08T15:45:51.570Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -5252,26 +5506,30 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|chile|mayo",
-      "headlineSeed": "Pollo con brócoli estilo oriental: la receta fácil, saludable y llena de sabor para cualquier día",
+      "storyId": "sports-result|espana|octubre",
+      "headlineSeed": "Mazón a Catalá a las 23:20 del 29O: \"Vale. Es horrible. Va a haber muchos muertos. Decenas seguro ya\"",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Pollo",
-        "Chile",
-        "Mexico",
+        "Mazón",
+        "Catalá",
+        "Vale",
+        "Es",
+        "Va",
+        "Decenas",
+        "Espana",
         "Argentina"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T13:46:16.066Z",
-      "lastSeenAt": "2026-07-09T13:46:16.066Z",
+      "firstSeenAt": "2026-07-09T16:04:52.309Z",
+      "lastSeenAt": "2026-07-09T16:04:52.309Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
+      "editorialLane": "strict",
       "freshness": "recent-hard-news",
       "publicInterestScore": 8,
       "localRelevanceScore": 12,
@@ -5293,19 +5551,15 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|brasil|8 de julio",
-      "headlineSeed": "Sorteo de La Tinka del miércoles 8 de julio: conoce la jugada ganadora y de cuanto es el pozo millonario",
+      "storyId": "sports-result|chile|mayo",
+      "headlineSeed": "Pollo con brócoli estilo oriental: la receta fácil, saludable y llena de sabor para cualquier día",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Sorteo",
-        "La Tinka",
-        "Revisa",
-        "Sí",
-        "Boliyapa",
-        "Brasil",
-        "Peru",
+        "Pollo",
+        "Chile",
+        "Mexico",
         "Argentina"
       ],
       "eventType": "sports-result",
@@ -5430,6 +5684,135 @@
       "validationReasons": [
         "eventtype-risk-confusion"
       ]
+    },
+    {
+      "storyId": "general|argentina|chile|tierra|fuego el|fuego|tierra del fuego|argentina|informa|7 de julio de 2026",
+      "headlineSeed": "El ambicioso túnel submarino que impulsan en Chile y reducirá a 7 minutos el cruce con Tierra del Fuego",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Tierra",
+        "Fuego\nEl",
+        "Fuego",
+        "Argentina",
+        "Chile",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-08T15:28:59.144Z",
+      "lastSeenAt": "2026-07-08T15:45:51.570Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 56,
+      "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|meghan markle|paris|londres|estados unidos|reino unido|informa|2026-07-10",
+      "headlineSeed": "Meghan Markle llegó al Reino Unido con sus hijos y crece la expectativa por un esperado encuentro con el rey",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Meghan Markle",
+        "Paris",
+        "Londres",
+        "Internacional",
+        "Estados Unidos",
+        "Reino Unido",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-10T17:51:03.672Z",
+      "lastSeenAt": "2026-07-10T17:51:03.672Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|internacional|estados unidos|espana|informa|2026-07-10",
+      "headlineSeed": "Tragedia en Almería: el dramático pedido de una madre y los vecinos que desoyeron las advertencias",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos",
+        "Espana"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-10T17:51:03.672Z",
+      "lastSeenAt": "2026-07-10T17:51:03.672Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "pending-verification",
+      "validationReasons": []
     },
     {
       "storyId": "crime|informa|2026-07-10",
@@ -5618,7 +6001,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 17,
       "localRelevanceScore": 7,
       "serviceValueScore": 15,
@@ -5630,7 +6013,7 @@
         "serviceValue": 15,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -5721,6 +6104,51 @@
         "diversity": 4
       },
       "newsworthinessScore": 54,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|brasil|8 de julio",
+      "headlineSeed": "Sorteo de La Tinka del miércoles 8 de julio: conoce la jugada ganadora y de cuanto es el pozo millonario",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Sorteo",
+        "La Tinka",
+        "Revisa",
+        "Sí",
+        "Boliyapa",
+        "Brasil",
+        "Peru",
+        "Argentina"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T13:46:16.066Z",
+      "lastSeenAt": "2026-07-09T13:46:16.066Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 53,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -5857,6 +6285,49 @@
         "diversity": 4
       },
       "newsworthinessScore": 53,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|policia de ecuador|karim adeyemi|londres|ecuador|mexico|informa|2026-07-10",
+      "headlineSeed": "El Barcelona ultima el fichaje del delantero alemán Karim Adeyemi",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Karim Adeyemi",
+        "Policía de Ecuador",
+        "Londres",
+        "Ecuador",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T17:51:03.673Z",
+      "lastSeenAt": "2026-07-10T17:51:03.673Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 52,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -6079,41 +6550,43 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|inglaterra|07 09 900",
-      "headlineSeed": "Mitos caídos: la verdad detrás de las misteriosas \"marcas de brujas\" en los edificios antiguos de Inglaterra",
-      "topic": "deportes",
-      "subtopic": "deportes",
+      "storyId": "general|policia nacional de indonesia|ministerio de medio ambiente de indonesia|camara de representantes|internacional|informa|2026-07-10",
+      "headlineSeed": "Un basurero en Indonesia se incendió hace más de una semana y sigue ardiendo",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
       "territory": "Mundo",
       "primaryEntities": [
-        "Universidad de Warwick y",
-        "Inglaterra"
+        "Policía Nacional de Indonesia",
+        "Ministerio de Medio Ambiente de Indonesia",
+        "Cámara de Representantes",
+        "Internacional"
       ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T18:54:16.281Z",
-      "lastSeenAt": "2026-07-09T18:54:16.281Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T17:51:03.672Z",
+      "lastSeenAt": "2026-07-10T17:51:03.672Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
+      "freshness": "breaking",
+      "publicInterestScore": 11,
       "localRelevanceScore": 7,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 7,
         "serviceValue": 3,
-        "socialPotential": 12,
+        "socialPotential": 4,
         "searchPotential": 10,
-        "recency": 12,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 51,
+      "newsworthinessScore": 49,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -6286,81 +6759,37 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|francia|2026-07-09",
-      "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
+      "storyId": "sports-result|inglaterra|07 09 900",
+      "headlineSeed": "Mitos caídos: la verdad detrás de las misteriosas \"marcas de brujas\" en los edificios antiguos de Inglaterra",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Mundo",
       "primaryEntities": [
-        "Francia Con",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
+        "Universidad de Warwick y",
+        "Inglaterra"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T16:58:55.113Z",
-      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "firstSeenAt": "2026-07-09T18:54:16.281Z",
+      "lastSeenAt": "2026-07-09T18:54:16.281Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 8,
       "localRelevanceScore": 7,
       "serviceValueScore": 3,
       "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 8,
         "localRelevance": 7,
         "serviceValue": 3,
         "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 48,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|francia|5 de julio de 2026",
-      "headlineSeed": "FIFA da fuerte castigo Jarell Quansah tras la roja contra México en el Mundial 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Jarell Quansah",
-        "Jesús Gallardo",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T16:51:37.967Z",
-      "lastSeenAt": "2026-07-09T16:51:37.967Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -6878,50 +7307,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|fiscalia anticorrupcion|ministerio fiscal|gobierno de pedro sanchez|italia|espana|informa|2026-07-10",
-      "headlineSeed": "Anticorrupción pide imputar al exjefe de gabinete de Sánchez y el volcado de su móvil por su presunta implicación en el caso Leire",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Fiscalía Anticorrupción",
-        "Ministerio Fiscal",
-        "Gobierno de Pedro Sánchez",
-        "Ministerio de",
-        "Gobierno",
-        "Italia",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-10T10:58:50.122Z",
-      "lastSeenAt": "2026-07-10T10:58:50.122Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 46,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|ministerio de la mujer y poblaciones|ministerio publico|municipalidad distrital de pueblo nuevo|peru|informa|2026-07-10",
       "headlineSeed": "¿Ganaste? Revisa los resultados de La Kábala del jueves 9 de julio",
       "topic": "sociedad",
@@ -7046,56 +7431,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "high-risk|peru|colombia|mexico|francia|alemania|declaran|zaporiyia|moscu declaran|argentina|informa|9 de julio de 2026",
-      "headlineSeed": "Declaran \"emergencia\" en parte de la región de Zaporiyia controlada por Moscú",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Declaran",
-        "Zaporiyia",
-        "Moscú Declaran",
-        "Moscú",
-        "Peru",
-        "Colombia",
-        "Mexico",
-        "Francia",
-        "Alemania",
-        "Argentina"
-      ],
-      "eventType": "high-risk",
-      "firstSeenAt": "2026-07-09T16:04:52.309Z",
-      "lastSeenAt": "2026-07-09T16:04:52.309Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 46,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "eventtype-risk-confusion"
-      ]
-    },
-    {
       "storyId": "sports-result|argentina|29 de octubre de 2001",
       "headlineSeed": "El emotivo encuentro del influencer Alonso con Pablo Aimar tras el triunfo de Argentina ante Egipto: “Lloré todo”",
       "topic": "deportes",
@@ -7132,6 +7467,89 @@
       },
       "newsworthinessScore": 45,
       "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|francia|2026-07-09",
+      "headlineSeed": "Isaac del Toro finaliza en tercera posición dentro de la Etapa 6 del Tour de Francia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Francia Con",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T16:58:55.113Z",
+      "lastSeenAt": "2026-07-09T16:58:55.113Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 45,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|francia|5 de julio de 2026",
+      "headlineSeed": "FIFA da fuerte castigo Jarell Quansah tras la roja contra México en el Mundial 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Jarell Quansah",
+        "Jesús Gallardo",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-09T16:51:37.967Z",
+      "lastSeenAt": "2026-07-09T16:51:37.967Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 45,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -7320,6 +7738,50 @@
       ]
     },
     {
+      "storyId": "general|fiscalia anticorrupcion|ministerio fiscal|gobierno de pedro sanchez|italia|espana|informa|2026-07-10",
+      "headlineSeed": "Anticorrupción pide imputar al exjefe de gabinete de Sánchez y el volcado de su móvil por su presunta implicación en el caso Leire",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Fiscalía Anticorrupción",
+        "Ministerio Fiscal",
+        "Gobierno de Pedro Sánchez",
+        "Ministerio de",
+        "Gobierno",
+        "Italia",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-10T10:58:50.122Z",
+      "lastSeenAt": "2026-07-10T10:58:50.122Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 43,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|aldon yldefonso|peru|denuncia|2026-07-10",
       "headlineSeed": "Escándalo en EsSalud: denuncian a gerente general por peculado de uso al usar vehículo oficial para trasladar a su hijo",
       "topic": "sociedad",
@@ -7357,6 +7819,56 @@
       "newsworthinessScore": 43,
       "status": "pending-verification",
       "validationReasons": []
+    },
+    {
+      "storyId": "high-risk|peru|colombia|mexico|francia|alemania|declaran|zaporiyia|moscu declaran|argentina|informa|9 de julio de 2026",
+      "headlineSeed": "Declaran \"emergencia\" en parte de la región de Zaporiyia controlada por Moscú",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Declaran",
+        "Zaporiyia",
+        "Moscú Declaran",
+        "Moscú",
+        "Peru",
+        "Colombia",
+        "Mexico",
+        "Francia",
+        "Alemania",
+        "Argentina"
+      ],
+      "eventType": "high-risk",
+      "firstSeenAt": "2026-07-09T16:04:52.309Z",
+      "lastSeenAt": "2026-07-09T16:04:52.309Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 43,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "eventtype-risk-confusion"
+      ]
     },
     {
       "storyId": "general|colombia|venezuela|estados unidos|espana|la guaira|internacional|informa|mayo",
