@@ -1,104 +1,60 @@
 {
-  "generatedAt": "2026-07-10T03:36:54.866Z",
+  "generatedAt": "2026-07-10T07:39:58.235Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29067138880",
-    "headSha": "66e4f2c0df691d97bc9e020303c6ea17db30c209"
+    "runId": "29077277566",
+    "headSha": "ede9d1bcc0e054175b3f179c2d914f69152a8dc7"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 30,
-    "discardedDuplicate": 7,
-    "discardedQuality": 16,
+    "candidatesDetected": 21,
+    "discardedDuplicate": 4,
+    "discardedQuality": 8,
     "discardedQualityByReason": {
-      "stale-dated-discovery": 8,
-      "evergreen-or-stale-outside-news-window": 3,
+      "stale-hard-news": 4,
+      "stale-dated-discovery": 2,
       "listing-url": 1,
-      "stale-hard-news": 4
+      "evergreen-or-stale-outside-news-window": 1
     },
     "discardedBySourceAndReason": {
-      "bing-malvinas": {
-        "stale-dated-discovery": 2
-      },
-      "bing-tolhuin": {
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "bing-rio-grande": {
-        "stale-dated-discovery": 2,
-        "evergreen-or-stale-outside-news-window": 1
+      "bing-ushuaia": {
+        "stale-hard-news": 1
       },
       "mundo-bing": {
         "stale-dated-discovery": 1,
-        "listing-url": 1,
-        "stale-hard-news": 1
+        "stale-hard-news": 1,
+        "listing-url": 1
       },
-      "bing-tdf": {
-        "stale-hard-news": 3,
-        "evergreen-or-stale-outside-news-window": 1
+      "actualidad-tdf": {
+        "stale-hard-news": 2
       },
-      "bing-antartida": {
-        "stale-dated-discovery": 3
+      "bing-rio-grande": {
+        "evergreen-or-stale-outside-news-window": 1,
+        "stale-dated-discovery": 1
       }
     },
     "discardedGenericTitle": 1,
-    "discardedEvergreen": 11,
-    "eventsGrouped": 6,
-    "verified": 1,
-    "pendingVerification": 5,
+    "discardedEvergreen": 3,
+    "eventsGrouped": 8,
+    "verified": 0,
+    "pendingVerification": 8,
     "pendingMatchedFromHistory": 0,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "conflicting": 0,
-    "published": 1,
-    "publishedByLane": {
-      "strict": 1
-    },
-    "verifiedByLane": {
-      "strict": 1
-    },
+    "published": 0,
+    "publishedByLane": {},
+    "verifiedByLane": {},
     "pendingByLane": {
-      "standard": 1,
-      "strict": 3,
-      "fast": 1
+      "standard": 4,
+      "strict": 4
     },
-    "fastPendingAudit": [
-      {
-        "eventKey": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|2026-07-07",
-        "title": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
-        "sourceId": "bing-tolhuin",
-        "publisherDomain": "sur54.com",
-        "tier": "B",
-        "competence": [
-          "municipal",
-          "provincial"
-        ],
-        "territory": "Tolhuin",
-        "topic": "deportes",
-        "eventType": "agenda",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      }
-    ],
-    "freshCandidates": 14,
-    "staleDiscarded": 15,
+    "fastPendingAudit": [],
+    "freshCandidates": 13,
+    "staleDiscarded": 7,
     "sourceHealth": {
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
       "tolhuin-oficial": {
         "detected": 4,
         "materialized": 0,
@@ -113,16 +69,44 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "el-rompehielos": {
+      "bing-rio-grande": {
         "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "materialized": 4,
+        "freshCandidates": 2,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.5
+      },
+      "bing-ushuaia": {
+        "detected": 4,
+        "materialized": 4,
+        "freshCandidates": 3,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.75,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.25
+      },
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -141,6 +125,20 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
       "mundo-google": {
         "detected": 3,
         "materialized": 1,
@@ -154,90 +152,6 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
-      },
-      "bing-malvinas": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 1,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "bing-tdf": {
-        "detected": 5,
-        "materialized": 5,
-        "freshCandidates": 1,
-        "qualityDiscarded": 4,
-        "staleDiscarded": 4,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.2,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.8
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-tolhuin": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 1,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 3,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.75
-      },
-      "bing-antartida": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 3,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 1
       },
       "mundo-bing": {
         "detected": 3,
@@ -253,18 +167,18 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.67
       },
-      "bing-ushuaia": {
+      "el-rompehielos": {
         "detected": 4,
-        "materialized": 4,
-        "freshCandidates": 4,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.25,
-        "publicationContributionRate": 0.25,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 0.25,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "gobierno-tdf-oficial": {
@@ -283,17 +197,17 @@
       },
       "actualidad-tdf": {
         "detected": 4,
-        "materialized": 0,
+        "materialized": 2,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.5
       },
       "rio-grande-oficial": {
         "detected": 4,
@@ -311,8 +225,7 @@
       }
     },
     "sourceDeprioritized": [
-      "bing-tdf",
-      "bing-antartida"
+      "bing-rio-grande"
     ],
     "drafts": 0,
     "modelErrors": 0,
@@ -323,72 +236,53 @@
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 1,
-    "aiCalls": 1,
-    "imageSelections": [
-      {
-        "title": "Inauguración del vuelo San Pablo-Ushuaia potencia el turismo en Tierra del Fuego",
-        "strategy": "article-og",
-        "query": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-        "score": 82,
-        "source": "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/66/2676696_0e7ff0bbc8782f7fac52945e314ac7613dd3392e2c84c270a91da240aaff3ed8/sm.jpg"
-      }
-    ],
-    "agendaStories": 159,
-    "newsworthinessAverage": 100,
-    "newsworthinessTop": [
-      {
-        "title": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-        "eventKey": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|2026-07-09",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "strict"
-      }
-    ],
+    "aiAttempts": 0,
+    "aiCalls": 0,
+    "imageSelections": [],
+    "agendaStories": 162,
+    "newsworthinessAverage": 0,
+    "newsworthinessTop": [],
     "corroborationSearches": 3,
-    "corroborationFound": 1,
-    "corroborationVerified": 1,
+    "corroborationFound": 0,
+    "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 2,
+    "corroborationNoResult": 3,
     "corroborationAttempts": [
       {
-        "eventKey": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|2026-07-09",
-        "title": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
+        "eventKey": "service|justicia de tucuman|policia de tucuman|justicia|espana|investiga|2026-07-10",
+        "title": "“Maté a mi hermana”: investigan a un hombre que le habría confesado un crimen a su hijo en Tucumán",
         "priorityRank": 1,
-        "corroborationQuery": "San Pablo Destino Fin Instituto Fueguino Gobierno de Tierra de Gobierno Rio Grande Ushuaia brasil destino fortaleciendo inauguro mundo pablo",
-        "corroborationReason": "newsworthiness=100; freshness=12h; territory=Ushuaia; impact=15; corroborability=10; pendingAge=12h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-strict"
-      },
-      {
-        "eventKey": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|2026-07-07",
-        "title": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
-        "priorityRank": 2,
-        "corroborationQuery": "Dirección Provincial Desarrollo Deportivo Gobierno Secretaría de Deportes de la Municipio Rio Grande Ushuaia competencias deporte jornada llevo portal",
-        "corroborationReason": "newsworthiness=81; freshness=1h; territory=Tolhuin; impact=6; corroborability=10; pendingAge=1h; attempts=0",
+        "corroborationQuery": "Justicia de Tucumán Policía de Tucumán Justicia Ministerio Público Fiscal Fiscalía confesado crimen habria hermana hombre investigan",
+        "corroborationReason": "newsworthiness=91; freshness=0h; territory=Nacionales; impact=19; corroborability=10; pendingAge=0h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       },
       {
-        "eventKey": "casualty|ministerio publico|fiscalia|estados unidos|informa|2026-07-10",
-        "title": "Renuncia otro abogado defensor del cirujano plástico guatemalteco que ocultó el cadáver de una paciente",
+        "eventKey": "service|gobierno|ministerio de justicia|colombia|informa|2026-07-10",
+        "title": "Cédula en Colombia tendrá opciones no binario y transgénero: así será el cambio",
+        "priorityRank": 2,
+        "corroborationQuery": "Gobierno Ministerio de Justicia Colombia binario cambio cedula opciones tendra",
+        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=21; corroborability=10; pendingAge=4h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "crime|espana ocurrio|internacional|estados unidos|espana|informa|2026-07-09",
+        "title": "Ascienden a doce los muertos por un incendio forestal en Almería, España",
         "priorityRank": 3,
-        "corroborationQuery": "Ministerio Público Fiscalía Estados Unidos abogado cadaver cirujano defensor guatemalteco oculto",
-        "corroborationReason": "newsworthiness=66; freshness=0h; territory=Mundo; impact=12; corroborability=10; pendingAge=0h; attempts=0",
+        "corroborationQuery": "España Ocurrió Estados Unidos Espana almeria ascienden forestal incendio muertos",
+        "corroborationReason": "newsworthiness=89; freshness=5h; territory=Mundo; impact=19; corroborability=10; pendingAge=5h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "dates": 1
-    },
+    "conflictsByField": {},
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 7,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 0,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 3,
@@ -422,20 +316,18 @@
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Ushuaia": 1
-    },
-    "publishedLast3hBeforeRun": 1,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 0,
     "publishedLast6hBeforeRun": 2,
-    "publishedLast12hBeforeRun": 5,
-    "publishedLast24hBeforeRun": 7,
-    "hoursSinceLastPublicationBeforeRun": 1.2,
+    "publishedLast12hBeforeRun": 3,
+    "publishedLast24hBeforeRun": 8,
+    "hoursSinceLastPublicationBeforeRun": 4,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 7,
-      "remainingToMin": 5,
-      "slotsRemaining": 9,
+      "publishedLast24hBeforeRun": 8,
+      "remainingToMin": 4,
+      "slotsRemaining": 8,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -455,7 +347,7 @@
           "searchPotential": 13,
           "recency": 12,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -477,24 +369,6 @@
         }
       },
       {
-        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
-        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
-        "topic": "turismo",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "serviceValue": 15,
-          "socialPotential": 15,
-          "searchPotential": 13,
-          "recency": 9,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "general|el centro municipal|salud|noticias|rio grande|informa|abril de 2023",
         "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
         "topic": "salud",
@@ -506,6 +380,24 @@
           "localRelevance": 25,
           "serviceValue": 15,
           "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 5,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|vacaciones|juegoteca municipal|tierra|rio grande|informa|24 de julio",
+        "headlineSeed": "Vacaciones de invierno: la Juegoteca Municipal llega a Tierra de Teatro",
+        "topic": "turismo",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 97,
+        "status": "verified",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "serviceValue": 15,
+          "socialPotential": 15,
           "searchPotential": 13,
           "recency": 5,
           "sourceStrength": 8,
@@ -531,15 +423,15 @@
         }
       }
     ],
-    "agendaInvalidStories": 17,
+    "agendaInvalidStories": 18,
     "technicalSuccess": true,
-    "editorialOutcome": "published"
+    "editorialOutcome": "verification-starved"
   },
   "budget": {
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 1,
+    "discoveryAiUsed": 0,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -548,13 +440,13 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 30,
-    "totalCandidatesBeforeLimit": 30
+    "publishedLast24hBeforeRun": 8,
+    "candidatesMaterialized": 21,
+    "totalCandidatesBeforeLimit": 21
   },
   "reasonNoMorePublished": [
-    "5 evento(s) quedaron pendientes de segunda fuente",
-    "7 candidato(s) descartados por duplicado/similitud",
-    "16 candidato(s) descartados por causas especificas (stale-dated-discovery: 8, evergreen-or-stale-outside-news-window: 3, listing-url: 1, stale-hard-news: 4)"
+    "8 evento(s) quedaron pendientes de segunda fuente",
+    "4 candidato(s) descartados por duplicado/similitud",
+    "8 candidato(s) descartados por causas especificas (stale-hard-news: 4, stale-dated-discovery: 2, listing-url: 1, evergreen-or-stale-outside-news-window: 1)"
   ]
 }
