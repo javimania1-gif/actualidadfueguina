@@ -32,9 +32,6 @@ export function fingerprintOverlap(leftTitle = '', rightTitle = '') {
 
 function inferTerritory({ facts = {}, source = {}, category = '', title = '' } = {}) {
   return inferAgendaTerritory({ facts, source, category, title });
-  if (/\bmundo\b|\binternacional\b|\bir[aá]n\b|\bteher[aá]n\b|\bmosc[uú]\b|\bucrania\b|\brusia\b|\bestados unidos\b|\breino unido\b/.test(text)) return 'Mundo';
-  if (/\bnacionales\b|\bargentina\b|\bmilei\b|\bfmi\b|\bbanco central\b|\bcongreso\b|\bsenado\b|\bdiputados\b/.test(text)) return 'Nacionales';
-  return 'unknown';
 }
 
 function localTermsForTerritory(territory, facts = {}) {
@@ -243,6 +240,50 @@ function mergePendingRecord(target = {}, incoming = {}) {
   target.lastAttemptAt = [target.lastAttemptAt, incoming.lastAttemptAt].filter(Boolean).sort().at(-1) || target.lastAttemptAt || incoming.lastAttemptAt;
   target.expiresAt = [target.expiresAt, incoming.expiresAt].filter(Boolean).sort().at(-1) || target.expiresAt || incoming.expiresAt;
   return target;
+}
+
+export function terminalizeExpiredPendingEvents(records = {}, { now = new Date(), maxAttempts = 4 } = {}) {
+  const nowMs = new Date(now).getTime();
+  let expired = 0;
+  let attemptsExhausted = 0;
+  for (const record of Object.values(records || {})) {
+    if (record.status !== 'pending-verification') continue;
+    const expiresAt = new Date(record.expiresAt || 0).getTime();
+    const exhausted = (Number(record.corroborationAttempts) || 0) >= maxAttempts;
+    const timedOut = Number.isFinite(expiresAt) && expiresAt > 0 && expiresAt <= nowMs;
+    if (!timedOut && !exhausted) continue;
+    record.status = 'rejected-terminal';
+    record.terminalReason = timedOut ? 'pending-verification-expired' : 'corroboration-attempts-exhausted';
+    record.resolvedAt = new Date(nowMs).toISOString();
+    record.nextRetryAt = null;
+    if (timedOut) expired++;
+    else attemptsExhausted++;
+  }
+  return { changed: expired + attemptsExhausted > 0, expired, attemptsExhausted };
+}
+
+export function selectPendingRecoverySources(records = {}, { now = new Date(), max = 4, maxAttempts = 4 } = {}) {
+  const nowMs = new Date(now).getTime();
+  const lanePriority = { fast: 3, standard: 2, strict: 1 };
+  return Object.entries(records || {})
+    .filter(([, record]) => record.status === 'pending-verification')
+    .filter(([, record]) => (Number(record.corroborationAttempts) || 0) < maxAttempts)
+    .filter(([, record]) => !record.expiresAt || new Date(record.expiresAt).getTime() > nowMs)
+    .filter(([, record]) => !record.nextRetryAt || new Date(record.nextRetryAt).getTime() <= nowMs)
+    .map(([eventKey, record]) => ({
+      eventKey,
+      record,
+      sourceRef: (record.sources || [])
+        .filter((source) => source?.url)
+        .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))[0] || null
+    }))
+    .filter((item) => item.sourceRef)
+    .sort((a, b) => {
+      const lane = (lanePriority[b.record.editorialLane] || 0) - (lanePriority[a.record.editorialLane] || 0);
+      if (lane !== 0) return lane;
+      return String(b.record.lastSeenAt || '').localeCompare(String(a.record.lastSeenAt || ''));
+    })
+    .slice(0, Math.max(0, Number(max) || 0));
 }
 
 export function compactEquivalentPendingEvents(records = {}) {

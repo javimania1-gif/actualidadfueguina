@@ -5,7 +5,8 @@ import {
   SOURCE_TIERS,
   countIndependentEditorialSources,
   isSourceCompetentForEvent,
-  isTrustedLocalRoutineSource
+  isTrustedLocalRoutineSource,
+  isTrustedStandardSource
 } from './source-policy.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
 
@@ -119,8 +120,17 @@ const STRICT_LANE_PATTERNS = [
   /\b(eleccion|elecciones|electoral|votos?|escrutinio|convencionales?)\b/,
   /\b(policial|policiales|homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido)\b/,
   /\b(judicial|condena|imputado|denuncia penal|causa judicial|demanda judicial)\b/,
-  /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/
+  /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/,
+  /\b(acusacion|acusaciones|acusan|acusado|corrupcion|fraude|estafa|abuso|acoso)\b/
 ];
+
+const STRICT_SINGLE_SOURCE_EVENT_TYPES = new Set([
+  'casualty',
+  'crime',
+  'election',
+  'international-conflict',
+  'sports-result'
+]);
 
 const STANDARD_LANE_PATTERNS = [
   /\b(politica|gobernador|intendenta?|legislatura|concejo|senado|diputados)\b/,
@@ -891,6 +901,26 @@ export function corroborateEvent({ eventKey, candidates = [] }) {
       editorialLane,
       riskLevel,
       verified: true,
+      conflicts: [],
+      consensusFacts: comparison.consensusFacts,
+      sourceSpecificFacts: comparison.sourceSpecificFacts,
+      conflictingFacts: [],
+      verifiedFacts,
+      ...diagnostics
+    };
+  }
+
+  const hasTrustedStandardSource = editorialLane === EDITORIAL_LANES.STANDARD &&
+    !STRICT_SINGLE_SOURCE_EVENT_TYPES.has(eventType) &&
+    sourceRefs.some(isTrustedStandardSource);
+  if (hasTrustedStandardSource) {
+    return {
+      eventKey,
+      status: 'verified-standard-single-source',
+      editorialLane,
+      riskLevel,
+      verified: true,
+      verificationBasis: 'trusted-tier-b-single-source',
       conflicts: [],
       consensusFacts: comparison.consensusFacts,
       sourceSpecificFacts: comparison.sourceSpecificFacts,

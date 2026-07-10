@@ -38,7 +38,9 @@ import {
   buildCorroborationQuery,
   compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
-  scoreCorroborationPriority
+  scoreCorroborationPriority,
+  selectPendingRecoverySources,
+  terminalizeExpiredPendingEvents
 } from '../lib/corroboration-utils.mjs';
 import { summarizeEditorialLatency } from '../lib/latency-utils.mjs';
 import { selectRescueBackfillCandidates, selectRunnableRescueItems } from '../lib/rescue-utils.mjs';
@@ -711,6 +713,82 @@ test('prioridad de corroboracion favorece pendiente provincial fresco e importan
     now: new Date('2026-07-09T14:00:00Z')
   });
   assert(provincial.score > marginalWorld.score);
+});
+
+test('recuperacion de pending respeta vencimiento, backoff, intentos y limite', () => {
+  const records = {
+    fastDue: {
+      status: 'pending-verification',
+      editorialLane: 'fast',
+      lastSeenAt: '2026-07-10T12:00:00Z',
+      nextRetryAt: '2026-07-10T13:00:00Z',
+      expiresAt: '2026-07-12T13:00:00Z',
+      corroborationAttempts: 1,
+      sources: [{ url: 'https://sur54.com/fast', publisherDomain: 'sur54.com' }]
+    },
+    standardDue: {
+      status: 'pending-verification',
+      editorialLane: 'standard',
+      lastSeenAt: '2026-07-10T13:00:00Z',
+      corroborationAttempts: 2,
+      sources: [{ url: 'https://perfil.com/standard', publisherDomain: 'perfil.com' }]
+    },
+    future: {
+      status: 'pending-verification',
+      editorialLane: 'fast',
+      nextRetryAt: '2026-07-10T16:00:00Z',
+      sources: [{ url: 'https://sur54.com/future' }]
+    },
+    expired: {
+      status: 'pending-verification',
+      editorialLane: 'fast',
+      expiresAt: '2026-07-10T12:00:00Z',
+      sources: [{ url: 'https://sur54.com/expired' }]
+    },
+    exhausted: {
+      status: 'pending-verification',
+      editorialLane: 'standard',
+      corroborationAttempts: 4,
+      sources: [{ url: 'https://perfil.com/exhausted' }]
+    }
+  };
+  const selected = selectPendingRecoverySources(records, {
+    now: new Date('2026-07-10T14:00:00Z'),
+    max: 2,
+    maxAttempts: 4
+  });
+  assert.deepEqual(selected.map((item) => item.eventKey), ['fastDue', 'standardDue']);
+});
+
+test('pending vencido o sin intentos restantes se terminaliza sin verificarlo', () => {
+  const records = {
+    expired: {
+      status: 'pending-verification',
+      expiresAt: '2026-07-10T12:00:00Z',
+      corroborationAttempts: 1,
+      nextRetryAt: '2026-07-10T15:00:00Z'
+    },
+    exhausted: {
+      status: 'pending-verification',
+      expiresAt: '2026-07-12T12:00:00Z',
+      corroborationAttempts: 4,
+      nextRetryAt: '2026-07-10T15:00:00Z'
+    },
+    active: {
+      status: 'pending-verification',
+      expiresAt: '2026-07-12T12:00:00Z',
+      corroborationAttempts: 3
+    }
+  };
+  const result = terminalizeExpiredPendingEvents(records, {
+    now: new Date('2026-07-10T14:00:00Z'),
+    maxAttempts: 4
+  });
+  assert.deepEqual(result, { changed: true, expired: 1, attemptsExhausted: 1 });
+  assert.equal(records.expired.status, 'rejected-terminal');
+  assert.equal(records.expired.terminalReason, 'pending-verification-expired');
+  assert.equal(records.exhausted.terminalReason, 'corroboration-attempts-exhausted');
+  assert.equal(records.active.status, 'pending-verification');
 });
 
 test('pending historico matchea misma historia con titulos distintos', () => {

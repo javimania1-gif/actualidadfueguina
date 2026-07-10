@@ -37,6 +37,39 @@ const GENERIC_PATH_SEGMENTS = new Set([
   'tag'
 ]);
 
+const TRUSTED_LOCAL_DOMAINS = [
+  'actualidadtdf.com.ar',
+  'elrompehielos.com.ar',
+  'radiofueguina.com',
+  'radiouniversidad.com.ar',
+  'sur54.com',
+  'ushuaia24.com.ar'
+];
+
+const TRUSTED_STANDARD_DOMAINS = [
+  ...TRUSTED_LOCAL_DOMAINS,
+  'ambito.com',
+  'apnews.com',
+  'bbc.com',
+  'clarin.com',
+  'cronista.com',
+  'dw.com',
+  'elpais.com',
+  'france24.com',
+  'infobae.com',
+  'lanacion.com.ar',
+  'pagina12.com.ar',
+  'perfil.com',
+  'reuters.com',
+  'telam.com.ar',
+  'tn.com.ar'
+];
+
+function domainMatches(domain = '', allowed = []) {
+  const normalized = String(domain).toLowerCase().replace(/^www\./, '');
+  return allowed.some((item) => normalized === item || normalized.endsWith(`.${item}`));
+}
+
 export function getDomain(urlStr) {
   try {
     return new URL(urlStr).hostname.toLowerCase().replace(/^www\./, '');
@@ -166,16 +199,14 @@ export function isSourceCompetentForEvent(sourceRef = {}, eventType = 'general')
 
 export function isTrustedLocalRoutineSource(sourceRef = {}) {
   if (sourceRef.tier !== SOURCE_TIERS.B) return false;
-  if (/^(bing|google)-/i.test(sourceRef.sourceId || '') || /\b(bing news|google news)\b/i.test(sourceRef.sourceName || '')) {
-    return false;
-  }
-  const text = normalizeText([
-    sourceRef.sourceId,
-    sourceRef.sourceName,
-    sourceRef.publisherDomain,
-    sourceRef.url
-  ].filter(Boolean).join(' '));
-  return /\b(actualidadtdf|elrompehielos|radiofueguina|sur54|fueguina|fueguino|riogrande|rio grande|ushuaia|tolhuin|tdf)\b/.test(text);
+  if (isAggregatorDomain(sourceRef.url) || !sourceRef.publisherDomain) return false;
+  return domainMatches(sourceRef.publisherDomain, TRUSTED_LOCAL_DOMAINS);
+}
+
+export function isTrustedStandardSource(sourceRef = {}) {
+  if (sourceRef.tier !== SOURCE_TIERS.B) return false;
+  if (isAggregatorDomain(sourceRef.url) || !sourceRef.publisherDomain) return false;
+  return domainMatches(sourceRef.publisherDomain, TRUSTED_STANDARD_DOMAINS);
 }
 
 export function validateArticleSource({ article = {}, item = {}, source = {}, finalUrl = '' }) {

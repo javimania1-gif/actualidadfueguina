@@ -59,7 +59,9 @@ import {
   compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
   isCompatibleCorroboration,
-  scoreCorroborationPriority
+  scoreCorroborationPriority,
+  selectPendingRecoverySources,
+  terminalizeExpiredPendingEvents
 } from './lib/corroboration-utils.mjs';
 import { summarizeEditorialLatency } from './lib/latency-utils.mjs';
 import { loadRescueQueue, saveRescueQueue, selectRunnableRescueItems } from './lib/rescue-utils.mjs';
@@ -89,6 +91,8 @@ const MAX_CORROBORATION_SEARCHES = Number(process.env.AF_MAX_CORROBORATION_SEARC
 const MAX_CORROBORATION_ITEMS_PER_SEARCH = Number(process.env.AF_CORROBORATION_ITEMS_PER_SEARCH || 3);
 const MAX_RETRY_ATTEMPTS = Number(process.env.AF_MAX_RETRY_ATTEMPTS || 3);
 const MAX_RESCUE_PER_RUN = Number(process.env.AF_MAX_RESCUE_PER_RUN || 4);
+const MAX_PENDING_RECOVERY_PER_RUN = Number(process.env.AF_MAX_PENDING_RECOVERY_PER_RUN || 4);
+const MAX_PENDING_CORROBORATION_ATTEMPTS = Number(process.env.AF_MAX_PENDING_CORROBORATION_ATTEMPTS || 4);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
 const PERSIST_OUTPUTS =
@@ -113,6 +117,7 @@ const metrics = {
   candidatesDetected: 0,
   candidatesIngested: 0,
   extractionSucceeded: 0,
+  candidatesApproved: 0,
   discardedDuplicate: 0,
   duplicateExactUrl: 0,
   duplicateExactContent: 0,
@@ -128,6 +133,10 @@ const metrics = {
   pendingMatchedFromHistory: 0,
   pendingEventsCompacted: 0,
   pendingCompactionVerified: 0,
+  pendingRecoveryAttempted: 0,
+  pendingTerminalizedExpired: 0,
+  pendingTerminalizedAttempts: 0,
+  pendingAudit: [],
   conflicting: 0,
   published: 0,
   publishedByLane: {},
@@ -162,6 +171,9 @@ const metrics = {
   imageErrors: 0,
   aiAttempts: 0,
   aiCalls: 0,
+  articlesDrafted: 0,
+  imagesResolved: 0,
+  approvedForPublication: 0,
   imageSelections: [],
   agendaStories: 0,
   newsworthinessAverage: 0,
@@ -205,6 +217,11 @@ metrics.pendingCompactionVerified = pendingCompaction.verified;
 if (pendingCompaction.changed) {
   console.log(`Pendientes equivalentes compactados: ${pendingCompaction.merged}; verificados tras compactacion: ${pendingCompaction.verified}`);
 }
+const pendingTerminalization = terminalizeExpiredPendingEvents(events.events || {}, {
+  maxAttempts: MAX_PENDING_CORROBORATION_ATTEMPTS
+});
+metrics.pendingTerminalizedExpired = pendingTerminalization.expired;
+metrics.pendingTerminalizedAttempts = pendingTerminalization.attemptsExhausted;
 
 function recordQualityDiscard(reason, { evergreen = false, sourceId = '' } = {}) {
   metrics.discardedQuality++;
@@ -527,6 +544,39 @@ console.log(`\n=== FASE A: Recolección global de ${config.sources.length} fuent
 
 const allCandidates = []; // { source, item, initialKey }
 const runDiscoveryUrls = new Set();
+const pendingRecoveryItems = selectPendingRecoverySources(events.events || {}, {
+  max: MAX_PENDING_RECOVERY_PER_RUN,
+  maxAttempts: MAX_PENDING_CORROBORATION_ATTEMPTS
+});
+
+for (const pendingItem of pendingRecoveryItems) {
+  const sourceRef = pendingItem.sourceRef;
+  const source = config.sources.find((item) => item.id === sourceRef.sourceId) || {
+    id: sourceRef.sourceId || 'pending-recovery',
+    name: sourceRef.sourceName || sourceRef.publisherDomain || 'Recuperacion de pending',
+    mode: sourceRef.sourceMode || 'discovery-draft',
+    defaultCategory: 'Provincia'
+  };
+  const canonicalDiscoveryUrl = canonicalizeNewsUrl(sourceRef.url);
+  if (!canonicalDiscoveryUrl || runDiscoveryUrls.has(canonicalDiscoveryUrl)) continue;
+  runDiscoveryUrls.add(canonicalDiscoveryUrl);
+  allCandidates.push({
+    source,
+    item: {
+      link: sourceRef.url,
+      title: sourceRef.title || pendingItem.record.factsBySource?.[0]?.facts?.title || '',
+      pubDate: sourceRef.publishedAt || '',
+      description: ''
+    },
+    initialKey: hash(canonicalDiscoveryUrl),
+    legacyKey: hash(sourceRef.originalUrl || sourceRef.url),
+    fetchUrl: unwrapDiscoveryUrl(sourceRef.url),
+    canonicalDiscoveryUrl,
+    pendingRecoveryEventKey: pendingItem.eventKey
+  });
+  metrics.pendingRecoveryAttempted++;
+}
+
 const runnableRescueItems = selectRunnableRescueItems(rescueQueue, { max: MAX_RESCUE_PER_RUN });
 metrics.rescueQueued = (rescueQueue.items || []).filter((item) => item.status === 'rescue-pending').length;
 
@@ -599,6 +649,8 @@ metrics.candidatesIngested = allCandidates.length;
 allCandidates.sort((a, b) => {
   const rescuePriority = Number(Boolean(b.rescueItem)) - Number(Boolean(a.rescueItem));
   if (rescuePriority !== 0) return rescuePriority;
+  const pendingPriority = Number(Boolean(b.pendingRecoveryEventKey)) - Number(Boolean(a.pendingRecoveryEventKey));
+  if (pendingPriority !== 0) return pendingPriority;
   const recovery = serviceRecoveryScore(b) - serviceRecoveryScore(a);
   if (recovery !== 0) return recovery;
   const penalty = sourcePenalty(a.source) - sourcePenalty(b.source);
@@ -859,6 +911,7 @@ for (const candidate of candidatesToMaterialize) {
 }
 
 console.log(`Candidatos válidos después de extracción: ${extracted.length}`);
+metrics.candidatesApproved = extracted.length;
 
 // ==============================================================
 // Scoring editorial — factores: recencia, calidad, localidad, diversidad
@@ -1082,8 +1135,28 @@ for (const context of eventContexts) {
   if (!verification.verified) {
     metrics.pendingVerification++;
     incrementMap(metrics.pendingByLane, getLane(verification.editorialLane));
+    const basePending = selectBaseCandidate(group);
+    const pendingLane = getLane(verification.editorialLane);
+    metrics.pendingAudit.push({
+      eventKey,
+      title: basePending?.title || '',
+      sourceId: basePending?.source?.id || '',
+      publisherDomain: basePending?.sourceRef?.publisherDomain || '',
+      category: basePending?.source?.forceCategory || basePending?.source?.defaultCategory || '',
+      eventType: basePending?.facts?.eventType || 'general',
+      lane: pendingLane,
+      riskLevel: verification.riskLevel,
+      exactReason: pendingLane === 'strict'
+        ? 'strict-requires-competent-tier-a-or-two-independent-tier-b'
+        : pendingLane === 'standard'
+          ? 'standard-requires-trusted-tier-b-or-two-independent-tier-b'
+          : 'fast-requires-competent-tier-a-or-trusted-local-tier-b',
+      missingCondition: 'additional-qualified-source',
+      nextRetryAt: events.events[eventKey].nextRetryAt,
+      expiresAt: events.events[eventKey].expiresAt,
+      corroborationAttempts: events.events[eventKey].corroborationAttempts || 0
+    });
     if (getLane(verification.editorialLane) === 'fast') {
-      const basePending = selectBaseCandidate(group);
       metrics.fastPendingAudit.push({
         eventKey,
         title: basePending?.title || '',
@@ -1266,6 +1339,7 @@ for (const candidate of verifiedCandidates) {
         throw validationError;
       }
       aiCompleted = true;
+      metrics.articlesDrafted++;
 
       // Si la fuente tiene forceCategory, sobreescribir la categoría IA
       if (source.forceCategory) ai.category = source.forceCategory;
@@ -1309,6 +1383,7 @@ for (const candidate of verifiedCandidates) {
         }
         continue;
       }
+      metrics.approvedForPublication++;
 
       if (!PERSIST_OUTPUTS) {
         console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
@@ -1360,6 +1435,7 @@ for (const candidate of verifiedCandidates) {
           license: 'Imagen generada internamente'
         };
       }
+      if (image) metrics.imagesResolved++;
 
       const filename = `${datePrefix(publicationDate)}-${slugify(ai.title)}.md`;
       const target = path.join(NEWS_DIR, filename);
@@ -1549,6 +1625,8 @@ if (PERSIST_OUTPUTS) {
     aiConcurrency: 1,
     maxRetryAttempts: MAX_RETRY_ATTEMPTS,
     maxRescuePerRun: MAX_RESCUE_PER_RUN,
+    maxPendingRecoveryPerRun: MAX_PENDING_RECOVERY_PER_RUN,
+    maxPendingCorroborationAttempts: MAX_PENDING_CORROBORATION_ATTEMPTS,
     targetPublishedPerRun: TARGET_PUBLISHED_PER_RUN,
     effectiveRunTarget,
     maxNormalPublishedPerRun: MAX_NORMAL_PUBLISHED_PER_RUN,
@@ -1575,6 +1653,7 @@ console.log(`
 📊 RESUMEN DEL RUN
   Fuentes consultadas: ${metrics.sourcesConsulted}
   Candidatos detectados: ${metrics.candidatesDetected}
+  Candidatos ingeridos/materializados/frescos/aprobados: ${metrics.candidatesIngested}/${metrics.extractionSucceeded}/${metrics.freshCandidates}/${metrics.candidatesApproved}
   Descartados (duplicados): ${metrics.discardedDuplicate}
   Descartados (genérico): ${metrics.discardedGenericTitle}
   Descartados (calidad): ${metrics.discardedQuality}
@@ -1588,6 +1667,7 @@ console.log(`
   Errores posteriores de publicación: ${metrics.publicationErrors}
   Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
+  Redactadas/imagen resuelta/aprobadas para publicar: ${metrics.articlesDrafted}/${metrics.imagesResolved}/${metrics.approvedForPublication}
   Historias en agenda: ${metrics.agendaStories}
   Newsworthiness promedio verificado: ${metrics.newsworthinessAverage}
   Descartados por cupo editorial de corrida: ${metrics.discardedPublicationLimit}
@@ -1610,6 +1690,12 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
   eventsByTerritory: metrics.eventsByTerritory,
   verifiedByTerritory: metrics.verifiedByTerritory,
   fastPendingAudit: metrics.fastPendingAudit,
+  pendingAudit: metrics.pendingAudit,
+  pendingLifecycle: {
+    recoveryAttempted: metrics.pendingRecoveryAttempted,
+    terminalizedExpired: metrics.pendingTerminalizedExpired,
+    terminalizedAttempts: metrics.pendingTerminalizedAttempts
+  },
   freshCandidates: metrics.freshCandidates,
   staleDiscarded: metrics.staleDiscarded,
   sourceHealth: metrics.sourceHealth,

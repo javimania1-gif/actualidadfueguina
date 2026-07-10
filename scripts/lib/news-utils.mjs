@@ -436,6 +436,7 @@ Redacta una nota original basada exclusivamente en el material fuente y, cuando 
 No inventes datos, citas, cifras, consecuencias ni contexto no respaldado.
 Si los hechos verificados contradicen o limitan el material, obedecen los hechos verificados.
 No agregues rivales, resultados, fechas, cifras, cargos, victimas ni organismos que no esten respaldados.
+Si el hecho central es una declaracion, critica o afirmacion atribuida, conserva la atribucion explicita y no la presentes como hecho probado independiente.
 Usa titulo informativo, bajada SEO de 100 a 170 caracteres y cuerpo en Markdown de 5 a 9 parrafos.
 Si el material fuente incluye "TIPO: PRONOSTICO_PROVINCIAL", redacta una sola nota provincial de pronostico del tiempo para Tierra del Fuego. No generes una nota por localidad. El cuerpo debe incluir subtitulos breves para Rio Grande, Tolhuin, Ushuaia o las localidades disponibles, y no agregar localidades sin datos confiables.
 

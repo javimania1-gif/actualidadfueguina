@@ -5,7 +5,8 @@ import {
   validateArticleSource,
   countIndependentEditorialSources,
   buildSourceRef,
-  isTrustedLocalRoutineSource
+  isTrustedLocalRoutineSource,
+  isTrustedStandardSource
 } from '../lib/source-policy.mjs';
 import {
   extractFacts,
@@ -141,7 +142,7 @@ test('dos agregadores al mismo publisher cuentan como una fuente editorial', () 
   assert.equal(countIndependentEditorialSources(refs), 1);
 });
 
-test('Bing News local no cuenta como fuente local rutinaria ni competencia municipal', () => {
+test('descubrimiento por Bing no vuelve confiable a un publisher externo', () => {
   const ref = buildSourceRef({
     source: { id: 'bing-ushuaia', name: 'Bing News - Ushuaia', mode: 'discovery-draft' },
     item: { link: 'https://www.bing.com/news/apiclick.aspx?url=https%3A%2F%2Fwww.eldestapeweb.com%2Fsociedad%2Fnota' },
@@ -154,6 +155,44 @@ test('Bing News local no cuenta como fuente local rutinaria ni competencia munic
 
   assert.equal(isTrustedLocalRoutineSource(ref), false);
   assert.equal(ref.competence.includes('municipal'), false);
+});
+
+test('descubrimiento por agregador evalua al publisher local final', () => {
+  const ref = buildSourceRef({
+    source: { id: 'bing-tolhuin', name: 'Bing News - Tolhuin', mode: 'discovery-draft' },
+    item: { link: 'https://www.bing.com/news/apiclick.aspx?url=https%3A%2F%2Fwww.sur54.com%2Fnota-local' },
+    article: {
+      title: 'Tolhuin abre inscripciones para una actividad comunitaria',
+      finalUrl: 'https://www.sur54.com/tolhuin/nota-local',
+      date: '2026-07-10'
+    }
+  });
+
+  assert.equal(ref.publisherDomain, 'sur54.com');
+  assert.equal(isTrustedLocalRoutineSource(ref), true);
+});
+
+test('URL final de agregador nunca cuenta como publisher confiable', () => {
+  const ref = {
+    tier: 'B',
+    publisherDomain: 'bing.com',
+    url: 'https://www.bing.com/news/apiclick.aspx?url=https%3A%2F%2Fsur54.com%2Fnota'
+  };
+  assert.equal(isTrustedLocalRoutineSource(ref), false);
+  assert.equal(isTrustedStandardSource(ref), false);
+});
+
+test('fuente estandar confiable requiere publisher final explicito', () => {
+  assert.equal(isTrustedStandardSource({
+    tier: 'B',
+    publisherDomain: 'perfil.com',
+    url: 'https://www.perfil.com/ciencia/nota'
+  }), true);
+  assert.equal(isTrustedStandardSource({
+    tier: 'B',
+    publisherDomain: 'medio-desconocido.example',
+    url: 'https://medio-desconocido.example/nota'
+  }), false);
 });
 
 test('facts persistidos viejos se reevalúan antes de verificar eventos sensibles', () => {
@@ -183,10 +222,65 @@ test('una Tier B high-risk queda pending-verification', () => {
     eventKey: 'sports|argentina|egipto',
     candidates: [{
       sourceRef: { tier: 'B', publisherDomain: 'infobae.com', url: 'https://infobae.com/nota' },
-      facts: { riskLevel: 'high', teams: ['Argentina', 'Egipto'], scores: ['3-2'], dates: ['2026-07-08'] }
+      facts: {
+        riskLevel: 'high',
+        editorialLane: EDITORIAL_LANES.STRICT,
+        eventType: 'sports-result',
+        teams: ['Argentina', 'Egipto'],
+        sportsTeams: ['Argentina', 'Egipto'],
+        scores: ['3-2'],
+        dates: ['2026-07-08']
+      }
     }]
   });
   assert.equal(event.status, 'pending-verification');
+});
+
+test('una Tier B confiable verifica noticia estandar no sensible', () => {
+  const event = corroborateEvent({
+    eventKey: 'science|pez-binocular',
+    candidates: [{
+      sourceRef: { tier: 'B', publisherDomain: 'perfil.com', url: 'https://perfil.com/ciencia/pez-binocular' },
+      facts: {
+        title: 'Investigadores describen un pez binocular en aguas australes',
+        riskLevel: 'high',
+        editorialLane: EDITORIAL_LANES.STANDARD,
+        eventType: 'general',
+        organizations: ['CONICET'],
+        dates: ['2026-07-10']
+      }
+    }]
+  });
+  assert.equal(event.status, 'verified-standard-single-source');
+  assert.equal(event.verificationBasis, 'trusted-tier-b-single-source');
+});
+
+test('una Tier B desconocida no verifica sola una noticia estandar', () => {
+  const event = corroborateEvent({
+    eventKey: 'science|fuente-desconocida',
+    candidates: [{
+      sourceRef: { tier: 'B', publisherDomain: 'medio-desconocido.example', url: 'https://medio-desconocido.example/nota' },
+      facts: {
+        riskLevel: 'high',
+        editorialLane: EDITORIAL_LANES.STANDARD,
+        eventType: 'general',
+        dates: ['2026-07-10']
+      }
+    }]
+  });
+  assert.equal(event.status, 'pending-verification');
+});
+
+test('acusaciones se mantienen en carril estricto', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Acusan a un funcionario de fraude en una investigacion',
+      text: 'Una denuncia acusa a un funcionario de fraude y pide una investigacion judicial. '.repeat(10),
+      date: '2026-07-10'
+    },
+    source: { defaultCategory: 'Nacionales' }
+  });
+  assert.equal(facts.editorialLane, EDITORIAL_LANES.STRICT);
 });
 
 test('dos Tier B concordantes verifican high-risk', () => {
