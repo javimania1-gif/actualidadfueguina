@@ -1,38 +1,25 @@
 {
-  "generatedAt": "2026-07-09T23:58:43.951Z",
+  "generatedAt": "2026-07-10T02:24:20.480Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "push",
-    "runId": "29058689340",
-    "headSha": "9268375312cebfc0d22252c410f0a32c088a2988"
+    "runId": "29064473496",
+    "headSha": "93cfb51f9129d48cd00d71e8ebc8b71014a90c3e"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 32,
-    "discardedDuplicate": 2,
-    "discardedQuality": 18,
+    "candidatesDetected": 35,
+    "discardedDuplicate": 4,
+    "discardedQuality": 17,
     "discardedQualityByReason": {
       "stale-dated-discovery": 7,
-      "evergreen-or-stale-outside-news-window": 4,
+      "evergreen-or-stale-outside-news-window": 3,
+      "weak-title,short-body": 1,
       "stale-hard-news": 5,
-      "short-body": 1,
       "listing-url": 1
     },
     "discardedBySourceAndReason": {
-      "bing-antartida": {
-        "stale-dated-discovery": 3
-      },
-      "bing-tolhuin": {
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "bing-tdf": {
-        "stale-hard-news": 3,
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "bing-ushuaia": {
-        "stale-hard-news": 1
-      },
       "mundo-clarin": {
         "stale-dated-discovery": 1
       },
@@ -40,42 +27,63 @@
         "evergreen-or-stale-outside-news-window": 1,
         "stale-dated-discovery": 1
       },
-      "bing-malvinas": {
-        "stale-dated-discovery": 1,
+      "bing-tolhuin": {
         "evergreen-or-stale-outside-news-window": 1
       },
-      "mundo-google": {
-        "short-body": 1
+      "bing-malvinas": {
+        "stale-dated-discovery": 1,
+        "weak-title,short-body": 1
       },
       "mundo-bing": {
         "stale-dated-discovery": 1,
         "stale-hard-news": 1,
         "listing-url": 1
+      },
+      "bing-antartida": {
+        "stale-dated-discovery": 3
+      },
+      "bing-tdf": {
+        "stale-hard-news": 4,
+        "evergreen-or-stale-outside-news-window": 1
       }
     },
-    "discardedGenericTitle": 0,
-    "discardedEvergreen": 11,
+    "discardedGenericTitle": 2,
+    "discardedEvergreen": 10,
     "eventsGrouped": 12,
-    "verified": 2,
-    "pendingVerification": 10,
-    "pendingMatchedFromHistory": 2,
+    "verified": 3,
+    "pendingVerification": 9,
+    "pendingMatchedFromHistory": 1,
     "conflicting": 0,
     "published": 1,
     "publishedByLane": {
-      "strict": 1
+      "standard": 1
     },
     "verifiedByLane": {
-      "strict": 1,
+      "strict": 2,
       "standard": 1
     },
     "pendingByLane": {
-      "strict": 3,
-      "fast": 1,
-      "standard": 6
+      "standard": 5,
+      "strict": 2,
+      "fast": 2
     },
     "fastPendingAudit": [
       {
-        "eventKey": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|07 de julio de 2026",
+        "eventKey": "service|francia|espana|informa|2026-07-10",
+        "title": "Reabierta la A-7 tras el corte por el incendio de Los Gallardos (Almería)",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "tier": "B",
+        "competence": [],
+        "territory": "Mundo",
+        "topic": "servicios",
+        "eventType": "service",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      },
+      {
+        "eventKey": "agenda|gobierno|secretaria de deportes de la|municipio|direccion provincial|desarrollo deportivo|rio grande|ushuaia|argentina|brasil|informa|2026-07-07",
         "title": "Gobierno llevó a cabo una jornada de competencias en la Casa del Deporte de Tolhuin | Sur54.com | Portal de noticias",
         "sourceId": "bing-tolhuin",
         "publisherDomain": "sur54.com",
@@ -84,7 +92,7 @@
           "municipal",
           "provincial"
         ],
-        "territory": "Rio Grande",
+        "territory": "Tolhuin",
         "topic": "deportes",
         "eventType": "agenda",
         "riskLevel": "low",
@@ -92,8 +100,8 @@
         "status": "pending-verification"
       }
     ],
-    "freshCandidates": 14,
-    "staleDiscarded": 16,
+    "freshCandidates": 18,
+    "staleDiscarded": 15,
     "sourceHealth": {
       "mundo-clarin": {
         "detected": 3,
@@ -105,20 +113,6 @@
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "bing-tolhuin": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.33
@@ -137,45 +131,31 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-tdf": {
-        "detected": 5,
-        "materialized": 5,
-        "freshCandidates": 1,
-        "qualityDiscarded": 4,
-        "staleDiscarded": 4,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.2,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.8
-      },
-      "bing-ushuaia": {
+      "nacionales-perfil": {
         "detected": 2,
         "materialized": 2,
-        "freshCandidates": 1,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
-        "publicationContributionRate": 0.5,
-        "staleDiscardRate": 0.5
-      },
-      "el-rompehielos": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 0,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.5,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -193,47 +173,47 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.5
       },
-      "nacionales-perfil": {
-        "detected": 2,
+      "mundo-google": {
+        "detected": 3,
         "materialized": 2,
         "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
       },
       "bing-malvinas": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 1,
         "qualityDiscarded": 2,
-        "staleDiscarded": 2,
-        "verifiedContribution": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.67
-      },
-      "infobae-tdf": {
-        "detected": 1,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "bing-antartida": {
         "detected": 3,
@@ -249,30 +229,16 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 1
       },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+      "bing-ushuaia": {
+        "detected": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-google": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -291,6 +257,34 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.67
       },
+      "el-rompehielos": {
+        "detected": 4,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
+        "verificationContributionRate": 0.25,
+        "publicationContributionRate": 0.25,
+        "staleDiscardRate": 0
+      },
+      "bing-tdf": {
+        "detected": 5,
+        "materialized": 5,
+        "freshCandidates": 0,
+        "qualityDiscarded": 5,
+        "staleDiscarded": 5,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 1
+      },
       "gobierno-tdf-oficial": {
         "detected": 5,
         "materialized": 0,
@@ -307,14 +301,14 @@
       },
       "actualidad-tdf": {
         "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -334,91 +328,99 @@
         "staleDiscardRate": 0
       }
     },
-    "sourceDeprioritized": [],
+    "sourceDeprioritized": [
+      "bing-antartida",
+      "bing-tdf"
+    ],
     "drafts": 0,
     "modelErrors": 0,
     "factualValidationErrors": 1,
-    "discardedImportance": 0,
+    "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 2,
-    "aiCalls": 2,
+    "aiAttempts": 3,
+    "aiCalls": 3,
     "imageSelections": [
       {
-        "title": "Nuevo vuelo directo entre San Pablo y Ushuaia: un hito para el turismo fueguino",
+        "title": "Israel inicia gestiones para abrir un consulado honorario en Ushuaia",
         "strategy": "article-og",
-        "query": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+        "query": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
         "score": 82,
-        "source": "https://media.diariopopular.com.ar/p/e2599d942785357fd5ce20cd1d9b7f4f/adjuntos/143/imagenes/008/248/0008248166/1200x675/smart/multimedianormalb51ece2b52de00a3bm9ybwfslndlyna.webp"
+        "source": "https://elrompehielos.com.ar/wp-content/uploads/2026/07/720.jpg"
       }
     ],
-    "agendaStories": 146,
-    "newsworthinessAverage": 90,
+    "agendaStories": 153,
+    "newsworthinessAverage": 72,
     "newsworthinessTop": [
       {
-        "title": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
-        "eventKey": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
-        "score": 100,
+        "title": "Costa Rica decomisa 5,4 toneladas de droga y detiene a seis hombres en el Pacífico Sur",
+        "eventKey": "service|ministerio de seguridad publica|policia de control de drogas de|sindicato de|costa rica|pacifico sur costa rica|pacifico sur|brasil|peru|detiene|2026-07-10",
+        "score": 89,
         "topic": "servicios",
-        "territory": "Ushuaia",
+        "territory": "Mundo",
         "lane": "strict"
       },
       {
-        "title": "Israel proyecta abrir un consulado en Ushuaia | El Dia",
+        "title": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
         "eventKey": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
         "score": 80,
         "topic": "politica",
         "territory": "Ushuaia",
         "lane": "standard"
+      },
+      {
+        "title": "Argentina vs Suiza: de las abismales diferencias económicas a la batalla del fútbol que se viene",
+        "eventKey": "sports-result|argentina|29 de octubre de 2001",
+        "score": 48,
+        "topic": "deportes",
+        "territory": "Mundo",
+        "lane": "strict"
       }
     ],
     "corroborationSearches": 3,
-    "corroborationFound": 2,
+    "corroborationFound": 1,
     "corroborationVerified": 1,
     "corroborationConflicts": 0,
     "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "service|gobierno|san pablo|ushuaia lo|ushuaia|tierra del fuego|argentina|brasil|informa|2 de julio",
-        "title": "Scioli celebró el nuevo vuelo directo de GOL entre San Pablo y Ushuaia",
+        "eventKey": "casualty|cono sur|volkswagen gol|volkswagen tera|rio grande|tierra del fuego aias|informa|2026-07-08",
+        "title": "Otro accidente de tránsito en Río Grande - Actualidad TDF",
         "priorityRank": 1,
-        "corroborationQuery": "San Pablo Ushuaia Lo Gobierno Argentina Brasil Ushuaia Tierra del Fuego celebro directo nuevo pablo scioli vuelo",
-        "corroborationReason": "newsworthiness=100; freshness=8h; territory=Ushuaia; impact=19; corroborability=10; pendingAge=8h; attempts=0",
-        "found": 2,
+        "corroborationQuery": "Cono Sur Volkswagen Gol Volkswagen Tera Rio Grande Tierra del Fuego AIAS accidente transito",
+        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=4h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|2026-07-09",
+        "title": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
+        "priorityRank": 2,
+        "corroborationQuery": "Martín Pérez Argentina Rio Grande Tierra del Fuego animo fecha honramos intendente produccion radiouniversidad",
+        "corroborationReason": "newsworthiness=86; freshness=16h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=16h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "service|ministerio de seguridad publica|policia de control de drogas de|sindicato de|costa rica|pacifico sur costa rica|pacifico sur|brasil|peru|detiene|2026-07-10",
+        "title": "Costa Rica decomisa 5,4 toneladas de droga y detiene a seis hombres en el Pacífico Sur",
+        "priorityRank": 3,
+        "corroborationQuery": "Costa Rica Pacífico Sur Costa Rica Pacífico Sur Ministerio de Seguridad Pública Policía de Control de Drogas de costa decomisa detiene droga hombres pacifico",
+        "corroborationReason": "newsworthiness=89; freshness=0h; territory=Mundo; impact=19; corroborability=10; pendingAge=0h; attempts=0",
+        "found": 1,
         "verified": true,
         "status": "verified-strict"
-      },
-      {
-        "eventKey": "service|gobierno|fogon patrio|argentina|informa|07 09 900",
-        "title": "Llaryora: \"Se está cayendo el empleo, es muy difícil llegar a fin de mes\"",
-        "priorityRank": 2,
-        "corroborationQuery": "Fogón Patrio Gobierno Argentina cayendo dificil empleo llaryora llegar",
-        "corroborationReason": "newsworthiness=94; freshness=1h; territory=Nacionales; impact=19; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
-      },
-      {
-        "eventKey": "territorial-sovereignty|martin perez|rio grande|tierra del fuego|argentina|informa|9 de julio",
-        "title": "“Honramos esta fecha reafirmando la soberanía, el trabajo y la producción”, animó el Intendente de Río Grande | radiouniversidad.com.ar",
-        "priorityRank": 3,
-        "corroborationQuery": "Martín Pérez Argentina Rio Grande Tierra del Fuego animo fecha honramos intendente produccion radiouniversidad",
-        "corroborationReason": "newsworthiness=86; freshness=14h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=14h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "dates": 3,
-      "percentages": 1
-    },
+    "conflictsByField": {},
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 4,
-    "resolvedComplementaryFacts": 20,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 16,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 2,
@@ -428,31 +430,44 @@
       },
       "verificationToPublicationMinutes": {
         "count": 2,
-        "avg": 0.2,
-        "p50": 0.3,
-        "max": 0.3
+        "avg": 73,
+        "p50": 145.8,
+        "max": 145.8
       },
       "discoveryToPublicationMinutes": {
         "count": 2,
-        "avg": 0.2,
-        "p50": 0.3,
-        "max": 0.3
+        "avg": 108.3,
+        "p50": 216.5,
+        "max": 216.5
+      },
+      "discoveryToVerificationAllMinutes": {
+        "count": 4,
+        "avg": 71.8,
+        "p50": 70.8,
+        "max": 216.2
+      },
+      "cohort": {
+        "comparablePublishedCount": 2,
+        "verifiedWithoutPublicationCount": 2,
+        "publicationWithoutVerifiedAtCount": 1,
+        "invalidTimestampCount": 0,
+        "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
     "byCategory": {
-      "Ushuaia": 1
+      "Provincia": 1
     },
-    "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 0,
+    "publishedLast3hBeforeRun": 1,
+    "publishedLast6hBeforeRun": 1,
     "publishedLast12hBeforeRun": 5,
-    "publishedLast24hBeforeRun": 7,
-    "hoursSinceLastPublicationBeforeRun": 7.1,
+    "publishedLast24hBeforeRun": 6,
+    "hoursSinceLastPublicationBeforeRun": 2.4,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 7,
-      "remainingToMin": 5,
-      "slotsRemaining": 9,
+      "publishedLast24hBeforeRun": 6,
+      "remainingToMin": 6,
+      "slotsRemaining": 10,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -461,7 +476,7 @@
         "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
         "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
         "topic": "servicios",
-        "territory": "Rio Grande",
+        "territory": "Ushuaia",
         "newsworthinessScore": 100,
         "status": "pending-verification",
         "scoreBreakdown": {
@@ -470,7 +485,7 @@
           "serviceValue": 20,
           "socialPotential": 11,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 5,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -479,7 +494,7 @@
         "storyId": "weather|chile|venezuela|tierra|fuego|ushuaia|rio grande|ushuaia|informa|07 07 2026",
         "headlineSeed": "Un sismo de magnitud 5,9 se registró cerca de Tierra del Fuego, a más de 300 kilómetros de Ushuaia - Últimas Noticias: El Chubut",
         "topic": "servicios",
-        "territory": "Rio Grande",
+        "territory": "Ushuaia",
         "newsworthinessScore": 100,
         "status": "pending-verification",
         "scoreBreakdown": {
@@ -488,7 +503,7 @@
           "serviceValue": 20,
           "socialPotential": 11,
           "searchPotential": 13,
-          "recency": 9,
+          "recency": 5,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -516,7 +531,7 @@
         "headlineSeed": "El Centro Municipal de Salud N.° 3 crece con más especialidades, nuevo equipamiento y más atención para las familias",
         "topic": "salud",
         "territory": "Rio Grande",
-        "newsworthinessScore": 100,
+        "newsworthinessScore": 98,
         "status": "verified",
         "scoreBreakdown": {
           "publicInterest": 17,
@@ -524,7 +539,7 @@
           "serviceValue": 15,
           "socialPotential": 11,
           "searchPotential": 13,
-          "recency": 9,
+          "recency": 5,
           "sourceStrength": 8,
           "diversity": 4
         }
@@ -534,7 +549,7 @@
         "headlineSeed": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
         "topic": "turismo",
         "territory": "Ushuaia",
-        "newsworthinessScore": 99,
+        "newsworthinessScore": 96,
         "status": "verified",
         "scoreBreakdown": {
           "publicInterest": 12,
@@ -542,13 +557,13 @@
           "serviceValue": 15,
           "socialPotential": 15,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
           "diversity": 4
         }
       }
     ],
-    "agendaInvalidStories": 18,
+    "agendaInvalidStories": 17,
     "technicalSuccess": true,
     "editorialOutcome": "published"
   },
@@ -556,7 +571,7 @@
     "maxAiPerRun": 10,
     "officialAiUsed": 0,
     "officialAiBudget": 5,
-    "discoveryAiUsed": 2,
+    "discoveryAiUsed": 3,
     "discoveryAiBudget": 5,
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
@@ -565,14 +580,15 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 32,
-    "totalCandidatesBeforeLimit": 32
+    "publishedLast24hBeforeRun": 6,
+    "candidatesMaterialized": 35,
+    "totalCandidatesBeforeLimit": 35
   },
   "reasonNoMorePublished": [
-    "10 evento(s) quedaron pendientes de segunda fuente",
-    "2 candidato(s) descartados por duplicado/similitud",
-    "18 candidato(s) descartados por causas especificas (stale-dated-discovery: 7, evergreen-or-stale-outside-news-window: 4, stale-hard-news: 5, short-body: 1, listing-url: 1)",
+    "9 evento(s) quedaron pendientes de segunda fuente",
+    "4 candidato(s) descartados por duplicado/similitud",
+    "17 candidato(s) descartados por causas especificas (stale-dated-discovery: 7, evergreen-or-stale-outside-news-window: 3, weak-title,short-body: 1, stale-hard-news: 5, listing-url: 1)",
+    "1 candidato(s) descartados por importancia editorial",
     "1 candidato(s) bloqueados por validacion factual"
   ]
 }
