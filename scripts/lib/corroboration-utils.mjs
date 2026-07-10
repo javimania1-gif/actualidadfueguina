@@ -1,6 +1,6 @@
 import { cleanText } from './news-utils.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
-import { getEarthquakeSignature } from './factual-utils.mjs';
+import { buildEventRecord, corroborateEvent, getEarthquakeSignature } from './factual-utils.mjs';
 import { inferAgendaTerritory } from './editorial-agenda.mjs';
 
 const LOCAL_TERRITORIES = new Set(['Rio Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antartida']);
@@ -183,6 +183,15 @@ function titlesFromRecord(record = {}) {
   return (record.factsBySource || []).map((entry) => entry.facts?.title || '').filter(Boolean);
 }
 
+function earthquakeSignatureKey(record = {}) {
+  const signature = getEarthquakeSignature({
+    facts: factsFromRecord(record),
+    title: titlesFromRecord(record).join(' '),
+    sourceRef: record.sources?.[0] || {}
+  });
+  return signature ? ['earthquake', signature.magnitude, signature.date, signature.location].join('|') : '';
+}
+
 function sameEarthquakeEvent(left = {}, right = {}) {
   const leftSignature = getEarthquakeSignature(left);
   const rightSignature = getEarthquakeSignature(right);
@@ -190,6 +199,87 @@ function sameEarthquakeEvent(left = {}, right = {}) {
   return leftSignature.magnitude === rightSignature.magnitude
     && leftSignature.date === rightSignature.date
     && leftSignature.location === rightSignature.location;
+}
+
+function uniqueBy(items = [], keyFn = (item) => JSON.stringify(item)) {
+  const seen = new Set();
+  const out = [];
+  for (const item of items) {
+    const key = keyFn(item);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+}
+
+function recordCandidates(record = {}) {
+  return (record.factsBySource || []).map((entry) => {
+    const sourceRef = (record.sources || []).find((source) =>
+      (entry.url && source.url === entry.url) ||
+      (entry.publisherDomain && source.publisherDomain === entry.publisherDomain)
+    ) || {};
+    return {
+      facts: {
+        ...(entry.facts || {}),
+        riskLevel: entry.facts?.riskLevel || record.riskLevel,
+        editorialLane: entry.facts?.editorialLane || record.editorialLane
+      },
+      sourceRef: {
+        ...sourceRef,
+        publisherDomain: entry.publisherDomain || sourceRef.publisherDomain || '',
+        url: entry.url || sourceRef.url || ''
+      }
+    };
+  }).filter((candidate) => candidate.facts && candidate.sourceRef.publisherDomain);
+}
+
+function mergePendingRecord(target = {}, incoming = {}) {
+  target.sources = uniqueBy([...(target.sources || []), ...(incoming.sources || [])], (source) => source.url || source.publisherDomain);
+  target.factsBySource = uniqueBy([...(target.factsBySource || []), ...(incoming.factsBySource || [])], (entry) => entry.url || entry.publisherDomain);
+  target.publisherDomains = unique([...(target.publisherDomains || []), ...(incoming.publisherDomains || [])]);
+  target.firstDetectedAt = [target.firstDetectedAt, incoming.firstDetectedAt].filter(Boolean).sort()[0] || target.firstDetectedAt || incoming.firstDetectedAt;
+  target.lastSeenAt = [target.lastSeenAt, incoming.lastSeenAt].filter(Boolean).sort().at(-1) || target.lastSeenAt || incoming.lastSeenAt;
+  target.lastAttemptAt = [target.lastAttemptAt, incoming.lastAttemptAt].filter(Boolean).sort().at(-1) || target.lastAttemptAt || incoming.lastAttemptAt;
+  target.expiresAt = [target.expiresAt, incoming.expiresAt].filter(Boolean).sort().at(-1) || target.expiresAt || incoming.expiresAt;
+  return target;
+}
+
+export function compactEquivalentPendingEvents(records = {}) {
+  const canonicalBySignature = new Map();
+  const changedKeys = new Set();
+  let merged = 0;
+  let verified = 0;
+
+  for (const [eventKey, record] of Object.entries(records || {})) {
+    if (record.status !== 'pending-verification') continue;
+    const signatureKey = earthquakeSignatureKey(record);
+    if (!signatureKey) continue;
+    const canonicalKey = canonicalBySignature.get(signatureKey);
+    if (!canonicalKey) {
+      canonicalBySignature.set(signatureKey, eventKey);
+      continue;
+    }
+    records[canonicalKey] = mergePendingRecord(records[canonicalKey], record);
+    delete records[eventKey];
+    changedKeys.add(canonicalKey);
+    merged++;
+  }
+
+  for (const eventKey of changedKeys) {
+    const record = records[eventKey];
+    const candidates = recordCandidates(record);
+    if (candidates.length < 2) continue;
+    const verification = corroborateEvent({ eventKey, candidates });
+    records[eventKey] = {
+      ...buildEventRecord({ existing: record, eventKey, candidates, verification }),
+      publishedAt: record.publishedAt || null,
+      publishedFile: record.publishedFile || ''
+    };
+    if (verification.verified) verified++;
+  }
+
+  return { changed: merged > 0, merged, verified };
 }
 
 export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, facts = {}, title = '', sourceRef = {}, now = new Date() } = {}) {

@@ -27,6 +27,7 @@ import {
 } from '../lib/editorial-agenda.mjs';
 import {
   buildCorroborationQuery,
+  compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
   scoreCorroborationPriority
 } from '../lib/corroboration-utils.mjs';
@@ -643,6 +644,53 @@ test('pending historico une el mismo sismo solo con hechos centrales concordante
     sourceRef: { publisherDomain: 'elchubut.com.ar', publishedAt: '2026-07-08T15:25:00.000Z' }
   });
   assert.equal(different, 'weather|sismo|6-1|2026-07-08|pasaje-drake');
+});
+
+test('compacta pendientes persistidos del mismo sismo y reevalua corroboracion', () => {
+  const records = {
+    'weather|fragment-a': {
+      status: 'pending-verification',
+      riskLevel: 'high',
+      publisherDomains: ['tn.com.ar'],
+      sources: [{ tier: 'B', publisherDomain: 'tn.com.ar', url: 'https://tn.com.ar/a', title: 'Un sismo de magnitud 5,9 sacudio a Tierra del Fuego', publishedAt: '2026-07-07T15:48:14.028Z' }],
+      factsBySource: [{
+        publisherDomain: 'tn.com.ar',
+        url: 'https://tn.com.ar/a',
+        facts: {
+          title: 'Un sismo de magnitud 5,9 sacudio a varias ciudades de Tierra del Fuego',
+          eventType: 'weather',
+          places: ['Pasaje Drake', 'Ushuaia', 'Tierra del Fuego'],
+          numbers: ['5,9', '303', '10'],
+          dates: ['07 de julio', '2026-07-07'],
+          rawSummary: 'El movimiento ocurrio en Pasaje Drake, a mas de 300 kilometros de Ushuaia y a 10 kilometros de profundidad.'
+        }
+      }]
+    },
+    'weather|fragment-b': {
+      status: 'pending-verification',
+      riskLevel: 'high',
+      publisherDomains: ['elchubut.com.ar'],
+      sources: [{ tier: 'B', publisherDomain: 'elchubut.com.ar', url: 'https://elchubut.com.ar/b', title: 'Un sismo de magnitud 5,9 se registro cerca de Tierra del Fuego', publishedAt: '2026-07-07T15:25:00.000Z' }],
+      factsBySource: [{
+        publisherDomain: 'elchubut.com.ar',
+        url: 'https://elchubut.com.ar/b',
+        facts: {
+          title: 'Un sismo de magnitud 5,9 se registro cerca de Tierra del Fuego',
+          eventType: 'weather',
+          places: ['Pasaje Drake', 'Ushuaia'],
+          numbers: ['5,9', '300', '10'],
+          dates: ['07/07/2026'],
+          rawSummary: 'El movimiento ocurrio en el Pasaje Drake y no hubo alerta de tsunami.'
+        }
+      }]
+    }
+  };
+
+  const result = compactEquivalentPendingEvents(records);
+  assert.equal(result.merged, 1);
+  assert.equal(Object.keys(records).length, 1);
+  assert.equal(records['weather|fragment-a'].sources.length, 2);
+  assert.equal(records['weather|fragment-a'].status, 'verified-standard');
 });
 
 test('agenda invalida claves weather heredadas para buques y Malvinas', () => {

@@ -50,6 +50,7 @@ import {
 } from './lib/editorial-agenda.mjs';
 import {
   buildCorroborationQuery,
+  compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
   isCompatibleCorroboration,
   scoreCorroborationPriority
@@ -114,6 +115,8 @@ const metrics = {
   verified: 0,
   pendingVerification: 0,
   pendingMatchedFromHistory: 0,
+  pendingEventsCompacted: 0,
+  pendingCompactionVerified: 0,
   conflicting: 0,
   published: 0,
   publishedByLane: {},
@@ -170,6 +173,13 @@ function sourceHealth(sourceId = '') {
     publicationContribution: 0
   };
   return metrics.sourceHealth[id];
+}
+
+const pendingCompaction = compactEquivalentPendingEvents(events.events || {});
+metrics.pendingEventsCompacted = pendingCompaction.merged;
+metrics.pendingCompactionVerified = pendingCompaction.verified;
+if (pendingCompaction.changed) {
+  console.log(`Pendientes equivalentes compactados: ${pendingCompaction.merged}; verificados tras compactacion: ${pendingCompaction.verified}`);
 }
 
 function recordQualityDiscard(reason, { evergreen = false, sourceId = '' } = {}) {
