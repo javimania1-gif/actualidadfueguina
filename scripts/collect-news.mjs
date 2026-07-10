@@ -16,18 +16,24 @@ import {
   generateWebPlate
 } from './lib/news-utils.mjs';
 import {
-  extractFingerprint as extractFingerprintShared,
   isGenericTitle as isGenericTitleShared,
   isSimilarTitle as isSimilarTitleShared,
-  isEventAlreadyPublished as isEventAlreadyPublishedShared,
   isRetryEligible as isRetryEligibleShared,
   getNextRetryAt as getNextRetryAtShared,
   editorialScore as editorialScoreShared,
   canPublishWithinRunLimit,
+  allocateAiBudget,
+  buildRetryState,
+  canonicalizeNewsUrl,
+  createContentFingerprint,
+  deriveEffectiveImportance,
+  findLikelyPublishedStoryMatch,
   isStaleRoutineWeatherForecast,
   isStaleDatedDiscoveryCandidate,
   classifyCandidateFreshness,
-  normalizeText
+  classifySourceValidationErrors,
+  normalizeText,
+  unwrapDiscoveryUrl
 } from './lib/pipeline-utils.mjs';
 import { buildSourceRef, validateArticleSource } from './lib/source-policy.mjs';
 import {
@@ -56,17 +62,19 @@ import {
   scoreCorroborationPriority
 } from './lib/corroboration-utils.mjs';
 import { summarizeEditorialLatency } from './lib/latency-utils.mjs';
+import { loadRescueQueue, saveRescueQueue, selectRunnableRescueItems } from './lib/rescue-utils.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
 const seen = await loadSeen();
 const events = await loadEvents();
+const rescueQueue = await loadRescueQueue();
 await ensureDirs();
 
 // ============================================================
 // Configuración
 // ============================================================
-const MAX_AI_PER_RUN = Number(process.env.AF_MAX_AI_PER_RUN || 8);
+const MAX_AI_PER_RUN = Number(process.env.AF_MAX_AI_PER_RUN || 12);
 const MAX_DRAFTS_PER_RUN = Number(process.env.AF_MAX_DRAFTS_PER_RUN || 10);
 const MAX_PER_SOURCE = Number(process.env.AF_MAX_PER_SOURCE || 2);
 const MAX_MATERIALIZE_PER_RUN = Number(process.env.AF_MAX_MATERIALIZE_PER_RUN || 36);
@@ -79,6 +87,8 @@ const EXPECTED_RUNS_PER_DAY = Number(process.env.AF_EXPECTED_RUNS_PER_DAY || 12)
 const RSS_TIMEOUT_MS = Number(process.env.AF_RSS_TIMEOUT_MS || 15000);
 const MAX_CORROBORATION_SEARCHES = Number(process.env.AF_MAX_CORROBORATION_SEARCHES || 3);
 const MAX_CORROBORATION_ITEMS_PER_SEARCH = Number(process.env.AF_CORROBORATION_ITEMS_PER_SEARCH || 3);
+const MAX_RETRY_ATTEMPTS = Number(process.env.AF_MAX_RETRY_ATTEMPTS || 3);
+const MAX_RESCUE_PER_RUN = Number(process.env.AF_MAX_RESCUE_PER_RUN || 4);
 // Cuánto del presupuesto IA puede consumir las fuentes municipales/oficiales (0-1)
 const OFFICIAL_AI_BUDGET_FRACTION = 0.5;
 const PERSIST_OUTPUTS =
@@ -97,15 +107,16 @@ const GENERIC_TITLE_WORDS = new Set([
   'novedades', 'actualidad', 'informacion'
 ]);
 
-// Retry window e backoff
-const DRAFT_RETRY_WINDOWS_MS = [3 * 60 * 60 * 1000, 6 * 60 * 60 * 1000, 12 * 60 * 60 * 1000]; // 3h, 6h, 12h
-const STALE_AFTER_MS = 48 * 60 * 60 * 1000; // 48h → pasa a stale
-
 // Métricas
 const metrics = {
   sourcesConsulted: 0,
   candidatesDetected: 0,
+  candidatesIngested: 0,
+  extractionSucceeded: 0,
   discardedDuplicate: 0,
+  duplicateExactUrl: 0,
+  duplicateExactContent: 0,
+  duplicatePublishedEvent: 0,
   discardedQuality: 0,
   discardedQualityByReason: {},
   discardedBySourceAndReason: {},
@@ -122,6 +133,8 @@ const metrics = {
   publishedByLane: {},
   verifiedByLane: {},
   pendingByLane: {},
+  eventsByTerritory: {},
+  verifiedByTerritory: {},
   fastPendingAudit: [],
   freshCandidates: 0,
   staleDiscarded: 0,
@@ -129,10 +142,21 @@ const metrics = {
   sourceDeprioritized: [],
   drafts: 0,
   modelErrors: 0,
+  publicationErrors: 0,
   factualValidationErrors: 0,
   discardedImportance: 0,
   discardedSourceLimit: 0,
   discardedNoAiBudget: 0,
+  budgetDeferred: 0,
+  failedRetryable: 0,
+  failedTerminal: 0,
+  failedRetryableByReason: {},
+  failedTerminalByReason: {},
+  aiReused: 0,
+  rescueQueued: 0,
+  rescueAttempted: 0,
+  rescueSucceeded: 0,
+  rescueExhausted: 0,
   discardedPublicationLimit: 0,
   extractErrors: 0,
   imageErrors: 0,
@@ -212,15 +236,7 @@ function getLane(value) {
 // ============================================================
 const existingUrls = new Set();
 const existingTitles = new Set();
-const publishedEventFingerprints = new Set();
-
-function extractFingerprint(title) {
-  return extractFingerprintShared(title);
-}
-
-function isEventAlreadyPublished(title) {
-  return isEventAlreadyPublishedShared(title, publishedEventFingerprints);
-}
+const publishedStories = [];
 
 
 async function indexPublishedDocs() {
@@ -229,13 +245,18 @@ async function indexPublishedDocs() {
       if (!file.endsWith('.md')) continue;
       const content = await fs.readFile(path.join(NEWS_DIR, file), 'utf8');
       const urlMatch = content.match(/^sourceUrl:\s*['"](.*?)['"]$/m);
-      if (urlMatch) existingUrls.add(urlMatch[1].trim());
+      if (urlMatch) existingUrls.add(canonicalizeNewsUrl(urlMatch[1].trim()));
       const titleMatch = content.match(/^title:\s*['"](.*?)['"]$/m);
       if (titleMatch) {
         const titleStr = titleMatch[1].trim();
         existingTitles.add(titleStr.toLowerCase());
-        const fp = extractFingerprint(titleStr);
-        if (fp) publishedEventFingerprints.add(fp);
+        publishedStories.push({
+          title: titleStr,
+          sourcePublishedAt: content.match(/^sourcePublishedAt:\s*['"]?([^'"\n]+)['"]?$/m)?.[1]?.trim() || '',
+          publishedAt: content.match(/^date:\s*['"]?([^'"\n]+)['"]?$/m)?.[1]?.trim() || '',
+          sourceUrl: urlMatch?.[1]?.trim() || '',
+          file
+        });
       }
     }
   } catch {}
@@ -291,6 +312,31 @@ function findMatchingPendingEventKey({ eventKey, facts = {}, title = '', sourceR
 }
 
 await indexPublishedDocs();
+for (const event of Object.values(events.events || {})) {
+  if (event.status !== 'published') continue;
+  for (const entry of event.factsBySource || []) {
+    const source = (event.sources || []).find((item) => item.url === entry.url) || {};
+    publishedStories.push({
+      title: event.verifiedFacts?.title || '',
+      sourceTitle: entry.facts?.title || source.title || '',
+      sourcePublishedAt: source.publishedAt || '',
+      publishedAt: event.publishedAt || '',
+      sourceUrl: entry.url || source.url || '',
+      file: event.publishedFile || ''
+    });
+  }
+}
+
+function recordFailure(retry = {}) {
+  const reason = retry.failureReason || 'unspecified';
+  if (retry.status === 'failed-retryable') {
+    metrics.failedRetryable++;
+    incrementMap(metrics.failedRetryableByReason, reason);
+  } else {
+    metrics.failedTerminal++;
+    incrementMap(metrics.failedTerminalByReason, reason);
+  }
+}
 const latestPublishedBeforeRun = await latestPublicationDate();
 metrics.publishedLast3hBeforeRun = await countPublishedSince(new Date(Date.now() - 3 * 60 * 60 * 1000));
 metrics.publishedLast6hBeforeRun = await countPublishedSince(new Date(Date.now() - 6 * 60 * 60 * 1000));
@@ -471,28 +517,48 @@ async function findActiveCorroborationCandidates({ eventKey, group = [], verific
 // Verificar si un item en seen.json es elegible para retry (con backoff)
 function isRetryEligible(seenItem) {
   return isRetryEligibleShared(seenItem);
-
-  if (!seenItem) return false;
-  if (['published', 'duplicate', 'discarded-editorial', 'stale'].includes(seenItem.status)) return false;
-  if (!['draft', 'extract-error', 'model-error', 'temporary-error'].includes(seenItem.status)) return false;
-  const now = Date.now();
-  // Si tiene nextRetryAt explícito, respetarlo
-  if (seenItem.nextRetryAt) return now >= new Date(seenItem.nextRetryAt).getTime();
-  // Fallback: si fue visto hace menos de 48h, es elegible
-  const seenAt = new Date(seenItem.seenAt || 0).getTime();
-  return (now - seenAt) < STALE_AFTER_MS;
 }
 
 function getNextRetryAt(attempts) {
   return getNextRetryAtShared(attempts);
-
-  const windowMs = DRAFT_RETRY_WINDOWS_MS[Math.min(attempts, DRAFT_RETRY_WINDOWS_MS.length - 1)];
-  return new Date(Date.now() + windowMs).toISOString();
 }
 
 console.log(`\n=== FASE A: Recolección global de ${config.sources.length} fuentes ===`);
 
 const allCandidates = []; // { source, item, initialKey }
+const runDiscoveryUrls = new Set();
+const runnableRescueItems = selectRunnableRescueItems(rescueQueue, { max: MAX_RESCUE_PER_RUN });
+metrics.rescueQueued = (rescueQueue.items || []).filter((item) => item.status === 'rescue-pending').length;
+
+for (const rescueItem of runnableRescueItems) {
+  const source = config.sources.find((item) => item.id === rescueItem.sourceId) || {
+    id: rescueItem.sourceId || 'rescue-backfill',
+    name: 'Rescate editorial',
+    mode: 'discovery-draft',
+    defaultCategory: rescueItem.category || 'Provincia',
+    location: rescueItem.location || ''
+  };
+  const canonicalDiscoveryUrl = canonicalizeNewsUrl(rescueItem.sourceUrl);
+  if (!canonicalDiscoveryUrl || runDiscoveryUrls.has(canonicalDiscoveryUrl)) continue;
+  runDiscoveryUrls.add(canonicalDiscoveryUrl);
+  const initialKey = hash(canonicalDiscoveryUrl);
+  rescueItem.lastSeenKey = initialKey;
+  allCandidates.push({
+    source,
+    item: {
+      link: rescueItem.sourceUrl,
+      title: rescueItem.title || '',
+      pubDate: rescueItem.publishedAt || '',
+      description: ''
+    },
+    initialKey,
+    legacyKey: initialKey,
+    fetchUrl: unwrapDiscoveryUrl(rescueItem.sourceUrl),
+    canonicalDiscoveryUrl,
+    rescueItem
+  });
+  metrics.rescueAttempted++;
+}
 
 await Promise.all(config.sources.map(async (source) => {
   metrics.sourcesConsulted++;
@@ -506,21 +572,33 @@ await Promise.all(config.sources.map(async (source) => {
   for (const item of items) {
     if (!item.link) continue;
     sourceHealth(source.id).detected++;
-    const initialKey = hash(item.link);
-    const seenItem = seen.items[initialKey];
+    metrics.candidatesDetected++;
+    const fetchUrl = unwrapDiscoveryUrl(item.link);
+    const canonicalDiscoveryUrl = canonicalizeNewsUrl(fetchUrl);
+    if (runDiscoveryUrls.has(canonicalDiscoveryUrl)) {
+      metrics.discardedDuplicate++;
+      metrics.duplicateExactUrl++;
+      continue;
+    }
+    runDiscoveryUrls.add(canonicalDiscoveryUrl);
+    const initialKey = hash(canonicalDiscoveryUrl);
+    const legacyKey = hash(item.link);
+    const seenItem = seen.items[initialKey] || seen.items[legacyKey];
 
     // Bloquear si ya fue publicado o marcado como duplicado definitivamente
     if (seenItem && ['published', 'duplicate'].includes(seenItem.status)) continue;
     // Si está en estado reintentable, verificar si está dentro de la ventana
     if (seenItem && !isRetryEligible(seenItem)) continue;
 
-    allCandidates.push({ source, item, initialKey });
+    allCandidates.push({ source, item, initialKey, legacyKey, fetchUrl, canonicalDiscoveryUrl });
   }
 }));
 
 console.log(`Candidatos pre-filtro de todas las fuentes: ${allCandidates.length}`);
-metrics.candidatesDetected = allCandidates.length;
+metrics.candidatesIngested = allCandidates.length;
 allCandidates.sort((a, b) => {
+  const rescuePriority = Number(Boolean(b.rescueItem)) - Number(Boolean(a.rescueItem));
+  if (rescuePriority !== 0) return rescuePriority;
   const recovery = serviceRecoveryScore(b) - serviceRecoveryScore(a);
   if (recovery !== 0) return recovery;
   const penalty = sourcePenalty(a.source) - sourcePenalty(b.source);
@@ -544,27 +622,33 @@ console.log(`\n=== FASE B: Extracción y ranking ===`);
 
 // Extraer contenido de cada candidato (en serie para no saturar)
 const extracted = [];
+const runMaterializedUrls = new Set();
+const runContentFingerprints = new Set();
 for (const candidate of candidatesToMaterialize) {
-  const { source, item, initialKey } = candidate;
+  const { source, item, initialKey, fetchUrl } = candidate;
   let article;
   try {
-    article = await materialize(item);
+    article = await materialize({ ...item, link: fetchUrl || item.link });
     sourceHealth(source.id).materialized++;
+    metrics.extractionSucceeded++;
     await sleep(300);
   } catch (error) {
     console.warn(`[${source.name}] Error extracción ${item.link}: ${error.message}`);
     metrics.extractErrors++;
-    const attempts = (seen.items[initialKey]?.attempts || 0) + 1;
+    const retry = buildRetryState({ previous: seen.items[initialKey], error, stage: 'extraction', maxAttempts: MAX_RETRY_ATTEMPTS });
+    recordFailure(retry);
     seen.items[initialKey] = {
+      ...retry,
       seenAt: new Date().toISOString(),
-      status: 'extract-error',
       source: source.id,
-      attempts,
-      lastAttemptAt: new Date().toISOString(),
-      nextRetryAt: getNextRetryAt(attempts),
-      lastError: error.message.slice(0, 200)
+      sourceUrl: fetchUrl || item.link,
+      title: item.title || ''
     };
     continue;
+  }
+
+  if (normalizeText(article.title || '').length < 15 && normalizeText(item.title || '').length >= 15) {
+    article = { ...article, title: item.title };
   }
 
   const finalUrl = article.finalUrl || item.link;
@@ -572,6 +656,28 @@ for (const candidate of candidatesToMaterialize) {
   const sourceValidation = validateArticleSource({ article, item, source, finalUrl });
   if (!sourceValidation.ok) {
     const reason = sourceValidation.errors.join(',');
+    const failure = classifySourceValidationErrors(sourceValidation.errors);
+    if (failure.retryable) {
+      const error = new Error(`Extracción reparable: ${reason}`);
+      const retry = buildRetryState({
+        previous: seen.items[initialKey],
+        error,
+        stage: 'extraction',
+        maxAttempts: MAX_RETRY_ATTEMPTS
+      });
+      retry.failureReason = reason;
+      recordFailure(retry);
+      metrics.extractErrors++;
+      seen.items[initialKey] = {
+        ...retry,
+        seenAt: new Date().toISOString(),
+        source: source.id,
+        sourceUrl: finalUrl,
+        title: article.title || item.title || '',
+        failureReason: reason
+      };
+      continue;
+    }
     console.log(`[${source.name}] Descartado por fuente invalida (${sourceValidation.errors.join(', ')}): ${sourceValidation.url}`);
     seen.items[initialKey] = {
       status: 'discarded-quality',
@@ -582,6 +688,15 @@ for (const candidate of candidatesToMaterialize) {
     recordQualityDiscard(reason, { sourceId: source.id });
     continue;
   }
+
+  const canonicalFinalUrl = canonicalizeNewsUrl(sourceValidation.url || finalUrl);
+  if (runMaterializedUrls.has(canonicalFinalUrl)) {
+    seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', reason: 'exact-url', source: source.id };
+    metrics.discardedDuplicate++;
+    metrics.duplicateExactUrl++;
+    continue;
+  }
+  runMaterializedUrls.add(canonicalFinalUrl);
 
   const currentTitle = (article.title || item.title || '').trim();
   if (isStaleDatedDiscoveryCandidate({
@@ -639,6 +754,22 @@ for (const candidate of candidatesToMaterialize) {
   }
   sourceHealth(source.id).freshCandidates++;
   metrics.freshCandidates++;
+  const publishedMatch = findLikelyPublishedStoryMatch({
+    title: currentTitle,
+    publishedAt: sourceRef.publishedAt || ''
+  }, publishedStories);
+  if (publishedMatch) {
+    seen.items[initialKey] = {
+      seenAt: new Date().toISOString(),
+      status: 'duplicate',
+      reason: 'published-event',
+      source: source.id,
+      matchedPublishedFile: publishedMatch.file || ''
+    };
+    metrics.discardedDuplicate++;
+    metrics.duplicatePublishedEvent++;
+    continue;
+  }
   const generatedEventKey = generateEventKey({
     facts,
     title: currentTitle,
@@ -652,7 +783,8 @@ for (const candidate of candidatesToMaterialize) {
   });
   if (eventKey !== generatedEventKey) metrics.pendingMatchedFromHistory++;
 
-  const canonicalKey = hash(sourceRef.url || finalUrl);
+  const canonicalKey = hash(canonicalFinalUrl);
+  if (candidate.rescueItem) candidate.rescueItem.lastSeenKey = canonicalKey;
 
   // Descartar si URL canónica ya vista como publicada
   const canonicalSeen = seen.items[canonicalKey];
@@ -666,13 +798,15 @@ for (const candidate of candidatesToMaterialize) {
   ) {
     seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
     metrics.discardedDuplicate++;
+    metrics.duplicateExactUrl++;
     continue;
   }
 
   // Descartar si URL ya existe en archivos publicados
-  if (existingUrls.has(finalUrl)) {
+  if (existingUrls.has(canonicalFinalUrl)) {
     seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
     metrics.discardedDuplicate++;
+    metrics.duplicateExactUrl++;
     continue;
   }
 
@@ -690,28 +824,19 @@ for (const candidate of candidatesToMaterialize) {
     continue;
   }
 
-  // Deduplicación por evento (acontecimiento)
-  if (isEventAlreadyPublished(currentTitle)) {
-    seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', source: source.id };
-    metrics.discardedDuplicate++;
-    continue;
-  }
-
   const bodyLength = (article.text || '').length;
-  if (bodyLength < 400) {
-    recordQualityDiscard('short-body', { sourceId: source.id });
-    const attempts = (seen.items[initialKey]?.attempts || 0) + 1;
-    seen.items[initialKey] = {
-      seenAt: new Date().toISOString(),
-      status: 'extract-error',
-      source: source.id,
-      attempts,
-      lastAttemptAt: new Date().toISOString(),
-      nextRetryAt: getNextRetryAt(attempts),
-      lastError: `Texto insuficiente: ${bodyLength} chars`
-    };
+  const contentFingerprint = createContentFingerprint({
+    title: currentTitle,
+    body: article.text,
+    publisherDomain: sourceRef.publisherDomain
+  });
+  if (contentFingerprint && runContentFingerprints.has(contentFingerprint)) {
+    seen.items[initialKey] = { seenAt: new Date().toISOString(), status: 'duplicate', reason: 'exact-content', source: source.id };
+    metrics.discardedDuplicate++;
+    metrics.duplicateExactContent++;
     continue;
   }
+  if (contentFingerprint) runContentFingerprints.add(contentFingerprint);
 
   extracted.push({
     source,
@@ -725,7 +850,8 @@ for (const candidate of candidatesToMaterialize) {
     title: currentTitle,
     isOfficial: source.mode === 'official-auto' || isOfficialDomain(finalUrl, config.officialDomains),
     pubDate,
-    bodyLength
+    bodyLength,
+    rescueItem: candidate.rescueItem || null
   });
   
   // Agregar al índice de eventos para deduplicar siguientes candidatos de la misma corrida
@@ -868,6 +994,7 @@ for (const [eventKey, group] of eventsByKey) {
     ? scoreCandidateNewsworthiness(base, { verification, byCategory: metrics.byCategory })
     : {};
   const priority = scoreCorroborationPriority({ base, verification, newsworthiness, existingEvent });
+  incrementMap(metrics.eventsByTerritory, newsworthiness.territory || 'unknown');
   eventContexts.push({
     eventKey,
     group,
@@ -1000,6 +1127,7 @@ for (const context of eventContexts) {
     verification,
     byCategory: metrics.byCategory
   });
+  incrementMap(metrics.verifiedByTerritory, baseCandidate.newsworthiness.territory || 'unknown');
   verifiedCandidates.push(baseCandidate);
 }
 
@@ -1010,31 +1138,6 @@ function editorialScore(candidate) {
     return candidate.newsworthiness.newsworthinessScore;
   }
   return editorialScoreShared(candidate, metrics.byCategory);
-
-  const now = Date.now();
-  const ageMs = now - (candidate.pubDate || new Date()).getTime();
-  const ageHours = ageMs / (1000 * 60 * 60);
-
-  // Recencia (0-40): decae linealmente en 48h
-  const recencyScore = Math.max(0, 40 - (ageHours / 48) * 40);
-
-  // Calidad de extracción (0-20): más texto = mejor
-  const bodyLen = candidate.bodyLength || 0;
-  const qualityScore = Math.min(20, (bodyLen / 2000) * 20);
-
-  // Relevancia local (0-20): fuentes fueguinas valen más
-  let localScore = 0;
-  const srcMode = candidate.source?.mode;
-  if (srcMode === 'official-auto') localScore = 20;
-  else if (candidate.source?.id?.startsWith('bing-')) localScore = 15;
-  else if (['infobae-tdf', 'perfil-tdf', 'clarin-tdf'].includes(candidate.source?.id)) localScore = 10;
-  else localScore = 5; // nacionales, mundo
-
-  // Bonus diversidad territorial (0-15): categoría no vista aún en este run
-  const cat = candidate.source?.defaultCategory;
-  const diversityBonus = metrics.byCategory[cat] ? 0 : 15;
-
-  return recencyScore + qualityScore + localScore + diversityBonus;
 }
 
 // Ordenar usando scoring editorial
@@ -1052,9 +1155,17 @@ if (verifiedCandidates.length > 0) {
   }));
 }
 
-// Calcular presupuesto IA por tipo de fuente
-const officialAiBudget = Math.ceil(MAX_AI_PER_RUN * OFFICIAL_AI_BUDGET_FRACTION);
-const discoveryAiBudget = MAX_AI_PER_RUN - officialAiBudget;
+// Reservar capacidad por tipo sin inmovilizar cupo cuando una clase no tiene demanda.
+const officialCandidateCount = verifiedCandidates.filter((candidate) => candidate.isOfficial).length;
+const discoveryCandidateCount = verifiedCandidates.length - officialCandidateCount;
+const aiBudget = allocateAiBudget({
+  maxAi: MAX_AI_PER_RUN,
+  officialCandidates: officialCandidateCount,
+  discoveryCandidates: discoveryCandidateCount,
+  officialFraction: OFFICIAL_AI_BUDGET_FRACTION
+});
+const officialAiBudget = aiBudget.officialBudget;
+const discoveryAiBudget = aiBudget.discoveryBudget;
 
 // Contar por fuente para respetar MAX_PER_SOURCE
 const publishedPerSource = {};
@@ -1105,27 +1216,47 @@ for (const candidate of verifiedCandidates) {
   const budget = isOfficial ? officialAiBudget : discoveryAiBudget;
   const used = isOfficial ? officialAiUsed : discoveryAiUsed;
   const totalUsed = officialAiUsed + discoveryAiUsed;
+  const previousState = seen.items[canonicalKey] || seen.items[initialKey] || {};
+  const cachedAi = previousState.aiResult || null;
 
-  const canPublish = totalUsed < MAX_AI_PER_RUN && used < budget;
-  if (!canPublish) metrics.discardedNoAiBudget++;
+  const canPublish = Boolean(cachedAi) || (totalUsed < MAX_AI_PER_RUN && used < budget);
+  if (!canPublish) {
+    metrics.discardedNoAiBudget++;
+    metrics.budgetDeferred++;
+    if (draftCount < MAX_DRAFTS_PER_RUN) {
+      await saveDraft(candidate, 'no-ai-budget', {
+        status: 'budget-deferred',
+        nextRetryAt: getNextRetryAt(0),
+        resumeFrom: 'ai'
+      });
+      draftCount++;
+      metrics.drafts++;
+    }
+    continue;
+  }
 
   if (canPublish) {
+    let ai = cachedAi;
+    let aiCompleted = Boolean(cachedAi);
     try {
-      if (isOfficial) officialAiUsed++;
-      else discoveryAiUsed++;
-      metrics.aiAttempts++;
-
-      const ai = await writeArticleWithModel({
-        sourceName: source.name,
-        sourceUrl: sourceRef.url || article.finalUrl,
-        sourceTitle: article.title || item.title,
-        sourceDescription: article.description || item.description,
-        sourceText: article.text,
-        defaultCategory: source.forceCategory || source.defaultCategory,
-        defaultLocation: source.location,
-        verifiedFacts: verification?.verifiedFacts || null
-      });
-      metrics.aiCalls++;
+      if (!ai) {
+        if (isOfficial) officialAiUsed++;
+        else discoveryAiUsed++;
+        metrics.aiAttempts++;
+        ai = await writeArticleWithModel({
+          sourceName: source.name,
+          sourceUrl: sourceRef.url || article.finalUrl,
+          sourceTitle: article.title || item.title,
+          sourceDescription: article.description || item.description,
+          sourceText: article.text,
+          defaultCategory: source.forceCategory || source.defaultCategory,
+          defaultLocation: source.location,
+          verifiedFacts: verification?.verifiedFacts || null
+        });
+        metrics.aiCalls++;
+      } else {
+        metrics.aiReused++;
+      }
 
       const factualValidation = validateArticleAgainstFacts(ai, verification || {});
       if (!factualValidation.ok) {
@@ -1134,9 +1265,11 @@ for (const candidate of verifiedCandidates) {
         validationError.mismatches = factualValidation.mismatches;
         throw validationError;
       }
+      aiCompleted = true;
 
       // Si la fuente tiene forceCategory, sobreescribir la categoría IA
       if (source.forceCategory) ai.category = source.forceCategory;
+      ai.importance = deriveEffectiveImportance(ai.importance, candidate.newsworthiness || {});
 
       // Si la fuente tiene minImportance, descartar si la IA le dio importancia menor
       if (source.minImportance && ai.importance < source.minImportance) {
@@ -1165,7 +1298,12 @@ for (const candidate of verifiedCandidates) {
       if (!publicationLimit.ok) {
         metrics.discardedPublicationLimit++;
         if (draftCount < MAX_DRAFTS_PER_RUN) {
-          await saveDraft(candidate, publicationLimit.reason);
+          await saveDraft(candidate, publicationLimit.reason, {
+            status: 'publication-deferred',
+            nextRetryAt: getNextRetryAt(0),
+            resumeFrom: 'publication',
+            aiResult: ai
+          });
           draftCount++;
           metrics.drafts++;
         }
@@ -1174,9 +1312,8 @@ for (const candidate of verifiedCandidates) {
 
       if (!PERSIST_OUTPUTS) {
         console.log(`[DIAGNOSTICO] Publicaria [${source.id}]: ${ai.title}`);
-        existingUrls.add(article.finalUrl);
+        existingUrls.add(canonicalizeNewsUrl(sourceRef.url || article.finalUrl));
         existingTitles.add(ai.title.toLowerCase());
-        publishedEventFingerprints.add(extractFingerprint(ai.title));
         publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
         sourceHealth(source.id).publicationContribution++;
         incrementMap(metrics.publishedByLane, getLane(verification?.editorialLane));
@@ -1247,9 +1384,8 @@ for (const candidate of verifiedCandidates) {
       }
 
       // Actualizar índice en memoria para deduplicar dentro del mismo run
-      existingUrls.add(article.finalUrl);
+      existingUrls.add(canonicalizeNewsUrl(sourceRef.url || article.finalUrl));
       existingTitles.add(ai.title.toLowerCase());
-      publishedEventFingerprints.add(extractFingerprint(ai.title));
 
       publishedPerSource[source.id] = (publishedPerSource[source.id] || 0) + 1;
       sourceHealth(source.id).publicationContribution++;
@@ -1282,7 +1418,7 @@ for (const candidate of verifiedCandidates) {
       continue;
 
     } catch (error) {
-      console.warn(`Falló redacción automática (${source.name}): ${error.message}`);
+      console.warn(`Falló etapa ${aiCompleted ? 'de publicación' : 'de redacción'} (${source.name}): ${error.message}`);
       if (error.code === 'BLOCKED_FACTUAL_MISMATCH' || error.message.includes('FACT_CHECK_FAILED') || error.message.includes('BLOCKED_FACTUAL_MISMATCH')) {
         metrics.factualValidationErrors++;
         seen.items[canonicalKey] = {
@@ -1296,27 +1432,32 @@ for (const candidate of verifiedCandidates) {
         continue; // descartar permanentemente
       }
 
-      metrics.modelErrors++;
+      if (aiCompleted) metrics.publicationErrors++;
+      else metrics.modelErrors++;
+      const retry = buildRetryState({
+        previous: previousState,
+        error,
+        stage: aiCompleted ? 'publication' : 'ai',
+        aiResult: aiCompleted ? ai : null,
+        maxAttempts: MAX_RETRY_ATTEMPTS
+      });
+      recordFailure(retry);
       seen.items[canonicalKey] = {
+        ...retry,
         seenAt: new Date().toISOString(),
-        status: 'model-error',
-        source: source.id,
-        lastError: error.message.slice(0, 200)
+        source: source.id
       };
       seen.items[initialKey] = seen.items[canonicalKey];
-      // Caer en borrador
+      if (retry.status === 'failed-retryable' && draftCount < MAX_DRAFTS_PER_RUN) {
+        await saveDraft(candidate, retry.failureReason, retry);
+        draftCount++;
+        metrics.drafts++;
+      }
     }
-  }
-
-  // Guardar como borrador (por falta de cupo IA o por error de modelo)
-  if (draftCount < MAX_DRAFTS_PER_RUN) {
-    await saveDraft(candidate, canPublish ? 'model-error' : 'no-ai-budget');
-    draftCount++;
-    metrics.drafts++;
   }
 }
 
-async function saveDraft(candidate, reason) {
+async function saveDraft(candidate, reason, state = {}) {
   const { source, item, article, initialKey, canonicalKey, isOfficial } = candidate;
   const title = article.title || item.title || 'nota-detectada';
   const pubDate = safeDate(article.date || item.pubDate || new Date());
@@ -1331,8 +1472,9 @@ async function saveDraft(candidate, reason) {
     mode: isOfficial ? 'official-review' : 'discovery-review'
   }), 'utf8');
   seen.items[canonicalKey] = {
+    ...state,
     seenAt: new Date().toISOString(),
-    status: 'draft',
+    status: state.status || 'draft',
     source: source.id,
     draftReason: reason,
     file: path.relative(ROOT, target)
@@ -1345,6 +1487,31 @@ const agenda = buildEditorialAgenda(events, {
   verifiedCandidates,
   metrics
 });
+
+for (const item of runnableRescueItems) {
+  const state = seen.items[item.lastSeenKey] || {};
+  if (!state.status) continue;
+  item.attempts = Number(state.attempts) || Number(item.attempts) || 0;
+  item.lastAttemptAt = state.lastAttemptAt || new Date().toISOString();
+  item.lastError = state.lastError || '';
+  item.nextRetryAt = state.nextRetryAt || null;
+  item.resumeFrom = state.resumeFrom || item.resumeFrom || 'extraction';
+  if (state.status === 'published') {
+    item.status = 'rescued';
+    item.completedAt = new Date().toISOString();
+    item.publishedFile = state.file || '';
+    metrics.rescueSucceeded++;
+  } else if (state.status === 'duplicate') {
+    item.status = 'duplicate';
+    item.completedAt = new Date().toISOString();
+  } else if (['failed-final', 'discarded-quality', 'discarded-editorial', 'conflicting-sources'].includes(state.status)) {
+    item.status = 'rejected-terminal';
+    item.completedAt = new Date().toISOString();
+    metrics.rescueExhausted++;
+  } else {
+    item.status = state.status === 'pending-verification' ? 'rescue-pending' : state.status;
+  }
+}
 metrics.agendaStories = agenda.summary.totalStories;
 metrics.agendaTop = agenda.summary.topStories.slice(0, 5);
 metrics.agendaInvalidStories = agenda.summary.invalidStories || 0;
@@ -1371,6 +1538,7 @@ summarizeLatency();
 if (PERSIST_OUTPUTS) {
   await saveSeen(seen);
   await saveEvents(events);
+  await saveRescueQueue(rescueQueue);
   await saveEditorialAgenda(agenda);
   await saveRunMetrics(metrics, {
     maxAiPerRun: MAX_AI_PER_RUN,
@@ -1378,6 +1546,9 @@ if (PERSIST_OUTPUTS) {
     officialAiBudget,
     discoveryAiUsed,
     discoveryAiBudget,
+    aiConcurrency: 1,
+    maxRetryAttempts: MAX_RETRY_ATTEMPTS,
+    maxRescuePerRun: MAX_RESCUE_PER_RUN,
     targetPublishedPerRun: TARGET_PUBLISHED_PER_RUN,
     effectiveRunTarget,
     maxNormalPublishedPerRun: MAX_NORMAL_PUBLISHED_PER_RUN,
@@ -1414,6 +1585,7 @@ console.log(`
   Conflictos: ${metrics.conflicting}
   Bloqueos de validacion factual: ${metrics.factualValidationErrors}
   Errores reales de modelo: ${metrics.modelErrors}
+  Errores posteriores de publicación: ${metrics.publicationErrors}
   Errores de imagen: ${metrics.imageErrors}
   Noticias publicadas: ${metrics.published}
   Historias en agenda: ${metrics.agendaStories}
@@ -1421,6 +1593,10 @@ console.log(`
   Descartados por cupo editorial de corrida: ${metrics.discardedPublicationLimit}
   Borradores generados: ${metrics.drafts}
   IA intentada/respondida: ${metrics.aiAttempts}/${metrics.aiCalls} de ${MAX_AI_PER_RUN} (oficial: ${officialAiUsed}/${officialAiBudget}, descubrimiento: ${discoveryAiUsed}/${discoveryAiBudget})
+  IA reutilizada sin nueva llamada: ${metrics.aiReused}
+  Diferidos por presupuesto: ${metrics.budgetDeferred}
+  Fallos reintentables/terminales: ${metrics.failedRetryable}/${metrics.failedTerminal}
+  Rescate intentado/exitoso/agotado: ${metrics.rescueAttempted}/${metrics.rescueSucceeded}/${metrics.rescueExhausted}
   Cupo editorial: objetivo ${TARGET_PUBLISHED_PER_RUN}, maximo normal ${MAX_NORMAL_PUBLISHED_PER_RUN}, extra desde importancia ${EXTRA_SLOT_MIN_IMPORTANCE}
   Por categoría: ${categoryStr}
 `);
@@ -1431,11 +1607,30 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
   discardedEvergreen: metrics.discardedEvergreen,
   verifiedByLane: metrics.verifiedByLane,
   pendingByLane: metrics.pendingByLane,
+  eventsByTerritory: metrics.eventsByTerritory,
+  verifiedByTerritory: metrics.verifiedByTerritory,
   fastPendingAudit: metrics.fastPendingAudit,
   freshCandidates: metrics.freshCandidates,
   staleDiscarded: metrics.staleDiscarded,
   sourceHealth: metrics.sourceHealth,
   sourceDeprioritized: metrics.sourceDeprioritized,
+  deduplication: {
+    exactUrl: metrics.duplicateExactUrl,
+    exactContent: metrics.duplicateExactContent,
+    publishedEvent: metrics.duplicatePublishedEvent
+  },
+  retryAndRescue: {
+    budgetDeferred: metrics.budgetDeferred,
+    failedRetryable: metrics.failedRetryable,
+    failedRetryableByReason: metrics.failedRetryableByReason,
+    failedTerminal: metrics.failedTerminal,
+    failedTerminalByReason: metrics.failedTerminalByReason,
+    aiReused: metrics.aiReused,
+    rescueQueued: metrics.rescueQueued,
+    rescueAttempted: metrics.rescueAttempted,
+    rescueSucceeded: metrics.rescueSucceeded,
+    rescueExhausted: metrics.rescueExhausted
+  },
   publishedByLane: metrics.publishedByLane,
   pendingMatchedFromHistory: metrics.pendingMatchedFromHistory,
   corroboration: {
@@ -1516,6 +1711,7 @@ function explainNoMorePublished(currentMetrics, extra = {}) {
   if (currentMetrics.discardedPublicationLimit > 0) reasons.push(`${currentMetrics.discardedPublicationLimit} candidato(s) quedaron por cupo editorial de corrida`);
   if (currentMetrics.factualValidationErrors > 0) reasons.push(`${currentMetrics.factualValidationErrors} candidato(s) bloqueados por validacion factual`);
   if (currentMetrics.modelErrors > 0) reasons.push(`${currentMetrics.modelErrors} error(es) reales de modelo`);
+  if (currentMetrics.publicationErrors > 0) reasons.push(`${currentMetrics.publicationErrors} error(es) posteriores de publicacion quedaron para retry`);
   if ((extra.totalCandidatesBeforeLimit || 0) > (extra.candidatesMaterialized || 0)) {
     reasons.push(`${extra.totalCandidatesBeforeLimit - extra.candidatesMaterialized} candidato(s) no se materializaron por limite anti-timeout`);
   }

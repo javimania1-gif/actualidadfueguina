@@ -61,7 +61,7 @@ function factText(facts = {}, title = '', category = '') {
 export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {}) {
   const eventType = facts.eventType || 'general';
   const text = factText(facts, title, category);
-  if (eventType === 'sports-result' || hasAny(text, ['deportes', 'futbol', 'mundial', 'club'])) return 'deportes';
+  if (eventType === 'sports-result' || hasAny(text, ['deportes', 'futbol', 'mundial de futbol', 'copa del mundo', 'partido', 'seleccion', 'club'])) return 'deportes';
   if (eventType === 'crime') return 'policiales';
   if (['international-conflict', 'territorial-sovereignty', 'defense'].includes(eventType)) return 'politica';
   if (eventType === 'weather' || eventType === 'weather-forecast' || eventType === 'service') return 'servicios';
@@ -106,6 +106,7 @@ export function inferAgendaTerritory({ facts = {}, source = {}, category = '', t
     ...(facts.countries || [])
   ].join(' '));
   if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
+  if (/\bargentina\b/.test(text) && /\b(nacionales|deportes|seleccion|mundial|copa del mundo)\b/.test(text)) return 'Nacionales';
   if (/\b(cdmx|mexico|mexico df|colombia|cuba|iran|teheran|moscu|ucrania|rusia|estados unidos|reino unido|inglaterra|francia|alemania|italia|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(text)) return 'Mundo';
   if (/\bmundo\b|\binternacional\b/.test(text)) return 'Mundo';
   if (/\b(nacionales|argentina|milei|fmi|villa allende|chaco|cordoba|buenos aires|congreso|senado|diputados)\b/.test(text)) return 'Nacionales';
@@ -142,6 +143,35 @@ function scoreLocalRelevance(territory) {
   if (territory === 'Nacionales') return 12;
   if (territory === 'Mundo') return 7;
   return 4;
+}
+
+export function scoreImpactMagnitude({ facts = {}, title = '', topic = '', territory = '' } = {}) {
+  const eventType = facts.eventType || 'general';
+  const text = normalizeText(factText(facts, title));
+  let score = 0;
+
+  if (eventType === 'international-conflict') score = 25;
+  else if (eventType === 'election') score = 23;
+  else if (eventType === 'casualty') score = 21;
+  else if (eventType === 'sports-result') {
+    score = /\b(argentina|seleccion|mundial|copa america|copa del mundo|final)\b/.test(text) ? 25 : 12;
+  } else if (['legislative', 'legal-policy'].includes(eventType)) {
+    score = /\b(presidente|congreso|senado|diputados|decreto|reforma|corte suprema)\b/.test(text) ? 20 : 8;
+  } else if (eventType === 'crime') {
+    score = /\b(masacre|atentado|homicidio multiple|narcotrafico internacional)\b/.test(text) ? 21 : 5;
+  }
+
+  if (/\b(guerra|invasion|ataque militar|misiles|escalada militar|catastrofe|terremoto|tsunami|crisis mundial)\b/.test(text)) {
+    score = Math.max(score, 23);
+  }
+  if (/\b(elecciones presidenciales|ballotage|segunda vuelta|fallecio|murio)\b/.test(text)) {
+    score = Math.max(score, 21);
+  }
+  if (territory === 'Nacionales' && ['politica', 'economia'].includes(topic) && /\b(nacional|argentina|gobierno|presidente)\b/.test(text)) {
+    score = Math.max(score, 16);
+  }
+
+  return clamp(score, 0, 25);
 }
 
 function scoreServiceValue({ topic = '', eventType = '', facts = {} }) {
@@ -212,6 +242,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
   const freshness = freshnessFromHours(hoursOld(candidate.pubDate || candidate.article?.date || publicationDate || now, now), lane);
   const publicInterestScore = scorePublicInterest({ facts, topic, eventType });
   const localRelevanceScore = scoreLocalRelevance(territory);
+  const impactMagnitudeScore = scoreImpactMagnitude({ facts, title, topic, territory });
   const serviceValueScore = scoreServiceValue({ topic, eventType, facts });
   const socialPotentialScore = scoreSocialPotential({ topic, facts, territory });
   const searchPotentialScore = scoreSearchPotential({ topic, facts, territory });
@@ -220,6 +251,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
   let newsworthinessScore = Math.round(
     publicInterestScore +
     localRelevanceScore +
+    impactMagnitudeScore +
     serviceValueScore +
     socialPotentialScore +
     searchPotentialScore +
@@ -227,8 +259,8 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     sourceStrengthScore +
     diversityBonus
   );
-  if (territory === 'Mundo' && publicInterestScore < 18) newsworthinessScore = Math.min(newsworthinessScore - 8, 55);
-  if (territory === 'Nacionales' && publicInterestScore < 16) newsworthinessScore = Math.min(newsworthinessScore - 4, 60);
+  if (territory === 'Mundo' && impactMagnitudeScore < 18) newsworthinessScore = Math.min(newsworthinessScore - 8, 55);
+  if (territory === 'Nacionales' && impactMagnitudeScore < 16) newsworthinessScore = Math.min(newsworthinessScore - 4, 60);
   newsworthinessScore = clamp(newsworthinessScore);
 
   return {
@@ -241,6 +273,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     sourceTiers: unique(sourceRefs.map((ref) => ref.tier)),
     publicInterestScore,
     localRelevanceScore,
+    impactMagnitudeScore,
     serviceValueScore,
     socialPotentialScore,
     searchPotentialScore,
@@ -249,6 +282,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     scoreBreakdown: {
       publicInterest: publicInterestScore,
       localRelevance: localRelevanceScore,
+      impactMagnitude: impactMagnitudeScore,
       serviceValue: serviceValueScore,
       socialPotential: socialPotentialScore,
       searchPotential: searchPotentialScore,
@@ -320,6 +354,7 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
     freshness: score.freshness,
     publicInterestScore: score.publicInterestScore,
     localRelevanceScore: score.localRelevanceScore,
+    impactMagnitudeScore: score.impactMagnitudeScore,
     serviceValueScore: score.serviceValueScore,
     socialPotentialScore: score.socialPotentialScore,
     searchPotentialScore: score.searchPotentialScore,

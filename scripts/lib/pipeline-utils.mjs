@@ -1,3 +1,5 @@
+import crypto from 'node:crypto';
+
 export const DRAFT_RETRY_WINDOWS_MS = [
   3 * 60 * 60 * 1000,
   6 * 60 * 60 * 1000,
@@ -7,6 +9,172 @@ export const DRAFT_RETRY_WINDOWS_MS = [
 export const STALE_AFTER_MS = 48 * 60 * 60 * 1000;
 export const HARD_NEWS_MAX_AGE_MS = 36 * 60 * 60 * 1000;
 export const INSTITUTIONAL_MAX_AGE_MS = 72 * 60 * 60 * 1000;
+export const MAX_RETRY_ATTEMPTS = 3;
+
+const TRACKING_PARAMS = new Set([
+  'fbclid', 'gclid', 'dclid', 'msclkid', 'mc_cid', 'mc_eid', 'ref', 'ref_src',
+  'igshid'
+]);
+
+const EVENT_TITLE_STOPWORDS = new Set([
+  'que', 'con', 'para', 'por', 'una', 'uno', 'del', 'los', 'las', 'sus', 'fue',
+  'son', 'este', 'esta', 'como', 'desde', 'sobre', 'entre', 'ante', 'tras', 'hacia',
+  'portal', 'noticias', 'actualidad'
+]);
+
+export function unwrapDiscoveryUrl(value) {
+  try {
+    const parsed = new URL(String(value || ''));
+    const host = parsed.hostname.toLowerCase().replace(/^www\./, '');
+    if (host === 'bing.com' && /\/news\/apiclick\.aspx$/i.test(parsed.pathname)) {
+      const target = parsed.searchParams.get('url');
+      if (/^https?:\/\//i.test(target || '')) return target;
+    }
+    return parsed.toString();
+  } catch {
+    return String(value || '');
+  }
+}
+
+export function canonicalizeNewsUrl(value) {
+  try {
+    const parsed = new URL(unwrapDiscoveryUrl(value));
+    parsed.hash = '';
+    parsed.hostname = parsed.hostname.toLowerCase().replace(/^www\./, '');
+    if (parsed.protocol === 'http:' && !/^(localhost|127\.0\.0\.1)$/.test(parsed.hostname)) {
+      parsed.protocol = 'https:';
+    }
+    for (const key of [...parsed.searchParams.keys()]) {
+      if (key.toLowerCase().startsWith('utm_') || TRACKING_PARAMS.has(key.toLowerCase())) {
+        parsed.searchParams.delete(key);
+      }
+    }
+    const sortedParams = [...parsed.searchParams.entries()].sort(([a], [b]) => a.localeCompare(b));
+    parsed.search = '';
+    for (const [key, val] of sortedParams) parsed.searchParams.append(key, val);
+    parsed.pathname = parsed.pathname
+      .replace(/\/{2,}/g, '/')
+      .replace(/\/(?:amp|amp\/?)$/i, '')
+      .replace(/\/$/, '') || '/';
+    return parsed.toString();
+  } catch {
+    return String(value || '').trim();
+  }
+}
+
+export function createContentFingerprint({ title = '', body = '', publisherDomain = '' } = {}) {
+  const normalizedTitle = normalizeText(title);
+  const normalizedBody = normalizeText(body).slice(0, 12000);
+  if (!normalizedTitle || normalizedBody.length < 200) return '';
+  const digest = crypto.createHash('sha256').update(`${normalizedTitle}\n${normalizedBody}`).digest('hex').slice(0, 20);
+  return `${String(publisherDomain || 'unknown').toLowerCase()}|${digest}`;
+}
+
+function eventTitleWords(title = '') {
+  return new Set(normalizeText(title).replace(/[.-]/g, ' ')
+    .split(/\s+/)
+    .filter((word) => word.length >= 3 && !EVENT_TITLE_STOPWORDS.has(word)));
+}
+
+function dateDistanceHours(left, right) {
+  const a = new Date(left || 0).getTime();
+  const b = new Date(right || 0).getTime();
+  if (!Number.isFinite(a) || !Number.isFinite(b) || !a || !b) return null;
+  return Math.abs(a - b) / (60 * 60 * 1000);
+}
+
+export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '' } = {}, publishedStories = []) {
+  const words = eventTitleWords(title);
+  if (words.size < 4) return null;
+  const numbers = new Set(normalizeText(title).match(/\b\d+(?:[.,]\d+)?\b/g) || []);
+
+  for (const story of publishedStories) {
+    const ageDistance = dateDistanceHours(publishedAt, story.sourcePublishedAt || story.publishedAt);
+    if (ageDistance === null || ageDistance > 48) continue;
+    const otherWords = eventTitleWords(story.sourceTitle || story.title || '');
+    if (otherWords.size < 4) continue;
+    const intersection = [...words].filter((word) => otherWords.has(word)).length;
+    const coverage = intersection / Math.min(words.size, otherWords.size);
+    if (intersection < 4 || coverage < 0.4) continue;
+
+    const otherNumbers = new Set(normalizeText(story.sourceTitle || story.title || '').match(/\b\d+(?:[.,]\d+)?\b/g) || []);
+    if (numbers.size || otherNumbers.size) {
+      const sameNumbers = numbers.size === otherNumbers.size && [...numbers].every((value) => otherNumbers.has(value));
+      if (!sameNumbers) continue;
+    }
+    return story;
+  }
+  return null;
+}
+
+export function allocateAiBudget({ maxAi = 0, officialCandidates = 0, discoveryCandidates = 0, officialFraction = 0.5 } = {}) {
+  const max = Math.max(0, Math.floor(Number(maxAi) || 0));
+  const officialDemand = Math.max(0, Math.floor(Number(officialCandidates) || 0));
+  const discoveryDemand = Math.max(0, Math.floor(Number(discoveryCandidates) || 0));
+  const reservedOfficial = Math.min(officialDemand, Math.ceil(max * Math.max(0, Math.min(1, officialFraction))));
+  let officialBudget = reservedOfficial;
+  let discoveryBudget = Math.min(discoveryDemand, max - officialBudget);
+  let remaining = max - officialBudget - discoveryBudget;
+
+  const discoveryOverflow = Math.min(remaining, Math.max(0, discoveryDemand - discoveryBudget));
+  discoveryBudget += discoveryOverflow;
+  remaining -= discoveryOverflow;
+  officialBudget += Math.min(remaining, Math.max(0, officialDemand - officialBudget));
+
+  return { maxAi: max, officialBudget, discoveryBudget };
+}
+
+export function deriveEffectiveImportance(aiImportance = 5, newsworthiness = {}) {
+  const current = Math.max(1, Math.min(10, Number(aiImportance) || 5));
+  const territory = newsworthiness.territory || '';
+  const magnitude = Number(newsworthiness.impactMagnitudeScore || 0);
+  if (!['Nacionales', 'Mundo'].includes(territory) || magnitude < 18) return current;
+  const score = Number(newsworthiness.newsworthinessScore || 0);
+  const deterministicFloor = score >= 90 ? 9 : score >= 80 ? 8 : score >= 70 ? 7 : current;
+  return Math.max(current, deterministicFloor);
+}
+
+export function classifyPipelineError(error) {
+  const message = String(error?.message || error || 'unknown-error');
+  if (/BLOCKED_FACTUAL_MISMATCH|FACT_CHECK_FAILED/i.test(message)) {
+    return { retryable: false, reason: 'factual-validation' };
+  }
+  const httpStatus = Number(message.match(/HTTP\s+(\d{3})/i)?.[1] || 0);
+  if (httpStatus && httpStatus < 500 && ![408, 409, 425, 429].includes(httpStatus)) {
+    return { retryable: false, reason: `http-${httpStatus}` };
+  }
+  if (httpStatus === 429) return { retryable: true, reason: 'rate-limit' };
+  if (httpStatus >= 500) return { retryable: true, reason: 'http-5xx' };
+  if (/abort|timeout|timed out/i.test(message)) return { retryable: true, reason: 'timeout' };
+  if (/JSON|estructura|fetch|network|socket|ECONN|ENOTFOUND/i.test(message)) return { retryable: true, reason: 'transient-provider' };
+  return { retryable: true, reason: 'temporary-error' };
+}
+
+export function classifySourceValidationErrors(errors = []) {
+  const recoverable = new Set(['short-body', 'weak-title', 'title-body-mismatch']);
+  const reasons = [...new Set(errors.filter(Boolean))];
+  return {
+    retryable: reasons.length > 0 && reasons.every((reason) => recoverable.has(reason)),
+    reasons
+  };
+}
+
+export function buildRetryState({ previous = {}, error, stage = 'processing', now = Date.now(), maxAttempts = MAX_RETRY_ATTEMPTS, aiResult = null } = {}) {
+  const classification = classifyPipelineError(error);
+  const attempts = (Number(previous.attempts) || 0) + 1;
+  const exhausted = !classification.retryable || attempts >= maxAttempts;
+  const state = {
+    status: exhausted ? 'failed-final' : 'failed-retryable',
+    attempts,
+    lastAttemptAt: new Date(now).toISOString(),
+    lastError: String(error?.message || error || '').slice(0, 300),
+    failureReason: classification.reason,
+    resumeFrom: stage
+  };
+  if (!exhausted) state.nextRetryAt = getNextRetryAt(Math.max(0, attempts - 1), now);
+  if (aiResult) state.aiResult = aiResult;
+  return state;
+}
 
 export const GENERIC_TITLE_WORDS = new Set([
   'noticias', 'inicio', 'home', 'bienvenido', 'portada', 'hoy',
@@ -79,7 +247,7 @@ export function isRetryEligible(seenItem, now = Date.now()) {
   if (seenItem.status === 'discarded-editorial') {
     return isRecoverableEditorialDiscard(seenItem, now);
   }
-  if (['published', 'duplicate', 'stale'].includes(seenItem.status)) {
+  if (['published', 'duplicate', 'stale', 'failed-final'].includes(seenItem.status)) {
     return false;
   }
   if (![
@@ -87,7 +255,11 @@ export function isRetryEligible(seenItem, now = Date.now()) {
     'extract-error',
     'model-error',
     'temporary-error',
-    'pending-verification'
+    'pending-verification',
+    'failed-retryable',
+    'budget-deferred',
+    'publication-deferred',
+    'rescue-pending'
   ].includes(seenItem.status)) {
     return false;
   }

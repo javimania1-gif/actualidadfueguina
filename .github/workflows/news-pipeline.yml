@@ -31,7 +31,9 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
       AF_MODEL: openai/gpt-4o-mini
       AF_AI_TIMEOUT_MS: '45000'
-      AF_MAX_AI_PER_RUN: '10'
+      AF_MAX_AI_PER_RUN: '16'
+      AF_MAX_RETRY_ATTEMPTS: '3'
+      AF_MAX_RESCUE_PER_RUN: '4'
       AF_MAX_DRAFTS_PER_RUN: '10'
       AF_MAX_MATERIALIZE_PER_RUN: '48'
       AF_MAX_PER_SOURCE: '2'
@@ -80,7 +82,7 @@ jobs:
         run: |
           git config user.name "Actualidad Fueguina Bot"
           git config user.email "bot@actualidadfueguina.com.ar"
-          git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json data/events.json data/sources-health.json data/news-run-metrics.json data/editorial-agenda.json
+          git add src/content/noticias src/content/borradores public/uploads/auto data/seen.json data/events.json data/sources-health.json data/news-run-metrics.json data/editorial-agenda.json data/news-rescue-queue.json
 
           if git diff --cached --quiet; then
             echo "No hay novedades para guardar."

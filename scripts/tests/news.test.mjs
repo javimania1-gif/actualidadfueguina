@@ -8,7 +8,16 @@ import {
   canPublishWithinRunLimit,
   isStaleRoutineWeatherForecast,
   isStaleDatedDiscoveryCandidate,
-  classifyCandidateFreshness
+  classifyCandidateFreshness,
+  allocateAiBudget,
+  buildRetryState,
+  canonicalizeNewsUrl,
+  classifyPipelineError,
+  classifySourceValidationErrors,
+  createContentFingerprint,
+  deriveEffectiveImportance,
+  findLikelyPublishedStoryMatch,
+  unwrapDiscoveryUrl
 } from '../lib/pipeline-utils.mjs';
 import {
   extractFacts,
@@ -32,6 +41,7 @@ import {
   scoreCorroborationPriority
 } from '../lib/corroboration-utils.mjs';
 import { summarizeEditorialLatency } from '../lib/latency-utils.mjs';
+import { selectRescueBackfillCandidates, selectRunnableRescueItems } from '../lib/rescue-utils.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -95,6 +105,115 @@ test('deduplicacion editorial solo compara contra eventos publicados', () => {
     isEventAlreadyPublished('Productores locales reciben una nueva capacitacion alimentaria', published),
     false
   );
+});
+
+test('canonicaliza URL exacta, tracking, fragmento, slash y AMP sin perder parametros editoriales', () => {
+  const canonical = canonicalizeNewsUrl('http://www.ejemplo.com/notas/hecho/amp/?utm_source=facebook&article=42#comentarios');
+  assert.equal(canonical, 'https://ejemplo.com/notas/hecho?article=42');
+  assert.equal(
+    canonicalizeNewsUrl('https://ejemplo.com/notas/hecho?article=42&fbclid=abc'),
+    canonical
+  );
+  assert.notEqual(
+    canonicalizeNewsUrl('https://ejemplo.com/notas/hecho?article=43'),
+    canonical
+  );
+  assert.notEqual(
+    canonicalizeNewsUrl('https://ejemplo.com/notas/hecho?c=1'),
+    canonicalizeNewsUrl('https://ejemplo.com/notas/hecho?c=2')
+  );
+});
+
+test('desenvuelve URL de Bing antes de extracción y deduplicación', () => {
+  const target = 'https://medio.com/noticia/123';
+  const bing = `http://www.bing.com/news/apiclick.aspx?url=${encodeURIComponent(target)}&utm_source=x`;
+  assert.equal(unwrapDiscoveryUrl(bing), target);
+  assert.equal(canonicalizeNewsUrl(bing), target);
+});
+
+test('deduplicación de contenido exige mismo medio y contenido exacto', () => {
+  const body = 'Texto periodístico confirmado '.repeat(30);
+  const first = createContentFingerprint({ title: 'Tolhuin abrió nuevas inscripciones', body, publisherDomain: 'medio-a.com' });
+  const same = createContentFingerprint({ title: 'Tolhuin abrió nuevas inscripciones', body, publisherDomain: 'medio-a.com' });
+  const otherBody = createContentFingerprint({ title: 'Tolhuin abrió nuevas inscripciones', body: `${body} con información adicional`, publisherDomain: 'medio-a.com' });
+  const otherPublisher = createContentFingerprint({ title: 'Tolhuin abrió nuevas inscripciones', body, publisherDomain: 'medio-b.com' });
+  assert.equal(first, same);
+  assert.notEqual(first, otherBody);
+  assert.notEqual(first, otherPublisher);
+});
+
+test('detecta el duplicado publicado real del vuelo GOL sin fusionar cifras incompatibles', () => {
+  const published = [{
+    title: 'Inauguración del vuelo San Pablo-Ushuaia potencia el turismo en Tierra del Fuego',
+    sourcePublishedAt: '2026-07-09T15:10:00Z',
+    file: 'vuelo-original.md'
+  }];
+  const match = findLikelyPublishedStoryMatch({
+    title: 'Se inauguró el vuelo Gol entre San Pablo y Ushuaia',
+    publishedAt: '2026-07-10T13:34:45Z'
+  }, published);
+  assert.equal(match?.file, 'vuelo-original.md');
+  assert.equal(findLikelyPublishedStoryMatch({
+    title: 'Se inauguró el vuelo Gol entre San Pablo y Ushuaia'
+  }, published), null);
+  assert.equal(findLikelyPublishedStoryMatch({
+    title: 'Vuelo 815 entre San Pablo y Ushuaia fue reprogramado',
+    publishedAt: '2026-07-10T13:34:45Z'
+  }, [{ ...published[0], title: 'Vuelo 712 entre San Pablo y Ushuaia fue reprogramado' }]), null);
+});
+
+test('presupuesto IA presta la reserva oficial no demandada y amplía capacidad real', () => {
+  assert.deepEqual(
+    allocateAiBudget({ maxAi: 16, officialCandidates: 0, discoveryCandidates: 25, officialFraction: 0.5 }),
+    { maxAi: 16, officialBudget: 0, discoveryBudget: 16 }
+  );
+  assert.deepEqual(
+    allocateAiBudget({ maxAi: 16, officialCandidates: 2, discoveryCandidates: 20, officialFraction: 0.5 }),
+    { maxAi: 16, officialBudget: 2, discoveryBudget: 14 }
+  );
+});
+
+test('fallos transitorios tienen backoff y máximo; errores HTTP terminales no entran en loop', () => {
+  const now = new Date('2026-07-10T12:00:00Z').getTime();
+  assert.equal(classifyPipelineError(new Error('GitHub Models HTTP 429: rate limit')).reason, 'rate-limit');
+  assert.equal(classifyPipelineError(new Error('HTTP 404 en https://medio.test/a')).retryable, false);
+  const first = buildRetryState({ error: new Error('request timeout'), stage: 'ai', now, maxAttempts: 3 });
+  assert.equal(first.status, 'failed-retryable');
+  assert.equal(first.attempts, 1);
+  assert.equal(first.nextRetryAt, '2026-07-10T15:00:00.000Z');
+  const exhausted = buildRetryState({ previous: { attempts: 2 }, error: new Error('request timeout'), stage: 'ai', now, maxAttempts: 3 });
+  assert.equal(exhausted.status, 'failed-final');
+  assert.equal(exhausted.nextRetryAt, undefined);
+});
+
+test('fallos de extracción reparables no relajan homepage ni listing URL', () => {
+  assert.equal(classifySourceValidationErrors(['short-body']).retryable, true);
+  assert.equal(classifySourceValidationErrors(['weak-title', 'title-body-mismatch']).retryable, true);
+  assert.equal(classifySourceValidationErrors(['listing-url']).retryable, false);
+  assert.equal(classifySourceValidationErrors(['homepage', 'short-body']).retryable, false);
+});
+
+test('reintento de etapa posterior conserva IA validada y no reabre publicados o duplicados', () => {
+  const aiResult = { title: 'Nota validada', body: 'Contenido', importance: 8 };
+  const retry = buildRetryState({ error: new Error('storage timeout'), stage: 'publication', aiResult, maxAttempts: 3 });
+  assert.deepEqual(retry.aiResult, aiResult);
+  assert.equal(retry.resumeFrom, 'publication');
+  assert.equal(isRetryEligible({ ...retry, nextRetryAt: new Date(Date.now() - 1000).toISOString() }), true);
+  assert.equal(isRetryEligible({ status: 'published' }), false);
+  assert.equal(isRetryEligible({ status: 'duplicate' }), false);
+});
+
+test('backfill rescata solo registros recientes, filtrados y no publicados', () => {
+  const now = new Date('2026-07-10T12:00:00Z').getTime();
+  const records = [
+    { title: 'Reciente', sourceUrl: 'https://medio.test/a?utm_source=x', publishedAt: '2026-07-10T08:00:00Z', status: 'draft', reason: 'no-ai-budget' },
+    { title: 'Vieja', sourceUrl: 'https://medio.test/b', publishedAt: '2026-06-01T08:00:00Z', status: 'draft', reason: 'no-ai-budget' },
+    { title: 'Terminal', sourceUrl: 'https://medio.test/c', publishedAt: '2026-07-10T08:00:00Z', status: 'failed-final' }
+  ];
+  const selected = selectRescueBackfillCandidates({ records, now, sinceHours: 72, max: 5, reason: 'no-ai-budget' });
+  assert.equal(selected.length, 1);
+  assert.equal(selected[0].sourceUrl, 'https://medio.test/a');
+  assert.equal(selectRunnableRescueItems({ items: [{ status: 'rescue-pending' }, { status: 'failed-final' }] }, { max: 4 }).length, 1);
 });
 
 test('pronosticos ordinarios de distintas ciudades agrupan en una nota provincial diaria', () => {
@@ -304,6 +423,68 @@ test('newsworthiness prioriza historia local util frente a nacional menor', () =
   assert.equal(local.topic, 'agenda');
   assert.equal(local.territory, 'Tolhuin');
   assert(local.newsworthinessScore > nationalMinor.newsworthinessScore);
+});
+
+test('selección abre vía independiente para alto impacto nacional, mundial y deportivo', () => {
+  const worldConflict = scoreCandidateNewsworthiness({
+    title: 'Escalada militar internacional: nuevos ataques con misiles agravan la guerra',
+    facts: { eventType: 'international-conflict', countries: ['Iran', 'Estados Unidos'], rawSummary: 'Una escalada militar de alcance mundial.' },
+    source: { mode: 'discovery-draft', defaultCategory: 'Mundo' },
+    sourceRef: { tier: 'B', publisherDomain: 'medio-mundo.test' },
+    pubDate: new Date()
+  });
+  const nationalElection = scoreCandidateNewsworthiness({
+    title: 'Argentina define una elección presidencial de alcance nacional',
+    facts: { eventType: 'election', countries: ['Argentina'], rawSummary: 'Elecciones presidenciales en todo el país.' },
+    source: { mode: 'discovery-draft', defaultCategory: 'Nacionales' },
+    sourceRef: { tier: 'B', publisherDomain: 'medio-nacional.test' },
+    pubDate: new Date()
+  });
+  const worldCup = scoreCandidateNewsworthiness({
+    title: 'Argentina ganó la final del Mundial',
+    facts: { eventType: 'sports-result', sportsTeams: ['Argentina', 'Francia'], countries: ['Argentina', 'Francia'] },
+    source: { mode: 'discovery-draft', defaultCategory: 'Deportes' },
+    sourceRef: { tier: 'B', publisherDomain: 'deportes.test' },
+    pubDate: new Date()
+  });
+  const routineWorld = scoreCandidateNewsworthiness({
+    title: 'Una celebridad compartió una foto durante sus vacaciones',
+    facts: { eventType: 'general', countries: ['Estados Unidos'] },
+    source: { mode: 'discovery-draft', defaultCategory: 'Mundo' },
+    sourceRef: { tier: 'B', publisherDomain: 'rutina.test' },
+    pubDate: new Date()
+  });
+
+  assert(worldConflict.impactMagnitudeScore >= 23);
+  assert(nationalElection.impactMagnitudeScore >= 21);
+  assert(worldCup.impactMagnitudeScore >= 23);
+  assert(worldConflict.newsworthinessScore > routineWorld.newsworthinessScore);
+  assert.equal(routineWorld.newsworthinessScore <= 55, true);
+  assert.equal(deriveEffectiveImportance(5, worldConflict) >= 8, true);
+  assert.equal(deriveEffectiveImportance(5, {
+    territory: 'Tolhuin',
+    localRelevanceScore: 25,
+    impactMagnitudeScore: 0,
+    newsworthinessScore: 100
+  }), 5);
+});
+
+test('gacetilla local menor no desplaza una actividad local útil', () => {
+  const useful = scoreCandidateNewsworthiness({
+    title: 'Ushuaia abre inscripciones para cursos gratuitos de invierno',
+    facts: { eventType: 'agenda', editorialLane: 'fast', places: ['Ushuaia'], dates: ['12 de julio'] },
+    source: { mode: 'official-auto', defaultCategory: 'Ushuaia' },
+    sourceRef: { tier: 'A', publisherDomain: 'ushuaia.gob.ar' },
+    pubDate: new Date()
+  });
+  const minor = scoreCandidateNewsworthiness({
+    title: 'El municipio realizó una reunión interna de protocolo',
+    facts: { eventType: 'general', editorialLane: 'fast', places: ['Ushuaia'] },
+    source: { mode: 'official-auto', defaultCategory: 'Ushuaia' },
+    sourceRef: { tier: 'A', publisherDomain: 'ushuaia.gob.ar' },
+    pubDate: new Date()
+  });
+  assert(useful.newsworthinessScore > minor.newsworthinessScore);
 });
 
 test('agenda editorial registra historias con tema territorio y score', () => {
