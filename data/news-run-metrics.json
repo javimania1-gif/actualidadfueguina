@@ -1,187 +1,210 @@
 {
-  "generatedAt": "2026-07-10T19:50:12.339Z",
+  "generatedAt": "2026-07-10T21:10:18.279Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "push",
-    "runId": "29119238406",
-    "headSha": "139d235932244c7d3a7af32c05482252e084b795"
+    "eventName": "schedule",
+    "runId": "29123728151",
+    "headSha": "68866d4b6e6b63afeab26c9ecc581e6ec34bc562"
   },
   "metrics": {
     "sourcesConsulted": 20,
     "candidatesDetected": 58,
-    "candidatesIngested": 8,
-    "extractionSucceeded": 8,
-    "candidatesApproved": 6,
+    "candidatesIngested": 16,
+    "extractionSucceeded": 16,
+    "candidatesApproved": 13,
     "discardedDuplicate": 2,
     "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
     "duplicatePublishedEvent": 0,
-    "discardedQuality": 1,
+    "discardedQuality": 2,
     "discardedQualityByReason": {
-      "evergreen-or-stale-outside-news-window": 1
+      "evergreen-or-stale-outside-news-window": 1,
+      "stale-dated-discovery": 1
     },
     "discardedBySourceAndReason": {
       "bing-tolhuin": {
         "evergreen-or-stale-outside-news-window": 1
+      },
+      "nacionales-infobae": {
+        "stale-dated-discovery": 1
       }
     },
     "discardedGenericTitle": 1,
-    "discardedEvergreen": 1,
-    "eventsGrouped": 6,
-    "verified": 1,
-    "pendingVerification": 5,
-    "pendingMatchedFromHistory": 0,
+    "discardedEvergreen": 2,
+    "eventsGrouped": 13,
+    "verified": 4,
+    "pendingVerification": 8,
+    "pendingMatchedFromHistory": 1,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 3,
-    "pendingTerminalizedExpired": 30,
+    "pendingTerminalizedExpired": 0,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
-        "eventKey": "service|espana|informa|2026-07-10",
+        "eventKey": "service|gobierno|paris|espana|informa|2026-07-10",
         "title": "Reabierta la A-7 tras el corte por el incendio de Los Gallardos (Almería)",
         "sourceId": "nacionales-infobae",
         "publisherDomain": "infobae.com",
         "category": "Nacionales",
         "eventType": "service",
-        "lane": "fast",
-        "riskLevel": "low",
-        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-10T22:50:02.773Z",
-        "expiresAt": "2026-07-12T19:50:02.773Z",
+        "nextRetryAt": "2026-07-11T00:09:43.457Z",
+        "expiresAt": "2026-07-12T21:09:43.457Z",
         "corroborationAttempts": 0
       },
       {
-        "eventKey": "general|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|2026-07-09",
-        "title": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
+        "eventKey": "general|policia nacional de indonesia|ministerio de medio ambiente de indonesia|camara de representantes|internacional|informa|2026-07-10",
+        "title": "Un basurero en Indonesia se incendió hace más de una semana y sigue ardiendo",
+        "sourceId": "mundo-clarin",
+        "publisherDomain": "nytimes.com",
+        "category": "Mundo",
+        "eventType": "general",
+        "lane": "standard",
+        "riskLevel": "high",
+        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-11T00:09:43.458Z",
+        "expiresAt": "2026-07-12T17:51:03.672Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "sports-result|estados unidos|2026-07-10",
+        "title": "Boom mundialista: 490.000 argentinos viajarían a EE.UU. activando el turismo premium en el arranque de julio",
         "sourceId": "nacionales-perfil",
         "publisherDomain": "perfil.com",
         "category": "Nacionales",
-        "eventType": "general",
-        "lane": "fast",
-        "riskLevel": "low",
-        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
+        "eventType": "sports-result",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-10T22:50:02.773Z",
-        "expiresAt": "2026-07-12T19:50:02.773Z",
+        "nextRetryAt": "2026-07-11T00:09:43.459Z",
+        "expiresAt": "2026-07-12T21:09:43.459Z",
         "corroborationAttempts": 0
       },
       {
-        "eventKey": "general|policia de la generalitat|gobierno|comunidad valenciana declarados|comunidad valenciana|espana|informa|2026-07-10",
-        "title": "Declarados esta tarde cinco incendios forestales en la Comunidad Valenciana",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
-        "eventType": "general",
-        "lane": "fast",
-        "riskLevel": "low",
-        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-10T22:50:02.774Z",
-        "expiresAt": "2026-07-12T19:50:02.774Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "international-conflict|onu|universidad autonoma de sinaloa|benjamin medrano|jalisco|mexico|estados unidos|informa|2026-07-10",
-        "title": "Asesinan a Benjamín Medrano, exedil de Fresnillo y primer alcalde que se declaró abiertamente gay en México",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
+        "eventKey": "international-conflict|gobierno|gobierno de tierra de|hms medway|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-09",
+        "title": "Tierra del Fuego repudió el paso de un buque británico - El Rompehielos",
+        "sourceId": "el-rompehielos",
+        "publisherDomain": "elrompehielos.com.ar",
+        "category": "Provincia",
         "eventType": "international-conflict",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-10T22:50:02.774Z",
-        "expiresAt": "2026-07-12T19:50:02.774Z",
+        "nextRetryAt": "2026-07-11T00:09:43.460Z",
+        "expiresAt": "2026-07-11T22:47:39.959Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "crime|rio grande|tierra del fuego aias|informa|2026-07-10",
+        "title": "Procesaron a sujeto reincidente filmado y detenido por el robo a una pescadería en Río Grande - Actualidad TDF",
+        "sourceId": "actualidad-tdf",
+        "publisherDomain": "actualidadtdf.com.ar",
+        "category": "Provincia",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-11T00:09:43.460Z",
+        "expiresAt": "2026-07-12T17:51:03.674Z",
+        "corroborationAttempts": 2
+      },
+      {
+        "eventKey": "territorial-sovereignty|policia|gregoria matorras|malvinas argentinas|volkswagen gol|malvinas|tierra del fuego aias|argentina|informa|2026-07-10",
+        "title": "Vehículo impactó contra una columna en un accidente sin heridos - Actualidad TDF",
+        "sourceId": "actualidad-tdf",
+        "publisherDomain": "actualidadtdf.com.ar",
+        "category": "Provincia",
+        "eventType": "territorial-sovereignty",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-11T00:09:43.460Z",
+        "expiresAt": "2026-07-12T17:51:03.674Z",
         "corroborationAttempts": 1
       },
       {
-        "eventKey": "general|mexico|estados unidos|informa|2026-07-10",
-        "title": "Luis de la Fuente acierta con Fabián: el andaluz mete el primero y encarrila a España a semifinales del Mundial 2026",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
+        "eventKey": "crime|rio grande|tierra del fuego aias|denuncia|2026-07-10",
+        "title": "Excarcelaron a un hombre detenido por violento episodio tras no instarse la denuncia - Actualidad TDF",
+        "sourceId": "actualidad-tdf",
+        "publisherDomain": "actualidadtdf.com.ar",
+        "category": "Provincia",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-11T00:09:43.460Z",
+        "expiresAt": "2026-07-12T17:51:03.674Z",
+        "corroborationAttempts": 2
+      },
+      {
+        "eventKey": "general|policia|estefania guevara|ushuaia|tierra del fuego aias|informa|2026-07-10",
+        "title": "Una mujer fue aprehendida tras provocar daños en una vivienda de Ushuaia - Actualidad TDF",
+        "sourceId": "actualidad-tdf",
+        "publisherDomain": "actualidadtdf.com.ar",
+        "category": "Provincia",
         "eventType": "general",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-10T22:50:02.774Z",
-        "expiresAt": "2026-07-12T19:50:02.774Z",
+        "nextRetryAt": "2026-07-11T00:09:43.460Z",
+        "expiresAt": "2026-07-12T14:34:30.773Z",
         "corroborationAttempts": 0
       }
     ],
-    "conflicting": 0,
+    "conflicting": 1,
     "published": 1,
     "publishedByLane": {
-      "strict": 1
+      "standard": 1
     },
     "verifiedByLane": {
-      "strict": 1
+      "standard": 4
     },
     "pendingByLane": {
-      "fast": 3,
-      "strict": 2
+      "strict": 7,
+      "standard": 1
     },
     "eventsByTerritory": {
       "Nacionales": 5,
-      "Mundo": 1
+      "unknown": 1,
+      "Mundo": 1,
+      "Malvinas": 2,
+      "Rio Grande": 2,
+      "Ushuaia": 2
     },
     "verifiedByTerritory": {
-      "Mundo": 1
+      "Nacionales": 3,
+      "Ushuaia": 1
     },
-    "fastPendingAudit": [
-      {
-        "eventKey": "service|espana|informa|2026-07-10",
-        "title": "Reabierta la A-7 tras el corte por el incendio de Los Gallardos (Almería)",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "tier": "B",
-        "competence": [],
-        "territory": "Nacionales",
-        "topic": "servicios",
-        "eventType": "service",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      },
-      {
-        "eventKey": "general|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|2026-07-09",
-        "title": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
-        "sourceId": "nacionales-perfil",
-        "publisherDomain": "perfil.com",
-        "tier": "B",
-        "competence": [
-          "municipal"
-        ],
-        "territory": "Nacionales",
-        "topic": "sociedad",
-        "eventType": "general",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      },
-      {
-        "eventKey": "general|policia de la generalitat|gobierno|comunidad valenciana declarados|comunidad valenciana|espana|informa|2026-07-10",
-        "title": "Declarados esta tarde cinco incendios forestales en la Comunidad Valenciana",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "tier": "B",
-        "competence": [],
-        "territory": "Nacionales",
-        "topic": "sociedad",
-        "eventType": "general",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      }
-    ],
-    "freshCandidates": 7,
-    "staleDiscarded": 1,
+    "fastPendingAudit": [],
+    "freshCandidates": 14,
+    "staleDiscarded": 2,
     "sourceHealth": {
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
       "tolhuin-oficial": {
         "detected": 4,
         "materialized": 0,
@@ -196,8 +219,50 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-tdf": {
-        "detected": 5,
+      "mundo-google": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 4,
+        "freshCandidates": 3,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1.33,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "bing-rio-grande": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -224,78 +289,8 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0.33,
-        "staleDiscardRate": 0
-      },
-      "bing-rio-grande": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-ushuaia": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "el-rompehielos": {
-        "detected": 4,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 4,
-        "freshCandidates": 4,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1.33,
-        "materializationSuccessRate": 1.33,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-bing": {
-        "detected": 3,
+      "bing-tdf": {
+        "detected": 5,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -322,35 +317,35 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.33
       },
-      "mundo-google": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+      "bing-ushuaia": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-perfil": {
         "detected": 2,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 3,
+        "freshCandidates": 3,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 0,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
-        "verificationContributionRate": 0,
+        "freshCandidateRate": 1.5,
+        "materializationSuccessRate": 1.5,
+        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "bing-malvinas": {
+      "mundo-bing": {
         "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
@@ -360,6 +355,20 @@
         "publicationContribution": 0,
         "freshCandidateRate": 0,
         "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "el-rompehielos": {
+        "detected": 4,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 0.25,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -380,16 +389,16 @@
       },
       "actualidad-tdf": {
         "detected": 5,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "materialized": 5,
+        "freshCandidates": 5,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.2,
+        "publicationContributionRate": 0.2,
         "staleDiscardRate": 0
       },
       "rio-grande-oficial": {
@@ -411,8 +420,8 @@
     "drafts": 0,
     "modelErrors": 0,
     "publicationErrors": 0,
-    "factualValidationErrors": 0,
-    "discardedImportance": 0,
+    "factualValidationErrors": 1,
+    "discardedImportance": 2,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
@@ -428,112 +437,146 @@
     "discardedPublicationLimit": 0,
     "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 1,
-    "aiCalls": 1,
-    "articlesDrafted": 1,
+    "aiAttempts": 4,
+    "aiCalls": 4,
+    "articlesDrafted": 3,
     "imagesResolved": 1,
     "approvedForPublication": 1,
     "imageSelections": [
       {
-        "title": "Trump declara el fin del alto al fuego con Irán pero acepta continuar negociaciones",
+        "title": "Procurador General de la Nación se pronuncia sobre la causa del Puerto de Ushuaia",
         "strategy": "article-og",
-        "query": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
+        "query": "Procurador General de la Nación pidió al juez federal de Ushuaia que se haga responsable de la causa por el Puerto - Actualidad TDF",
         "score": 82,
-        "source": "https://www.clarin.com/img/2026/07/10/RUMscKYq5_2000x1500__1.jpg"
+        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/01/puerto1.jpg"
       }
     ],
-    "agendaStories": 206,
-    "newsworthinessAverage": 88,
+    "agendaStories": 209,
+    "newsworthinessAverage": 60,
     "newsworthinessTop": [
       {
-        "title": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
-        "eventKey": "international-conflict|donald trump|internacional|egipto|estados unidos|informa|2026-07-10",
-        "score": 88,
-        "topic": "politica",
-        "territory": "Mundo",
-        "lane": "strict"
+        "title": "Procurador General de la Nación pidió al juez federal de Ushuaia que se haga responsable de la causa por el Puerto - Actualidad TDF",
+        "eventKey": "general|justicia federal de tierra de|justicia de la nacion|justicia federal de|procurador general|direccion provincial|procuracion general|ushuaia|tierra del fuego|informa|2026-07",
+        "score": 77,
+        "topic": "sociedad",
+        "territory": "Ushuaia",
+        "lane": "standard"
+      },
+      {
+        "title": "Hotel Sheraton del Cercado de Lima registró amago de incendio que movilizó a varias unidades de bomberos",
+        "eventKey": "agenda|policia nacional de|ministerio de salud|hotel sheraton|peru|informa|2026-07-10",
+        "score": 60,
+        "topic": "agenda",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Tras la polémica por el portón cerrado en Villa Allende, el municipio explicó que no conecta con otras calles",
+        "eventKey": "general|gobierno|municipalidad de villa allende|villa allende|felipe crespo|lomas sur|informa|2026-07-09",
+        "score": 52,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Argentina y Suiza: una relación económica que vale oro",
+        "eventKey": "general|murat yakin christian gimenez|argentina|colombia|informa|2026-07-10",
+        "score": 52,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
       }
     ],
-    "corroborationSearches": 2,
-    "corroborationFound": 1,
-    "corroborationVerified": 1,
+    "corroborationSearches": 3,
+    "corroborationFound": 0,
+    "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 1,
+    "corroborationNoResult": 3,
     "corroborationAttempts": [
       {
-        "eventKey": "international-conflict|onu|universidad autonoma de sinaloa|benjamin medrano|jalisco|mexico|estados unidos|informa|2026-07-10",
-        "title": "Asesinan a Benjamín Medrano, exedil de Fresnillo y primer alcalde que se declaró abiertamente gay en México",
+        "eventKey": "crime|rio grande|tierra del fuego aias|informa|2026-07-10",
+        "title": "Procesaron a sujeto reincidente filmado y detenido por el robo a una pescadería en Río Grande - Actualidad TDF",
         "priorityRank": 1,
-        "corroborationQuery": "Benjamín Medrano ONU Universidad Autónoma de Sinaloa Mexico Estados Unidos conflicto abiertamente alcalde asesinan benjamin declaro exedil",
-        "corroborationReason": "newsworthiness=99; freshness=1h; territory=Nacionales; impact=12; corroborability=10; pendingAge=1h; attempts=0",
+        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS detenido filmado pescaderia procesaron reincidente sujeto",
+        "corroborationReason": "newsworthiness=91; freshness=3h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=3h; attempts=1",
         "found": 0,
         "verified": false,
         "status": "no-result"
       },
       {
-        "eventKey": "international-conflict|donald trump|internacional|egipto|estados unidos|informa|2026-07-10",
-        "title": "Donald Trump reitera que el alto al fuego \"terminó\" pero acepta seguir conversando con Irán",
+        "eventKey": "crime|rio grande|tierra del fuego aias|denuncia|2026-07-10",
+        "title": "Excarcelaron a un hombre detenido por violento episodio tras no instarse la denuncia - Actualidad TDF",
         "priorityRank": 2,
-        "corroborationQuery": "Donald Trump Egipto Estados Unidos conflicto acepta conversando donald reitera seguir termino",
-        "corroborationReason": "newsworthiness=91; freshness=1h; territory=Mundo; impact=10; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-strict"
+        "corroborationQuery": "Rio Grande Tierra del Fuego AIAS denuncia detenido episodio excarcelaron hombre instarse",
+        "corroborationReason": "newsworthiness=91; freshness=3h; territory=Rio Grande; impact=12; corroborability=10; pendingAge=3h; attempts=1",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "territorial-sovereignty|policia|gregoria matorras|malvinas argentinas|volkswagen gol|malvinas|tierra del fuego aias|argentina|informa|2026-07-10",
+        "title": "Vehículo impactó contra una columna en un accidente sin heridos - Actualidad TDF",
+        "priorityRank": 3,
+        "corroborationQuery": "Gregoria Matorras Malvinas Argentinas Volkswagen Gol Policia Argentina Malvinas accidente columna contra heridos impacto vehiculo",
+        "corroborationReason": "newsworthiness=84; freshness=3h; territory=Malvinas; impact=13; corroborability=10; pendingAge=3h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
       }
     ],
     "conflictsByField": {
       "dates": 1
     },
-    "criticalConflicts": 0,
-    "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 7,
+    "criticalConflicts": 1,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 15,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 7,
-        "avg": 51.7,
+        "count": 8,
+        "avg": 70.1,
         "p50": 0,
         "max": 291.3
       },
       "verificationToPublicationMinutes": {
-        "count": 7,
-        "avg": 21,
+        "count": 8,
+        "avg": 18.4,
         "p50": 0.1,
         "max": 145.8
       },
       "discoveryToPublicationMinutes": {
-        "count": 7,
-        "avg": 72.7,
-        "p50": 0.1,
+        "count": 8,
+        "avg": 88.5,
+        "p50": 0.3,
         "max": 291.6
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 15,
-        "avg": 213,
+        "count": 19,
+        "avg": 188.3,
         "p50": 0,
         "max": 2101.9
       },
       "cohort": {
-        "comparablePublishedCount": 7,
-        "verifiedWithoutPublicationCount": 8,
+        "comparablePublishedCount": 8,
+        "verifiedWithoutPublicationCount": 11,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
     "byCategory": {
-      "Mundo": 1
+      "Provincia": 1
     },
-    "publishedLast3hBeforeRun": 2,
+    "publishedLast3hBeforeRun": 3,
     "publishedLast6hBeforeRun": 3,
-    "publishedLast12hBeforeRun": 3,
-    "publishedLast24hBeforeRun": 6,
-    "hoursSinceLastPublicationBeforeRun": 0.4,
+    "publishedLast12hBeforeRun": 4,
+    "publishedLast24hBeforeRun": 7,
+    "hoursSinceLastPublicationBeforeRun": 1.3,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 6,
-      "remainingToMin": 6,
-      "slotsRemaining": 10,
+      "publishedLast24hBeforeRun": 7,
+      "remainingToMin": 5,
+      "slotsRemaining": 9,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -552,7 +595,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -590,7 +633,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -634,7 +677,7 @@
         }
       }
     ],
-    "agendaInvalidStories": 25,
+    "agendaInvalidStories": 26,
     "technicalSuccess": true,
     "editorialOutcome": "published"
   },
@@ -642,8 +685,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 1,
-    "discoveryAiBudget": 1,
+    "discoveryAiUsed": 4,
+    "discoveryAiBudget": 4,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -656,13 +699,16 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 6,
-    "candidatesMaterialized": 8,
-    "totalCandidatesBeforeLimit": 8
+    "publishedLast24hBeforeRun": 7,
+    "candidatesMaterialized": 16,
+    "totalCandidatesBeforeLimit": 16
   },
   "reasonNoMorePublished": [
-    "5 evento(s) quedaron pendientes de segunda fuente",
+    "8 evento(s) quedaron pendientes de segunda fuente",
+    "1 evento(s) tuvieron conflicto factual",
     "2 candidato(s) descartados por duplicado/similitud",
-    "1 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 1)"
+    "2 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 1, stale-dated-discovery: 1)",
+    "2 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) bloqueados por validacion factual"
   ]
 }
