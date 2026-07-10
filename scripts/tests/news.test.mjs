@@ -30,6 +30,7 @@ import {
   findMatchingPendingEventKeyInRecords,
   scoreCorroborationPriority
 } from '../lib/corroboration-utils.mjs';
+import { summarizeEditorialLatency } from '../lib/latency-utils.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -356,6 +357,17 @@ test('agenda territorial no cae a Provincia para noticias externas', () => {
   }), 'Nacionales');
 });
 
+test('agenda territorial prioriza localidad explicita del titulo sobre lugares ruidosos', () => {
+  assert.equal(inferAgendaTerritory({
+    title: 'Gobierno llevo a cabo una jornada de competencias en la Casa del Deporte de Tolhuin',
+    facts: {
+      rawSummary: 'En la Casa del Deporte de Tolhuin se disputaron dos torneos internos.',
+      places: ['Rio Grande', 'Ushuaia', 'Tolhuin', 'Tierra del Fuego']
+    },
+    category: 'Rio Grande'
+  }), 'Tolhuin');
+});
+
 test('agenda clasifica contrabando como policiales y defensa internacional como politica', () => {
   assert.equal(inferAgendaTopic({
     facts: { eventType: 'crime', rawSummary: 'Contrabando de cigarrillos detectado en un operativo.' },
@@ -407,6 +419,42 @@ test('agenda invalida historias incoherentes y las excluye del top', () => {
   }, { now: new Date('2026-07-09T14:00:00.000Z') });
   assert.equal(agenda.summary.invalidStories, 1);
   assert.equal(agenda.summary.topStories.length, 0);
+});
+
+test('agenda usa fecha de fuente para frescura de eventos persistidos', () => {
+  const agenda = buildEditorialAgenda({
+    events: {
+      'general|salud|abril-de-2023': {
+        eventKey: 'general|salud|abril-de-2023',
+        status: 'verified',
+        firstDetectedAt: '2026-07-09T10:00:00.000Z',
+        lastSeenAt: '2026-07-09T23:00:00.000Z',
+        sources: [{
+          tier: 'A',
+          publisherDomain: 'info.riogrande.gob.ar',
+          sourceMode: 'official-auto',
+          publishedAt: '2023-04-12T12:00:00.000Z'
+        }],
+        verifiedFacts: {
+          eventType: 'general',
+          places: ['Rio Grande'],
+          dates: ['abril de 2023'],
+          rawSummary: 'En abril de 2023 se incorporo equipamiento.'
+        },
+        factsBySource: [{
+          facts: {
+            title: 'El Centro Municipal de Salud suma equipamiento historico',
+            eventType: 'general',
+            places: ['Rio Grande'],
+            dates: ['abril de 2023']
+          }
+        }]
+      }
+    }
+  }, { now: new Date('2026-07-09T23:30:00.000Z') });
+
+  assert.equal(agenda.stories[0].freshness, 'stale-or-evergreen');
+  assert.equal(agenda.stories[0].scoreBreakdown.recency, 1);
 });
 
 test('query de corroboracion no agrega Tierra del Fuego fuera de historias provinciales', () => {
@@ -548,6 +596,55 @@ test('pending historico no une hechos distintos con misma persona o municipio', 
   assert.equal(sameMunicipalityDifferentEvent, 'new-municipality-story');
 });
 
+test('pending historico une el mismo sismo solo con hechos centrales concordantes', () => {
+  const records = {
+    'weather|fragmented|sismo|tn': {
+      status: 'pending-verification',
+      publisherDomains: ['tn.com.ar'],
+      sources: [{ publisherDomain: 'tn.com.ar', publishedAt: '2026-07-07T15:48:14.028Z' }],
+      factsBySource: [{
+        facts: {
+          title: 'Un sismo de magnitud 5,9 sacudio a varias ciudades de Tierra del Fuego',
+          eventType: 'weather',
+          places: ['Pasaje Drake', 'Ushuaia', 'Tierra del Fuego'],
+          numbers: ['5,9', '303', '10'],
+          dates: ['07 de julio', '2026-07-07'],
+          rawSummary: 'El movimiento ocurrio en Pasaje Drake, a mas de 300 kilometros de Ushuaia y a 10 kilometros de profundidad.'
+        }
+      }]
+    }
+  };
+  const match = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'weather|sismo|5-9|2026-07-07|pasaje-drake',
+    title: 'Un sismo de magnitud 5,9 se registro cerca de Tierra del Fuego, a mas de 300 kilometros de Ushuaia',
+    facts: {
+      eventType: 'weather',
+      places: ['Pasaje Drake', 'Ushuaia', 'Tierra del Fuego'],
+      numbers: ['5,9', '300', '10'],
+      dates: ['07/07/2026'],
+      rawSummary: 'El movimiento ocurrio en el Pasaje Drake y no se emitieron alertas de tsunami.'
+    },
+    sourceRef: { publisherDomain: 'elchubut.com.ar', publishedAt: '2026-07-07T15:25:00.000Z' }
+  });
+  assert.equal(match, 'weather|fragmented|sismo|tn');
+
+  const different = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'weather|sismo|6-1|2026-07-08|pasaje-drake',
+    title: 'Un sismo de magnitud 6,1 se registro cerca de Tierra del Fuego',
+    facts: {
+      eventType: 'weather',
+      places: ['Pasaje Drake', 'Ushuaia'],
+      numbers: ['6,1'],
+      dates: ['2026-07-08'],
+      rawSummary: 'Otro movimiento ocurrio en el Pasaje Drake.'
+    },
+    sourceRef: { publisherDomain: 'elchubut.com.ar', publishedAt: '2026-07-08T15:25:00.000Z' }
+  });
+  assert.equal(different, 'weather|sismo|6-1|2026-07-08|pasaje-drake');
+});
+
 test('agenda invalida claves weather heredadas para buques y Malvinas', () => {
   const agenda = buildEditorialAgenda({
     events: {
@@ -577,6 +674,32 @@ test('agenda invalida claves weather heredadas para buques y Malvinas', () => {
   assert.equal(agenda.summary.topStories.length, 0);
   assert(agenda.stories[0].validationReasons.includes('story-headline-mismatch'));
   assert(agenda.stories[0].validationReasons.includes('topic-event-mismatch'));
+});
+
+test('latencia editorial usa cohorte comparable para discovery verification publication', () => {
+  const latency = summarizeEditorialLatency({
+    comparable: {
+      firstDetectedAt: '2026-07-09T10:00:00.000Z',
+      verifiedAt: '2026-07-09T10:30:00.000Z',
+      publishedAt: '2026-07-09T10:45:00.000Z'
+    },
+    verifiedOnly: {
+      firstDetectedAt: '2026-07-09T09:00:00.000Z',
+      verifiedAt: '2026-07-09T10:00:00.000Z'
+    },
+    migratedPublished: {
+      firstDetectedAt: '2026-07-09T11:00:00.000Z',
+      publishedAt: '2026-07-09T11:01:00.000Z'
+    }
+  });
+
+  assert.equal(latency.discoveryToVerificationMinutes.count, 1);
+  assert.equal(latency.discoveryToVerificationMinutes.avg, 30);
+  assert.equal(latency.verificationToPublicationMinutes.avg, 15);
+  assert.equal(latency.discoveryToPublicationMinutes.avg, 45);
+  assert(latency.discoveryToPublicationMinutes.avg >= latency.discoveryToVerificationMinutes.avg);
+  assert.equal(latency.discoveryToVerificationAllMinutes.count, 2);
+  assert.equal(latency.cohort.publicationWithoutVerifiedAtCount, 1);
 });
 
 console.log(`\n=== NEWS TESTS: ${passed} pasados, ${failed} fallados ===`);

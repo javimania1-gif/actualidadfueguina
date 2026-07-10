@@ -54,6 +54,7 @@ import {
   isCompatibleCorroboration,
   scoreCorroborationPriority
 } from './lib/corroboration-utils.mjs';
+import { summarizeEditorialLatency } from './lib/latency-utils.mjs';
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
@@ -1350,46 +1351,8 @@ function finalizeSourceHealth() {
   }
 }
 
-function minutesBetween(start, end) {
-  const startMs = new Date(start || 0).getTime();
-  const endMs = new Date(end || 0).getTime();
-  if (!Number.isFinite(startMs) || !Number.isFinite(endMs) || !startMs || !endMs || endMs < startMs) return null;
-  return Math.round(((endMs - startMs) / (60 * 1000)) * 10) / 10;
-}
-
 function summarizeLatency() {
-  const values = {
-    discoveryToVerificationMinutes: [],
-    verificationToPublicationMinutes: [],
-    discoveryToPublicationMinutes: []
-  };
-  for (const event of Object.values(events.events || {})) {
-    if (event.verifiedAt) {
-      const value = minutesBetween(event.firstDetectedAt, event.verifiedAt);
-      if (value !== null) values.discoveryToVerificationMinutes.push(value);
-    }
-    if (event.publishedAt) {
-      const verificationToPublication = minutesBetween(event.verifiedAt || event.firstDetectedAt, event.publishedAt);
-      const discoveryToPublication = minutesBetween(event.firstDetectedAt, event.publishedAt);
-      if (verificationToPublication !== null) values.verificationToPublicationMinutes.push(verificationToPublication);
-      if (discoveryToPublication !== null) values.discoveryToPublicationMinutes.push(discoveryToPublication);
-    }
-  }
-  const summarize = (items) => {
-    if (!items.length) return { count: 0, avg: null, p50: null, max: null };
-    const sorted = [...items].sort((a, b) => a - b);
-    return {
-      count: sorted.length,
-      avg: Math.round((sorted.reduce((sum, value) => sum + value, 0) / sorted.length) * 10) / 10,
-      p50: sorted[Math.floor(sorted.length / 2)],
-      max: sorted[sorted.length - 1]
-    };
-  };
-  metrics.latency = {
-    discoveryToVerificationMinutes: summarize(values.discoveryToVerificationMinutes),
-    verificationToPublicationMinutes: summarize(values.verificationToPublicationMinutes),
-    discoveryToPublicationMinutes: summarize(values.discoveryToPublicationMinutes)
-  };
+  metrics.latency = summarizeEditorialLatency(events.events || {});
 }
 
 finalizeSourceHealth();

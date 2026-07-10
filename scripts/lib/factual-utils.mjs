@@ -559,16 +559,59 @@ function inferAction(text) {
   return candidates.find((word) => value.includes(word)) || 'informa';
 }
 
+function keyDateToken(facts = {}, sourceRef = {}) {
+  const sourceDate = sourceRef.publishedAt ? String(sourceRef.publishedAt).slice(0, 10) : '';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(sourceDate)) return sourceDate;
+  const isoDate = (facts.dates || []).map(String).find((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
+  if (isoDate) return isoDate;
+  return (facts.dates || [])[0] || '';
+}
+
+function normalizeMagnitude(value = '') {
+  const match = String(value).match(/\b([3-9](?:[,.]\d)?)\b/);
+  if (!match) return '';
+  return match[1].replace(',', '.');
+}
+
+function earthquakeLocationToken(text = '', facts = {}) {
+  const normalized = normalizeText([text, ...(facts.places || [])].join(' '));
+  if (/\bpasaje drake\b|\bdrake\b/.test(normalized)) return 'pasaje-drake';
+  if (/\bushuaia\b/.test(normalized)) return 'ushuaia';
+  if (/\btierra del fuego\b|\bfueguin/.test(normalized)) return 'tierra-del-fuego';
+  return '';
+}
+
+export function getEarthquakeSignature({ facts = {}, title = '', sourceRef = {} } = {}) {
+  const text = `${title || facts.title || sourceRef.title || ''}\n${facts.rawSummary || ''}\n${(facts.numbers || []).join(' ')}\n${(facts.dates || []).join(' ')}`;
+  const normalized = normalizeText(text);
+  if ((facts.eventType || '') !== 'weather') return null;
+  if (!/\b(sismo|temblor|epicentro|magnitud)\b/.test(normalized)) return null;
+  const magnitude = normalizeMagnitude(text.match(/\bmagnitud\s+([3-9](?:[,.]\d)?)/i)?.[1])
+    || normalizeMagnitude((facts.numbers || []).find((value) => normalizeMagnitude(value)));
+  const date = getWeatherForecastDateKey(text, [
+    ...((facts.dates || []).map(String)),
+    sourceRef.publishedAt ? String(sourceRef.publishedAt).slice(0, 10) : ''
+  ]);
+  const location = earthquakeLocationToken(text, facts);
+  if (!magnitude || !date || !location) return null;
+  return { magnitude, date, location };
+}
+
 export function generateEventKey({ facts = {}, title = '', sourceRef = {} }) {
   if (facts.eventType === 'weather-forecast') {
     const date = facts.weatherForecastDateKey || getWeatherForecastDateKey(`${title}\n${facts.rawSummary || ''}`, facts.dates || []);
     return ['weather-forecast', date || 'sin-fecha', 'tierra-del-fuego'].join('|').slice(0, 180);
   }
 
+  const earthquake = getEarthquakeSignature({ facts, title, sourceRef });
+  if (earthquake) {
+    return ['weather', 'sismo', earthquake.magnitude.replace('.', '-'), earthquake.date, earthquake.location].join('|').slice(0, 180);
+  }
+
   const sportsTeams = facts.sportsTeams || facts.teams || [];
   if (facts.eventType === 'sports-result' && sportsTeams.length > 0) {
     const primary = sportsTeams.map(normalizeText).sort()[0];
-    const date = (facts.dates || []).map(normalizeText).find(Boolean) || '';
+    const date = normalizeText(keyDateToken(facts, sourceRef));
     return ['sports-result', primary, date].filter(Boolean).join('|').slice(0, 180);
   }
 
@@ -580,7 +623,7 @@ export function generateEventKey({ facts = {}, title = '', sourceRef = {} }) {
     ...((facts.places || []).slice(0, 2)),
     ...((facts.countries || []).slice(0, 2)),
     facts.action,
-    (facts.dates || [])[0]
+    keyDateToken(facts, sourceRef)
   ].filter(Boolean);
 
   const normalized = important.map(normalizeText).filter(Boolean).join('|');

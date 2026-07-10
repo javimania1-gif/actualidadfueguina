@@ -77,6 +77,25 @@ export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {})
 }
 
 export function inferAgendaTerritory({ facts = {}, source = {}, category = '', title = '' } = {}) {
+  const firstLocalMention = (...values) => {
+    const text = normalizeText(values.flat().filter(Boolean).join(' '));
+    const matches = [
+      ['Rio Grande', /\brio grande\b/.exec(text)],
+      ['Ushuaia', /\bushuaia\b/.exec(text)],
+      ['Tolhuin', /\btolhuin\b/.exec(text)],
+      ['Malvinas', /\bmalvinas\b/.exec(text)],
+      ['Antartida', /\bantartida\b/.exec(text)]
+    ].filter(([, match]) => match);
+    matches.sort((a, b) => a[1].index - b[1].index);
+    return matches[0]?.[0] || '';
+  };
+  const explicitLocality = firstLocalMention(title) || firstLocalMention(facts.rawSummary);
+  if (explicitLocality) return explicitLocality;
+  const sourceLocality = firstLocalMention(category, source.defaultCategory, source.location);
+  if (sourceLocality) return sourceLocality;
+  const factLocality = firstLocalMention(facts.places || []);
+  if (factLocality) return factLocality;
+
   const text = normalizeText([
     category,
     source.defaultCategory,
@@ -86,11 +105,6 @@ export function inferAgendaTerritory({ facts = {}, source = {}, category = '', t
     ...(facts.places || []),
     ...(facts.countries || [])
   ].join(' '));
-  if (/\brio grande\b/.test(text)) return 'Rio Grande';
-  if (/\bushuaia\b/.test(text)) return 'Ushuaia';
-  if (/\btolhuin\b/.test(text)) return 'Tolhuin';
-  if (/\bmalvinas\b/.test(text)) return 'Malvinas';
-  if (/\bantartida\b/.test(text)) return 'Antartida';
   if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
   if (/\b(cdmx|mexico|mexico df|colombia|cuba|iran|teheran|moscu|ucrania|rusia|estados unidos|reino unido|inglaterra|francia|alemania|italia|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(text)) return 'Mundo';
   if (/\bmundo\b|\binternacional\b/.test(text)) return 'Mundo';
@@ -173,6 +187,16 @@ function candidateFacts(candidate = {}, verification = {}) {
   return verification.verifiedFacts || candidate.verification?.verifiedFacts || candidate.facts || {};
 }
 
+function publicationDateFromSources(sourceRefs = []) {
+  const dates = sourceRefs
+    .map((ref) => ref?.publishedAt)
+    .filter(Boolean)
+    .map((value) => new Date(value))
+    .filter((date) => Number.isFinite(date.getTime()))
+    .sort((a, b) => b.getTime() - a.getTime());
+  return dates[0] || null;
+}
+
 export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}, byCategory = {}, now = new Date() } = {}) {
   const facts = candidateFacts(candidate, verification);
   const sourceRefs = sourceRefsFromCandidate(candidate);
@@ -184,7 +208,8 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
   const territory = inferAgendaTerritory({ facts, source, category, title });
   const eventType = facts.eventType || 'general';
   const lane = verification.editorialLane || candidate.verification?.editorialLane || facts.editorialLane || 'standard';
-  const freshness = freshnessFromHours(hoursOld(candidate.pubDate || candidate.article?.date || now, now), lane);
+  const publicationDate = publicationDateFromSources(sourceRefs);
+  const freshness = freshnessFromHours(hoursOld(candidate.pubDate || candidate.article?.date || publicationDate || now, now), lane);
   const publicInterestScore = scorePublicInterest({ facts, topic, eventType });
   const localRelevanceScore = scoreLocalRelevance(territory);
   const serviceValueScore = scoreServiceValue({ topic, eventType, facts });
@@ -268,7 +293,7 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
       facts,
       source,
       sourceRef: firstSource,
-      pubDate: event.lastSeenAt || now
+      pubDate: publicationDateFromSources(sourceRefs) || event.publishedAt || event.verifiedAt || event.firstDetectedAt || event.lastSeenAt || now
     }, { byCategory, now });
   const primaryEntities = unique([
     ...(facts.people || []),

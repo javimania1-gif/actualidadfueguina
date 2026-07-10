@@ -477,6 +477,59 @@ test('dos titulos distintos del mismo evento generan misma clave base', () => {
   assert.equal(keyA, keyB);
 });
 
+test('event key usa fecha de fuente antes que fecha historica lateral', () => {
+  const facts = {
+    eventType: 'general',
+    people: ['El Centro Municipal', 'Salud'],
+    places: ['Rio Grande'],
+    action: 'informa',
+    dates: ['abril de 2023', 'enero', 'junio de 2026', '2026-07-08'],
+    rawSummary: 'En abril de 2023 se incorporo equipamiento y entre enero y junio de 2026 aumento la atencion.'
+  };
+  const eventKey = generateEventKey({
+    facts,
+    title: 'El Centro Municipal de Salud N. 3 crece con mas especialidades',
+    sourceRef: {
+      publisherDomain: 'info.riogrande.gob.ar',
+      publishedAt: '2026-07-08T13:05:42.000Z'
+    }
+  });
+
+  assert.match(eventKey, /2026-07-08/);
+  assert.doesNotMatch(eventKey, /abril de 2023/);
+});
+
+test('sismos con misma magnitud fecha y ubicacion generan la misma clave conservadora', () => {
+  const first = {
+    title: 'Un sismo de magnitud 5,9 sacudio a varias ciudades de Tierra del Fuego',
+    eventType: 'weather',
+    places: ['Pasaje Drake', 'Ushuaia', 'Tierra del Fuego'],
+    numbers: ['5,9', '303', '10'],
+    dates: ['07 de julio', '2026-07-07'],
+    rawSummary: 'El movimiento ocurrio en Pasaje Drake, a mas de 300 kilometros de Ushuaia y a 10 kilometros de profundidad.'
+  };
+  const second = {
+    title: 'Un sismo de magnitud 5,9 se registro cerca de Tierra del Fuego, a mas de 300 kilometros de Ushuaia',
+    eventType: 'weather',
+    places: ['Pasaje Drake', 'Ushuaia'],
+    numbers: ['5,9', '300', '10'],
+    dates: ['07/07/2026'],
+    rawSummary: 'El movimiento ocurrio en el Pasaje Drake y no hubo alerta de tsunami.'
+  };
+
+  const keyA = generateEventKey({ facts: first, title: first.title, sourceRef: { publisherDomain: 'tn.com.ar', publishedAt: '2026-07-07T15:48:14.028Z' } });
+  const keyB = generateEventKey({ facts: second, title: second.title, sourceRef: { publisherDomain: 'elchubut.com.ar', publishedAt: '2026-07-07T15:25:00.000Z' } });
+  const other = generateEventKey({
+    facts: { ...second, title: 'Un sismo de magnitud 6,1 se registro cerca de Tierra del Fuego', numbers: ['6,1'], dates: ['2026-07-08'] },
+    title: 'Un sismo de magnitud 6,1 se registro cerca de Tierra del Fuego',
+    sourceRef: { publisherDomain: 'otro.com', publishedAt: '2026-07-08T15:25:00.000Z' }
+  });
+
+  assert.equal(keyA, keyB);
+  assert.equal(keyA, 'weather|sismo|5-9|2026-07-07|pasaje-drake');
+  assert.notEqual(keyA, other);
+});
+
 function fixtureCandidate({ title, text, sourceRef }) {
   const article = {
     title,

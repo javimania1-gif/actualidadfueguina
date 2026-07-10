@@ -1,5 +1,7 @@
 import { cleanText } from './news-utils.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
+import { getEarthquakeSignature } from './factual-utils.mjs';
+import { inferAgendaTerritory } from './editorial-agenda.mjs';
 
 const LOCAL_TERRITORIES = new Set(['Rio Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antartida']);
 const WORLD_TERRITORIES = new Set(['Mundo', 'Nacionales']);
@@ -29,21 +31,7 @@ export function fingerprintOverlap(leftTitle = '', rightTitle = '') {
 }
 
 function inferTerritory({ facts = {}, source = {}, category = '', title = '' } = {}) {
-  const text = normalizeText([
-    category,
-    source.defaultCategory,
-    source.location,
-    title,
-    facts.rawSummary,
-    ...(facts.places || []),
-    ...(facts.countries || [])
-  ].join(' '));
-  if (/\brio grande\b/.test(text)) return 'Rio Grande';
-  if (/\bushuaia\b/.test(text)) return 'Ushuaia';
-  if (/\btolhuin\b/.test(text)) return 'Tolhuin';
-  if (/\bmalvinas\b/.test(text)) return 'Malvinas';
-  if (/\bantartida\b/.test(text)) return 'Antartida';
-  if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
+  return inferAgendaTerritory({ facts, source, category, title });
   if (/\bmundo\b|\binternacional\b|\bir[aá]n\b|\bteher[aá]n\b|\bmosc[uú]\b|\bucrania\b|\brusia\b|\bestados unidos\b|\breino unido\b/.test(text)) return 'Mundo';
   if (/\bnacionales\b|\bargentina\b|\bmilei\b|\bfmi\b|\bbanco central\b|\bcongreso\b|\bsenado\b|\bdiputados\b/.test(text)) return 'Nacionales';
   return 'unknown';
@@ -195,6 +183,15 @@ function titlesFromRecord(record = {}) {
   return (record.factsBySource || []).map((entry) => entry.facts?.title || '').filter(Boolean);
 }
 
+function sameEarthquakeEvent(left = {}, right = {}) {
+  const leftSignature = getEarthquakeSignature(left);
+  const rightSignature = getEarthquakeSignature(right);
+  if (!leftSignature || !rightSignature) return false;
+  return leftSignature.magnitude === rightSignature.magnitude
+    && leftSignature.date === rightSignature.date
+    && leftSignature.location === rightSignature.location;
+}
+
 export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, facts = {}, title = '', sourceRef = {}, now = new Date() } = {}) {
   if (records?.[eventKey]?.status === 'pending-verification') return eventKey;
   const nowMs = new Date(now).getTime();
@@ -211,6 +208,14 @@ export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, f
     if (!compatibleTerritory(candidateTerritory, existingTerritory)) continue;
 
     const titles = titlesFromRecord(record);
+    const earthquakeCandidate = { facts, title, sourceRef };
+    const earthquakeExisting = { facts: existingFacts, title: titles.join(' '), sourceRef: record.sources?.[0] || {} };
+    const hasEarthquakeSignature = getEarthquakeSignature(earthquakeCandidate) || getEarthquakeSignature(earthquakeExisting);
+    if (hasEarthquakeSignature) {
+      if (sameEarthquakeEvent(earthquakeCandidate, earthquakeExisting)) return existingKey;
+      continue;
+    }
+
     const titleMatch = titles.some((existingTitle) => fingerprintOverlap(title, existingTitle) >= 2);
     const entityOverlap =
       overlapCount(facts.organizations, existingFacts.organizations) +
