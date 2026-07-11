@@ -8,7 +8,7 @@ sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/conoce-el-cronograma-de-actividades-por-los-105-anos-de-rio-grande/"
 originalImage: "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/105-anos.jpeg"
 status: "draft"
-detectedAt: "2026-07-11T19:10:13.525Z"
+detectedAt: "2026-07-11T22:55:27.719Z"
 mode: "discovery-review"
 ---
 
