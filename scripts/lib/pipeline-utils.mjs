@@ -98,13 +98,21 @@ export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '' } =
     if (intersection < 4 || coverage < 0.4) continue;
 
     const otherNumbers = new Set(normalizeText(story.sourceTitle || story.title || '').match(/\b\d+(?:[.,]\d+)?\b/g) || []);
-    if (numbers.size || otherNumbers.size) {
-      const sameNumbers = numbers.size === otherNumbers.size && [...numbers].every((value) => otherNumbers.has(value));
-      if (!sameNumbers) continue;
-    }
+    if (assessPublishedStoryNovelty({ numbers, otherNumbers }).hasSubstantialNovelty) continue;
     return story;
   }
   return null;
+}
+
+export function assessPublishedStoryNovelty({ numbers = new Set(), otherNumbers = new Set() } = {}) {
+  const left = numbers instanceof Set ? numbers : new Set(numbers || []);
+  const right = otherNumbers instanceof Set ? otherNumbers : new Set(otherNumbers || []);
+  if (left.size === 0 && right.size === 0) {
+    return { hasSubstantialNovelty: false, reason: 'no-new-structured-fact' };
+  }
+  const sameNumbers = left.size === right.size && [...left].every((value) => right.has(value));
+  if (sameNumbers) return { hasSubstantialNovelty: false, reason: 'same-numbers' };
+  return { hasSubstantialNovelty: true, reason: 'changed-numbers' };
 }
 
 export function allocateAiBudget({ maxAi = 0, officialCandidates = 0, discoveryCandidates = 0, officialFraction = 0.5 } = {}) {

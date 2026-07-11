@@ -114,6 +114,34 @@ test('extractFacts usa paises como equipos solo en resultado deportivo', () => {
   assert.deepEqual(sports.teams, sports.sportsTeams);
 });
 
+test('posicionamiento internacional no se clasifica como resultado deportivo por palabras aisladas', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Tierra del Fuego fortalece su posicionamiento internacional en Brasil',
+      description: 'Autoridades fueguinas destacaron la agenda turistica y comercial.',
+      text: 'La provincia presento acciones de promocion internacional. En el tramo final del encuentro se mencionaron resultados de la agenda de trabajo y la clasificacion de mercados prioritarios. '.repeat(8),
+      date: '2026-07-10'
+    },
+    source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' }
+  });
+  assert.notEqual(facts.eventType, 'sports-result');
+  assert.deepEqual(facts.sportsTeams, []);
+  assert.notEqual(facts.editorialLane, EDITORIAL_LANES.STRICT);
+});
+
+test('noticia internacional no se vuelve agenda por menciones incidentales en el cuerpo', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Bruselas plantea restricciones al comercio con asentamientos',
+      description: 'La Comision Europea evalua nuevas medidas diplomaticas.',
+      text: 'La decision forma parte de una negociacion internacional. Al final del documento se menciona la agenda de reuniones y actividades previstas para funcionarios. '.repeat(8),
+      date: '2026-07-10'
+    },
+    source: { defaultCategory: 'Mundo', forceCategory: 'Mundo' }
+  });
+  assert.notEqual(facts.eventType, 'agenda');
+});
+
 test('extractFacts separa dinero porcentajes horarios victimas leyes y numeros semanticos', () => {
   const facts = extractFacts({
     article: {
@@ -170,6 +198,23 @@ test('descubrimiento por agregador evalua al publisher local final', () => {
 
   assert.equal(ref.publisherDomain, 'sur54.com');
   assert.equal(isTrustedLocalRoutineSource(ref), true);
+});
+
+test('sourceRef normaliza fechas textuales parseables a ISO', () => {
+  const ref = buildSourceRef({
+    source: { id: 'bbc-mundo', name: 'BBC Mundo', mode: 'rss' },
+    item: {
+      link: 'https://www.bbc.com/mundo/articles/test',
+      pubDate: 'Fri, 10 Jul 2026 12:34:56 GMT'
+    },
+    article: {
+      title: 'Espana juega la final',
+      finalUrl: 'https://www.bbc.com/mundo/articles/test',
+      date: '10 July 2026'
+    }
+  });
+
+  assert.match(ref.publishedAt, /^2026-07-10T/);
 });
 
 test('URL final de agregador nunca cuenta como publisher confiable', () => {
@@ -571,6 +616,57 @@ test('dos titulos distintos del mismo evento generan misma clave base', () => {
   assert.equal(keyA, keyB);
 });
 
+test('claves deportivas contemplan ambos rivales y evitan colision por pais y fecha', () => {
+  const egipto = extractFacts({
+    article: {
+      title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+      text: 'La Seleccion Argentina derroto a Egipto por 3-2 en el Mundial. '.repeat(10),
+      date: '2026-07-09'
+    }
+  });
+  const ecuador = extractFacts({
+    article: {
+      title: 'Argentina vencio a Ecuador 3-2 y paso a cuartos',
+      text: 'La Seleccion Argentina derroto a Ecuador por 3-2 en el Mundial. '.repeat(10),
+      date: '2026-07-09'
+    }
+  });
+  const keyA = generateEventKey({ facts: egipto, title: egipto.title, sourceRef: { publisherDomain: 'a.com' } });
+  const keyB = generateEventKey({ facts: ecuador, title: ecuador.title, sourceRef: { publisherDomain: 'b.com' } });
+  assert.notEqual(keyA, keyB);
+  assert.match(keyA, /argentina\|egipto/);
+  assert.match(keyB, /argentina\|ecuador/);
+});
+
+test('clave deportiva usa marcador del titulo antes que marcadores laterales', () => {
+  const bbc = extractFacts({
+    article: {
+      title: 'Espana alcanza las semifinales del Mundial tras superar 2-1 a Belgica',
+      description: 'Espana vencio a Belgica por 2-1 y espera a Francia.',
+      text: 'Espana vencio a Belgica por 2-1. En otra nota lateral, Francia gano 1-0.'
+    },
+    source: { defaultCategory: 'Mundo' }
+  });
+  const dw = extractFacts({
+    article: {
+      title: 'Espana supera por 2-1 a Belgica y espera a Francia',
+      description: 'El seleccionado espanol avanzo tras vencer a Belgica.',
+      text: 'Espana supera por 2-1 a Belgica. La pagina tambien menciona un 1-0 de otro partido.'
+    },
+    source: { defaultCategory: 'Mundo' }
+  });
+
+  const sourceRef = { publisherDomain: 'bbc.com', publishedAt: '2026-07-10T12:00:00.000Z' };
+  const keyA = generateEventKey({ facts: bbc, title: bbc.title, sourceRef });
+  const keyB = generateEventKey({ facts: dw, title: dw.title, sourceRef: { ...sourceRef, publisherDomain: 'dw.com' } });
+
+  assert.deepEqual(bbc.scores, ['2-1']);
+  assert.deepEqual(dw.scores, ['2-1']);
+  assert.deepEqual(bbc.sportsTeams, ['Espana', 'Belgica']);
+  assert.equal(keyA, keyB);
+  assert.doesNotMatch(keyA, /1-0/);
+});
+
 test('event key usa fecha de fuente antes que fecha historica lateral', () => {
   const facts = {
     eventType: 'general',
@@ -591,6 +687,27 @@ test('event key usa fecha de fuente antes que fecha historica lateral', () => {
 
   assert.match(eventKey, /2026-07-08/);
   assert.doesNotMatch(eventKey, /abril de 2023/);
+});
+
+test('event key de servicio prioriza titulo y evita contaminacion lateral', () => {
+  const facts = {
+    eventType: 'service',
+    organizations: ['Ministerio de Salud', 'Federacion Alemana de Futbol'],
+    places: ['Ushuaia'],
+    countries: ['Argentina', 'Brasil'],
+    action: 'informa',
+    dates: ['2026-07-11'],
+    rawSummary: 'Texto lateral con Ministerio de Salud, Federacion Alemana de Futbol, Argentina y Brasil.'
+  };
+  const eventKey = generateEventKey({
+    facts,
+    title: 'Asi estara el tiempo este fin de semana en Ushuaia',
+    sourceRef: { publisherDomain: 'ushuaia24.com.ar', publishedAt: '2026-07-11T10:00:00.000Z' }
+  });
+  assert.match(eventKey, /tiempo/);
+  assert.match(eventKey, /ushuaia/);
+  assert.doesNotMatch(eventKey, /ministerio/);
+  assert.doesNotMatch(eventKey, /brasil/);
 });
 
 test('sismos con misma magnitud fecha y ubicacion generan la misma clave conservadora', () => {
@@ -667,7 +784,7 @@ test('integracion A: dos Tier B mismo hecho con titulos distintos verifican un e
   assert.equal(groups[0].verification.verified, true);
 });
 
-test('integracion B: rival deportivo distinto queda conflictivo y sin publicacion', () => {
+test('integracion B: rival deportivo distinto no colisiona por pais y fecha', () => {
   const candidates = [
     fixtureCandidate({
       title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
@@ -681,9 +798,8 @@ test('integracion B: rival deportivo distinto queda conflictivo y sin publicacio
     })
   ];
   const groups = groupAndVerify(candidates);
-  assert.equal(groups.length, 1);
-  assert.equal(groups[0].verification.status, 'conflicting-sources');
-  assert.equal(groups[0].verification.verified, false);
+  assert.equal(groups.length, 2);
+  assert.notEqual(candidates[0].eventKey, candidates[1].eventKey);
 });
 
 test('integracion C: pending persistido verifica al aparecer segunda fuente concordante', () => {
@@ -768,6 +884,18 @@ test('fast lane no captura rutina extranjera sin senal fueguina', () => {
   });
   assert.equal(facts.editorialLane, EDITORIAL_LANES.STANDARD);
   assert.equal(facts.riskLevel, 'high');
+});
+
+test('fast lane no captura actividad nacional amplia sin senal local', () => {
+  const facts = extractFacts({
+    article: {
+      title: 'Abren las inscripciones para actividades recreativas de invierno',
+      description: 'El programa tendra talleres y cursos gratuitos.',
+      text: 'La convocatoria incluye cursos, talleres y actividades recreativas para jovenes durante las vacaciones.'
+    },
+    source: { id: 'nacionales-infobae', name: 'Infobae', defaultCategory: 'Nacionales', forceCategory: 'Nacionales' }
+  });
+  assert.equal(facts.editorialLane, EDITORIAL_LANES.STANDARD);
 });
 
 test('texto lateral de agenda no contamina tipo de evento internacional', () => {

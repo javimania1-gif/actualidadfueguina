@@ -15,7 +15,6 @@ export const EVENTS_PATH = path.join(ROOT, 'data/events.json');
 const HIGH_RISK_PATTERNS = [
   /\b(eleccion|elecciones|electoral|votos?|escrutinio|convencionales?)\b/i,
   /\b(fallecio|murio|muerte|victimas?|heridos?|accidente fatal)\b/i,
-  /\b(resultado|marcador|gano|vencio|derroto|elimino|clasifico|final|cuartos|octavos)\b/i,
   /\b(judicial|condena|imputado|denuncia penal|causa)\b/i,
   /\b(inflacion|dolar|tarifa|salario|paritaria|reforma constitucional)\b/i,
   /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/i,
@@ -33,7 +32,7 @@ const KNOWN_COUNTRIES = [
   'Argentina', 'Egipto', 'Ecuador', 'Brasil', 'Chile', 'Uruguay', 'Paraguay',
   'Bolivia', 'Peru', 'Colombia', 'Venezuela', 'Mexico', 'Estados Unidos',
   'Reino Unido', 'Inglaterra', 'Francia', 'Alemania', 'Italia', 'Espana',
-  'Cuba'
+  'Cuba', 'Belgica', 'Suiza'
 ];
 
 const KNOWN_SPORTS_TEAMS = [
@@ -114,16 +113,6 @@ const MONTHS_ES = new Map([
   ['diciembre', '12']
 ]);
 
-const STRICT_LANE_PATTERNS = [
-  /\b(resultados?|marcador|vencio|derroto|elimino|clasifico|final|cuartos|octavos)\b/,
-  /\b(fallecio|murio|muerte|victimas?|heridos?|accidente fatal|femicidio)\b/,
-  /\b(eleccion|elecciones|electoral|votos?|escrutinio|convencionales?)\b/,
-  /\b(policial|policiales|homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido)\b/,
-  /\b(judicial|condena|imputado|denuncia penal|causa judicial|demanda judicial)\b/,
-  /\b(guerra|ataque|conflicto internacional|crisis sanitaria)\b/,
-  /\b(acusacion|acusaciones|acusan|acusado|corrupcion|fraude|estafa|abuso|acoso)\b/
-];
-
 const STRICT_SINGLE_SOURCE_EVENT_TYPES = new Set([
   'casualty',
   'crime',
@@ -141,7 +130,7 @@ const STANDARD_LANE_PATTERNS = [
 ];
 
 const FAST_LANE_PATTERNS = [
-  /\b(agenda|inscripcion|inscripciones|curso|cursos|taller|talleres|capacitacion|capacitaciones)\b/,
+  /\b(agenda cultural|agenda de actividades|inscripcion|inscripciones|curso|cursos|taller|talleres|capacitacion|capacitaciones)\b/,
   /\b(actividad|actividades|servicio|servicios|atencion|operativo|cronograma)\b/,
   /\b(convocatoria|convoca|feria|muestra|festival|fiesta|pena|propuesta cultural)\b/,
   /\b(programa|programas|obra|obras|pavimentad[oa]|inaugura|habilita|presenta|lanza|abre)\b/
@@ -257,6 +246,27 @@ function extractSportsTeams(text, eventType) {
   ]).slice(0, 8);
 }
 
+function extractSportsTeamsNearScores(text, eventType) {
+  if (eventType !== 'sports-result') return [];
+  const clean = cleanText(text);
+  const scorePattern = /\b\d{1,2}\s?[-â€“]\s?\d{1,2}\b/g;
+  const teams = [];
+  for (const match of clean.matchAll(scorePattern)) {
+    const start = Math.max(0, match.index - 140);
+    const end = Math.min(clean.length, match.index + match[0].length + 140);
+    const window = clean.slice(start, end);
+    const windowTeams = extractSportsTeams(window, eventType);
+    const normalizedWindow = normalizeText(window);
+    for (const team of windowTeams) {
+      const normalizedTeam = normalizeText(team);
+      const futureOpponentPattern = new RegExp(`\\b(?:espera(?:ra)?|enfrentara|enfrenta|choque(?:\\s+estelar)?\\s+con|proximo\\s+rival|ante)\\s+(?:a\\s+)?${normalizedTeam}\\b`);
+      if (windowTeams.length > 2 && futureOpponentPattern.test(normalizedWindow)) continue;
+      teams.push(team);
+    }
+  }
+  return unique(teams).slice(0, 4);
+}
+
 function extractMoney(text) {
   const values = cleanText(text).match(/\b(?:[$]\s*)?\d{1,3}(?:[.,]\d{3})*(?:[.,]\d+)?\s?(?:millones?|millon|pesos?|d[óo]lares?|usd|ars)(?:\s+de\s+(?:pesos?|d[óo]lares?))?\b/gi) || [];
   return unique(values).slice(0, 10);
@@ -300,14 +310,24 @@ function extractPlaces(text, source = {}) {
   return unique(values).slice(0, 10);
 }
 
-function extractSemanticFacts(text, eventType, source = {}) {
-  const scores = extractScores(text);
+function extractSemanticFacts(text, eventType, source = {}, lead = '') {
+  const leadScores = extractScores(lead);
+  const scores = eventType === 'sports-result' && leadScores.length > 0
+    ? leadScores
+    : extractScores(text);
+  const leadSportsTeams = extractSportsTeams(lead || text, eventType);
+  const scoreContextSportsTeams = extractSportsTeamsNearScores(`${lead}\n${text.slice(0, 600)}`, eventType);
+  const sportsTeams = scoreContextSportsTeams.length >= 2
+    ? scoreContextSportsTeams
+    : eventType === 'sports-result' && leadSportsTeams.length < 2
+      ? unique([...leadSportsTeams, ...extractSportsTeams(text.slice(0, 600), eventType)])
+      : leadSportsTeams;
   const money = extractMoney(text);
   const percentages = extractPercentages(text);
   const casualties = extractCasualties(text);
   const times = extractTimes(text);
   return {
-    sportsTeams: extractSportsTeams(text, eventType),
+    sportsTeams,
     countries: extractCountries(text),
     places: extractPlaces(text, source),
     money,
@@ -360,17 +380,71 @@ function matchesAny(value = '', patterns = []) {
   return patterns.some((pattern) => pattern.test(value));
 }
 
+function leadText(text = '', lines = 3) {
+  return normalizeText(cleanText(text).split(/\n/).slice(0, lines).join(' '));
+}
+
+function countSportsParticipants(text = '') {
+  return unique([
+    ...pickKnown(text, KNOWN_SPORTS_TEAMS),
+    ...pickKnown(text, KNOWN_COUNTRIES)
+  ]).length;
+}
+
+function hasSportsResultContext(text = '') {
+  const value = normalizeText(text);
+  const participants = countSportsParticipants(text);
+  const hasResultVerb = /\b(resultado|marcador|gano|vencio|derroto|empato|perdio|goleo|supero|elimino|clasifico)\b/.test(value) ||
+    /\b(paso|avanzo|accedio)\s+a\s+(?:octavos|cuartos|semifinal(?:es)?|final)\b/.test(value);
+  const hasSportsFrame = /\b(futbol|partido|seleccion|mundial|copa|torneo|liga|club|equipo|estadio|cancha|gol|penales|fixture|deportivo|deportes)\b/.test(value);
+  const hasScore = /\b\d{1,2}\s?[-–]\s?\d{1,2}\b/.test(text);
+  return (hasResultVerb && participants >= 2) || (hasSportsFrame && (hasResultVerb || hasScore));
+}
+
+function hasElectionContext(text = '') {
+  const value = normalizeText(text);
+  if (/\belecciones?\b|\bcomicios\b|\bescrutinio\b|\burnas\b/.test(value)) return true;
+  return /\belectoral(?:es)?\b/.test(value) &&
+    /\b(votos?|resultados?|candidatos?|listas?|convoca|convocatoria|padron|convencionales?)\b/.test(value);
+}
+
+function hasInternationalConflictContext(text = '') {
+  const value = normalizeText(text);
+  const actor = /\b(iran|israel|ucrania|rusia|otan|onu|teheran|moscu|gaza|palestina|estados unidos|reino unido|china)\b/.test(value);
+  const conflict = /\b(guerra|ataque|misiles?|bombardeo|alto al fuego|tregua|invasion|conflicto internacional|crisis internacional|buque de guerra|militar)\b/.test(value);
+  return actor && conflict;
+}
+
+function hasAgendaContext(text = '') {
+  const value = normalizeText(text);
+  if (/\b(agenda cultural|agenda de actividades|inscripcion|inscripciones|curso|cursos|taller|capacitacion|feria|muestra|festival|fiesta|pena|convocatoria)\b/.test(value)) return true;
+  return /\b(actividad|actividades)\b/.test(value) && /\b(cultural|deportiva|municipal|comunitaria|abierta|vecinal)\b/.test(value);
+}
+
+function strictLaneReasons({ combined = '', lead = '' } = {}) {
+  const reasons = [];
+  if (hasSportsResultContext(lead)) reasons.push('strict-sports-result');
+  if (hasElectionContext(lead)) reasons.push('strict-election');
+  if (/\b(fallecio|murio|muerte|victimas?|heridos?|accidente fatal|femicidio)\b/.test(lead)) reasons.push('strict-casualty');
+  if (/\b(policial|policiales|homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido)\b/.test(lead)) reasons.push('strict-crime');
+  if (/\b(judicial|condena|imputado|denuncia penal|causa judicial|demanda judicial)\b/.test(combined)) reasons.push('strict-judicial');
+  if (hasInternationalConflictContext(lead)) reasons.push('strict-international-conflict');
+  if (/\b(acusacion|acusaciones|acusan|acusado|corrupcion|fraude|estafa|abuso|acoso)\b/.test(combined)) reasons.push('strict-accusation');
+  return unique(reasons);
+}
+
 export function classifyEditorialLane({ title = '', text = '', category = '', source = {}, aiRisk = '' }) {
   const combined = normalizeText(`${title}\n${text.slice(0, 3000)}\n${category}`);
+  const lead = leadText(`${title}\n${text.slice(0, 1200)}`, 3);
   const reasons = [];
 
   if (aiRisk === 'alto') {
     return { lane: EDITORIAL_LANES.STRICT, reasons: ['ai-high'] };
   }
 
-  if (matchesAny(combined, STRICT_LANE_PATTERNS)) {
-    reasons.push('strict-sensitive-topic');
-    return { lane: EDITORIAL_LANES.STRICT, reasons };
+  const strictReasons = strictLaneReasons({ combined, lead });
+  if (strictReasons.length > 0) {
+    return { lane: EDITORIAL_LANES.STRICT, reasons: strictReasons };
   }
 
   if (matchesAny(combined, STANDARD_LANE_PATTERNS)) {
@@ -381,9 +455,10 @@ export function classifyEditorialLane({ title = '', text = '', category = '', so
   if (matchesAny(combined, FAST_LANE_PATTERNS)) {
     const sourceText = normalizeText(`${source.id || ''} ${source.name || ''} ${source.location || ''} ${source.defaultCategory || ''}`);
     const hasLocalSignal = /\b(rio grande|ushuaia|tolhuin|tierra del fuego|malvinas|antartida|tdf|fueguin)\b/.test(`${combined} ${sourceText}`);
-    const hasForeignSignal = /\b(cdmx|mexico|colombia|cuba|iran|teheran|moscu|rusia|ucrania|francia|estados unidos|reino unido|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(combined);
-    if (hasForeignSignal && !hasLocalSignal && source.mode !== 'official-auto') {
-      return { lane: EDITORIAL_LANES.STANDARD, reasons: ['foreign-routine-standard'] };
+    const hasForeignSignal = /\b(cdmx|mexico|colombia|cuba|iran|teheran|moscu|rusia|ucrania|francia|alemania|espana|estados unidos|reino unido|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(combined);
+    const forcedBroadCategory = ['nacionales', 'mundo'].includes(normalizeText(source.forceCategory || source.defaultCategory || ''));
+    if ((hasForeignSignal || forcedBroadCategory) && !hasLocalSignal && source.mode !== 'official-auto') {
+      return { lane: EDITORIAL_LANES.STANDARD, reasons: ['broad-routine-standard'] };
     }
     reasons.push(source.mode === 'official-auto' ? 'official-routine-fast-lane' : 'routine-fast-lane');
     return { lane: EDITORIAL_LANES.FAST, reasons };
@@ -426,12 +501,13 @@ export function extractFacts({ article = {}, item = {}, source = {}, category = 
   const risk = classifyRisk({ title, text, category: category || source.defaultCategory, source });
   const capitalized = extractCapitalizedPhrases(`${title}\n${article.description || ''}`);
   const eventTypeText = `${title}\n${article.description || item.description || ''}\n${(article.text || '').slice(0, 1200)}`;
+  const semanticLead = `${title}\n${article.description || item.description || ''}`;
   const inferredEventType = inferEventType(eventTypeText);
   const safeInferredEventType = inferredEventType === 'high-risk' ? 'general' : inferredEventType;
   const eventType = risk.level === 'high' || ['weather-forecast', 'agenda', 'service'].includes(safeInferredEventType)
     ? safeInferredEventType
     : 'general';
-  const semanticFacts = extractSemanticFacts(text, eventType, source);
+  const semanticFacts = extractSemanticFacts(text, eventType, source, semanticLead);
   const teams = semanticFacts.sportsTeams;
   const dates = extractDates(text, article.date || item.pubDate);
   const weatherForecastDateKey = inferredEventType === 'weather-forecast'
@@ -538,20 +614,20 @@ export function refreshPersistedFacts(facts = {}, sourceRef = {}) {
 
 function inferEventType(text) {
   const value = normalizeText(text);
-  const lead = normalizeText(cleanText(text).split(/\n/).slice(0, 2).join(' '));
-  if (/\b(resultado|marcador|vencio|derroto|elimino|clasifico|octavos|cuartos)\b/.test(value)) return 'sports-result';
-  if (/\b(eleccion|electoral|votos|convencionales)\b/.test(value)) return 'election';
-  if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(value)) return 'crime';
-  if (/\b(guerra|ataque|misiles?|iran|teheran|conflicto internacional|crisis internacional)\b/.test(value)) return 'international-conflict';
+  const lead = leadText(text, 3);
+  if (hasSportsResultContext(lead)) return 'sports-result';
+  if (hasElectionContext(lead)) return 'election';
+  if (/\b(homicidio|detenido|allanamiento|secuestro|robo|drogas|contrabando|desaparecido|violencia|busqueda de personas)\b/.test(lead)) return 'crime';
+  if (hasInternationalConflictContext(lead)) return 'international-conflict';
   if (/\b(buque|fragata|warship|britanic[oa]|reino unido|malvinas|soberania)\b/.test(value)) return 'territorial-sovereignty';
   if (/\b(antartida|antartico)\b/.test(value) && /\b(estrategic[oa]|militar|defensa|geopolitic[oa]|base)\b/.test(value)) return 'defense';
-  if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(value)) return 'weather';
+  if (/\b(alerta meteorologica|temporal|viento|nevadas?|sismo|evacuacion|naufragio)\b/.test(lead)) return 'weather';
   if (isOrdinaryWeatherForecastText(value)) return 'weather-forecast';
   if (/\b(servicio|servicios|tramite|tramites|beca|becas|empleo|corte programado|operativo|rutas?|vuelos?|transporte|escuelas?|salud|hospital|medicos?|sanitaria|tarifas?)\b/.test(lead)) return 'service';
-  if (/\b(agenda|inscripcion|inscripciones|curso|cursos|taller|capacitacion|actividad|actividades|feria|muestra|festival|fiesta|pena|convocatoria|agenda cultural)\b/.test(value)) return 'agenda';
+  if (hasAgendaContext(lead)) return 'agenda';
   if (/\b(servicio|servicios|tramite|tramites|beca|becas|empleo|corte programado|operativo|rutas?|vuelos?|transporte|escuelas?|salud|tarifas?)\b/.test(value)) return 'service';
   if (/\b(ciencia|cientifico|investigacion|hallazgo|conicet)\b/.test(value)) return 'scientific';
-  if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(value)) return 'casualty';
+  if (/\b(fallecio|murio|muerte|victima|herido|accidente)\b/.test(lead)) return 'casualty';
   if (/\b(legislatura|senado|diputados|sesion|proyecto de ley)\b/.test(value)) return 'legislative';
   if (/\b(ley|decreto|resolucion|norma|reforma constitucional)\b/.test(value)) return 'legal-policy';
   return 'general';
@@ -620,9 +696,24 @@ export function generateEventKey({ facts = {}, title = '', sourceRef = {} }) {
 
   const sportsTeams = facts.sportsTeams || facts.teams || [];
   if (facts.eventType === 'sports-result' && sportsTeams.length > 0) {
-    const primary = sportsTeams.map(normalizeText).sort()[0];
+    const teams = sportsTeams.map(normalizeText).filter(Boolean).sort().slice(0, 2);
     const date = normalizeText(keyDateToken(facts, sourceRef));
-    return ['sports-result', primary, date].filter(Boolean).join('|').slice(0, 180);
+    const score = (facts.scores || []).map(normalizeText).filter(Boolean).sort()[0] || '';
+    const fallback = teams.length >= 2 ? [] : extractFingerprint(title || facts.title || '').split('|').slice(0, 4);
+    return ['sports-result', ...teams, ...fallback, date, score].filter(Boolean).join('|').slice(0, 180);
+  }
+
+  const titleTerms = extractFingerprint(title || facts.title || '').split('|').filter(Boolean).slice(0, 7);
+  if (['general', 'service', 'agenda', 'scientific'].includes(facts.eventType || 'general') && titleTerms.length >= 3) {
+    const localPlaces = (facts.places || [])
+      .filter((place) => /\b(rio grande|ushuaia|tolhuin|tierra del fuego|malvinas|antartida)\b/.test(normalizeText(place)))
+      .slice(0, 2);
+    return [
+      facts.eventType || 'general',
+      ...titleTerms,
+      ...localPlaces,
+      keyDateToken(facts, sourceRef)
+    ].filter(Boolean).map(normalizeText).filter(Boolean).join('|').slice(0, 180);
   }
 
   const important = [

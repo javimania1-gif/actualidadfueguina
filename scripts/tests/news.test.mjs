@@ -16,6 +16,7 @@ import {
   classifySourceValidationErrors,
   createContentFingerprint,
   deriveEffectiveImportance,
+  assessPublishedStoryNovelty,
   findLikelyPublishedStoryMatch,
   unwrapDiscoveryUrl
 } from '../lib/pipeline-utils.mjs';
@@ -38,6 +39,7 @@ import {
   buildCorroborationQuery,
   compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
+  repairRecentPendingEventIdentity,
   scoreCorroborationPriority,
   selectPendingRecoverySources,
   terminalizeExpiredPendingEvents
@@ -856,6 +858,38 @@ test('pending historico no une hechos distintos con misma persona o municipio', 
   assert.equal(sameMunicipalityDifferentEvent, 'new-municipality-story');
 });
 
+test('pending historico mundial exige identidad fuerte y no una sola entidad compartida', () => {
+  const records = {
+    'world|onu|estados-unidos|a': {
+      status: 'pending-verification',
+      publisherDomains: ['medio-a.com'],
+      factsBySource: [{
+        facts: {
+          title: 'ONU advierte por una crisis humanitaria en Gaza',
+          eventType: 'international-conflict',
+          organizations: ['ONU'],
+          countries: ['Estados Unidos'],
+          places: ['Gaza'],
+          rawSummary: 'La ONU publico una advertencia por la situacion humanitaria.'
+        }
+      }]
+    }
+  };
+  const different = findMatchingPendingEventKeyInRecords({
+    records,
+    eventKey: 'world|onu|estados-unidos|b',
+    title: 'ONU aprueba una resolucion sobre inteligencia artificial',
+    facts: {
+      eventType: 'general',
+      organizations: ['ONU'],
+      countries: ['Estados Unidos'],
+      rawSummary: 'La ONU aprobo una resolucion tecnologica con apoyo de Estados Unidos.'
+    },
+    sourceRef: { publisherDomain: 'medio-b.com' }
+  });
+  assert.equal(different, 'world|onu|estados-unidos|b');
+});
+
 test('pending historico une el mismo sismo solo con hechos centrales concordantes', () => {
   const records = {
     'weather|fragmented|sismo|tn': {
@@ -950,6 +984,53 @@ test('compacta pendientes persistidos del mismo sismo y reevalua corroboracion',
   assert.equal(Object.keys(records).length, 1);
   assert.equal(records['weather|fragment-a'].sources.length, 2);
   assert.equal(records['weather|fragment-a'].status, 'verified-standard');
+});
+
+test('repara identidad reciente pendiente sin tocar eventos publicados', () => {
+  const records = {
+    'sports-result|argentina|2026-07-09': {
+      status: 'pending-verification',
+      lastSeenAt: '2026-07-10T10:00:00.000Z',
+      publisherDomains: ['a.com'],
+      sources: [{ tier: 'B', publisherDomain: 'a.com', url: 'https://a.com/nota', publishedAt: '2026-07-09T12:00:00.000Z' }],
+      factsBySource: [{
+        publisherDomain: 'a.com',
+        url: 'https://a.com/nota',
+        facts: {
+          title: 'Argentina vencio a Egipto 3-2 y paso a cuartos',
+          eventType: 'sports-result',
+          sportsTeams: ['Argentina', 'Egipto'],
+          teams: ['Argentina', 'Egipto'],
+          scores: ['3-2'],
+          dates: ['2026-07-09'],
+          rawSummary: 'La Seleccion Argentina derroto a Egipto por 3-2 en el Mundial.'
+        }
+      }]
+    },
+    'published|conservar': {
+      status: 'published',
+      lastSeenAt: '2026-07-10T10:00:00.000Z'
+    }
+  };
+  const result = repairRecentPendingEventIdentity(records, { now: new Date('2026-07-10T12:00:00.000Z') });
+  assert.equal(result.corrected, 1);
+  assert.equal(result.conservedPublished, 1);
+  assert.equal(Boolean(records['sports-result|argentina|2026-07-09']), false);
+  assert(Object.keys(records).some((key) => key.includes('argentina|egipto')));
+  assert.equal(records['published|conservar'].status, 'published');
+});
+
+test('deduplicacion editorial permite actualizacion con dato nuevo y bloquea repeticion sin novedad', () => {
+  const repeated = assessPublishedStoryNovelty({
+    numbers: new Set(['105']),
+    otherNumbers: new Set(['105'])
+  });
+  const updated = assessPublishedStoryNovelty({
+    numbers: new Set(['106']),
+    otherNumbers: new Set(['105'])
+  });
+  assert.equal(repeated.hasSubstantialNovelty, false);
+  assert.equal(updated.hasSubstantialNovelty, true);
 });
 
 test('agenda invalida claves weather heredadas para buques y Malvinas', () => {

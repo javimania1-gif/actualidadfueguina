@@ -39,7 +39,9 @@ const GENERIC_PATH_SEGMENTS = new Set([
 
 const TRUSTED_LOCAL_DOMAINS = [
   'actualidadtdf.com.ar',
+  'criticasur.com.ar',
   'elrompehielos.com.ar',
+  'provincia23.com.ar',
   'radiofueguina.com',
   'radiouniversidad.com.ar',
   'sur54.com',
@@ -129,6 +131,16 @@ export function classifySourceTier({ source = {}, finalUrl = '', officialDomains
   return SOURCE_TIERS.B;
 }
 
+function firstUsablePublishedAt(...values) {
+  for (const value of values) {
+    const text = String(value || '').trim();
+    if (!text) continue;
+    const date = new Date(text);
+    if (Number.isFinite(date.getTime())) return date.toISOString();
+  }
+  return String(values.find(Boolean) || '');
+}
+
 export function buildSourceRef({ source = {}, item = {}, article = {}, officialDomains = [] }) {
   const finalUrl = article.canonicalUrl || article.finalUrl || item.link || '';
   const publisherDomain = getDomain(finalUrl);
@@ -146,7 +158,7 @@ export function buildSourceRef({ source = {}, item = {}, article = {}, officialD
     url: finalUrl,
     originalUrl: item.link || finalUrl,
     title: article.title || item.title || '',
-    publishedAt: article.date || item.pubDate || ''
+    publishedAt: firstUsablePublishedAt(article.date, item.pubDate)
   };
 }
 

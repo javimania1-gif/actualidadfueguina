@@ -59,6 +59,7 @@ import {
   compactEquivalentPendingEvents,
   findMatchingPendingEventKeyInRecords,
   isCompatibleCorroboration,
+  repairRecentPendingEventIdentity,
   scoreCorroborationPriority,
   selectPendingRecoverySources,
   terminalizeExpiredPendingEvents
@@ -113,6 +114,7 @@ const GENERIC_TITLE_WORDS = new Set([
 
 // Métricas
 const metrics = {
+  sourcesConfigured: config.sources.length,
   sourcesConsulted: 0,
   candidatesDetected: 0,
   candidatesIngested: 0,
@@ -131,6 +133,11 @@ const metrics = {
   verified: 0,
   pendingVerification: 0,
   pendingMatchedFromHistory: 0,
+  recentEventRepair: {
+    corrected: 0,
+    compacted: 0,
+    conservedPublished: 0
+  },
   pendingEventsCompacted: 0,
   pendingCompactionVerified: 0,
   pendingRecoveryAttempted: 0,
@@ -205,12 +212,27 @@ function sourceHealth(sourceId = '') {
     freshCandidates: 0,
     qualityDiscarded: 0,
     staleDiscarded: 0,
+    consulted: 0,
+    fetchErrors: 0,
+    noItems: 0,
+    lastError: '',
+    status: 'not-consulted',
+    issueCategory: '',
     verifiedContribution: 0,
     publicationContribution: 0
   };
   return metrics.sourceHealth[id];
 }
 
+const recentRepair = repairRecentPendingEventIdentity(events.events || {});
+metrics.recentEventRepair = {
+  corrected: recentRepair.corrected,
+  compacted: recentRepair.compacted,
+  conservedPublished: recentRepair.conservedPublished
+};
+if (recentRepair.changed) {
+  console.log(`Eventos pendientes recientes reparados: ${recentRepair.corrected}; compactados por nueva identidad: ${recentRepair.compacted}`);
+}
 const pendingCompaction = compactEquivalentPendingEvents(events.events || {});
 metrics.pendingEventsCompacted = pendingCompaction.merged;
 metrics.pendingCompactionVerified = pendingCompaction.verified;
@@ -409,6 +431,14 @@ console.log(`Índice de deduplicación (solo publicadas): ${existingUrls.size} U
 // ============================================================
 
 async function readSource(source) {
+  const filterItems = (items = []) => {
+    if (!source.filterKeywords?.length) return items;
+    const keywords = source.filterKeywords.map(k => normalizeText(k));
+    return items.filter(item => {
+      const text = normalizeText(`${item.title} ${item.description || ''}`);
+      return keywords.some(k => text.includes(k));
+    });
+  };
   if (source.type === 'rss') {
     const { text } = await fetchText(bingFreshUrl(source.url), { timeoutMs: source.timeoutMs || RSS_TIMEOUT_MS });
     const feed = await parser.parseString(text);
@@ -419,22 +449,13 @@ async function readSource(source) {
       description: stripHtml(item.contentSnippet || item.content || item.summary || '')
     }));
 
-    // Filtrar por palabras clave si la fuente lo requiere (fuentes nacionales)
-    if (source.filterKeywords && source.filterKeywords.length > 0) {
-      const keywords = source.filterKeywords.map(k => k.toLowerCase());
-      items = items.filter(item => {
-        const text = `${item.title} ${item.description}`.toLowerCase();
-        return keywords.some(k => text.includes(k));
-      });
-    }
-
-    return items.slice(0, source.maxItems || 5);
+    return filterItems(items).slice(0, source.maxItems || 5);
   }
   if (source.type === 'html-index') {
     const { text } = await fetchText(source.url, { timeoutMs: 30000 });
-    return extractIndexLinks(text, source.url, source.linkPattern)
-      .slice(0, source.maxItems || 5)
+    const items = extractIndexLinks(text, source.url, source.linkPattern)
       .map((item) => ({ ...item, pubDate: '', description: '' }));
+    return filterItems(items).slice(0, source.maxItems || 5);
   }
   throw new Error(`Tipo de fuente no soportado: ${source.type}`);
 }
@@ -612,13 +633,18 @@ for (const rescueItem of runnableRescueItems) {
 
 await Promise.all(config.sources.map(async (source) => {
   metrics.sourcesConsulted++;
+  const health = sourceHealth(source.id);
+  health.consulted++;
   let items = [];
   try {
     items = await readSource(source);
   } catch (error) {
+    health.fetchErrors++;
+    health.lastError = String(error.message || error).slice(0, 160);
     console.warn(`[${source.name}] omitida: ${error.message}`);
     return;
   }
+  if (items.length === 0) health.noItems++;
   for (const item of items) {
     if (!item.link) continue;
     sourceHealth(source.id).detected++;
@@ -1595,13 +1621,49 @@ metrics.technicalSuccess = true;
 metrics.editorialOutcome = classifyEditorialOutcome(metrics);
 
 function finalizeSourceHealth() {
+  for (const source of config.sources) sourceHealth(source.id);
+  let healthy = 0;
+  let productive = 0;
+  let noResults = 0;
+  let failed = 0;
   for (const health of Object.values(metrics.sourceHealth)) {
-    health.freshCandidateRate = health.detected ? Math.round((health.freshCandidates / health.detected) * 100) / 100 : 0;
-    health.materializationSuccessRate = health.detected ? Math.round((health.materialized / health.detected) * 100) / 100 : 0;
-    health.verificationContributionRate = health.detected ? Math.round((health.verifiedContribution / health.detected) * 100) / 100 : 0;
-    health.publicationContributionRate = health.detected ? Math.round((health.publicationContribution / health.detected) * 100) / 100 : 0;
-    health.staleDiscardRate = health.detected ? Math.round((health.staleDiscarded / health.detected) * 100) / 100 : 0;
+    const denominator = Math.max(health.detected, health.materialized, health.freshCandidates, health.verifiedContribution, health.publicationContribution, 1);
+    health.freshCandidateRate = health.detected ? Math.round((health.freshCandidates / denominator) * 100) / 100 : 0;
+    health.materializationSuccessRate = health.detected ? Math.round((health.materialized / denominator) * 100) / 100 : 0;
+    health.verificationContributionRate = health.detected ? Math.round((health.verifiedContribution / denominator) * 100) / 100 : 0;
+    health.publicationContributionRate = health.detected ? Math.round((health.publicationContribution / denominator) * 100) / 100 : 0;
+    health.staleDiscardRate = health.detected ? Math.round((health.staleDiscarded / denominator) * 100) / 100 : 0;
+    if (health.fetchErrors > 0 && health.detected === 0) {
+      health.status = 'unhealthy';
+      health.issueCategory = 'fetch-error';
+      failed++;
+    } else if (health.detected === 0) {
+      health.status = 'unhealthy';
+      health.issueCategory = 'zero-items';
+      noResults++;
+    } else if (health.materialized === 0) {
+      health.status = 'idle';
+      health.issueCategory = 'no-new-materializable-items';
+      healthy++;
+    } else if (health.freshCandidates === 0) {
+      health.status = 'degraded';
+      health.issueCategory = health.staleDiscarded > 0 ? 'stale-or-evergreen' : 'zero-useful-candidates';
+      healthy++;
+    } else {
+      health.status = 'healthy';
+      health.issueCategory = '';
+      healthy++;
+      productive++;
+    }
   }
+  metrics.sourceHealthSummary = {
+    configured: config.sources.length,
+    consulted: metrics.sourcesConsulted,
+    healthy,
+    productive,
+    noResults,
+    failed
+  };
 }
 
 function summarizeLatency() {
@@ -1699,7 +1761,9 @@ console.log('RESUMEN ESTRUCTURADO DEL RUN', JSON.stringify({
   freshCandidates: metrics.freshCandidates,
   staleDiscarded: metrics.staleDiscarded,
   sourceHealth: metrics.sourceHealth,
+  sourceHealthSummary: metrics.sourceHealthSummary,
   sourceDeprioritized: metrics.sourceDeprioritized,
+  recentEventRepair: metrics.recentEventRepair,
   deduplication: {
     exactUrl: metrics.duplicateExactUrl,
     exactContent: metrics.duplicateExactContent,

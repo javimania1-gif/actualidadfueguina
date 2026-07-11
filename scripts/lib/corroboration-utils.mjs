@@ -1,6 +1,6 @@
 import { cleanText } from './news-utils.mjs';
 import { extractFingerprint, normalizeText } from './pipeline-utils.mjs';
-import { buildEventRecord, corroborateEvent, getEarthquakeSignature } from './factual-utils.mjs';
+import { buildEventRecord, corroborateEvent, generateEventKey, getEarthquakeSignature } from './factual-utils.mjs';
 import { inferAgendaTerritory } from './editorial-agenda.mjs';
 
 const LOCAL_TERRITORIES = new Set(['Rio Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antartida']);
@@ -104,6 +104,21 @@ function compatibleEventType(left = 'general', right = 'general') {
   return false;
 }
 
+function isBroadTerritory(territory = '') {
+  return WORLD_TERRITORIES.has(territory);
+}
+
+function hasStrongIdentityEvidence({ titleOverlap = 0, entityOverlap = 0, broad = false } = {}) {
+  if (broad) {
+    if (titleOverlap >= 4) return true;
+    if (titleOverlap >= 3 && entityOverlap >= 1) return true;
+    return titleOverlap >= 1 && entityOverlap >= 3;
+  }
+  if (titleOverlap >= 3) return true;
+  if (titleOverlap >= 2 && entityOverlap >= 1) return true;
+  return false;
+}
+
 export function isCompatibleCorroboration(base = {}, candidate = {}, existingDomains = new Set()) {
   const domain = candidate.sourceRef?.publisherDomain || '';
   if (!domain || existingDomains.has(domain)) return false;
@@ -115,6 +130,9 @@ export function isCompatibleCorroboration(base = {}, candidate = {}, existingDom
 
   const baseTitle = base.title || baseFacts.title || '';
   const candidateTitle = candidate.title || candidateFacts.title || '';
+  if (sameEarthquakeEvent({ facts: baseFacts, title: baseTitle, sourceRef: base.sourceRef || {} }, { facts: candidateFacts, title: candidateTitle, sourceRef: candidate.sourceRef || {} })) {
+    return true;
+  }
   const titleOverlap = fingerprintOverlap(baseTitle, candidateTitle);
   const entityOverlap =
     overlapCount(baseFacts.organizations, candidateFacts.organizations) +
@@ -126,7 +144,14 @@ export function isCompatibleCorroboration(base = {}, candidate = {}, existingDom
   const baseTerritory = inferTerritory({ facts: baseFacts, source: base.source, title: baseTitle });
   const candidateTerritory = inferTerritory({ facts: candidateFacts, source: candidate.source, title: candidateTitle });
   if (!compatibleTerritory(baseTerritory, candidateTerritory) && titleOverlap < 3 && entityOverlap < 2) return false;
-  return titleOverlap >= 2 || entityOverlap > 0;
+  if ((baseType === 'sports-result' || candidateType === 'sports-result')) {
+    return overlapCount(baseFacts.sportsTeams || baseFacts.teams, candidateFacts.sportsTeams || candidateFacts.teams) >= 2;
+  }
+  return hasStrongIdentityEvidence({
+    titleOverlap,
+    entityOverlap,
+    broad: isBroadTerritory(baseTerritory) || isBroadTerritory(candidateTerritory)
+  });
 }
 
 function ageHours(dateValue, now = new Date()) {
@@ -323,6 +348,51 @@ export function compactEquivalentPendingEvents(records = {}) {
   return { changed: merged > 0, merged, verified };
 }
 
+export function repairRecentPendingEventIdentity(records = {}, { now = new Date(), windowHours = 168 } = {}) {
+  const nowMs = new Date(now).getTime();
+  const windowMs = Math.max(1, Number(windowHours) || 168) * 60 * 60 * 1000;
+  const moves = [];
+  let corrected = 0;
+  let compacted = 0;
+  let conservedPublished = 0;
+
+  for (const [eventKey, record] of Object.entries(records || {})) {
+    if (record.status === 'published') {
+      conservedPublished++;
+      continue;
+    }
+    if (record.status !== 'pending-verification') continue;
+    const lastSeenMs = new Date(record.lastSeenAt || record.firstDetectedAt || 0).getTime();
+    if (!Number.isFinite(lastSeenMs) || nowMs - lastSeenMs > windowMs) continue;
+    const candidates = recordCandidates(record);
+    if (!candidates.length) continue;
+    const base = candidates[0];
+    const title = base.facts?.title || record.sources?.[0]?.title || '';
+    const targetKey = generateEventKey({ facts: base.facts || {}, title, sourceRef: base.sourceRef || {} });
+    if (!targetKey || targetKey === eventKey || records[targetKey]?.status === 'published') continue;
+    moves.push({ eventKey, targetKey, record });
+  }
+
+  for (const move of moves) {
+    if (!records[move.eventKey]) continue;
+    if (records[move.targetKey]?.status === 'pending-verification') {
+      records[move.targetKey] = mergePendingRecord(records[move.targetKey], move.record);
+      delete records[move.eventKey];
+      compacted++;
+      continue;
+    }
+    delete records[move.eventKey];
+    records[move.targetKey] = {
+      ...move.record,
+      eventKey: move.targetKey,
+      previousEventKey: move.eventKey
+    };
+    corrected++;
+  }
+
+  return { changed: corrected + compacted > 0, corrected, compacted, conservedPublished };
+}
+
 export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, facts = {}, title = '', sourceRef = {}, now = new Date() } = {}) {
   if (records?.[eventKey]?.status === 'pending-verification') return eventKey;
   const nowMs = new Date(now).getTime();
@@ -347,7 +417,8 @@ export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, f
       continue;
     }
 
-    const titleMatch = titles.some((existingTitle) => fingerprintOverlap(title, existingTitle) >= 2);
+    const maxTitleOverlap = Math.max(0, ...titles.map((existingTitle) => fingerprintOverlap(title, existingTitle)));
+    const titleMatch = maxTitleOverlap >= 2;
     const entityOverlap =
       overlapCount(facts.organizations, existingFacts.organizations) +
       overlapCount(facts.people, existingFacts.people) +
@@ -361,8 +432,11 @@ export function findMatchingPendingEventKeyInRecords({ records = {}, eventKey, f
       continue;
     }
 
-    if (titleMatch && entityOverlap > 0) return existingKey;
-    if (entityOverlap >= 2 && fingerprintOverlap(title, titles.join(' ')) >= 1) return existingKey;
+    if (hasStrongIdentityEvidence({
+      titleOverlap: maxTitleOverlap,
+      entityOverlap,
+      broad: isBroadTerritory(candidateTerritory) || isBroadTerritory(existingTerritory)
+    })) return existingKey;
   }
   return eventKey;
 }

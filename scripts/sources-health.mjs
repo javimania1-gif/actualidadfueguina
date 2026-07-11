@@ -17,6 +17,7 @@ import Parser from 'rss-parser';
 import {
   ROOT, fetchText, extractArticle, stripHtml, extractIndexLinks, sleep
 } from './lib/news-utils.mjs';
+import { normalizeText } from './lib/pipeline-utils.mjs';
 
 const VERBOSE = !process.argv.includes('--quiet');
 const JSON_OUTPUT = process.argv.includes('--json');
@@ -29,6 +30,11 @@ const GENERIC_TITLE_WORDS = new Set([
 
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
 const parser = new Parser();
+let previousHealth = {};
+try {
+  const previous = JSON.parse(await fs.readFile(path.join(ROOT, 'data/sources-health.json'), 'utf8'));
+  previousHealth = Object.fromEntries((previous.sources || []).map((source) => [source.id, source]));
+} catch {}
 
 function isGenericTitle(title) {
   if (!title || title.length < 15) return true;
@@ -37,6 +43,14 @@ function isGenericTitle(title) {
 }
 
 async function readSourceItems(source) {
+  const filterItems = (items = []) => {
+    if (!source.filterKeywords?.length) return items;
+    const kw = source.filterKeywords.map(k => normalizeText(k));
+    return items.filter(i => {
+      const text = normalizeText(`${i.title} ${i.description || ''}`);
+      return kw.some(k => text.includes(k));
+    });
+  };
   if (source.type === 'rss') {
     const { text } = await fetchText(source.url, { timeoutMs: source.timeoutMs || 15000 });
     const feed = await parser.parseString(text);
@@ -46,19 +60,35 @@ async function readSourceItems(source) {
       pubDate: item.isoDate || item.pubDate || '',
       description: stripHtml(item.contentSnippet || item.content || item.summary || '')
     }));
-    if (source.filterKeywords?.length > 0) {
-      const kw = source.filterKeywords.map(k => k.toLowerCase());
-      items = items.filter(i => kw.some(k => `${i.title} ${i.description}`.toLowerCase().includes(k)));
-    }
-    return items.slice(0, source.maxItems || 5);
+    return filterItems(items).slice(0, source.maxItems || 5);
   }
   if (source.type === 'html-index') {
     const { text } = await fetchText(source.url, { timeoutMs: 20000 });
-    return extractIndexLinks(text, source.url, source.linkPattern)
-      .slice(0, source.maxItems || 5)
+    const items = extractIndexLinks(text, source.url, source.linkPattern)
       .map(item => ({ ...item, pubDate: '', description: '' }));
+    return filterItems(items).slice(0, source.maxItems || 5);
   }
   return [];
+}
+
+function classifyIssue(result) {
+  if (result.error) return /timeout|abort/i.test(result.error) ? 'temporary-error' : 'fetch-error';
+  if (result.itemsFetched === 0) return 'zero-items';
+  if (result.linksResolved === 0) return 'zero-links-resolved';
+  if (result.articlesExtracted === 0) return result.extractErrors > 0 ? 'extractor-incompatible' : 'zero-articles-extracted';
+  if (result.validArticles === 0) return result.avgBodyLen < MIN_BODY_LEN ? 'zero-valid-articles' : 'generic-title-only';
+  return '';
+}
+
+function finalizeResult(result) {
+  const previous = previousHealth[result.id] || {};
+  result.issueCategory = classifyIssue(result);
+  result.status = result.healthy ? 'healthy' : 'unhealthy';
+  result.consecutiveFailures = result.healthy ? 0 : (Number(previous.consecutiveFailures) || 0) + 1;
+  result.lastHealthyAt = result.healthy
+    ? new Date().toISOString()
+    : previous.lastHealthyAt || null;
+  return result;
 }
 
 const results = [];
@@ -90,7 +120,7 @@ for (const source of config.sources) {
   } catch (err) {
     result.error = err.message.slice(0, 120);
     result.healthy = false;
-    results.push(result);
+    results.push(finalizeResult(result));
     if (VERBOSE && !JSON_OUTPUT) {
       console.log(`❌ [${source.id}] FETCH ERROR: ${result.error}`);
     }
@@ -143,7 +173,7 @@ for (const source of config.sources) {
     : 0;
   result.healthy = result.validArticles > 0;
 
-  results.push(result);
+  results.push(finalizeResult(result));
 
   if (VERBOSE && !JSON_OUTPUT) {
     const icon = result.healthy ? '✅' : '❌';
@@ -175,6 +205,14 @@ const healthDataPath = path.join(ROOT, 'data/sources-health.json');
 await fs.mkdir(path.dirname(healthDataPath), { recursive: true });
 await fs.writeFile(healthDataPath, JSON.stringify({
   generatedAt: new Date().toISOString(),
+  summary: {
+    configured: results.length,
+    healthy: results.filter(r => r.healthy).length,
+    unhealthy: results.filter(r => !r.healthy).length,
+    productive: results.filter(r => r.validArticles > 0).length,
+    zeroResults: results.filter(r => r.issueCategory === 'zero-items').length,
+    failed: results.filter(r => ['fetch-error', 'temporary-error', 'extractor-incompatible'].includes(r.issueCategory)).length
+  },
   sources: results,
   unhealthyIds
 }, null, 2));
