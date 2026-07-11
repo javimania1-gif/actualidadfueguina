@@ -1,40 +1,46 @@
 ---
-title: "Río Grande habilitó el primer tramo pavimentado de la calle Punta Popper"
-description: "La obra fue ejecutada íntegramente con recursos propios del Municipio y permitirá mejorar la conectividad, la circulación y el desarrollo de un sector estratégico de la ciudad."
-date: "2026-07-11T06:19:48.560Z"
+title: "Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana"
+description: "Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de \"El Mercado en tu Barrio\" con promociones, productos local"
+date: "2026-07-11T06:19:48.559Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
-sourceUrl: "https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper"
-originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.bbdf13f24db4f0cf.bm9ybWFsLndlYnA%3D.webp"
+sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
+originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T06:19:48.560Z"
+detectedAt: "2026-07-11T06:19:48.559Z"
 mode: "discovery-review"
 ---
 
 ## Material fuente detectado
 
-# Río Grande habilitó el primer tramo pavimentado de la calle Punta Popper
+# Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana
 
-La obra fue ejecutada íntegramente con recursos propios del Municipio y permitirá mejorar la conectividad, la circulación y el desarrollo de un sector estratégico de la ciudad.
+Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
 
-[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)10/07/2026
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
 
-![calle Popper rio grande](data:,)
+![rio grande aniversario](data:,)
 
-El Municipio de Río Grande habilitó el primer tramo pavimentado de la calle Punta Popper, una obra que forma parte del plan integral de mejoramiento de la infraestructura vial que impulsa la gestión del intendente Martín Perez.
+Río Grande celebrará este fin de semana su **105° aniversario** con una amplia agenda de actividades organizada por el Municipio, que incluirá actos protocolares, propuestas recreativas, espacios para las familias y una edición especial de **"El Mercado en tu Barrio"**.
 
-La intervención corresponde a la primera etapa del proyecto y fue ejecutada íntegramente con **maquinaria, personal municipal y financiamiento proveniente de recursos propios**, en el marco de la política de fortalecimiento de la infraestructura urbana.
+Los festejos comenzarán este **sábado 11 de julio** a las 10 de la mañana con el tradicional desayuno que el intendente **Martín Perez** compartirá junto a las vecinas y vecinos que también celebran su cumpleaños ese día. El encuentro tendrá lugar en el anexo del Polideportivo **Carlos Margalot**.
 
-En esta instancia quedaron habilitados **400 metros lineales de pavimento**, desde la intersección con **Vuelta de Obligado**, lo que permitirá mejorar la conectividad entre distintos sectores de la ciudad y agilizar la circulación tanto vehicular como peatonal.
+Luego se llevará a cabo el **Acto Central por el 105° aniversario de Río Grande**, del que participarán autoridades provinciales y municipales, representantes de instituciones y vecinos de la ciudad.
 
-Desde la Secretaría de Obras Públicas señalaron que la obra busca acompañar el crecimiento urbano de Río Grande mediante infraestructura de calidad, generando mejores condiciones de transitabilidad y mayor seguridad para quienes utilizan diariamente esa arteria.
+Durante la tarde, desde las **15 horas**, el Polideportivo **Carlos Margalot** y el Gimnasio **Margen Sur** serán escenario de dos grandes kermesses familiares con entrada libre y gratuita.
 
-La pavimentación de Punta Popper representa un nuevo avance dentro del plan de obras públicas que lleva adelante el Municipio para consolidar una red vial más moderna, segura y eficiente, respondiendo a las necesidades de los vecinos y fortaleciendo el desarrollo urbano de la ciudad.
+Las actividades incluirán juegos, propuestas recreativas, intercambio de figuritas, talleres creativos, espacios de educación y seguridad vial y múltiples iniciativas organizadas por distintas áreas municipales para disfrutar en familia.
 
-Con esta intervención, la gestión municipal continúa apostando a la inversión en infraestructura mediante una administración eficiente de los recursos públicos, con el objetivo de mejorar la calidad de vida de la comunidad y acompañar el crecimiento sostenido de Río Grande.
+Los festejos continuarán el **domingo 12 de julio** con una edición especial de **"El Mercado en tu Barrio"**, que abrirá sus puertas de **11 a 20 horas** en el Polideportivo Carlos Margalot.
 
-[Municipalidad Río Grande](https://ushuaia24.com.ar/tema/426/municipalidad-rio-grande)[Obra pública](https://ushuaia24.com.ar/tema/299/obra-publica)
+Durante la jornada, los vecinos podrán acceder a productos de **RGA Alimentos**, además de puestos de carnicería, pescadería, verdulería, panadería, artículos de limpieza y artesanías, con promociones especiales y precios accesibles.
+
+También habrá actividades recreativas y juegos de kermesse para las infancias, con el objetivo de que toda la comunidad continúe celebrando un nuevo aniversario de la ciudad.
+
+Desde el Municipio señalaron que esta agenda busca fortalecer los espacios de encuentro, la participación comunitaria y el sentido de pertenencia de los riograndenses, en el marco de los **105 años de una ciudad que continúa creciendo junto a su comunidad**.
+
+[Río Grande](https://ushuaia24.com.ar/tema/132/rio-grande)
 
 #### ¿Qué siente con esta noticia?
 
@@ -46,13 +52,13 @@ USHUAIA 24 ● COMUNIDAD
 
 Noticias
 
-[![rio grande aniversario](data:,)](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
+[![calle Popper rio grande](data:,)](/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper)
 
-## [Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
+## [Río Grande habilitó el primer tramo pavimentado de la calle Punta Popper](/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper)
 
-[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)10/07/2026
 
-Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
+La obra fue ejecutada íntegramente con recursos propios del Municipio y permitirá mejorar la conectividad, la circulación y el desarrollo de un sector estratégico de la ciudad.
 
 [![Clima](data:,)](/contenido/27847/asi-estara-el-tiempo-este-fin-de-semana-en-ushuaia)
 
