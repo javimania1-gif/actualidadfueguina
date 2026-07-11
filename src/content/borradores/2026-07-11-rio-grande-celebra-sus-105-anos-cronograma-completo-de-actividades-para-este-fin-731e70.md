@@ -1,14 +1,14 @@
 ---
 title: "Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana"
 description: "Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de \"El Mercado en tu Barrio\" con promociones, productos local"
-date: "2026-07-11T17:02:49.384Z"
+date: "2026-07-11T20:56:37.468Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
 originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T17:02:49.384Z"
+detectedAt: "2026-07-11T20:56:37.468Z"
 mode: "discovery-review"
 ---
 

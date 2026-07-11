@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-11T19:09:38.419Z",
+  "generatedAt": "2026-07-11T20:54:55.338Z",
   "summary": {
     "configured": 34,
-    "healthy": 23,
-    "unhealthy": 11,
-    "productive": 23,
-    "zeroResults": 2,
-    "failed": 8
+    "healthy": 27,
+    "unhealthy": 7,
+    "productive": 27,
+    "zeroResults": 3,
+    "failed": 3
   },
   "sources": [
     {
@@ -25,7 +25,7 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:07:53.877Z"
+      "lastHealthyAt": "2026-07-11T20:52:38.223Z"
     },
     {
       "id": "ushuaia-oficial",
@@ -42,7 +42,7 @@
       "error": "fetch failed",
       "issueCategory": "fetch-error",
       "status": "unhealthy",
-      "consecutiveFailures": 9,
+      "consecutiveFailures": 10,
       "lastHealthyAt": "2026-07-11T01:14:17.515Z"
     },
     {
@@ -61,25 +61,25 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:15.071Z"
+      "lastHealthyAt": "2026-07-11T20:52:59.102Z"
     },
     {
       "id": "tolhuin-oficial",
       "name": "Municipio de Tolhuin",
       "type": "rss",
-      "itemsFetched": 0,
-      "linksResolved": 0,
-      "articlesExtracted": 0,
-      "validArticles": 0,
+      "itemsFetched": 4,
+      "linksResolved": 4,
+      "articlesExtracted": 4,
+      "validArticles": 4,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 0,
-      "healthy": false,
-      "error": "HTTP 403 en https://tolhuin.gob.ar/feed/",
-      "issueCategory": "fetch-error",
-      "status": "unhealthy",
-      "consecutiveFailures": 1,
-      "lastHealthyAt": "2026-07-11T17:00:55.551Z"
+      "avgBodyLen": 725,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:53:01.099Z"
     },
     {
       "id": "actualidad-tdf",
@@ -97,12 +97,30 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:19.157Z"
+      "lastHealthyAt": "2026-07-11T20:53:04.614Z"
     },
     {
       "id": "el-rompehielos",
       "name": "El Rompehielos",
       "type": "rss",
+      "itemsFetched": 4,
+      "linksResolved": 4,
+      "articlesExtracted": 4,
+      "validArticles": 4,
+      "genericTitles": 0,
+      "extractErrors": 0,
+      "avgBodyLen": 3447,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:53:06.924Z"
+    },
+    {
+      "id": "radiofueguina",
+      "name": "Radio Fueguina",
+      "type": "html-index",
       "itemsFetched": 0,
       "linksResolved": 0,
       "articlesExtracted": 0,
@@ -111,28 +129,10 @@
       "extractErrors": 0,
       "avgBodyLen": 0,
       "healthy": false,
-      "error": "HTTP 403 en https://www.elrompehielos.com.ar/feed/",
-      "issueCategory": "fetch-error",
+      "error": "This operation was aborted",
+      "issueCategory": "temporary-error",
       "status": "unhealthy",
       "consecutiveFailures": 1,
-      "lastHealthyAt": "2026-07-11T17:01:01.783Z"
-    },
-    {
-      "id": "radiofueguina",
-      "name": "Radio Fueguina",
-      "type": "html-index",
-      "itemsFetched": 3,
-      "linksResolved": 3,
-      "articlesExtracted": 3,
-      "validArticles": 3,
-      "genericTitles": 0,
-      "extractErrors": 0,
-      "avgBodyLen": 2730,
-      "healthy": true,
-      "error": null,
-      "issueCategory": "",
-      "status": "healthy",
-      "consecutiveFailures": 0,
       "lastHealthyAt": "2026-07-11T19:08:32.224Z"
     },
     {
@@ -145,13 +145,13 @@
       "validArticles": 4,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 6844,
+      "avgBodyLen": 6895,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:40.708Z"
+      "lastHealthyAt": "2026-07-11T20:53:35.086Z"
     },
     {
       "id": "sur54",
@@ -163,13 +163,13 @@
       "validArticles": 5,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 9269,
+      "avgBodyLen": 10490,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:43.566Z"
+      "lastHealthyAt": "2026-07-11T20:53:37.706Z"
     },
     {
       "id": "ushuaia24",
@@ -181,13 +181,13 @@
       "validArticles": 4,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 11570,
+      "avgBodyLen": 11550,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:46.295Z"
+      "lastHealthyAt": "2026-07-11T20:53:39.997Z"
     },
     {
       "id": "provincia23",
@@ -205,25 +205,25 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:51.354Z"
+      "lastHealthyAt": "2026-07-11T20:53:44.564Z"
     },
     {
       "id": "critica-sur",
       "name": "Critica Sur",
       "type": "html-index",
-      "itemsFetched": 0,
-      "linksResolved": 0,
-      "articlesExtracted": 0,
-      "validArticles": 0,
+      "itemsFetched": 4,
+      "linksResolved": 4,
+      "articlesExtracted": 4,
+      "validArticles": 4,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 0,
-      "healthy": false,
-      "error": "HTTP 403 en https://criticasur.com.ar/",
-      "issueCategory": "fetch-error",
-      "status": "unhealthy",
-      "consecutiveFailures": 1,
-      "lastHealthyAt": "2026-07-11T17:01:39.847Z"
+      "avgBodyLen": 3782,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:53:47.830Z"
     },
     {
       "id": "bing-tdf",
@@ -235,67 +235,67 @@
       "validArticles": 5,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 6269,
+      "avgBodyLen": 7150,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:08:56.881Z"
+      "lastHealthyAt": "2026-07-11T20:53:52.345Z"
     },
     {
       "id": "bing-rio-grande",
       "name": "Bing News — Río Grande",
       "type": "rss",
       "itemsFetched": 4,
-      "linksResolved": 4,
-      "articlesExtracted": 4,
+      "linksResolved": 3,
+      "articlesExtracted": 3,
       "validArticles": 3,
       "genericTitles": 0,
-      "extractErrors": 0,
-      "avgBodyLen": 3698,
+      "extractErrors": 1,
+      "avgBodyLen": 4195,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:04.561Z"
+      "lastHealthyAt": "2026-07-11T20:54:13.150Z"
     },
     {
       "id": "bing-ushuaia",
       "name": "Bing News — Ushuaia",
       "type": "rss",
-      "itemsFetched": 0,
-      "linksResolved": 0,
-      "articlesExtracted": 0,
-      "validArticles": 0,
+      "itemsFetched": 4,
+      "linksResolved": 4,
+      "articlesExtracted": 4,
+      "validArticles": 4,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 0,
-      "healthy": false,
-      "error": "Unquoted attribute value\nLine: 0\nColumn: 42\nChar: h",
-      "issueCategory": "fetch-error",
-      "status": "unhealthy",
-      "consecutiveFailures": 1,
-      "lastHealthyAt": "2026-07-11T17:01:42.039Z"
+      "avgBodyLen": 9132,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:54:17.627Z"
     },
     {
       "id": "bing-tolhuin",
       "name": "Bing News — Tolhuin",
       "type": "rss",
-      "itemsFetched": 0,
-      "linksResolved": 0,
-      "articlesExtracted": 0,
-      "validArticles": 0,
+      "itemsFetched": 3,
+      "linksResolved": 3,
+      "articlesExtracted": 3,
+      "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 0,
-      "healthy": false,
-      "error": "Feed not recognized as RSS 1 or 2.",
-      "issueCategory": "fetch-error",
-      "status": "unhealthy",
-      "consecutiveFailures": 2,
-      "lastHealthyAt": "2026-07-11T14:58:08.008Z"
+      "avgBodyLen": 9540,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:54:20.632Z"
     },
     {
       "id": "bing-malvinas",
@@ -304,20 +304,38 @@
       "itemsFetched": 3,
       "linksResolved": 3,
       "articlesExtracted": 3,
-      "validArticles": 2,
+      "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 3333,
+      "avgBodyLen": 7976,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:09.366Z"
+      "lastHealthyAt": "2026-07-11T20:54:24.871Z"
     },
     {
       "id": "bing-antartida",
       "name": "Bing News — Antártida Argentina",
+      "type": "rss",
+      "itemsFetched": 3,
+      "linksResolved": 3,
+      "articlesExtracted": 3,
+      "validArticles": 3,
+      "genericTitles": 0,
+      "extractErrors": 0,
+      "avgBodyLen": 8792,
+      "healthy": true,
+      "error": null,
+      "issueCategory": "",
+      "status": "healthy",
+      "consecutiveFailures": 0,
+      "lastHealthyAt": "2026-07-11T20:54:28.618Z"
+    },
+    {
+      "id": "infobae-tdf",
+      "name": "Infobae — Cobertura TdF",
       "type": "rss",
       "itemsFetched": 0,
       "linksResolved": 0,
@@ -327,28 +345,10 @@
       "extractErrors": 0,
       "avgBodyLen": 0,
       "healthy": false,
-      "error": "Unquoted attribute value\nLine: 0\nColumn: 42\nChar: h",
-      "issueCategory": "fetch-error",
+      "error": null,
+      "issueCategory": "zero-items",
       "status": "unhealthy",
       "consecutiveFailures": 1,
-      "lastHealthyAt": "2026-07-11T17:01:50.468Z"
-    },
-    {
-      "id": "infobae-tdf",
-      "name": "Infobae — Cobertura TdF",
-      "type": "rss",
-      "itemsFetched": 1,
-      "linksResolved": 1,
-      "articlesExtracted": 1,
-      "validArticles": 1,
-      "genericTitles": 0,
-      "extractErrors": 0,
-      "avgBodyLen": 13382,
-      "healthy": true,
-      "error": null,
-      "issueCategory": "",
-      "status": "healthy",
-      "consecutiveFailures": 0,
       "lastHealthyAt": "2026-07-11T19:09:10.237Z"
     },
     {
@@ -366,7 +366,7 @@
       "error": null,
       "issueCategory": "zero-items",
       "status": "unhealthy",
-      "consecutiveFailures": 11,
+      "consecutiveFailures": 12,
       "lastHealthyAt": null
     },
     {
@@ -384,7 +384,7 @@
       "error": null,
       "issueCategory": "zero-items",
       "status": "unhealthy",
-      "consecutiveFailures": 11,
+      "consecutiveFailures": 12,
       "lastHealthyAt": null
     },
     {
@@ -397,13 +397,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 11873,
+      "avgBodyLen": 14055,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:11.902Z"
+      "lastHealthyAt": "2026-07-11T20:54:30.676Z"
     },
     {
       "id": "nacionales-perfil",
@@ -415,13 +415,13 @@
       "validArticles": 2,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 5453,
+      "avgBodyLen": 9535,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:12.809Z"
+      "lastHealthyAt": "2026-07-11T20:54:31.605Z"
     },
     {
       "id": "nacionales-la-nacion",
@@ -433,13 +433,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 13520,
+      "avgBodyLen": 15225,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:14.779Z"
+      "lastHealthyAt": "2026-07-11T20:54:34.415Z"
     },
     {
       "id": "nacionales-ambito",
@@ -451,13 +451,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 13340,
+      "avgBodyLen": 13721,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:16.686Z"
+      "lastHealthyAt": "2026-07-11T20:54:36.252Z"
     },
     {
       "id": "nacionales-cronista",
@@ -469,13 +469,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 5481,
+      "avgBodyLen": 5729,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:18.249Z"
+      "lastHealthyAt": "2026-07-11T20:54:37.994Z"
     },
     {
       "id": "nacionales-tn",
@@ -487,13 +487,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 3088,
+      "avgBodyLen": 3955,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:20.220Z"
+      "lastHealthyAt": "2026-07-11T20:54:39.706Z"
     },
     {
       "id": "mundo-google",
@@ -510,7 +510,7 @@
       "error": null,
       "issueCategory": "zero-valid-articles",
       "status": "unhealthy",
-      "consecutiveFailures": 11,
+      "consecutiveFailures": 12,
       "lastHealthyAt": null
     },
     {
@@ -523,13 +523,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 6960,
+      "avgBodyLen": 5774,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:23.782Z"
+      "lastHealthyAt": "2026-07-11T20:54:43.350Z"
     },
     {
       "id": "mundo-bbc",
@@ -547,7 +547,7 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:25.348Z"
+      "lastHealthyAt": "2026-07-11T20:54:44.988Z"
     },
     {
       "id": "mundo-dw",
@@ -565,7 +565,7 @@
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:32.191Z"
+      "lastHealthyAt": "2026-07-11T20:54:47.910Z"
     },
     {
       "id": "mundo-france24",
@@ -577,13 +577,13 @@
       "validArticles": 3,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 8967,
+      "avgBodyLen": 9105,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:34.054Z"
+      "lastHealthyAt": "2026-07-11T20:54:50.584Z"
     },
     {
       "id": "mundo-elpais",
@@ -600,7 +600,7 @@
       "error": null,
       "issueCategory": "extractor-incompatible",
       "status": "unhealthy",
-      "consecutiveFailures": 8,
+      "consecutiveFailures": 9,
       "lastHealthyAt": "2026-07-11T01:25:26.767Z"
     },
     {
@@ -613,23 +613,19 @@
       "validArticles": 1,
       "genericTitles": 0,
       "extractErrors": 0,
-      "avgBodyLen": 7464,
+      "avgBodyLen": 3951,
       "healthy": true,
       "error": null,
       "issueCategory": "",
       "status": "healthy",
       "consecutiveFailures": 0,
-      "lastHealthyAt": "2026-07-11T19:09:38.418Z"
+      "lastHealthyAt": "2026-07-11T20:54:55.336Z"
     }
   ],
   "unhealthyIds": [
     "ushuaia-oficial",
-    "tolhuin-oficial",
-    "el-rompehielos",
-    "critica-sur",
-    "bing-ushuaia",
-    "bing-tolhuin",
-    "bing-antartida",
+    "radiofueguina",
+    "infobae-tdf",
     "perfil-tdf",
     "clarin-tdf",
     "mundo-google",
