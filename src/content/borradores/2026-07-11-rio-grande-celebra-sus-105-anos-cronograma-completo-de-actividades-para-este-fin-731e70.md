@@ -1,14 +1,14 @@
 ---
 title: "Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana"
 description: "Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de \"El Mercado en tu Barrio\" con promociones, productos local"
-date: "2026-07-11T06:19:48.559Z"
+date: "2026-07-11T09:41:53.713Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
 originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T06:19:48.559Z"
+detectedAt: "2026-07-11T09:41:53.713Z"
 mode: "discovery-review"
 ---
 
@@ -140,14 +140,6 @@ ESTAMOS EN FACEBOOK
 
 Lo + visto en U24
 
-[![Mundial FOTO (1)](data:,)](/contenido/27827/colombia-quedo-eliminada-del-mundial-2026-tras-caer-por-penales-ante-suiza)
-
-## [Colombia quedó eliminada del Mundial 2026 tras caer por penales ante Suiza](/contenido/27827/colombia-quedo-eliminada-del-mundial-2026-tras-caer-por-penales-ante-suiza)
-
-[Mundial 2026](https://ushuaia24.com.ar/categoria/20/mundial-2026)07/07/2026
-
-El conjunto cafetero igualó 0-0 durante los 120 minutos, pero falló en la definición desde los doce pasos y se despidió de la Copa del Mundo. Suiza enfrentará a Argentina en los cuartos de final.
-
 [![kuky rey](data:,)](/contenido/27828/murio-kuky-rey-una-de-las-grandes-referentes-de-la-cultura-y-el-tango-en-ushuaia)
 
 ## [Murió Kuky Rey, una de las grandes referentes de la cultura y el tango en Ushuaia](/contenido/27828/murio-kuky-rey-una-de-las-grandes-referentes-de-la-cultura-y-el-tango-en-ushuaia)
@@ -163,6 +155,14 @@ La reconocida actriz, cantante y docente falleció a los 71 años. Con más de c
 [Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)09/07/2026
 
 El secretario de Turismo de la Nación participó del arribo inaugural de la aerolínea GOL Linhas Aéreas. También posó junto a parlamentarios libertarios. 
+
+[![Gol Linhas Ushuaia](data:,)](/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia)
+
+## [Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia](/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia)
+
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)10/07/2026
+
+GOL Linhas Aéreas y LATAM Brasil comenzaron a operar conexiones directas entre São Paulo y la capital fueguina. Las nuevas rutas aportarán más de 2.000 plazas semanales durante la temporada alta y fortalecen el turismo receptivo.
 
 [![Clima](data:,)](/contenido/27847/asi-estara-el-tiempo-este-fin-de-semana-en-ushuaia)
 
