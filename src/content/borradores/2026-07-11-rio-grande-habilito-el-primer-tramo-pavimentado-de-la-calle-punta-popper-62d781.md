@@ -1,14 +1,14 @@
 ---
 title: "Río Grande habilitó el primer tramo pavimentado de la calle Punta Popper"
 description: "La obra fue ejecutada íntegramente con recursos propios del Municipio y permitirá mejorar la conectividad, la circulación y el desarrollo de un sector estratégico de la ciudad."
-date: "2026-07-11T09:41:53.714Z"
+date: "2026-07-11T13:27:41.811Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper"
 originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.bbdf13f24db4f0cf.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T09:41:53.714Z"
+detectedAt: "2026-07-11T13:27:41.811Z"
 mode: "discovery-review"
 ---
 
@@ -45,6 +45,14 @@ USHUAIA 24 ● COMUNIDAD
 +
 
 Noticias
+
+[![Scioli Quercieli Cerro Castor](data:,)](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
+
+## [Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
+
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
+
+Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen proyectos turísticos por casi US$2.000 millones en todo el país.
 
 [![rio grande aniversario](data:,)](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
 
@@ -117,14 +125,6 @@ El robo ocurrió en una casa de la calle Salta. Se supo que ambos imputados no t
 [Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)07/07/2026
 
 El hombre sufrió una presunta fractura de tibia y peroné que le impedía descender por sus propios medios. Participaron efectivos de Gendarmería, la Comisión de Auxilio de Ushuaia y un helicóptero para completar la evacuación.
-
-[![gendarmeria ushuaia](data:,)](/contenido/27818/incautan-mas-de-11000-atados-de-cigarrillos-de-contrabando-en-la-frontera-entre-)
-
-## [Incautan más de 11.000 atados de cigarrillos de contrabando en la frontera entre Tierra del Fuego y Chile](/contenido/27818/incautan-mas-de-11000-atados-de-cigarrillos-de-contrabando-en-la-frontera-entre-)
-
-[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)07/07/2026
-
-El vehículo, con patente chilena, fue hallado abandonado y varado cerca del Hito XIII. Gendarmería secuestró la mercadería, el rodado y otros elementos por orden de la Justicia Federal.
 
 ESTAMOS EN FACEBOOK
 

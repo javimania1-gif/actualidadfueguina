@@ -1,46 +1,40 @@
 ---
-title: "Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana"
-description: "Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de \"El Mercado en tu Barrio\" con promociones, productos local"
-date: "2026-07-11T13:27:41.809Z"
+title: "Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones"
+description: "Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen"
+date: "2026-07-11T13:27:35.033Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
-sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
-originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
+sourceUrl: "https://ushuaia24.com.ar/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu"
+originalImage: "https://ushuaia24.com.ar/download/multimedia.grande.90315d10edf629b1.Z3JhbmRlLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T13:27:41.809Z"
+detectedAt: "2026-07-11T13:27:35.033Z"
 mode: "discovery-review"
 ---
 
 ## Material fuente detectado
 
-# Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana
+# Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones
 
-Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
+Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen proyectos turísticos por casi US$2.000 millones en todo el país.
 
 [Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
 
-![rio grande aniversario](data:,)
+![Scioli Quercieli Cerro Castor](data:,)
 
-Río Grande celebrará este fin de semana su **105° aniversario** con una amplia agenda de actividades organizada por el Municipio, que incluirá actos protocolares, propuestas recreativas, espacios para las familias y una edición especial de **"El Mercado en tu Barrio"**.
+En el marco de su visita a Tierra del Fuego por la 25.ª Fiesta Nacional del Invierno, el secretario de Turismo y Ambiente de la Nación, **Daniel Scioli**, aprovechó el escenario para volver a respaldar el rumbo económico del Gobierno nacional y destacar el crecimiento de las inversiones privadas vinculadas al turismo.
 
-Los festejos comenzarán este **sábado 11 de julio** a las 10 de la mañana con el tradicional desayuno que el intendente **Martín Perez** compartirá junto a las vecinas y vecinos que también celebran su cumpleaños ese día. El encuentro tendrá lugar en el anexo del Polideportivo **Carlos Margalot**.
+El funcionario nacional sostuvo que el país atraviesa un escenario favorable para la llegada de capitales y aseguró que la confianza de los inversores responde a la política económica impulsada por la administración nacional. "**Tenemos registradas 167 inversiones proyectadas, de las cuales 47 ya se encuentran en ejecución, por un monto cercano a los 2.000 millones de dólares. Las principales cadenas hoteleras internacionales están invirtiendo en la Argentina**", afirmó el funcionario durante el acto realizado en el Cerro Castor.
 
-Luego se llevará a cabo el **Acto Central por el 105° aniversario de Río Grande**, del que participarán autoridades provinciales y municipales, representantes de instituciones y vecinos de la ciudad.
+En ese sentido, Scioli remarcó que "**esto no es fruto de la casualidad. Es el resultado de un contexto de estabilidad económica y previsibilidad que impulsa el Gobierno nacional y que genera confianza para invertir**", vinculando directamente el nivel de inversiones con las políticas económicas implementadas por la gestión del presidente Javier Milei.
 
-Durante la tarde, desde las **15 horas**, el Polideportivo **Carlos Margalot** y el Gimnasio **Margen Sur** serán escenario de dos grandes kermesses familiares con entrada libre y gratuita.
+El funcionario también destacó que la temporada de invierno genera grandes expectativas para el sector turístico y puso como ejemplo las inversiones privadas realizadas en el Cerro Castor, donde, según indicó, continúan ampliándose la infraestructura y los servicios destinados a los visitantes. "**Tenemos las mejores expectativas para la temporada de nieve. Gracias a las inversiones privadas en el Cerro Castor, como también en otros centros de esquí del país, hoy los turistas pueden disfrutar de infraestructura y servicios de primer nivel**", señaló.
 
-Las actividades incluirán juegos, propuestas recreativas, intercambio de figuritas, talleres creativos, espacios de educación y seguridad vial y múltiples iniciativas organizadas por distintas áreas municipales para disfrutar en familia.
+Durante su recorrida, Scioli también aseguró que la política de cielos abiertos continúa fortaleciendo la conectividad aérea del país y favoreciendo la llegada de turistas extranjeros, especialmente tras la incorporación de nuevas rutas internacionales que conectan de manera directa a **Ushuaia con Brasil**.
 
-Los festejos continuarán el **domingo 12 de julio** con una edición especial de **"El Mercado en tu Barrio"**, que abrirá sus puertas de **11 a 20 horas** en el Polideportivo Carlos Margalot.
+Asimismo, sostuvo que el turismo representa uno de los motores de la economía nacional y aseguró que el Gobierno continuará impulsando iniciativas para posicionar a la Argentina como un destino de nivel internacional. Incluso adelantó que trabajarán para que el país pueda convertirse en sede de un futuro Campeonato Mundial de Esquí.
 
-Durante la jornada, los vecinos podrán acceder a productos de **RGA Alimentos**, además de puestos de carnicería, pescadería, verdulería, panadería, artículos de limpieza y artesanías, con promociones especiales y precios accesibles.
-
-También habrá actividades recreativas y juegos de kermesse para las infancias, con el objetivo de que toda la comunidad continúe celebrando un nuevo aniversario de la ciudad.
-
-Desde el Municipio señalaron que esta agenda busca fortalecer los espacios de encuentro, la participación comunitaria y el sentido de pertenencia de los riograndenses, en el marco de los **105 años de una ciudad que continúa creciendo junto a su comunidad**.
-
-[Río Grande](https://ushuaia24.com.ar/tema/132/rio-grande)
+[Daniel Scioli](https://ushuaia24.com.ar/tema/1341/daniel-scioli)[Economía](https://ushuaia24.com.ar/tema/357/economia)
 
 #### ¿Qué siente con esta noticia?
 
@@ -52,13 +46,13 @@ USHUAIA 24 ● COMUNIDAD
 
 Noticias
 
-[![Scioli Quercieli Cerro Castor](data:,)](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
+[![rio grande aniversario](data:,)](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
 
-## [Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
+## [Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
 
 [Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
 
-Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen proyectos turísticos por casi US$2.000 millones en todo el país.
+Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
 
 [![calle Popper rio grande](data:,)](/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper)
 
