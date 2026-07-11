@@ -1,14 +1,14 @@
 ---
 title: "Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana"
 description: "Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de \"El Mercado en tu Barrio\" con promociones, productos local"
-date: "2026-07-11T13:27:41.809Z"
+date: "2026-07-11T17:02:49.384Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
 originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-11T13:27:41.809Z"
+detectedAt: "2026-07-11T17:02:49.384Z"
 mode: "discovery-review"
 ---
 
@@ -156,14 +156,6 @@ La reconocida actriz, cantante y docente falleció a los 71 años. Con más de c
 
 El secretario de Turismo de la Nación participó del arribo inaugural de la aerolínea GOL Linhas Aéreas. También posó junto a parlamentarios libertarios. 
 
-[![Gol Linhas Ushuaia](data:,)](/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia)
-
-## [Por primera vez, dos aerolíneas brasileñas vuelan directo a Ushuaia](/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia)
-
-[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)10/07/2026
-
-GOL Linhas Aéreas y LATAM Brasil comenzaron a operar conexiones directas entre São Paulo y la capital fueguina. Las nuevas rutas aportarán más de 2.000 plazas semanales durante la temporada alta y fortalecen el turismo receptivo.
-
 [![Clima](data:,)](/contenido/27847/asi-estara-el-tiempo-este-fin-de-semana-en-ushuaia)
 
 ## [Así estará el tiempo este fin de semana en Ushuaia](/contenido/27847/asi-estara-el-tiempo-este-fin-de-semana-en-ushuaia)
@@ -179,5 +171,13 @@ El sábado se presentará estable, con temperaturas bajo cero y poco viento. Par
 [Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)10/07/2026
 
 La obra fue ejecutada íntegramente con recursos propios del Municipio y permitirá mejorar la conectividad, la circulación y el desarrollo de un sector estratégico de la ciudad.
+
+[![rio grande aniversario](data:,)](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
+
+## [Río Grande celebra sus 105 años: cronograma completo de actividades para este fin de semana](/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin)
+
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
+
+Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
 
 [Noticias gratis en tu correo](/newsletter)
