@@ -1,51 +1,52 @@
 {
-  "generatedAt": "2026-07-10T23:03:44.735Z",
+  "generatedAt": "2026-07-11T00:31:46.467Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29129256183",
-    "headSha": "b22289f4efe552941458ea76acb2ced5a8c4993e"
+    "eventName": "workflow_dispatch",
+    "runId": "29132710426",
+    "headSha": "39c9b9a07eaee9656db36c3859d730a2bbd0a4b0"
   },
   "metrics": {
     "sourcesConsulted": 20,
-    "candidatesDetected": 45,
-    "candidatesIngested": 18,
-    "extractionSucceeded": 17,
-    "candidatesApproved": 12,
-    "discardedDuplicate": 1,
+    "candidatesDetected": 53,
+    "candidatesIngested": 14,
+    "extractionSucceeded": 14,
+    "candidatesApproved": 7,
+    "discardedDuplicate": 2,
     "duplicateExactUrl": 1,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 0,
+    "duplicatePublishedEvent": 1,
     "discardedQuality": 4,
     "discardedQualityByReason": {
-      "stale-dated-discovery": 3,
-      "stale-hard-news": 1
+      "evergreen-or-stale-outside-news-window": 2,
+      "stale-dated-discovery": 1,
+      "listing-url": 1
     },
     "discardedBySourceAndReason": {
+      "bing-tolhuin": {
+        "evergreen-or-stale-outside-news-window": 1
+      },
+      "bing-tdf": {
+        "evergreen-or-stale-outside-news-window": 1
+      },
       "nacionales-infobae": {
         "stale-dated-discovery": 1
       },
-      "bing-rio-grande": {
-        "stale-hard-news": 1
-      },
-      "nacionales-perfil": {
-        "stale-dated-discovery": 1
-      },
-      "bing-tolhuin": {
-        "stale-dated-discovery": 1
+      "mundo-bing": {
+        "listing-url": 1
       }
     },
-    "discardedGenericTitle": 1,
+    "discardedGenericTitle": 2,
     "discardedEvergreen": 3,
-    "eventsGrouped": 12,
-    "verified": 7,
-    "pendingVerification": 4,
-    "pendingMatchedFromHistory": 2,
+    "eventsGrouped": 7,
+    "verified": 3,
+    "pendingVerification": 2,
+    "pendingMatchedFromHistory": 1,
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 0,
+    "pendingTerminalizedExpired": 10,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
@@ -59,7 +60,7 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-11T02:02:43.776Z",
+        "nextRetryAt": "2026-07-11T03:31:25.063Z",
         "expiresAt": "2026-07-12T23:02:43.776Z",
         "corroborationAttempts": 0
       },
@@ -74,125 +75,85 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-11T02:02:43.777Z",
+        "nextRetryAt": "2026-07-11T03:31:25.063Z",
         "expiresAt": "2026-07-12T23:02:43.777Z",
         "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "agenda|argentina|ecuador|informa|2026-07-10",
-        "title": "Morante de la Puebla pone el reposo, fuera de contexto, en la vorágine sanferminera",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
-        "eventType": "agenda",
-        "lane": "fast",
-        "riskLevel": "low",
-        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-11T02:02:43.777Z",
-        "expiresAt": "2026-07-12T23:02:43.777Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "international-conflict|otan|donald trump|new york post|internacional|estados unidos|informa|2026-07-10",
-        "title": "Donald Trump habló del plan de Irán para asesinarlo: \"Si me matan, dejé instrucciones: bombardearlos con una potencia sin precedentes\"",
-        "sourceId": "mundo-clarin",
-        "publisherDomain": "clarin.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-11T02:02:43.779Z",
-        "expiresAt": "2026-07-12T23:02:43.779Z",
-        "corroborationAttempts": 1
       }
     ],
-    "conflicting": 1,
-    "published": 2,
-    "publishedByLane": {
-      "strict": 2
-    },
+    "conflicting": 2,
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 4,
-      "strict": 3
+      "standard": 3
     },
     "pendingByLane": {
-      "strict": 3,
-      "fast": 1
+      "strict": 2
     },
     "eventsByTerritory": {
-      "Nacionales": 6,
-      "unknown": 1,
       "Mundo": 3,
-      "Provincia": 1,
-      "Ushuaia": 1
+      "Nacionales": 4
     },
     "verifiedByTerritory": {
-      "Nacionales": 4,
-      "Mundo": 2,
-      "Provincia": 1
+      "Nacionales": 3
     },
-    "fastPendingAudit": [
-      {
-        "eventKey": "agenda|argentina|ecuador|informa|2026-07-10",
-        "title": "Morante de la Puebla pone el reposo, fuera de contexto, en la vorágine sanferminera",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "tier": "B",
-        "competence": [],
-        "territory": "Nacionales",
-        "topic": "agenda",
-        "eventType": "agenda",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      }
-    ],
-    "freshCandidates": 13,
-    "staleDiscarded": 4,
+    "fastPendingAudit": [],
+    "freshCandidates": 10,
+    "staleDiscarded": 3,
     "sourceHealth": {
       "mundo-clarin": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 2,
-        "publicationContribution": 1,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0.33,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "nacionales-infobae": {
-        "detected": 3,
-        "materialized": 6,
-        "freshCandidates": 5,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1.67,
-        "materializationSuccessRate": 2,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "bing-tdf": {
-        "detected": 5,
-        "materialized": 1,
-        "freshCandidates": 1,
+      "tolhuin-oficial": {
+        "detected": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.2,
-        "materializationSuccessRate": 0.2,
-        "verificationContributionRate": 0.2,
-        "publicationContributionRate": 0.2,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-google": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-malvinas": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "bing-antartida": {
@@ -211,34 +172,6 @@
       },
       "bing-rio-grande": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1.5,
-        "verificationContributionRate": 1,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.5
-      },
-      "bing-malvinas": {
-        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -253,20 +186,6 @@
       },
       "bing-ushuaia": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-bing": {
-        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -279,19 +198,33 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-google": {
-        "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
-        "verifiedContribution": 0,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.5,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "bing-tdf": {
+        "detected": 5,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.2,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.2
       },
       "bing-tolhuin": {
         "detected": 3,
@@ -306,6 +239,48 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.33
+      },
+      "el-rompehielos": {
+        "detected": 4,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 0.25,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-infobae": {
+        "detected": 3,
+        "materialized": 6,
+        "freshCandidates": 5,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "verifiedContribution": 2,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1.67,
+        "materializationSuccessRate": 2,
+        "verificationContributionRate": 0.67,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "mundo-bing": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 0,
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
       },
       "gobierno-tdf-oficial": {
         "detected": 5,
@@ -340,16 +315,14 @@
     "drafts": 0,
     "modelErrors": 0,
     "publicationErrors": 0,
-    "factualValidationErrors": 2,
+    "factualValidationErrors": 0,
     "discardedImportance": 3,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 1,
+    "failedRetryable": 0,
     "failedTerminal": 0,
-    "failedRetryableByReason": {
-      "transient-provider": 1
-    },
+    "failedRetryableByReason": {},
     "failedTerminalByReason": {},
     "aiReused": 0,
     "rescueQueued": 0,
@@ -357,133 +330,65 @@
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
-    "extractErrors": 1,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 7,
-    "aiCalls": 7,
-    "articlesDrafted": 5,
-    "imagesResolved": 2,
-    "approvedForPublication": 2,
-    "imageSelections": [
-      {
-        "title": "Tierra del Fuego repudia el paso de buque de guerra británico",
-        "strategy": "article-og",
-        "query": "Tierra del Fuego repudió el paso de un buque de guerra británico por aguas bajo jurisdicción argentina",
-        "score": 82,
-        "source": "https://ushuaia24.com.ar/download/multimedia.normal.b7f70429508d13b6.bm9ybWFsLndlYnA%3D.webp"
-      },
-      {
-        "title": "Donald Trump destituye a comisionados electorales en medio de polémica",
-        "strategy": "article-og",
-        "query": "Complicado en las encuestas, Donald Trump toma una polémica medida con vistas a las legislativas de noviembre",
-        "score": 82,
-        "source": "https://www.clarin.com/img/2026/07/10/AacM4eZhH_2000x1500__1.jpg"
-      }
-    ],
-    "agendaStories": 218,
-    "newsworthinessAverage": 68,
+    "aiAttempts": 3,
+    "aiCalls": 3,
+    "articlesDrafted": 3,
+    "imagesResolved": 0,
+    "approvedForPublication": 0,
+    "imageSelections": [],
+    "agendaStories": 221,
+    "newsworthinessAverage": 59,
     "newsworthinessTop": [
       {
-        "title": "Tierra del Fuego repudió el paso de un buque de guerra británico por aguas bajo jurisdicción argentina",
-        "eventKey": "general|paris|tierra del fuego aias|argentina|estados unidos|informa|2026-07-09",
-        "score": 98,
-        "topic": "politica",
-        "territory": "Provincia",
-        "lane": "strict"
-      },
-      {
-        "title": "Complicado en las encuestas, Donald Trump toma una polémica medida con vistas a las legislativas de noviembre",
-        "eventKey": "election|donald trump|internacional|estados unidos|informa|2026-07-10",
-        "score": 86,
-        "topic": "politica",
-        "territory": "Mundo",
-        "lane": "strict"
-      },
-      {
-        "title": "Combustible en Chaco: cuánto cuesta llenar el tanque y qué estaciones bajaron los precios",
-        "eventKey": "service|gobierno|informa|2026-07-10",
+        "title": "Morante de la Puebla pone el reposo, fuera de contexto, en la vorágine sanferminera",
+        "eventKey": "agenda|argentina|ecuador|informa|2026-07-10",
         "score": 60,
-        "topic": "servicios",
+        "topic": "agenda",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Avión presidencial en Honduras es vendido por 5.1 millones de dólares a empresa mexicana",
-        "eventKey": "general|gobierno de honduras|secretaria de defensa nacional|gobierno|embraer legacy|thebe ingenieria|mexico|espana|informa|2026-07-10",
+        "title": "Bryant Myers llega a Lima: fecha y venta de entradas para el concierto del pionero del trap latino",
+        "eventKey": "agenda|policia y|bryant myers|peru|informa|2026-07-11",
         "score": 60,
-        "topic": "sociedad",
+        "topic": "agenda",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "La Justicia habilitó una acción colectiva de abogados porteños contra dos artículos de la reforma laboral",
-        "eventKey": "general|justicia|gobierno|la justicia|colegio publico|argentina|informa|2026-07-10",
-        "score": 60,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "EN VIVO | Bloqueos en carreteras, accidentes y manifestaciones hoy 10 de julio: vuelca una pipa de diésel en la autopista México–Querétaro",
-        "eventKey": "general|policia de|secretaria de seguridad ciudadana|gobierno de|queretaro mantente|argentina|peru|informa|2026-07-10",
+        "title": "¡Mirá en vivo Canal E!: toda la información económica",
+        "eventKey": "general|justicia|argentina|estados unidos|informa|2026-07-10",
         "score": 58,
         "topic": "sociedad",
         "territory": "Nacionales",
         "lane": "standard"
-      },
-      {
-        "title": "Por qué el incendio en Almería se transformó rápidamente en una trampa mortal",
-        "eventKey": "weather|italia|espana|informa|2026-07-10",
-        "score": 55,
-        "topic": "servicios",
-        "territory": "Mundo",
-        "lane": "strict"
       }
     ],
-    "corroborationSearches": 3,
-    "corroborationFound": 3,
-    "corroborationVerified": 1,
+    "corroborationSearches": 1,
+    "corroborationFound": 2,
+    "corroborationVerified": 0,
     "corroborationConflicts": 1,
-    "corroborationNoResult": 1,
+    "corroborationNoResult": 0,
     "corroborationAttempts": [
       {
-        "eventKey": "weather-forecast|2026-07-11|tierra-del-fuego",
-        "title": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 11 de julio de 2026",
+        "eventKey": "casualty|eric sadin|paris|argentina|informa|2026-07-10",
+        "title": "La muerte del ruiseñor: responsabilidades cruzadas de la IA",
         "priorityRank": 1,
-        "corroborationQuery": "SMN Ushuaia clima julio pronostico tiempo",
-        "corroborationReason": "newsworthiness=100; freshness=1h; territory=Ushuaia; impact=21; corroborability=10; pendingAge=1h; attempts=0",
+        "corroborationQuery": "Eric Sadin Argentina cruzadas muerte responsabilidades ruisenor",
+        "corroborationReason": "newsworthiness=95; freshness=1h; territory=Nacionales; impact=12; corroborability=10; pendingAge=1h; attempts=0",
         "found": 2,
         "verified": false,
         "status": "conflicting-sources"
-      },
-      {
-        "eventKey": "election|donald trump|internacional|estados unidos|informa|2026-07-10",
-        "title": "Complicado en las encuestas, Donald Trump toma una polémica medida con vistas a las legislativas de noviembre",
-        "priorityRank": 2,
-        "corroborationQuery": "Donald Trump Estados Unidos elecciones resultado complicado donald encuestas legislativas medida noviembre",
-        "corroborationReason": "newsworthiness=92; freshness=2h; territory=Mundo; impact=12; corroborability=10; pendingAge=2h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-strict"
-      },
-      {
-        "eventKey": "international-conflict|otan|donald trump|new york post|internacional|estados unidos|informa|2026-07-10",
-        "title": "Donald Trump habló del plan de Irán para asesinarlo: \"Si me matan, dejé instrucciones: bombardearlos con una potencia sin precedentes\"",
-        "priorityRank": 3,
-        "corroborationQuery": "Donald Trump New York Post OTAN Estados Unidos conflicto asesinarlo bombardearlos donald hablo instrucciones matan",
-        "corroborationReason": "newsworthiness=91; freshness=3h; territory=Mundo; impact=10; corroborability=10; pendingAge=3h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "dates": 1,
-      "percentages": 1
+      "dates": 2
     },
-    "criticalConflicts": 1,
-    "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 27,
+    "criticalConflicts": 2,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 15,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 10,
@@ -504,34 +409,31 @@
         "max": 1384.4
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 26,
-        "avg": 226.5,
+        "count": 29,
+        "avg": 206.2,
         "p50": 0,
         "max": 2101.9
       },
       "cohort": {
         "comparablePublishedCount": 10,
-        "verifiedWithoutPublicationCount": 16,
+        "verifiedWithoutPublicationCount": 19,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Provincia": 1,
-      "Mundo": 1
-    },
-    "publishedLast3hBeforeRun": 1,
-    "publishedLast6hBeforeRun": 4,
-    "publishedLast12hBeforeRun": 5,
-    "publishedLast24hBeforeRun": 8,
-    "hoursSinceLastPublicationBeforeRun": 1.9,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 2,
+    "publishedLast6hBeforeRun": 6,
+    "publishedLast12hBeforeRun": 7,
+    "publishedLast24hBeforeRun": 9,
+    "hoursSinceLastPublicationBeforeRun": 1.5,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 8,
-      "remainingToMin": 4,
-      "slotsRemaining": 8,
+      "publishedLast24hBeforeRun": 9,
+      "remainingToMin": 3,
+      "slotsRemaining": 7,
       "effectiveRunTarget": 3,
       "effectiveRunMaxNormal": 4
     },
@@ -634,14 +536,14 @@
     ],
     "agendaInvalidStories": 27,
     "technicalSuccess": true,
-    "editorialOutcome": "published"
+    "editorialOutcome": "no-publishable-story"
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 7,
-    "discoveryAiBudget": 7,
+    "discoveryAiUsed": 3,
+    "discoveryAiBudget": 3,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -654,16 +556,15 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 8,
-    "candidatesMaterialized": 18,
-    "totalCandidatesBeforeLimit": 18
+    "publishedLast24hBeforeRun": 9,
+    "candidatesMaterialized": 14,
+    "totalCandidatesBeforeLimit": 14
   },
   "reasonNoMorePublished": [
-    "4 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "1 candidato(s) descartados por duplicado/similitud",
-    "4 candidato(s) descartados por causas especificas (stale-dated-discovery: 3, stale-hard-news: 1)",
-    "3 candidato(s) descartados por importancia editorial",
-    "2 candidato(s) bloqueados por validacion factual"
+    "2 evento(s) quedaron pendientes de segunda fuente",
+    "2 evento(s) tuvieron conflicto factual",
+    "2 candidato(s) descartados por duplicado/similitud",
+    "4 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 2, stale-dated-discovery: 1, listing-url: 1)",
+    "3 candidato(s) descartados por importancia editorial"
   ]
 }
