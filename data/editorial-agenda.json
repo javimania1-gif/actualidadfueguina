@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T17:05:35.169Z",
+  "generatedAt": "2026-07-12T19:11:53.206Z",
   "summary": {
-    "totalStories": 515,
+    "totalStories": 531,
     "byStatus": {
-      "published": 32,
-      "pending-verification": 74,
-      "rejected-terminal": 98,
+      "pending-verification": 71,
+      "published": 34,
+      "rejected-terminal": 105,
       "conflicting-sources": 23,
-      "verified-standard-single-source": 195,
+      "verified-standard-single-source": 205,
       "verified-standard": 6,
       "agenda-invalid": 37,
       "verified": 33,
@@ -16,31 +16,69 @@
       "verified-strict": 12
     },
     "byTopic": {
-      "politica": 78,
-      "servicios": 60,
-      "agenda": 17,
-      "sociedad": 175,
-      "deportes": 111,
+      "sociedad": 176,
+      "servicios": 63,
+      "politica": 80,
+      "agenda": 18,
+      "deportes": 119,
       "salud": 3,
       "turismo": 9,
+      "policiales": 32,
       "economia": 12,
-      "policiales": 31,
       "educacion": 13,
       "cultura": 6
     },
     "byTerritory": {
+      "Antartida": 4,
+      "Ushuaia": 37,
       "Rio Grande": 36,
-      "Ushuaia": 36,
-      "Nacionales": 144,
-      "Mundo": 229,
-      "Malvinas": 22,
+      "Nacionales": 149,
+      "Mundo": 237,
+      "Malvinas": 23,
       "Tolhuin": 8,
       "Provincia": 10,
-      "Antartida": 3,
       "unknown": 27
     },
     "invalidStories": 37,
     "topStories": [
+      {
+        "storyId": "casualty|antartida|argentina|brasil|informa|2026-07-12",
+        "headlineSeed": "Mundial: festejando el triunfo, entrerrianos se subieron al techo de un bar \"y se fueron al descenso\"",
+        "topic": "sociedad",
+        "territory": "Antartida",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 22,
+          "impactMagnitude": 21,
+          "serviceValue": 3,
+          "socialPotential": 4,
+          "searchPotential": 8,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "service|atacar|buscado|intensamente|preso|recapturado|vecino|rio grande|ushuaia|2026-07-12",
+        "headlineSeed": "El preso que era intensamente buscado fue recapturado tras atacar a un vecino en Ushuaia",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "legislative|camara de diputados|gobierno de zacatecas|gobierno de mexico|ricardo monreal|claudia sheinbaum|david monreal|rio grande|tierra del fuego aias|mexico|francia|informa|202",
         "headlineSeed": "Ricardo Monreal agradece a la presidenta Claudia Sheinbaum por invitarlo a su gira en Zacatecas",
@@ -57,7 +95,7 @@
           "searchPotential": 8,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -74,25 +112,6 @@
           "serviceValue": 3,
           "socialPotential": 11,
           "searchPotential": 8,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|atacar|buscado|intensamente|preso|recapturado|vecino|rio grande|ushuaia|2026-07-12",
-        "headlineSeed": "El preso que era intensamente buscado fue recapturado tras atacar a un vecino en Ushuaia",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
           "diversity": 4
@@ -131,26 +150,7 @@
           "serviceValue": 20,
           "socialPotential": 7,
           "searchPotential": 15,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|diario|ganaderia|historia|inseparables|sureno|rio grande|ushuaia|2026-07-11",
-        "headlineSeed": "\"La historia de Tierra del Fuego y la de su ganadería son inseparables\" - Diario El Sureño",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 24,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 5,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -235,6 +235,100 @@
   },
   "stories": [
     {
+      "storyId": "casualty|antartida|argentina|brasil|informa|2026-07-12",
+      "headlineSeed": "Mundial: festejando el triunfo, entrerrianos se subieron al techo de un bar \"y se fueron al descenso\"",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Antartida",
+      "primaryEntities": [
+        "Antartida",
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Inglaterra",
+        "Suiza"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|atacar|buscado|intensamente|preso|recapturado|vecino|rio grande|ushuaia|2026-07-12",
+      "headlineSeed": "El preso que era intensamente buscado fue recapturado tras atacar a un vecino en Ushuaia",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia Facundo Exequiel Jeremías",
+        "Gómez Ávila",
+        "Policia",
+        "Policía Provincial",
+        "Justicia",
+        "Ministerio Público Fiscal",
+        "Policía Provincial de",
+        "Justicia Federal",
+        "Municipio y",
+        "Gobierno"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T15:01:58.815Z",
+      "lastSeenAt": "2026-07-12T19:11:18.047Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|camara de diputados|gobierno de zacatecas|gobierno de mexico|ricardo monreal|claudia sheinbaum|david monreal|rio grande|tierra del fuego aias|mexico|francia|informa|202",
       "headlineSeed": "Ricardo Monreal agradece a la presidenta Claudia Sheinbaum por invitarlo a su gira en Zacatecas",
       "topic": "politica",
@@ -277,7 +371,7 @@
         "searchPotential": 8,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "published",
@@ -330,55 +424,6 @@
       },
       "newsworthinessScore": 100,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|atacar|buscado|intensamente|preso|recapturado|vecino|rio grande|ushuaia|2026-07-12",
-      "headlineSeed": "El preso que era intensamente buscado fue recapturado tras atacar a un vecino en Ushuaia",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia Facundo Exequiel Jeremías",
-        "Gómez Ávila",
-        "Policia",
-        "Policía Provincial",
-        "Justicia",
-        "Ministerio Público Fiscal",
-        "Policía Provincial de",
-        "Justicia Federal",
-        "Municipio y",
-        "Gobierno"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-12T15:01:58.815Z",
-      "lastSeenAt": "2026-07-12T15:01:58.815Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -451,7 +496,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 21,
@@ -465,57 +510,12 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|diario|ganaderia|historia|inseparables|sureno|rio grande|ushuaia|2026-07-11",
-      "headlineSeed": "\"La historia de Tierra del Fuego y la de su ganadería son inseparables\" - Diario El Sureño",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Secretaría de Cultura de la Presidencia",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-12T11:16:12.108Z",
-      "lastSeenAt": "2026-07-12T11:16:12.108Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
-      "publicInterestScore": 24,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 24,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -765,7 +765,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -779,7 +779,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -814,7 +814,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 21,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 23,
@@ -828,7 +828,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -883,55 +883,6 @@
       },
       "newsworthinessScore": 100,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|estara|semana|tiempo|rio grande|ushuaia|2026-07-10",
-      "headlineSeed": "Así estará el tiempo este fin de semana en Ushuaia",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Municipio y",
-        "Justicia",
-        "Gobierno",
-        "Justicia Federal",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Atlantico Sur",
-        "Hito XIII",
-        "Argentina"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-11T01:26:05.290Z",
-      "lastSeenAt": "2026-07-11T06:19:06.414Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -1456,6 +1407,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|estara|semana|tiempo|rio grande|ushuaia|2026-07-10",
+      "headlineSeed": "Así estará el tiempo este fin de semana en Ushuaia",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Municipio y",
+        "Justicia",
+        "Gobierno",
+        "Justicia Federal",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Atlantico Sur",
+        "Hito XIII",
+        "Argentina"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-11T01:26:05.290Z",
+      "lastSeenAt": "2026-07-11T06:19:06.414Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 98,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|elecciones|tolhuin|tierra|tolhuin|tierra del fuego|informa|23 de octubre",
       "headlineSeed": "Elecciones 2023 en Tolhuin, Tierra del Fuego, Antártida e Islas del Atlántico Sur: quién fue el candidato presidencial más votado",
       "topic": "politica",
@@ -1590,6 +1590,51 @@
         "diversity": 4
       },
       "newsworthinessScore": 97,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|diario|ganaderia|historia|inseparables|sureno|rio grande|ushuaia|2026-07-11",
+      "headlineSeed": "\"La historia de Tierra del Fuego y la de su ganadería son inseparables\" - Diario El Sureño",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Secretaría de Cultura de la Presidencia",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T11:16:12.108Z",
+      "lastSeenAt": "2026-07-12T19:11:18.046Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 96,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -2057,6 +2102,102 @@
       "validationReasons": []
     },
     {
+      "storyId": "legislative|gobierno|municipio|ministerio de justicia|milei|villarruel|buenos aires|argentina|informa|2026-07-12",
+      "headlineSeed": "La TRASTIENDA del PODER | El Tedéum que no fue y la pulseada detrás del nuevo pacto de MILEI con los gobernadores: qué Estado dejó el ajuste",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "MILEI",
+        "Villarruel",
+        "Gobierno",
+        "Municipio",
+        "Ministerio de Justicia",
+        "Gobierno de",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 93,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|gobierno|banco central|banco central de la republica argentina|milei|carta organica|karina milei|buenos aires|argentina|inglaterra|informa|2026-07-12",
+      "headlineSeed": "Con la reforma del BCRA como eje, el Gobierno arranca una semana clave para La Libertad Avanza",
+      "topic": "politica",
+      "subtopic": "institucional",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Carta Orgánica",
+        "Karina Milei",
+        "Diego Santilli",
+        "Gobierno",
+        "Banco Central",
+        "Banco Central de la República Argentina",
+        "Legislatura",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 93,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|gobierno|banco de la nacion argentina|ministerio publico tutelar|propiedad privada|buenos aires|argentina|informa|2026-07-11",
       "headlineSeed": "Propiedad Privada: qué elimina y qué mantiene el Senado la última versión del proyecto de Sturzenegger",
       "topic": "politica",
@@ -2383,6 +2524,98 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|policia|ushuaia|tierra del fuego aias|argentina|informa|2026-07-12",
+      "headlineSeed": "Detuvieron al preso fugado tratando de entrar a robar a una casa de Ushuaia - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Policia",
+        "Ushuaia",
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 5,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|ministerio y|gobierno de netanyahu|gobierno|itamar ben|internacional|francia|alemania|informa|2026-07-12",
+      "headlineSeed": "La guerra en Gaza: Europa aprobaría este lunes sus primeras sanciones a Israel",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Itamar Ben",
+        "Ministerio y",
+        "Gobierno de Netanyahu",
+        "Gobierno",
+        "OTAN",
+        "Internacional",
+        "Francia",
+        "Alemania",
+        "Espana",
+        "Belgica"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|axel kicillof|argentina|informa|2026-07-12",
       "headlineSeed": "Muchos candidatos, ninguna regla y todo atado a la disputa presidencial",
       "topic": "politica",
@@ -2611,90 +2844,6 @@
       },
       "newsworthinessScore": 90,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T03:17:10.577Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|camara de representantes|lindsey graham|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Muere a los 71 años el senador estadounidense Lindsey Graham, aliado clave de Trump",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Lindsey Graham",
-        "Cámara de Representantes",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -2958,50 +3107,6 @@
         "socialPotential": 7,
         "searchPotential": 10,
         "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|gobierno|gobierno de oman|internacional|egipto|estados unidos|informa|2026-07-12",
-      "headlineSeed": "En directo: Estados Unidos e Irán intercambian ataques y golpean la navegación en el estrecho de Ormuz",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gobierno",
-        "Gobierno de Omán",
-        "Internacional",
-        "Egipto",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -3357,7 +3462,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 87,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -3397,46 +3502,6 @@
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 87,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|internacional|anuncia|2026-07-12",
-      "headlineSeed": "Qatar anuncia la muerte del antiguo emir Hamad",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T15:01:58.817Z",
-      "lastSeenAt": "2026-07-12T15:01:58.817Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -3487,6 +3552,90 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Donald Trump",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T03:17:10.577Z",
+      "lastSeenAt": "2026-07-12T13:28:09.458Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|camara de representantes|lindsey graham|internacional|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Muere a los 71 años el senador estadounidense Lindsey Graham, aliado clave de Trump",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Lindsey Graham",
+        "Cámara de Representantes",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T13:28:09.458Z",
+      "lastSeenAt": "2026-07-12T13:28:09.458Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "casualty|mojtaba jamenei|ali jamenei|la guaira|internacional|venezuela|estados unidos|informa|2026-07-12",
       "headlineSeed": "Irán cierra el estrecho de Ormuz y Mojtaba Jamenei promete venganza tras la muerte de su padre",
       "topic": "sociedad",
@@ -3533,6 +3682,50 @@
       },
       "newsworthinessScore": 87,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|lindsey graham|moscu|internacional|estados unidos|inglaterra|informa|2026-07-12",
+      "headlineSeed": "Muere el senador estadounidense Lindsey Graham, estrecho aliado de Trump, tras una \"breve y repentina enfermedad\" - BBC News Mundo",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Lindsey Graham",
+        "Moscu",
+        "Internacional",
+        "Estados Unidos",
+        "Inglaterra"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-12T17:03:51.699Z",
+      "lastSeenAt": "2026-07-12T17:03:51.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -4151,7 +4344,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 85,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -4198,6 +4391,47 @@
       },
       "newsworthinessScore": 85,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|gobierno|gobierno de oman|internacional|egipto|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Estados Unidos asegura que estrecho de Ormuz está abierto",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-12T13:28:09.458Z",
+      "lastSeenAt": "2026-07-12T19:11:18.047Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 84,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -4277,6 +4511,46 @@
         "socialPotential": 12,
         "searchPotential": 10,
         "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|internacional|anuncia|2026-07-12",
+      "headlineSeed": "Qatar anuncia la muerte del antiguo emir Hamad",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T15:01:58.817Z",
+      "lastSeenAt": "2026-07-12T15:01:58.817Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -4931,50 +5205,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legislative|lindsey graham|moscu|internacional|estados unidos|inglaterra|informa|2026-07-12",
-      "headlineSeed": "Muere el senador estadounidense Lindsey Graham, estrecho aliado de Trump, tras una \"breve y repentina enfermedad\" - BBC News Mundo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Lindsey Graham",
-        "Moscu",
-        "Internacional",
-        "Estados Unidos",
-        "Inglaterra"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-12T17:03:51.699Z",
-      "lastSeenAt": "2026-07-12T17:03:51.699Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 82,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|2026-07-09",
       "headlineSeed": "Abelardo De la Espriella nombra a su futuro canciller para \"reposicionar\" a Colombia como aliado de Estados Unidos",
       "topic": "deportes",
@@ -5231,6 +5461,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|belgica|espana|2026-07-11|2-1",
+      "headlineSeed": "Deportes - España derrota a Bélgica y se da cita con Francia en semifinales",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-11T13:27:27.734Z",
+      "lastSeenAt": "2026-07-12T17:03:51.700Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "scientific|aliado|donald|fallecio|graham|historico|lindsey|republicano|2026-07-12",
       "headlineSeed": "Falleció Lindsey Graham, el histórico senador republicano aliado de Donald Trump",
       "topic": "sociedad",
@@ -5319,91 +5591,6 @@
       "newsworthinessScore": 81,
       "status": "rejected-terminal",
       "validationReasons": []
-    },
-    {
-      "storyId": "casualty|gobierno|justicia|andalucia centenares|peru|estados unidos|informa|2026-07-11",
-      "headlineSeed": "España: ceden los incendios que dejaron atroz reguero de muerte y destrucción en Andalucía",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gobierno",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-11T20:56:01.204Z",
-      "lastSeenAt": "2026-07-11T20:56:01.204Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "election|marcos ferrer|informa|2026-07-11",
-      "headlineSeed": "¿Revés para De Loredo?: La oposición bloqueó la prórroga de Ferrer y obliga a la UCR cordobesa a ir a internas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Marcos Ferrer"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-11T19:10:07.369Z",
-      "lastSeenAt": "2026-07-11T19:10:07.369Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 5,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 5,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "casualty|gobierno|mojtaba khamenei|internacional|estados unidos|informa|2026-07-11",
@@ -6135,6 +6322,91 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|gobierno|justicia|andalucia centenares|peru|estados unidos|informa|2026-07-11",
+      "headlineSeed": "España: ceden los incendios que dejaron atroz reguero de muerte y destrucción en Andalucía",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "Estados Unidos",
+        "Espana"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-11T20:56:01.204Z",
+      "lastSeenAt": "2026-07-11T20:56:01.204Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|marcos ferrer|informa|2026-07-11",
+      "headlineSeed": "¿Revés para De Loredo?: La oposición bloqueó la prórroga de Ferrer y obliga a la UCR cordobesa a ir a internas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Marcos Ferrer"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-11T19:10:07.369Z",
+      "lastSeenAt": "2026-07-11T19:10:07.369Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 5,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "service|choque|ellos|muertos|multiple|tragico|2026-07-11",
       "headlineSeed": "Trágico choque múltiple en la Ruta 7: hay tres muertos, entre ellos un nene de 12 años",
       "topic": "servicios",
@@ -6825,93 +7097,6 @@
       },
       "newsworthinessScore": 78,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|belgica|espana|2026-07-11|2-1",
-      "headlineSeed": "Sánchez tilda de “xenófobas” palabras de Rajoy sobre Francia",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-11T13:27:27.734Z",
-      "lastSeenAt": "2026-07-12T17:03:51.700Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 77,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|actualizo|cifra|desaparecidos|gobierno|muertos|numero|terremotos|2026-07-11",
-      "headlineSeed": "El gobierno venezolano actualizó la cifra de muertos por los terremotos y dijo por qué no da el número de desaparecidos",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Jorge Rodríguez",
-        "Gobierno",
-        "ONU",
-        "La Guaira",
-        "Internacional",
-        "Venezuela"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T20:56:01.204Z",
-      "lastSeenAt": "2026-07-12T03:17:10.577Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -7703,6 +7888,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|alerta|argentina|atlanta|inglaterra|maxima|mundial|partido|malvinas|2026-07-12",
+      "headlineSeed": "Argentina-Inglaterra: alerta máxima para el partido de semifinal del Mundial en Atlanta",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Thomas Tuchel",
+        "Banco de Inglaterra",
+        "Ministerio de Seguridad",
+        "Malvinas",
+        "Atlantico Sur",
+        "Kansas",
+        "Argentina",
+        "Egipto",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 74,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|autorizada|buscan|justicia|preso|salida|ushuaia|tierra del fuego aias|2026-07-12",
       "headlineSeed": "Buscan a un preso que se fugó tras una salida autorizada por la Justicia - Actualidad TDF",
       "topic": "sociedad",
@@ -7745,6 +7979,51 @@
       },
       "newsworthinessScore": 74,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|actualizo|cifra|desaparecidos|gobierno|muertos|numero|terremotos|2026-07-11",
+      "headlineSeed": "El gobierno venezolano actualizó la cifra de muertos por los terremotos y dijo por qué no da el número de desaparecidos",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Jorge Rodríguez",
+        "Gobierno",
+        "ONU",
+        "La Guaira",
+        "Internacional",
+        "Venezuela"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-11T20:56:01.204Z",
+      "lastSeenAt": "2026-07-12T03:17:10.577Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -7793,50 +8072,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|celebran|compartio|cumpleanos|desayuno|junto|martin|perez|rio grande|tierra del fuego aias|2026-07-11",
-      "headlineSeed": "Martín Pérez compartió un desayuno con vecinos y vecinas que celebran su cumpleaños junto a Río Grande | radiouniversidad.com.ar",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Martín Pérez",
-        "Municipio",
-        "Municipio de Río Grande",
-        "Rio Grande",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T19:10:07.371Z",
-      "lastSeenAt": "2026-07-11T19:10:07.371Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|policia|gregoria matorras|malvinas argentinas|volkswagen gol|malvinas|tierra del fuego aias|argentina|informa|2026-07-10",
       "headlineSeed": "Vehículo impactó contra una columna en un accidente sin heridos - Actualidad TDF",
       "topic": "politica",
@@ -7879,7 +8114,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 74,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -7969,53 +8204,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "general|aulas|convirtio|cuentos|generaciones|heroes|historias|malvinas|islas malvinas|malvinas|2026-07-11",
-      "headlineSeed": "Héroes de Malvinas en las aulas: el profesor que convirtió las historias de los veteranos en cuentos para las nuevas generaciones",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Jorge Flores",
-        "Policía Federal",
-        "Policía",
-        "Islas Malvinas",
-        "Malvinas",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS",
-        "Argentina"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-11T19:10:07.367Z",
-      "lastSeenAt": "2026-07-11T22:55:19.524Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
     },
     {
       "storyId": "territorial-sovereignty|otan|gobierno|tierra del fuego|islas malvinas|argentina|brasil|informa|2026-07-11",
@@ -8247,51 +8435,6 @@
       },
       "newsworthinessScore": 73,
       "status": "verified",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|brown|canal|minuto|nacional|partido|primera|islas malvinas|malvinas|2026-07-11",
-      "headlineSeed": "All Boys vs Alte. Brown, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "All Boys",
-        "TV All Boys",
-        "Islas Malvinas",
-        "Malvinas",
-        "Buenos Aires",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T19:10:07.370Z",
-      "lastSeenAt": "2026-07-11T19:10:07.370Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -8568,6 +8711,50 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|celebran|compartio|cumpleanos|desayuno|junto|martin|perez|rio grande|tierra del fuego aias|2026-07-11",
+      "headlineSeed": "Martín Pérez compartió un desayuno con vecinos y vecinas que celebran su cumpleaños junto a Río Grande | radiouniversidad.com.ar",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Martín Pérez",
+        "Municipio",
+        "Municipio de Río Grande",
+        "Rio Grande",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-11T19:10:07.371Z",
+      "lastSeenAt": "2026-07-11T19:10:07.371Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "verified-local-routine",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|automovil|edicion|gobierno|hermandad|premio|provincia|reunion|rio grande|tierra del fuego aias|2026-07-10",
       "headlineSeed": "Reunión entre el Gobierno de la provincia y el Automóvil Club Río Grande de cara a la edición 51 del Gran Premio de la Hermandad - Actualidad TDF",
       "topic": "deportes",
@@ -8799,54 +8986,6 @@
       ]
     },
     {
-      "storyId": "general|despues|enfrenta|football|islas|lineker|llamar|malvinas|islas malvinas|malvinas|2026-07-10",
-      "headlineSeed": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Gary Lineker",
-        "UCV Radio",
-        "Islas Malvinas",
-        "Malvinas",
-        "Argentina",
-        "Egipto",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-12T15:01:58.814Z",
-      "lastSeenAt": "2026-07-12T17:03:51.693Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 69,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|gary lineker|ucv radio|islas malvinas|malvinas|argentina|egipto|informa|2026-07-10",
       "headlineSeed": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
       "topic": "politica",
@@ -8866,7 +9005,7 @@
       ],
       "eventType": "territorial-sovereignty",
       "firstSeenAt": "2026-07-12T11:16:12.107Z",
-      "lastSeenAt": "2026-07-12T13:28:09.457Z",
+      "lastSeenAt": "2026-07-12T17:03:51.693Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -9024,6 +9163,98 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|aulas|convirtio|cuentos|generaciones|heroes|historias|malvinas|islas malvinas|malvinas|2026-07-11",
+      "headlineSeed": "Héroes de Malvinas en las aulas: el profesor que convirtió las historias de los veteranos en cuentos para las nuevas generaciones",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Jorge Flores",
+        "Policía Federal",
+        "Policía",
+        "Islas Malvinas",
+        "Malvinas",
+        "Atlantico Sur",
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-11T19:10:07.367Z",
+      "lastSeenAt": "2026-07-11T22:55:19.524Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|brown|canal|minuto|nacional|partido|primera|islas malvinas|malvinas|2026-07-11",
+      "headlineSeed": "All Boys vs Alte. Brown, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "All Boys",
+        "TV All Boys",
+        "Islas Malvinas",
+        "Malvinas",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-11T19:10:07.370Z",
+      "lastSeenAt": "2026-07-11T19:10:07.370Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|gary lineker|ucv radio|ucv radio gary lineker|islas malvinas|malvinas|argentina|egipto|informa|2026-07-10",
       "headlineSeed": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
       "topic": "politica",
@@ -9118,6 +9349,54 @@
       },
       "newsworthinessScore": 69,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|despues|enfrenta|football|islas|lineker|llamar|malvinas|islas malvinas|malvinas|2026-07-10",
+      "headlineSeed": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Gary Lineker",
+        "UCV Radio",
+        "Club",
+        "Islas Malvinas",
+        "Malvinas",
+        "Argentina",
+        "Egipto",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T19:11:18.047Z",
+      "lastSeenAt": "2026-07-12T19:11:18.047Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 68,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -10429,21 +10708,71 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|conoce|distancia|mexico|registro|requisitos|universidad|2026-07-12",
-      "headlineSeed": "SEP abre registro para la Universidad a Distancia de México 2026: conoce los requisitos",
+      "storyId": "service|atrofia|dominicana|espinal|muscular|ninos|recibiran|republica|2026-07-12",
+      "headlineSeed": "República Dominicana: niños con Atrofia Muscular Espinal recibirán tratamiento",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "República Dominicana",
+        "Atrofia Muscular Espinal",
+        "Salud Pública",
+        "Alto Costo",
+        "Ministerio de Salud Pública",
+        "Gobierno",
+        "Ministerio de Salud Pública de",
+        "Gobierno de",
+        "Ministerio",
+        "Cámara de Comercio"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "agenda|descubren|hombre|inscripciones|llamado|luxor|paser|tumba|2026-07-12",
+      "headlineSeed": "Luxor suma otra joya: descubren una tumba de 3.000 años con inscripciones de un hombre llamado Paser",
       "topic": "agenda",
       "subtopic": "agenda",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Universidad",
-        "Secretaría de Educación Pública",
-        "Universidad Abierta y",
-        "Mexico",
-        "Francia"
+        "Sheikh Abd",
+        "Ministerio de Turismo y Antig",
+        "Universidad de Leiden",
+        "Egipto",
+        "Estados Unidos",
+        "Suiza"
       ],
       "eventType": "agenda",
-      "firstSeenAt": "2026-07-12T17:03:51.701Z",
-      "lastSeenAt": "2026-07-12T17:03:51.701Z",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -10455,18 +10784,18 @@
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 20,
-      "socialPotentialScore": 9,
+      "socialPotentialScore": 12,
       "searchPotentialScore": 15,
       "scoreBreakdown": {
         "publicInterest": 12,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 20,
-        "socialPotential": 9,
+        "socialPotential": 12,
         "searchPotential": 15,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 4
+        "diversity": 0
       },
       "newsworthinessScore": 60,
       "status": "verified-standard-single-source",
@@ -10677,7 +11006,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 20,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 5,
@@ -10691,7 +11020,7 @@
         "serviceValue": 3,
         "socialPotential": 9,
         "searchPotential": 7,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -10720,7 +11049,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 20,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 5,
@@ -10734,7 +11063,7 @@
         "serviceValue": 3,
         "socialPotential": 4,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -10948,95 +11277,6 @@
       "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|canal|estudiantes|minuto|mitre|nacional|partido|primera|2026-07-11",
-      "headlineSeed": "Estudiantes vs Mitre (SE), en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "TV Estudiantes",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T19:10:07.370Z",
-      "lastSeenAt": "2026-07-11T19:10:07.370Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|cuartos|final|historial|mundial|seleccion|suiza|2026-07-11",
-      "headlineSeed": "Así está el historial entre la Selección argentina y Suiza de cara a los cuartos de final del Mundial 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Lionel Scaloni",
-        "Kansas",
-        "Argentina",
-        "Brasil",
-        "Uruguay",
-        "Colombia",
-        "Inglaterra",
-        "Italia",
-        "Suiza"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T19:10:07.367Z",
-      "lastSeenAt": "2026-07-11T19:10:07.367Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 3,
@@ -11471,7 +11711,7 @@
         "B"
       ],
       "editorialLane": "fast",
-      "freshness": "recent-context",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 12,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -11485,7 +11725,7 @@
         "serviceValue": 20,
         "socialPotential": 12,
         "searchPotential": 15,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -11949,6 +12189,193 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|alvarez|argentino|asistio|contra|delantero|julian|lopez|2026-07-12",
+      "headlineSeed": "Quién es José Manuel López, el delantero argentino que asistió a Julián Álvarez en la victoria contra Suiza",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "José Manuel López",
+        "Julián Álvarez",
+        "Lionel Scaloni",
+        "Kansas",
+        "Argentina",
+        "Brasil",
+        "Inglaterra",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 59,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|canal|central|colon|minuto|nacional|norte|partido|2026-07-12",
+      "headlineSeed": "Colón vs Central Norte, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Central Norte",
+        "TV Colón",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 59,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|campeon|ganadores|historica|jannik|quedo|sinner|tabla|2026-07-12",
+      "headlineSeed": "Jannik Sinner, campeón de Wimbledon 2026: así quedó la tabla histórica de ganadores",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Jannik Sinner",
+        "Alexander Zverev",
+        "Club de Londres",
+        "Londres",
+        "Estados Unidos",
+        "Reino Unido",
+        "Inglaterra",
+        "Alemania",
+        "Italia",
+        "Suiza"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 59,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|alexander|conquisto|consecutiva|cuatro|jannik|segunda|sinner|2026-07-12",
+      "headlineSeed": "Jannik Sinner venció en cuatro sets a Alexander Zverev y conquistó Wimbledon por segunda vez consecutiva",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Jannik Sinner",
+        "Alexander Zverev",
+        "Grand Slam",
+        "Club",
+        "Londres",
+        "Argentina",
+        "Inglaterra",
+        "Italia",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 59,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|carros|chery|familiares|hibrida|redefine|tecnologia|2026-07-11",
       "headlineSeed": "La tecnología híbrida redefine los carros familiares: esta es la tecnología de Chery",
       "topic": "educacion",
@@ -11985,136 +12412,6 @@
         "diversity": 4
       },
       "newsworthinessScore": 59,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|antes|condicion|diario|disney|filmar|impuso|matar|2026-07-12",
-      "headlineSeed": "La condición que impuso Disney antes de filmar ‘El diario de la princesa’: “Tenemos que matar a un personaje”",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Meg Cabot",
-        "Inglaterra"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T17:03:51.701Z",
-      "lastSeenAt": "2026-07-12T17:03:51.701Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 58,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|apagon|cortes|electroenergetico|mitad|nacional|nuevos|reconecto|2026-07-12",
-      "headlineSeed": "Tras el apagón nacional, Cuba reconectó el sistema electroenergético pero más de la mitad del territorio sufrirá nuevos cortes",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gobierno",
-        "Ministerio de Energía y Minas",
-        "Cámara de Comercio",
-        "Secretaría de Agricultura y Ganadería",
-        "Estados Unidos",
-        "Cuba"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T17:03:51.701Z",
-      "lastSeenAt": "2026-07-12T17:03:51.701Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 58,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|alexander|final|jannik|sinner|wimbledon|zverev|2026-07-12",
-      "headlineSeed": "Jannik Sinner vs. Alexander Zverev, por la final de Wimbledon, en vivo",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Jannik Sinner",
-        "Alexander Zverev",
-        "Roland Garros",
-        "Paris",
-        "Italia"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T17:03:51.695Z",
-      "lastSeenAt": "2026-07-12T17:03:51.695Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 58,
       "status": "verified-standard-single-source",
       "validationReasons": []
     },
@@ -12157,171 +12454,6 @@
         "diversity": 4
       },
       "newsworthinessScore": 58,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|cordoba|cotiza|cuanto|dolar|julio|viernes|2026-07-10",
-      "headlineSeed": "El dólar en Córdoba: a cuánto cotiza este viernes 10 de julio",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Banco Nación"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-10T14:34:30.775Z",
-      "lastSeenAt": "2026-07-11T06:19:06.414Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 58,
-      "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|almeria|avance|contener|crece|desaparecidas|desesperacion|incendio|2026-07-12",
-      "headlineSeed": "Incendio en Almería: crece la desesperación por 23 personas desaparecidas mientras logran contener el avance del fuego",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Gobierno",
-        "Policía Local de",
-        "El Gobierno",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T15:01:58.817Z",
-      "lastSeenAt": "2026-07-12T15:01:58.817Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 16,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 16,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 57,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|desgaste|inglaterra|jugara|potencia|propio|rival|seleccion|2026-07-12",
-      "headlineSeed": "La Selección jugará ante su rival más serio: Inglaterra, potencia, desgaste y una semifinal con peso propio",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Mexico",
-        "Inglaterra"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T13:28:09.459Z",
-      "lastSeenAt": "2026-07-12T13:28:09.459Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 57,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|canal|minuto|nacional|partido|patronato|primera|2026-07-12",
-      "headlineSeed": "G. y Tiro vs Patronato, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T11:16:12.110Z",
-      "lastSeenAt": "2026-07-12T11:16:12.110Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 57,
       "status": "verified-standard-single-source",
       "validationReasons": []
     },
@@ -12606,50 +12738,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|championship|gales|nations|pumas|2026-07-11",
-      "headlineSeed": "Los Pumas - Gales, en vivo, por el Nations Championship",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "World Rugby",
-        "Argentina",
-        "Inglaterra",
-        "Francia",
-        "Italia"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T20:56:01.205Z",
-      "lastSeenAt": "2026-07-11T20:56:01.205Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 57,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|britanicos|cuartos|final|inglaterra|miami|miden|mundial|2026-07-11",
       "headlineSeed": "Noruega-Inglaterra, en vivo por los cuartos de final del Mundial 2026: los nórdicos y británicos se miden en Miami",
       "topic": "deportes",
@@ -12699,14 +12787,13 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|canal|chaco|minuto|nacional|partido|primera|telmo|2026-07-11",
-      "headlineSeed": "San Telmo vs Chaco F. E., en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
+      "storyId": "general|canal|estudiantes|minuto|mitre|nacional|partido|primera|2026-07-11",
+      "headlineSeed": "Estudiantes vs Mitre (SE), en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "San Telmo",
-        "TV San Telmo",
+        "TV Estudiantes",
         "Argentina"
       ],
       "eventType": "general",
@@ -12718,21 +12805,69 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
       "socialPotentialScore": 12,
       "searchPotentialScore": 7,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 7,
-        "recency": 12,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 57,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|cuartos|final|historial|mundial|seleccion|suiza|2026-07-11",
+      "headlineSeed": "Así está el historial entre la Selección argentina y Suiza de cara a los cuartos de final del Mundial 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Lionel Scaloni",
+        "Kansas",
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Colombia",
+        "Inglaterra",
+        "Italia",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-11T19:10:07.367Z",
+      "lastSeenAt": "2026-07-11T19:10:07.367Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -12872,6 +13007,48 @@
       },
       "newsworthinessScore": 57,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|acassuso|canal|minuto|nacional|partido|primera|racing|2026-07-12",
+      "headlineSeed": "Racing CBA vs Acassuso, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Racing CBA",
+        "TV Racing CBA",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 56,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -13109,6 +13286,226 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|italia|alexander|campeon|consagro|consecutivo|2026-07-12|6-3",
+      "headlineSeed": "Jannik Sinner le ganó a Alexander Zverev y se consagró campeón de Wimbledon por segundo año consecutivo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Jannik Sinner",
+        "Alexander Zverev",
+        "Club",
+        "Italia",
+        "Londres",
+        "Estados Unidos",
+        "Alemania"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-12T19:11:18.049Z",
+      "lastSeenAt": "2026-07-12T19:11:18.049Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 12,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 12,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|almeria|estabilizacion|evacuados|hogares|incendio|regresan|2026-07-12",
+      "headlineSeed": "Evacuados regresan a sus hogares tras la estabilización del incendio en Almería",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "Internacional",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T19:11:18.048Z",
+      "lastSeenAt": "2026-07-12T19:11:18.048Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 7,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 55,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|apagones|cinco|crisis|energetica|menos|2026-07-12",
+      "headlineSeed": "Crisis energética en Cuba: dos apagones en menos de cinco días",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "Internacional",
+        "Cuba"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-12T19:11:18.047Z",
+      "lastSeenAt": "2026-07-12T19:11:18.047Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 7,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 55,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "agenda|conoce|distancia|mexico|registro|requisitos|universidad|2026-07-12",
+      "headlineSeed": "SEP abre registro para la Universidad a Distancia de México 2026: conoce los requisitos",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Universidad",
+        "Secretaría de Educación Pública",
+        "Universidad Abierta y",
+        "Mexico",
+        "Francia"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-12T17:03:51.701Z",
+      "lastSeenAt": "2026-07-12T17:03:51.701Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 7,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 9,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|gobierno|la guaira|internacional|venezuela|estados unidos|lanza|2026-07-12",
+      "headlineSeed": "EE. UU. lanza una nueva ofensiva contra Irán; Teherán responde con ataques en la región",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "La Guaira",
+        "Internacional",
+        "Venezuela",
+        "Estados Unidos",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-12T17:03:51.699Z",
+      "lastSeenAt": "2026-07-12T17:03:51.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 55,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "crime|policia de strathclyde|bbc news mundo para|internacional|estados unidos|inglaterra|informa|2026-07-12",
       "headlineSeed": "Cómo pasó Escocia de ser la capital de los asesinatos en Europa a uno de los lugares más seguros del mundo - BBC News Mundo",
       "topic": "policiales",
@@ -13188,7 +13585,7 @@
         "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 55,
       "status": "verified-standard-single-source",
@@ -13458,361 +13855,6 @@
       },
       "newsworthinessScore": 55,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|domingo|jornada|julio|minuto|mundial|ultimas|2026-07-12",
-      "headlineSeed": "Mundial 2026, EN VIVO: la jornada del domingo 12 de julio minuto a minuto y últimas noticias",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Egipto",
-        "Brasil",
-        "Uruguay",
-        "Mexico",
-        "Inglaterra",
-        "Francia",
-        "Italia",
-        "Espana",
-        "Belgica"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|celebran|costumbres|fiestas|gastronomia|nacional|orgullo|patrias|2026-07-12",
-      "headlineSeed": "Cómo celebran las Fiestas Patrias en cada región: costumbres, gastronomía y orgullo nacional",
-      "topic": "cultura",
-      "subtopic": "cultura",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Fiestas Patrias",
-        "Ministerio de Cultura",
-        "Chile",
-        "Peru"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T13:28:09.457Z",
-      "lastSeenAt": "2026-07-12T13:28:09.457Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|provincias unidas|buenos aires|argentina|estados unidos|informa|2026-07-12",
-      "headlineSeed": "El corsario, el rey y la fragata robada: crónica del primer reconocimiento de la independencia argentina",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Provincias Unidas",
-        "Buenos Aires",
-        "Argentina",
-        "Estados Unidos",
-        "Reino Unido",
-        "Francia"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-12T11:16:12.110Z",
-      "lastSeenAt": "2026-07-12T11:16:12.110Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|donde|fiscal|gobierno|mantener|motosierra|primer|recorto|2026-07-12",
-      "headlineSeed": "La motosierra del primer semestre: dónde recortó el Gobierno para mantener el superávit fiscal",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gobierno",
-        "Gobierno de la",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T11:16:12.109Z",
-      "lastSeenAt": "2026-07-12T11:16:12.109Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|afuera|dejar|error|inscripto|monotributo|puede|regimen|2026-07-12",
-      "headlineSeed": "Chau monotributo: el error que te puede dejar afuera del régimen y te pasa a Responsable Inscripto",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "ANSES y ARCA",
-        "Argentina",
-        "Uruguay"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-12T11:16:12.108Z",
-      "lastSeenAt": "2026-07-12T11:16:12.108Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 7,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "agenda|argentina|clasificacion|festejaron|fotos|hinchas|miles|obelisco|2026-07-12",
-      "headlineSeed": "Miles de hinchas festejaron en el Obelisco por la clasificación a semifinales de Argentina: fotos y videos",
-      "topic": "agenda",
-      "subtopic": "cultura",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Buenos Aires",
-        "Kansas",
-        "Argentina",
-        "Inglaterra",
-        "Suiza"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-12T11:16:12.108Z",
-      "lastSeenAt": "2026-07-12T11:16:12.108Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 9,
-        "searchPotential": 15,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "scientific|ceamse|empresa|metano|polemica|procesa|residuos|universidad|2026-07-12",
-      "headlineSeed": "Metano en el Ceamse: polémica entre una universidad de EE.UU. y la empresa que procesa el 45% de los residuos del país",
-      "topic": "educacion",
-      "subtopic": "educacion",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Universidad de California",
-        "Ministerio de Medio Ambiente de Brasil",
-        "Buenos Aires",
-        "Argentina",
-        "Brasil",
-        "Chile",
-        "Mexico",
-        "Estados Unidos"
-      ],
-      "eventType": "scientific",
-      "firstSeenAt": "2026-07-12T09:55:49.250Z",
-      "lastSeenAt": "2026-07-12T09:55:49.250Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|internet abu trica|internacional|argentina|estados unidos|informa|2026-07-11",
-      "headlineSeed": "Cayó el multimillonario más joven de Ghana, un influencer que mostraba autos de lujo en redes y estafaba jubiladas en EE.UU. por Internet",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internet Abu Trica",
-        "Internacional",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-11T20:56:01.204Z",
-      "lastSeenAt": "2026-07-12T09:55:49.249Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 5,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 5,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 55,
-      "status": "pending-verification",
       "validationReasons": []
     }
   ]
