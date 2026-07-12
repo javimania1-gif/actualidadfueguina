@@ -1,44 +1,48 @@
 {
-  "generatedAt": "2026-07-12T06:39:00.864Z",
+  "generatedAt": "2026-07-12T09:56:56.852Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29182876866",
-    "headSha": "1a47004a5ed382755ad5a90d7472a5fda5cbef85"
+    "runId": "29188202028",
+    "headSha": "b33fa0b61f76947992041fb95f3511bac7ce3a0d"
   },
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
     "candidatesDetected": 105,
-    "candidatesIngested": 41,
-    "extractionSucceeded": 39,
-    "candidatesApproved": 30,
-    "discardedDuplicate": 8,
+    "candidatesIngested": 35,
+    "extractionSucceeded": 34,
+    "candidatesApproved": 28,
+    "discardedDuplicate": 5,
     "duplicateExactUrl": 5,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 1,
-    "discardedQuality": 2,
+    "duplicatePublishedEvent": 0,
+    "discardedQuality": 4,
     "discardedQualityByReason": {
-      "stale-dated-discovery": 1,
-      "stale-hard-news": 1
+      "stale-hard-news": 1,
+      "stale-dated-discovery": 3
     },
     "discardedBySourceAndReason": {
-      "nacionales-perfil": {
+      "nacionales-infobae": {
+        "stale-hard-news": 1,
         "stale-dated-discovery": 1
       },
-      "actualidad-tdf": {
-        "stale-hard-news": 1
+      "bing-antartida": {
+        "stale-dated-discovery": 1
+      },
+      "nacionales-tn": {
+        "stale-dated-discovery": 1
       }
     },
-    "discardedGenericTitle": 2,
-    "discardedEvergreen": 1,
+    "discardedGenericTitle": 1,
+    "discardedEvergreen": 3,
     "eventsGrouped": 27,
-    "verified": 10,
-    "pendingVerification": 16,
-    "pendingMatchedFromHistory": 4,
+    "verified": 9,
+    "pendingVerification": 15,
+    "pendingMatchedFromHistory": 3,
     "recentEventRepair": {
-      "corrected": 1,
+      "corrected": 0,
       "compacted": 0,
       "conservedPublished": 28
     },
@@ -48,21 +52,6 @@
     "pendingTerminalizedExpired": 3,
     "pendingTerminalizedAttempts": 1,
     "pendingAudit": [
-      {
-        "eventKey": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
-        "title": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
-        "sourceId": "bing-tdf",
-        "publisherDomain": "rionegro.com.ar",
-        "category": "Provincia",
-        "eventType": "agenda",
-        "lane": "fast",
-        "riskLevel": "low",
-        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.148Z",
-        "expiresAt": "2026-07-13T19:10:07.370Z",
-        "corroborationAttempts": 4
-      },
       {
         "eventKey": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
         "title": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
@@ -74,9 +63,9 @@
         "riskLevel": "low",
         "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.149Z",
+        "nextRetryAt": "2026-07-12T12:55:49.246Z",
         "expiresAt": "2026-07-13T20:56:01.202Z",
-        "corroborationAttempts": 3
+        "corroborationAttempts": 4
       },
       {
         "eventKey": "general|autos|caida|fuerte|primer|semestre|ventas|tierra del fuego|tierra del fuego aias|2026-07-11",
@@ -89,7 +78,7 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.149Z",
+        "nextRetryAt": "2026-07-12T12:55:49.247Z",
         "expiresAt": "2026-07-14T03:17:10.575Z",
         "corroborationAttempts": 0
       },
@@ -104,24 +93,24 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.149Z",
+        "nextRetryAt": "2026-07-12T12:55:49.247Z",
         "expiresAt": "2026-07-14T06:37:56.149Z",
         "corroborationAttempts": 0
       },
       {
-        "eventKey": "sports-result|argentina|inglaterra|2026-07-12|3-1",
-        "title": "Mundial 2026: Argentina gana a una Suiza con 10 y peleará con Inglaterra por un puesto en la final - BBC News Mundo",
-        "sourceId": "mundo-bbc",
-        "publisherDomain": "bbc.com",
-        "category": "Mundo",
-        "eventType": "sports-result",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "eventKey": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
+        "title": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
+        "sourceId": "bing-ushuaia",
+        "publisherDomain": "rionegro.com.ar",
+        "category": "Ushuaia",
+        "eventType": "agenda",
+        "lane": "fast",
+        "riskLevel": "low",
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.150Z",
-        "expiresAt": "2026-07-14T06:37:56.150Z",
-        "corroborationAttempts": 0
+        "nextRetryAt": "2026-07-12T12:55:49.248Z",
+        "expiresAt": "2026-07-13T19:10:07.370Z",
+        "corroborationAttempts": 5
       },
       {
         "eventKey": "crime|policia de strathclyde|universidad de glasgow|bbc news mundo para|internacional|argentina|estados unidos|informa|2026-07-12",
@@ -134,128 +123,8 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.150Z",
+        "nextRetryAt": "2026-07-12T12:55:49.248Z",
         "expiresAt": "2026-07-14T06:37:56.150Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
-        "title": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
-        "sourceId": "mundo-france24",
-        "publisherDomain": "france24.com",
-        "category": "Mundo",
-        "eventType": "casualty",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.150Z",
-        "expiresAt": "2026-07-14T03:17:10.577Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "international-conflict|otan|moscu|internacional|estados unidos|informa|2026-07-12",
-        "title": "Rusia está perdiendo la guerra, Ucrania la gana solo a medias",
-        "sourceId": "mundo-elpais",
-        "publisherDomain": "elpais.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.150Z",
-        "expiresAt": "2026-07-14T06:37:56.150Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "international-conflict|ministerio de|medio oriente|internacional|estados unidos|informa|2026-07-12",
-        "title": "Recrudecen los ataques en Medio Oriente: EE.UU. destruyó 140 objetivos militares e Irán lanzó misiles contra cuatro países",
-        "sourceId": "mundo-clarin",
-        "publisherDomain": "clarin.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-14T06:37:56.151Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "crime|internet abu trica|internacional|argentina|estados unidos|informa|2026-07-11",
-        "title": "Cayó el multimillonario más joven de Ghana, un influencer que mostraba autos de lujo en redes y estafaba jubiladas en EE.UU. por Internet",
-        "sourceId": "mundo-clarin",
-        "publisherDomain": "clarin.com",
-        "category": "Mundo",
-        "eventType": "crime",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-13T20:56:01.204Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "election|axel kicillof|argentina|informa|2026-07-12",
-        "title": "Muchos candidatos, ninguna regla y todo atado a la disputa presidencial",
-        "sourceId": "nacionales-perfil",
-        "publisherDomain": "perfil.com",
-        "category": "Nacionales",
-        "eventType": "election",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-14T06:37:56.151Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "election|gobierno|banco central|gobierno de|camilo tiscornia|buenos aires|argentina|lanza|2026-07-12",
-        "title": "Un analista clave de la City proyecta junio abajo del 2%, pero lanza una fuerte advertencia para julio",
-        "sourceId": "nacionales-cronista",
-        "publisherDomain": "cronista.com",
-        "category": "Nacionales",
-        "eventType": "election",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-14T06:37:56.151Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "international-conflict|ministerio de|internacional|estados unidos|informa|2026-07-12",
-        "title": "Irán reivindica ataques a Jordania, Qatar, Kuwait y Baréin",
-        "sourceId": "mundo-dw",
-        "publisherDomain": "dw.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-14T06:37:56.151Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "agenda|heridos|muertos|tiroteo|toronto|varios|2026-07-12",
-        "title": "Dos muertos y varios heridos en un tiroteo en Toronto",
-        "sourceId": "mundo-dw",
-        "publisherDomain": "dw.com",
-        "category": "Mundo",
-        "eventType": "agenda",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
-        "expiresAt": "2026-07-14T06:37:56.151Z",
         "corroborationAttempts": 0
       },
       {
@@ -269,7 +138,7 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
+        "nextRetryAt": "2026-07-12T12:55:49.248Z",
         "expiresAt": "2026-07-14T03:17:10.579Z",
         "corroborationAttempts": 0
       },
@@ -284,48 +153,159 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-12T09:37:56.151Z",
+        "nextRetryAt": "2026-07-12T12:55:49.248Z",
         "expiresAt": "2026-07-13T17:02:42.841Z",
         "corroborationAttempts": 3
+      },
+      {
+        "eventKey": "international-conflict|emiratos arabes unidos|internacional|estados unidos|denuncia|2026-07-12",
+        "title": "Omán y Jordania denuncian ataque iraní en medio de escalada",
+        "sourceId": "mundo-dw",
+        "publisherDomain": "dw.com",
+        "category": "Mundo",
+        "eventType": "international-conflict",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.248Z",
+        "expiresAt": "2026-07-14T09:55:49.248Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
+        "title": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
+        "sourceId": "mundo-france24",
+        "publisherDomain": "france24.com",
+        "category": "Mundo",
+        "eventType": "casualty",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-14T03:17:10.577Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "international-conflict|ministerio de|medio oriente|internacional|estados unidos|informa|2026-07-12",
+        "title": "Recrudecen los ataques en Medio Oriente: EE.UU. destruyó 140 objetivos militares e Irán lanzó misiles contra cuatro países",
+        "sourceId": "mundo-clarin",
+        "publisherDomain": "clarin.com",
+        "category": "Mundo",
+        "eventType": "international-conflict",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-14T06:37:56.151Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "crime|internet abu trica|internacional|argentina|estados unidos|informa|2026-07-11",
+        "title": "Cayó el multimillonario más joven de Ghana, un influencer que mostraba autos de lujo en redes y estafaba jubiladas en EE.UU. por Internet",
+        "sourceId": "mundo-clarin",
+        "publisherDomain": "clarin.com",
+        "category": "Mundo",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-13T20:56:01.204Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "general|doble|heridos|muertos|terremoto|venezuela|2026-07-12",
+        "title": "Doble terremoto en Venezuela: 4.118 muertos y 16.740 heridos",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-14T09:55:49.249Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "crime|universidad nacional de tucuman|gobierno de tucuman en|universidad de harvard|silvana tenreyro|casa de gobierno|argentina|inglaterra|informa|2026-07-12",
+        "title": "El FMI nombra a la argentina Silvana Tenreyro, nieta de un desaparecido",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "category": "Nacionales",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-14T09:55:49.249Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "election|gobierno|banco central|gobierno de|camilo tiscornia|buenos aires|argentina|lanza|2026-07-12",
+        "title": "Un analista clave de la City proyecta junio abajo del 2%, pero lanza una fuerte advertencia para julio",
+        "sourceId": "nacionales-cronista",
+        "publisherDomain": "cronista.com",
+        "category": "Nacionales",
+        "eventType": "election",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.249Z",
+        "expiresAt": "2026-07-14T06:37:56.151Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "general|clooney|desarrollar|fuerte|george|mantenerse|musculo|trata|2026-07-12",
+        "title": "George Clooney, a sus 64 años: “A esta edad ya no se trata de desarrollar músculo, sino de mantenerse fuerte”",
+        "sourceId": "nacionales-tn",
+        "publisherDomain": "tn.com.ar",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-12T12:55:49.250Z",
+        "expiresAt": "2026-07-14T09:55:49.250Z",
+        "corroborationAttempts": 0
       }
     ],
-    "conflicting": 1,
-    "published": 0,
-    "publishedByLane": {},
+    "conflicting": 3,
+    "published": 2,
+    "publishedByLane": {
+      "standard": 2
+    },
     "verifiedByLane": {
-      "standard": 10
+      "standard": 9
     },
     "pendingByLane": {
       "fast": 2,
       "standard": 2,
-      "strict": 12
+      "strict": 11
     },
     "eventsByTerritory": {
-      "Ushuaia": 3,
       "Rio Grande": 2,
       "Provincia": 1,
-      "Nacionales": 13,
-      "Mundo": 8
+      "Ushuaia": 5,
+      "Nacionales": 11,
+      "Mundo": 7,
+      "Malvinas": 1
     },
     "verifiedByTerritory": {
-      "Nacionales": 9,
-      "Mundo": 1
+      "Ushuaia": 1,
+      "Malvinas": 1,
+      "Mundo": 2,
+      "Nacionales": 5
     },
     "fastPendingAudit": [
-      {
-        "eventKey": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
-        "title": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
-        "sourceId": "bing-tdf",
-        "publisherDomain": "rionegro.com.ar",
-        "tier": "B",
-        "competence": [],
-        "territory": "Ushuaia",
-        "topic": "agenda",
-        "eventType": "agenda",
-        "riskLevel": "low",
-        "pendingReason": "pending-verification",
-        "status": "pending-verification"
-      },
       {
         "eventKey": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
         "title": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
@@ -339,10 +319,24 @@
         "riskLevel": "low",
         "pendingReason": "pending-verification",
         "status": "pending-verification"
+      },
+      {
+        "eventKey": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
+        "title": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
+        "sourceId": "bing-ushuaia",
+        "publisherDomain": "rionegro.com.ar",
+        "tier": "B",
+        "competence": [],
+        "territory": "Ushuaia",
+        "topic": "agenda",
+        "eventType": "agenda",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
       }
     ],
-    "freshCandidates": 36,
-    "staleDiscarded": 2,
+    "freshCandidates": 29,
+    "staleDiscarded": 4,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 4,
@@ -426,10 +420,10 @@
       },
       "actualidad-tdf": {
         "detected": 5,
-        "materialized": 4,
-        "freshCandidates": 3,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -438,11 +432,11 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.6,
-        "materializationSuccessRate": 0.8,
+        "freshCandidateRate": 0.4,
+        "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.2
+        "staleDiscardRate": 0
       },
       "el-rompehielos": {
         "detected": 4,
@@ -596,18 +590,18 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
         "freshCandidateRate": 0.6,
         "materializationSuccessRate": 0.6,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
+        "verificationContributionRate": 0.2,
+        "publicationContributionRate": 0.2,
         "staleDiscardRate": 0
       },
       "bing-rio-grande": {
         "detected": 4,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -618,8 +612,8 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 0.25,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -686,23 +680,23 @@
       },
       "bing-antartida": {
         "detected": 3,
-        "materialized": 0,
+        "materialized": 1,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "infobae-tdf": {
         "detected": 0,
@@ -767,29 +761,9 @@
       "nacionales-infobae": {
         "detected": 3,
         "materialized": 4,
-        "freshCandidates": 4,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 3,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.75,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 2,
-        "freshCandidates": 1,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "freshCandidates": 2,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -804,10 +778,10 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.5
       },
-      "nacionales-la-nacion": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -816,15 +790,15 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "nacionales-ambito": {
+      "nacionales-la-nacion": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 3,
@@ -844,7 +818,67 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
+      "nacionales-ambito": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
       "nacionales-cronista": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 2,
+        "publicationContribution": 1,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.67,
+        "publicationContributionRate": 0.33,
+        "staleDiscardRate": 0
+      },
+      "nacionales-tn": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "mundo-google": {
         "detected": 3,
         "materialized": 1,
         "freshCandidates": 1,
@@ -860,46 +894,6 @@
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-tn": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 3,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-google": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -956,37 +950,17 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-france24": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-elpais": {
-        "detected": 3,
-        "materialized": 1,
+        "materialized": 2,
         "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
@@ -999,7 +973,27 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-elpais": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -1030,17 +1024,17 @@
     "modelErrors": 0,
     "publicationErrors": 0,
     "factualValidationErrors": 1,
-    "discardedImportance": 9,
+    "discardedImportance": 6,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
     "failedRetryable": 1,
-    "failedTerminal": 2,
+    "failedTerminal": 1,
     "failedRetryableByReason": {
       "short-body,title-body-mismatch": 1
     },
     "failedTerminalByReason": {
-      "http-403": 2
+      "http-403": 1
     },
     "aiReused": 0,
     "rescueQueued": 0,
@@ -1048,35 +1042,58 @@
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
-    "extractErrors": 3,
+    "extractErrors": 2,
     "imageErrors": 0,
-    "aiAttempts": 10,
-    "aiCalls": 10,
-    "articlesDrafted": 9,
-    "imagesResolved": 0,
-    "approvedForPublication": 0,
-    "imageSelections": [],
-    "agendaStories": 436,
-    "newsworthinessAverage": 61,
+    "aiAttempts": 9,
+    "aiCalls": 9,
+    "articlesDrafted": 8,
+    "imagesResolved": 2,
+    "approvedForPublication": 2,
+    "imageSelections": [
+      {
+        "title": "Tierra del Fuego suma vuelo directo a Brasil para potenciar el turismo invernal",
+        "strategy": "article-og",
+        "query": "Tierra del Fuego: nuevo vuelo directo con Brasil fortalece el turismo invernal",
+        "score": 82,
+        "source": "https://img.minutoneuquen.com/NwrjR8rAcltM5GQyAYM11HLCiUl2IINmBwQNtTZdBvU/rs:fill:1200:630:0/g:fp:0.5:0.5/f:jpg/aHR0cHM6Ly9hc3NldHMubWludXRvbmV1cXVlbi5jb20vaW1nLzE3ODM3MTMxNTYzOTItZ3ZiOGg1LmpwZw"
+      },
+      {
+        "title": "La Ley de Lobby enfrenta resistencia en Diputados y el Gobierno desmiente vínculos con EE.UU.",
+        "strategy": "article-og",
+        "query": "La Ley de Lobby se estanca en Diputados y el Gobierno niega un pedido de Estados Unidos",
+        "score": 82,
+        "source": "https://www.cronista.com/resizer/v2/2JQEJKCDKVCTLBJLHGH4XRIXNY.jpeg?auth=f61f5dcb33a4552f11afd427085b0cd6560fb04976021f5cc7c7891b84d0924b&height=630&width=1200&quality=70&smart=true"
+      }
+    ],
+    "agendaStories": 448,
+    "newsworthinessAverage": 67,
     "newsworthinessTop": [
       {
-        "title": "Fallece el antiguo emir de Qatar, Hamad bin Khalifa al Thani, a los 74 años de edad",
-        "eventKey": "legal-policy|gobierno|gobierno y la|informa|2026-07-12",
-        "score": 90,
+        "title": "Tierra del Fuego: nuevo vuelo directo con Brasil fortalece el turismo invernal",
+        "eventKey": "service|brasil|directo|fortalece|invernal|nuevo|turismo|vuelo|ushuaia|tierra del fuego|2026-07-12",
+        "score": 100,
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "lane": "standard"
+      },
+      {
+        "title": "La Ley de Lobby se estanca en Diputados y el Gobierno niega un pedido de Estados Unidos",
+        "eventKey": "legislative|gobierno|camara de diputados|camara|argentina|estados unidos|informa|2026-07-12",
+        "score": 91,
         "topic": "politica",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Dólar blue hoy: a cuánto opera este domingo 12 de julio",
-        "eventKey": "general|cuanto|dolar|domingo|julio|opera|2026-07-12",
-        "score": 60,
-        "topic": "economia",
-        "territory": "Nacionales",
+        "title": "Un feriado exclusivo para Buenos Aires: cuándo es el próximo fin de semana largo de julio 2026",
+        "eventKey": "general|aires|buenos|cuando|exclusivo|feriado|julio|largo|malvinas|2026-07-12",
+        "score": 70,
+        "topic": "sociedad",
+        "territory": "Malvinas",
         "lane": "standard"
       },
       {
-        "title": "Dólar hoy: a cuánto cotiza este domingo 12 de julio",
+        "title": "Dólar hoy y dólar blue hoy: a cuánto cotiza este domingo 12 de julio",
         "eventKey": "general|cotiza|cuanto|dolar|domingo|julio|2026-07-12",
         "score": 60,
         "topic": "economia",
@@ -1084,74 +1101,68 @@
         "lane": "standard"
       },
       {
-        "title": "Hay alerta amarilla por frío extremo y nevadas para este domingo 12 de julio: las provincias afectadas",
-        "eventKey": "weather|smn|ministerio de defensa|buenos aires|argentina|suiza|informa|2026-07-12",
+        "title": "Metano en el Ceamse: polémica entre una universidad de EE.UU. y la empresa que procesa el 45% de los residuos del país",
+        "eventKey": "scientific|ceamse|empresa|metano|polemica|procesa|residuos|universidad|2026-07-12",
         "score": 60,
-        "topic": "servicios",
+        "topic": "educacion",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Continúan los trabajos de extinción del incendio de Los Gallardos (Almería)",
-        "eventKey": "general|almeria|continuan|extincion|gallardos|incendio|trabajos|2026-07-12",
+        "title": "Los nutricionistas coinciden: esta es la mejor forma de cocinar las batatas para aprovechar sus vitaminas",
+        "eventKey": "general|aprovechar|batatas|cocinar|coinciden|forma|mejor|nutricionistas|2026-07-12",
+        "score": 60,
+        "topic": "turismo",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "El plato dorado de Milei, los sanguches tucumanos y los sobrevivientes de Adorni",
+        "eventKey": "general|adorni|dorado|milei|plato|sanguches|sobrevivientes|tucumanos|2026-07-12",
         "score": 58,
         "topic": "sociedad",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Omán e Irán continuarán conversaciones sobre Ormuz a nivel técnico para potencial acuerdo",
-        "eventKey": "general|acuerdo|continuaran|conversaciones|nivel|ormuz|potencial|tecnico|2026-07-12",
-        "score": 58,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "C.Ballester vs Lamadrid, en vivo, por la Primera C: minuto a minuto y qué canal pasa el partido por TV",
-        "eventKey": "general|ballester|canal|lamadrid|minuto|partido|primera|2026-07-12",
-        "score": 57,
-        "topic": "deportes",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "J.J. Urquiza vs Rec. Español, en vivo, por la Primera C: minuto a minuto y qué canal pasa el partido por TV",
-        "eventKey": "general|canal|espanol|minuto|partido|primera|urquiza|2026-07-12",
-        "score": 57,
-        "topic": "deportes",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "J. Unida vs Lugano, en vivo, por la Primera C: minuto a minuto y qué canal pasa el partido por TV",
-        "eventKey": "general|canal|lugano|minuto|partido|primera|unida|2026-07-12",
-        "score": 57,
-        "topic": "deportes",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "El tifón Bavi golpea China tras una masiva evacuación",
-        "eventKey": "weather|internacional|informa|2026-07-12",
+        "title": "¿Y si Al Qaeda usa la IA para organizar ataques terroristas?",
+        "eventKey": "general|ataques|organizar|qaeda|terroristas|2026-07-12",
         "score": 55,
-        "topic": "servicios",
+        "topic": "educacion",
+        "territory": "Mundo",
+        "lane": "standard"
+      },
+      {
+        "title": "Senador estadounidense Lindsey Graham fallece a los 71 años",
+        "eventKey": "general|estadounidense|fallece|graham|lindsey|senador|2026-07-12",
+        "score": 49,
+        "topic": "sociedad",
         "territory": "Mundo",
         "lane": "standard"
       }
     ],
     "corroborationSearches": 3,
-    "corroborationFound": 0,
-    "corroborationVerified": 0,
+    "corroborationFound": 2,
+    "corroborationVerified": 1,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 3,
+    "corroborationNoResult": 2,
     "corroborationAttempts": [
+      {
+        "eventKey": "service|brasil|directo|fortalece|invernal|nuevo|turismo|vuelo|ushuaia|tierra del fuego|2026-07-12",
+        "title": "Tierra del Fuego: nuevo vuelo directo con Brasil fortalece el turismo invernal",
+        "priorityRank": 1,
+        "corroborationQuery": "Gobierno Nacional Brasil Ushuaia Tierra del Fuego directo fortalece invernal nuevo turismo",
+        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Ushuaia; impact=19; corroborability=10; pendingAge=3h; attempts=0",
+        "found": 2,
+        "verified": true,
+        "status": "verified-standard"
+      },
       {
         "eventKey": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
         "title": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
-        "priorityRank": 1,
+        "priorityRank": 2,
         "corroborationQuery": "Reporte Austral Desde Gobierno Gobierno de la Municipio Secretaría Rio Grande Ushuaia austral celebro fiesta invierno nacional reporte",
-        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Rio Grande; impact=16; corroborability=10; pendingAge=10h; attempts=2",
+        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Rio Grande; impact=16; corroborability=10; pendingAge=13h; attempts=3",
         "found": 0,
         "verified": false,
         "status": "no-result"
@@ -1159,72 +1170,63 @@
       {
         "eventKey": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
         "title": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
-        "priorityRank": 2,
-        "corroborationQuery": "Daniel Scioli Secretaría Gobierno Argentina Francia Ushuaia Tierra del Fuego antorchas bajada expectativas inauguro mejores nieve",
-        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Ushuaia; impact=16; corroborability=10; pendingAge=11h; attempts=3",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
-      },
-      {
-        "eventKey": "sports-result|policia|ara san juan|gendarme argentino|volkswagen gol trend|ushuaia|tierra del fuego aias|informa|2026-07-11",
-        "title": "Auto se prendió fuego luego de chocar contra un poste - Actualidad TDF",
         "priorityRank": 3,
-        "corroborationQuery": "ARA San Juan Gendarme Argentino Volkswagen Gol Trend Nahuel Valentín Carazo Policia resultado Ushuaia Tierra del Fuego AIAS chocar contra luego poste prendio",
-        "corroborationReason": "newsworthiness=93; freshness=3h; territory=Ushuaia; impact=6; corroborability=10; pendingAge=14h; attempts=2",
+        "corroborationQuery": "Daniel Scioli Secretaría Gobierno Argentina Francia Ushuaia Tierra del Fuego antorchas bajada expectativas inauguro mejores nieve",
+        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Ushuaia; impact=16; corroborability=10; pendingAge=15h; attempts=4",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "sportsTeams": 1,
-      "teams": 1,
-      "scores": 1,
-      "dates": 5
+      "dates": 6,
+      "scores": 2
     },
     "criticalConflicts": 6,
     "nonCriticalDifferences": 2,
-    "resolvedComplementaryFacts": 16,
+    "resolvedComplementaryFacts": 46,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 27,
-        "avg": 182.2,
+        "count": 29,
+        "avg": 169.7,
         "p50": 0,
         "max": 2538.9
       },
       "verificationToPublicationMinutes": {
-        "count": 27,
-        "avg": 155.5,
+        "count": 29,
+        "avg": 144.8,
         "p50": 0.3,
         "max": 1551.1
       },
       "discoveryToPublicationMinutes": {
-        "count": 27,
-        "avg": 337.7,
-        "p50": 0.7,
+        "count": 29,
+        "avg": 314.4,
+        "p50": 0.5,
         "max": 2539.2
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 203,
-        "avg": 63.7,
+        "count": 211,
+        "avg": 61.3,
         "p50": 0,
         "max": 2538.9
       },
       "cohort": {
-        "comparablePublishedCount": 27,
-        "verifiedWithoutPublicationCount": 176,
+        "comparablePublishedCount": 29,
+        "verifiedWithoutPublicationCount": 182,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {},
+    "byCategory": {
+      "Provincia": 1,
+      "Nacionales": 1
+    },
     "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 3,
-    "publishedLast12hBeforeRun": 5,
+    "publishedLast6hBeforeRun": 0,
+    "publishedLast12hBeforeRun": 4,
     "publishedLast24hBeforeRun": 7,
-    "hoursSinceLastPublicationBeforeRun": 3.3,
+    "hoursSinceLastPublicationBeforeRun": 6.6,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -1236,10 +1238,10 @@
     },
     "agendaTop": [
       {
-        "storyId": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
-        "headlineSeed": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
+        "storyId": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
+        "headlineSeed": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
         "topic": "agenda",
-        "territory": "Rio Grande",
+        "territory": "Ushuaia",
         "newsworthinessScore": 100,
         "status": "pending-verification",
         "scoreBreakdown": {
@@ -1255,10 +1257,48 @@
         }
       },
       {
-        "storyId": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
-        "headlineSeed": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
-        "topic": "agenda",
+        "storyId": "weather-forecast|2026-07-12|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 12 de julio de 2026",
+        "topic": "servicios",
         "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "service|brasil|directo|fortalece|invernal|nuevo|turismo|vuelo|ushuaia|tierra del fuego|2026-07-12",
+        "headlineSeed": "Tierra del Fuego: nuevo vuelo directo con Brasil fortalece el turismo invernal",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
+      {
+        "storyId": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
+        "headlineSeed": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
+        "topic": "agenda",
+        "territory": "Rio Grande",
         "newsworthinessScore": 100,
         "status": "pending-verification",
         "scoreBreakdown": {
@@ -1291,54 +1331,16 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "weather-forecast|2026-07-12|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 12 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "territorial-sovereignty|gobierno de tierra de|gobierno|anses por redaccion diario de cuyo|gran bretana|hms medway|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026",
-        "headlineSeed": "Tierra del Fuego denunció una “provocación flagrante” de Gran Bretaña por movimientos de un buque militar",
-        "topic": "politica",
-        "territory": "Malvinas",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 22,
-          "impactMagnitude": 23,
-          "serviceValue": 3,
-          "socialPotential": 7,
-          "searchPotential": 8,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ],
     "agendaInvalidStories": 35,
     "technicalSuccess": true,
-    "editorialOutcome": "no-publishable-story",
+    "editorialOutcome": "published",
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
       "healthy": 30,
-      "productive": 16,
+      "productive": 15,
       "noResults": 3,
       "failed": 1
     }
@@ -1347,8 +1349,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 10,
-    "discoveryAiBudget": 10,
+    "discoveryAiUsed": 9,
+    "discoveryAiBudget": 9,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1362,15 +1364,15 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 7,
-    "candidatesMaterialized": 41,
-    "totalCandidatesBeforeLimit": 41
+    "candidatesMaterialized": 35,
+    "totalCandidatesBeforeLimit": 35
   },
   "reasonNoMorePublished": [
-    "16 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "8 candidato(s) descartados por duplicado/similitud",
-    "2 candidato(s) descartados por causas especificas (stale-dated-discovery: 1, stale-hard-news: 1)",
-    "9 candidato(s) descartados por importancia editorial",
+    "15 evento(s) quedaron pendientes de segunda fuente",
+    "3 evento(s) tuvieron conflicto factual",
+    "5 candidato(s) descartados por duplicado/similitud",
+    "4 candidato(s) descartados por causas especificas (stale-hard-news: 1, stale-dated-discovery: 3)",
+    "6 candidato(s) descartados por importancia editorial",
     "1 candidato(s) bloqueados por validacion factual"
   ]
 }
