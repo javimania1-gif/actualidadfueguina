@@ -8,7 +8,7 @@ sourceName: "Municipio de Tolhuin"
 sourceUrl: "https://tolhuin.gob.ar/felices-105-anos-rio-grande/"
 originalImage: "https://tolhuin.gob.ar/wp-content/uploads/2026/07/743252812_1781008569583710_5552086097682563272_n-scaled.jpg"
 status: "draft"
-detectedAt: "2026-07-13T18:00:29.250Z"
+detectedAt: "2026-07-13T19:43:59.951Z"
 mode: "official-review"
 ---
 
