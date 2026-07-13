@@ -5,8 +5,8 @@ description: >-
   10 de julio en Cerro Castor, mostrando su oferta turística y productiva.
 date: '2026-07-10T19:25:57.258Z'
 sourcePublishedAt: '2026-07-09T15:24:00.000Z'
-category: Ushuaia
-location: Ushuaia
+category: Tolhuin
+location: Tolhuin
 tags:
   - Fiesta Nacional del Invierno
   - Cerro Castor

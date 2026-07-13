@@ -25,6 +25,34 @@ function runTests() {
       expectedCategory: 'Rio Grande'
     },
     {
+      name: 'DEBE DAR PROVINCIA: Feria en Tolhuin y Ushuaia',
+      title: 'Emprender TDF tendrá ferias en Tolhuin y Ushuaia',
+      description: 'El evento se realizará el fin de semana',
+      source: { defaultCategory: 'Ushuaia', location: 'Ushuaia' },
+      expectedCategory: 'Provincia'
+    },
+    {
+      name: 'DEBE DAR PROVINCIA: Operativo simultáneo en Río Grande, Tolhuin y Ushuaia',
+      title: 'Actividades simultáneas en Río Grande, Tolhuin y Ushuaia',
+      description: 'La medida se aplicará en las tres ciudades',
+      source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Provincia'
+    },
+    {
+      name: 'DEBE DAR TOLHUIN: Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor',
+      title: 'Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor',
+      description: 'El Municipio de Tolhuin estará presente en el evento de Ushuaia',
+      source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Tolhuin'
+    },
+    {
+      name: 'DEBE DAR RÍO GRANDE: Martín Perez recibió autoridades de Ushuaia en Río Grande',
+      title: 'Martín Perez recibió autoridades de Ushuaia en Río Grande',
+      description: 'Se reunieron en el municipio local',
+      source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Rio Grande'
+    },
+    {
       name: 'DEBE DAR RÍO GRANDE: Río Grande habilitó la calle Punta Popper',
       title: 'Río Grande habilitó la calle Punta Popper',
       description: '',
