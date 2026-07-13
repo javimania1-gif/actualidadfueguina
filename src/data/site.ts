@@ -4,7 +4,7 @@ export const SITE = {
   url: 'https://actualidadfueguina.com.ar',
   description: 'Noticias de Tierra del Fuego AIAS, con foco provincial: Río Grande, Tolhuin, Ushuaia, Malvinas y Antártida.',
   locale: 'es_AR',
-  logo: '/logo-af.jpg',
+  logo: '/logo-af.png',
   email: '',
   social: {
     facebook: '',

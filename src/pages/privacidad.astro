@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Política de Privacidad">
+  <div class="container page-content">
+    <h1>Política de Privacidad</h1>
+    <p>En Actualidad Fueguina valoramos tu privacidad y nos comprometimos a proteger tus datos personales de acuerdo con las normativas vigentes.</p>
+    
+    <h2 id="preferencias">Tus preferencias de privacidad</h2>
+    <p>Puedes configurar tus preferencias de cookies y analítica en cualquier momento usando los siguientes botones:</p>
+    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+      <button onclick="updateConsent(true)" class="btn-primary">Aceptar analítica</button>
+      <button onclick="updateConsent(false)" class="btn-secondary">Rechazar analítica</button>
+    </div>
+    <div id="consent-status" style="margin-top: 1rem; font-weight: bold;"></div>
+  </div>
+
+  <script is:inline>
+    function updateConsent(granted) {
+      const consentState = {
+        'analytics_storage': granted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      };
+      
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', consentState);
+      }
+      localStorage.setItem('af_consent', JSON.stringify(consentState));
+      localStorage.setItem('af_consent_resolved', 'true');
+      
+      const banner = document.getElementById('privacy-banner');
+      if (banner) banner.style.display = 'none';
+
+      const statusEl = document.getElementById('consent-status');
+      if (statusEl) {
+        statusEl.textContent = granted ? '✓ Has aceptado la analítica anónima.' : '✕ Has rechazado la analítica.';
+        statusEl.style.color = granted ? 'green' : 'var(--color-accent)';
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedConsent = localStorage.getItem('af_consent');
+      const statusEl = document.getElementById('consent-status');
+      if (savedConsent && statusEl) {
+        const parsed = JSON.parse(savedConsent);
+        const granted = parsed.analytics_storage === 'granted';
+        statusEl.textContent = granted ? 'Estado actual: ✓ Analítica aceptada.' : 'Estado actual: ✕ Analítica rechazada.';
+        statusEl.style.color = granted ? 'green' : 'var(--color-accent)';
+      }
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .page-content {
+    padding: 2rem 1rem;
+    max-width: 800px;
+  }
+  .page-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .page-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .btn-primary {
+    background: var(--color-accent, #e63946);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+</style>

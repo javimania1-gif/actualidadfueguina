@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { SITE } from '../data/site';
+import AnalyticsHead from '../components/analytics/AnalyticsHead.astro';
+import PrivacyBanner from '../components/analytics/PrivacyBanner.astro';
 
 const {
   title = SITE.name,
@@ -19,6 +21,7 @@ const isActive = (href: string) => currentPath.startsWith(href);
 <!doctype html>
 <html lang="es-AR">
   <head>
+    <AnalyticsHead />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
@@ -30,13 +33,30 @@ const isActive = (href: string) => currentPath.startsWith(href);
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image" content={new URL('/og-default.png', SITE.url).toString()} />
+    <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={absoluteImage} />
-    <link rel="icon" href="/logo-af.jpg" />
+    <meta name="twitter:image" content={new URL('/og-default.png', SITE.url).toString()} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="alternate" type="application/rss+xml" title={`${SITE.name} RSS`} href="/rss.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": SITE.name,
+      "url": SITE.url
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": SITE.name,
+      "url": SITE.url,
+      "logo": {
+        "@type": "ImageObject",
+        "url": new URL("/logo-af.png", SITE.url).toString()
+      }
+    })} />
   </head>
   <body>
     <a href="#contenido" class="skip">Saltar al contenido</a>
@@ -80,8 +100,28 @@ const isActive = (href: string) => currentPath.startsWith(href);
             RSS
           </a>
         </p>
+        <p class="footer-privacy" style="margin-top: 0.5rem; font-size: 0.85rem;">
+          <a href="/privacidad/" style="color: var(--color-text-muted); text-decoration: none;">Privacidad</a> | 
+          <a href="/cookies/" style="color: var(--color-text-muted); text-decoration: none;">Cookies</a> | 
+          <a href="/privacidad/#preferencias" style="color: var(--color-text-muted); text-decoration: none;">Preferencias de privacidad</a>
+        </p>
       </div>
     </footer>
+    <PrivacyBanner />
+    <script is:inline>
+      document.addEventListener('click', function(e) {
+        // Tracker para category_click
+        const navLink = e.target.closest('.nav-link');
+        if (navLink) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'category_click',
+            category_name: navLink.textContent.trim(),
+            category_url: navLink.getAttribute('href')
+          });
+        }
+      });
+    </script>
   </body>
 </html>
 

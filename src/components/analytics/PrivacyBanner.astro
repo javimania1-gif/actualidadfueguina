@@ -1,0 +1,101 @@
+---
+---
+<div id="privacy-banner" class="privacy-banner" style="display: none;">
+  <div class="privacy-content">
+    <p>
+      Utilizamos cookies y tecnologías similares para medir la audiencia de nuestro portal y mejorar tu experiencia. 
+      Al hacer clic en "Aceptar", das tu consentimiento para el uso de todas las cookies. 
+      También puedes configurarlas o rechazarlas.
+    </p>
+    <div class="privacy-actions">
+      <button id="btn-accept-cookies" class="btn-primary">Aceptar analítica</button>
+      <button id="btn-reject-cookies" class="btn-secondary">Rechazar</button>
+      <a href="/privacidad/" class="btn-link">Preferencias de privacidad</a>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('privacy-banner');
+    const acceptBtn = document.getElementById('btn-accept-cookies');
+    const rejectBtn = document.getElementById('btn-reject-cookies');
+
+    if (!localStorage.getItem('af_consent_resolved')) {
+      banner.style.display = 'block';
+    }
+
+    const setConsent = (granted) => {
+      const consentState = {
+        'analytics_storage': granted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      };
+      
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', consentState);
+      }
+      localStorage.setItem('af_consent', JSON.stringify(consentState));
+      localStorage.setItem('af_consent_resolved', 'true');
+      banner.style.display = 'none';
+    };
+
+    acceptBtn.addEventListener('click', () => setConsent(true));
+    rejectBtn.addEventListener('click', () => setConsent(false));
+  });
+</script>
+
+<style>
+  .privacy-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-bg, #ffffff);
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    padding: 1rem;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    font-size: 0.9rem;
+  }
+  .privacy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .privacy-content p {
+    margin: 0;
+    flex: 1;
+    min-width: 280px;
+  }
+  .privacy-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .btn-primary, .btn-secondary, .btn-link {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--color-accent, #e63946);
+    color: white;
+  }
+  .btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+  }
+  .btn-link {
+    background: transparent;
+    color: var(--color-accent, #e63946);
+    text-decoration: underline;
+  }
+</style>
