@@ -1,14 +1,14 @@
 ---
 title: "Martín Perez en el aniversario de Río Grande: \"No hay desarrollo sin trabajo y no hay futuro sin comunidad\""
 description: "En el acto central por los 105 años de la ciudad, el intendente convocó a defender la industria fueguina, el empleo y la soberanía sobre Malvinas. También llamó a construir una ciu"
-date: "2026-07-13T03:21:34.112Z"
+date: "2026-07-13T06:58:54.208Z"
 category: "Ushuaia"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27867/martin-perez-en-el-aniversario-de-rio-grande-no-hay-desarrollo-sin-trabajo-y-no-"
 originalImage: "https://ushuaia24.com.ar/download/multimedia.normal.a89f332a2fa12bd6.bm9ybWFsLndlYnA%3D.webp"
 status: "draft"
-detectedAt: "2026-07-13T03:21:34.112Z"
+detectedAt: "2026-07-13T06:58:54.208Z"
 mode: "discovery-review"
 ---
 
@@ -148,14 +148,6 @@ Lo + visto en U24
 
 Habrá acto oficial, desayuno con los vecinos que cumplen años, dos grandes kermesses familiares y una edición especial de "El Mercado en tu Barrio" con promociones, productos locales y propuestas para toda la familia.
 
-[![Scioli Quercieli Cerro Castor](data:,)](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
-
-## [Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones](/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu)
-
-[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)11/07/2026
-
-Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen proyectos turísticos por casi US$2.000 millones en todo el país.
-
 [![Mundial FOTO (1)](data:,)](/contenido/27858/inglaterra-elimino-a-noruega-en-un-partidazo-y-se-metio-en-las-semifinales-del-m)
 
 ## [Inglaterra eliminó a Noruega en un partidazo y se metió en las semifinales del Mundial 2026](/contenido/27858/inglaterra-elimino-a-noruega-en-un-partidazo-y-se-metio-en-las-semifinales-del-m)
@@ -171,6 +163,14 @@ Con un doblete de Jude Bellingham en el tiempo suplementario, los ingleses remon
 [Policiales](https://ushuaia24.com.ar/categoria/7/policiales)12/07/2026
 
 Facundo Exequiel Jeremías Gómez Ávila había protagonizado una fuga y posteriormente violado un domicilio de la calle 12 de Octubre donde también lesionó al propietario del inmueble. 
+
+[![scioli libertarios](data:,)](/contenido/27863/scioli-sumo-una-foto-con-los-referentes-libertarios-fueguinos-durante-su-visita-)
+
+## [Scioli sumó una foto con los referentes libertarios fueguinos durante su visita a Ushuaia](/contenido/27863/scioli-sumo-una-foto-con-los-referentes-libertarios-fueguinos-durante-su-visita-)
+
+[Tierra del Fuego](https://ushuaia24.com.ar/categoria/4/tierra-del-fuego)12/07/2026
+
+El exvicepresidente de Cristina Fernández de Kirchner y actual secretario de Turismo del Gobierno de Javier Milei mantuvo reuniones con legisladores y diputados de La Libertad Avanza durante su visita a Ushuaia.
 
 [![Ushuaia](data:,)](/contenido/27864/ushuaia-se-prepara-para-otra-semana-bajo-cero-se-esperan-hasta-12c-y-podria-volv)
 
