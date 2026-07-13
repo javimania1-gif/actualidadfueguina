@@ -1,25 +1,33 @@
 ---
-title: "Israel inicia gestiones para abrir un consulado honorario en Ushuaia"
-description: "El embajador israelí confirmó la apertura de un consulado en Ushuaia para apoyar el reclamo argentino por Malvinas."
-date: "2026-07-10T02:24:11.421Z"
-sourcePublishedAt: "2026-07-09T15:41:57.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Israel", "Ushuaia", "Malvinas", "diplomacia"]
-image: "/uploads/auto/2026-07-10-f4d5f2a14ecacd09e3.webp"
-imageAlt: "Embajador israelí en Buenos Aires"
-imageStrategy: "article-og"
-imageSourceUrl: "https://elrompehielos.com.ar/wp-content/uploads/2026/07/720.jpg"
-imageCredit: "https://elrompehielos.com.ar/ushuaia-podria-sumar-una-sede-diplomatica-de-israel?utm_source=rss&utm_medium=rss&utm_campaign=ushuaia-podria-sumar-una-sede-diplomatica-de-israel"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Israel inicia gestiones para abrir un consulado honorario en Ushuaia
+description: >-
+  El embajador israelí confirmó la apertura de un consulado en Ushuaia para
+  apoyar el reclamo argentino por Malvinas.
+date: '2026-07-10T02:24:11.421Z'
+sourcePublishedAt: '2026-07-09T15:41:57.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Israel
+  - Ushuaia
+  - Malvinas
+  - diplomacia
+image: /uploads/auto/2026-07-10-f4d5f2a14ecacd09e3.webp
+imageAlt: Embajador israelí en Buenos Aires
+imageStrategy: article-og
+imageSourceUrl: 'https://elrompehielos.com.ar/wp-content/uploads/2026/07/720.jpg'
+imageCredit: >-
+  https://elrompehielos.com.ar/ushuaia-podria-sumar-una-sede-diplomatica-de-israel?utm_source=rss&utm_medium=rss&utm_campaign=ushuaia-podria-sumar-una-sede-diplomatica-de-israel
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "El Rompehielos"
-sourceUrl: "https://elrompehielos.com.ar/ushuaia-podria-sumar-una-sede-diplomatica-de-israel"
+sourceName: El Rompehielos
+sourceUrl: >-
+  https://elrompehielos.com.ar/ushuaia-podria-sumar-una-sede-diplomatica-de-israel
 automated: true
 ---
 

@@ -1,25 +1,33 @@
 ---
-title: "Zelenski crea fuerza militar de reacción rápida para Ucrania"
-description: "El presidente ucraniano anuncia una nueva fuerza que combinará tropas de asalto, drones y artillería para mejorar la respuesta militar."
-date: "2026-07-11T01:26:49.324Z"
-sourcePublishedAt: "2026-07-11T00:11:00.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Ucrania", "Zelenski", "fuerza militar", "reacción rápida"]
-image: "/uploads/auto/2026-07-11-b65fef8ed6e48a902f.webp"
-imageAlt: "Volodímir Zelenski anuncia la creación de una nueva fuerza militar."
-imageStrategy: "article-og"
-imageSourceUrl: "https://static.dw.com/image/75135657_6.jpg"
-imageCredit: "https://www.dw.com/es/zelenski-crea-por-decreto-fuerza-militar-de-reacci%C3%B3n-r%C3%A1pida-para-ucrania/a-77913326?maca=spa-rss-sp-all-1122-rdf"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Zelenski crea fuerza militar de reacción rápida para Ucrania
+description: >-
+  El presidente ucraniano anuncia una nueva fuerza que combinará tropas de
+  asalto, drones y artillería para mejorar la respuesta militar.
+date: '2026-07-11T01:26:49.324Z'
+sourcePublishedAt: '2026-07-11T00:11:00.000Z'
+category: Mundo
+location: Ucrania
+tags:
+  - Ucrania
+  - Zelenski
+  - fuerza militar
+  - reacción rápida
+image: /uploads/auto/2026-07-11-b65fef8ed6e48a902f.webp
+imageAlt: Volodímir Zelenski anuncia la creación de una nueva fuerza militar.
+imageStrategy: article-og
+imageSourceUrl: 'https://static.dw.com/image/75135657_6.jpg'
+imageCredit: >-
+  https://www.dw.com/es/zelenski-crea-por-decreto-fuerza-militar-de-reacci%C3%B3n-r%C3%A1pida-para-ucrania/a-77913326?maca=spa-rss-sp-all-1122-rdf
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "DW Espanol"
-sourceUrl: "https://www.dw.com/es/zelenski-crea-por-decreto-fuerza-militar-de-reacci%C3%B3n-r%C3%A1pida-para-ucrania/a-77913326"
+sourceName: DW Espanol
+sourceUrl: >-
+  https://www.dw.com/es/zelenski-crea-por-decreto-fuerza-militar-de-reacci%C3%B3n-r%C3%A1pida-para-ucrania/a-77913326
 automated: true
 ---
 

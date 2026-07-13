@@ -1,25 +1,33 @@
 ---
-title: "Cerro Castor abre la temporada de esquí en Ushuaia"
-description: "El centro de esquí más austral del mundo inicia su temporada con mejoras en infraestructura y eventos especiales."
-date: "2026-07-09T00:05:10.000Z"
-sourcePublishedAt: "2026-07-08T22:00:00.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Cerro Castor", "esquí", "Ushuaia", "temporada invernal"]
-image: "/uploads/auto/2026-07-09-0d977ab22bfbd6fd0f.webp"
-imageAlt: "Cerro Castor"
-imageStrategy: "article-og"
-imageSourceUrl: "https://fotos.perfil.com/2026/07/08/trim/1140/641/cerro-castor-2278923.jpg"
-imageCredit: "https://www.perfil.com/noticias/cordoba/cerro-castor-abrio-la-temporada-y-la-nieve-ya-espera-en-ushuaia.phtml"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Cerro Castor abre la temporada de esquí en Ushuaia
+description: >-
+  El centro de esquí más austral del mundo inicia su temporada con mejoras en
+  infraestructura y eventos especiales.
+date: '2026-07-09T00:05:10.000Z'
+sourcePublishedAt: '2026-07-08T22:00:00.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Cerro Castor
+  - esquí
+  - Ushuaia
+  - temporada invernal
+image: /uploads/auto/2026-07-09-0d977ab22bfbd6fd0f.webp
+imageAlt: Cerro Castor
+imageStrategy: article-og
+imageSourceUrl: 'https://fotos.perfil.com/2026/07/08/trim/1140/641/cerro-castor-2278923.jpg'
+imageCredit: >-
+  https://www.perfil.com/noticias/cordoba/cerro-castor-abrio-la-temporada-y-la-nieve-ya-espera-en-ushuaia.phtml
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Perfil — Cobertura TdF"
-sourceUrl: "https://www.perfil.com/noticias/cordoba/cerro-castor-abrio-la-temporada-y-la-nieve-ya-espera-en-ushuaia.phtml"
+sourceName: Perfil — Cobertura TdF
+sourceUrl: >-
+  https://www.perfil.com/noticias/cordoba/cerro-castor-abrio-la-temporada-y-la-nieve-ya-espera-en-ushuaia.phtml
 automated: true
 ---
 

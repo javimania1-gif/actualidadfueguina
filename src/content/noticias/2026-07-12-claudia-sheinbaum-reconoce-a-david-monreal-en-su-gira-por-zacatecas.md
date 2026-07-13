@@ -1,25 +1,34 @@
 ---
-title: "Claudia Sheinbaum reconoce a David Monreal en su gira por Zacatecas"
-description: "La presidenta Claudia Sheinbaum destacó a David Monreal como representante de la Cuarta Transformación durante su visita a Río Grande."
-date: "2026-07-12T17:03:59.855Z"
-sourcePublishedAt: "2026-07-12T15:45:44.422Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Claudia Sheinbaum", "David Monreal", "Cuarta Transformación", "Zacatecas"]
-image: "/uploads/auto/2026-07-12-d74cbe1281ec1e610e.webp"
-imageAlt: "Claudia Sheinbaum en un evento en Zacatecas"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.infobae.com/resizer/v2/RTUUBZ3YFRBNZFQJEH455DDO34.jpg?auth=3b8dce0c26d36177d8142474d433345c81df77be6ff143f33cbc7fb1751ce25b&smart=true&width=1200&height=630&quality=85"
-imageCredit: "https://www.infobae.com/mexico/2026/07/12/ricardo-monreal-agradece-a-la-presidenta-claudia-sheinbaum-por-invitarlo-a-su-gira-en-zacatecas/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Claudia Sheinbaum reconoce a David Monreal en su gira por Zacatecas
+description: >-
+  La presidenta Claudia Sheinbaum destacó a David Monreal como representante de
+  la Cuarta Transformación durante su visita a Río Grande.
+date: '2026-07-12T17:03:59.855Z'
+sourcePublishedAt: '2026-07-12T15:45:44.422Z'
+category: Mundo
+location: 'Río Grande, Zacatecas, México'
+tags:
+  - Claudia Sheinbaum
+  - David Monreal
+  - Cuarta Transformación
+  - Zacatecas
+image: /uploads/auto/2026-07-12-d74cbe1281ec1e610e.webp
+imageAlt: Claudia Sheinbaum en un evento en Zacatecas
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.infobae.com/resizer/v2/RTUUBZ3YFRBNZFQJEH455DDO34.jpg?auth=3b8dce0c26d36177d8142474d433345c81df77be6ff143f33cbc7fb1751ce25b&smart=true&width=1200&height=630&quality=85
+imageCredit: >-
+  https://www.infobae.com/mexico/2026/07/12/ricardo-monreal-agradece-a-la-presidenta-claudia-sheinbaum-por-invitarlo-a-su-gira-en-zacatecas/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Infobae — Cobertura TdF"
-sourceUrl: "https://www.infobae.com/mexico/2026/07/12/ricardo-monreal-agradece-a-la-presidenta-claudia-sheinbaum-por-invitarlo-a-su-gira-en-zacatecas/"
+sourceName: Infobae — Cobertura TdF
+sourceUrl: >-
+  https://www.infobae.com/mexico/2026/07/12/ricardo-monreal-agradece-a-la-presidenta-claudia-sheinbaum-por-invitarlo-a-su-gira-en-zacatecas/
 automated: true
 ---
 

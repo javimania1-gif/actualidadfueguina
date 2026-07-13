@@ -1,25 +1,35 @@
 ---
-title: "Peña de la Independencia en Tolhuin: Música y Cultura Local"
-description: "Tolhuin celebra el Día de la Independencia con una peña popular que reúne música, danza y sabores locales en el Polideportivo Ezequiel Rivero."
-date: "2026-07-09T16:05:01.713Z"
-sourcePublishedAt: "2026-07-09T14:55:24.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Peña", "Independencia", "Tolhuin", "Cultura", "Música"]
-image: "/uploads/auto/2026-07-09-a782bac1b99fb80b45.webp"
-imageAlt: "Peña de la Independencia en Tolhuin"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/9-de-julio-tolhuin.jpeg"
-imageCredit: "https://www.actualidadtdf.com.ar/musica-danza-y-sabores-locales-hoy-hay-pena-de-la-independencia-en-tolhuin/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: 'Peña de la Independencia en Tolhuin: Música y Cultura Local'
+description: >-
+  Tolhuin celebra el Día de la Independencia con una peña popular que reúne
+  música, danza y sabores locales en el Polideportivo Ezequiel Rivero.
+date: '2026-07-09T16:05:01.713Z'
+sourcePublishedAt: '2026-07-09T14:55:24.000Z'
+category: Tolhuin
+location: Tolhuin
+tags:
+  - Peña
+  - Independencia
+  - Tolhuin
+  - Cultura
+  - Música
+image: /uploads/auto/2026-07-09-a782bac1b99fb80b45.webp
+imageAlt: Peña de la Independencia en Tolhuin
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/9-de-julio-tolhuin.jpeg
+imageCredit: >-
+  https://www.actualidadtdf.com.ar/musica-danza-y-sabores-locales-hoy-hay-pena-de-la-independencia-en-tolhuin/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Actualidad TDF"
-sourceUrl: "https://www.actualidadtdf.com.ar/musica-danza-y-sabores-locales-hoy-hay-pena-de-la-independencia-en-tolhuin/"
+sourceName: Actualidad TDF
+sourceUrl: >-
+  https://www.actualidadtdf.com.ar/musica-danza-y-sabores-locales-hoy-hay-pena-de-la-independencia-en-tolhuin/
 automated: true
 ---
 

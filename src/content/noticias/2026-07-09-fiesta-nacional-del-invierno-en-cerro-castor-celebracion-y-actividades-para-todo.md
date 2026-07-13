@@ -1,25 +1,35 @@
 ---
-title: "Fiesta Nacional del Invierno en Cerro Castor: Celebración y Actividades para Todos"
-description: "El 10 de julio se celebra la Fiesta Nacional del Invierno en Cerro Castor, con actividades familiares y el encendido del pebetero."
-date: "2026-07-09T16:05:17.085Z"
-sourcePublishedAt: "2026-07-08T14:36:58.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Fiesta Nacional del Invierno", "Cerro Castor", "actividades familiares", "turismo"]
-image: "/uploads/auto/2026-07-09-140da78056e1975697.webp"
-imageAlt: "Fiesta Nacional del Invierno en Cerro Castor"
-imageStrategy: "article-og"
-imageSourceUrl: "https://elrompehielos.com.ar/wp-content/uploads/2026/07/16725.jpg"
-imageCredit: "https://elrompehielos.com.ar/cerro-castor-celebra-el-invierno-con-actividades-y-antorchas?utm_source=rss&utm_medium=rss&utm_campaign=cerro-castor-celebra-el-invierno-con-actividades-y-antorchas"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Fiesta Nacional del Invierno en Cerro Castor: Celebración y Actividades para
+  Todos
+description: >-
+  El 10 de julio se celebra la Fiesta Nacional del Invierno en Cerro Castor, con
+  actividades familiares y el encendido del pebetero.
+date: '2026-07-09T16:05:17.085Z'
+sourcePublishedAt: '2026-07-08T14:36:58.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Fiesta Nacional del Invierno
+  - Cerro Castor
+  - actividades familiares
+  - turismo
+image: /uploads/auto/2026-07-09-140da78056e1975697.webp
+imageAlt: Fiesta Nacional del Invierno en Cerro Castor
+imageStrategy: article-og
+imageSourceUrl: 'https://elrompehielos.com.ar/wp-content/uploads/2026/07/16725.jpg'
+imageCredit: >-
+  https://elrompehielos.com.ar/cerro-castor-celebra-el-invierno-con-actividades-y-antorchas?utm_source=rss&utm_medium=rss&utm_campaign=cerro-castor-celebra-el-invierno-con-actividades-y-antorchas
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "El Rompehielos"
-sourceUrl: "https://elrompehielos.com.ar/cerro-castor-celebra-el-invierno-con-actividades-y-antorchas"
+sourceName: El Rompehielos
+sourceUrl: >-
+  https://elrompehielos.com.ar/cerro-castor-celebra-el-invierno-con-actividades-y-antorchas
 automated: true
 ---
 

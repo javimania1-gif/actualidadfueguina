@@ -1,27 +1,33 @@
 ---
-title: "Melella reactiva la reforma constitucional en Tierra del Fuego y convoca a elecciones para agosto"
-description: "El Ejecutivo provincial retomó el proceso para reformar la Constitución fueguina fijando el 9 de agosto para elegir convencionales constituyentes."
-date: "2026-07-07T16:52:00.000Z"
-category: "Provincia"
-location: "Tierra del Fuego"
+title: >-
+  Melella reactiva la reforma constitucional en Tierra del Fuego y convoca a
+  elecciones para agosto
+description: >-
+  El Ejecutivo provincial retomó el proceso para reformar la Constitución
+  fueguina fijando el 9 de agosto para elegir convencionales constituyentes.
+date: '2026-07-07T16:52:00.000Z'
+category: Provincia
+location: Tierra del Fuego AIAS
 tags:
   - Política
   - Reforma Constitucional
   - Elecciones
-image: "/uploads/auto/2026-07-08-d20ef7c6671d230e95.webp"
-imageAlt: "Gustavo Melella en la cobertura sobre la reforma constitucional fueguina"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-imageCredit: "TN / Telam"
-imageSourceUrl: "https://tn.com.ar/politica/2026/07/07/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica/"
-imageStrategy: "article-og"
-author: "Actualidad Fueguina"
+image: /uploads/auto/2026-07-08-d20ef7c6671d230e95.webp
+imageAlt: Gustavo Melella en la cobertura sobre la reforma constitucional fueguina
+imageLicense: Imagen del articulo fuente; procedencia registrada
+imageCredit: TN / Telam
+imageSourceUrl: >-
+  https://tn.com.ar/politica/2026/07/07/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica/
+imageStrategy: article-og
+author: Actualidad Fueguina
 featured: true
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "TN"
-sourceUrl: "https://tn.com.ar/politica/2026/07/07/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica/"
+sourceName: TN
+sourceUrl: >-
+  https://tn.com.ar/politica/2026/07/07/gustavo-melella-reactivo-la-reforma-constitucional-en-tierra-del-fuego-y-volvio-a-abrir-la-discusion-politica/
 automated: true
 ---
 

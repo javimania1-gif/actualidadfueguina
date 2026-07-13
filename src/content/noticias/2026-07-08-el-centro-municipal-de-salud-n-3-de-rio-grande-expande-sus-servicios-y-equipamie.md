@@ -1,24 +1,34 @@
 ---
-title: "El Centro Municipal de Salud N.° 3 de Río Grande expande sus servicios y equipamiento"
-description: "El Centro Municipal de Salud N.° 3 en Río Grande amplía sus especialidades y mejora su equipamiento para ofrecer más atención a la comunidad."
-date: "2026-07-08T13:05:42.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Salud", "Río Grande", "Atención Médica"]
-image: "/uploads/auto/2026-07-08-09ab5d1853753a536f.webp"
-imageAlt: "Centro Municipal de Salud N.° 3 en Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875970_y.jpg"
-imageCredit: "https://info.riogrande.gob.ar/el-centro-municipal-de-salud-n-3-crece-con-mas-especialidades-nuevo-equipamiento-y-mas-atencion-para-las-familias"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  El Centro Municipal de Salud N.° 3 de Río Grande expande sus servicios y
+  equipamiento
+description: >-
+  El Centro Municipal de Salud N.° 3 en Río Grande amplía sus especialidades y
+  mejora su equipamiento para ofrecer más atención a la comunidad.
+date: '2026-07-08T13:05:42.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Salud
+  - Río Grande
+  - Atención Médica
+image: /uploads/auto/2026-07-08-09ab5d1853753a536f.webp
+imageAlt: Centro Municipal de Salud N.° 3 en Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875970_y.jpg
+imageCredit: >-
+  https://info.riogrande.gob.ar/el-centro-municipal-de-salud-n-3-crece-con-mas-especialidades-nuevo-equipamiento-y-mas-atencion-para-las-familias
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/el-centro-municipal-de-salud-n-3-crece-con-mas-especialidades-nuevo-equipamiento-y-mas-atencion-para-las-familias"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/el-centro-municipal-de-salud-n-3-crece-con-mas-especialidades-nuevo-equipamiento-y-mas-atencion-para-las-familias
 automated: true
 ---
 

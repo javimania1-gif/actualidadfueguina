@@ -1,20 +1,28 @@
 ---
-title: "Continúa el Circuito Gastronómico por el 105° Aniversario de Río Grande"
-description: "Comercios locales se suman con promociones especiales, espectáculos en vivo y sorteos durante todos los fines de semana de julio."
-date: "2026-07-04T20:41:00.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Rio Grande", "Gastronomia", "Comercio local", "Aniversario", "Turismo"]
-image: "/uploads/auto/2026-07-08-d997ae42454b4728e8.webp"
-imageAlt: "Circuito gastronómico en Río Grande"
-author: "Actualidad Fueguina"
+title: Continúa el Circuito Gastronómico por el 105° Aniversario de Río Grande
+description: >-
+  Comercios locales se suman con promociones especiales, espectáculos en vivo y
+  sorteos durante todos los fines de semana de julio.
+date: '2026-07-04T20:41:00.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Rio Grande
+  - Gastronomia
+  - Comercio local
+  - Aniversario
+  - Turismo
+image: /uploads/auto/2026-07-08-d997ae42454b4728e8.webp
+imageAlt: Circuito gastronómico en Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 6
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/el-municipio-invita-a-seguir-disfrutando-del-circuito-gastronomico"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/el-municipio-invita-a-seguir-disfrutando-del-circuito-gastronomico
 automated: false
 ---
 

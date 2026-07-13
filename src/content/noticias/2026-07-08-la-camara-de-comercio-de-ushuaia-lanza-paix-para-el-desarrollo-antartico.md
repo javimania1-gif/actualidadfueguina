@@ -1,25 +1,36 @@
 ---
-title: "La Cámara de Comercio de Ushuaia lanza PAIX para el desarrollo antártico"
-description: "La Cámara de Comercio de Ushuaia presentó PAIX, una plataforma para potenciar el desarrollo antártico y diversificar la economía de Tierra del Fuego."
-date: "2026-07-08T17:14:02.000Z"
-sourcePublishedAt: "2026-07-08T05:29:00.000Z"
-category: "Ushuaia"
-location: "Ushuaia"
-tags: ["Cámara de Comercio", "PAIX", "Antártida", "Tierra del Fuego"]
-image: "/uploads/auto/2026-07-08-6bbc085d51299ba36d.webp"
-imageAlt: "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico"
-imageStrategy: "article-og"
-imageSourceUrl: "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/42/2674242_192f154ed153582fc483200ee57cd29c1441f32b14b8433d109f166d7668c4ce/sm.jpg"
-imageCredit: "https://www.sur54.com/noticias/2026/07/08/126985-la-camara-de-comercio-de-ushuaia-presento-paix-la-plataforma-que-busca-potenciar-el-desarrollo-antartico"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: La Cámara de Comercio de Ushuaia lanza PAIX para el desarrollo antártico
+description: >-
+  La Cámara de Comercio de Ushuaia presentó PAIX, una plataforma para potenciar
+  el desarrollo antártico y diversificar la economía de Tierra del Fuego.
+date: '2026-07-08T17:14:02.000Z'
+sourcePublishedAt: '2026-07-08T05:29:00.000Z'
+category: Provincia
+location: Tierra del Fuego AIAS
+tags:
+  - Cámara de Comercio
+  - PAIX
+  - Antártida
+  - Tierra del Fuego
+image: /uploads/auto/2026-07-08-6bbc085d51299ba36d.webp
+imageAlt: >-
+  La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca
+  potenciar el desarrollo antártico
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/42/2674242_192f154ed153582fc483200ee57cd29c1441f32b14b8433d109f166d7668c4ce/sm.jpg
+imageCredit: >-
+  https://www.sur54.com/noticias/2026/07/08/126985-la-camara-de-comercio-de-ushuaia-presento-paix-la-plataforma-que-busca-potenciar-el-desarrollo-antartico
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Bing News — Ushuaia"
-sourceUrl: "https://www.sur54.com/noticias/2026/07/08/126985-la-camara-de-comercio-de-ushuaia-presento-paix-la-plataforma-que-busca-potenciar-el-desarrollo-antartico"
+sourceName: Bing News — Ushuaia
+sourceUrl: >-
+  https://www.sur54.com/noticias/2026/07/08/126985-la-camara-de-comercio-de-ushuaia-presento-paix-la-plataforma-que-busca-potenciar-el-desarrollo-antartico
 automated: true
 ---
 

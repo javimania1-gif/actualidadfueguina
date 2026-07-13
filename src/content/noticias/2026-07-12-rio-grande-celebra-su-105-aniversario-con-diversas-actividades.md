@@ -1,25 +1,33 @@
 ---
-title: "Río Grande celebra su 105° aniversario con diversas actividades"
-description: "El Municipio de Río Grande organiza un fin de semana lleno de actividades para celebrar su 105° aniversario, incluyendo kermesses y un mercado especial."
-date: "2026-07-12T03:17:12.195Z"
-sourcePublishedAt: "2026-07-12T03:16:52.551Z"
-category: "Ushuaia"
-location: "Ushuaia"
-tags: ["Río Grande", "aniversario", "actividades familiares"]
-image: "/uploads/auto/2026-07-12-731e7086585cdef719.webp"
-imageAlt: "Celebración del 105° aniversario de Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp"
-imageCredit: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Río Grande celebra su 105° aniversario con diversas actividades
+description: >-
+  El Municipio de Río Grande organiza un fin de semana lleno de actividades para
+  celebrar su 105° aniversario, incluyendo kermesses y un mercado especial.
+date: '2026-07-12T03:17:12.195Z'
+sourcePublishedAt: '2026-07-12T03:16:52.551Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Río Grande
+  - aniversario
+  - actividades familiares
+image: /uploads/auto/2026-07-12-731e7086585cdef719.webp
+imageAlt: Celebración del 105° aniversario de Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://ushuaia24.com.ar/download/multimedia.normal.84fec085fa92a4aa.bm9ybWFsLndlYnA%3D.webp
+imageCredit: >-
+  https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 5
 social:
   enabled: true
   urgent: false
-sourceName: "Ushuaia 24"
-sourceUrl: "https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin"
+sourceName: Ushuaia 24
+sourceUrl: >-
+  https://ushuaia24.com.ar/contenido/27851/rio-grande-celebra-sus-105-anos-cronograma-completo-de-actividades-para-este-fin
 automated: true
 ---
 

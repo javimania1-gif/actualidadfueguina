@@ -1,20 +1,28 @@
 ---
-title: "Capacitación para Productores de Alimentos en Río Grande"
-description: "El Municipio de Río Grande ofrece herramientas para fortalecer la producción alimentaria local y promover la soberanía alimentaria."
-date: "2026-07-06T16:52:55.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["capacitación", "productores locales", "soberanía alimentaria", "desarrollo productivo", "emprendimiento"]
-image: "/uploads/auto/2026-07-06-0fcdd8e86060102a29.jpg"
-imageAlt: "Capacitación para productores de alimentos en Río Grande"
-author: "Actualidad Fueguina"
+title: Capacitación para Productores de Alimentos en Río Grande
+description: >-
+  El Municipio de Río Grande ofrece herramientas para fortalecer la producción
+  alimentaria local y promover la soberanía alimentaria.
+date: '2026-07-06T16:52:55.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - capacitación
+  - productores locales
+  - soberanía alimentaria
+  - desarrollo productivo
+  - emprendimiento
+image: /uploads/auto/2026-07-06-0fcdd8e86060102a29.jpg
+imageAlt: Capacitación para productores de alimentos en Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/el-municipio-brindo-una-nueva-capacitacion-para-productores-locales-de-alimentos"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/el-municipio-brindo-una-nueva-capacitacion-para-productores-locales-de-alimentos
 automated: true
 ---
 

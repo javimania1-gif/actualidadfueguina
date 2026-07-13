@@ -1,25 +1,32 @@
 ---
-title: "El impacto del terremoto en Venezuela: médicos enfrentan una crisis sanitaria"
-description: "Médicos en Venezuela luchan con el aumento de pacientes tras los terremotos, enfrentando escasez de insumos y el dolor de los casos graves."
-date: "2026-07-11T06:19:30.128Z"
-sourcePublishedAt: "2026-07-10T00:00:00.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Venezuela", "terremoto", "salud", "crisis sanitaria"]
-image: "/uploads/auto/2026-07-11-37a60fdb587a299482.webp"
-imageAlt: "Médico revisa a un niño en un hospital de campaña en Catia La Mar"
-imageStrategy: "article-og"
-imageSourceUrl: "https://ichef.bbci.co.uk/news/1200/branded_mundo/e52a/live/d6a9aa50-7c74-11f1-917a-91e958a7e786.jpg"
-imageCredit: "https://www.bbc.com/mundo/articles/clywmp92zv3o?at_medium=RSS&at_campaign=rss"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: 'El impacto del terremoto en Venezuela: médicos enfrentan una crisis sanitaria'
+description: >-
+  Médicos en Venezuela luchan con el aumento de pacientes tras los terremotos,
+  enfrentando escasez de insumos y el dolor de los casos graves.
+date: '2026-07-11T06:19:30.128Z'
+sourcePublishedAt: '2026-07-10T00:00:00.000Z'
+category: Mundo
+location: Venezuela
+tags:
+  - Venezuela
+  - terremoto
+  - salud
+  - crisis sanitaria
+image: /uploads/auto/2026-07-11-37a60fdb587a299482.webp
+imageAlt: Médico revisa a un niño en un hospital de campaña en Catia La Mar
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://ichef.bbci.co.uk/news/1200/branded_mundo/e52a/live/d6a9aa50-7c74-11f1-917a-91e958a7e786.jpg
+imageCredit: 'https://www.bbc.com/mundo/articles/clywmp92zv3o?at_medium=RSS&at_campaign=rss'
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: true
 importance: 9
 social:
   enabled: true
   urgent: true
-sourceName: "BBC Mundo"
-sourceUrl: "https://www.bbc.com/mundo/articles/clywmp92zv3o"
+sourceName: BBC Mundo
+sourceUrl: 'https://www.bbc.com/mundo/articles/clywmp92zv3o'
 automated: true
 ---
 

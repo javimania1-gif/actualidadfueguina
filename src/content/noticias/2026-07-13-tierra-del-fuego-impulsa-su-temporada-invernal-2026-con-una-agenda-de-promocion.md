@@ -1,25 +1,36 @@
 ---
-title: "Tierra del Fuego impulsa su temporada invernal 2026 con una agenda de promoción"
-description: "El Gobierno de Tierra del Fuego, junto al InFueTur, promueve la temporada invernal 2026 con diversas actividades y la visita de autoridades nacionales."
-date: "2026-07-13T03:20:38.901Z"
-sourcePublishedAt: "2026-07-13T01:47:23.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["turismo", "invierno", "Tierra del Fuego", "promoción"]
-image: "/uploads/auto/2026-07-13-1baa1a6fc10d26f4ae.webp"
-imageAlt: "Promoción de la temporada invernal en Tierra del Fuego"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/Scioli01-scaled.jpg"
-imageCredit: "https://www.radiouniversidad.com.ar/tierra-del-fuego-fortalece-la-promocion-de-su-temporada-de-invierno-2026/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Tierra del Fuego impulsa su temporada invernal 2026 con una agenda de
+  promoción
+description: >-
+  El Gobierno de Tierra del Fuego, junto al InFueTur, promueve la temporada
+  invernal 2026 con diversas actividades y la visita de autoridades nacionales.
+date: '2026-07-13T03:20:38.901Z'
+sourcePublishedAt: '2026-07-13T01:47:23.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - turismo
+  - invierno
+  - Tierra del Fuego
+  - promoción
+image: /uploads/auto/2026-07-13-1baa1a6fc10d26f4ae.webp
+imageAlt: Promoción de la temporada invernal en Tierra del Fuego
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/Scioli01-scaled.jpg
+imageCredit: >-
+  https://www.radiouniversidad.com.ar/tierra-del-fuego-fortalece-la-promocion-de-su-temporada-de-invierno-2026/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Radio Universidad"
-sourceUrl: "https://www.radiouniversidad.com.ar/tierra-del-fuego-fortalece-la-promocion-de-su-temporada-de-invierno-2026/"
+sourceName: Radio Universidad
+sourceUrl: >-
+  https://www.radiouniversidad.com.ar/tierra-del-fuego-fortalece-la-promocion-de-su-temporada-de-invierno-2026/
 automated: true
 ---
 

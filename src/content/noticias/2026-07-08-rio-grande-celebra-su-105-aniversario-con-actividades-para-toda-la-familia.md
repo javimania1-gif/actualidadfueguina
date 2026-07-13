@@ -1,25 +1,33 @@
 ---
-title: "Río Grande celebra su 105º aniversario con actividades para toda la familia"
-description: "El Municipio de Río Grande organiza kermesses y un mercado especial para festejar su 105º aniversario con propuestas recreativas para todos."
-date: "2026-07-08T18:23:45.000Z"
-sourcePublishedAt: "2026-07-08T18:01:05.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["aniversario", "actividades familiares", "Río Grande"]
-image: "/uploads/auto/2026-07-08-d808748d2eb748825c.webp"
-imageAlt: "Celebración del 105º aniversario de Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306876012_y.jpg"
-imageCredit: "https://info.riogrande.gob.ar/rio-grande-celebra-su-105o-aniversario-con-propuestas-para-toda-la-familia"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Río Grande celebra su 105º aniversario con actividades para toda la familia
+description: >-
+  El Municipio de Río Grande organiza kermesses y un mercado especial para
+  festejar su 105º aniversario con propuestas recreativas para todos.
+date: '2026-07-08T18:23:45.000Z'
+sourcePublishedAt: '2026-07-08T18:01:05.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - aniversario
+  - actividades familiares
+  - Río Grande
+image: /uploads/auto/2026-07-08-d808748d2eb748825c.webp
+imageAlt: Celebración del 105º aniversario de Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306876012_y.jpg
+imageCredit: >-
+  https://info.riogrande.gob.ar/rio-grande-celebra-su-105o-aniversario-con-propuestas-para-toda-la-familia
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/rio-grande-celebra-su-105o-aniversario-con-propuestas-para-toda-la-familia"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/rio-grande-celebra-su-105o-aniversario-con-propuestas-para-toda-la-familia
 automated: true
 ---
 

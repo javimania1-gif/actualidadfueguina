@@ -1,25 +1,35 @@
 ---
-title: "Candela Mollá Ybars representó a Río Grande en la Liga Nacional de Natación Paralímpica"
-description: "La nadadora de Río Grande, Candela Mollá Ybars, participó en la Liga Nacional de Natación Paralímpica en Entre Ríos y se prepara para Santiago del Estero."
-date: "2026-07-12T20:56:31.518Z"
-sourcePublishedAt: "2026-07-12T20:49:41.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Natación Paralímpica", "Candela Mollá Ybars", "Río Grande"]
-image: "/uploads/auto/2026-07-12-d0d79c614d733cd804.webp"
-imageAlt: "Candela Mollá Ybars en competición de natación paralímpica"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/CANDELA01-scaled.jpg"
-imageCredit: "https://www.radiouniversidad.com.ar/candela-molla-ybars-represento-a-rio-grande-en-una-nueva-fecha-de-la-liga-nacional-de-natacion-paralimpica/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Candela Mollá Ybars representó a Río Grande en la Liga Nacional de Natación
+  Paralímpica
+description: >-
+  La nadadora de Río Grande, Candela Mollá Ybars, participó en la Liga Nacional
+  de Natación Paralímpica en Entre Ríos y se prepara para Santiago del Estero.
+date: '2026-07-12T20:56:31.518Z'
+sourcePublishedAt: '2026-07-12T20:49:41.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Natación Paralímpica
+  - Candela Mollá Ybars
+  - Río Grande
+image: /uploads/auto/2026-07-12-d0d79c614d733cd804.webp
+imageAlt: Candela Mollá Ybars en competición de natación paralímpica
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/CANDELA01-scaled.jpg
+imageCredit: >-
+  https://www.radiouniversidad.com.ar/candela-molla-ybars-represento-a-rio-grande-en-una-nueva-fecha-de-la-liga-nacional-de-natacion-paralimpica/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 5
 social:
   enabled: true
   urgent: false
-sourceName: "Radio Universidad"
-sourceUrl: "https://www.radiouniversidad.com.ar/candela-molla-ybars-represento-a-rio-grande-en-una-nueva-fecha-de-la-liga-nacional-de-natacion-paralimpica/"
+sourceName: Radio Universidad
+sourceUrl: >-
+  https://www.radiouniversidad.com.ar/candela-molla-ybars-represento-a-rio-grande-en-una-nueva-fecha-de-la-liga-nacional-de-natacion-paralimpica/
 automated: true
 ---
 

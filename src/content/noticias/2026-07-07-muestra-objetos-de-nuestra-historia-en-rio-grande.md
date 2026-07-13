@@ -1,24 +1,33 @@
 ---
-title: "Muestra 'Objetos de nuestra historia' en Río Grande"
-description: "La exposición en el Museo Municipal celebra el patrimonio histórico y cultural de Río Grande durante julio."
-date: "2026-07-07T16:59:00.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["patrimonio", "muestra", "historia", "cultura"]
-image: "/uploads/auto/2026-07-08-cc0cd28185e3dff163.webp"
-imageAlt: "Muestra de objetos históricos en el Museo Municipal de Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5073333744088845487_y.jpg"
-imageCredit: "https://info.riogrande.gob.ar/objetos-de-nuestra-historia-recorre-una-muestra-que-pone-en-valor-el-patrimonio-de-rio-grande"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Muestra 'Objetos de nuestra historia' en Río Grande
+description: >-
+  La exposición en el Museo Municipal celebra el patrimonio histórico y cultural
+  de Río Grande durante julio.
+date: '2026-07-07T16:59:00.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - patrimonio
+  - muestra
+  - historia
+  - cultura
+image: /uploads/auto/2026-07-08-cc0cd28185e3dff163.webp
+imageAlt: Muestra de objetos históricos en el Museo Municipal de Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5073333744088845487_y.jpg
+imageCredit: >-
+  https://info.riogrande.gob.ar/objetos-de-nuestra-historia-recorre-una-muestra-que-pone-en-valor-el-patrimonio-de-rio-grande
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/objetos-de-nuestra-historia-recorre-una-muestra-que-pone-en-valor-el-patrimonio-de-rio-grande"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/objetos-de-nuestra-historia-recorre-una-muestra-que-pone-en-valor-el-patrimonio-de-rio-grande
 automated: true
 ---
 

@@ -1,25 +1,32 @@
 ---
-title: "Occidentales se mudan a Rusia en busca de valores tradicionales"
-description: "La BBC explora las experiencias de occidentales que se trasladan a Rusia en busca de una vida basada en valores familiares y tradicionales."
-date: "2026-07-13T18:01:01.089Z"
-sourcePublishedAt: "2026-07-13T00:00:00.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Rusia", "migración", "valores tradicionales", "occidentales"]
-image: "/uploads/auto/2026-07-13-ffc4093b0aa1afd802.webp"
-imageAlt: "Persona en Rusia con gorro de lana y abrigo oscuro."
-imageStrategy: "article-og"
-imageSourceUrl: "https://ichef.bbci.co.uk/news/1200/branded_mundo/c3bb/live/e7896c00-7163-11f1-a589-278435dff441.jpg"
-imageCredit: "https://www.bbc.com/mundo/articles/cwykjylv1xdo?at_medium=RSS&at_campaign=rss"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Occidentales se mudan a Rusia en busca de valores tradicionales
+description: >-
+  La BBC explora las experiencias de occidentales que se trasladan a Rusia en
+  busca de una vida basada en valores familiares y tradicionales.
+date: '2026-07-13T18:01:01.089Z'
+sourcePublishedAt: '2026-07-13T00:00:00.000Z'
+category: Mundo
+location: Rusia
+tags:
+  - Rusia
+  - migración
+  - valores tradicionales
+  - occidentales
+image: /uploads/auto/2026-07-13-ffc4093b0aa1afd802.webp
+imageAlt: Persona en Rusia con gorro de lana y abrigo oscuro.
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://ichef.bbci.co.uk/news/1200/branded_mundo/c3bb/live/e7896c00-7163-11f1-a589-278435dff441.jpg
+imageCredit: 'https://www.bbc.com/mundo/articles/cwykjylv1xdo?at_medium=RSS&at_campaign=rss'
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "BBC Mundo"
-sourceUrl: "https://www.bbc.com/mundo/articles/cwykjylv1xdo"
+sourceName: BBC Mundo
+sourceUrl: 'https://www.bbc.com/mundo/articles/cwykjylv1xdo'
 automated: true
 ---
 

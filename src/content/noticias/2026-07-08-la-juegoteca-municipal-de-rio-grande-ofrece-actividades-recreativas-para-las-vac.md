@@ -1,25 +1,35 @@
 ---
-title: "La Juegoteca Municipal de Río Grande ofrece actividades recreativas para las vacaciones de invierno"
-description: "La Juegoteca Municipal realizará actividades recreativas en Tierra de Teatro los días 17 y 24 de julio para niñas y niños de Río Grande."
-date: "2026-07-08T17:14:02.000Z"
-sourcePublishedAt: "2026-07-08T16:10:36.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Juegoteca Municipal", "vacaciones de invierno", "Tierra de Teatro"]
-image: "/uploads/auto/2026-07-08-3517bf3bdafb17a90a.webp"
-imageAlt: "Actividades recreativas para niños en Tierra de Teatro"
-imageStrategy: "article-og"
-imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875994_x.jpg"
-imageCredit: "https://info.riogrande.gob.ar/vacaciones-de-invierno-la-juegoteca-municipal-llega-a-tierra-de-teatro"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  La Juegoteca Municipal de Río Grande ofrece actividades recreativas para las
+  vacaciones de invierno
+description: >-
+  La Juegoteca Municipal realizará actividades recreativas en Tierra de Teatro
+  los días 17 y 24 de julio para niñas y niños de Río Grande.
+date: '2026-07-08T17:14:02.000Z'
+sourcePublishedAt: '2026-07-08T16:10:36.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Juegoteca Municipal
+  - vacaciones de invierno
+  - Tierra de Teatro
+image: /uploads/auto/2026-07-08-3517bf3bdafb17a90a.webp
+imageAlt: Actividades recreativas para niños en Tierra de Teatro
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://info.riogrande.gob.ar/wp-content/uploads/2026/07/photo_5077847763306875994_x.jpg
+imageCredit: >-
+  https://info.riogrande.gob.ar/vacaciones-de-invierno-la-juegoteca-municipal-llega-a-tierra-de-teatro
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/vacaciones-de-invierno-la-juegoteca-municipal-llega-a-tierra-de-teatro"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/vacaciones-de-invierno-la-juegoteca-municipal-llega-a-tierra-de-teatro
 automated: true
 ---
 

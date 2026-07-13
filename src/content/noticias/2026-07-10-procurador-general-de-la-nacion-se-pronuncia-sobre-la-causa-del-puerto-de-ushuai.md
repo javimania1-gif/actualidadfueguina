@@ -1,25 +1,34 @@
 ---
-title: "Procurador General de la Nación se pronuncia sobre la causa del Puerto de Ushuaia"
-description: "El Procurador General de la Nación cuestiona la decisión del juez federal de Ushuaia respecto a la intervención del puerto."
-date: "2026-07-10T21:09:51.287Z"
-sourcePublishedAt: "2026-07-10T15:46:22.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Puerto de Ushuaia", "Procurador General", "Justicia Federal"]
-image: "/uploads/auto/2026-07-10-748ef5f69724ff3975.webp"
-imageAlt: "Intervención del Puerto de Ushuaia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/01/puerto1.jpg"
-imageCredit: "https://www.actualidadtdf.com.ar/procurador-general-de-la-nacion-pidio-al-juez-federal-de-ushuaia-que-se-haga-responsable-de-la-causa-por-el-puerto/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Procurador General de la Nación se pronuncia sobre la causa del Puerto de
+  Ushuaia
+description: >-
+  El Procurador General de la Nación cuestiona la decisión del juez federal de
+  Ushuaia respecto a la intervención del puerto.
+date: '2026-07-10T21:09:51.287Z'
+sourcePublishedAt: '2026-07-10T15:46:22.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Puerto de Ushuaia
+  - Procurador General
+  - Justicia Federal
+image: /uploads/auto/2026-07-10-748ef5f69724ff3975.webp
+imageAlt: Intervención del Puerto de Ushuaia
+imageStrategy: article-og
+imageSourceUrl: 'https://www.actualidadtdf.com.ar/wp-content/uploads/2026/01/puerto1.jpg'
+imageCredit: >-
+  https://www.actualidadtdf.com.ar/procurador-general-de-la-nacion-pidio-al-juez-federal-de-ushuaia-que-se-haga-responsable-de-la-causa-por-el-puerto/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Actualidad TDF"
-sourceUrl: "https://www.actualidadtdf.com.ar/procurador-general-de-la-nacion-pidio-al-juez-federal-de-ushuaia-que-se-haga-responsable-de-la-causa-por-el-puerto/"
+sourceName: Actualidad TDF
+sourceUrl: >-
+  https://www.actualidadtdf.com.ar/procurador-general-de-la-nacion-pidio-al-juez-federal-de-ushuaia-que-se-haga-responsable-de-la-causa-por-el-puerto/
 automated: true
 ---
 

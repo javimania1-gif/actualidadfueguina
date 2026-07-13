@@ -1,25 +1,34 @@
 ---
-title: "Río Grande habilita el primer tramo pavimentado de la calle Punta Popper"
-description: "La pavimentación de la calle Punta Popper en Río Grande mejora la conectividad y circulación en la ciudad, ejecutada con recursos municipales."
-date: "2026-07-12T03:17:13.553Z"
-sourcePublishedAt: "2026-07-12T03:16:52.898Z"
-category: "Ushuaia"
-location: "Río Grande"
-tags: ["obra pública", "Río Grande", "pavimentación", "infraestructura"]
-image: "/uploads/auto/2026-07-12-62d7818b3f6119adb6.webp"
-imageAlt: "Calle Punta Popper en Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://ushuaia24.com.ar/download/multimedia.normal.bbdf13f24db4f0cf.bm9ybWFsLndlYnA%3D.webp"
-imageCredit: "https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Río Grande habilita el primer tramo pavimentado de la calle Punta Popper
+description: >-
+  La pavimentación de la calle Punta Popper en Río Grande mejora la conectividad
+  y circulación en la ciudad, ejecutada con recursos municipales.
+date: '2026-07-12T03:17:13.553Z'
+sourcePublishedAt: '2026-07-12T03:16:52.898Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - obra pública
+  - Río Grande
+  - pavimentación
+  - infraestructura
+image: /uploads/auto/2026-07-12-62d7818b3f6119adb6.webp
+imageAlt: Calle Punta Popper en Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://ushuaia24.com.ar/download/multimedia.normal.bbdf13f24db4f0cf.bm9ybWFsLndlYnA%3D.webp
+imageCredit: >-
+  https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Ushuaia 24"
-sourceUrl: "https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper"
+sourceName: Ushuaia 24
+sourceUrl: >-
+  https://ushuaia24.com.ar/contenido/27849/rio-grande-habilito-el-primer-tramo-pavimentado-de-la-calle-punta-popper
 automated: true
 ---
 

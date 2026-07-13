@@ -1,25 +1,36 @@
 ---
-title: "Nuevo vuelo directo entre San Pablo y Ushuaia: un hito para el turismo fueguino"
-description: "El nuevo vuelo de GOL Linhas Aéreas conecta por primera vez San Pablo y Ushuaia, impulsando el turismo en Tierra del Fuego."
-date: "2026-07-09T23:58:34.159Z"
-sourcePublishedAt: "2026-07-09T16:23:00.000Z"
-category: "Ushuaia"
-location: "Ushuaia"
-tags: ["turismo", "GOL Linhas Aéreas", "Ushuaia", "Tierra del Fuego"]
-image: "/uploads/auto/2026-07-09-27a3148d0100186e8c.webp"
-imageAlt: "Aeropuerto internacional de Ushuaia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://media.diariopopular.com.ar/p/e2599d942785357fd5ce20cd1d9b7f4f/adjuntos/143/imagenes/008/248/0008248166/1200x675/smart/multimedianormalb51ece2b52de00a3bm9ybwfslndlyna.webp"
-imageCredit: "https://www.diariopopular.com.ar/turismo/scioli-celebro-el-nuevo-vuelo-directo-gol-san-pablo-y-ushuaia-n909133"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Nuevo vuelo directo entre San Pablo y Ushuaia: un hito para el turismo
+  fueguino
+description: >-
+  El nuevo vuelo de GOL Linhas Aéreas conecta por primera vez San Pablo y
+  Ushuaia, impulsando el turismo en Tierra del Fuego.
+date: '2026-07-09T23:58:34.159Z'
+sourcePublishedAt: '2026-07-09T16:23:00.000Z'
+category: Provincia
+location: Tierra del Fuego AIAS
+tags:
+  - turismo
+  - GOL Linhas Aéreas
+  - Ushuaia
+  - Tierra del Fuego
+image: /uploads/auto/2026-07-09-27a3148d0100186e8c.webp
+imageAlt: Aeropuerto internacional de Ushuaia
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://media.diariopopular.com.ar/p/e2599d942785357fd5ce20cd1d9b7f4f/adjuntos/143/imagenes/008/248/0008248166/1200x675/smart/multimedianormalb51ece2b52de00a3bm9ybwfslndlyna.webp
+imageCredit: >-
+  https://www.diariopopular.com.ar/turismo/scioli-celebro-el-nuevo-vuelo-directo-gol-san-pablo-y-ushuaia-n909133
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Bing News — Ushuaia"
-sourceUrl: "https://www.diariopopular.com.ar/turismo/scioli-celebro-el-nuevo-vuelo-directo-gol-san-pablo-y-ushuaia-n909133"
+sourceName: Bing News — Ushuaia
+sourceUrl: >-
+  https://www.diariopopular.com.ar/turismo/scioli-celebro-el-nuevo-vuelo-directo-gol-san-pablo-y-ushuaia-n909133
 automated: true
 ---
 

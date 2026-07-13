@@ -1,20 +1,31 @@
 ---
-title: "Inscripciones abiertas para el Curso Universitario de Abordaje en Consumo Problemático"
-description: "El Municipio de Río Grande, junto a la UNLP y prestigiosas asociaciones, dicta una capacitación virtual de formación en salud mental con alcance para toda la región."
-date: "2026-07-04T16:39:00.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Rio Grande", "Salud mental", "Universidad Nacional de La Plata", "Capacitacion", "Consumo problemático"]
-image: "/uploads/auto/2026-07-08-2e0c09d500f2394f4f.webp"
-imageAlt: "Curso universitario sobre consumo problemático"
-author: "Actualidad Fueguina"
+title: >-
+  Inscripciones abiertas para el Curso Universitario de Abordaje en Consumo
+  Problemático
+description: >-
+  El Municipio de Río Grande, junto a la UNLP y prestigiosas asociaciones, dicta
+  una capacitación virtual de formación en salud mental con alcance para toda la
+  región.
+date: '2026-07-04T16:39:00.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Rio Grande
+  - Salud mental
+  - Universidad Nacional de La Plata
+  - Capacitacion
+  - Consumo problemático
+image: /uploads/auto/2026-07-08-2e0c09d500f2394f4f.webp
+imageAlt: Curso universitario sobre consumo problemático
+author: Actualidad Fueguina
 featured: false
 importance: 7
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/con-alcance-regional-las-inscripciones-para-el-curso-universitario-abordaje-en-consumo-problematico"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/con-alcance-regional-las-inscripciones-para-el-curso-universitario-abordaje-en-consumo-problematico
 automated: false
 ---
 

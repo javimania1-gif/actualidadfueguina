@@ -15,6 +15,7 @@ import {
   isOfficialDomain, writeArticleWithModel, makeNewsMarkdown, makeDraftMarkdown, sleep,
   generateWebPlate
 } from './lib/news-utils.mjs';
+import { resolvePublicationTerritory } from './lib/territory-resolver.mjs';
 import {
   isGenericTitle as isGenericTitleShared,
   isSimilarTitle as isSimilarTitleShared,
@@ -1367,8 +1368,19 @@ for (const candidate of verifiedCandidates) {
       aiCompleted = true;
       metrics.articlesDrafted++;
 
-      // Si la fuente tiene forceCategory, sobreescribir la categoría IA
-      if (source.forceCategory) ai.category = source.forceCategory;
+      // Resolver jerarquía territorial y de ubicación determinísticamente
+      const territoryResolution = resolvePublicationTerritory({
+        title: ai.title,
+        description: ai.description,
+        body: ai.body,
+        verifiedFacts: verification?.verifiedFacts || {},
+        agendaTerritory: candidate.newsworthiness?.territory || '',
+        source,
+        sourceUrl: sourceRef.url || article.finalUrl
+      });
+      ai.category = territoryResolution.category;
+      ai.location = territoryResolution.location;
+
       ai.importance = deriveEffectiveImportance(ai.importance, candidate.newsworthiness || {});
 
       // Si la fuente tiene minImportance, descartar si la IA le dio importancia menor

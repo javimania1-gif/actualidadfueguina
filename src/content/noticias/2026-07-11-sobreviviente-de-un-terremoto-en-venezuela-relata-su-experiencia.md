@@ -1,25 +1,34 @@
 ---
-title: "Sobreviviente de un terremoto en Venezuela relata su experiencia"
-description: "Víctor Sardina, único sobreviviente de su familia tras el colapso de un edificio en La Guaira, comparte su desgarrador relato."
-date: "2026-07-11T02:53:11.769Z"
-sourcePublishedAt: "2026-07-11T00:34:16.000Z"
-category: "Nacionales"
-location: "Argentina"
-tags: ["Venezuela", "terremoto", "sobreviviente", "Víctor Sardina"]
-image: "/uploads/auto/2026-07-11-f3615eb6b764eba6bd.webp"
-imageAlt: "Víctor Sardina pasó 36 horas atrapado entre los escombros en La Guaira"
-imageStrategy: "article-og"
-imageSourceUrl: "https://fotos.perfil.com/2026/07/11/trim/1140/641/victor-sardina-paso-36-horas-atrapado-entre-los-escombros-en-la-guaira-10072026-2280119.jpg"
-imageCredit: "https://www.perfil.com/noticias/internacional/grite-y-grite-hablo-el-unico-sobreviviente-de-una-familia-fallecida-durante-la-caida-de-un-edificio-en-el-doble-terremoto-de-venezuela.phtml"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Sobreviviente de un terremoto en Venezuela relata su experiencia
+description: >-
+  Víctor Sardina, único sobreviviente de su familia tras el colapso de un
+  edificio en La Guaira, comparte su desgarrador relato.
+date: '2026-07-11T02:53:11.769Z'
+sourcePublishedAt: '2026-07-11T00:34:16.000Z'
+category: Mundo
+location: Venezuela
+tags:
+  - Venezuela
+  - terremoto
+  - sobreviviente
+  - Víctor Sardina
+image: /uploads/auto/2026-07-11-f3615eb6b764eba6bd.webp
+imageAlt: Víctor Sardina pasó 36 horas atrapado entre los escombros en La Guaira
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://fotos.perfil.com/2026/07/11/trim/1140/641/victor-sardina-paso-36-horas-atrapado-entre-los-escombros-en-la-guaira-10072026-2280119.jpg
+imageCredit: >-
+  https://www.perfil.com/noticias/internacional/grite-y-grite-hablo-el-unico-sobreviviente-de-una-familia-fallecida-durante-la-caida-de-un-edificio-en-el-doble-terremoto-de-venezuela.phtml
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: true
 importance: 9
 social:
   enabled: true
   urgent: true
-sourceName: "Perfil — Nacionales"
-sourceUrl: "https://www.perfil.com/noticias/internacional/grite-y-grite-hablo-el-unico-sobreviviente-de-una-familia-fallecida-durante-la-caida-de-un-edificio-en-el-doble-terremoto-de-venezuela.phtml"
+sourceName: Perfil — Nacionales
+sourceUrl: >-
+  https://www.perfil.com/noticias/internacional/grite-y-grite-hablo-el-unico-sobreviviente-de-una-familia-fallecida-durante-la-caida-de-un-edificio-en-el-doble-terremoto-de-venezuela.phtml
 automated: true
 ---
 

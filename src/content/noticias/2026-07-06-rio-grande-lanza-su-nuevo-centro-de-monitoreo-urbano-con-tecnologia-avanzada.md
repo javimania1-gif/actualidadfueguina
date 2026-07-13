@@ -1,20 +1,28 @@
 ---
-title: "Río Grande lanza su nuevo Centro de Monitoreo Urbano con tecnología avanzada"
-description: "El nuevo Centro de Monitoreo Urbano en Río Grande optimiza la atención ciudadana y la respuesta ante emergencias."
-date: "2026-07-06T18:21:17.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["tecnología", "emergencias", "monitoreo", "atención ciudadana", "Río Grande"]
-image: "/uploads/auto/2026-07-06-9ef15f849f4acfa515.jpg"
-imageAlt: "Centro de Monitoreo Urbano en Río Grande"
-author: "Actualidad Fueguina"
+title: Río Grande lanza su nuevo Centro de Monitoreo Urbano con tecnología avanzada
+description: >-
+  El nuevo Centro de Monitoreo Urbano en Río Grande optimiza la atención
+  ciudadana y la respuesta ante emergencias.
+date: '2026-07-06T18:21:17.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - tecnología
+  - emergencias
+  - monitoreo
+  - atención ciudadana
+  - Río Grande
+image: /uploads/auto/2026-07-06-9ef15f849f4acfa515.jpg
+imageAlt: Centro de Monitoreo Urbano en Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/rio-grande-incorpora-tecnologia-de-ultima-generacion-para-poner-en-marcha-su-nuevo-centro-de-monitoreo-urbano"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/rio-grande-incorpora-tecnologia-de-ultima-generacion-para-poner-en-marcha-su-nuevo-centro-de-monitoreo-urbano
 automated: true
 ---
 

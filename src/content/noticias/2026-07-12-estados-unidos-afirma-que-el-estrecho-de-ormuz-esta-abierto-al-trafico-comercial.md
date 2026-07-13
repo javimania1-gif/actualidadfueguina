@@ -1,25 +1,35 @@
 ---
-title: "Estados Unidos afirma que el estrecho de Ormuz está abierto al tráfico comercial"
-description: "A pesar de las tensiones con Irán, Estados Unidos asegura que el estrecho de Ormuz sigue operativo para todas las embarcaciones."
-date: "2026-07-12T19:11:33.412Z"
-sourcePublishedAt: "2026-07-12T17:31:00.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Estrecho de Ormuz", "Estados Unidos", "Irán", "tensión internacional"]
-image: "/uploads/auto/2026-07-12-011005fc11bcd93be5.webp"
-imageAlt: "Embarcaciones navegando por el estrecho de Ormuz"
-imageStrategy: "article-og"
-imageSourceUrl: "https://static.dw.com/image/77922743_6.jpg"
-imageCredit: "https://www.dw.com/es/estados-unidos-asegura-que-estrecho-de-ormuz-est%C3%A1-abierto/a-77925449?maca=spa-rss-sp-all-1122-rdf"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Estados Unidos afirma que el estrecho de Ormuz está abierto al tráfico
+  comercial
+description: >-
+  A pesar de las tensiones con Irán, Estados Unidos asegura que el estrecho de
+  Ormuz sigue operativo para todas las embarcaciones.
+date: '2026-07-12T19:11:33.412Z'
+sourcePublishedAt: '2026-07-12T17:31:00.000Z'
+category: Mundo
+location: Estados Unidos
+tags:
+  - Estrecho de Ormuz
+  - Estados Unidos
+  - Irán
+  - tensión internacional
+image: /uploads/auto/2026-07-12-011005fc11bcd93be5.webp
+imageAlt: Embarcaciones navegando por el estrecho de Ormuz
+imageStrategy: article-og
+imageSourceUrl: 'https://static.dw.com/image/77922743_6.jpg'
+imageCredit: >-
+  https://www.dw.com/es/estados-unidos-asegura-que-estrecho-de-ormuz-est%C3%A1-abierto/a-77925449?maca=spa-rss-sp-all-1122-rdf
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "DW Espanol"
-sourceUrl: "https://www.dw.com/es/estados-unidos-asegura-que-estrecho-de-ormuz-est%C3%A1-abierto/a-77925449"
+sourceName: DW Espanol
+sourceUrl: >-
+  https://www.dw.com/es/estados-unidos-asegura-que-estrecho-de-ormuz-est%C3%A1-abierto/a-77925449
 automated: true
 ---
 

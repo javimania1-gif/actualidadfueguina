@@ -1,20 +1,28 @@
 ---
-title: "Con propuestas para todas las edades, el invierno se disfruta en Río Grande"
-description: "El Municipio invita a vecinos a sumarse a las propuestas recreativas, culturales y deportivas familiares durante las vacaciones de invierno."
-date: "2026-07-06T13:14:48.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Rio Grande", "Vacaciones de invierno", "Municipio", "Cultura", "Deportes"]
-image: "/uploads/auto/2026-07-06-45055474a390fb1ed7.jpg"
-imageAlt: "Actividades de invierno en Río Grande"
-author: "Actualidad Fueguina"
+title: 'Con propuestas para todas las edades, el invierno se disfruta en Río Grande'
+description: >-
+  El Municipio invita a vecinos a sumarse a las propuestas recreativas,
+  culturales y deportivas familiares durante las vacaciones de invierno.
+date: '2026-07-06T13:14:48.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Rio Grande
+  - Vacaciones de invierno
+  - Municipio
+  - Cultura
+  - Deportes
+image: /uploads/auto/2026-07-06-45055474a390fb1ed7.jpg
+imageAlt: Actividades de invierno en Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 7
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/con-propuestas-para-todas-las-edades-el-invierno-se-disfruta-en-rio-grande
 automated: false
 ---
 

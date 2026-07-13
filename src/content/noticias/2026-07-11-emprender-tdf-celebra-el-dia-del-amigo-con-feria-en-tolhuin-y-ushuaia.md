@@ -1,25 +1,34 @@
 ---
-title: "Emprender TDF celebra el Día del Amigo con feria en Tolhuin y Ushuaia"
-description: "Durante el fin de semana, la feria Emprender TDF ofrecerá actividades culturales y stands de emprendedores en Tolhuin y Ushuaia."
-date: "2026-07-11T01:26:17.359Z"
-sourcePublishedAt: "2026-07-10T18:44:05.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Emprender TDF", "Día del Amigo", "feria", "Tolhuin", "Ushuaia"]
-image: "/uploads/auto/2026-07-11-3b8733c553cce6b4bc.webp"
-imageAlt: "Feria Emprender TDF"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/07-5-scaled.jpg"
-imageCredit: "https://www.radiouniversidad.com.ar/emprender-tdf-tendra-una-edicion-especial-por-el-dia-del-amigo-en-tolhuin-y-ushuaia/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Emprender TDF celebra el Día del Amigo con feria en Tolhuin y Ushuaia
+description: >-
+  Durante el fin de semana, la feria Emprender TDF ofrecerá actividades
+  culturales y stands de emprendedores en Tolhuin y Ushuaia.
+date: '2026-07-11T01:26:17.359Z'
+sourcePublishedAt: '2026-07-10T18:44:05.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Emprender TDF
+  - Día del Amigo
+  - feria
+  - Tolhuin
+  - Ushuaia
+image: /uploads/auto/2026-07-11-3b8733c553cce6b4bc.webp
+imageAlt: Feria Emprender TDF
+imageStrategy: article-og
+imageSourceUrl: 'https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/07-5-scaled.jpg'
+imageCredit: >-
+  https://www.radiouniversidad.com.ar/emprender-tdf-tendra-una-edicion-especial-por-el-dia-del-amigo-en-tolhuin-y-ushuaia/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 5
 social:
   enabled: true
   urgent: false
-sourceName: "Radio Universidad"
-sourceUrl: "https://www.radiouniversidad.com.ar/emprender-tdf-tendra-una-edicion-especial-por-el-dia-del-amigo-en-tolhuin-y-ushuaia/"
+sourceName: Radio Universidad
+sourceUrl: >-
+  https://www.radiouniversidad.com.ar/emprender-tdf-tendra-una-edicion-especial-por-el-dia-del-amigo-en-tolhuin-y-ushuaia/
 automated: true
 ---
 

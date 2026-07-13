@@ -1,25 +1,34 @@
 ---
-title: "Actualización sobre el impacto de los terremotos en Venezuela"
-description: "El gobierno venezolano informa sobre la cifra de muertos y desaparecidos tras los recientes terremotos en el país."
-date: "2026-07-12T03:17:10.798Z"
-sourcePublishedAt: "2026-07-11T18:56:05.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Venezuela", "Terremotos", "Jorge Rodríguez"]
-image: "/uploads/auto/2026-07-12-c984a0012268a372b5.webp"
-imageAlt: "Rescatistas españoles inspeccionan un edificio colapsado en La Guaira, Venezuela."
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.clarin.com/img/2026/07/11/v8TUNBW74_2000x1500__1.jpg"
-imageCredit: "https://www.clarin.com/mundo/gobierno-venezolano-actualizo-cifra-muertos-terremotos-dijo-da-numero-desaparecidos_0_yWVr7uHRii.html"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Actualización sobre el impacto de los terremotos en Venezuela
+description: >-
+  El gobierno venezolano informa sobre la cifra de muertos y desaparecidos tras
+  los recientes terremotos en el país.
+date: '2026-07-12T03:17:10.798Z'
+sourcePublishedAt: '2026-07-11T18:56:05.000Z'
+category: Mundo
+location: Venezuela
+tags:
+  - Venezuela
+  - Terremotos
+  - Jorge Rodríguez
+image: /uploads/auto/2026-07-12-c984a0012268a372b5.webp
+imageAlt: >-
+  Rescatistas españoles inspeccionan un edificio colapsado en La Guaira,
+  Venezuela.
+imageStrategy: article-og
+imageSourceUrl: 'https://www.clarin.com/img/2026/07/11/v8TUNBW74_2000x1500__1.jpg'
+imageCredit: >-
+  https://www.clarin.com/mundo/gobierno-venezolano-actualizo-cifra-muertos-terremotos-dijo-da-numero-desaparecidos_0_yWVr7uHRii.html
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "Clarín — Mundo"
-sourceUrl: "https://www.clarin.com/mundo/gobierno-venezolano-actualizo-cifra-muertos-terremotos-dijo-da-numero-desaparecidos_0_yWVr7uHRii.html"
+sourceName: Clarín — Mundo
+sourceUrl: >-
+  https://www.clarin.com/mundo/gobierno-venezolano-actualizo-cifra-muertos-terremotos-dijo-da-numero-desaparecidos_0_yWVr7uHRii.html
 automated: true
 ---
 

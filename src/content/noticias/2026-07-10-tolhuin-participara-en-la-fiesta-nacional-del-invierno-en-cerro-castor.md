@@ -1,25 +1,34 @@
 ---
-title: "Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor"
-description: "El Municipio de Tolhuin estará presente en la Fiesta Nacional del Invierno, el 10 de julio en Cerro Castor, mostrando su oferta turística y productiva."
-date: "2026-07-10T19:25:57.258Z"
-sourcePublishedAt: "2026-07-09T15:24:00.000Z"
-category: "Tolhuin"
-location: "Tolhuin"
-tags: ["Fiesta Nacional del Invierno", "Cerro Castor", "Turismo", "Tolhuin"]
-image: "/uploads/auto/2026-07-10-bf79bc14f06632ca50.webp"
-imageAlt: "Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno"
-imageStrategy: "article-og"
-imageSourceUrl: "https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/67/2676728_056b8158d82132e3fbf812b0f0eb49fa597a335cf6a10ec4f1861d6397a2fcdf/sm.jpg"
-imageCredit: "https://www.sur54.com/noticias/2026/07/09/127057-tolhuin-sera-parte-de-una-nueva-edicion-de-la-fiesta-nacional-del-invierno"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Tolhuin participará en la Fiesta Nacional del Invierno en Cerro Castor
+description: >-
+  El Municipio de Tolhuin estará presente en la Fiesta Nacional del Invierno, el
+  10 de julio en Cerro Castor, mostrando su oferta turística y productiva.
+date: '2026-07-10T19:25:57.258Z'
+sourcePublishedAt: '2026-07-09T15:24:00.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Fiesta Nacional del Invierno
+  - Cerro Castor
+  - Turismo
+  - Tolhuin
+image: /uploads/auto/2026-07-10-bf79bc14f06632ca50.webp
+imageAlt: Tolhuin será parte de una nueva edición de la Fiesta Nacional del Invierno
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://sur54-s3.cdn.net.ar/s3i233/2026/07/sur54/images/02/67/67/2676728_056b8158d82132e3fbf812b0f0eb49fa597a335cf6a10ec4f1861d6397a2fcdf/sm.jpg
+imageCredit: >-
+  https://www.sur54.com/noticias/2026/07/09/127057-tolhuin-sera-parte-de-una-nueva-edicion-de-la-fiesta-nacional-del-invierno
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Bing News — Tolhuin"
-sourceUrl: "https://www.sur54.com/noticias/2026/07/09/127057-tolhuin-sera-parte-de-una-nueva-edicion-de-la-fiesta-nacional-del-invierno"
+sourceName: Bing News — Tolhuin
+sourceUrl: >-
+  https://www.sur54.com/noticias/2026/07/09/127057-tolhuin-sera-parte-de-una-nueva-edicion-de-la-fiesta-nacional-del-invierno
 automated: true
 ---
 

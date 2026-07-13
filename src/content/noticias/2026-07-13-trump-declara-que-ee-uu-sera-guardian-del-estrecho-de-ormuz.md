@@ -1,25 +1,35 @@
 ---
-title: "Trump declara que EE. UU. será 'guardián' del estrecho de Ormuz"
-description: "Donald Trump afirma que EE. UU. administrará el estrecho de Ormuz y que debería recibir compensación, mientras Irán responde que no lo permitirá."
-date: "2026-07-13T14:43:03.534Z"
-sourcePublishedAt: "2026-07-13T13:51:47.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Donald Trump", "Ormuz", "Irán", "Estados Unidos", "conflicto internacional"]
-image: "/uploads/auto/2026-07-13-d7ffb6e88b418b80a3.webp"
-imageAlt: "Niños juegan en el estrecho de Ormuz con humo de fondo tras una explosión."
-imageStrategy: "article-og"
-imageSourceUrl: "https://s.france24.com/media/display/a239482a-7eb8-11f1-a38b-005056a90284/w:1280/p:16x9/AP26194329729132.jpg"
-imageCredit: "https://www.france24.com/es/medio-oriente/20260713-en-directo-trump-afirma-que-ee-uu-ser%C3%A1-guardi%C3%A1n-de-ormuz-pero-ir%C3%A1n-responde-que-no-lo-permitir%C3%A1"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Trump declara que EE. UU. será 'guardián' del estrecho de Ormuz
+description: >-
+  Donald Trump afirma que EE. UU. administrará el estrecho de Ormuz y que
+  debería recibir compensación, mientras Irán responde que no lo permitirá.
+date: '2026-07-13T14:43:03.534Z'
+sourcePublishedAt: '2026-07-13T13:51:47.000Z'
+category: Mundo
+location: Iran
+tags:
+  - Donald Trump
+  - Ormuz
+  - Irán
+  - Estados Unidos
+  - conflicto internacional
+image: /uploads/auto/2026-07-13-d7ffb6e88b418b80a3.webp
+imageAlt: Niños juegan en el estrecho de Ormuz con humo de fondo tras una explosión.
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://s.france24.com/media/display/a239482a-7eb8-11f1-a38b-005056a90284/w:1280/p:16x9/AP26194329729132.jpg
+imageCredit: >-
+  https://www.france24.com/es/medio-oriente/20260713-en-directo-trump-afirma-que-ee-uu-ser%C3%A1-guardi%C3%A1n-de-ormuz-pero-ir%C3%A1n-responde-que-no-lo-permitir%C3%A1
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "France 24 Espanol"
-sourceUrl: "https://www.france24.com/es/medio-oriente/20260713-en-directo-trump-afirma-que-ee-uu-ser%C3%A1-guardi%C3%A1n-de-ormuz-pero-ir%C3%A1n-responde-que-no-lo-permitir%C3%A1"
+sourceName: France 24 Espanol
+sourceUrl: >-
+  https://www.france24.com/es/medio-oriente/20260713-en-directo-trump-afirma-que-ee-uu-ser%C3%A1-guardi%C3%A1n-de-ormuz-pero-ir%C3%A1n-responde-que-no-lo-permitir%C3%A1
 automated: true
 ---
 

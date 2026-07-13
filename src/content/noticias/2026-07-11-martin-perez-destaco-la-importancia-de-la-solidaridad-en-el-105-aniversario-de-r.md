@@ -1,25 +1,36 @@
 ---
-title: "Martín Pérez destacó la importancia de la solidaridad en el 105° aniversario de Río Grande"
-description: "El intendente Martín Pérez convocó a la comunidad a trabajar unida y solidariamente en el acto por el 105° aniversario de Río Grande."
-date: "2026-07-11T20:56:16.037Z"
-sourcePublishedAt: "2026-07-11T20:49:27.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Río Grande", "Martín Pérez", "aniversario", "solidaridad"]
-image: "/uploads/auto/2026-07-11-a9a1a87e28acd00e52.webp"
-imageAlt: "Acto central por el 105° aniversario de Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/01-14-scaled.jpg"
-imageCredit: "https://www.radiouniversidad.com.ar/martin-perez-convoco-a-defender-rio-grande-entre-todos-y-llamo-a-fortalecer-la-solidaridad-en-el-105-aniversario-de-la-ciudad/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Martín Pérez destacó la importancia de la solidaridad en el 105° aniversario
+  de Río Grande
+description: >-
+  El intendente Martín Pérez convocó a la comunidad a trabajar unida y
+  solidariamente en el acto por el 105° aniversario de Río Grande.
+date: '2026-07-11T20:56:16.037Z'
+sourcePublishedAt: '2026-07-11T20:49:27.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Río Grande
+  - Martín Pérez
+  - aniversario
+  - solidaridad
+image: /uploads/auto/2026-07-11-a9a1a87e28acd00e52.webp
+imageAlt: Acto central por el 105° aniversario de Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/01-14-scaled.jpg
+imageCredit: >-
+  https://www.radiouniversidad.com.ar/martin-perez-convoco-a-defender-rio-grande-entre-todos-y-llamo-a-fortalecer-la-solidaridad-en-el-105-aniversario-de-la-ciudad/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Radio Universidad"
-sourceUrl: "https://www.radiouniversidad.com.ar/martin-perez-convoco-a-defender-rio-grande-entre-todos-y-llamo-a-fortalecer-la-solidaridad-en-el-105-aniversario-de-la-ciudad/"
+sourceName: Radio Universidad
+sourceUrl: >-
+  https://www.radiouniversidad.com.ar/martin-perez-convoco-a-defender-rio-grande-entre-todos-y-llamo-a-fortalecer-la-solidaridad-en-el-105-aniversario-de-la-ciudad/
 automated: true
 ---
 

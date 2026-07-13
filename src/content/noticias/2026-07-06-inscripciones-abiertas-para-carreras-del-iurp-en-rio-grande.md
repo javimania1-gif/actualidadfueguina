@@ -1,20 +1,28 @@
 ---
-title: "Inscripciones Abiertas para Carreras del IURP en Río Grande"
-description: "Continúan las inscripciones para estudiar en el Instituto Universitario River Plate en Río Grande. ¡No te lo pierdas!"
-date: "2026-07-06T19:25:39.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["educación", "IURP", "formación profesional", "deporte", "Río Grande"]
-image: "/uploads/auto/2026-07-06-8d9b374e81d3358ec9.jpg"
-imageAlt: "Estudiantes en clase en Río Grande"
-author: "Actualidad Fueguina"
+title: Inscripciones Abiertas para Carreras del IURP en Río Grande
+description: >-
+  Continúan las inscripciones para estudiar en el Instituto Universitario River
+  Plate en Río Grande. ¡No te lo pierdas!
+date: '2026-07-06T19:25:39.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - educación
+  - IURP
+  - formación profesional
+  - deporte
+  - Río Grande
+image: /uploads/auto/2026-07-06-8d9b374e81d3358ec9.jpg
+imageAlt: Estudiantes en clase en Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 7
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/siguen-abiertas-las-inscripciones-para-cursar-carreras-del-iurp"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/siguen-abiertas-las-inscripciones-para-cursar-carreras-del-iurp
 automated: true
 ---
 

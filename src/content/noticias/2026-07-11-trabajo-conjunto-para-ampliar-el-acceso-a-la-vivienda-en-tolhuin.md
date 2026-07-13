@@ -1,25 +1,34 @@
 ---
-title: "Trabajo conjunto para ampliar el acceso a la vivienda en Tolhuin"
-description: "El intendente de Tolhuin, Daniel Harrington, destacó la colaboración entre el BTF, GADA S.A. y el Municipio para facilitar soluciones habitacionales."
-date: "2026-07-11T02:53:19.746Z"
-sourcePublishedAt: "2026-07-10T18:16:24.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["vivienda", "Tolhuin", "BTF", "GADA S.A."]
-image: "/uploads/auto/2026-07-11-b5aec05e9ba74de699.webp"
-imageAlt: "Trabajo conjunto para el acceso a la vivienda en Tolhuin"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/HARRINGTON-scaled.jpg"
-imageCredit: "https://www.radiouniversidad.com.ar/harrington-destaco-el-trabajo-conjunto-entre-el-btf-gada-s-a-y-el-municipio-para-ampliar-el-acceso-a-la-vivienda/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Trabajo conjunto para ampliar el acceso a la vivienda en Tolhuin
+description: >-
+  El intendente de Tolhuin, Daniel Harrington, destacó la colaboración entre el
+  BTF, GADA S.A. y el Municipio para facilitar soluciones habitacionales.
+date: '2026-07-11T02:53:19.746Z'
+sourcePublishedAt: '2026-07-10T18:16:24.000Z'
+category: Tolhuin
+location: Tolhuin
+tags:
+  - vivienda
+  - Tolhuin
+  - BTF
+  - GADA S.A.
+image: /uploads/auto/2026-07-11-b5aec05e9ba74de699.webp
+imageAlt: Trabajo conjunto para el acceso a la vivienda en Tolhuin
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/HARRINGTON-scaled.jpg
+imageCredit: >-
+  https://www.radiouniversidad.com.ar/harrington-destaco-el-trabajo-conjunto-entre-el-btf-gada-s-a-y-el-municipio-para-ampliar-el-acceso-a-la-vivienda/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Radio Universidad"
-sourceUrl: "https://www.radiouniversidad.com.ar/harrington-destaco-el-trabajo-conjunto-entre-el-btf-gada-s-a-y-el-municipio-para-ampliar-el-acceso-a-la-vivienda/"
+sourceName: Radio Universidad
+sourceUrl: >-
+  https://www.radiouniversidad.com.ar/harrington-destaco-el-trabajo-conjunto-entre-el-btf-gada-s-a-y-el-municipio-para-ampliar-el-acceso-a-la-vivienda/
 automated: true
 ---
 

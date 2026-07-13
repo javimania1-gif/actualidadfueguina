@@ -1,24 +1,31 @@
 ---
-title: "Pronóstico del tiempo en Tierra del Fuego para el 8 de julio de 2026"
-description: "El SMN prevé una jornada fría en la provincia, con mínimas bajo cero en Río Grande y Ushuaia, vientos moderados y sin lluvias relevantes."
-date: "2026-07-08T03:20:46.000Z"
-category: "Provincia"
-location: "Tierra del Fuego"
-tags: ["Clima", "Pronóstico del tiempo", "Servicio Meteorológico Nacional"]
-image: "/uploads/auto/2026-07-08-d8c593f3d742482aef.webp"
-imageAlt: "Pronóstico del tiempo en Tierra del Fuego"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.clarin.com/informacion-general/clima-hoy-ushuaia-tierra-fuego-pronostico-tiempo-miercoles-8-julio-2026_0_V4Y2j3J0hy.html"
-imageCredit: "Clarín / Servicio Meteorológico Nacional"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Pronóstico del tiempo en Tierra del Fuego para el 8 de julio de 2026
+description: >-
+  El SMN prevé una jornada fría en la provincia, con mínimas bajo cero en Río
+  Grande y Ushuaia, vientos moderados y sin lluvias relevantes.
+date: '2026-07-08T03:20:46.000Z'
+category: Provincia
+location: Tierra del Fuego AIAS
+tags:
+  - Clima
+  - Pronóstico del tiempo
+  - Servicio Meteorológico Nacional
+image: /uploads/auto/2026-07-08-d8c593f3d742482aef.webp
+imageAlt: Pronóstico del tiempo en Tierra del Fuego
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.clarin.com/informacion-general/clima-hoy-ushuaia-tierra-fuego-pronostico-tiempo-miercoles-8-julio-2026_0_V4Y2j3J0hy.html
+imageCredit: Clarín / Servicio Meteorológico Nacional
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Bing News — Río Grande / Ushuaia"
-sourceUrl: "https://www.clarin.com/informacion-general/clima-hoy-ushuaia-tierra-fuego-pronostico-tiempo-miercoles-8-julio-2026_0_V4Y2j3J0hy.html"
+sourceName: Bing News — Río Grande / Ushuaia
+sourceUrl: >-
+  https://www.clarin.com/informacion-general/clima-hoy-ushuaia-tierra-fuego-pronostico-tiempo-miercoles-8-julio-2026_0_V4Y2j3J0hy.html
 automated: true
 ---
 

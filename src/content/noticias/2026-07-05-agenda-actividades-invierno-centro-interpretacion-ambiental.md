@@ -1,20 +1,31 @@
 ---
-title: "Propuestas educativas de invierno en el Centro de Interpretación Ambiental de Río Grande"
-description: "Durante todo el mes de julio, el centro ofrecerá charlas temáticas y recorridos guiados sobre la fauna, flora y ecosistemas autóctonos de Tierra del Fuego."
-date: "2026-07-05T16:43:00.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["Rio Grande", "Medio ambiente", "Educacion", "Aves rapaces", "Ecoturismo"]
-image: "/uploads/auto/2026-07-08-2e35a1c05fcd57f61a.webp"
-imageAlt: "Centro de Interpretación Ambiental de Río Grande"
-author: "Actualidad Fueguina"
+title: >-
+  Propuestas educativas de invierno en el Centro de Interpretación Ambiental de
+  Río Grande
+description: >-
+  Durante todo el mes de julio, el centro ofrecerá charlas temáticas y
+  recorridos guiados sobre la fauna, flora y ecosistemas autóctonos de Tierra
+  del Fuego.
+date: '2026-07-05T16:43:00.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - Rio Grande
+  - Medio ambiente
+  - Educacion
+  - Aves rapaces
+  - Ecoturismo
+image: /uploads/auto/2026-07-08-2e35a1c05fcd57f61a.webp
+imageAlt: Centro de Interpretación Ambiental de Río Grande
+author: Actualidad Fueguina
 featured: false
 importance: 6
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/julio-llega-con-mas-propuestas-para-disfrutar-del-centro-de-interpretacion-ambiental"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/julio-llega-con-mas-propuestas-para-disfrutar-del-centro-de-interpretacion-ambiental
 automated: false
 ---
 

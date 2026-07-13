@@ -1,25 +1,35 @@
 ---
-title: "Trump declara el fin del alto al fuego con Irán pero acepta continuar negociaciones"
-description: "El presidente de EE. UU. Donald Trump anunció el fin de la tregua con Irán tras recientes ataques, pero está dispuesto a seguir dialogando."
-date: "2026-07-10T19:50:11.070Z"
-sourcePublishedAt: "2026-07-10T18:34:01.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Donald Trump", "Irán", "alto al fuego", "negociaciones"]
-image: "/uploads/auto/2026-07-10-1f39098a557afed410.webp"
-imageAlt: "Donald Trump durante una conferencia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.clarin.com/img/2026/07/10/RUMscKYq5_2000x1500__1.jpg"
-imageCredit: "https://www.clarin.com/mundo/donald-trump-reitera-alto-fuego-termino-acepta-seguir-conversando-iran_0_b1eFrmNBJS.html"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  Trump declara el fin del alto al fuego con Irán pero acepta continuar
+  negociaciones
+description: >-
+  El presidente de EE. UU. Donald Trump anunció el fin de la tregua con Irán
+  tras recientes ataques, pero está dispuesto a seguir dialogando.
+date: '2026-07-10T19:50:11.070Z'
+sourcePublishedAt: '2026-07-10T18:34:01.000Z'
+category: Mundo
+location: Iran
+tags:
+  - Donald Trump
+  - Irán
+  - alto al fuego
+  - negociaciones
+image: /uploads/auto/2026-07-10-1f39098a557afed410.webp
+imageAlt: Donald Trump durante una conferencia
+imageStrategy: article-og
+imageSourceUrl: 'https://www.clarin.com/img/2026/07/10/RUMscKYq5_2000x1500__1.jpg'
+imageCredit: >-
+  https://www.clarin.com/mundo/donald-trump-reitera-alto-fuego-termino-acepta-seguir-conversando-iran_0_b1eFrmNBJS.html
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "Clarín — Mundo"
-sourceUrl: "https://www.clarin.com/mundo/donald-trump-reitera-alto-fuego-termino-acepta-seguir-conversando-iran_0_b1eFrmNBJS.html"
+sourceName: Clarín — Mundo
+sourceUrl: >-
+  https://www.clarin.com/mundo/donald-trump-reitera-alto-fuego-termino-acepta-seguir-conversando-iran_0_b1eFrmNBJS.html
 automated: true
 ---
 

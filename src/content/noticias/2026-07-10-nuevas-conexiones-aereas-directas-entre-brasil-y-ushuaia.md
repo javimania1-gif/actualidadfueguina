@@ -1,25 +1,34 @@
 ---
-title: "Nuevas conexiones aéreas directas entre Brasil y Ushuaia"
-description: "GOL Linhas Aéreas y LATAM Brasil inician vuelos directos a Ushuaia, fortaleciendo el turismo en Tierra del Fuego."
-date: "2026-07-10T19:26:05.498Z"
-sourcePublishedAt: "2026-07-10T19:25:43.561Z"
-category: "Ushuaia"
-location: "Ushuaia"
-tags: ["turismo", "vuelos", "Brasil", "Ushuaia"]
-image: "/uploads/auto/2026-07-10-51b73166b3bd2d8964.webp"
-imageAlt: "Vuelos directos entre Brasil y Ushuaia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://ushuaia24.com.ar/download/multimedia.normal.a919afb19c3cf2a7.bm9ybWFsLndlYnA%3D.webp"
-imageCredit: "https://ushuaia24.com.ar/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Nuevas conexiones aéreas directas entre Brasil y Ushuaia
+description: >-
+  GOL Linhas Aéreas y LATAM Brasil inician vuelos directos a Ushuaia,
+  fortaleciendo el turismo en Tierra del Fuego.
+date: '2026-07-10T19:26:05.498Z'
+sourcePublishedAt: '2026-07-10T19:25:43.561Z'
+category: Provincia
+location: Tierra del Fuego AIAS
+tags:
+  - turismo
+  - vuelos
+  - Brasil
+  - Ushuaia
+image: /uploads/auto/2026-07-10-51b73166b3bd2d8964.webp
+imageAlt: Vuelos directos entre Brasil y Ushuaia
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://ushuaia24.com.ar/download/multimedia.normal.a919afb19c3cf2a7.bm9ybWFsLndlYnA%3D.webp
+imageCredit: >-
+  https://ushuaia24.com.ar/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Bing News — Ushuaia"
-sourceUrl: "https://ushuaia24.com.ar/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia"
+sourceName: Bing News — Ushuaia
+sourceUrl: >-
+  https://ushuaia24.com.ar/contenido/27846/por-primera-vez-dos-aerolineas-brasilenas-vuelan-directo-a-ushuaia
 automated: true
 ---
 

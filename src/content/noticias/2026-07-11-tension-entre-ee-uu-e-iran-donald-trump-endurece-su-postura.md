@@ -1,25 +1,34 @@
 ---
-title: "Tensión entre EE. UU. e Irán: Donald Trump endurece su postura"
-description: "La situación en Medio Oriente se mantiene tensa tras intercambios de disparos entre EE. UU. e Irán, mientras Trump intensifica su discurso contra Teherán."
-date: "2026-07-11T01:26:33.249Z"
-sourcePublishedAt: "2026-07-11T00:09:25.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Donald Trump", "Irán", "Estados Unidos", "Medio Oriente"]
-image: "/uploads/auto/2026-07-11-236da467585c0813fe.webp"
-imageAlt: "Donald Trump endurece su discurso contra Irán"
-imageStrategy: "article-og"
-imageSourceUrl: "https://s.france24.com/media/display/57a6b538-7cb8-11f1-aed4-005056bf30b7/w:1280/p:16x9/ES-20260710-180152-180305-CS.jpg"
-imageCredit: "https://www.france24.com/es/video/20260711-ee-uu-ir%C3%A1n-donald-trump-entierra-la-tregua-y-endurece-su-discurso-contra-teher%C3%A1n"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: 'Tensión entre EE. UU. e Irán: Donald Trump endurece su postura'
+description: >-
+  La situación en Medio Oriente se mantiene tensa tras intercambios de disparos
+  entre EE. UU. e Irán, mientras Trump intensifica su discurso contra Teherán.
+date: '2026-07-11T01:26:33.249Z'
+sourcePublishedAt: '2026-07-11T00:09:25.000Z'
+category: Mundo
+location: Iran
+tags:
+  - Donald Trump
+  - Irán
+  - Estados Unidos
+  - Medio Oriente
+image: /uploads/auto/2026-07-11-236da467585c0813fe.webp
+imageAlt: Donald Trump endurece su discurso contra Irán
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://s.france24.com/media/display/57a6b538-7cb8-11f1-aed4-005056bf30b7/w:1280/p:16x9/ES-20260710-180152-180305-CS.jpg
+imageCredit: >-
+  https://www.france24.com/es/video/20260711-ee-uu-ir%C3%A1n-donald-trump-entierra-la-tregua-y-endurece-su-discurso-contra-teher%C3%A1n
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "France 24 Espanol"
-sourceUrl: "https://www.france24.com/es/video/20260711-ee-uu-ir%C3%A1n-donald-trump-entierra-la-tregua-y-endurece-su-discurso-contra-teher%C3%A1n"
+sourceName: France 24 Espanol
+sourceUrl: >-
+  https://www.france24.com/es/video/20260711-ee-uu-ir%C3%A1n-donald-trump-entierra-la-tregua-y-endurece-su-discurso-contra-teher%C3%A1n
 automated: true
 ---
 

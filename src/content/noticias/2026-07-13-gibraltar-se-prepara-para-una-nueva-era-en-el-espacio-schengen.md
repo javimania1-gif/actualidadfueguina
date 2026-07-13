@@ -1,25 +1,33 @@
 ---
-title: "Gibraltar se prepara para una nueva era en el Espacio Schengen"
-description: "Fabián Picardo, máxima autoridad de Gibraltar, reafirma la soberanía británica del Peñón en el contexto de su integración a Europa."
-date: "2026-07-13T18:00:47.018Z"
-sourcePublishedAt: "2026-07-13T17:02:33.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Gibraltar", "Espacio Schengen", "Fabián Picardo", "soberanía"]
-image: "/uploads/auto/2026-07-13-b624143d390d63f431.webp"
-imageAlt: "Fabián Picardo en su oficina en Gibraltar"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.clarin.com/img/2026/07/13/qkjXTNd8V_2000x1500__1.jpg"
-imageCredit: "https://www.clarin.com/mundo/maxima-autoridad-gibraltar-contundente-horas-integrarse-europa-soberania-penon-solo-negocia-rey_0_9D7LqOJLjP.html"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Gibraltar se prepara para una nueva era en el Espacio Schengen
+description: >-
+  Fabián Picardo, máxima autoridad de Gibraltar, reafirma la soberanía británica
+  del Peñón en el contexto de su integración a Europa.
+date: '2026-07-13T18:00:47.018Z'
+sourcePublishedAt: '2026-07-13T17:02:33.000Z'
+category: Mundo
+location: Gibraltar
+tags:
+  - Gibraltar
+  - Espacio Schengen
+  - Fabián Picardo
+  - soberanía
+image: /uploads/auto/2026-07-13-b624143d390d63f431.webp
+imageAlt: Fabián Picardo en su oficina en Gibraltar
+imageStrategy: article-og
+imageSourceUrl: 'https://www.clarin.com/img/2026/07/13/qkjXTNd8V_2000x1500__1.jpg'
+imageCredit: >-
+  https://www.clarin.com/mundo/maxima-autoridad-gibraltar-contundente-horas-integrarse-europa-soberania-penon-solo-negocia-rey_0_9D7LqOJLjP.html
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Clarín — Cobertura TdF"
-sourceUrl: "https://www.clarin.com/mundo/maxima-autoridad-gibraltar-contundente-horas-integrarse-europa-soberania-penon-solo-negocia-rey_0_9D7LqOJLjP.html"
+sourceName: Clarín — Cobertura TdF
+sourceUrl: >-
+  https://www.clarin.com/mundo/maxima-autoridad-gibraltar-contundente-horas-integrarse-europa-soberania-penon-solo-negocia-rey_0_9D7LqOJLjP.html
 automated: true
 ---
 

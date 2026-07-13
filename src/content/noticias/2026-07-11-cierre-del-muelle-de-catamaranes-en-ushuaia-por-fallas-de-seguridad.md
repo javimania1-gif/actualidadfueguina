@@ -1,25 +1,34 @@
 ---
-title: "Cierre del muelle de catamaranes en Ushuaia por fallas de seguridad"
-description: "La ANPYN cerró el muelle de catamaranes en Ushuaia tras detectar fallas de seguridad, a pesar de haber operado toda la temporada turística."
-date: "2026-07-11T22:55:19.730Z"
-sourcePublishedAt: "2026-07-11T14:33:12.000Z"
-category: "Provincia"
-location: "Tierra del Fuego AIAS"
-tags: ["Ushuaia", "catamaranes", "seguridad", "ANPYN"]
-image: "/uploads/auto/2026-07-11-837debf46d24f87bee.webp"
-imageAlt: "Muelle de catamaranes en Ushuaia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/puerto-catamaranes.jpg"
-imageCredit: "https://www.actualidadtdf.com.ar/nacion-cerro-el-muelle-de-catamaranes-en-ushuaia-por-seguridad-despues-de-haber-operado-toda-la-temporada/"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Cierre del muelle de catamaranes en Ushuaia por fallas de seguridad
+description: >-
+  La ANPYN cerró el muelle de catamaranes en Ushuaia tras detectar fallas de
+  seguridad, a pesar de haber operado toda la temporada turística.
+date: '2026-07-11T22:55:19.730Z'
+sourcePublishedAt: '2026-07-11T14:33:12.000Z'
+category: Ushuaia
+location: Ushuaia
+tags:
+  - Ushuaia
+  - catamaranes
+  - seguridad
+  - ANPYN
+image: /uploads/auto/2026-07-11-837debf46d24f87bee.webp
+imageAlt: Muelle de catamaranes en Ushuaia
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/puerto-catamaranes.jpg
+imageCredit: >-
+  https://www.actualidadtdf.com.ar/nacion-cerro-el-muelle-de-catamaranes-en-ushuaia-por-seguridad-despues-de-haber-operado-toda-la-temporada/
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 5
 social:
   enabled: true
   urgent: false
-sourceName: "Actualidad TDF"
-sourceUrl: "https://www.actualidadtdf.com.ar/nacion-cerro-el-muelle-de-catamaranes-en-ushuaia-por-seguridad-despues-de-haber-operado-toda-la-temporada/"
+sourceName: Actualidad TDF
+sourceUrl: >-
+  https://www.actualidadtdf.com.ar/nacion-cerro-el-muelle-de-catamaranes-en-ushuaia-por-seguridad-despues-de-haber-operado-toda-la-temporada/
 automated: true
 ---
 

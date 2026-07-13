@@ -1,25 +1,33 @@
 ---
-title: "Ucrania ataca refinerías rusas en Tatarstán"
-description: "Las fuerzas ucranianas amplían su ofensiva contra el sector energético ruso, alcanzando refinerías en Tatarstán y una planta química."
-date: "2026-07-12T11:16:18.266Z"
-sourcePublishedAt: "2026-07-12T10:23:00.000Z"
-category: "Mundo"
-location: "Internacional"
-tags: ["Ucrania", "Rusia", "conflicto", "refinerías"]
-image: "/uploads/auto/2026-07-12-13762a22c5b703e604.webp"
-imageAlt: "Incendio en refinería de petróleo en Rusia"
-imageStrategy: "article-og"
-imageSourceUrl: "https://static.dw.com/image/77859094_6.jpg"
-imageCredit: "https://www.dw.com/es/ucrania-alcanza-dos-refiner%C3%ADas-rusas-en-tatarst%C3%A1n-con-sus-ataques/a-77923207?maca=spa-rss-sp-all-1122-rdf"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: Ucrania ataca refinerías rusas en Tatarstán
+description: >-
+  Las fuerzas ucranianas amplían su ofensiva contra el sector energético ruso,
+  alcanzando refinerías en Tatarstán y una planta química.
+date: '2026-07-12T11:16:18.266Z'
+sourcePublishedAt: '2026-07-12T10:23:00.000Z'
+category: Mundo
+location: Ucrania
+tags:
+  - Ucrania
+  - Rusia
+  - conflicto
+  - refinerías
+image: /uploads/auto/2026-07-12-13762a22c5b703e604.webp
+imageAlt: Incendio en refinería de petróleo en Rusia
+imageStrategy: article-og
+imageSourceUrl: 'https://static.dw.com/image/77859094_6.jpg'
+imageCredit: >-
+  https://www.dw.com/es/ucrania-alcanza-dos-refiner%C3%ADas-rusas-en-tatarst%C3%A1n-con-sus-ataques/a-77923207?maca=spa-rss-sp-all-1122-rdf
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 8
 social:
   enabled: true
   urgent: false
-sourceName: "DW Espanol"
-sourceUrl: "https://www.dw.com/es/ucrania-alcanza-dos-refiner%C3%ADas-rusas-en-tatarst%C3%A1n-con-sus-ataques/a-77923207"
+sourceName: DW Espanol
+sourceUrl: >-
+  https://www.dw.com/es/ucrania-alcanza-dos-refiner%C3%ADas-rusas-en-tatarst%C3%A1n-con-sus-ataques/a-77923207
 automated: true
 ---
 

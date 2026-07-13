@@ -1,25 +1,35 @@
 ---
-title: "El Municipio de Río Grande ofrece 'Tardes de juego en familia' durante las vacaciones de invierno"
-description: "El Municipio de Río Grande organiza actividades recreativas y deportivas para disfrutar en familia durante las vacaciones de invierno."
-date: "2026-07-13T19:43:27.984Z"
-sourcePublishedAt: "2026-07-13T15:34:04.000Z"
-category: "Río Grande"
-location: "Río Grande"
-tags: ["vacaciones de invierno", "juegos en familia", "actividades recreativas"]
-image: "/uploads/auto/2026-07-13-ab64898a35548c8dd8.webp"
-imageAlt: "Tardes de juego en familia en Río Grande"
-imageStrategy: "article-og"
-imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/foto-juegos-invienro.jpg"
-imageCredit: "https://info.riogrande.gob.ar/el-municipio-invita-a-disfrutar-de-tardes-de-juego-en-familia-durante-las-vacaciones-de-invierno"
-imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+title: >-
+  El Municipio de Río Grande ofrece 'Tardes de juego en familia' durante las
+  vacaciones de invierno
+description: >-
+  El Municipio de Río Grande organiza actividades recreativas y deportivas para
+  disfrutar en familia durante las vacaciones de invierno.
+date: '2026-07-13T19:43:27.984Z'
+sourcePublishedAt: '2026-07-13T15:34:04.000Z'
+category: Rio Grande
+location: Río Grande
+tags:
+  - vacaciones de invierno
+  - juegos en familia
+  - actividades recreativas
+image: /uploads/auto/2026-07-13-ab64898a35548c8dd8.webp
+imageAlt: Tardes de juego en familia en Río Grande
+imageStrategy: article-og
+imageSourceUrl: >-
+  https://info.riogrande.gob.ar/wp-content/uploads/2026/07/foto-juegos-invienro.jpg
+imageCredit: >-
+  https://info.riogrande.gob.ar/el-municipio-invita-a-disfrutar-de-tardes-de-juego-en-familia-durante-las-vacaciones-de-invierno
+imageLicense: Imagen del articulo fuente; procedencia registrada
+author: Actualidad Fueguina
 featured: false
 importance: 1
 social:
   enabled: true
   urgent: false
-sourceName: "Municipio de Río Grande"
-sourceUrl: "https://info.riogrande.gob.ar/el-municipio-invita-a-disfrutar-de-tardes-de-juego-en-familia-durante-las-vacaciones-de-invierno"
+sourceName: Municipio de Río Grande
+sourceUrl: >-
+  https://info.riogrande.gob.ar/el-municipio-invita-a-disfrutar-de-tardes-de-juego-en-familia-durante-las-vacaciones-de-invierno
 automated: true
 ---
 
