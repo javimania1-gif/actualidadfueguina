@@ -64,6 +64,26 @@ export function resolvePublicationTerritory({
     }
   }
 
+  // 3. Multi-city (Provincia)
+  const multiCityRegex = /\b(ushuaia y tolhuin|tolhuin y ushuaia|rio grande y ushuaia|ushuaia y rio grande|rio grande y tolhuin|tolhuin y rio grande|rio grande, tolhuin y ushuaia|rio grande, ushuaia y tolhuin|ushuaia, tolhuin y rio grande|ushuaia, rio grande y tolhuin|tolhuin, rio grande y ushuaia|tolhuin, ushuaia y rio grande|las tres ciudades|ambas ciudades|los tres municipios|dos ciudades|varias ciudades)\b/;
+  const isMultiCity = multiCityRegex.test(explicitText);
+  const isVisitor = /\b(visita|visitara|visitaran|viaja a|viajo a|viajara a|recibe a|recibio a|recibira a|participara en|llego a|llegara a|visitas|visitantes|represento a|representara a)\b/.test(explicitText);
+
+  if (isMultiCity && !isVisitor) {
+    return { category: 'Provincia', location: 'Tierra del Fuego AIAS', confidence: 'medium', reason: 'multi-city-provincia' };
+  }
+
+  // Protagonist Override (for visiting/receiving scenarios)
+  if (isVisitor) {
+    const titleProtagonistMatch = normalizeText(title).match(/^(tolhuin|ushuaia|rio grande|martin perez|walter vuoto|daniel harrington|municipio de tolhuin|municipalidad de ushuaia|municipalidad de rio grande)/);
+    if (titleProtagonistMatch) {
+      const p = titleProtagonistMatch[1];
+      if (p.includes('tolhuin') || p.includes('harrington')) return { category: 'Tolhuin', location: 'Tolhuin', confidence: 'high', reason: 'protagonist-tolhuin' };
+      if (p.includes('ushuaia') || p.includes('vuoto')) return { category: 'Ushuaia', location: 'Ushuaia', confidence: 'high', reason: 'protagonist-ushuaia' };
+      if (p.includes('rio grande') || p.includes('perez')) return { category: 'Rio Grande', location: 'Río Grande', confidence: 'high', reason: 'protagonist-rio-grande' };
+    }
+  }
+
   // Local Cities Explicit Signals
   if (/\b(martin perez|punta popper|carlos margalot|municipio de rio grande|municipalidad de rio grande|vecinos de rio grande|aniversario de rio grande|riograndense)\b/.test(fullText)) {
     return { category: 'Rio Grande', location: 'Río Grande', confidence: 'high', reason: 'explicit-rio-grande' };

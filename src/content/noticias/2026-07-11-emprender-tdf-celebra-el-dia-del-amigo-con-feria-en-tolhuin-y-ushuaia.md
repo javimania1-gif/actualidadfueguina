@@ -5,8 +5,8 @@ description: >-
   culturales y stands de emprendedores en Tolhuin y Ushuaia.
 date: '2026-07-11T01:26:17.359Z'
 sourcePublishedAt: '2026-07-10T18:44:05.000Z'
-category: Ushuaia
-location: Ushuaia
+category: Provincia
+location: Tierra del Fuego AIAS
 tags:
   - Emprender TDF
   - Día del Amigo
