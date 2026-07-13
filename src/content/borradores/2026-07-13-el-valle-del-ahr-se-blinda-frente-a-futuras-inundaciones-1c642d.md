@@ -1,14 +1,14 @@
 ---
 title: "El valle del Ahr se blinda frente a futuras inundaciones"
 description: "Con nuevos muros, puentes rediseñados y llanuras inundables restauradas, las localidades de un pequeño valle alemán buscan estar mejor preparadas para la próxima inundación extrema"
-date: "2026-07-13T19:04:00.000Z"
+date: "2026-07-13T20:13:00.000Z"
 category: "Mundo"
 location: "Internacional"
 sourceName: "DW Espanol"
 sourceUrl: "https://www.dw.com/es/el-valle-del-ahr-se-blinda-frente-a-futuras-inundaciones/a-77941298?maca=spa-rss-sp-all-1122-rdf"
 originalImage: "https://static.dw.com/image/77724641_6.jpg"
 status: "draft"
-detectedAt: "2026-07-13T19:45:09.156Z"
+detectedAt: "2026-07-13T23:02:23.898Z"
 mode: "discovery-review"
 ---
 

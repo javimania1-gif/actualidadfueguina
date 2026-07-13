@@ -1,14 +1,14 @@
 ---
 title: "Alemania y el debate sobre el derecho a existir de Israel"
 description: "Un procedimiento poco habitual: el Bundesrat impulsa un proyecto de ley para prohibir determinadas expresiones con el objetivo de proteger a Israel frente al antisemitismo. Ahora d"
-date: "2026-07-13T18:44:00.000Z"
+date: "2026-07-13T20:13:00.000Z"
 category: "Mundo"
 location: "Internacional"
 sourceName: "DW Espanol"
 sourceUrl: "https://www.dw.com/es/alemania-sopesa-castigar-a-quien-niegue-el-derecho-a-existir-de-israel/a-77941740?maca=spa-rss-sp-all-1122-rdf"
 originalImage: "https://static.dw.com/image/77935494_6.jpg"
 status: "draft"
-detectedAt: "2026-07-13T19:45:09.155Z"
+detectedAt: "2026-07-13T23:02:23.898Z"
 mode: "discovery-review"
 ---
 
