@@ -8,7 +8,7 @@ sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/cwykjylv1xdo?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/c3bb/live/e7896c00-7163-11f1-a589-278435dff441.jpg"
 status: "draft"
-detectedAt: "2026-07-13T06:59:06.634Z"
+detectedAt: "2026-07-13T11:19:06.721Z"
 mode: "discovery-review"
 ---
 
@@ -26,7 +26,7 @@ Pie de foto, Ben, originario de Derby, se mudó a Rusia en 2023 con un visado fa
 
 - - Autor, Dan Hardoon
  - Título del autor, BBC World Service
-- Fecha de publicación 3 horas
+- Fecha de publicación 7 horas
  
 - Tiempo de lectura: 8 min
  
@@ -51,6 +51,10 @@ Su percepción de Rusia difiere radicalmente de la que quizás tengan muchas per
 
 **Más leídas**
 
+- ![Sam Neill](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/87f5/live/6db85040-7e82-11f1-bbf9-c34ca6867eac.jpg.webp)
+ 
+ [Muere a los 78 años Sam Neill, el actor que protagonizó "Jurassic Park"](https://www.bbc.com/mundo/articles/cx2k9ry810xo)
+ 
 - ![Katie y Alan Donegan sonríen a la cámara mientras ambos llevan gafas, tomándose una selfi frente a un lago y árboles bajo un cielo azul.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/1662/live/8c9d1790-73e0-11f1-8546-8f19e4fe30f4.jpg.webp)
  
  ["Llevamos el almuerzo al trabajo durante 10 años y pudimos jubilarnos a los 35 y 40 años"](https://www.bbc.com/mundo/articles/c8x29z2n5xvo)
@@ -58,10 +62,6 @@ Su percepción de Rusia difiere radicalmente de la que quizás tengan muchas per
 - ![Jayden Adams en primer plano, mirando directo a la cámara ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/09d8/live/86c43e70-7d36-11f1-bdd6-332f561795b4.jpg.webp)
  
  [Muere a los 25 años Jayden Adams, futbolista sudafricano que disputó el Mundial 2026](https://www.bbc.com/mundo/articles/cly0k94429wo)
- 
-- ![Sam Neill](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/87f5/live/6db85040-7e82-11f1-bbf9-c34ca6867eac.jpg.webp)
- 
- [Muere a los 78 años Sam Neill, el actor neozelandés que protagonizó "Jurassic Park"](https://www.bbc.com/mundo/articles/cx2k9ry810xo)
  
 - ![Kanika Batra, una atractiva mujer morena, de cabello largo, sentada en un sillón de cuero, con las manos a los lados y las piernas cruzadas. Mira a la cámara sonriendo y viste una minifalda negra, con mangas largas y un profundo escote que deja ver su amplio busto. ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/fd5b/live/b31b5c60-7a16-11f1-8233-417a25d303da.jpg.webp)
  
