@@ -1,6 +1,6 @@
 ---
 title: "La reforma constitucional en Tierra del Fuego reactiva el debate político y expone fisuras en el oficialismo"
-description: "El gobernador Melella insiste con la convocatoria a elecciones constituyentes para agosto, mientras la vicegobernadora Urquiza marca distancia frente a una iniciativa cuestionada por la oposición y la sociedad civil."
+description: "Melella insiste con la reforma constitucional, mientras la vicegobernadora Urquiza toma distancia de una iniciativa muy cuestionada por la oposición."
 category: "Política"
 date: 2026-07-14T10:00:00-03:00
 detectedAt: 2026-07-14T10:00:00-03:00
