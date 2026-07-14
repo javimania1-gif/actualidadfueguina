@@ -1,6 +1,6 @@
 ---
-title: "Trump restablece el bloqueo a los puertos iraníes e impone un recargo del 20% a la carga que transita por el estrecho Ormuz - BBC News Mundo"
-description: "Menos de un mes después de la firma del cese el fuego, Irán y EE.UU. han vuelto a intercambiar ataques y Trump restableció el bloqueo naval al comercio iraní."
+title: "Trump restablece el bloqueo a los puertos iraníes e impone un recargo del 20% a la carga que transita por el estrecho de Ormuz - BBC News Mundo"
+description: "Menos de un mes después de la firma del cese el fuego, Irán y EE.UU. vuelven a intercambiar ataques y Trump restableció el bloqueo naval al comercio iraní."
 date: "2026-07-13T18:37:40.000Z"
 category: "Mundo"
 location: "Internacional"
@@ -8,13 +8,13 @@ sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/c9q28zz403no?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/838f/live/8bd9df60-7ee8-11f1-be81-dbb01b5ceb35.jpg"
 status: "draft"
-detectedAt: "2026-07-13T21:02:48.941Z"
+detectedAt: "2026-07-14T04:25:03.593Z"
 mode: "discovery-review"
 ---
 
 ## Material fuente detectado
 
-# Trump restablece el bloqueo a los puertos iraníes e impone un recargo del 20% a la carga que transita por el estrecho Ormuz
+# Trump restablece el bloqueo a los puertos iraníes e impone un recargo del 20% a la carga que transita por el estrecho de Ormuz
 
 ![El presidente de EE. UU., Donald Trump, habla con los medios a bordo del Air Force One.](https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/838f/live/8bd9df60-7ee8-11f1-be81-dbb01b5ceb35.jpg.webp)
 
@@ -24,7 +24,7 @@ Fuente de la imagen, Getty Images
 
 - - Autor, Ángel Bermúdez
  - Título del autor, BBC News Mundo
-- Fecha de publicación 2 horas
+- Fecha de publicación 9 horas
  
 - Tiempo de lectura: 5 min
  
@@ -49,6 +49,10 @@ Como respuesta a esta ofensiva, Irán empezó a lanzar ataques contra los paíse
 
 **Más leídas**
 
+- ![Catalina mira a la cámara con su cabeza inclinada hacia la derecha mientras mantiene una expresión seria en su rostro.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/82bc/live/9adae4f0-2254-11f1-b6d0-3bb01abdfc34.jpg.webp)
+ 
+ [Muere por eutanasia Catalina Giraldo, la mujer de 30 años que emprendió una batalla legal en Colombia para acceder al suicidio médicamente asistido](https://www.bbc.com/mundo/articles/clyzygk7vd4o)
+ 
 - ![Katie y Alan Donegan sonríen a la cámara mientras ambos llevan gafas, tomándose una selfi frente a un lago y árboles bajo un cielo azul.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/1662/live/8c9d1790-73e0-11f1-8546-8f19e4fe30f4.jpg.webp)
  
  ["Llevamos el almuerzo al trabajo durante 10 años y pudimos jubilarnos a los 35 y 40 años"](https://www.bbc.com/mundo/articles/c8x29z2n5xvo)
@@ -60,10 +64,6 @@ Como respuesta a esta ofensiva, Irán empezó a lanzar ataques contra los paíse
 - ![Sam Neill](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/87f5/live/6db85040-7e82-11f1-bbf9-c34ca6867eac.jpg.webp)
  
  [Muere a los 78 años Sam Neill, el actor que protagonizó "Jurassic Park"](https://www.bbc.com/mundo/articles/cx2k9ry810xo)
- 
-- ![Mariano Rajoy en una conferencia.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/815a/live/6f624e90-7eb5-11f1-b5ec-67e9897fe2ad.jpg.webp)
- 
- [Los comentarios del expresidente español Mariano Rajoy sobre la selección francesa que provocaron críticas por "racismo" antes de las semifinales del Mundial](https://www.bbc.com/mundo/articles/c1wyryl1p7ro)
  
 
 Final de Más leídas
