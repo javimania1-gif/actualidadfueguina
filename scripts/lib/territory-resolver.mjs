@@ -58,7 +58,7 @@ export function resolvePublicationTerritory({
   }
 
   // Nacionales
-  if (/\b(congreso|senado|diputados|presidente argentino|gobierno nacional|buenos aires|cordoba|mendoza|chaco|rosario|santa fe|tucuman|salta|jujuy)\b/.test(explicitText)) {
+  if (/\b(congreso|senado|diputados|presidente argentino|gobierno nacional|buenos aires|cordoba|mendoza|chaco|rosario|santa fe|tucuman|salta|jujuy|banco central|bcra|javier milei|milei|ravier|adrian ravier)\b/.test(explicitText)) {
     if (!/\b(tierra del fuego|ushuaia|rio grande|tolhuin|antartida|malvinas)\b/.test(explicitText)) {
       return { category: 'Nacionales', location: 'Argentina', confidence: 'high', reason: 'explicit-national' };
     }

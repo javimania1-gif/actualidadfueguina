@@ -362,7 +362,8 @@ for (const event of Object.values(events.events || {})) {
       sourcePublishedAt: source.publishedAt || '',
       publishedAt: event.publishedAt || '',
       sourceUrl: entry.url || source.url || '',
-      file: event.publishedFile || ''
+      file: event.publishedFile || '',
+      facts: event.verifiedFacts || {}
     });
   }
 }
@@ -835,7 +836,8 @@ for (const candidate of candidatesToMaterialize) {
   metrics.freshCandidates++;
   const publishedMatch = findLikelyPublishedStoryMatch({
     title: currentTitle,
-    publishedAt: sourceRef.publishedAt || ''
+    publishedAt: sourceRef.publishedAt || '',
+    facts: facts
   }, publishedStories);
   if (publishedMatch) {
     seen.items[initialKey] = {

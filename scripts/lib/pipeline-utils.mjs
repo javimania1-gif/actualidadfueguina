@@ -83,14 +83,35 @@ function dateDistanceHours(left, right) {
   return Math.abs(a - b) / (60 * 60 * 1000);
 }
 
-export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '' } = {}, publishedStories = []) {
+export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '', facts = {} } = {}, publishedStories = []) {
   const words = eventTitleWords(title);
-  if (words.size < 4) return null;
+  if (words.size < 4 && Object.keys(facts).length === 0) return null;
   const numbers = new Set(normalizeText(title).match(/\b\d+(?:[.,]\d+)?\b/g) || []);
+
+  const newEntities = new Set([
+    ...(facts.people || []).map(normalizeText),
+    ...(facts.places || []).map(normalizeText),
+    ...(facts.organizations || []).map(normalizeText)
+  ]);
 
   for (const story of publishedStories) {
     const ageDistance = dateDistanceHours(publishedAt, story.sourcePublishedAt || story.publishedAt);
     if (ageDistance === null || ageDistance > 48) continue;
+    
+    // Factual Deduplication
+    if (newEntities.size > 0 && story.facts) {
+      const existingEntities = new Set([
+        ...(story.facts.people || []).map(normalizeText),
+        ...(story.facts.places || []).map(normalizeText),
+        ...(story.facts.organizations || []).map(normalizeText)
+      ]);
+
+      if (existingEntities.size > 0) {
+         const intersection = [...newEntities].filter(e => existingEntities.has(e)).length;
+         if (intersection >= 2) return story; // At least 2 critical entities match
+      }
+    }
+
     const otherWords = eventTitleWords(story.sourceTitle || story.title || '');
     if (otherWords.size < 4) continue;
     const intersection = [...words].filter((word) => otherWords.has(word)).length;
