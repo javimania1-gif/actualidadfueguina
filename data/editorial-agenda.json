@@ -1,24 +1,24 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T19:38:48.519Z",
+  "generatedAt": "2026-07-14T19:40:12.475Z",
   "summary": {
-    "totalStories": 939,
+    "totalStories": 940,
     "byStatus": {
       "published": 61,
-      "verified-standard-single-source": 453,
+      "verified-standard-single-source": 454,
       "conflicting-sources": 44,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
       "pending-verification": 61,
       "verified-local-routine": 11,
-      "agenda-invalid": 60,
+      "agenda-invalid": 61,
       "rejected-terminal": 163,
       "verified-standard": 14,
       "verified": 33,
-      "verified-strict": 31
+      "verified-strict": 30
     },
     "byTopic": {
-      "servicios": 134,
+      "servicios": 135,
       "turismo": 18,
       "agenda": 28,
       "politica": 134,
@@ -33,15 +33,15 @@
     "byTerritory": {
       "Ushuaia": 59,
       "Rio Grande": 64,
-      "Mundo": 438,
+      "Mundo": 439,
       "Malvinas": 49,
       "Tolhuin": 11,
-      "Nacionales": 236,
+      "Nacionales": 234,
       "Antartida": 6,
-      "Provincia": 18,
-      "unknown": 58
+      "Provincia": 17,
+      "unknown": 61
     },
-    "invalidStories": 60,
+    "invalidStories": 61,
     "topStories": [
       {
         "storyId": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
@@ -59,7 +59,7 @@
           "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -78,7 +78,7 @@
           "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -271,7 +271,7 @@
         "searchPotential": 13,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "published",
@@ -312,7 +312,7 @@
         "searchPotential": 13,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "published",
@@ -5636,44 +5636,6 @@
       "validationReasons": [
         "story-headline-mismatch"
       ]
-    },
-    {
-      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "Provincia",
-      "primaryEntities": [],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-14T16:36:15.995Z",
-      "lastSeenAt": "2026-07-14T19:38:45.094Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 17,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 17,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "verified-strict",
-      "validationReasons": []
     },
     {
       "storyId": "international-conflict|justicia|internacional|francia|informa|2026-07-14",
@@ -13532,6 +13494,47 @@
       "newsworthinessScore": 72,
       "status": "verified",
       "validationReasons": []
+    },
+    {
+      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-14T16:36:15.995Z",
+      "lastSeenAt": "2026-07-14T19:38:45.094Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 17,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 17,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-strict",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "general|abordaron|agenda|austral|comun|cooperacion|finlandia|generar|ushuaia|tierra del fuego|2026-07-14",

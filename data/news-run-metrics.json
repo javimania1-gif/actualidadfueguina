@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T19:38:48.818Z",
+  "generatedAt": "2026-07-14T19:40:12.803Z",
   "run": {
     "persistOutputs": true,
     "githubActions": false,
@@ -10,92 +10,60 @@
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
-    "candidatesDetected": 100,
-    "candidatesIngested": 26,
-    "extractionSucceeded": 26,
-    "candidatesApproved": 12,
-    "discardedDuplicate": 12,
+    "candidatesDetected": 101,
+    "candidatesIngested": 8,
+    "extractionSucceeded": 8,
+    "candidatesApproved": 1,
+    "discardedDuplicate": 7,
     "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 10,
-    "discardedQuality": 3,
+    "duplicatePublishedEvent": 5,
+    "discardedQuality": 2,
     "discardedQualityByReason": {
-      "evergreen-or-stale-outside-news-window": 2,
-      "stale-hard-news": 1
+      "stale-hard-news": 1,
+      "stale-dated-discovery": 1
     },
     "discardedBySourceAndReason": {
-      "nacionales-perfil": {
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "rescue-backfill": {
+      "nacionales-tn": {
         "stale-hard-news": 1
       },
-      "nacionales-la-nacion": {
-        "evergreen-or-stale-outside-news-window": 1
+      "infobae-tdf": {
+        "stale-dated-discovery": 1
       }
     },
     "discardedGenericTitle": 0,
-    "discardedEvergreen": 2,
-    "eventsGrouped": 12,
-    "verified": 10,
-    "pendingVerification": 1,
+    "discardedEvergreen": 1,
+    "eventsGrouped": 1,
+    "verified": 1,
+    "pendingVerification": 0,
     "pendingMatchedFromHistory": 0,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 65
+      "conservedPublished": 67
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
     "pendingTerminalizedExpired": 0,
     "pendingTerminalizedAttempts": 0,
-    "pendingAudit": [
-      {
-        "eventKey": "service|argentina|cerrar|comercios|cordoba|duplicara|inglaterra|operativo|2026-07-14",
-        "title": "Argentina-Inglaterra: Córdoba duplicará el operativo policial y sugirieron cerrar los comercios",
-        "sourceId": "nacionales-perfil",
-        "publisherDomain": "perfil.com",
-        "category": "Nacionales",
-        "eventType": "service",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-14T22:38:45.092Z",
-        "expiresAt": "2026-07-16T19:38:45.092Z",
-        "corroborationAttempts": 0
-      }
-    ],
-    "conflicting": 1,
-    "published": 2,
-    "publishedByLane": {
-      "standard": 2
-    },
+    "pendingAudit": [],
+    "conflicting": 0,
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 8,
-      "fast": 1,
-      "strict": 1
+      "standard": 1
     },
-    "pendingByLane": {
-      "strict": 1
-    },
+    "pendingByLane": {},
     "eventsByTerritory": {
-      "Ushuaia": 2,
-      "Malvinas": 1,
-      "Nacionales": 7,
-      "Provincia": 1,
-      "unknown": 1
+      "Nacionales": 1
     },
     "verifiedByTerritory": {
-      "Ushuaia": 2,
-      "Malvinas": 1,
-      "Nacionales": 5,
-      "Provincia": 2
+      "Nacionales": 1
     },
     "fastPendingAudit": [],
-    "freshCandidates": 22,
-    "staleDiscarded": 3,
+    "freshCandidates": 6,
+    "staleDiscarded": 2,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -179,21 +147,21 @@
       },
       "actualidad-tdf": {
         "detected": 5,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.4,
-        "materializationSuccessRate": 0.4,
-        "verificationContributionRate": 0.4,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -279,22 +247,22 @@
       },
       "ushuaia24": {
         "detected": 4,
-        "materialized": 3,
-        "freshCandidates": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 2,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.75,
-        "verificationContributionRate": 0.5,
-        "publicationContributionRate": 0.5,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "provincia23": {
@@ -419,20 +387,20 @@
       },
       "bing-malvinas": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -458,24 +426,24 @@
         "staleDiscardRate": 0
       },
       "infobae-tdf": {
-        "detected": 0,
-        "materialized": 1,
+        "detected": 1,
+        "materialized": 2,
         "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
-        "noItems": 1,
+        "noItems": 0,
         "lastError": "",
-        "status": "unhealthy",
-        "issueCategory": "zero-items",
+        "status": "healthy",
+        "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.5
       },
       "perfil-tdf": {
         "detected": 2,
@@ -519,106 +487,6 @@
       },
       "nacionales-infobae": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "nacionales-la-nacion": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 1,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "nacionales-ambito": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-cronista": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-tn": {
-        "detected": 3,
         "materialized": 1,
         "freshCandidates": 1,
         "qualityDiscarded": 0,
@@ -636,6 +504,106 @@
         "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-la-nacion": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-ambito": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-cronista": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-tn": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
       },
       "mundo-google": {
         "detected": 3,
@@ -776,181 +744,59 @@
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
-      },
-      "rescue-backfill": {
-        "detected": 0,
-        "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "consulted": 0,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "unhealthy",
-        "issueCategory": "zero-items",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 8,
-    "modelErrors": 6,
+    "drafts": 1,
+    "modelErrors": 1,
     "publicationErrors": 0,
     "factualValidationErrors": 0,
     "discardedImportance": 0,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 7,
+    "failedRetryable": 1,
     "failedTerminal": 0,
     "failedRetryableByReason": {
-      "short-body": 1,
-      "temporary-error": 6
+      "temporary-error": 1
     },
     "failedTerminalByReason": {},
-    "aiReused": 4,
-    "rescueQueued": 10,
-    "rescueAttempted": 4,
+    "aiReused": 0,
+    "rescueQueued": 9,
+    "rescueAttempted": 1,
     "rescueSucceeded": 0,
-    "rescueExhausted": 2,
-    "discardedPublicationLimit": 2,
-    "extractErrors": 1,
+    "rescueExhausted": 1,
+    "discardedPublicationLimit": 0,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 6,
+    "aiAttempts": 1,
     "aiCalls": 0,
-    "articlesDrafted": 4,
-    "imagesResolved": 2,
-    "approvedForPublication": 2,
-    "imageSelections": [
-      {
-        "title": "Oportunidades de Publicidad en Ushuaia 24",
-        "strategy": "article-og",
-        "query": "Publicidad + artículos patrocinados",
-        "score": 82,
-        "source": "https://ushuaia24.com.ar/download/multimedia.normal.a5c00e62e8aba233.bm9ybWFsLndlYnA%3D.webp"
-      },
-      {
-        "title": "Política de Privacidad de Ushuaia 24",
-        "strategy": "article-og",
-        "query": "Política de privacidad",
-        "score": 82,
-        "source": "https://ushuaia24.com.ar/static/custom/imagen-default.png?t=2026-07-14+03%3A00%3A02.019435"
-      }
-    ],
-    "agendaStories": 939,
-    "newsworthinessAverage": 74,
+    "articlesDrafted": 0,
+    "imagesResolved": 0,
+    "approvedForPublication": 0,
+    "imageSelections": [],
+    "agendaStories": 940,
+    "newsworthinessAverage": 60,
     "newsworthinessTop": [
       {
-        "title": "Publicidad + artículos patrocinados",
-        "eventKey": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      },
-      {
-        "title": "Política de privacidad",
-        "eventKey": "service|ushuaia|argentina|informa|2019-01-19",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      },
-      {
-        "title": "\"El único objetivo que tenía la intervención era recaudar y apropiarse de un puerto\" - Actualidad TDF",
-        "eventKey": "general|apropiarse|intervencion|objetivo|puerto|recaudar|tenia|unico|tierra del fuego aias|2026-07-14",
-        "score": 93,
-        "topic": "turismo",
-        "territory": "Provincia",
-        "lane": "fast"
-      },
-      {
-        "title": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
-        "eventKey": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
-        "score": 89,
-        "topic": "agenda",
-        "territory": "Provincia",
-        "lane": "strict"
-      },
-      {
-        "title": "Gonzalo Montiel palpitó la semifinal contra Inglaterra: “Es un rival difícil, pero estamos preparados”",
-        "eventKey": "general|contra|dificil|estamos|gonzalo|inglaterra|montiel|palpito|malvinas|2026-07-14",
-        "score": 75,
-        "topic": "deportes",
-        "territory": "Malvinas",
-        "lane": "standard"
-      },
-      {
-        "title": "La canasta básica se aceleró al 2,2% en junio: una familia necesitó más de $1.500.000 para no ser pobre",
-        "eventKey": "general|acelero|basica|canasta|familia|junio|necesito|pobre|2026-07-14",
+        "title": "Niños viajan gratis en los ferris de NY Waterway este verano: cómo funciona la promoción y quiénes pueden acceder",
+        "eventKey": "service|acceder|ferris|funciona|gratis|ninos|promocion|pueden|2026-07-14",
         "score": 60,
-        "topic": "economia",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Dock Sud vs UAI Urquiza, en vivo, por la Primera División B: minuto a minuto y qué canal pasa el partido por TV",
-        "eventKey": "general|canal|division|minuto|partido|primera|urquiza|2026-07-14",
-        "score": 60,
-        "topic": "deportes",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "ONG piden blindar al vehículo mexicano Olinia con estándares mínimos de seguridad vial",
-        "eventKey": "general|blindar|estandares|mexicano|minimos|olinia|piden|seguridad|2026-07-14",
-        "score": 58,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Es argentino y vende casas que se arman como un Lego en 6 meses y se pagan en 15 años",
-        "eventKey": "general|argentino|arman|casas|meses|pagan|vende|2026-07-13",
-        "score": 52,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Monotributo: cómo impactan las billeteras virtuales en la recategorización y qué detalles mira ARCA",
-        "eventKey": "general|billeteras|detalles|impactan|monotributo|recategorizacion|virtuales|2026-07-13",
-        "score": 49,
-        "topic": "sociedad",
+        "topic": "servicios",
         "territory": "Nacionales",
         "lane": "standard"
       }
     ],
-    "corroborationSearches": 1,
-    "corroborationFound": 1,
+    "corroborationSearches": 0,
+    "corroborationFound": 0,
     "corroborationVerified": 0,
-    "corroborationConflicts": 1,
+    "corroborationConflicts": 0,
     "corroborationNoResult": 0,
-    "corroborationAttempts": [
-      {
-        "eventKey": "casualty|policia|informa|2026-07-14",
-        "title": "Córdoba: un joven de 20 años murió con el 95% del cuerpo quemado y su familia sospecha de su pareja",
-        "priorityRank": 1,
-        "corroborationQuery": "Policia cordoba cuerpo familia joven murio pareja",
-        "corroborationReason": "newsworthiness=95; freshness=0h; territory=Nacionales; impact=13; corroborability=10; pendingAge=0h; attempts=0",
-        "found": 1,
-        "verified": false,
-        "status": "conflicting-sources"
-      }
-    ],
-    "conflictsByField": {
-      "percentages": 1,
-      "dates": 1
-    },
-    "criticalConflicts": 1,
-    "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 11,
+    "corroborationAttempts": [],
+    "conflictsByField": {},
+    "criticalConflicts": 0,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 0,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 66,
@@ -971,33 +817,31 @@
         "max": 2539.2
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 604,
-        "avg": 75,
+        "count": 605,
+        "avg": 74.8,
         "p50": 0,
         "max": 2646.2
       },
       "cohort": {
         "comparablePublishedCount": 66,
-        "verifiedWithoutPublicationCount": 538,
+        "verifiedWithoutPublicationCount": 539,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Ushuaia": 2
-    },
-    "publishedLast3hBeforeRun": 1,
-    "publishedLast6hBeforeRun": 5,
-    "publishedLast12hBeforeRun": 5,
-    "publishedLast24hBeforeRun": 15,
-    "hoursSinceLastPublicationBeforeRun": 2.3,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 3,
+    "publishedLast6hBeforeRun": 7,
+    "publishedLast12hBeforeRun": 7,
+    "publishedLast24hBeforeRun": 17,
+    "hoursSinceLastPublicationBeforeRun": 0,
     "dailyTarget": {
       "min": 12,
       "max": 30,
-      "publishedLast24hBeforeRun": 15,
+      "publishedLast24hBeforeRun": 17,
       "remainingToMin": 0,
-      "slotsRemaining": 15,
+      "slotsRemaining": 13,
       "effectiveRunTarget": 2,
       "effectiveRunMaxNormal": 3
     },
@@ -1018,7 +862,7 @@
           "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -1037,7 +881,7 @@
           "searchPotential": 13,
           "recency": 15,
           "sourceStrength": 3,
-          "diversity": 0
+          "diversity": 4
         }
       },
       {
@@ -1098,15 +942,15 @@
         }
       }
     ],
-    "agendaInvalidStories": 60,
+    "agendaInvalidStories": 61,
     "technicalSuccess": true,
-    "editorialOutcome": "published",
+    "editorialOutcome": "no-publishable-story",
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
-      "healthy": 32,
-      "productive": 11,
-      "noResults": 3,
+      "healthy": 33,
+      "productive": 5,
+      "noResults": 1,
       "failed": 0
     }
   },
@@ -1114,8 +958,8 @@
     "maxAiPerRun": 12,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 6,
-    "discoveryAiBudget": 10,
+    "discoveryAiUsed": 1,
+    "discoveryAiBudget": 1,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1128,16 +972,13 @@
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 30,
-    "publishedLast24hBeforeRun": 15,
-    "candidatesMaterialized": 26,
-    "totalCandidatesBeforeLimit": 26
+    "publishedLast24hBeforeRun": 17,
+    "candidatesMaterialized": 8,
+    "totalCandidatesBeforeLimit": 8
   },
   "reasonNoMorePublished": [
-    "1 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "12 candidato(s) descartados por duplicado/similitud",
-    "3 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 2, stale-hard-news: 1)",
-    "2 candidato(s) quedaron por cupo editorial de corrida",
-    "6 error(es) reales de modelo"
+    "7 candidato(s) descartados por duplicado/similitud",
+    "2 candidato(s) descartados por causas especificas (stale-hard-news: 1, stale-dated-discovery: 1)",
+    "1 error(es) reales de modelo"
   ]
 }
