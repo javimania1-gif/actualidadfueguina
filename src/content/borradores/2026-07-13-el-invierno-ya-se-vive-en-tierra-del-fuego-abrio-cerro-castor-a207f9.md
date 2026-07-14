@@ -8,7 +8,7 @@ sourceName: "Bing News — Ushuaia"
 sourceUrl: "https://www.diariouno.com.ar/nieve/el-invierno-ya-se-vive-tierra-del-fuego-abrio-cerro-castor-n1574791"
 originalImage: "https://media.diariouno.com.ar/p/02d9d6b229daa40b911edb12e66b40e2/adjuntos/298/imagenes/009/780/0009780629/1200x675/smart/befunky-collage-25.jpg"
 status: "draft"
-detectedAt: "2026-07-14T06:16:12.300Z"
+detectedAt: "2026-07-14T13:54:52.714Z"
 mode: "discovery-review"
 ---
 
@@ -54,45 +54,45 @@ Con una infraestructura que sigue creciendo, servicios pensados para toda la fam
 
 ### las más leídas
 
-- [Mundo](https://www.diariouno.com.ar/la-familia-que-abrio-un-canal-pala-dos-rios-y-cambio-siempre-el-delta-del-parana-n1574677 "Mundo")
+- [Trucos](https://www.diariouno.com.ar/sociedad/ni-bolsas-ni-la-heladera-como-guardar-las-papas-evitar-que-le-salgan-brotes-n1574838 "Trucos")
  
- ### [La familia que abrió un canal a pala entre dos ríos y cambió para siempre el Delta del Paraná](https://www.diariouno.com.ar/la-familia-que-abrio-un-canal-pala-dos-rios-y-cambio-siempre-el-delta-del-parana-n1574677)
+ ### [Ni en bolsas ni en la heladera: cómo guardar las papas para evitar que les salgan brotes](https://www.diariouno.com.ar/sociedad/ni-bolsas-ni-la-heladera-como-guardar-las-papas-evitar-que-le-salgan-brotes-n1574838)
  
- [](https://www.diariouno.com.ar/la-familia-que-abrio-un-canal-pala-dos-rios-y-cambio-siempre-el-delta-del-parana-n1574677)
+ [](https://www.diariouno.com.ar/sociedad/ni-bolsas-ni-la-heladera-como-guardar-las-papas-evitar-que-le-salgan-brotes-n1574838)
  
- Por [Valentina Araya](https://www.diariouno.com.ar/la-familia-que-abrio-un-canal-pala-dos-rios-y-cambio-siempre-el-delta-del-parana-n1574677)
+ Por [Walter Vasquez](https://www.diariouno.com.ar/sociedad/ni-bolsas-ni-la-heladera-como-guardar-las-papas-evitar-que-le-salgan-brotes-n1574838)
  
- [![La familia que abrió un canal a pala entre dos ríos y cambió para siempre el Delta del Paraná](https://media.diariouno.com.ar/p/565680165ad1c59f8c79de38de1947be/adjuntos/298/imagenes/009/780/0009780513/255x144/smart/delta-del-paran-1.jpg "La familia que abrió un canal a pala entre dos ríos y cambió para siempre el Delta del Paraná")](https://www.diariouno.com.ar/la-familia-que-abrio-un-canal-pala-dos-rios-y-cambio-siempre-el-delta-del-parana-n1574677)
+ [![Este truco es infalible y pocas personas lo conocen.](https://media.diariouno.com.ar/p/33c1521652cb526510243d6b4799b48e/adjuntos/298/imagenes/009/780/0009780685/255x144/smart/papa-brotes.jpg "Este truco es infalible y pocas personas lo conocen.")](https://www.diariouno.com.ar/sociedad/ni-bolsas-ni-la-heladera-como-guardar-las-papas-evitar-que-le-salgan-brotes-n1574838)
  
-- [Tendencias](https://www.diariouno.com.ar/sociedad/adios-al-cemento-la-entrada-casa-el-material-que-es-tendencia-la-decoracion-actual-n1574565 "Tendencias")
+- [Conflicto sin precedentes](https://www.diariouno.com.ar/politica/alfredo-cornejo-prepara-una-carta-francia-luego-las-declaraciones-racistas-hebe-casado-n1574934 "Conflicto sin precedentes")
  
- ### [Adiós al cemento en la entrada de casa: el material que es tendencia en la decoración actual](https://www.diariouno.com.ar/sociedad/adios-al-cemento-la-entrada-casa-el-material-que-es-tendencia-la-decoracion-actual-n1574565)
+ ### [Alfredo Cornejo prepara una carta para Francia luego de las declaraciones racistas de Hebe Casado](https://www.diariouno.com.ar/politica/alfredo-cornejo-prepara-una-carta-francia-luego-las-declaraciones-racistas-hebe-casado-n1574934)
  
- [](https://www.diariouno.com.ar/sociedad/adios-al-cemento-la-entrada-casa-el-material-que-es-tendencia-la-decoracion-actual-n1574565)
+ [](https://www.diariouno.com.ar/politica/alfredo-cornejo-prepara-una-carta-francia-luego-las-declaraciones-racistas-hebe-casado-n1574934)
  
- Por [Luciano Carluccio](https://www.diariouno.com.ar/sociedad/adios-al-cemento-la-entrada-casa-el-material-que-es-tendencia-la-decoracion-actual-n1574565)
+ Por [Pablo Abihaggle](https://www.diariouno.com.ar/politica/alfredo-cornejo-prepara-una-carta-francia-luego-las-declaraciones-racistas-hebe-casado-n1574934)
  
- [![El cemento está pasando de moda en el mundo de la decoración de la casa. ](https://media.diariouno.com.ar/p/dbcf05a3ff3c2e6fce28d015dc67e732/adjuntos/298/imagenes/009/780/0009780271/255x144/smart/tendencia-decoracion-casa.jpg "El cemento está pasando de moda en el mundo de la decoración de la casa. ")](https://www.diariouno.com.ar/sociedad/adios-al-cemento-la-entrada-casa-el-material-que-es-tendencia-la-decoracion-actual-n1574565)
+ [![El gobernador Alfredo Cornejo.](https://media.diariouno.com.ar/p/0eaa8403447b5d45d6503cb94ad4487a/adjuntos/298/imagenes/009/771/0009771448/255x144/smart/alfredo-cornejo.jpg "El gobernador Alfredo Cornejo.")](https://www.diariouno.com.ar/politica/alfredo-cornejo-prepara-una-carta-francia-luego-las-declaraciones-racistas-hebe-casado-n1574934)
  
-- [Expectativa](https://www.diariouno.com.ar/sociedad/la-carta-un-veterano-malvinas-mendocino-la-seleccion-antes-enfrentar-inglaterra-n1574897 "Expectativa")
+- [Operativo](https://www.diariouno.com.ar/sociedad/seguridad-anuncio-que-habra-500-policias-el-gran-mendoza-el-partido-la-seleccion-argentina-n1575043 "Operativo")
  
- ### [La carta de un veterano de Malvinas mendocino a la Selección antes de enfrentar a Inglaterra](https://www.diariouno.com.ar/sociedad/la-carta-un-veterano-malvinas-mendocino-la-seleccion-antes-enfrentar-inglaterra-n1574897)
+ ### [Seguridad anunció que habrá 500 policías en el Gran Mendoza por el partido de la Selección argentina](https://www.diariouno.com.ar/sociedad/seguridad-anuncio-que-habra-500-policias-el-gran-mendoza-el-partido-la-seleccion-argentina-n1575043)
  
- [](https://www.diariouno.com.ar/sociedad/la-carta-un-veterano-malvinas-mendocino-la-seleccion-antes-enfrentar-inglaterra-n1574897)
+ [](https://www.diariouno.com.ar/sociedad/seguridad-anuncio-que-habra-500-policias-el-gran-mendoza-el-partido-la-seleccion-argentina-n1575043)
  
- Por [Pablo Abihaggle](https://www.diariouno.com.ar/sociedad/la-carta-un-veterano-malvinas-mendocino-la-seleccion-antes-enfrentar-inglaterra-n1574897)
+ Por [José Luis Verderico](https://www.diariouno.com.ar/sociedad/seguridad-anuncio-que-habra-500-policias-el-gran-mendoza-el-partido-la-seleccion-argentina-n1575043)
  
- [![Roberto Bocanegra, veterano de la Guerra de Malvinas.](https://media.diariouno.com.ar/p/7f53ecb996059993b0103aa6da353ecb/adjuntos/298/imagenes/009/780/0009780752/255x144/smart/carta-ex-combatiente-malvinas-partido-seleccion-argentina-inglaterra.jpg "Roberto Bocanegra, veterano de la Guerra de Malvinas.")](https://www.diariouno.com.ar/sociedad/la-carta-un-veterano-malvinas-mendocino-la-seleccion-antes-enfrentar-inglaterra-n1574897)
+ [![Habrá 500 policías para custodiar los festejos en la Peatonal Sarmiento por la Selección argentina. ](https://media.diariouno.com.ar/p/c4336e20bd1cb595f4ae65e8054a080e/adjuntos/298/imagenes/009/777/0009777842/255x144/smart/festejos-la-peatonal3.jpg "Habrá 500 policías para custodiar los festejos en la Peatonal Sarmiento por la Selección argentina. ")](https://www.diariouno.com.ar/sociedad/seguridad-anuncio-que-habra-500-policias-el-gran-mendoza-el-partido-la-seleccion-argentina-n1575043)
  
-- [Tuit polémico](https://www.diariouno.com.ar/politica/escala-el-conflicto-hebe-casado-denuncia-penal-nuevas-criticas-francia-y-silencio-cornejo-n1574755 "Tuit polémico")
+- [Sueldos](https://www.diariouno.com.ar/sociedad/cuanto-cobran-los-empleados-mostaza-mcdonalds-y-burger-king-n1574929 "Sueldos")
  
- ### [Escala el conflicto por Hebe Casado: denuncia penal, nuevas críticas desde Francia y Cornejo responde](https://www.diariouno.com.ar/politica/escala-el-conflicto-hebe-casado-denuncia-penal-nuevas-criticas-francia-y-silencio-cornejo-n1574755)
+ ### [Cuánto cobran los empleados de Mostaza, McDonald's y Burger King](https://www.diariouno.com.ar/sociedad/cuanto-cobran-los-empleados-mostaza-mcdonalds-y-burger-king-n1574929)
  
- [](https://www.diariouno.com.ar/politica/escala-el-conflicto-hebe-casado-denuncia-penal-nuevas-criticas-francia-y-silencio-cornejo-n1574755)
+ [](https://www.diariouno.com.ar/sociedad/cuanto-cobran-los-empleados-mostaza-mcdonalds-y-burger-king-n1574929)
  
- Por [Redacción de UNO](https://www.diariouno.com.ar/politica/escala-el-conflicto-hebe-casado-denuncia-penal-nuevas-criticas-francia-y-silencio-cornejo-n1574755)
+ Por [Pablo González](https://www.diariouno.com.ar/sociedad/cuanto-cobran-los-empleados-mostaza-mcdonalds-y-burger-king-n1574929)
  
- [![Hebe Casado, persona no grata en la Embajada de Francia y denunciada en Mendoza.](https://media.diariouno.com.ar/p/7c051fb2fadc4356d0e6a26f5d4e5a80/adjuntos/298/imagenes/009/773/0009773852/255x144/smart/hebe-casado-senado-2.jpg "Hebe Casado, persona no grata en la Embajada de Francia y denunciada en Mendoza.")](https://www.diariouno.com.ar/politica/escala-el-conflicto-hebe-casado-denuncia-penal-nuevas-criticas-francia-y-silencio-cornejo-n1574755)
+ [![Estos son los sueldos de los empleados de comidas rápidas: Mostaza, McDonalds y Burger King.](https://media.diariouno.com.ar/p/aa921406619c381983f28cd4b558888d/adjuntos/298/imagenes/009/780/0009780807/255x144/smart/empleados2.jpg "Estos son los sueldos de los empleados de comidas rápidas: Mostaza, McDonalds y Burger King.")](https://www.diariouno.com.ar/sociedad/cuanto-cobran-los-empleados-mostaza-mcdonalds-y-burger-king-n1574929)
  
 
 ### Te puede interesar
