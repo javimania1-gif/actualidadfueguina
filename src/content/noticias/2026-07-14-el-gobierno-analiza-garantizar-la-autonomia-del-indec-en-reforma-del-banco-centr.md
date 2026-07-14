@@ -3,7 +3,7 @@ title: "El Gobierno analiza garantizar la autonomía del INDEC en reforma del Ba
 description: "El Gobierno evalúa una propuesta para asegurar la autonomía del INDEC, celebrada por Javier Milei, en el marco de la reforma del Banco Central."
 date: "2026-07-14T15:27:55.804Z"
 sourcePublishedAt: "2026-07-14T15:10:46.619Z"
-category: "Mundo"
+category: "Nacionales"
 location: "Argentina"
 tags: ["Gobierno", "INDEC", "Banco Central", "Javier Milei"]
 image: "/uploads/auto/2026-07-14-19bd32e08795d0ab06.webp"
