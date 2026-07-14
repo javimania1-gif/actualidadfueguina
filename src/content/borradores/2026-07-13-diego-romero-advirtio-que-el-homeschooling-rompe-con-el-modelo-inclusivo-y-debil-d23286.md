@@ -8,7 +8,7 @@ sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/diego-romero-advirtio-que-el-homeschooling-rompe-con-el-modelo-inclusivo-y-debilita-el-rol-social-de-la-escuela/"
 originalImage: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/ROMERO-scaled.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:22.513Z"
+detectedAt: "2026-07-14T13:53:49.998Z"
 mode: "discovery-review"
 ---
 

@@ -8,7 +8,7 @@ sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml"
 originalImage: "https://fotos.perfil.com/2026/07/13/trim/1140/641/messi-harry-kane-rodri-hernandez-y-mbappe-13072026-2281796.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:31.335Z"
+detectedAt: "2026-07-14T10:03:21.598Z"
 mode: "discovery-review"
 ---
 
@@ -29,14 +29,14 @@ Messi, Harry Kane, Rodri Hernández y Mbappé. | Collage
 - [](https://www.facebook.com/sharer/sharer.php?u=https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml)
 - [](https://twitter.com/intent/tweet?text=Antes+de+las+semifinales+del+Mundial%3A+las+guerras+que+enfrentaron+a+la+Argentina+con+Inglaterra%2C+Espa%C3%B1a+y+Francia&url=https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml)
 - [](<whatsapp://send?text=Antes+de+las+semifinales+del+Mundial%3A+las+guerras+que+enfrentaron+a+la+Argentina+con+Inglaterra%2C+Espa%C3%B1a+y+Francia https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml>)
-- [](/cdn-cgi/l/email-protection#d3eca0a6b1b9b6a7ee83b6a1b5babffdb0bcbef3aff392bda7b6a0f8b7b6f8bfb2a0f8a0b6bebab5babdb2bfb6a0f8b7b6bff89ea6bdb7bab2bff6e092f8bfb2a0f8b4a6b6a1a1b2a0f8a2a6b6f8b6bdb5a1b6bda7b2a1bcbdf8b2f8bfb2f892a1b4b6bda7babdb2f8b0bcbdf89abdb4bfb2a7b6a1a1b2f6e190f896a0a3b2f690e0f691e2b2f8aaf895a1b2bdb0bab2f5b1bcb7aaee9bbcbfb2fff3a5baf3b6a0a7b6f3b2a1a7107eb0a6bfbcf3a2a6b6f3a3a6b1bfbab01060f383b6a1b5babffdb0bcbef3aaf3b0a1b6bcf3a2a6b6f3a7b6f3a3a6b6b7b6f3babda7b6a1b6a0b2a1fdf3bba7a7a3a0e9fcfca4a4a4fda3b6a1b5babffdb0bcbefcbdbca7bab0bab2a0fcbabda7b6a1bdb2b0babcbdb2bffcb2bda7b6a0feb7b6febfb2a0fea0b6bebab5babdb2bfb6a0feb7b6bffebea6bdb7bab2bffebfb2a0feb4a6b6a1a1b2a0fea2a6b6feb6bdb5a1b6bda7b2a1bcbdfeb2febfb2feb2a1b4b6bda7babdb2feb0bcbdfebabdb4bfb2a7b6a1a1b2feb6a0a3b2bdb2feaafeb5a1b2bdb0bab2fda3bba7bebf "Compartir por email")
+- [](/cdn-cgi/l/email-protection#80bff3f5e2eae5f4bdd0e5f2e6e9ecaee3efeda0fca0c1eef4e5f3abe4e5abece1f3abf3e5ede9e6e9eee1ece5f3abe4e5ecabcdf5eee4e9e1eca5b3c1abece1f3abe7f5e5f2f2e1f3abf1f5e5abe5eee6f2e5eef4e1f2efeeabe1abece1abc1f2e7e5eef4e9eee1abe3efeeabc9eee7ece1f4e5f2f2e1a5b2c3abc5f3f0e1a5c3b3a5c2b1e1abf9abc6f2e1eee3e9e1a6e2efe4f9bdc8efece1aca0f6e9a0e5f3f4e5a0e1f2f4432de3f5ecefa0f1f5e5a0f0f5e2ece9e34333a0d0e5f2e6e9ecaee3efeda0f9a0e3f2e5efa0f1f5e5a0f4e5a0f0f5e5e4e5a0e9eef4e5f2e5f3e1f2aea0e8f4f4f0f3baafaff7f7f7aef0e5f2e6e9ecaee3efedafeeeff4e9e3e9e1f3afe9eef4e5f2eee1e3e9efeee1ecafe1eef4e5f3ade4e5adece1f3adf3e5ede9e6e9eee1ece5f3ade4e5ecadedf5eee4e9e1ecadece1f3ade7f5e5f2f2e1f3adf1f5e5ade5eee6f2e5eef4e1f2efeeade1adece1ade1f2e7e5eef4e9eee1ade3efeeade9eee7ece1f4e5f2f2e1ade5f3f0e1eee1adf9ade6f2e1eee3e9e1aef0e8f4edec "Compartir por email")
 - [](#vf-comments)
 
 ![Lola Blasco](https://fotos.perfil.com/autores/default/lolablasco_100.jpg)
 
 [Lola Blasco](/autores/lolablasco)
 
-Hoy 20:34 [Agregar PERFIL en Google](https://www.google.com/preferences/source?q=perfil.com)
+Ayer 20:34 [Agregar PERFIL en Google](https://www.google.com/preferences/source?q=perfil.com)
 
 Las **[semifinales del Mundial 2026](https://www.perfil.com/noticias/cordoba/con-argentina-en-semifinales-crecio-casi-un-8400-la-busqueda-de-vuelos-a-atlanta.phtml)** reunirán a **Argentina, Inglaterra, España y Francia**, cuatro selecciones que protagonizaron algunos de los capítulos más importantes de la historia del fútbol. Pero fuera de la cancha también existe otro vínculo entre esos países: **a lo largo de más de dos siglos, la Argentina mantuvo conflictos militares o enfrentamientos con cada uno de ellos**, desde las Invasiones Inglesas hasta la Guerra de Malvinas, pasando por la Guerra de Independencia frente a España y las intervenciones francesas en el Río de la Plata.
 

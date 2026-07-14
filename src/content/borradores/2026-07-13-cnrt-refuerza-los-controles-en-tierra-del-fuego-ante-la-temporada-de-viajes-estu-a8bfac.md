@@ -8,7 +8,7 @@ sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/cnrt-refuerza-los-controles-en-tierra-del-fuego-ante-la-temporada-de-viajes-estudiantiles-e-invernales/"
 originalImage: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/03-19-scaled.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:22.516Z"
+detectedAt: "2026-07-14T13:53:50.001Z"
 mode: "discovery-review"
 ---
 

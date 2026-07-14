@@ -8,7 +8,7 @@ sourceName: "Radio Fueguina"
 sourceUrl: "https://www.radiofueguina.com/2026/07/rio-grande-celebro-en-comunidad-sus-105-anos/"
 originalImage: "https://www.radiofueguina.com/wp-content/uploads/2026/07/5091728419002715278.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:16.564Z"
+detectedAt: "2026-07-14T13:54:12.987Z"
 mode: "discovery-review"
 ---
 

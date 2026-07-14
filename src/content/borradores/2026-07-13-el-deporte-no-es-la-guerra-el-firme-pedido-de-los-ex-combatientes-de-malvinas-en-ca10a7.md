@@ -8,7 +8,7 @@ sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml"
 originalImage: "https://fotos.perfil.com/2026/07/12/trim/1140/641/12072026seleccionmundialcedocg-2280807.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:39.729Z"
+detectedAt: "2026-07-14T10:03:32.893Z"
 mode: "discovery-review"
 ---
 
@@ -29,10 +29,10 @@ Reacción. La decepción hizo que la herida narcisista impulsara una oportunidad
 - [](https://www.facebook.com/sharer/sharer.php?u=https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml)
 - [](https://twitter.com/intent/tweet?text=%22El+deporte+no+es+la+guerra%22%3A+el+firme+pedido+de+los+ex+combatientes+de+Malvinas+en+la+previa+del+choque+contra+Inglaterra&url=https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml)
 - [](<whatsapp://send?text=%22El+deporte+no+es+la+guerra%22%3A+el+firme+pedido+de+los+ex+combatientes+de+Malvinas+en+la+previa+del+choque+contra+Inglaterra https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml>)
-- [](/cdn-cgi/l/email-protection#1d226e687f777869204d786f7b7471337e72703d613d382f2f58713679786d726f697836737236786e36717c367a68786f6f7c382f2f382e5c367871367b746f7078366d78797479723679783671726e367865367e72707f7c6974787369786e36797836507c716b74737c6e36787336717c366d6f786b747c36797871367e75726c6878367e7273696f7c3654737a717c69786f6f7c3b7f727964205572717c313d6b743d786e69783d7c6f69deb07e6871723d6c68783d6d687f71747edeae3d4d786f7b7471337e72703d643d7e6f78723d6c68783d69783d6d687879783d747369786f786e7c6f333d7569696d6e2732326a6a6a336d786f7b7471337e727032737269747e747c6e326d72717469747e7c3278713079786d726f697830737230786e30717c307a68786f6f7c307871307b746f7078306d78797479723079783071726e307865307e72707f7c6974787369786e30797830707c716b74737c6e30787330717c306d6f786b747c30797871307e75726c6878307e7273696f7c3074737a717c69786f6f7c336d75697071 "Compartir por email")
+- [](/cdn-cgi/l/email-protection#437c3036212926377e132631252a2f6d202c2e633f63667171062f682726332c313726682d2c682630682f226824362631312266717166700268262f68252a312e26683326272a272c682726682f2c3068263b68202c2e2122372a262d372630682726680e222f352a2d223068262d682f2268333126352a226827262f68202b2c32362668202c2d373122680a2d242f22372631312265212c273a7e0b2c2f226f63352a63263037266322313780ee20362f2c63323626633336212f2a2080f063132631252a2f6d202c2e633a632031262c63323626633726633336262726632a2d372631263022316d632b37373330796c6c3434346d332631252a2f6d202c2e6c2d2c372a202a22306c332c2f2a372a20226c262f6e2726332c3137266e2d2c6e26306e2f226e2436263131226e262f6e252a312e266e3326272a272c6e27266e2f2c306e263b6e202c2e2122372a262d3726306e27266e2e222f352a2d22306e262d6e2f226e333126352a226e27262f6e202b2c3236266e202c2d3731226e2a2d242f2237263131226d332b372e2f "Compartir por email")
 - [](#vf-comments)
 
-Hoy 20:25 [Agregar PERFIL en Google](https://www.google.com/preferences/source?q=perfil.com)
+Ayer 20:25 [Agregar PERFIL en Google](https://www.google.com/preferences/source?q=perfil.com)
 
 Un choque mundialista entre [**Argentina e Inglaterra**](https://www.perfil.com/noticias/deportes/el-historico-cruce-de-lionel-scaloni-con-david-beckham-revive-antes-del-choque-entre-argentina-e-inglaterra-a35.phtml) nunca será “un partido más”. Y mucho menos si **el pasaje a la gran final del mundo** está en juego. La adrenalina de revivir este clásico en las semifinales del certamen 2026 ya paraliza al país, pero en medio de la innegable efervescencia popular, voces de peso decidieron intervenir para poner las cosas en su lugar: [**los héroes de Malvinas**](https://www.perfil.com/noticias/columnistas/malvinas-reconocimiento-y-falsedades-por-martin-balza.phtml). Con un mensaje que busca erradicar la violencia y la intolerancia, dejaron en claro que **el campo no es una trinchera.**
 

@@ -8,7 +8,7 @@ sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/las-escuelas-abren-sus-puertas-en-vacaciones-para-aprender-jugando-en-tierra-del-fuego?utm_source=rss&utm_medium=rss&utm_campaign=las-escuelas-abren-sus-puertas-en-vacaciones-para-aprender-jugando-en-tierra-del-fuego"
 originalImage: "http://elrompehielos.com.ar/wp-content/uploads/2026/07/photo_5091488145647275223_y.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:22.511Z"
+detectedAt: "2026-07-14T13:53:49.997Z"
 mode: "discovery-review"
 ---
 
