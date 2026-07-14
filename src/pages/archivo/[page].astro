@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../data/site';
+
+export async function getStaticPaths({ paginate }) {
+  const noticias = (await getCollection('noticias'))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return paginate(noticias, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
+---
+<BaseLayout title={`Archivo de Noticias - Página ${page.currentPage} | ${SITE.name}`} description={`Archivo histórico de noticias de Actualidad Fueguina. Página ${page.currentPage}.`}>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Archivo de Noticias</h1>
+        <p class="lead">Navegá por todas nuestras publicaciones ordenadas cronológicamente. (Página {page.currentPage} de {page.lastPage})</p>
+      </div>
+      
+      <div class="grid">
+        {page.data.map((nota) => (
+          <article class="card news-card">
+            <a href={`/noticias/${nota.slug}/`}>
+              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <div class="card-content">
+                <span class="eyebrow">{nota.data.category}</span>
+                <h3 class="title-md">{nota.data.title}</h3>
+                <p>{nota.data.description}</p>
+                <div class="meta"><span>{fmt.format(nota.data.date)}</span>{nota.data.location && <span>{nota.data.location}</span>}</div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="pagination">
+        {page.url.prev ? <a class="btn" href={page.url.prev}>&laquo; Más recientes</a> : <span class="btn disabled">&laquo; Más recientes</span>}
+        <span class="page-info">Página {page.currentPage} de {page.lastPage}</span>
+        {page.url.next ? <a class="btn" href={page.url.next}>Más antiguas &raquo;</a> : <span class="btn disabled">Más antiguas &raquo;</span>}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent, #e63946);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .btn:hover {
+    opacity: 0.9;
+  }
+  .btn.disabled {
+    background-color: var(--color-border, #e5e7eb);
+    color: var(--color-text-muted, #6b7280);
+    pointer-events: none;
+  }
+  .page-info {
+    font-weight: 500;
+    color: var(--color-text-muted, #6b7280);
+  }
+  @media (max-width: 600px) {
+    .pagination {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

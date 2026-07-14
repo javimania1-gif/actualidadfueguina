@@ -66,6 +66,43 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
           </article>
         ))}
       </div>
+      
+      <div class="archive-link">
+        <a href="/archivo/1/" class="btn-archive">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+          Ver todas las noticias
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .archive-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .btn-archive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-bg, #fff);
+    color: var(--color-text, #111);
+    border: 2px solid var(--color-border, #e5e7eb);
+    border-radius: 999px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-archive:hover {
+    border-color: var(--color-accent, #e63946);
+    color: var(--color-accent, #e63946);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+</style>
