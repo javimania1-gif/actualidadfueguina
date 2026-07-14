@@ -1,14 +1,14 @@
 ---
-title: "Fuerte polémica por el cierre del muelle de catamaranes: "El único objetivo era recaudar y apropiarse de un puerto""
-description: "El presidente de la Dirección Provincial de Puertos (DPP) apuntó duramente contra la AGP por la clausura del muelle turístico en Ushuaia, calificando la medida de extorsiva y carente de fundamentos técnicos."
+title: 'Fuerte polémica por el cierre del muelle de catamaranes: "El único objetivo era recaudar y apropiarse de un puerto"'
+description: "El presidente de la DPP apuntó contra la AGP por la clausura del muelle en Ushuaia, calificando la medida de extorsiva y sin fundamentos."
 date: "2026-07-14T19:44:37.821Z"
 category: "Ushuaia"
 location: "Ushuaia"
 tags: []
 image: "/uploads/auto/2026-07-14-b10c04ce251b5f1a91.webp"
-imageAlt: "Fuerte polémica por el cierre del muelle de catamaranes: "El único objetivo era recaudar y apropiarse de un puerto""
+imageAlt: 'Fuerte polémica por el cierre del muelle de catamaranes: "El único objetivo era recaudar y apropiarse de un puerto"'
 imageStrategy: "article-og"
-imageSourceUrl: "${sourceUrl}"
+imageSourceUrl: "https://actualidadfueguina.com.ar"
 imageLicense: "Imagen normalizada desde origen"
 author: "Redacción"
 featured: true
@@ -17,7 +17,7 @@ social:
   enabled: true
   urgent: true
 sourceName: "Producción Propia"
-sourceUrl: "${sourceUrl}"
+sourceUrl: "https://actualidadfueguina.com.ar"
 detectedAt: "2026-07-14T19:44:37.821Z"
 ---
 

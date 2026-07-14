@@ -8,7 +8,7 @@ tags: []
 image: "/uploads/auto/2026-07-14-41e2c1765e1ef8ecea.webp"
 imageAlt: "Río Grande vuelve a alentar a la Selección: el partido contra Inglaterra se verá en pantalla gigante"
 imageStrategy: "article-og"
-imageSourceUrl: "${sourceUrl}"
+imageSourceUrl: "https://actualidadfueguina.com.ar"
 imageLicense: "Imagen normalizada desde origen"
 author: "Redacción"
 featured: true
@@ -17,7 +17,7 @@ social:
   enabled: true
   urgent: true
 sourceName: "Producción Propia"
-sourceUrl: "${sourceUrl}"
+sourceUrl: "https://actualidadfueguina.com.ar"
 detectedAt: "2026-07-14T19:44:37.822Z"
 ---
 
