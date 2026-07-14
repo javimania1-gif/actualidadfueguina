@@ -33,7 +33,7 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
         {secundarias.map((nota) => (
           <article class="card news-card">
             <a href={`/noticias/${nota.slug}/`}>
-              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
               <div class="card-content">
                 <span class="eyebrow">{nota.data.category}</span>
                 <h2 class="title-md">{nota.data.title}</h2>
@@ -55,7 +55,7 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
         {ultimas.map((nota) => (
           <article class="card news-card">
             <a href={`/noticias/${nota.slug}/`}>
-              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
               <div class="card-content">
                 <span class="eyebrow">{nota.data.category}</span>
                 <h3 class="title-md">{nota.data.title}</h3>
