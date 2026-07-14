@@ -4,7 +4,7 @@ description: "El portal provincial prepara una estructura más liviana, rápida 
 date: "2026-07-03T08:30:00-03:00"
 category: "Provincia"
 tags: ["Actualidad Fueguina", "Tierra del Fuego", "Noticias"]
-image: "/logo-af.jpg"
+image: "/uploads/auto/plate-bienvenidos-a-actualidad-fueguina.jpg"
 imageAlt: "Logo de Actualidad Fueguina"
 author: "Actualidad Fueguina"
 featured: false

@@ -6,7 +6,7 @@ date: 2026-07-14T10:00:00-03:00
 detectedAt: 2026-07-14T10:00:00-03:00
 author: "Redacción"
 featured: false
-image: ""
+image: "/uploads/auto/plate-2026-07-14-reforma-constitucional.jpg"
 imageAlt: "Legislatura de Tierra del Fuego"
 location: "Provincia"
 sourceName: "Producción Propia"

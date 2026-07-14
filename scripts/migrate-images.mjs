@@ -33,12 +33,18 @@ async function makePlate({ slug, title, category }) {
 }
 
 async function chooseLocalImage({ slug, data }) {
-  const image = String(data.image || '').trim();
+  let image = String(data.image || '').trim();
+  
   if (!image) {
-    return {
-      image: await makePlate({ slug, title: data.title, category: data.category }),
-      reason: 'missing-image'
-    };
+    const originalImage = String(data.originalImage || '').trim();
+    if (originalImage.startsWith('http')) {
+      image = originalImage;
+    } else {
+      return {
+        image: await makePlate({ slug, title: data.title, category: data.category }),
+        reason: 'missing-image'
+      };
+    }
   }
 
   if (image.startsWith('/')) {
