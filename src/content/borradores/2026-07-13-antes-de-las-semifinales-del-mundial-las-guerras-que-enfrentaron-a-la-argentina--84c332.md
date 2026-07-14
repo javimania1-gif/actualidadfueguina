@@ -8,7 +8,7 @@ sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml"
 originalImage: "https://fotos.perfil.com/2026/07/13/trim/1140/641/messi-harry-kane-rodri-hernandez-y-mbappe-13072026-2281796.jpg"
 status: "draft"
-detectedAt: "2026-07-14T06:15:57.756Z"
+detectedAt: "2026-07-14T10:03:21.598Z"
 mode: "discovery-review"
 ---
 
@@ -29,7 +29,7 @@ Messi, Harry Kane, Rodri Hernández y Mbappé. | Collage
 - [](https://www.facebook.com/sharer/sharer.php?u=https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml)
 - [](https://twitter.com/intent/tweet?text=Antes+de+las+semifinales+del+Mundial%3A+las+guerras+que+enfrentaron+a+la+Argentina+con+Inglaterra%2C+Espa%C3%B1a+y+Francia&url=https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml)
 - [](<whatsapp://send?text=Antes+de+las+semifinales+del+Mundial%3A+las+guerras+que+enfrentaron+a+la+Argentina+con+Inglaterra%2C+Espa%C3%B1a+y+Francia https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml>)
-- [](/cdn-cgi/l/email-protection#aa95d9dfc8c0cfde97facfd8ccc3c684c9c5c78ad68aebc4decfd981cecf81c6cbd981d9cfc7c3ccc3c4cbc6cfd981cecfc681e7dfc4cec3cbc68f99eb81c6cbd981cddfcfd8d8cbd981dbdfcf81cfc4ccd8cfc4decbd8c5c481cb81c6cb81ebd8cdcfc4dec3c4cb81c9c5c481e3c4cdc6cbdecfd8d8cb8f98e981efd9dacb8fe9998fe89bcb81d381ecd8cbc4c9c3cb8cc8c5ced397e2c5c6cb868adcc38acfd9decf8acbd8de6907c9dfc6c58adbdfcf8adadfc8c6c3c969198afacfd8ccc3c684c9c5c78ad38ac9d8cfc58adbdfcf8adecf8adadfcfcecf8ac3c4decfd8cfd9cbd8848ac2dededad9908585dddddd84dacfd8ccc3c684c9c5c785c4c5dec3c9c3cbd985c3c4decfd8c4cbc9c3c5c4cbc685cbc4decfd987cecf87c6cbd987d9cfc7c3ccc3c4cbc6cfd987cecfc687c7dfc4cec3cbc687c6cbd987cddfcfd8d8cbd987dbdfcf87cfc4ccd8cfc4decbd8c5c487cb87c6cb87cbd8cdcfc4dec3c4cb87c9c5c487c3c4cdc6cbdecfd8d8cb87cfd9dacbc4cb87d387ccd8cbc4c9c3cb84dac2dec7c6 "Compartir por email")
+- [](/cdn-cgi/l/email-protection#80bff3f5e2eae5f4bdd0e5f2e6e9ecaee3efeda0fca0c1eef4e5f3abe4e5abece1f3abf3e5ede9e6e9eee1ece5f3abe4e5ecabcdf5eee4e9e1eca5b3c1abece1f3abe7f5e5f2f2e1f3abf1f5e5abe5eee6f2e5eef4e1f2efeeabe1abece1abc1f2e7e5eef4e9eee1abe3efeeabc9eee7ece1f4e5f2f2e1a5b2c3abc5f3f0e1a5c3b3a5c2b1e1abf9abc6f2e1eee3e9e1a6e2efe4f9bdc8efece1aca0f6e9a0e5f3f4e5a0e1f2f4432de3f5ecefa0f1f5e5a0f0f5e2ece9e34333a0d0e5f2e6e9ecaee3efeda0f9a0e3f2e5efa0f1f5e5a0f4e5a0f0f5e5e4e5a0e9eef4e5f2e5f3e1f2aea0e8f4f4f0f3baafaff7f7f7aef0e5f2e6e9ecaee3efedafeeeff4e9e3e9e1f3afe9eef4e5f2eee1e3e9efeee1ecafe1eef4e5f3ade4e5adece1f3adf3e5ede9e6e9eee1ece5f3ade4e5ecadedf5eee4e9e1ecadece1f3ade7f5e5f2f2e1f3adf1f5e5ade5eee6f2e5eef4e1f2efeeade1adece1ade1f2e7e5eef4e9eee1ade3efeeade9eee7ece1f4e5f2f2e1ade5f3f0e1eee1adf9ade6f2e1eee3e9e1aef0e8f4edec "Compartir por email")
 - [](#vf-comments)
 
 ![Lola Blasco](https://fotos.perfil.com/autores/default/lolablasco_100.jpg)

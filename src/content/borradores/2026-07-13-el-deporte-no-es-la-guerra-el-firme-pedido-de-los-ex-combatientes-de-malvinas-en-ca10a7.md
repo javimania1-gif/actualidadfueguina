@@ -8,7 +8,7 @@ sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml"
 originalImage: "https://fotos.perfil.com/2026/07/12/trim/1140/641/12072026seleccionmundialcedocg-2280807.jpg"
 status: "draft"
-detectedAt: "2026-07-14T06:15:57.758Z"
+detectedAt: "2026-07-14T10:03:32.893Z"
 mode: "discovery-review"
 ---
 
@@ -29,7 +29,7 @@ Reacción. La decepción hizo que la herida narcisista impulsara una oportunidad
 - [](https://www.facebook.com/sharer/sharer.php?u=https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml)
 - [](https://twitter.com/intent/tweet?text=%22El+deporte+no+es+la+guerra%22%3A+el+firme+pedido+de+los+ex+combatientes+de+Malvinas+en+la+previa+del+choque+contra+Inglaterra&url=https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml)
 - [](<whatsapp://send?text=%22El+deporte+no+es+la+guerra%22%3A+el+firme+pedido+de+los+ex+combatientes+de+Malvinas+en+la+previa+del+choque+contra+Inglaterra https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml>)
-- [](/cdn-cgi/l/email-protection#516e2224333b34256c01342337383d7f323e3c712d71746363143d7a3534213e2325347a3f3e7a34227a3d307a3624342323307463637462107a343d7a3738233c347a21343538353e7a35347a3d3e227a34297a323e3c33302538343f2534227a35347a1c303d27383f30227a343f7a3d307a2123342738307a35343d7a32393e2024347a323e3f2523307a183f363d30253423233077333e35286c193e3d307d71273871342225347130232592fc32243d3e71202434712124333d383292e27101342337383d7f323e3c7128713223343e7120243471253471212434353471383f253423342230237f7139252521226b7e7e2626267f21342337383d7f323e3c7e3f3e2538323830227e213e3d38253832307e343d7c3534213e2325347c3f3e7c34227c3d307c3624342323307c343d7c3738233c347c21343538353e7c35347c3d3e227c34297c323e3c33302538343f2534227c35347c3c303d27383f30227c343f7c3d307c2123342738307c35343d7c32393e2024347c323e3f2523307c383f363d3025342323307f2139253c3d "Compartir por email")
+- [](/cdn-cgi/l/email-protection#437c3036212926377e132631252a2f6d202c2e633f63667171062f682726332c313726682d2c682630682f226824362631312266717166700268262f68252a312e26683326272a272c682726682f2c3068263b68202c2e2122372a262d372630682726680e222f352a2d223068262d682f2268333126352a226827262f68202b2c32362668202c2d373122680a2d242f22372631312265212c273a7e0b2c2f226f63352a63263037266322313780ee20362f2c63323626633336212f2a2080f063132631252a2f6d202c2e633a632031262c63323626633726633336262726632a2d372631263022316d632b37373330796c6c3434346d332631252a2f6d202c2e6c2d2c372a202a22306c332c2f2a372a20226c262f6e2726332c3137266e2d2c6e26306e2f226e2436263131226e262f6e252a312e266e3326272a272c6e27266e2f2c306e263b6e202c2e2122372a262d3726306e27266e2e222f352a2d22306e262d6e2f226e333126352a226e27262f6e202b2c3236266e202c2d3731226e2a2d242f2237263131226d332b372e2f "Compartir por email")
 - [](#vf-comments)
 
 Ayer 20:25 [Agregar PERFIL en Google](https://www.google.com/preferences/source?q=perfil.com)

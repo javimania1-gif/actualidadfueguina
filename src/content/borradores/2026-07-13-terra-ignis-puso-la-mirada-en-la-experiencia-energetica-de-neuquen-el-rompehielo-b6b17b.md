@@ -8,7 +8,7 @@ sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/terra-ignis-puso-la-mirada-en-la-experiencia-energetica-de-neuquen?utm_source=rss&utm_medium=rss&utm_campaign=terra-ignis-puso-la-mirada-en-la-experiencia-energetica-de-neuquen"
 originalImage: "http://elrompehielos.com.ar/wp-content/uploads/2026/07/5091488145647275246-1.jpg"
 status: "draft"
-detectedAt: "2026-07-14T04:23:07.614Z"
+detectedAt: "2026-07-14T10:04:09.263Z"
 mode: "discovery-review"
 ---
 
