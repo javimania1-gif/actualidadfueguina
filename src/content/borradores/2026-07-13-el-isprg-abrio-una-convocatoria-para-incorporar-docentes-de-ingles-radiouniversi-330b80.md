@@ -8,7 +8,7 @@ sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/el-isprg-abrio-una-convocatoria-para-incorporar-docentes-de-ingles/"
 originalImage: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/ISPRG-scaled.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:22.514Z"
+detectedAt: "2026-07-14T06:15:57.752Z"
 mode: "discovery-review"
 ---
 

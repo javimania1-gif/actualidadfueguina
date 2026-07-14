@@ -8,7 +8,7 @@ sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/la-utn-fueguina-abrio-una-tecnicatura-100-virtual-en-diseno-grafico-digital/"
 originalImage: "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/SEBECA01-scaled.jpg"
 status: "draft"
-detectedAt: "2026-07-14T02:44:39.730Z"
+detectedAt: "2026-07-14T06:15:57.757Z"
 mode: "discovery-review"
 ---
 
