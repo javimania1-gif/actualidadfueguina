@@ -1,47 +1,105 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T16:52:06.074Z",
+  "generatedAt": "2026-07-14T17:22:47.556Z",
   "summary": {
-    "totalStories": 886,
+    "totalStories": 902,
     "byStatus": {
-      "verified-fast-lane": 6,
-      "verified-standard-single-source": 413,
+      "verified-tier-a": 1,
+      "verified-fast-lane": 7,
+      "pending-verification": 60,
+      "verified-standard-single-source": 423,
       "verified-local-routine": 11,
-      "conflicting-sources": 42,
-      "agenda-invalid": 60,
+      "conflicting-sources": 43,
+      "agenda-invalid": 61,
       "published": 59,
-      "rejected-terminal": 159,
+      "rejected-terminal": 160,
       "verified-standard": 14,
-      "pending-verification": 59,
       "verified": 33,
       "verified-strict": 30
     },
     "byTopic": {
-      "servicios": 123,
-      "turismo": 17,
+      "servicios": 128,
+      "turismo": 18,
       "agenda": 28,
-      "politica": 133,
-      "deportes": 188,
-      "sociedad": 300,
+      "politica": 134,
+      "deportes": 190,
+      "sociedad": 304,
       "educacion": 22,
       "salud": 4,
-      "economia": 23,
-      "policiales": 42,
+      "economia": 25,
+      "policiales": 43,
       "cultura": 6
     },
     "byTerritory": {
-      "Ushuaia": 57,
+      "Ushuaia": 59,
+      "Mundo": 413,
       "Rio Grande": 63,
-      "Mundo": 403,
-      "Malvinas": 46,
+      "Malvinas": 47,
       "Tolhuin": 11,
-      "Nacionales": 228,
+      "Nacionales": 230,
       "Provincia": 17,
       "Antartida": 6,
-      "unknown": 55
+      "unknown": 56
     },
-    "invalidStories": 60,
+    "invalidStories": 61,
     "topStories": [
+      {
+        "storyId": "service|adelante|caminos|construyendo|convenios|firma|llevo|municipalidad|ushuaia|tierra del fuego",
+        "headlineSeed": "LA MUNICIPALIDAD DE USHUAIA LLEVÓ ADELANTE LA FIRMA DE CONVENIOS PARTE DEL PROGRAMA “CONSTRUYENDO CAMINOS”",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "verified-tier-a",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "service|abierto|centro|jornada|nueva|participaron|vecinas|vecinos|ushuaia|tierra del fuego",
+        "headlineSeed": "MÁS DE 200 VECINOS Y VECINAS PARTICIPARON DE UNA NUEVA JORNADA DE CENTRO ABIERTO",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "verified-fast-lane",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 11,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "service|colombiano|detenciones|maine|mexicano|muerte|suspende|texas|2026-07-14",
+        "headlineSeed": "ICE suspende detenciones de vehículos en EEUU tras la muerte de un mexicano en Texas y un colombiano en Maine",
+        "topic": "servicios",
+        "territory": "Mundo",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 7,
+          "impactMagnitude": 21,
+          "serviceValue": 20,
+          "socialPotential": 7,
+          "searchPotential": 15,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|campeonato|escalada|fueguino|primer|rio grande|ushuaia",
         "headlineSeed": "USHUAIA FUE SEDE DEL PRIMER CAMPEONATO FUEGUINO DE ESCALADA",
@@ -174,67 +232,153 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "agenda|abrio|convocatoria|docentes|incorporar|ingles|isprg|radiouniversidad|rio grande|tierra del fuego|2026-07-13",
-        "headlineSeed": "El ISPRG abrió una convocatoria para incorporar docentes de Inglés | radiouniversidad.com.ar",
-        "topic": "agenda",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-local-routine",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 13,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|controles|estudiantiles|invernales|radiouniversidad|refuerza|temporada|viajes|rio grande|ushuaia|2026-07-13",
-        "headlineSeed": "CNRT refuerza los controles en Tierra del Fuego ante la temporada de viajes estudiantiles e invernales | radiouniversidad.com.ar",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|advirtio|debilita|diego|escuela|homeschooling|inclusivo|modelo|rio grande|tierra del fuego|2026-07-13",
-        "headlineSeed": "Diego Romero advirtió que el homeschooling “rompe con el modelo inclusivo” y debilita el rol social de la escuela | radiouniversidad.com.ar",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|adelante|caminos|construyendo|convenios|firma|llevo|municipalidad|ushuaia|tierra del fuego",
+      "headlineSeed": "LA MUNICIPALIDAD DE USHUAIA LLEVÓ ADELANTE LA FIRMA DE CONVENIOS PARTE DEL PROGRAMA “CONSTRUYENDO CAMINOS”",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "CONSTRUYENDO CAMINOS",
+        "Municipalidad de Ushuaia",
+        "Secretaría de Políticas Ambientales",
+        "LA MUNICIPALIDAD DE USHUAIA",
+        "Municipalidad",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Atlantico Sur",
+        "Argentina"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T17:20:25.193Z",
+      "lastSeenAt": "2026-07-14T17:20:25.193Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-tier-a",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|abierto|centro|jornada|nueva|participaron|vecinas|vecinos|ushuaia|tierra del fuego",
+      "headlineSeed": "MÁS DE 200 VECINOS Y VECINAS PARTICIPARON DE UNA NUEVA JORNADA DE CENTRO ABIERTO",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "ABIERTO Sitio",
+        "Municipalidad de Ushuaia",
+        "Secretaría de la Mujer y Desarrollo",
+        "Secretaría",
+        "Municipio",
+        "Municipalidad",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Atlantico Sur"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T17:20:25.193Z",
+      "lastSeenAt": "2026-07-14T17:20:25.193Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-fast-lane",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|colombiano|detenciones|maine|mexicano|muerte|suspende|texas|2026-07-14",
+      "headlineSeed": "ICE suspende detenciones de vehículos en EEUU tras la muerte de un mexicano en Texas y un colombiano en Maine",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Lorenzo Salgado Araujo",
+        "Secretaría de Cultura",
+        "Fiscalía General de",
+        "Colombia",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T17:20:25.192Z",
+      "lastSeenAt": "2026-07-14T17:20:25.192Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
     {
       "storyId": "service|campeonato|escalada|fueguino|primer|rio grande|ushuaia",
       "headlineSeed": "USHUAIA FUE SEDE DEL PRIMER CAMPEONATO FUEGUINO DE ESCALADA",
@@ -1367,7 +1511,7 @@
         "A"
       ],
       "editorialLane": "fast",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 12,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1381,7 +1525,7 @@
         "serviceValue": 20,
         "socialPotential": 15,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -1416,7 +1560,7 @@
         "A"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 12,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1430,7 +1574,7 @@
         "serviceValue": 20,
         "socialPotential": 15,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -3186,50 +3330,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|justicia|fiscalia|fernando burlando|francisco oneto|argentina|informa|2026-07-14",
-      "headlineSeed": "Juicio por la muerte de Maradona, en vivo: Fernando Burlando y Francisco Oneto al borde de la agresión física tras una tensa discusión",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Fernando Burlando",
-        "Francisco Oneto",
-        "Justicia",
-        "Fiscalía",
-        "Argentina"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T15:27:05.032Z",
-      "lastSeenAt": "2026-07-14T15:27:05.032Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|invasiones inglesas|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
       "headlineSeed": "Antes de las semifinales del Mundial: las guerras que enfrentaron a la Argentina con Inglaterra, España y Francia",
       "topic": "deportes",
@@ -4120,6 +4220,47 @@
       },
       "newsworthinessScore": 93,
       "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|justicia|fiscalia|fernando burlando|francisco oneto|argentina|informa|2026-07-14",
+      "headlineSeed": "Juicio por la muerte de Maradona, en vivo: Fernando Burlando y Francisco Oneto al borde de la agresión física tras una tensa discusión",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Fernando Burlando",
+        "Argentina"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T15:27:05.032Z",
+      "lastSeenAt": "2026-07-14T17:20:25.192Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -5363,49 +5504,45 @@
       ]
     },
     {
-      "storyId": "legislative|banco central|camara|banco central y|milei|argentina|peru|informa|2026-07-13",
-      "headlineSeed": "Milei vuelve a reunirse con diputados y senadores por la reforma de la carta orgánica del Banco Central",
+      "storyId": "international-conflict|justicia|internacional|francia|informa|2026-07-14",
+      "headlineSeed": "Francia: desfile militar del Día de la Bastilla con Ucrania como protagonista",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Milei",
-        "Banco Central",
-        "Cámara",
-        "Banco Central y",
-        "Argentina",
-        "Peru",
-        "Inglaterra"
+        "Justicia",
+        "Internacional",
+        "Francia"
       ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-13T19:43:04.701Z",
-      "lastSeenAt": "2026-07-13T19:43:04.701Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-14T17:20:25.194Z",
+      "lastSeenAt": "2026-07-14T17:20:25.194Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 23,
+        "publicInterest": 17,
         "localRelevance": 7,
-        "impactMagnitude": 20,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 7,
+        "socialPotential": 4,
         "searchPotential": 10,
-        "recency": 12,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 89,
-      "status": "published",
+      "newsworthinessScore": 88,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -5761,22 +5898,21 @@
       ]
     },
     {
-      "storyId": "general|cotiza|cuanto|dolar|julio|martes|minuto|oficial|2026-07-14",
-      "headlineSeed": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotiza el oficial y cuál es el precio del paralelo este martes 14 de julio, minuto a minuto",
+      "storyId": "general|conflicto|medio|oriente|petroleo|repunta|street|supera|2026-07-14",
+      "headlineSeed": "Wall Street repunta tras el buen dato del IPC y el petróleo supera los u$s85 por el conflicto en Medio Oriente",
       "topic": "economia",
       "subtopic": "economia",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Banco Nación",
-        "Banco Central",
-        "Banco Nación Argentina",
+        "Wall Street",
         "Argentina",
-        "Brasil",
-        "Inglaterra"
+        "Uruguay",
+        "Estados Unidos",
+        "Reino Unido"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:49:57.206Z",
-      "lastSeenAt": "2026-07-14T16:49:57.206Z",
+      "firstSeenAt": "2026-07-14T17:20:25.192Z",
+      "lastSeenAt": "2026-07-14T17:20:25.192Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -5788,15 +5924,15 @@
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 16,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
       "scoreBreakdown": {
         "publicInterest": 20,
         "localRelevance": 12,
         "impactMagnitude": 16,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
+        "socialPotential": 7,
+        "searchPotential": 7,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -6153,46 +6289,49 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|mojtaba khamenei|ali khamenei|uruguay|estados unidos|informa|2026-07-11",
-      "headlineSeed": "Mojtaba Khamenei prometió “venganza” por el asesinato de su padre y lanzó una amenaza contra EEUU e Israel",
+      "storyId": "legislative|banco central|camara|banco central y|milei|argentina|peru|informa|2026-07-13",
+      "headlineSeed": "Milei vuelve a reunirse con diputados y senadores por la reforma de la carta orgánica del Banco Central",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Mojtaba Khamenei",
-        "Ali Khamenei",
-        "Uruguay",
-        "Estados Unidos"
+        "Milei",
+        "Banco Central",
+        "Cámara",
+        "Banco Central y",
+        "Argentina",
+        "Peru",
+        "Inglaterra"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-11T17:02:42.839Z",
-      "lastSeenAt": "2026-07-11T17:02:42.839Z",
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-13T19:43:04.701Z",
+      "lastSeenAt": "2026-07-13T19:43:04.701Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 25,
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
+      "impactMagnitudeScore": 20,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 25,
+        "publicInterest": 23,
         "localRelevance": 7,
-        "impactMagnitude": 25,
+        "impactMagnitude": 20,
         "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 5,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 86,
-      "status": "rejected-terminal",
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -6686,55 +6825,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "general|municipio de tolhuin hoy|municipio de tolhuin|concejo deliberante de rio grande|tolhuin hoy|desde tolhuin|rio grande|ushuaia|informa|2026-07-13",
-      "headlineSeed": "Felices 105 años, Río Grande - Municipio de Tolhuin",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Tolhuin Hoy",
-        "Desde Tolhuin",
-        "Municipio de Tolhuin Hoy",
-        "Municipio de Tolhuin",
-        "Concejo Deliberante de Río Grande",
-        "Gobierno",
-        "Municipio",
-        "Municipio de",
-        "Club Colegio de",
-        "Municipio de Tolhuin la"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T18:00:09.121Z",
-      "lastSeenAt": "2026-07-14T04:21:20.997Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
-      "sourceTiers": [
-        "A"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "published",
-      "validationReasons": []
     },
     {
       "storyId": "sports-result|londres|argentina|egipto|informa|2026-07-13",
@@ -7610,6 +7700,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|mojtaba khamenei|ali khamenei|uruguay|estados unidos|informa|2026-07-11",
+      "headlineSeed": "Mojtaba Khamenei prometió “venganza” por el asesinato de su padre y lanzó una amenaza contra EEUU e Israel",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Mojtaba Khamenei",
+        "Ali Khamenei",
+        "Uruguay",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-11T17:02:42.839Z",
+      "lastSeenAt": "2026-07-11T17:02:42.839Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|cerro castor|el rompehielos la fiesta|nacional|tierra del fuego|tierra del fuego aias|informa|10 de julio",
       "headlineSeed": "Cerro Castor celebra el invierno con actividades y antorchas - El Rompehielos",
       "topic": "turismo",
@@ -8221,6 +8354,55 @@
       },
       "newsworthinessScore": 80,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|municipio de tolhuin hoy|municipio de tolhuin|concejo deliberante de rio grande|tolhuin hoy|desde tolhuin|rio grande|ushuaia|informa|2026-07-13",
+      "headlineSeed": "Felices 105 años, Río Grande - Municipio de Tolhuin",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Tolhuin Hoy",
+        "Desde Tolhuin",
+        "Municipio de Tolhuin Hoy",
+        "Municipio de Tolhuin",
+        "Concejo Deliberante de Río Grande",
+        "Gobierno",
+        "Municipio",
+        "Municipio de",
+        "Club Colegio de",
+        "Municipio de Tolhuin la"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T18:00:09.121Z",
+      "lastSeenAt": "2026-07-14T04:21:20.997Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 80,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -8933,55 +9115,6 @@
       },
       "newsworthinessScore": 79,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|otan|espacio schengen|fabian picardo|islas malvinas|malvinas|estados unidos|reino unido|informa|2026-07-13",
-      "headlineSeed": "La máxima autoridad de Gibraltar, contundente a horas de integrarse a Europa: “La soberanía del Peñón solo se negocia con el Rey”",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Espacio Schengen",
-        "Fabián Picardo",
-        "OTAN",
-        "Islas Malvinas",
-        "Malvinas",
-        "Casa de Gobierno",
-        "Tierra del Fuego AIAS",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-13T18:00:09.122Z",
-      "lastSeenAt": "2026-07-13T18:00:09.122Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -10639,7 +10772,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 77,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -11165,6 +11298,55 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "territorial-sovereignty|otan|espacio schengen|fabian picardo|islas malvinas|malvinas|estados unidos|reino unido|informa|2026-07-13",
+      "headlineSeed": "La máxima autoridad de Gibraltar, contundente a horas de integrarse a Europa: “La soberanía del Peñón solo se negocia con el Rey”",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Espacio Schengen",
+        "Fabián Picardo",
+        "OTAN",
+        "Islas Malvinas",
+        "Malvinas",
+        "Casa de Gobierno",
+        "Tierra del Fuego AIAS",
+        "Estados Unidos",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-13T18:00:09.122Z",
+      "lastSeenAt": "2026-07-13T18:00:09.122Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "published",
+      "validationReasons": []
     },
     {
       "storyId": "casualty|sam neill|parque jurasico|internacional|informa|2026-07-13",
@@ -12924,6 +13106,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "legal-policy|ministerio de economia de|informa|2026-07-14",
+      "headlineSeed": "Plan de pagos de ARCA para Pymes: qué dice la “letra chica” y a quiénes les conviene adherir",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Ministerio de Economía de"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-14T16:49:57.206Z",
+      "lastSeenAt": "2026-07-14T16:49:57.206Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 8,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 4,
+        "impactMagnitude": 8,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "sports-result|argentina|inglaterra|2026-07-14",
       "headlineSeed": "\"Para los argentinos no es solo un partido\": por qué Argentina vs. Inglaterra reaviva el debate por Malvinas",
       "topic": "deportes",
@@ -13449,48 +13674,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|almeria|arbol|argentino|capto|consumia|fotografo|hacia|2026-07-13",
-      "headlineSeed": "\"El fuego hacía un remolino que consumía un árbol de la nada\": el relato del fotógrafo argentino que captó el voraz incendio en Almería",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Francia",
-        "Espana",
-        "Belgica"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T11:17:50.738Z",
-      "lastSeenAt": "2026-07-13T18:00:09.122Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|doble|heridos|muertos|terremoto|venezuela|2026-07-12",
       "headlineSeed": "Doble terremoto en Venezuela: 4.118 muertos y 16.740 heridos",
       "topic": "sociedad",
@@ -13621,171 +13804,6 @@
       },
       "newsworthinessScore": 71,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|caida|doble|durante|edificio|fallecida|familia|grite|2026-07-11",
-      "headlineSeed": "\"Grité y grité\": habló el único sobreviviente de una familia fallecida durante la caída de un edificio en el doble terremoto de Venezuela",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "La Guaira",
-        "Venezuela"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T02:53:04.045Z",
-      "lastSeenAt": "2026-07-11T02:53:04.045Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 16,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 16,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|internacional|informa|2026-07-11",
-      "headlineSeed": "Zelenski crea fuerza militar de reacción rápida para Ucrania",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-11T01:26:05.293Z",
-      "lastSeenAt": "2026-07-11T01:26:05.293Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|abrio|castor|cerro|invierno|ushuaia|tierra del fuego|2026-07-13",
-      "headlineSeed": "El invierno ya se vive en Tierra del Fuego: abrió Cerro Castor",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Club",
-        "Ushuaia",
-        "Cerro Castor",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T18:00:09.123Z",
-      "lastSeenAt": "2026-07-14T13:53:21.762Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 0,
-        "socialPotential": 13,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|gary lineker|ucv radio|islas malvinas|malvinas|argentina|egipto|informa|2026-07-10",
-      "headlineSeed": "Gary Lineker enfrenta una reacción violenta después de llamar a las Islas Malvinas ‘Malvinas’ en el podcast rest is football de Netflix | UCV Radio",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Islas Malvinas",
-        "Malvinas",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-12T11:16:12.107Z",
-      "lastSeenAt": "2026-07-13T19:43:04.699Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "verified-standard",
       "validationReasons": []
     }
   ]
