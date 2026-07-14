@@ -23,6 +23,19 @@ const isActive = (href: string) => currentPath.startsWith(href);
   <head>
     <AnalyticsHead />
     <meta name="google-site-verification" content="un9E-kd7YOa-C7Ok9Q30Hz7T54IVyLXW-h5eLdNfwEo" />
+    
+    <!-- Google Reader Revenue Manager -->
+    <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+    <script is:inline>
+      (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+        basicSubscriptions.init({
+          type: "NewsArticle",
+          isPartOfType: ["Product"],
+          isPartOfProductId: "CAowzIHhCw:openaccess",
+          clientOptions: { theme: "light", lang: "es" },
+        });
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
