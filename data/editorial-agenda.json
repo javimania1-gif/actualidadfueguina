@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T17:28:11.166Z",
+  "generatedAt": "2026-07-14T19:09:08.292Z",
   "summary": {
-    "totalStories": 906,
+    "totalStories": 919,
     "byStatus": {
+      "conflicting-sources": 43,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "pending-verification": 61,
-      "verified-standard-single-source": 426,
+      "pending-verification": 63,
+      "verified-standard-single-source": 437,
       "verified-local-routine": 11,
-      "conflicting-sources": 43,
       "agenda-invalid": 61,
       "published": 59,
       "rejected-terminal": 160,
@@ -18,31 +18,50 @@
       "verified-strict": 30
     },
     "byTopic": {
-      "servicios": 129,
+      "servicios": 131,
       "turismo": 18,
       "agenda": 28,
       "politica": 134,
-      "deportes": 190,
-      "sociedad": 306,
+      "deportes": 192,
+      "sociedad": 312,
       "educacion": 22,
       "salud": 4,
-      "economia": 25,
-      "policiales": 43,
+      "economia": 27,
+      "policiales": 44,
       "cultura": 7
     },
     "byTerritory": {
       "Ushuaia": 59,
-      "Mundo": 417,
+      "Mundo": 423,
       "Rio Grande": 63,
       "Malvinas": 47,
       "Tolhuin": 11,
-      "Nacionales": 227,
+      "Nacionales": 234,
       "Provincia": 17,
       "Antartida": 6,
       "unknown": 59
     },
     "invalidStories": 61,
     "topStories": [
+      {
+        "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|adelante|caminos|construyendo|convenios|firma|llevo|municipalidad|ushuaia|tierra del fuego",
         "headlineSeed": "LA MUNICIPALIDAD DE USHUAIA LLEVÓ ADELANTE LA FIRMA DE CONVENIOS PARTE DEL PROGRAMA “CONSTRUYENDO CAMINOS”",
@@ -177,25 +196,6 @@
         }
       },
       {
-        "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "service|cirugia|colaborar|festival|hospital|infantil|monumental|radio|rio grande|ushuaia|2026-07-14",
         "headlineSeed": "Ushuaia | Radio Monumental realizará un festival solidario para colaborar con la sala de cirugía infantil del Hospital de Ushuaia",
         "topic": "servicios",
@@ -236,6 +236,48 @@
     ]
   },
   "stories": [
+    {
+      "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
+      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "SMN",
+        "Ushuaia",
+        "Argentina"
+      ],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-13T23:00:26.705Z",
+      "lastSeenAt": "2026-07-14T19:07:24.961Z",
+      "sourceCount": 4,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
     {
       "storyId": "service|adelante|caminos|construyendo|convenios|firma|llevo|municipalidad|ushuaia|tierra del fuego",
       "headlineSeed": "LA MUNICIPALIDAD DE USHUAIA LLEVÓ ADELANTE LA FIRMA DE CONVENIOS PARTE DEL PROGRAMA “CONSTRUYENDO CAMINOS”",
@@ -559,48 +601,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
-      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
-      "topic": "servicios",
-      "subtopic": "clima",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "SMN",
-        "Ushuaia",
-        "Argentina"
-      ],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-13T23:00:26.705Z",
-      "lastSeenAt": "2026-07-14T16:22:02.648Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|animal|centro|denuncian|maltrato|perros|presunto|trineo|rio grande|ushuaia|2026-07-14",
       "headlineSeed": "Denuncian presunto maltrato animal en un centro de perros de trineo de Ushuaia",
       "topic": "servicios",
@@ -907,7 +907,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 18,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 21,
@@ -921,7 +921,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -996,7 +996,7 @@
         "A"
       ],
       "editorialLane": "fast",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1010,7 +1010,7 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -1204,58 +1204,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|universidad de el salvador|ministerio de relaciones exteriores|ministerio de defensa|andres cisneros|malvinas|antartida|argentina|brasil|informa|2026-07-13",
-      "headlineSeed": "Malvinas: el estrecho de Magallanes como el de Ormuz, ¿un arma militar argentina?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Andrés Cisneros",
-        "Universidad de El Salvador",
-        "Ministerio de Relaciones Exteriores",
-        "Ministerio de Defensa",
-        "OTAN y",
-        "OTAN",
-        "Malvinas",
-        "Antartida",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T19:43:04.701Z",
-      "lastSeenAt": "2026-07-13T23:00:26.708Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "service|apertura|destaco|durante|fueguino|invernal|nacional|radiouniversidad|ushuaia|tolhuin|2026-07-13",
       "headlineSeed": "Selzer destacó el respaldo nacional al turismo fueguino durante la apertura de la temporada invernal | radiouniversidad.com.ar",
       "topic": "servicios",
@@ -1306,55 +1254,6 @@
       "validationReasons": [
         "topic-event-mismatch"
       ]
-    },
-    {
-      "storyId": "service|amparo|contra|ordenanza|plataformas|presentaron|radiouniversidad|regula|rio grande|tierra del fuego aias|2026-07-13",
-      "headlineSeed": "Trabajadores de Uber presentaron un amparo contra la ordenanza que regula las plataformas de transporte en Río Grande | radiouniversidad.com.ar",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Miguel Ángel Febre",
-        "Municipalidad de Río Grande",
-        "Municipio",
-        "Municipio de Río Grande",
-        "Secretaría de Transporte de",
-        "Ministerio de Economía de la Nación",
-        "Justicia la",
-        "Rio Grande",
-        "Paris",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T06:58:23.624Z",
-      "lastSeenAt": "2026-07-13T19:43:04.703Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "rejected-terminal",
-      "validationReasons": []
     },
     {
       "storyId": "service|bebes|fueguina|julio|nacieron|radio|sabado|rio grande|tierra del fuego aias|2026-07-13",
@@ -1609,7 +1508,7 @@
         "B"
       ],
       "editorialLane": "fast",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 21,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1623,60 +1522,12 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|destaco|economico|empleo|fueguino|motor|tiempo|turismo|rio grande|ushuaia|2026-07-13",
-      "headlineSeed": "Coto destacó al turismo como motor económico y de empleo para Tierra del Fuego - Tiempo Fueguino",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Agustín Coto",
-        "Daniel Scioli",
-        "Secretaría de Turismo de la Nación",
-        "Gobierno",
-        "Gobierno Nacional y",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS",
-        "Brasil"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T03:20:18.633Z",
-      "lastSeenAt": "2026-07-13T06:58:23.624Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -1704,7 +1555,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 21,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1718,7 +1569,7 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -1946,7 +1797,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-context",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 21,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 23,
@@ -1960,7 +1811,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2394,6 +2245,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|amparo|contra|ordenanza|plataformas|presentaron|radiouniversidad|regula|rio grande|tierra del fuego aias|2026-07-13",
+      "headlineSeed": "Trabajadores de Uber presentaron un amparo contra la ordenanza que regula las plataformas de transporte en Río Grande | radiouniversidad.com.ar",
+      "topic": "servicios",
+      "subtopic": "movilidad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Miguel Ángel Febre",
+        "Municipalidad de Río Grande",
+        "Municipio",
+        "Municipio de Río Grande",
+        "Secretaría de Transporte de",
+        "Ministerio de Economía de la Nación",
+        "Justicia la",
+        "Rio Grande",
+        "Paris",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T06:58:23.624Z",
+      "lastSeenAt": "2026-07-13T19:43:04.703Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 99,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|disfrutar|durante|familia|invierno|invita|juego|tardes|rio grande|malvinas|2026-07-13",
       "headlineSeed": "El Municipio invita a disfrutar de \"Tardes de juego en familia\" durante las vacaciones de invierno",
       "topic": "turismo",
@@ -2436,6 +2336,54 @@
       },
       "newsworthinessScore": 99,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|destaco|economico|empleo|fueguino|motor|tiempo|turismo|rio grande|ushuaia|2026-07-13",
+      "headlineSeed": "Coto destacó al turismo como motor económico y de empleo para Tierra del Fuego - Tiempo Fueguino",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Agustín Coto",
+        "Daniel Scioli",
+        "Secretaría de Turismo de la Nación",
+        "Gobierno",
+        "Gobierno Nacional y",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS",
+        "Brasil"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T03:20:18.633Z",
+      "lastSeenAt": "2026-07-13T06:58:23.624Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 99,
+      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -2491,48 +2439,56 @@
       ]
     },
     {
-      "storyId": "territorial-sovereignty|seleccion argentina|rio grande|malvinas|argentina|informa|2026-07-14",
-      "headlineSeed": "La Selección Argentina ya firmó la camiseta que será entregada al Centro de Veteranos de Guerra de Malvinas - Actualidad TDF",
-      "topic": "deportes",
-      "subtopic": "deportes",
+      "storyId": "international-conflict|universidad de el salvador|ministerio de relaciones exteriores|ministerio de defensa|andres cisneros|malvinas|antartida|argentina|brasil|informa|2026-07-13",
+      "headlineSeed": "Malvinas: el estrecho de Magallanes como el de Ormuz, ¿un arma militar argentina?",
+      "topic": "politica",
+      "subtopic": "politica",
       "territory": "Malvinas",
       "primaryEntities": [
-        "Selección Argentina",
-        "Rio Grande",
+        "Andrés Cisneros",
+        "Universidad de El Salvador",
+        "Ministerio de Relaciones Exteriores",
+        "Ministerio de Defensa",
+        "OTAN y",
+        "OTAN",
         "Malvinas",
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Antartida",
+        "Atlantico Sur",
+        "Tierra del Fuego AIAS"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T13:53:21.762Z",
-      "lastSeenAt": "2026-07-14T13:53:21.762Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-13T19:43:04.701Z",
+      "lastSeenAt": "2026-07-13T23:00:26.708Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
       "localRelevanceScore": 22,
-      "impactMagnitudeScore": 23,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 17,
         "localRelevance": 22,
-        "impactMagnitude": 23,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 12,
+        "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 15,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 98,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "general|audio|critico|exfutbolista|fuerte|gorosito|ingles|lisandro|malvinas|2026-07-13",
@@ -3284,6 +3240,50 @@
       },
       "newsworthinessScore": 96,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|seleccion argentina|rio grande|malvinas|argentina|informa|2026-07-14",
+      "headlineSeed": "La Selección Argentina ya firmó la camiseta que será entregada al Centro de Veteranos de Guerra de Malvinas - Actualidad TDF",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Selección Argentina",
+        "Rio Grande",
+        "Malvinas",
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-14T13:53:21.762Z",
+      "lastSeenAt": "2026-07-14T13:53:21.762Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 95,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -5140,6 +5140,53 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|camara de los comunes|internacional|reino unido|francia|informa|2026-07-14",
+      "headlineSeed": "Promesa de Macron: Francia vota sobre la muerte asistida",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Cámara de los Comunes",
+        "Internacional",
+        "Reino Unido",
+        "Francia",
+        "Alemania",
+        "Espana",
+        "Belgica",
+        "Suiza"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T19:07:24.960Z",
+      "lastSeenAt": "2026-07-14T19:07:24.960Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 90,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|dirigentes|encuesta|evalua|gobierno|prefiere|preocupa|sociedad|2026-07-14",
       "headlineSeed": "Encuesta: cómo evalúa la sociedad al Gobierno, qué le preocupa y a qué dirigentes prefiere",
       "topic": "economia",
@@ -5898,6 +5945,47 @@
       ]
     },
     {
+      "storyId": "general|acumulado|indec|inflacion|junio|primer|semestre|2026-07-14",
+      "headlineSeed": "Se supo el dato de inflación de junio de 2026 del INDEC y el acumulado en el primer semestre",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Gobierno y la",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T19:07:24.962Z",
+      "lastSeenAt": "2026-07-14T19:07:24.962Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|obligaciones negociables|ley nueva york|argentina|informa|2026-07-14",
       "headlineSeed": "Obligaciones Negociables: cuáles recomiendan los analistas para cobrar una renta en dólares todos los meses",
       "topic": "politica",
@@ -6471,49 +6559,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|acompanamiento|barrio|economia|familias|mercado|ratifico|riograndenses|rio grande|2026-07-13",
-      "headlineSeed": "\"El mercado en tu barrio\" ratificó su acompañamiento a la economía de las familias riograndenses",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Municipio",
-        "Municipio de Río Grande",
-        "Secretaría de Gestión Ciudadana",
-        "Rio Grande"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T19:43:04.703Z",
-      "lastSeenAt": "2026-07-14T04:21:21.000Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
-      "sourceTiers": [
-        "A"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|gobierno|banco de la nacion argentina|ministerio publico tutelar|propiedad privada|buenos aires|argentina|informa|2026-07-11",
       "headlineSeed": "Propiedad Privada: qué elimina y qué mantiene el Senado la última versión del proyecto de Sturzenegger",
       "topic": "politica",
@@ -6559,6 +6604,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|alimentos|desaceleracion|fuerte|inflacion|junio|meses|perforo|2026-07-14",
+      "headlineSeed": "La inflación perforó el 2% en junio por primera vez en 10 meses, con una fuerte desaceleración de alimentos",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Uruguay",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T19:07:24.960Z",
+      "lastSeenAt": "2026-07-14T19:07:24.960Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "crime|policia|camara de los comunes|policia nacional antiterrorista|ann widdecombe|paris|internacional|reino unido|informa|2026-07-13",
       "headlineSeed": "Ann Widdecombe, la exministra que conquistó a los británicos, víctima de un posible atentado terrorista",
       "topic": "policiales",
@@ -6598,55 +6685,6 @@
         "socialPotential": 7,
         "searchPotential": 10,
         "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|universidad de buenos aires|murio emilio basaldua|teatro colon hijo|hector basaldua|buenos aires|paris|argentina|estados unidos|informa|2026-07-13",
-      "headlineSeed": "Murió Emilio Basaldúa, ex director general y artístico del Teatro Colón",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Murió Emilio Basaldúa",
-        "Teatro Colón Hijo",
-        "Héctor Basaldúa",
-        "Universidad de Buenos Aires",
-        "Buenos Aires",
-        "Paris",
-        "Londres",
-        "Argentina",
-        "Estados Unidos",
-        "Reino Unido"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-13T18:00:09.122Z",
-      "lastSeenAt": "2026-07-13T18:00:09.122Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -7346,43 +7384,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|medio oriente|roberto prevost|internacional|estados unidos|informa|2026-07-13",
-      "headlineSeed": "El Papa León XIV denunció \"los vientos de guerra\" en Medio Oriente y Ucrania desde Castelgandolfo, su lugar de veraneo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
+      "storyId": "general|acompanamiento|barrio|economia|familias|mercado|ratifico|riograndenses|rio grande|2026-07-13",
+      "headlineSeed": "\"El mercado en tu barrio\" ratificó su acompañamiento a la economía de las familias riograndenses",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Rio Grande",
       "primaryEntities": [
-        "Estados Unidos"
+        "Municipio",
+        "Municipio de Río Grande",
+        "Secretaría de Gestión Ciudadana",
+        "Rio Grande"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T19:43:04.701Z",
-      "lastSeenAt": "2026-07-14T02:44:06.252Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T19:43:04.703Z",
+      "lastSeenAt": "2026-07-14T04:21:21.000Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
       "sourceTiers": [
-        "B"
+        "A"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
         "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 8,
         "diversity": 4
       },
       "newsworthinessScore": 82,
-      "status": "verified-strict",
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -7830,6 +7871,55 @@
       ]
     },
     {
+      "storyId": "territorial-sovereignty|universidad de buenos aires|murio emilio basaldua|teatro colon hijo|hector basaldua|buenos aires|paris|argentina|estados unidos|informa|2026-07-13",
+      "headlineSeed": "Murió Emilio Basaldúa, ex director general y artístico del Teatro Colón",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Murió Emilio Basaldúa",
+        "Teatro Colón Hijo",
+        "Héctor Basaldúa",
+        "Universidad de Buenos Aires",
+        "Buenos Aires",
+        "Paris",
+        "Londres",
+        "Argentina",
+        "Estados Unidos",
+        "Reino Unido"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-13T18:00:09.122Z",
+      "lastSeenAt": "2026-07-13T18:00:09.122Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|policia|moscu|internacional|informa|2026-07-12",
       "headlineSeed": "Desde un edificio de Tokyo, Rusia convirtió a Japón en una guarida de espías contra Ucrania",
       "topic": "politica",
@@ -7870,50 +7960,6 @@
       "newsworthinessScore": 81,
       "status": "pending-verification",
       "validationReasons": []
-    },
-    {
-      "storyId": "service|electrica|emergencia|gobierno|hasta|mismo|plazo|prorrogo|2026-07-13",
-      "headlineSeed": "El Gobierno prorrogó la emergencia eléctrica hasta 2027: por qué fijó el mismo plazo que para la del gas",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Gobierno",
-        "El Gobierno"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T06:58:23.622Z",
-      "lastSeenAt": "2026-07-13T06:58:23.622Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 24,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 24,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "international-conflict|iran lo|mando central|oriente medio|internacional|argentina|estados unidos|informa|2026-07-12",
@@ -8269,47 +8315,6 @@
       },
       "newsworthinessScore": 80,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|combate|drones|estadounidenses|fuerzas|navales|operaciones|primera|2026-07-14",
-      "headlineSeed": "Por primera vez, las fuerzas estadounidenses utilizaron drones navales en operaciones de combate",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T13:53:21.763Z",
-      "lastSeenAt": "2026-07-14T13:53:21.763Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -9074,6 +9079,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|medio oriente|roberto prevost|internacional|estados unidos|informa|2026-07-13",
+      "headlineSeed": "El Papa León XIV denunció \"los vientos de guerra\" en Medio Oriente y Ucrania desde Castelgandolfo, su lugar de veraneo",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-13T19:43:04.701Z",
+      "lastSeenAt": "2026-07-14T02:44:06.252Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|policia|ara san juan|gendarme argentino|volkswagen gol trend|ushuaia|tierra del fuego aias|informa|2026-07-11",
       "headlineSeed": "Auto se prendió fuego luego de chocar contra un poste - Actualidad TDF",
       "topic": "deportes",
@@ -9605,51 +9650,6 @@
       "newsworthinessScore": 78,
       "status": "conflicting-sources",
       "validationReasons": []
-    },
-    {
-      "storyId": "service|baleares|cabrera|patera|personas|rescatadas|2026-07-13",
-      "headlineSeed": "Rescatadas 29 personas en una patera al sur de Cabrera (Baleares)",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Gobierno",
-        "Ministerio de",
-        "Espana"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T06:58:23.620Z",
-      "lastSeenAt": "2026-07-13T06:58:23.620Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "international-conflict|la guaira|internacional|venezuela|inglaterra|informa|2026-07-12",
@@ -10554,6 +10554,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|combate|drones|estadounidenses|fuerzas|navales|operaciones|primera|2026-07-14",
+      "headlineSeed": "Por primera vez, las fuerzas estadounidenses utilizaron drones navales en operaciones de combate",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T13:53:21.763Z",
+      "lastSeenAt": "2026-07-14T13:53:21.763Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 77,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|racing|carretera|fritzler|historia|mercedes|2026-07-12",
       "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
       "topic": "deportes",
@@ -10685,6 +10726,50 @@
       "newsworthinessScore": 77,
       "status": "conflicting-sources",
       "validationReasons": []
+    },
+    {
+      "storyId": "service|electrica|emergencia|gobierno|hasta|mismo|plazo|prorrogo|2026-07-13",
+      "headlineSeed": "El Gobierno prorrogó la emergencia eléctrica hasta 2027: por qué fijó el mismo plazo que para la del gas",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Gobierno",
+        "El Gobierno"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T06:58:23.622Z",
+      "lastSeenAt": "2026-07-13T06:58:23.622Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 24,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 24,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 77,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "crime|feria caupolican|malvinas|internacional|argentina|brasil|informa|2026-07-12",
@@ -12109,47 +12194,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-14T16:36:15.995Z",
-      "lastSeenAt": "2026-07-14T16:36:15.995Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 17,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 17,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-strict",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "crime|club social y deportivo juventud obrera|miguel angel montefusco|informa|2026-07-14",
       "headlineSeed": "Condenaron a los ladrones que mataron a golpes a un periodista durante un robo frente a su nieto en Lomas de Zamora",
       "topic": "deportes",
@@ -12195,55 +12239,6 @@
       ]
     },
     {
-      "storyId": "general|diario|dijeron|gallegos|patagonia|presente|sureno|rio grande|tolhuin|2026-07-13",
-      "headlineSeed": "Tolhuin y Río Grande dijeron presente en la Expo Patagonia Teje en Río Gallegos - Diario El Sureño",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Expo Patagonia Teje",
-        "Comandante Luis Piedra Buena",
-        "Gobernador Gregores",
-        "Santa Cruz",
-        "Secretaría de Producción",
-        "Municipio",
-        "Municipalidad",
-        "Rio Grande",
-        "Tolhuin",
-        "Tierra del Fuego"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T19:43:04.701Z",
-      "lastSeenAt": "2026-07-14T13:53:21.760Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "casualty|mojtaba jamenei|ali jamenei|la guaira|internacional|venezuela|estados unidos|informa|2026-07-12",
       "headlineSeed": "Irán cierra el estrecho de Ormuz y Mojtaba Jamenei promete venganza tras la muerte de su padre",
       "topic": "sociedad",
@@ -12286,6 +12281,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|baleares|cabrera|patera|personas|rescatadas|2026-07-13",
+      "headlineSeed": "Rescatadas 29 personas en una patera al sur de Cabrera (Baleares)",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Gobierno",
+        "Ministerio de",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T06:58:23.620Z",
+      "lastSeenAt": "2026-07-13T06:58:23.620Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "casualty|estados unidos|informa|2026-07-12",
       "headlineSeed": "Impactante: un bisonte de 900 kilos embistió a un hombre y lo lanzó por los aires en un parque nacional",
       "topic": "sociedad",
@@ -12324,91 +12364,6 @@
       "newsworthinessScore": 74,
       "status": "rejected-terminal",
       "validationReasons": []
-    },
-    {
-      "storyId": "casualty|gobierno|justicia|andalucia centenares|peru|estados unidos|informa|2026-07-11",
-      "headlineSeed": "España: ceden los incendios que dejaron atroz reguero de muerte y destrucción en Andalucía",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gobierno",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-11T20:56:01.204Z",
-      "lastSeenAt": "2026-07-11T20:56:01.204Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "election|marcos ferrer|informa|2026-07-11",
-      "headlineSeed": "¿Revés para De Loredo?: La oposición bloqueó la prórroga de Ferrer y obliga a la UCR cordobesa a ir a internas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Marcos Ferrer"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-11T19:10:07.369Z",
-      "lastSeenAt": "2026-07-11T19:10:07.369Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 5,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 5,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "agenda-invalid",
-      "sourceStatus": "rejected-terminal",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|2026-07-09",
@@ -13448,6 +13403,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-14T16:36:15.995Z",
+      "lastSeenAt": "2026-07-14T16:36:15.995Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 17,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 17,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-strict",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "general|abordaron|agenda|austral|comun|cooperacion|finlandia|generar|ushuaia|tierra del fuego|2026-07-14",
       "headlineSeed": "Tierra del Fuego y Finlandia abordaron los puntos para generar una agenda común de cooperación - Reporte Austral",
       "topic": "sociedad",
@@ -13538,6 +13534,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|diario|dijeron|gallegos|patagonia|presente|sureno|rio grande|tolhuin|2026-07-13",
+      "headlineSeed": "Tolhuin y Río Grande dijeron presente en la Expo Patagonia Teje en Río Gallegos - Diario El Sureño",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Expo Patagonia Teje",
+        "Comandante Luis Piedra Buena",
+        "Gobernador Gregores",
+        "Santa Cruz",
+        "Secretaría de Producción",
+        "Municipio",
+        "Municipalidad",
+        "Rio Grande",
+        "Tolhuin",
+        "Tierra del Fuego"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T19:43:04.701Z",
+      "lastSeenAt": "2026-07-14T13:53:21.760Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|durante|familia|fueguina|invernal|juego|radio|receso|rio grande|malvinas|2026-07-13",
       "headlineSeed": "“Tardes de juego en familia” durante el receso invernal – La 97 Radio Fueguina",
       "topic": "sociedad",
@@ -13580,53 +13625,6 @@
       },
       "newsworthinessScore": 71,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|dirigencia|fueguino|gobernar|jesus|llamado|politica|radiouniversidad|rio grande|ushuaia|2026-07-13",
-      "headlineSeed": "“Vuelvan a Jesús”: El llamado del Tedeum fueguino a la dirigencia política para recuperar los valores y gobernar con rectitud | radiouniversidad.com.ar",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Te Deum",
-        "Cámara de Comercio",
-        "Cámara de Comercio la",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Chile"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T06:58:23.623Z",
-      "lastSeenAt": "2026-07-13T19:43:04.702Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
