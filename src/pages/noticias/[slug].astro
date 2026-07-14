@@ -89,6 +89,8 @@ const jsonLd = {
   const shareBtn = document.getElementById('share-native');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'share' });
       if (navigator.share) {
         try {
           await navigator.share({
@@ -104,6 +106,14 @@ const jsonLd = {
       }
     });
   }
+
+  // Trackear clics en botones sociales normales
+  document.querySelectorAll('.btn-share:not(#share-native)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'share' });
+    });
+  });
 </script>
 
 <style>
