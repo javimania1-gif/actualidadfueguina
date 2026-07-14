@@ -1,53 +1,91 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T19:27:50.238Z",
+  "generatedAt": "2026-07-14T19:38:48.519Z",
   "summary": {
-    "totalStories": 931,
+    "totalStories": 939,
     "byStatus": {
-      "verified-standard-single-source": 449,
-      "conflicting-sources": 43,
+      "published": 61,
+      "verified-standard-single-source": 453,
+      "conflicting-sources": 44,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "pending-verification": 60,
+      "pending-verification": 61,
       "verified-local-routine": 11,
-      "agenda-invalid": 61,
-      "published": 59,
+      "agenda-invalid": 60,
       "rejected-terminal": 163,
       "verified-standard": 14,
       "verified": 33,
-      "verified-strict": 30
+      "verified-strict": 31
     },
     "byTopic": {
-      "servicios": 133,
+      "servicios": 134,
       "turismo": 18,
       "agenda": 28,
       "politica": 134,
-      "deportes": 195,
-      "sociedad": 316,
+      "deportes": 197,
+      "sociedad": 320,
       "educacion": 23,
       "salud": 4,
-      "economia": 29,
+      "economia": 30,
       "policiales": 44,
       "cultura": 7
     },
     "byTerritory": {
-      "Ushuaia": 60,
-      "Mundo": 431,
-      "Rio Grande": 63,
-      "Malvinas": 48,
+      "Ushuaia": 59,
+      "Rio Grande": 64,
+      "Mundo": 438,
+      "Malvinas": 49,
       "Tolhuin": 11,
       "Nacionales": 236,
-      "Provincia": 17,
       "Antartida": 6,
-      "unknown": 59
+      "Provincia": 18,
+      "unknown": 58
     },
-    "invalidStories": 61,
+    "invalidStories": 60,
     "topStories": [
+      {
+        "storyId": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
+        "headlineSeed": "Publicidad + artículos patrocinados",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
+      {
+        "storyId": "service|ushuaia|argentina|informa|2019-01-19",
+        "headlineSeed": "Política de privacidad",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
       {
         "storyId": "service|inflacion|junio|menor|patagonia|registro|rio grande|ushuaia|2026-07-14",
         "headlineSeed": "La inflación de junio fue del 1,9% y la Patagonia registró la menor suba del país",
         "topic": "servicios",
-        "territory": "Ushuaia",
+        "territory": "Rio Grande",
         "newsworthinessScore": 100,
         "status": "verified-standard-single-source",
         "scoreBreakdown": {
@@ -158,44 +196,6 @@
         }
       },
       {
-        "storyId": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
-        "headlineSeed": "Publicidad + artículos patrocinados",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|ushuaia|argentina|informa|2019-01-19",
-        "headlineSeed": "Política de privacidad",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
         "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
         "topic": "turismo",
@@ -237,11 +237,93 @@
   },
   "stories": [
     {
+      "storyId": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
+      "headlineSeed": "Publicidad + artículos patrocinados",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tierra del Fuego"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T16:36:15.993Z",
+      "lastSeenAt": "2026-07-14T19:38:45.091Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 100,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|ushuaia|argentina|informa|2019-01-19",
+      "headlineSeed": "Política de privacidad",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ushuaia",
+        "Argentina"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T16:36:15.993Z",
+      "lastSeenAt": "2026-07-14T19:38:45.091Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 100,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "service|inflacion|junio|menor|patagonia|registro|rio grande|ushuaia|2026-07-14",
       "headlineSeed": "La inflación de junio fue del 1,9% y la Patagonia registró la menor suba del país",
       "topic": "servicios",
       "subtopic": "servicios",
-      "territory": "Ushuaia",
+      "territory": "Rio Grande",
       "primaryEntities": [
         "Ministerio",
         "Gobierno",
@@ -516,88 +598,6 @@
       },
       "newsworthinessScore": 100,
       "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|articulos|patrocinados|publicidad|ushuaia|tierra del fuego|2026-01-01",
-      "headlineSeed": "Publicidad + artículos patrocinados",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-14T16:36:15.993Z",
-      "lastSeenAt": "2026-07-14T16:36:15.993Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|ushuaia|argentina|informa|2019-01-19",
-      "headlineSeed": "Política de privacidad",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Argentina"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-14T16:36:15.993Z",
-      "lastSeenAt": "2026-07-14T16:36:15.993Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -1368,7 +1368,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 21,
@@ -1382,7 +1382,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -1415,7 +1415,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1429,7 +1429,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2054,48 +2054,6 @@
         "story-headline-mismatch",
         "topic-event-mismatch"
       ]
-    },
-    {
-      "storyId": "general|apropiarse|intervencion|objetivo|puerto|recaudar|tenia|unico|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "\"El único objetivo que tenía la intervención era recaudar y apropiarse de un puerto\" - Actualidad TDF",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Dirección Provincial",
-        "Ministerio de Turismo de Nación",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.995Z",
-      "lastSeenAt": "2026-07-14T16:36:15.995Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "breaking",
-      "publicInterestScore": 15,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 15,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 12,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 99,
-      "status": "verified-local-routine",
-      "validationReasons": []
     },
     {
       "storyId": "territorial-sovereignty|gobierno|camara de diputados|ministerio de relaciones exteriores|tierra del fuego|islas malvinas|argentina|chile|informa|2026-07-14",
@@ -4006,6 +3964,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|apropiarse|intervencion|objetivo|puerto|recaudar|tenia|unico|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "\"El único objetivo que tenía la intervención era recaudar y apropiarse de un puerto\" - Actualidad TDF",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Dirección Provincial",
+        "Ministerio de Turismo de Nación",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.995Z",
+      "lastSeenAt": "2026-07-14T19:38:45.093Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "today",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 12,
+        "searchPotential": 13,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 93,
+      "status": "verified-local-routine",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
       "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
       "topic": "turismo",
@@ -4182,6 +4182,44 @@
       },
       "newsworthinessScore": 93,
       "status": "verified",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|policia|informa|2026-07-14",
+      "headlineSeed": "Córdoba: un joven de 20 años murió con el 95% del cuerpo quemado y su familia sospecha de su pareja",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T19:38:45.092Z",
+      "lastSeenAt": "2026-07-14T19:38:45.092Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -5600,6 +5638,44 @@
       ]
     },
     {
+      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-14T16:36:15.995Z",
+      "lastSeenAt": "2026-07-14T19:38:45.094Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 17,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 17,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|justicia|internacional|francia|informa|2026-07-14",
       "headlineSeed": "Francia: desfile militar del Día de la Bastilla con Ucrania como protagonista",
       "topic": "politica",
@@ -5992,48 +6068,6 @@
       "validationReasons": [
         "story-headline-mismatch"
       ]
-    },
-    {
-      "storyId": "general|indec|inflacion|junio|meses|segun|2026-07-14",
-      "headlineSeed": "La inflación de junio fue de 1,9% según el INDEC, la más baja en 10 meses",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Banco Central",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T19:25:40.586Z",
-      "lastSeenAt": "2026-07-14T19:25:40.586Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 87,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
     },
     {
       "storyId": "general|acumulado|indec|inflacion|junio|primer|semestre|2026-07-14",
@@ -11892,6 +11926,54 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|contra|dificil|estamos|gonzalo|inglaterra|montiel|palpito|malvinas|2026-07-14",
+      "headlineSeed": "Gonzalo Montiel palpitó la semifinal contra Inglaterra: “Es un rival difícil, pero estamos preparados”",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Gonzalo Montiel",
+        "Malvinas",
+        "Kansas",
+        "Argentina",
+        "Egipto",
+        "Inglaterra",
+        "Francia",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T19:38:45.092Z",
+      "lastSeenAt": "2026-07-14T19:38:45.092Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|gobierno el|gobierno y|gobierno|adrian ravier|casa de gobierno|informa|2026-07-14",
       "headlineSeed": "“Blindar” la propiedad privada: los detalles que dio Adrián Ravier sobre el proyecto del Gobierno",
       "topic": "politica",
@@ -13452,47 +13534,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|abuso|acusado|agosto|contra|entrenaba|futsal|juicio|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-14T16:36:15.995Z",
-      "lastSeenAt": "2026-07-14T16:36:15.995Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 17,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 17,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-strict",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "general|abordaron|agenda|austral|comun|cooperacion|finlandia|generar|ushuaia|tierra del fuego|2026-07-14",
       "headlineSeed": "Tierra del Fuego y Finlandia abordaron los puntos para generar una agenda común de cooperación - Reporte Austral",
       "topic": "sociedad",
@@ -13765,48 +13806,6 @@
       },
       "newsworthinessScore": 71,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|belgica|espana|2026-07-11|2-1",
-      "headlineSeed": "Deportes - España derrota a Bélgica y se da cita con Francia en semifinales",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-11T13:27:27.734Z",
-      "lastSeenAt": "2026-07-12T17:03:51.700Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "verified-strict",
       "validationReasons": []
     }
   ]
