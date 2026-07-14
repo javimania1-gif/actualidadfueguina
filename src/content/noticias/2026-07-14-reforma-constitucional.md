@@ -1,14 +1,14 @@
 ---
-title: "La reforma constitucional en Tierra del Fuego reactiva el debate político y expone fisuras en el oficialismo"
-description: "Melella insiste con la reforma constitucional, mientras la vicegobernadora Urquiza toma distancia de una iniciativa muy cuestionada por la oposición."
-category: "Política"
-date: 2026-07-14T10:00:00-03:00
+title: "Mónica Urquiza sobre la reforma constitucional: 'Parece más un capricho del Gobernador que una necesidad real'"
+description: "La vicegobernadora de Tierra del Fuego expuso abiertamente las fisuras en el oficialismo al cuestionar la urgencia y el costo de la convocatoria a elecciones constituyentes impulsada por Gustavo Melella."
+category: "Provincia"
+date: 2026-07-14T17:21:55.334Z
 detectedAt: 2026-07-14T10:00:00-03:00
 author: "Redacción"
 featured: false
 image: "/uploads/auto/plate-2026-07-14-reforma-constitucional.jpg"
-imageAlt: "Legislatura de Tierra del Fuego"
-location: "Provincia"
+imageAlt: "Mónica Urquiza, Vicegobernadora de Tierra del Fuego"
+location: "Tierra del Fuego AIAS"
 sourceName: "Producción Propia"
 sourceUrl: "https://actualidadfueguina.com.ar"
 tags:

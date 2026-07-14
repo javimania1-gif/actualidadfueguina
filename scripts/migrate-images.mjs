@@ -57,19 +57,17 @@ async function chooseLocalImage({ slug, data }) {
   }
 
   if (image.startsWith('http')) {
-    if (isOfficialDomain(image, officialDomains)) {
-      const normalized = await normalizeImageAsset(image, {
-        seed: slug,
-        purpose: 'web'
-      });
-      if (normalized.ok) {
-        return { image: normalized.publicPath, reason: 'official-image-normalized' };
-      }
+    const normalized = await normalizeImageAsset(image, {
+      seed: slug,
+      purpose: 'web'
+    });
+    if (normalized.ok) {
+      return { image: normalized.publicPath, reason: 'external-image-normalized' };
     }
-
+    
     return {
       image: await makePlate({ slug, title: data.title, category: data.category }),
-      reason: 'external-image-replaced-with-plate'
+      reason: 'external-image-normalization-failed'
     };
   }
 
