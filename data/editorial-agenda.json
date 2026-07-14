@@ -1,48 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T19:09:08.292Z",
+  "generatedAt": "2026-07-14T19:27:50.238Z",
   "summary": {
-    "totalStories": 919,
+    "totalStories": 931,
     "byStatus": {
+      "verified-standard-single-source": 449,
       "conflicting-sources": 43,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "pending-verification": 63,
-      "verified-standard-single-source": 437,
+      "pending-verification": 60,
       "verified-local-routine": 11,
       "agenda-invalid": 61,
       "published": 59,
-      "rejected-terminal": 160,
+      "rejected-terminal": 163,
       "verified-standard": 14,
       "verified": 33,
       "verified-strict": 30
     },
     "byTopic": {
-      "servicios": 131,
+      "servicios": 133,
       "turismo": 18,
       "agenda": 28,
       "politica": 134,
-      "deportes": 192,
-      "sociedad": 312,
-      "educacion": 22,
+      "deportes": 195,
+      "sociedad": 316,
+      "educacion": 23,
       "salud": 4,
-      "economia": 27,
+      "economia": 29,
       "policiales": 44,
       "cultura": 7
     },
     "byTerritory": {
-      "Ushuaia": 59,
-      "Mundo": 423,
+      "Ushuaia": 60,
+      "Mundo": 431,
       "Rio Grande": 63,
-      "Malvinas": 47,
+      "Malvinas": 48,
       "Tolhuin": 11,
-      "Nacionales": 234,
+      "Nacionales": 236,
       "Provincia": 17,
       "Antartida": 6,
       "unknown": 59
     },
     "invalidStories": 61,
     "topStories": [
+      {
+        "storyId": "service|inflacion|junio|menor|patagonia|registro|rio grande|ushuaia|2026-07-14",
+        "headlineSeed": "La inflación de junio fue del 1,9% y la Patagonia registró la menor suba del país",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "verified-standard-single-source",
+        "scoreBreakdown": {
+          "publicInterest": 24,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
@@ -213,29 +232,59 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "agenda|celebro|comunidad|fueguina|radio|rio grande|tolhuin|2026-07-13",
-        "headlineSeed": "Río Grande celebró en comunidad sus 105 años – La 97 Radio Fueguina",
-        "topic": "agenda",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 12,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 15,
-          "searchPotential": 13,
-          "recency": 9,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|inflacion|junio|menor|patagonia|registro|rio grande|ushuaia|2026-07-14",
+      "headlineSeed": "La inflación de junio fue del 1,9% y la Patagonia registró la menor suba del país",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ministerio",
+        "Gobierno",
+        "Banco Central",
+        "Ministerio de Economía",
+        "Banco Santander",
+        "Justicia de Nueva York",
+        "Banco Central y",
+        "ANSES",
+        "Rio Grande",
+        "Ushuaia"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T19:25:40.584Z",
+      "lastSeenAt": "2026-07-14T19:25:40.584Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 24,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 24,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
     {
       "storyId": "weather-forecast|2026-07-14|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 14 de julio de 2026",
@@ -1039,7 +1088,7 @@
         "A"
       ],
       "editorialLane": "fast",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -1053,7 +1102,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -2387,58 +2436,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|r",
-      "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Relaciones Internacionales",
-        "Santa Fe",
-        "Claudio Díaz",
-        "Gobierno",
-        "Universidad Nacional de",
-        "Universidad Nacional de Rosario",
-        "Secretaría de Vocería Presidencial y la",
-        "Secretaría de Comunicación y Medios",
-        "Tierra del Fuego",
-        "Islas Malvinas"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T21:02:32.971Z",
-      "lastSeenAt": "2026-07-14T13:53:21.762Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 98,
-      "status": "agenda-invalid",
-      "sourceStatus": "rejected-terminal",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "international-conflict|universidad de el salvador|ministerio de relaciones exteriores|ministerio de defensa|andres cisneros|malvinas|antartida|argentina|brasil|informa|2026-07-13",
       "headlineSeed": "Malvinas: el estrecho de Magallanes como el de Ormuz, ¿un arma militar argentina?",
       "topic": "politica",
@@ -2538,58 +2535,6 @@
       "newsworthinessScore": 98,
       "status": "verified-standard-single-source",
       "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|u",
-      "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Relaciones Internacionales",
-        "Santa Fe",
-        "Claudio Díaz",
-        "Gobierno",
-        "Universidad Nacional de",
-        "Universidad Nacional de Rosario",
-        "Secretaría de Vocería Presidencial y la",
-        "Secretaría de Comunicación y Medios",
-        "Banco Central",
-        "Tierra del Fuego"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T14:42:54.138Z",
-      "lastSeenAt": "2026-07-13T18:00:09.123Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 98,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "agenda|fiesta|gasto|gobierno|invierno|menos|millones|nacional|ushuaia|tierra del fuego|2026-07-13",
@@ -2825,47 +2770,6 @@
       },
       "newsworthinessScore": 97,
       "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Santa Cruz",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:49:57.208Z",
-      "lastSeenAt": "2026-07-14T16:49:57.208Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "breaking",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 12,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 96,
-      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -3860,6 +3764,58 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|r",
+      "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Relaciones Internacionales",
+        "Santa Fe",
+        "Claudio Díaz",
+        "Gobierno",
+        "Universidad Nacional de",
+        "Universidad Nacional de Rosario",
+        "Secretaría de Vocería Presidencial y la",
+        "Secretaría de Comunicación y Medios",
+        "Tierra del Fuego",
+        "Islas Malvinas"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-13T21:02:32.971Z",
+      "lastSeenAt": "2026-07-14T13:53:21.762Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "agenda-invalid",
+      "sourceStatus": "rejected-terminal",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "territorial-sovereignty|santiago martella|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
       "headlineSeed": "La carta del hijo de un soldado que murió en Malvinas antes del Argentina-Inglaterra: “El deporte no repara las pérdidas”",
       "topic": "politica",
@@ -3904,6 +3860,58 @@
       "newsworthinessScore": 94,
       "status": "conflicting-sources",
       "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|u",
+      "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Relaciones Internacionales",
+        "Santa Fe",
+        "Claudio Díaz",
+        "Gobierno",
+        "Universidad Nacional de",
+        "Universidad Nacional de Rosario",
+        "Secretaría de Vocería Presidencial y la",
+        "Secretaría de Comunicación y Medios",
+        "Banco Central",
+        "Tierra del Fuego"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-13T14:42:54.138Z",
+      "lastSeenAt": "2026-07-13T18:00:09.123Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "general|estara|semana|tiempo|rio grande|ushuaia|2026-07-10",
@@ -3998,47 +4006,44 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|gobierno|justicia|coalicion civica|javier milei|argentina|informa|2026-07-14",
-      "headlineSeed": "Carrió salió al cruce del proyecto para flexibilizar la venta de tierras a extranjeros: “Califica como traición...”",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
+      "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Provincia",
       "primaryEntities": [
-        "Coalición Cívica",
-        "Javier Milei",
-        "Gobierno",
-        "Justicia",
-        "Argentina"
+        "Santa Cruz",
+        "Tierra del Fuego AIAS"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T13:53:21.765Z",
-      "lastSeenAt": "2026-07-14T13:53:21.765Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:49:57.208Z",
+      "lastSeenAt": "2026-07-14T16:49:57.208Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
+      "editorialLane": "fast",
+      "freshness": "today",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 13,
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
+        "publicInterest": 12,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 12,
+        "searchPotential": 13,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 93,
-      "status": "verified-standard-single-source",
+      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -5229,6 +5234,50 @@
       "validationReasons": []
     },
     {
+      "storyId": "territorial-sovereignty|gobierno|justicia|coalicion civica|javier milei|argentina|informa|2026-07-14",
+      "headlineSeed": "Carrió salió al cruce del proyecto para flexibilizar la venta de tierras a extranjeros: “Califica como traición...”",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Coalición Cívica",
+        "Javier Milei",
+        "Gobierno",
+        "Justicia",
+        "Argentina"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-14T13:53:21.765Z",
+      "lastSeenAt": "2026-07-14T13:53:21.765Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 90,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|anses y arca|argentina|informa|2026-07-14",
       "headlineSeed": "El plan de pagos de ARCA bajo la lupa: por qué no es una moratoria y a quiénes beneficia realmente",
       "topic": "politica",
@@ -5406,7 +5455,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 90,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -5945,6 +5994,48 @@
       ]
     },
     {
+      "storyId": "general|indec|inflacion|junio|meses|segun|2026-07-14",
+      "headlineSeed": "La inflación de junio fue de 1,9% según el INDEC, la más baja en 10 meses",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco Central",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T19:25:40.586Z",
+      "lastSeenAt": "2026-07-14T19:25:40.586Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|acumulado|indec|inflacion|junio|primer|semestre|2026-07-14",
       "headlineSeed": "Se supo el dato de inflación de junio de 2026 del INDEC y el acumulado en el primer semestre",
       "topic": "economia",
@@ -6291,48 +6382,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|argentina|ascender|aspirantes|confiar|2026-07-13",
-      "headlineSeed": "La Argentina perdió el medio: ¿confiar en los generales o ascender a los aspirantes?",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Kansas",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-13T11:17:50.738Z",
-      "lastSeenAt": "2026-07-13T19:43:04.702Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 86,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|banco central|camara|banco central y|milei|argentina|peru|informa|2026-07-13",
       "headlineSeed": "Milei vuelve a reunirse con diputados y senadores por la reforma de la carta orgánica del Banco Central",
       "topic": "politica",
@@ -6604,48 +6653,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|alimentos|desaceleracion|fuerte|inflacion|junio|meses|perforo|2026-07-14",
-      "headlineSeed": "La inflación perforó el 2% en junio por primera vez en 10 meses, con una fuerte desaceleración de alimentos",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Uruguay",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T19:07:24.960Z",
-      "lastSeenAt": "2026-07-14T19:07:24.960Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|policia|camara de los comunes|policia nacional antiterrorista|ann widdecombe|paris|internacional|reino unido|informa|2026-07-13",
       "headlineSeed": "Ann Widdecombe, la exministra que conquistó a los británicos, víctima de un posible atentado terrorista",
       "topic": "policiales",
@@ -6856,6 +6863,48 @@
         "socialPotential": 9,
         "searchPotential": 7,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|argentina|argentina|ascender|aspirantes|confiar|2026-07-13",
+      "headlineSeed": "La Argentina perdió el medio: ¿confiar en los generales o ascender a los aspirantes?",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Kansas",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-13T11:17:50.738Z",
+      "lastSeenAt": "2026-07-13T19:43:04.702Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -9817,46 +9866,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|odesa tambien kiev|internacional|informa|2026-07-11",
-      "headlineSeed": "7 muertos en Ucrania por ataques rusos contra Sumi y Odesa",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-11T19:10:07.368Z",
-      "lastSeenAt": "2026-07-11T22:55:19.525Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|gobierno|banco centra|banco central|juan carlos|milei|argentina|estados unidos|informa|2026-07-11",
       "headlineSeed": "La fuerte advertencia de Juan Carlos de Pablo sobre el plan que obsesiona a Milei: “No hay forma de resistir”",
       "topic": "politica",
@@ -12366,6 +12375,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|odesa tambien kiev|internacional|informa|2026-07-11",
+      "headlineSeed": "7 muertos en Ucrania por ataques rusos contra Sumi y Odesa",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-11T19:10:07.368Z",
+      "lastSeenAt": "2026-07-11T22:55:19.525Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|omar bula escobar|naciones unidas|gustavo petro|internacional|ecuador|brasil|informa|2026-07-09",
       "headlineSeed": "Abelardo De la Espriella nombra a su futuro canciller para \"reposicionar\" a Colombia como aliado de Estados Unidos",
       "topic": "deportes",
@@ -13758,47 +13807,6 @@
       },
       "newsworthinessScore": 71,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|caida|doble|durante|edificio|fallecida|familia|grite|2026-07-11",
-      "headlineSeed": "\"Grité y grité\": habló el único sobreviviente de una familia fallecida durante la caída de un edificio en el doble terremoto de Venezuela",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "La Guaira",
-        "Venezuela"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T02:53:04.045Z",
-      "lastSeenAt": "2026-07-11T02:53:04.045Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 16,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 16,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "published",
       "validationReasons": []
     }
   ]
