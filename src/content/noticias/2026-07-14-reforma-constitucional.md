@@ -6,8 +6,8 @@ date: 2026-07-14T17:21:55.334Z
 detectedAt: 2026-07-14T10:00:00-03:00
 author: "Redacción"
 featured: false
-image: "/uploads/auto/legislatura_tdf.jpg"
-imageAlt: "Legislatura de Tierra del Fuego"
+image: "/uploads/auto/urquiza.jpg"
+imageAlt: "Mónica Urquiza, Vicegobernadora de Tierra del Fuego"
 location: "Tierra del Fuego AIAS"
 sourceName: "Producción Propia"
 sourceUrl: "https://actualidadfueguina.com.ar"
