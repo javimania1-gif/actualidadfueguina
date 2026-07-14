@@ -240,7 +240,13 @@ export function extractFingerprint(title) {
 
 export function isGenericTitle(title) {
   if (!title || title.length < 15) return true;
-  const words = normalizeText(title).match(/\b[a-z0-9]{4,}\b/g) || [];
+  
+  const norm = normalizeText(title);
+  if (/(privacidad|publicidad|condiciones de uso|terms of service|pol[íi]tica de|cookie|legal|quienes somos|contacto)/.test(norm)) {
+    return true;
+  }
+  
+  const words = norm.match(/\b[a-z0-9]{4,}\b/g) || [];
   const meaningfulWords = words.filter((word) => !GENERIC_TITLE_WORDS.has(word));
   return meaningfulWords.length < 2;
 }
