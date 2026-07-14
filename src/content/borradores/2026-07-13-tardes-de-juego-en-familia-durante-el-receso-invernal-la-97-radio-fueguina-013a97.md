@@ -8,7 +8,7 @@ sourceName: "Radio Fueguina"
 sourceUrl: "https://www.radiofueguina.com/2026/07/tardes-de-juego-en-familia-durante-el-receso-invernal/"
 originalImage: "https://www.radiofueguina.com/wp-content/uploads/2026/07/photo_2026-07-12_22-43-34.jpg"
 status: "draft"
-detectedAt: "2026-07-13T19:44:07.475Z"
+detectedAt: "2026-07-13T23:00:56.586Z"
 mode: "discovery-review"
 ---
 

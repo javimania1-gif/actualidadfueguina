@@ -8,7 +8,7 @@ sourceName: "Municipio de Río Grande"
 sourceUrl: "https://info.riogrande.gob.ar/el-mercado-en-tu-barrio-ratifico-su-acompanamiento-a-la-economia-de-las-familias-riograndenses"
 originalImage: "https://info.riogrande.gob.ar/wp-content/uploads/2026/07/des.jpg"
 status: "draft"
-detectedAt: "2026-07-13T19:43:48.375Z"
+detectedAt: "2026-07-13T23:00:50.032Z"
 mode: "official-review"
 ---
 
