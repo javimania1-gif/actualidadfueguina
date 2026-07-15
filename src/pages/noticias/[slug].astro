@@ -85,16 +85,21 @@ const jsonLd = {
   </script>
 </BaseLayout>
 
-<script>
+<script is:inline define:vars={{ articleTitle: nota.data.title, articleUrl: Astro.url.href }}>
   const shareBtn = document.getElementById('share-native');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'share' });
+      window.dataLayer.push({ 
+        event: 'share',
+        method: navigator.share ? 'native_share' : 'copy_link',
+        content_type: 'article',
+        item_id: articleUrl
+      });
       if (navigator.share) {
         try {
           await navigator.share({
-            title: document.title,
+            title: articleTitle,
             url: window.location.href
           });
         } catch (err) {
@@ -110,9 +115,35 @@ const jsonLd = {
   // Trackear clics en botones sociales normales
   document.querySelectorAll('.btn-share:not(#share-native)').forEach(btn => {
     btn.addEventListener('click', () => {
+      let method = 'unknown';
+      if (btn.classList.contains('fb')) method = 'facebook';
+      if (btn.classList.contains('x')) method = 'x_twitter';
+      if (btn.classList.contains('wa')) method = 'whatsapp';
+      
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'share' });
+      window.dataLayer.push({ 
+        event: 'share',
+        method: method,
+        content_type: 'article',
+        item_id: articleUrl
+      });
     });
+  });
+  
+  // Track scroll depth
+  let scrollMarks = { 25: false, 50: false, 75: false, 90: false };
+  window.addEventListener('scroll', () => {
+    let scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    for (const mark in scrollMarks) {
+      if (scrollPercent >= mark && !scrollMarks[mark]) {
+        scrollMarks[mark] = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'scroll_depth',
+          percent_scrolled: parseInt(mark)
+        });
+      }
+    }
   });
 </script>
 

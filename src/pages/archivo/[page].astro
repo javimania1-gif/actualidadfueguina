@@ -37,13 +37,31 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
       </div>
 
       <div class="pagination">
-        {page.url.prev ? <a class="btn" href={page.url.prev}>&laquo; Más recientes</a> : <span class="btn disabled">&laquo; Más recientes</span>}
+        {page.url.prev ? <a class="btn btn-prev" href={page.url.prev}>&laquo; Más recientes</a> : <span class="btn disabled">&laquo; Más recientes</span>}
         <span class="page-info">Página {page.currentPage} de {page.lastPage}</span>
-        {page.url.next ? <a class="btn" href={page.url.next}>Más antiguas &raquo;</a> : <span class="btn disabled">Más antiguas &raquo;</span>}
+        {page.url.next ? <a class="btn btn-next" href={page.url.next}>Más antiguas &raquo;</a> : <span class="btn disabled">Más antiguas &raquo;</span>}
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script is:inline define:vars={{ currentPage: page.currentPage }}>
+  document.querySelectorAll('.btn-prev, .btn-next').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const isNext = btn.classList.contains('btn-next');
+      const direction = isNext ? 'next' : 'previous';
+      const toPage = isNext ? currentPage + 1 : currentPage - 1;
+      
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'archive_navigation',
+        direction: direction,
+        from_page: currentPage,
+        to_page: toPage
+      });
+    });
+  });
+</script>
 
 <style>
   .pagination {
