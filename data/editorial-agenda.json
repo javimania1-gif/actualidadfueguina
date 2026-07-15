@@ -1,48 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T10:09:23.226Z",
+  "generatedAt": "2026-07-15T13:54:13.843Z",
   "summary": {
-    "totalStories": 1017,
+    "totalStories": 1021,
     "byStatus": {
-      "conflicting-sources": 50,
-      "published": 68,
-      "verified-standard-single-source": 514,
+      "pending-verification": 57,
+      "conflicting-sources": 51,
+      "published": 72,
+      "verified-standard-single-source": 526,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "pending-verification": 55,
       "verified-local-routine": 10,
-      "agenda-invalid": 64,
-      "rejected-terminal": 172,
+      "agenda-invalid": 62,
+      "rejected-terminal": 165,
       "verified-standard": 14,
-      "verified": 31,
-      "verified-strict": 31
+      "verified": 23,
+      "verified-strict": 33
     },
     "byTopic": {
-      "servicios": 152,
+      "servicios": 155,
       "turismo": 18,
       "agenda": 28,
-      "politica": 143,
-      "sociedad": 340,
-      "deportes": 214,
-      "salud": 4,
-      "economia": 38,
-      "educacion": 27,
+      "politica": 144,
+      "sociedad": 338,
+      "deportes": 215,
       "policiales": 46,
-      "cultura": 7
+      "salud": 4,
+      "economia": 40,
+      "educacion": 27,
+      "cultura": 6
     },
     "byTerritory": {
-      "Ushuaia": 61,
-      "Rio Grande": 63,
-      "Mundo": 476,
-      "Tolhuin": 11,
-      "Nacionales": 256,
-      "Malvinas": 58,
+      "Mundo": 488,
+      "Ushuaia": 60,
+      "Rio Grande": 60,
+      "Tolhuin": 9,
+      "Nacionales": 253,
+      "Malvinas": 59,
       "Antartida": 6,
-      "Provincia": 18,
-      "unknown": 68
+      "Provincia": 17,
+      "unknown": 69
     },
-    "invalidStories": 64,
+    "invalidStories": 62,
     "topStories": [
+      {
+        "storyId": "service|colombiana|confirmo|desaparecida|edomex|fiscalia|monica|muerte|2026-07-15",
+        "headlineSeed": "Fiscalía confirmó la muerte de Mónica Núñez, colombiana reportada como desaparecida en Edomex",
+        "topic": "servicios",
+        "territory": "Mundo",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 21,
+          "localRelevance": 7,
+          "impactMagnitude": 21,
+          "serviceValue": 20,
+          "socialPotential": 7,
+          "searchPotential": 15,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "weather-forecast|2026-07-15|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 15 de julio de 2026",
@@ -213,29 +232,56 @@
           "sourceStrength": 8,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
-        "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
-        "topic": "turismo",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-local-routine",
-        "scoreBreakdown": {
-          "publicInterest": 15,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 15,
-          "socialPotential": 15,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|colombiana|confirmo|desaparecida|edomex|fiscalia|monica|muerte|2026-07-15",
+      "headlineSeed": "Fiscalía confirmó la muerte de Mónica Núñez, colombiana reportada como desaparecida en Edomex",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Mónica Núñez",
+        "Fiscalía",
+        "Fiscalía General de Justicia de",
+        "Fiscalía de Hidalgo",
+        "Argentina",
+        "Colombia",
+        "Mexico"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-15T13:50:55.179Z",
+      "lastSeenAt": "2026-07-15T13:50:55.179Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
     {
       "storyId": "weather-forecast|2026-07-15|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 15 de julio de 2026",
@@ -792,51 +838,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|advirtio|debilita|diego|escuela|homeschooling|inclusivo|modelo|rio grande|tierra del fuego|2026-07-13",
-      "headlineSeed": "Diego Romero advirtió que el homeschooling “rompe con el modelo inclusivo” y debilita el rol social de la escuela | radiouniversidad.com.ar",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Diego Romero",
-        "Gobierno",
-        "Cámara de Diputados",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T23:08:14.816Z",
-      "lastSeenAt": "2026-07-14T13:53:21.761Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|colombiano|murio|oficial|operativo|relato|testigos|version|2026-07-14",
       "headlineSeed": "El operativo de ICE en el que murió un colombiano en EE. UU.: la versión oficial y el relato de los testigos",
       "topic": "servicios",
@@ -857,7 +858,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 21,
@@ -871,57 +872,12 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|abren|aprender|escuelas|jugando|puertas|rompehielos|vacaciones|rio grande|ushuaia|2026-07-13",
-      "headlineSeed": "Las escuelas abren sus puertas en vacaciones para aprender jugando en Tierra del Fuego - El Rompehielos",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Ministerio de Educación",
-        "Rio Grande",
-        "Ushuaia",
-        "Tolhuin",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-14T02:44:06.261Z",
-      "lastSeenAt": "2026-07-14T13:53:21.760Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
         "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 100,
-      "status": "verified-standard-single-source",
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -946,7 +902,7 @@
         "A"
       ],
       "editorialLane": "fast",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -960,7 +916,7 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -1416,7 +1372,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-context",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 21,
@@ -1430,7 +1386,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -1774,51 +1730,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "agenda|abrio|convocatoria|docentes|incorporar|ingles|isprg|radiouniversidad|rio grande|tierra del fuego|2026-07-13",
-      "headlineSeed": "El ISPRG abrió una convocatoria para incorporar docentes de Inglés | radiouniversidad.com.ar",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "UTN Tierra de",
-        "UTN la",
-        "UTN",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-13T23:00:26.709Z",
-      "lastSeenAt": "2026-07-14T13:53:21.761Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 13,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 99,
-      "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|controles|estudiantiles|invernales|radiouniversidad|refuerza|temporada|viajes|rio grande|ushuaia|2026-07-13",
       "headlineSeed": "CNRT refuerza los controles en Tierra del Fuego ante la temporada de viajes estudiantiles e invernales | radiouniversidad.com.ar",
       "topic": "servicios",
@@ -1837,6 +1748,51 @@
       ],
       "eventType": "service",
       "firstSeenAt": "2026-07-13T23:00:26.709Z",
+      "lastSeenAt": "2026-07-14T13:53:21.761Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 11,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 99,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|advirtio|debilita|diego|escuela|homeschooling|inclusivo|modelo|rio grande|tierra del fuego|2026-07-13",
+      "headlineSeed": "Diego Romero advirtió que el homeschooling “rompe con el modelo inclusivo” y debilita el rol social de la escuela | radiouniversidad.com.ar",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Diego Romero",
+        "Gobierno",
+        "Cámara de Diputados",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T23:08:14.816Z",
       "lastSeenAt": "2026-07-14T13:53:21.761Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
@@ -2205,54 +2161,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|elecciones|tolhuin|tierra|tolhuin|tierra del fuego|informa|23 de octubre",
-      "headlineSeed": "Elecciones 2023 en Tolhuin, Tierra del Fuego, Antártida e Islas del Atlántico Sur: quién fue el candidato presidencial más votado",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Elecciones",
-        "Tolhuin",
-        "Tierra",
-        "Fuego",
-        "Antártida",
-        "Islas",
-        "Atlántico Sur",
-        "Explorá",
-        "Tierra del Fuego"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-08T15:28:59.141Z",
-      "lastSeenAt": "2026-07-08T15:45:51.569Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 98,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "agenda|celebro|comunidad|fueguina|radio|rio grande|tolhuin|2026-07-13",
       "headlineSeed": "Río Grande celebró en comunidad sus 105 años – La 97 Radio Fueguina",
       "topic": "agenda",
@@ -2431,6 +2339,51 @@
         "socialPotential": 4,
         "searchPotential": 8,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 96,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|abren|aprender|escuelas|jugando|puertas|rompehielos|vacaciones|rio grande|ushuaia|2026-07-13",
+      "headlineSeed": "Las escuelas abren sus puertas en vacaciones para aprender jugando en Tierra del Fuego - El Rompehielos",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Ministerio de Educación",
+        "Rio Grande",
+        "Ushuaia",
+        "Tolhuin",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-14T02:44:06.261Z",
+      "lastSeenAt": "2026-07-14T13:53:21.760Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -2819,47 +2772,48 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|seleccion argentina|rio grande|malvinas|argentina|informa|2026-07-14",
-      "headlineSeed": "La Selección Argentina ya firmó la camiseta que será entregada al Centro de Veteranos de Guerra de Malvinas - Actualidad TDF",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
+      "storyId": "agenda|abrio|convocatoria|docentes|incorporar|ingles|isprg|radiouniversidad|rio grande|tierra del fuego|2026-07-13",
+      "headlineSeed": "El ISPRG abrió una convocatoria para incorporar docentes de Inglés | radiouniversidad.com.ar",
+      "topic": "agenda",
+      "subtopic": "agenda",
+      "territory": "Rio Grande",
       "primaryEntities": [
-        "Selección Argentina",
+        "UTN Tierra de",
+        "UTN la",
+        "UTN",
         "Rio Grande",
-        "Malvinas",
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T13:53:21.762Z",
-      "lastSeenAt": "2026-07-14T13:53:21.762Z",
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-13T23:00:26.709Z",
+      "lastSeenAt": "2026-07-14T13:53:21.761Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 12,
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 95,
-      "status": "verified-standard-single-source",
+      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -3340,6 +3294,98 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|policia|distrito judicial sur|ushuaia|tierra del fuego aias|informa|2026-07-15",
+      "headlineSeed": "Allanamiento positivo en Ushuaia por una causa de robo - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Distrito Judicial Sur",
+        "Policia",
+        "Ushuaia",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-15T13:50:55.180Z",
+      "lastSeenAt": "2026-07-15T13:50:55.180Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 5,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|camara de diputados y de|gobierno|camara de diputados y|junta preparatoria|congreso bicameral|miguel torres|argentina|peru|informa|2026-07-15",
+      "headlineSeed": "Junta Preparatoria del Congreso Bicameral inicia hoy sus funciones",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Junta Preparatoria",
+        "Congreso Bicameral",
+        "Miguel Torres",
+        "Cámara de Diputados y de",
+        "Gobierno",
+        "Cámara de Diputados y",
+        "Cámara de Diputados",
+        "Cámara de Senadores",
+        "Argentina",
+        "Peru"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-15T13:50:55.178Z",
+      "lastSeenAt": "2026-07-15T13:50:55.178Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|banco central el|banco central|banco|propiedad privada|argentina|informa|2026-07-14",
       "headlineSeed": "\"Podrá volver el populismo\": la cruda advertencia de Ravier para justificar el cerrojo sobre el Banco Central",
       "topic": "politica",
@@ -3635,89 +3681,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Santa Cruz",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:49:57.208Z",
-      "lastSeenAt": "2026-07-14T20:02:06.508Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 12,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|apropiarse|intervencion|objetivo|puerto|recaudar|tenia|unico|tierra del fuego aias|2026-07-14",
-      "headlineSeed": "\"El único objetivo que tenía la intervención era recaudar y apropiarse de un puerto\" - Actualidad TDF",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Dirección Provincial",
-        "Ministerio de Turismo de Nación",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.995Z",
-      "lastSeenAt": "2026-07-14T19:38:45.093Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 12,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
-      "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
       "storyId": "legal-policy|municipio de ushuaia|policia|rio grande|ushuaia|argentina|inglaterra|informa|2026-07-14",
       "headlineSeed": "Inmobiliarias en Ushuaia: guía del mercado inmobiliario 2026",
       "topic": "politica",
@@ -3860,26 +3823,21 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|invasiones inglesas|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
-      "headlineSeed": "Antes de las semifinales del Mundial: las guerras que enfrentaron a la Argentina con Inglaterra, España y Francia",
+      "storyId": "territorial-sovereignty|seleccion argentina|rio grande|malvinas|argentina|informa|2026-07-14",
+      "headlineSeed": "La Selección Argentina ya firmó la camiseta que será entregada al Centro de Veteranos de Guerra de Malvinas - Actualidad TDF",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Malvinas",
       "primaryEntities": [
-        "Invasiones Inglesas",
-        "Islas Malvinas",
+        "Selección Argentina",
+        "Rio Grande",
         "Malvinas",
-        "Buenos Aires",
-        "Atlantico Sur",
         "Tierra del Fuego AIAS",
-        "Argentina",
-        "Mexico",
-        "Reino Unido",
-        "Inglaterra"
+        "Argentina"
       ],
       "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T02:44:06.259Z",
-      "lastSeenAt": "2026-07-14T10:03:21.588Z",
+      "firstSeenAt": "2026-07-14T13:53:21.762Z",
+      "lastSeenAt": "2026-07-14T13:53:21.762Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -4399,52 +4357,48 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|19 de noviembre",
-      "headlineSeed": "Resultados Elecciones 2023 en Tolhuin, Tierra del Fuego, Antártida e Islas del Atlántico Sur: quién ganó el balotaje y cuántos votos sacó",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Tolhuin",
+      "storyId": "international-conflict|ministerio de|the new york times|mahmud ahmadineyad|londres|internacional|estados unidos|informa|2026-07-15",
+      "headlineSeed": "La oficina del ex líder de Irán niega un informe de The New York Times sobre un complot israelí para elevarlo al poder",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Resultados Elecciones",
-        "Tolhuin",
-        "Tierra",
-        "Fuego",
-        "Antártida",
-        "Islas",
-        "Atlántico Sur",
-        "Mirá",
-        "Argentina",
-        "Rio Grande"
+        "The New York Times",
+        "Mahmud Ahmadineyad",
+        "Ministerio de",
+        "Londres",
+        "Internacional",
+        "Estados Unidos"
       ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-08T15:28:59.142Z",
-      "lastSeenAt": "2026-07-08T15:45:51.570Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-15T13:50:55.178Z",
+      "lastSeenAt": "2026-07-15T13:50:55.178Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
       "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
+        "publicInterest": 17,
+        "localRelevance": 7,
         "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 1,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 92,
-      "status": "rejected-terminal",
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -4532,52 +4486,6 @@
       },
       "newsworthinessScore": 91,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|santiago martella|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
-      "headlineSeed": "La carta del hijo de un soldado que murió en Malvinas antes del Argentina-Inglaterra: “El deporte no repara las pérdidas”",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Islas Malvinas",
-        "Malvinas",
-        "Argentina",
-        "Mexico",
-        "Inglaterra",
-        "Francia",
-        "Suiza"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-13T21:02:32.970Z",
-      "lastSeenAt": "2026-07-13T23:00:26.706Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 91,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -4728,96 +4636,86 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|argentina|resultados|antartida argentina|diputados|rio grande|ushuaia|informa|26 de octubre",
-      "headlineSeed": "Resultados en Antártida Argentina para Diputados: quién ganó las Elecciones 2025",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Antartida",
+      "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Provincia",
       "primaryEntities": [
-        "Resultados",
-        "Antártida Argentina",
-        "Diputados",
-        "Elecciones",
-        "Congreso",
-        "Argentina",
-        "Rio Grande",
-        "Ushuaia",
-        "Tolhuin",
-        "Tierra del Fuego"
+        "Santa Cruz",
+        "Tierra del Fuego AIAS"
       ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-08T15:28:59.147Z",
-      "lastSeenAt": "2026-07-08T15:45:51.571Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:49:57.208Z",
+      "lastSeenAt": "2026-07-14T20:02:06.508Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 12,
       "localRelevanceScore": 22,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 13,
       "scoreBreakdown": {
-        "publicInterest": 20,
+        "publicInterest": 12,
         "localRelevance": 22,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 91,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|gobierno|justicia|coalicion civica|javier milei|argentina|informa|2026-07-14",
-      "headlineSeed": "Carrió salió al cruce del proyecto para flexibilizar la venta de tierras a extranjeros: “Califica como traición...”",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Coalición Cívica",
-        "Javier Milei",
-        "Gobierno",
-        "Justicia",
-        "Argentina"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T13:53:21.765Z",
-      "lastSeenAt": "2026-07-14T13:53:21.765Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 12,
+        "searchPotential": 13,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 90,
-      "status": "verified-standard-single-source",
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|apropiarse|intervencion|objetivo|puerto|recaudar|tenia|unico|tierra del fuego aias|2026-07-14",
+      "headlineSeed": "\"El único objetivo que tenía la intervención era recaudar y apropiarse de un puerto\" - Actualidad TDF",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Dirección Provincial",
+        "Ministerio de Turismo de Nación",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.995Z",
+      "lastSeenAt": "2026-07-14T19:38:45.093Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 12,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 90,
+      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -5320,55 +5218,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|federacion de veteranos|federacion de veteranos de guerra|federacion|malvinas|atlantico sur|argentina|mexico|informa|2026-07-13",
-      "headlineSeed": "\"El deporte no es la guerra\": el firme pedido de los ex combatientes de Malvinas en la previa del choque contra Inglaterra",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Federación de Veteranos",
-        "Federación de Veteranos de Guerra",
-        "Federación",
-        "Malvinas",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-14T02:44:06.260Z",
-      "lastSeenAt": "2026-07-14T10:03:21.588Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|gobierno|milei|buenos aires|argentina|informa|2026-07-14",
       "headlineSeed": "Emergencia energética: el Gobierno gana tiempo para reformas clave",
       "topic": "politica",
@@ -5500,6 +5349,55 @@
       },
       "newsworthinessScore": 88,
       "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|invasiones inglesas|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
+      "headlineSeed": "Antes de las semifinales del Mundial: las guerras que enfrentaron a la Argentina con Inglaterra, España y Francia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Invasiones Inglesas",
+        "Islas Malvinas",
+        "Malvinas",
+        "Buenos Aires",
+        "Atlantico Sur",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Mexico",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-14T02:44:06.259Z",
+      "lastSeenAt": "2026-07-14T10:03:21.588Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -5772,39 +5670,42 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|anses y arca|argentina|informa|2026-07-14",
-      "headlineSeed": "El plan de pagos de ARCA bajo la lupa: por qué no es una moratoria y a quiénes beneficia realmente",
+      "storyId": "territorial-sovereignty|gobierno|justicia|coalicion civica|javier milei|argentina|informa|2026-07-14",
+      "headlineSeed": "Carrió salió al cruce del proyecto para flexibilizar la venta de tierras a extranjeros: “Califica como traición...”",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Nacionales",
       "primaryEntities": [
-        "ANSES y ARCA",
+        "Coalición Cívica",
+        "Javier Milei",
+        "Gobierno",
+        "Justicia",
         "Argentina"
       ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-14T13:53:21.763Z",
-      "lastSeenAt": "2026-07-14T13:53:21.763Z",
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-14T13:53:21.765Z",
+      "lastSeenAt": "2026-07-14T13:53:21.765Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 23,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 16,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 23,
         "localRelevance": 12,
         "impactMagnitude": 16,
         "serviceValue": 3,
-        "socialPotential": 4,
+        "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -5859,6 +5760,52 @@
       },
       "newsworthinessScore": 87,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|santiago martella|islas malvinas|malvinas|argentina|mexico|informa|2026-07-13",
+      "headlineSeed": "La carta del hijo de un soldado que murió en Malvinas antes del Argentina-Inglaterra: “El deporte no repara las pérdidas”",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Islas Malvinas",
+        "Malvinas",
+        "Argentina",
+        "Mexico",
+        "Inglaterra",
+        "Francia",
+        "Suiza"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-13T21:02:32.970Z",
+      "lastSeenAt": "2026-07-13T23:00:26.706Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -5997,6 +5944,49 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "casualty|federacion espanola de boxeo|real federacion espanola|jose legra|cassius clay|internacional|espana|cuba|informa|2026-07-15",
+      "headlineSeed": "Muere \"Pepe\" Legrá, leyenda del boxeo español (y cubano)",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "José Legrá",
+        "Federación Española de Boxeo",
+        "Espana",
+        "Cuba"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-15T13:50:55.178Z",
+      "lastSeenAt": "2026-07-15T13:50:55.178Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 86,
+      "status": "published",
+      "validationReasons": []
     },
     {
       "storyId": "sports-result|espana|francia|2026-07-14",
@@ -6315,6 +6305,53 @@
       "validationReasons": []
     },
     {
+      "storyId": "territorial-sovereignty|gobierno|challenger energy group|malvinas|atlantico sur|argentina|uruguay|informa|2026-07-15",
+      "headlineSeed": "Cuál es y dónde opera hoy la empresa británica que quiere explotar petróleo en el Mar Argentino",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Challenger Energy Group",
+        "Gobierno",
+        "Malvinas",
+        "Atlantico Sur",
+        "Londres",
+        "Argentina",
+        "Uruguay",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-15T13:50:55.179Z",
+      "lastSeenAt": "2026-07-15T13:50:55.179Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 85,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|moscu|estados unidos|informa|2026-07-14",
       "headlineSeed": "Estados Unidos completó la cuarta ola de ataques contra Irán y comenzó el bloqueo naval sobre sus puertos y costas",
       "topic": "politica",
@@ -6394,6 +6431,55 @@
       },
       "newsworthinessScore": 85,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|federacion de veteranos|federacion de veteranos de guerra|federacion|malvinas|atlantico sur|argentina|mexico|informa|2026-07-13",
+      "headlineSeed": "\"El deporte no es la guerra\": el firme pedido de los ex combatientes de Malvinas en la previa del choque contra Inglaterra",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Federación de Veteranos",
+        "Federación de Veteranos de Guerra",
+        "Federación",
+        "Malvinas",
+        "Atlantico Sur",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-14T02:44:06.260Z",
+      "lastSeenAt": "2026-07-14T10:03:21.588Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 85,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -6481,6 +6567,91 @@
       },
       "newsworthinessScore": 85,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|cotiza|cuanto|dolar|julio|2026-07-15",
+      "headlineSeed": "A cuánto cotiza el dólar hoy, 15 de julio",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco de la Nación Argentina",
+        "ANSES",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T13:50:55.179Z",
+      "lastSeenAt": "2026-07-15T13:50:55.179Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|camara de los comunes|internacional|reino unido|francia|informa|2026-07-14",
+      "headlineSeed": "Promesa de Macron: Francia vota sobre la muerte asistida",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T19:07:24.960Z",
+      "lastSeenAt": "2026-07-15T10:07:55.579Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -6647,6 +6818,47 @@
         "socialPotential": 4,
         "searchPotential": 10,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|anses y arca|argentina|informa|2026-07-14",
+      "headlineSeed": "El plan de pagos de ARCA bajo la lupa: por qué no es una moratoria y a quiénes beneficia realmente",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "ANSES y ARCA",
+        "Argentina"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-14T13:53:21.763Z",
+      "lastSeenAt": "2026-07-14T13:53:21.763Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -6958,49 +7170,6 @@
       },
       "newsworthinessScore": 83,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legislative|internacional|francia|alemania|informa|2026-07-13",
-      "headlineSeed": "Informe desde Estambul: parlamento sirio celebra primera sesión tras caída de Bashar al Assad",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Francia",
-        "Alemania",
-        "Espana"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-13T23:00:26.708Z",
-      "lastSeenAt": "2026-07-13T23:00:26.708Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -7419,47 +7588,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|zaporiyia|internacional|informa|2026-07-14",
-      "headlineSeed": "Misiles rusos impactan Kiev sin dejar víctimas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Zaporiyia",
-        "Internacional"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-14T02:44:06.257Z",
-      "lastSeenAt": "2026-07-14T06:15:57.742Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|banco central|camara|banco central y|milei|argentina|peru|informa|2026-07-13",
       "headlineSeed": "Milei vuelve a reunirse con diputados y senadores por la reforma de la carta orgánica del Banco Central",
       "topic": "politica",
@@ -7645,55 +7773,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|suiza|2026-07-12|1-1",
-      "headlineSeed": "En vivo: Argentina y Suiza empatan 1-1 en la pelea por el pase a semifinales donde espera Inglaterra - BBC News Mundo",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Suiza",
-        "Kansas",
-        "Internacional",
-        "Brasil",
-        "Inglaterra",
-        "Francia",
-        "Alemania",
-        "Egipto",
-        "Mexico"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-12T03:17:10.578Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 6,
-      "independentPublisherCount": 4,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "international-conflict|mojtaba khamenei|ali khamenei|uruguay|estados unidos|informa|2026-07-11",
       "headlineSeed": "Mojtaba Khamenei prometió “venganza” por el asesinato de su padre y lanzó una amenaza contra EEUU e Israel",
       "topic": "politica",
@@ -7779,97 +7858,6 @@
       },
       "newsworthinessScore": 82,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|justicia|san francisco|santa fe|argentina|egipto|informa|2026-07-13",
-      "headlineSeed": "Ajuste de cuentas: lo ubicaron entre la gente que festejaba el triunfo de Argentina y le dispararon tres tiros en la nuca",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Argentina",
-        "Egipto",
-        "Suiza"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T13:53:21.764Z",
-      "lastSeenAt": "2026-07-15T06:19:29.073Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|accidentes|alternativa|bloquean|bloqueos|comunidad|indigena|integrantes|malvinas|2026-07-14",
-      "headlineSeed": "EN VIVO | Bloqueos, accidentes y manifestaciones hoy martes 14 de julio: integrantes de una comunidad indígena bloquean 20 de Noviembre, aquí la alternativa",
-      "topic": "educacion",
-      "subtopic": "educacion",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Secretaría de Educación Pública",
-        "Policía de Control de Drogas de",
-        "Banco",
-        "Malvinas",
-        "Argentina",
-        "Uruguay",
-        "Venezuela",
-        "Mexico",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T02:42:20.319Z",
-      "lastSeenAt": "2026-07-15T02:42:20.319Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -8356,91 +8344,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|camara de los comunes|internacional|reino unido|francia|informa|2026-07-14",
-      "headlineSeed": "Los medios del mundo, entre el orgullo de España y la bronca de Francia - TyC Sports",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T19:07:24.960Z",
-      "lastSeenAt": "2026-07-15T10:07:55.579Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 80,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|londres|argentina|egipto|informa|2026-07-13",
-      "headlineSeed": "El campeón no sabe quién es: la selección perdió el control sobre su identidad",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Colombia",
-        "Francia",
-        "Suiza"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-13T11:17:50.738Z",
-      "lastSeenAt": "2026-07-13T23:00:26.706Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|policia|camara de los comunes|policia nacional antiterrorista|ann widdecombe|paris|internacional|reino unido|informa|2026-07-13",
       "headlineSeed": "Ann Widdecombe, la exministra que conquistó a los británicos, víctima de un posible atentado terrorista",
       "topic": "policiales",
@@ -8569,90 +8472,6 @@
       },
       "newsworthinessScore": 80,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T03:17:10.577Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|camara de representantes|lindsey graham|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Muere a los 71 años el senador estadounidense Lindsey Graham, aliado clave de Trump",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Lindsey Graham",
-        "Cámara de Representantes",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -9062,52 +8881,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|argentina|brasil|chile|incautaron|tierra|fuego|rio grande|tierra del fuego|informa|julio",
-      "headlineSeed": "Incautaron más de 11 mil atados ilegales de cigarrillos en Tierra del Fuego provenientes de Chile",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Rio Grande",
+      "storyId": "general|cobraran|confirmada|domesticas|empleadas|extra|festejan|julio|tierra del fuego|antartida|2026-07-15",
+      "headlineSeed": "Festejan las empleadas domésticas: con paritaria confirmada, cobrarán este triple extra en julio 2026",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Antartida",
       "primaryEntities": [
-        "Incautaron",
-        "Tierra",
-        "Fuego",
-        "Chile Los",
-        "Hito XIII",
-        "Argentina",
-        "Brasil",
-        "Chile",
-        "Rio Grande",
-        "Tierra del Fuego"
+        "Tierra del Fuego",
+        "Antartida",
+        "Buenos Aires",
+        "Atlantico Sur"
       ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-08T15:45:51.570Z",
-      "lastSeenAt": "2026-07-08T15:45:51.570Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T13:50:55.179Z",
+      "lastSeenAt": "2026-07-15T13:50:55.179Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
+      "freshness": "breaking",
       "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 5,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 11,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
         "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 5,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 11,
+        "socialPotential": 4,
         "searchPotential": 8,
-        "recency": 1,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 80,
-      "status": "rejected-terminal",
+      "newsworthinessScore": 79,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -9247,6 +9060,49 @@
       },
       "newsworthinessScore": 79,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|internacional|francia|alemania|informa|2026-07-13",
+      "headlineSeed": "Informe desde Estambul: parlamento sirio celebra primera sesión tras caída de Bashar al Assad",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Francia",
+        "Alemania",
+        "Espana"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-13T23:00:26.708Z",
+      "lastSeenAt": "2026-07-13T23:00:26.708Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -9478,6 +9334,229 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|racing|carretera|fritzler|historia|mercedes|2026-07-12",
+      "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Argentina",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-14T04:21:20.996Z",
+      "lastSeenAt": "2026-07-15T13:50:55.180Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|gobierno y|gobierno|ministerio de seguridad|villarruel|rio grande|ushuaia|argentina|chile|informa|2026-07-15",
+      "headlineSeed": "Villarruel desafió al Gobierno y aseguró que se juega contra \"los piratas usurpadores\"",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Villarruel",
+        "Gobierno y",
+        "Gobierno",
+        "Ministerio de Seguridad",
+        "Justicia",
+        "Municipalidad de Neuquén",
+        "Ministerio de Justicia",
+        "Ministerio de",
+        "Justicia Federal",
+        "Rio Grande"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-15T13:50:55.177Z",
+      "lastSeenAt": "2026-07-15T13:50:55.177Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|justicia|san francisco|santa fe|argentina|egipto|informa|2026-07-13",
+      "headlineSeed": "Ajuste de cuentas: lo ubicaron entre la gente que festejaba el triunfo de Argentina y le dispararon tres tiros en la nuca",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Argentina",
+        "Egipto",
+        "Suiza"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T13:53:21.764Z",
+      "lastSeenAt": "2026-07-15T06:19:29.073Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|accidentes|alternativa|bloquean|bloqueos|comunidad|indigena|integrantes|malvinas|2026-07-14",
+      "headlineSeed": "EN VIVO | Bloqueos, accidentes y manifestaciones hoy martes 14 de julio: integrantes de una comunidad indígena bloquean 20 de Noviembre, aquí la alternativa",
+      "topic": "educacion",
+      "subtopic": "educacion",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Secretaría de Educación Pública",
+        "Policía de Control de Drogas de",
+        "Banco",
+        "Malvinas",
+        "Argentina",
+        "Uruguay",
+        "Venezuela",
+        "Mexico",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T02:42:20.319Z",
+      "lastSeenAt": "2026-07-15T02:42:20.319Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|zaporiyia|internacional|informa|2026-07-14",
+      "headlineSeed": "Misiles rusos impactan Kiev sin dejar víctimas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Zaporiyia",
+        "Internacional"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-14T02:44:06.257Z",
+      "lastSeenAt": "2026-07-14T06:15:57.742Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|acompanamiento|barrio|economia|familias|mercado|ratifico|riograndenses|rio grande|2026-07-13",
       "headlineSeed": "\"El mercado en tu barrio\" ratificó su acompañamiento a la economía de las familias riograndenses",
       "topic": "economia",
@@ -9561,49 +9640,6 @@
       "newsworthinessScore": 78,
       "status": "rejected-terminal",
       "validationReasons": []
-    },
-    {
-      "storyId": "service|antes|aumentos|desacelero|golpearon|indec|inflacion|sector|2026-07-13",
-      "headlineSeed": "Antes del dato del INDEC, la inflación de los trabajadores desaceleró al 1,7%, pero los aumentos golpearon a un sector sensible",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Gobierno"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-13T23:00:26.708Z",
-      "lastSeenAt": "2026-07-13T23:00:26.708Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "international-conflict|gobierno|otan de|oriente medio|donald trump|estados unidos insinuo|internacional|estados unidos|informa|2026-07-12",
@@ -9731,43 +9767,52 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|federacion rusa|tatarstan siguiendo|internacional|informa|2026-07-12",
-      "headlineSeed": "Ataque ucraniano alcanza dos refinerías rusas en Tatarstán",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
+      "storyId": "sports-result|argentina|suiza|2026-07-12|1-1",
+      "headlineSeed": "En vivo: Argentina y Suiza empatan 1-1 en la pelea por el pase a semifinales donde espera Inglaterra - BBC News Mundo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Federación Rusa"
+        "Argentina",
+        "Suiza",
+        "Kansas",
+        "Internacional",
+        "Brasil",
+        "Inglaterra",
+        "Francia",
+        "Alemania",
+        "Egipto",
+        "Mexico"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-12T11:16:12.109Z",
-      "lastSeenAt": "2026-07-12T11:16:12.109Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-12T03:17:10.578Z",
+      "lastSeenAt": "2026-07-12T13:28:09.458Z",
+      "sourceCount": 6,
+      "independentPublisherCount": 4,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
       "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
+        "publicInterest": 8,
+        "localRelevance": 12,
         "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
+        "serviceValue": 3,
+        "socialPotential": 12,
         "searchPotential": 10,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 78,
-      "status": "published",
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -10468,6 +10513,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|agenda|chile|conjunta|consul|daniel|diagramar|harrington|tolhuin|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "Daniel Harrington recibió al cónsul de Chile para diagramar una agenda conjunta de trabajo - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Daniel Harrington",
+        "Florencia Auat",
+        "Administración General",
+        "Abordaje Territorial",
+        "Valeria Sandoval",
+        "Atención Vecinal",
+        "Paola Muñoz",
+        "Tolhuin",
+        "Tierra del Fuego AIAS",
+        "Chile"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T13:50:55.180Z",
+      "lastSeenAt": "2026-07-15T13:50:55.180Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 77,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|suiza|conocio|festejo|hinchas|lautaro|2026-07-13|3-1",
       "headlineSeed": "Se conoció el video en primera persona del festejo de Lautaro Martínez con los hinchas tras el gol que selló el pase a las semifinales",
       "topic": "deportes",
@@ -10508,96 +10602,6 @@
       },
       "newsworthinessScore": 77,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|combate|drones|estadounidenses|fuerzas|navales|operaciones|primera|2026-07-14",
-      "headlineSeed": "Por primera vez, las fuerzas estadounidenses utilizaron drones navales en operaciones de combate",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T13:53:21.763Z",
-      "lastSeenAt": "2026-07-14T13:53:21.763Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|racing|carretera|fritzler|historia|mercedes|2026-07-12",
-      "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Otto Fritzler",
-        "Prestige Auto Racing Team",
-        "Nicolás Bonelli",
-        "Julián Santero",
-        "Racing",
-        "Argentina",
-        "Uruguay",
-        "Estados Unidos",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-14T04:21:20.996Z",
-      "lastSeenAt": "2026-07-14T04:21:20.996Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -10730,46 +10734,6 @@
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|internacional|anuncia|2026-07-12",
-      "headlineSeed": "Qatar anuncia la muerte del antiguo emir Hamad",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T15:01:58.817Z",
-      "lastSeenAt": "2026-07-12T15:01:58.817Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
         "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
@@ -11249,43 +11213,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|ministerio de|medio oriente|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Recrudecen los ataques en Medio Oriente: EE.UU. destruyó 140 objetivos militares e Irán lanzó misiles contra cuatro países",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
+      "storyId": "sports-result|londres|argentina|egipto|informa|2026-07-13",
+      "headlineSeed": "El campeón no sabe quién es: la selección perdió el control sobre su identidad",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Estados Unidos"
+        "Argentina",
+        "Colombia",
+        "Francia",
+        "Suiza"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-12T06:37:56.151Z",
-      "lastSeenAt": "2026-07-14T02:44:06.259Z",
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-13T11:17:50.738Z",
+      "lastSeenAt": "2026-07-13T23:00:26.706Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
       "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
       "searchPotentialScore": 7,
       "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
+        "publicInterest": 8,
+        "localRelevance": 12,
         "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
+        "serviceValue": 3,
+        "socialPotential": 9,
         "searchPotential": 7,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 76,
-      "status": "verified-strict",
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -11422,6 +11389,90 @@
       },
       "newsworthinessScore": 76,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|onu|ministerio de salud|mojtaba jamenei|donald trump|internacional|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Jamenei amenaza a Estados Unidos y Trump dice estar listo para destruir Irán",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Donald Trump",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T03:17:10.577Z",
+      "lastSeenAt": "2026-07-12T13:28:09.458Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|camara de representantes|lindsey graham|internacional|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Muere a los 71 años el senador estadounidense Lindsey Graham, aliado clave de Trump",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Lindsey Graham",
+        "Cámara de Representantes",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T13:28:09.458Z",
+      "lastSeenAt": "2026-07-12T13:28:09.458Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -11696,55 +11747,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentina|formaciones|inglaterra|mundial|malvinas|2026-07-15",
-      "headlineSeed": "Argentina vs. Inglaterra, EN VIVO por el Mundial 2026: hora, TV y las formaciones",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Atlanta Stadium",
-        "Policía",
-        "Malvinas",
-        "Kansas",
-        "Argentina",
-        "Egipto",
-        "Estados Unidos",
-        "Inglaterra",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T06:19:29.073Z",
-      "lastSeenAt": "2026-07-15T06:19:29.073Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 75,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|albaricoque|colageno|contribuye|crear|cuida|musculos|protege|2026-07-14",
       "headlineSeed": "El albaricoque, una joya del verano que cuida la vista, contribuye a crear colágeno y protege los músculos",
       "topic": "servicios",
@@ -11825,49 +11827,6 @@
       },
       "newsworthinessScore": 75,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|racing|suiza|2026-07-12|3-1",
-      "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Kansas",
-        "Argentina",
-        "Inglaterra",
-        "Suiza"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-12T20:56:08.391Z",
-      "lastSeenAt": "2026-07-13T23:08:14.814Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 75,
-      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -12262,6 +12221,90 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|combate|drones|estadounidenses|fuerzas|navales|operaciones|primera|2026-07-14",
+      "headlineSeed": "Por primera vez, las fuerzas estadounidenses utilizaron drones navales en operaciones de combate",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T13:53:21.763Z",
+      "lastSeenAt": "2026-07-14T13:53:21.763Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|antes|aumentos|desacelero|golpearon|indec|inflacion|sector|2026-07-13",
+      "headlineSeed": "Antes del dato del INDEC, la inflación de los trabajadores desaceleró al 1,7%, pero los aumentos golpearon a un sector sensible",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Gobierno"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-13T23:00:26.708Z",
+      "lastSeenAt": "2026-07-13T23:00:26.708Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "casualty|mojtaba jamenei|ali jamenei|la guaira|internacional|venezuela|estados unidos|informa|2026-07-12",
       "headlineSeed": "Irán cierra el estrecho de Ormuz y Mojtaba Jamenei promete venganza tras la muerte de su padre",
       "topic": "sociedad",
@@ -12428,6 +12471,46 @@
       },
       "newsworthinessScore": 74,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|federacion rusa|tatarstan siguiendo|internacional|informa|2026-07-12",
+      "headlineSeed": "Ataque ucraniano alcanza dos refinerías rusas en Tatarstán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Federación Rusa"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-12T11:16:12.109Z",
+      "lastSeenAt": "2026-07-12T11:16:12.109Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -12995,6 +13078,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|internacional|anuncia|2026-07-12",
+      "headlineSeed": "Qatar anuncia la muerte del antiguo emir Hamad",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-12T15:01:58.817Z",
+      "lastSeenAt": "2026-07-12T15:01:58.817Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
       "storyId": "casualty|gobierno|mojtaba khamenei|internacional|estados unidos|informa|2026-07-11",
       "headlineSeed": "Tras la amenaza de Trump, el líder supremo de Irán asegura que vengará la muerte de su padre: \"Es lo que exige nuestro país\"",
       "topic": "sociedad",
@@ -13394,6 +13517,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|argentina|formaciones|inglaterra|mundial|malvinas|2026-07-15",
+      "headlineSeed": "Argentina vs. Inglaterra, EN VIVO por el Mundial 2026: hora, TV y las formaciones",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Atlanta Stadium",
+        "Policía",
+        "Malvinas",
+        "Kansas",
+        "Argentina",
+        "Egipto",
+        "Estados Unidos",
+        "Inglaterra",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T06:19:29.073Z",
+      "lastSeenAt": "2026-07-15T06:19:29.073Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|antonio rattin|malvinas|atlantico sur|argentina|chile|informa|2026-07-14",
       "headlineSeed": "Y de toda otra dominación extranjera",
       "topic": "deportes",
@@ -13538,6 +13710,46 @@
       ]
     },
     {
+      "storyId": "international-conflict|ministerio de|medio oriente|internacional|estados unidos|informa|2026-07-12",
+      "headlineSeed": "Recrudecen los ataques en Medio Oriente: EE.UU. destruyó 140 objetivos militares e Irán lanzó misiles contra cuatro países",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-12T06:37:56.151Z",
+      "lastSeenAt": "2026-07-14T02:44:06.259Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "casualty|sam neill|jurassic park|buenos aires|espana|informa|2026-07-13",
       "headlineSeed": "Sam Neill, el actor de Jurassic Park, falleció hoy: vivía en una granja en la tierra de sus sueños con animales y viñedos",
       "topic": "sociedad",
@@ -13580,233 +13792,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "territorial-sovereignty|otan|espacio schengen|fabian picardo|islas malvinas|malvinas|estados unidos|reino unido|informa|2026-07-13",
-      "headlineSeed": "La máxima autoridad de Gibraltar, contundente a horas de integrarse a Europa: “La soberanía del Peñón solo se negocia con el Rey”",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Espacio Schengen",
-        "Fabián Picardo",
-        "OTAN",
-        "Islas Malvinas",
-        "Malvinas",
-        "Casa de Gobierno",
-        "Tierra del Fuego AIAS",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-13T18:00:09.122Z",
-      "lastSeenAt": "2026-07-13T18:00:09.122Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|sam neill|parque jurasico|internacional|informa|2026-07-13",
-      "headlineSeed": "Murió el actor Sam Neill, recordado por 'Parque Jurásico'",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Sam Neill"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-13T06:58:23.621Z",
-      "lastSeenAt": "2026-07-13T11:17:50.738Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 5,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 5,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "agenda-invalid",
-      "sourceStatus": "conflicting-sources",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
-      "storyId": "international-conflict|ministerio y|gobierno de netanyahu|gobierno|itamar ben|internacional|francia|alemania|informa|2026-07-12",
-      "headlineSeed": "La guerra en Gaza: Europa aprobaría este lunes sus primeras sanciones a Israel",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Francia",
-        "Alemania",
-        "Espana",
-        "Belgica"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-12T19:11:18.048Z",
-      "lastSeenAt": "2026-07-13T03:20:18.636Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legislative|gobierno|camara de diputados|camara|argentina|estados unidos|informa|2026-07-12",
-      "headlineSeed": "La Ley de Lobby se estanca en Diputados y el Gobierno niega un pedido de Estados Unidos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gobierno",
-        "Cámara de Diputados",
-        "Cámara",
-        "Justicia",
-        "Ministerio de Desregulación",
-        "Gobierno y",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-12T09:55:49.249Z",
-      "lastSeenAt": "2026-07-12T09:55:49.249Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|bariloche|brasil|chile|cuanto|invierno|necesito|opciones|ushuaia|tierra del fuego|2026-07-11",
-      "headlineSeed": "Cuánto necesito para irme de vacaciones de invierno a Bariloche, Brasil o Chile y las opciones “low cost”",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Gobierno",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Buenos Aires",
-        "Brasil",
-        "Chile"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-11T01:26:05.293Z",
-      "lastSeenAt": "2026-07-11T01:26:05.293Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
     }
   ]
 }
