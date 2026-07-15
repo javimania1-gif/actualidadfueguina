@@ -1,109 +1,152 @@
 {
-  "generatedAt": "2026-07-15T19:20:44.994Z",
+  "generatedAt": "2026-07-15T21:07:00.991Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29443803100",
-    "headSha": "a4340814054714f396dd9b63cb5baae4d1a75e86"
+    "runId": "29450510866",
+    "headSha": "8fbe62a7cddcc61cc37aa75fcc70d80d655845ec"
   },
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
     "candidatesDetected": 97,
-    "candidatesIngested": 31,
-    "extractionSucceeded": 30,
-    "candidatesApproved": 15,
-    "discardedDuplicate": 15,
+    "candidatesIngested": 27,
+    "extractionSucceeded": 27,
+    "candidatesApproved": 14,
+    "discardedDuplicate": 9,
     "duplicateExactUrl": 4,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 11,
-    "discardedQuality": 2,
+    "duplicatePublishedEvent": 5,
+    "discardedQuality": 5,
     "discardedQualityByReason": {
-      "stale-hard-news": 1,
-      "undated-discovery": 1
+      "evergreen-or-stale-outside-news-window": 1,
+      "stale-hard-news": 2,
+      "undated-discovery": 1,
+      "stale-weather-forecast": 1
     },
     "discardedBySourceAndReason": {
+      "mundo-clarin": {
+        "evergreen-or-stale-outside-news-window": 1
+      },
       "bing-tdf": {
         "stale-hard-news": 1
       },
       "sur54": {
         "undated-discovery": 1
+      },
+      "mundo-bbc": {
+        "stale-hard-news": 1
+      },
+      "nacionales-infobae": {
+        "stale-weather-forecast": 1
       }
     },
     "discardedGenericTitle": 1,
-    "discardedEvergreen": 0,
-    "eventsGrouped": 15,
-    "verified": 13,
-    "pendingVerification": 2,
-    "pendingMatchedFromHistory": 0,
+    "discardedEvergreen": 1,
+    "eventsGrouped": 14,
+    "verified": 11,
+    "pendingVerification": 3,
+    "pendingMatchedFromHistory": 2,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 80
+      "conservedPublished": 81
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 5,
+    "pendingTerminalizedExpired": 9,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
-        "eventKey": "service|combinado|democracia|fuerzas|fusiles|galil|hallan|huehuetenango|2026-07-15",
-        "title": "En operativo combinado de las fuerzas de seguridad hallan fusiles Galil ocultos en La Democracia, Huehuetenango",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
-        "eventType": "service",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "sourceId": "perfil-tdf",
+        "publisherDomain": "perfil.com",
+        "category": "Provincia",
+        "eventType": "general",
+        "lane": "fast",
+        "riskLevel": "low",
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-15T22:17:58.228Z",
-        "expiresAt": "2026-07-17T19:17:58.228Z",
-        "corroborationAttempts": 0
+        "nextRetryAt": "2026-07-16T00:05:08.216Z",
+        "expiresAt": "2026-07-17T17:17:52.490Z",
+        "corroborationAttempts": 2
       },
       {
-        "eventKey": "general|alquileres|desalojos|hasta|impagos|inmuebles|ocupados|proponen|2026-07-15",
-        "title": "Proponen desalojos en hasta 10 días para inmuebles ocupados o con alquileres impagos",
-        "sourceId": "nacionales-perfil",
-        "publisherDomain": "perfil.com",
-        "category": "Nacionales",
-        "eventType": "general",
+        "eventKey": "territorial-sovereignty|islas malvinas|malvinas|argentina|colombia|informa|2026-07-15",
+        "title": "“Las islas Malvinas pertenecen a Inglaterra”: la frase que desató una brutal golpiza a un hincha mexicano",
+        "sourceId": "bing-malvinas",
+        "publisherDomain": "semana.com",
+        "category": "Malvinas",
+        "eventType": "territorial-sovereignty",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-15T22:17:58.230Z",
-        "expiresAt": "2026-07-17T19:17:58.230Z",
+        "nextRetryAt": "2026-07-16T00:05:08.216Z",
+        "expiresAt": "2026-07-17T21:05:08.216Z",
+        "corroborationAttempts": 1
+      },
+      {
+        "eventKey": "crime|justicia|paris|internacional|francia|detiene|2026-07-15",
+        "title": "Francia: detienen a un bombero sospechoso de causar incendio cerca de París",
+        "sourceId": "mundo-france24",
+        "publisherDomain": "france24.com",
+        "category": "Mundo",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-16T00:05:08.218Z",
+        "expiresAt": "2026-07-17T21:05:08.218Z",
         "corroborationAttempts": 0
       }
     ],
     "conflicting": 0,
-    "published": 1,
-    "publishedByLane": {
-      "strict": 1
-    },
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 12,
-      "strict": 1
+      "standard": 9,
+      "strict": 2
     },
     "pendingByLane": {
+      "fast": 1,
       "strict": 2
     },
     "eventsByTerritory": {
-      "Nacionales": 7,
-      "Mundo": 5,
-      "Malvinas": 3
+      "Ushuaia": 1,
+      "Malvinas": 2,
+      "Nacionales": 6,
+      "Mundo": 5
     },
     "verifiedByTerritory": {
-      "Nacionales": 5,
-      "Mundo": 5,
-      "Malvinas": 3
+      "Nacionales": 6,
+      "Mundo": 4,
+      "Malvinas": 1
     },
-    "fastPendingAudit": [],
-    "freshCandidates": 28,
-    "staleDiscarded": 1,
+    "fastPendingAudit": [
+      {
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "sourceId": "perfil-tdf",
+        "publisherDomain": "perfil.com",
+        "tier": "B",
+        "competence": [
+          "municipal"
+        ],
+        "territory": "Ushuaia",
+        "topic": "turismo",
+        "eventType": "general",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      }
+    ],
+    "freshCandidates": 21,
+    "staleDiscarded": 4,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -347,8 +390,8 @@
       },
       "bing-tdf": {
         "detected": 5,
-        "materialized": 3,
-        "freshCandidates": 2,
+        "materialized": 2,
+        "freshCandidates": 1,
         "qualityDiscarded": 1,
         "staleDiscarded": 1,
         "consulted": 1,
@@ -359,28 +402,28 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.4,
-        "materializationSuccessRate": 0.6,
+        "freshCandidateRate": 0.2,
+        "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.2
       },
       "bing-rio-grande": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -427,8 +470,8 @@
       },
       "bing-malvinas": {
         "detected": 2,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -439,8 +482,8 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -487,21 +530,21 @@
       },
       "perfil-tdf": {
         "detected": 2,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
-        "verifiedContribution": 0,
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.5,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -527,23 +570,23 @@
       },
       "nacionales-infobae": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "nacionales-perfil": {
         "detected": 2,
@@ -557,11 +600,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -577,15 +620,35 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-ambito": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 2,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.67,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-cronista": {
         "detected": 3,
         "materialized": 1,
         "freshCandidates": 1,
@@ -602,26 +665,6 @@
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-cronista": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 3,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -637,17 +680,17 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-google": {
         "detected": 3,
-        "materialized": 1,
+        "materialized": 2,
         "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
@@ -660,15 +703,55 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-clarin": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "mundo-bbc": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "mundo-dw": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -677,35 +760,15 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 3,
-        "publicationContribution": 1,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
-        "publicationContributionRate": 0.33,
-        "staleDiscardRate": 0
-      },
-      "mundo-bbc": {
-        "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
-        "verifiedContribution": 0,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-dw": {
+      "mundo-france24": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 3,
@@ -722,26 +785,6 @@
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-france24": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -790,17 +833,17 @@
     "drafts": 0,
     "modelErrors": 0,
     "publicationErrors": 0,
-    "factualValidationErrors": 4,
+    "factualValidationErrors": 3,
     "discardedImportance": 8,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 0,
-    "failedTerminal": 1,
-    "failedRetryableByReason": {},
-    "failedTerminalByReason": {
-      "http-403": 1
+    "failedRetryable": 1,
+    "failedTerminal": 0,
+    "failedRetryableByReason": {
+      "short-body": 1
     },
+    "failedTerminalByReason": {},
     "aiReused": 0,
     "rescueQueued": 3,
     "rescueAttempted": 0,
@@ -809,125 +852,129 @@
     "discardedPublicationLimit": 0,
     "extractErrors": 1,
     "imageErrors": 0,
-    "aiAttempts": 13,
-    "aiCalls": 13,
-    "articlesDrafted": 9,
-    "imagesResolved": 1,
-    "approvedForPublication": 1,
-    "imageSelections": [
-      {
-        "title": "Francia avanza hacia la legalización de la muerte asistida: un cambio histórico en la legislación",
-        "strategy": "article-og",
-        "query": "El Parlamento de Francia da el primer paso para aprobar el derecho a la muerte asistida",
-        "score": 82,
-        "source": "https://www.clarin.com/img/2026/07/15/XO4pY0OHB_2000x1500__1.jpg"
-      }
-    ],
-    "agendaStories": 1015,
-    "newsworthinessAverage": 64,
+    "aiAttempts": 11,
+    "aiCalls": 11,
+    "articlesDrafted": 8,
+    "imagesResolved": 0,
+    "approvedForPublication": 0,
+    "imageSelections": [],
+    "agendaStories": 1011,
+    "newsworthinessAverage": 58,
     "newsworthinessTop": [
       {
-        "title": "El Parlamento de Francia da el primer paso para aprobar el derecho a la muerte asistida",
-        "eventKey": "casualty|camara|emmanuel macron|paris|internacional|uruguay|francia|informa|2026-07-15",
-        "score": 84,
-        "topic": "sociedad",
-        "territory": "Mundo",
+        "title": "Gas pimienta en la previa del Mundial: adelantaron la marcha por el partido y las fuerzas de seguridad reprimieron a los jubilados",
+        "eventKey": "general|argentinos|atlanta|fuertes|hinchas|ingleses|medidas|previa|malvinas|2026-07-14",
+        "score": 69,
+        "topic": "deportes",
+        "territory": "Malvinas",
         "lane": "strict"
       },
       {
-        "title": "¿Escasez de petróleo?: el FMI advirtió que la continuidad de la guerra en Medio Oriente está agotando las reservas mundiales",
-        "eventKey": "general|advirtio|agotando|continuidad|escasez|guerra|medio|mundiales|2026-07-15",
-        "score": 83,
+        "title": "Los goles de la Selección argentina ante Inglaterra en la semifinal",
+        "eventKey": "general|argentina|goles|inglaterra|seleccion|semifinal|2026-07-15",
+        "score": 60,
+        "topic": "deportes",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Son argentinos y encontraron la fórmula para exportar el Gol del Siglo a EE.UU.",
+        "eventKey": "service|argentinos|encontraron|exportar|formula|siglo|2026-07-15",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Del gol de Enzo Fernández al cabezazo agónico de Lautaro Martínez: así fueron los goles de la Selección argentina ante Inglaterra",
+        "eventKey": "general|agonico|argentina|cabezazo|fernandez|fueron|goles|inglaterra|2026-07-15",
+        "score": 60,
+        "topic": "deportes",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Recepcionista sufre agresión de huésped en hotel de Santa Fe: cámaras captan el ataque",
+        "eventKey": "general|agresion|ataque|camaras|captan|hotel|huesped|recepcionista|2026-07-15",
+        "score": 60,
+        "topic": "economia",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Disney+ estrenó la segunda temporada de una serie que ya está cancelada: un reboot que no funcionó",
+        "eventKey": "general|cancelada|disney|estreno|funciono|reboot|segunda|serie|2026-07-15",
+        "score": 58,
         "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Temporal en Chile: José Antonio Kast avisa que \"se vienen días de emergencia\" y pide no viajar a la costa ni a la cordillera",
+        "eventKey": "weather|jose antonio kast|internacional|argentina|ecuador|informa|2026-07-15",
+        "score": 55,
+        "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "El partido más politizado del Mundial, con Malvinas como telón de fondo: la reacción del Gobierno",
-        "eventKey": "territorial-sovereignty|gobierno el presidente|gobierno|gobierno de la|quinta residencial|karina milei|villarruel|islas malvinas|malvinas|argentina|egipto|informa|2026-07-15",
-        "score": 75,
-        "topic": "deportes",
-        "territory": "Malvinas",
+        "title": "Rubio redobla la presión contra la Corte Penal Internacional",
+        "eventKey": "general|contra|corte|internacional|penal|presion|redobla|rubio|2026-07-15",
+        "score": 55,
+        "topic": "educacion",
+        "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Duelo en los himnos: los argentinos cantaron “el que no salta es un inglés” y los ingleses silbaron",
-        "eventKey": "general|argentinos|cantaron|duelo|himnos|ingles|ingleses|salta|islas malvinas|malvinas|2026-07-15",
-        "score": 67,
-        "topic": "sociedad",
-        "territory": "Malvinas",
+        "title": "\"Es el final de mi trayectoria política\": Starmer se dirige por última vez al Parlamento británico",
+        "eventKey": "territorial-sovereignty|keir starmer|andy burnham|internacional|argentina|colombia|informa|2026-07-15",
+        "score": 55,
+        "topic": "politica",
+        "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Quiniela nacional hoy, 15 de julio EN VIVO: resultados de la Nacional y Provincia",
-        "eventKey": "general|julio|nacional|provincia|quiniela|resultados|malvinas|2026-07-15",
-        "score": 67,
-        "topic": "sociedad",
-        "territory": "Malvinas",
-        "lane": "standard"
-      },
-      {
-        "title": "La Liga MX revela la convocatoria para el All-Star Game 2026 frente a la MLS",
-        "eventKey": "agenda|convocatoria|frente|revela|2026-07-15",
-        "score": 60,
+        "title": "\"Me deportaron a México por error y después de 3 meses y varios intentos, EE.UU. por fin logró traerme de vuelta\" - BBC News Mundo",
+        "eventKey": "agenda|argentina|uruguay|informa|2026-07-14",
+        "score": 51,
         "topic": "deportes",
         "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "El Salvador se ubica en el tercer lugar regional por el crecimiento de sus exportaciones de servicios",
-        "eventKey": "service|crecimiento|exportaciones|lugar|regional|salvador|servicios|tercer|2026-07-15",
-        "score": 60,
-        "topic": "servicios",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Aumento a empleados de comercio: últimas noticias y todo lo que se sabe de la negociación paritaria",
-        "eventKey": "service|aumento|comercio|empleados|negociacion|paritaria|ultimas|2026-07-15",
-        "score": 60,
-        "topic": "servicios",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "SpaceX se desploma: el mercado le borró a la empresa de Musk más de un PBI argentino en un mes",
-        "eventKey": "general|argentino|borro|desploma|empresa|mercado|spacex|2026-07-15",
-        "score": 58,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "El sencillo método para ahorrar dólares que puede cambiar tu futuro financiero",
-        "eventKey": "general|ahorrar|cambiar|dolares|financiero|futuro|metodo|puede|2026-07-15",
-        "score": 58,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
+        "lane": "strict"
       }
     ],
-    "corroborationSearches": 1,
-    "corroborationFound": 1,
-    "corroborationVerified": 1,
+    "corroborationSearches": 2,
+    "corroborationFound": 0,
+    "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 0,
+    "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "casualty|camara|emmanuel macron|paris|internacional|uruguay|francia|informa|2026-07-15",
-        "title": "El Parlamento de Francia da el primer paso para aprobar el derecho a la muerte asistida",
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
         "priorityRank": 1,
-        "corroborationQuery": "Emmanuel Macron Cámara Uruguay Francia Belgica aprobar asistida derecho muerte parlamento",
-        "corroborationReason": "newsworthiness=90; freshness=1h; territory=Mundo; impact=12; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-strict"
+        "corroborationQuery": "Reserva Natural Argentina Inglaterra Cuba Ushuaia Cerro Castor conectar hotel invierno mundo nieve perder",
+        "corroborationReason": "newsworthiness=100; freshness=4h; territory=Ushuaia; impact=14; corroborability=10; pendingAge=4h; attempts=1",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "territorial-sovereignty|islas malvinas|malvinas|argentina|colombia|informa|2026-07-15",
+        "title": "“Las islas Malvinas pertenecen a Inglaterra”: la frase que desató una brutal golpiza a un hincha mexicano",
+        "priorityRank": 2,
+        "corroborationQuery": "Argentina Colombia Mexico Estados Unidos Reino Unido Malvinas brutal desato frase golpiza hincha inglaterra",
+        "corroborationReason": "newsworthiness=76; freshness=3h; territory=Malvinas; impact=10; corroborability=10; pendingAge=3h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
       }
     ],
-    "conflictsByField": {},
+    "conflictsByField": {
+      "dates": 2
+    },
     "criticalConflicts": 0,
-    "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 4,
+    "nonCriticalDifferences": 2,
+    "resolvedComplementaryFacts": 16,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 80,
@@ -948,35 +995,33 @@
         "max": 2539.2
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 738,
-        "avg": 71.8,
+        "count": 749,
+        "avg": 74.8,
         "p50": 0,
         "max": 2646.2
       },
       "cohort": {
         "comparablePublishedCount": 80,
-        "verifiedWithoutPublicationCount": 658,
+        "verifiedWithoutPublicationCount": 669,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Mundo": 1
-    },
-    "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 5,
-    "publishedLast12hBeforeRun": 7,
-    "publishedLast24hBeforeRun": 15,
-    "hoursSinceLastPublicationBeforeRun": 3.8,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 1,
+    "publishedLast6hBeforeRun": 3,
+    "publishedLast12hBeforeRun": 8,
+    "publishedLast24hBeforeRun": 13,
+    "hoursSinceLastPublicationBeforeRun": 1.8,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 15,
+      "publishedLast24hBeforeRun": 13,
       "remainingToMin": 0,
-      "slotsRemaining": 1,
+      "slotsRemaining": 3,
       "effectiveRunTarget": 3,
-      "effectiveRunMaxNormal": 1
+      "effectiveRunMaxNormal": 3
     },
     "agendaTop": [
       {
@@ -987,7 +1032,7 @@
         "newsworthinessScore": 100,
         "status": "pending-verification",
         "scoreBreakdown": {
-          "publicInterest": 15,
+          "publicInterest": 12,
           "localRelevance": 25,
           "impactMagnitude": 0,
           "serviceValue": 15,
@@ -1012,7 +1057,7 @@
           "serviceValue": 20,
           "socialPotential": 7,
           "searchPotential": 15,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1050,7 +1095,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1069,20 +1114,20 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
           "diversity": 4
         }
       }
     ],
-    "agendaInvalidStories": 56,
+    "agendaInvalidStories": 55,
     "technicalSuccess": true,
-    "editorialOutcome": "published",
+    "editorialOutcome": "no-publishable-story",
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
       "healthy": 32,
-      "productive": 13,
+      "productive": 14,
       "noResults": 2,
       "failed": 0
     }
@@ -1091,8 +1136,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 13,
-    "discoveryAiBudget": 13,
+    "discoveryAiUsed": 11,
+    "discoveryAiBudget": 11,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1101,19 +1146,19 @@
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
-    "effectiveRunMaxNormal": 1,
+    "effectiveRunMaxNormal": 3,
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 15,
-    "candidatesMaterialized": 31,
-    "totalCandidatesBeforeLimit": 31
+    "publishedLast24hBeforeRun": 13,
+    "candidatesMaterialized": 27,
+    "totalCandidatesBeforeLimit": 27
   },
   "reasonNoMorePublished": [
-    "2 evento(s) quedaron pendientes de segunda fuente",
-    "15 candidato(s) descartados por duplicado/similitud",
-    "2 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 1)",
+    "3 evento(s) quedaron pendientes de segunda fuente",
+    "9 candidato(s) descartados por duplicado/similitud",
+    "5 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 1, stale-hard-news: 2, undated-discovery: 1, stale-weather-forecast: 1)",
     "8 candidato(s) descartados por importancia editorial",
-    "4 candidato(s) bloqueados por validacion factual"
+    "3 candidato(s) bloqueados por validacion factual"
   ]
 }
