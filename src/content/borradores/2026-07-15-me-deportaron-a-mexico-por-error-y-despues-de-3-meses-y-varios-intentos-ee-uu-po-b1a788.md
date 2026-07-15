@@ -8,7 +8,7 @@ sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/cn7p08dxmygo?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/68dd/live/ba35e4a0-5fa6-11f1-b8c0-7d98d38e2b8d.jpg"
 status: "draft"
-detectedAt: "2026-07-15T13:54:13.842Z"
+detectedAt: "2026-07-15T17:19:32.324Z"
 mode: "discovery-review"
 ---
 
@@ -26,7 +26,7 @@ Pie de foto, Alguien que vio a Lázaro Romero León vivir en la calle en Tapachu
 
 - - Autor, Leire Ventas
  - Título del autor, Corresponsal de BBC News Mundo en Los Ángeles
-- Fecha de publicación 44 minutos
+- Fecha de publicación 4 horas
  
 - Tiempo de lectura: 11 min
  
@@ -51,19 +51,19 @@ De nada sirvió entonces que en diciembre el hombre solicitara ante un tribunal 
 
 **Más leídas**
 
-- ![Trump vistiendo un traje con una corbata amarilla. El fondo es negro.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/87df/live/cb49bc70-7fc8-11f1-82bc-eb96a9eb8087.jpg.webp)
+- ![Tom Hanks y el capitán Chesley Sullenberger vestidos de gala](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/8285/live/87c2bc10-803e-11f1-8a74-43d9da26a654.jpg.webp)
  
- [La marcha atrás de Trump respecto al pago de peajes en Ormuz revela sus dificultades para poner fin a la guerra con Irán](https://www.bbc.com/mundo/articles/cvgdg1gyqqeo)
+ [El capitán Sully, el heroico piloto que aterrizó un avión con 155 pasajeros en el río Hudson, revela que tiene Alzheimer](https://www.bbc.com/mundo/articles/c5yzyn0dq79o)
+ 
+- ![Una selfie de una joven acostada en una cama de hospital.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/2016/live/900ba240-7bb3-11f1-9671-6995d20a3bb8.jpg.webp)
+ 
+ [Me drogaron en una discoteca en España y ahora me cuesta caminar y sufro pesadillas](https://www.bbc.com/mundo/articles/cq61ngjm57no)
  
 - ![Una ventanilla rota y el interior del avión de Ryanair tras un aterrizaje de emergencia notificado, en una ubicación identificada como Salónica, Grecia.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/04ed/live/7eb22440-7f93-11f1-ac71-510b51a60620.jpg.webp)
  
  ["Si morimos, morimos juntos": habla la esposa del hombre que estuvo a punto de ser succionado por la ventanilla de un avión de Ryanair](https://www.bbc.com/mundo/articles/c4gyglwgew7o)
  
-- ![Joven pagando con su tarjeta de crédito](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/69aa/live/9ba4fbf0-803c-11f1-b976-0b9c15b0ccfc.jpg.webp)
- 
- [5 consejos para administrar tu dinero según el director del banco más grande de Reino Unido](https://www.bbc.com/mundo/articles/c8x2k1lzv7yo)
- 
-- ![Un hombre en Venezuela pasa frente a un edificio que perdió totalmente su fachada dejando al descubierto el interior de los apartamentos dañados](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/23fc/live/ff634f50-7f6c-11f1-b976-0b9c15b0ccfc.jpg.webp)
+- ![Venezuela](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/14c9/live/765c9660-8059-11f1-a10f-077d9cf2208e.jpg.webp)
  
  [Qué puede aprender Venezuela de Chile, Japón y otros países que construyen edificios "sobre patines" para resistir terremotos](https://www.bbc.com/mundo/articles/c9929p8j450o)
  
@@ -176,4 +176,4 @@ Bajo la legislación mexicana, quienes lo hacen deben permanecer en el estado do
 
 BBC Mundo trató de comunicarse con la Comar sin éxito y consultó al Instituto Nacional de Migración (INM) cuántos extranjeros deportados desde EE.UU. solicitaron refugio en México desde la llegada de Trump al poder y a cuántos se les otorgó.
 
-A ello, el INM contestó que toda información relac
+A ello, el INM contestó que toda información relacionada con cifras la maneja la Unidad de Política Migratoria y que, al tratarse en muchos casos de "procesos administrativos migratorios 

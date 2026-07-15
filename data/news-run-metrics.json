@@ -1,135 +1,162 @@
 {
-  "generatedAt": "2026-07-15T15:32:02.394Z",
+  "generatedAt": "2026-07-15T17:19:32.573Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29428150891",
-    "headSha": "9227a213eb9ad703323135d2984baa3474694c70"
+    "eventName": "push",
+    "runId": "29435726578",
+    "headSha": "0f4c239cc111eb2b23528143a65d59846b287b19"
   },
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
     "candidatesDetected": 98,
-    "candidatesIngested": 44,
-    "extractionSucceeded": 44,
-    "candidatesApproved": 20,
-    "discardedDuplicate": 16,
-    "duplicateExactUrl": 2,
+    "candidatesIngested": 40,
+    "extractionSucceeded": 38,
+    "candidatesApproved": 18,
+    "discardedDuplicate": 12,
+    "duplicateExactUrl": 4,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 14,
-    "discardedQuality": 7,
+    "duplicatePublishedEvent": 8,
+    "discardedQuality": 9,
     "discardedQualityByReason": {
       "stale-hard-news": 1,
-      "undated-discovery": 6
+      "undated-discovery": 5,
+      "stale-dated-discovery": 2,
+      "homepage,listing-url,short-body": 1
     },
     "discardedBySourceAndReason": {
-      "mundo-france24": {
+      "bing-tdf": {
         "stale-hard-news": 1
       },
       "sur54": {
-        "undated-discovery": 3
+        "undated-discovery": 2
       },
-      "ushuaia-oficial": {
-        "undated-discovery": 1
+      "nacionales-infobae": {
+        "stale-dated-discovery": 1
+      },
+      "perfil-tdf": {
+        "stale-dated-discovery": 1
       },
       "critica-sur": {
-        "undated-discovery": 2
+        "undated-discovery": 3
+      },
+      "mundo-bing": {
+        "homepage,listing-url,short-body": 1
       }
     },
-    "discardedGenericTitle": 2,
-    "discardedEvergreen": 0,
-    "eventsGrouped": 20,
-    "verified": 16,
-    "pendingVerification": 3,
+    "discardedGenericTitle": 3,
+    "discardedEvergreen": 2,
+    "eventsGrouped": 18,
+    "verified": 15,
+    "pendingVerification": 2,
     "pendingMatchedFromHistory": 1,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 78
+      "conservedPublished": 80
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 5,
-    "pendingTerminalizedAttempts": 0,
+    "pendingTerminalizedExpired": 0,
+    "pendingTerminalizedAttempts": 1,
     "pendingAudit": [
       {
-        "eventKey": "general|antartida|argentina|juegos|parque|patio|pioneros|renovaron|antartida|antartida argentina|2026-07-14",
-        "title": "Renovaron el patio de juegos del Parque Pioneros de la Antártida Argentina",
-        "sourceId": "bing-antartida",
-        "publisherDomain": "lacomuna12.com.ar",
-        "category": "Antártida",
-        "eventType": "general",
-        "lane": "standard",
-        "riskLevel": "high",
-        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-15T18:30:05.984Z",
-        "expiresAt": "2026-07-16T10:03:21.587Z",
-        "corroborationAttempts": 6
-      },
-      {
-        "eventKey": "crime|terry cole|mexico|estados unidos|investiga|2026-07-15",
-        "title": "Sheiunbaum responde ante acusación de ‘narcogobierno’ en México: “La DEA debería estar dedicada a investigar dentro de su país”",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
+        "eventKey": "crime|paris|internacional|francia|informa|2026-07-15",
+        "title": "Incendio en Fontainebleau: rebrotes del fuego complican la labor de los bomberos franceses; hay un nuevo detenido",
+        "sourceId": "mundo-france24",
+        "publisherDomain": "france24.com",
+        "category": "Mundo",
         "eventType": "crime",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-15T18:30:05.985Z",
-        "expiresAt": "2026-07-17T15:30:05.985Z",
+        "nextRetryAt": "2026-07-15T20:17:52.490Z",
+        "expiresAt": "2026-07-17T17:17:52.490Z",
         "corroborationAttempts": 0
       },
       {
-        "eventKey": "international-conflict|internacional|estados unidos|informa|2026-07-15",
-        "title": "Expreso de Oriente - Irán y EE. UU. rompen la tregua: ¿comienza una guerra prolongada?",
-        "sourceId": "mundo-france24",
-        "publisherDomain": "france24.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "sourceId": "perfil-tdf",
+        "publisherDomain": "perfil.com",
+        "category": "Provincia",
+        "eventType": "general",
+        "lane": "fast",
+        "riskLevel": "low",
+        "exactReason": "fast-requires-competent-tier-a-or-trusted-local-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-15T18:30:05.986Z",
-        "expiresAt": "2026-07-17T15:30:05.986Z",
+        "nextRetryAt": "2026-07-15T20:17:52.490Z",
+        "expiresAt": "2026-07-17T17:17:52.490Z",
         "corroborationAttempts": 1
       }
     ],
     "conflicting": 1,
-    "published": 2,
-    "publishedByLane": {
-      "standard": 2
-    },
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 15,
+      "standard": 14,
       "strict": 1
     },
     "pendingByLane": {
-      "standard": 1,
-      "strict": 2
+      "strict": 1,
+      "fast": 1
     },
     "eventsByTerritory": {
-      "Antartida": 2,
-      "Nacionales": 9,
-      "Mundo": 7,
-      "Provincia": 2
+      "Nacionales": 11,
+      "Malvinas": 1,
+      "Mundo": 5,
+      "Ushuaia": 1
     },
     "verifiedByTerritory": {
-      "Nacionales": 9,
-      "Mundo": 4,
-      "Antartida": 1,
-      "Provincia": 2
+      "Nacionales": 10,
+      "Malvinas": 1,
+      "Mundo": 4
     },
-    "fastPendingAudit": [],
-    "freshCandidates": 37,
-    "staleDiscarded": 1,
+    "fastPendingAudit": [
+      {
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "sourceId": "perfil-tdf",
+        "publisherDomain": "perfil.com",
+        "tier": "B",
+        "competence": [
+          "municipal"
+        ],
+        "territory": "Ushuaia",
+        "topic": "turismo",
+        "eventType": "general",
+        "riskLevel": "low",
+        "pendingReason": "pending-verification",
+        "status": "pending-verification"
+      }
+    ],
+    "freshCandidates": 29,
+    "staleDiscarded": 3,
     "sourceHealth": {
       "rio-grande-oficial": {
+        "detected": 1,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "ushuaia-oficial": {
         "detected": 1,
         "materialized": 0,
         "freshCandidates": 0,
@@ -145,26 +172,6 @@
         "publicationContribution": 0,
         "freshCandidateRate": 0,
         "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "ushuaia-oficial": {
-        "detected": 1,
-        "materialized": 1,
-        "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "degraded",
-        "issueCategory": "zero-useful-candidates",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -211,22 +218,22 @@
       },
       "actualidad-tdf": {
         "detected": 5,
-        "materialized": 5,
-        "freshCandidates": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 2,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.4,
-        "publicationContributionRate": 0.4,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "el-rompehielos": {
@@ -291,9 +298,9 @@
       },
       "sur54": {
         "detected": 5,
-        "materialized": 3,
+        "materialized": 2,
         "freshCandidates": 0,
-        "qualityDiscarded": 3,
+        "qualityDiscarded": 2,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
@@ -304,7 +311,7 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.6,
+        "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -351,9 +358,9 @@
       },
       "critica-sur": {
         "detected": 4,
-        "materialized": 2,
+        "materialized": 3,
         "freshCandidates": 0,
-        "qualityDiscarded": 2,
+        "qualityDiscarded": 3,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
@@ -364,7 +371,7 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.5,
+        "materializationSuccessRate": 0.75,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -372,9 +379,9 @@
       "bing-tdf": {
         "detected": 5,
         "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -383,11 +390,11 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.4,
+        "freshCandidateRate": 0.2,
         "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.2
       },
       "bing-rio-grande": {
         "detected": 4,
@@ -410,27 +417,7 @@
         "staleDiscardRate": 0
       },
       "bing-ushuaia": {
-        "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-tolhuin": {
-        "detected": 3,
+        "detected": 2,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -445,6 +432,26 @@
         "publicationContribution": 0,
         "freshCandidateRate": 0,
         "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-tolhuin": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -471,20 +478,20 @@
       },
       "bing-antartida": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -510,24 +517,24 @@
         "staleDiscardRate": 0
       },
       "perfil-tdf": {
-        "detected": 0,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
-        "noItems": 1,
+        "noItems": 0,
         "lastError": "",
-        "status": "unhealthy",
-        "issueCategory": "zero-items",
+        "status": "healthy",
+        "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.5
       },
       "clarin-tdf": {
         "detected": 0,
@@ -552,9 +559,9 @@
       "nacionales-infobae": {
         "detected": 3,
         "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -563,11 +570,11 @@
         "issueCategory": "",
         "verifiedContribution": 2,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
+        "freshCandidateRate": 0.67,
         "materializationSuccessRate": 1,
         "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "nacionales-perfil": {
         "detected": 2,
@@ -581,11 +588,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
+        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -621,11 +628,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -651,26 +658,6 @@
       },
       "nacionales-tn": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-google": {
-        "detected": 3,
         "materialized": 2,
         "freshCandidates": 2,
         "qualityDiscarded": 0,
@@ -681,15 +668,15 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-clarin": {
+      "mundo-google": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 3,
@@ -701,15 +688,15 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-bbc": {
+      "mundo-clarin": {
         "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
@@ -729,7 +716,47 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
+      "mundo-bbc": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
       "mundo-dw": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 2,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.67,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-france24": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 3,
@@ -741,33 +768,13 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
-      },
-      "mundo-france24": {
-        "detected": 3,
-        "materialized": 4,
-        "freshCandidates": 3,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.75,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
       },
       "mundo-elpais": {
         "detected": 3,
@@ -791,197 +798,176 @@
       },
       "mundo-bing": {
         "detected": 3,
-        "materialized": 0,
+        "materialized": 1,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
+        "qualityDiscarded": 1,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "degraded",
+        "issueCategory": "zero-useful-candidates",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 7,
-    "modelErrors": 7,
+    "drafts": 6,
+    "modelErrors": 5,
     "publicationErrors": 0,
     "factualValidationErrors": 2,
-    "discardedImportance": 5,
+    "discardedImportance": 7,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 7,
-    "failedTerminal": 0,
+    "failedRetryable": 5,
+    "failedTerminal": 2,
     "failedRetryableByReason": {
-      "rate-limit": 7
+      "rate-limit": 5
     },
-    "failedTerminalByReason": {},
+    "failedTerminalByReason": {
+      "http-403": 2
+    },
     "aiReused": 0,
     "rescueQueued": 3,
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
-    "discardedPublicationLimit": 0,
-    "extractErrors": 0,
+    "discardedPublicationLimit": 1,
+    "extractErrors": 2,
     "imageErrors": 0,
-    "aiAttempts": 16,
-    "aiCalls": 9,
-    "articlesDrafted": 7,
-    "imagesResolved": 2,
-    "approvedForPublication": 2,
-    "imageSelections": [
-      {
-        "title": "La inflación de junio en Tierra del Fuego: un signo de desaceleración",
-        "strategy": "article-og",
-        "query": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
-        "score": 82,
-        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2023/05/Supermercado.jpg"
-      },
-      {
-        "title": "El Gobierno provincial y los gremios estatales avanzan en la reglamentación de la COPARLAP",
-        "strategy": "article-og",
-        "query": "Reunión entre el Gobierno provincial y organizaciones gremiales estatales - Actualidad TDF",
-        "score": 82,
-        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2026/07/Reunion-Gobierno-Entidades-gremiales.jpg"
-      }
-    ],
-    "agendaStories": 1017,
-    "newsworthinessAverage": 59,
+    "aiAttempts": 15,
+    "aiCalls": 10,
+    "articlesDrafted": 8,
+    "imagesResolved": 0,
+    "approvedForPublication": 0,
+    "imageSelections": [],
+    "agendaStories": 1016,
+    "newsworthinessAverage": 58,
     "newsworthinessTop": [
       {
-        "title": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
-        "eventKey": "general|acumulo|desaceleracion|inflacion|junio|marco|meses|nueva|tierra del fuego aias|2026-07-15",
-        "score": 79,
-        "topic": "economia",
-        "territory": "Provincia",
-        "lane": "standard"
+        "title": "EEUU lanzó nueva oleada de 90 minutos de ataques contra Irán",
+        "eventKey": "international-conflict|ministerio de defensa de emiratos arabes|onu|medio oriente|emiratos arabes|estados unidos|informa|2026-07-14",
+        "score": 82,
+        "topic": "politica",
+        "territory": "Mundo",
+        "lane": "strict"
       },
       {
-        "title": "Artemis: \"Romper barreras no es logro de una sola persona\"",
-        "eventKey": "general|artemis|barreras|logro|persona|romper|antartida|2026-07-15",
-        "score": 73,
-        "topic": "sociedad",
-        "territory": "Antartida",
-        "lane": "standard"
-      },
-      {
-        "title": "Reunión entre el Gobierno provincial y organizaciones gremiales estatales - Actualidad TDF",
-        "eventKey": "general|estatales|gobierno|gremiales|organizaciones|provincial|reunion|tierra del fuego aias|2026-07-15",
-        "score": 70,
-        "topic": "sociedad",
-        "territory": "Provincia",
-        "lane": "standard"
-      },
-      {
-        "title": "Wall Street sube de la mano del sector tecnológico y el petróleo retrocede tras tocar los u$s85",
-        "eventKey": "general|petroleo|retrocede|sector|street|tecnologico|tocar|2026-07-15",
-        "score": 60,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Cómo fue la final del Mundial México 70: el día que Pelé conquistó el Estadio Azteca",
-        "eventKey": "general|azteca|conquisto|estadio|final|mexico|mundial|2026-07-15",
-        "score": 60,
+        "title": "Selección argentina, EN VIVO: la jornada del miércoles 15 de julio en el Mundial 2026",
+        "eventKey": "general|argentina|jornada|julio|miercoles|mundial|seleccion|malvinas|2026-07-15",
+        "score": 75,
         "topic": "deportes",
-        "territory": "Nacionales",
+        "territory": "Malvinas",
         "lane": "standard"
       },
       {
-        "title": "Tres andinistas peruanos desaparecen durante expedición en el nevado Huascarán: familiares piden el apoyo de un helicóptero de rescate",
-        "eventKey": "service|andinistas|apoyo|desaparecen|durante|expedicion|familiares|helicoptero|2026-07-15",
+        "title": "El histórico pueblo de Buenos Aires que renació gracias a su gastronomía y paz absoluta",
+        "eventKey": "service|absoluta|aires|buenos|gastronomia|gracias|historico|pueblo|2026-07-15",
         "score": 60,
         "topic": "servicios",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Causa AFA: habilitaron a que vuelva a revisarse quién investigará la compra de la mansión de Pilar",
-        "eventKey": "general|causa|compra|habilitaron|investigara|mansion|pilar|quien|2026-07-15",
+        "title": "Zlatan Ibrahimovic habló del partido Argentina-Inglaterra e hizo una advertencia sobre Messi",
+        "eventKey": "general|advertencia|argentina|hablo|ibrahimovic|inglaterra|messi|partido|2026-07-15",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Desregulación en Uber, Cabify y remises: cómo cambia el seguro para autos en apps de transporte",
-        "eventKey": "service|autos|cabify|cambia|desregulacion|remises|seguro|transporte|2026-07-15",
-        "score": 60,
-        "topic": "servicios",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "A contramano de SanCor, se vendió una histórica láctea que volverá a producir en tiempo récord",
-        "eventKey": "general|contramano|historica|lactea|producir|record|sancor|tiempo|2026-07-15",
+        "title": "Álvaro Montero fichó con Boca Juniors: estos son los porteros colombianos que han atajado en el cuadro argentino",
+        "eventKey": "general|alvaro|argentino|atajado|colombianos|cuadro|estos|ficho|2026-07-15",
         "score": 58,
         "topic": "sociedad",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "El Debate - ¿Quién controlará el estrecho de Ormuz? El pulso entre Irán y Trump",
-        "eventKey": "crime|gobierno de mexico pie de|justicia de estados unidos|universidad de pekin|zhang zhidong|bbc news mundo miembros|internacional|mexico|estados unidos|informa|2026-07-14",
+        "title": "Reforma de la Carta Orgánica del BCRA: cuál es la propuesta de Carlos Rodríguez",
+        "eventKey": "general|carlos|carta|organica|propuesta|reforma|rodriguez|2026-07-15",
+        "score": 58,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "La otra argentina que se prepara para salir a la cancha y jugar su propio Mundial",
+        "eventKey": "general|argentina|cancha|jugar|mundial|prepara|propio|salir|2026-07-15",
+        "score": 58,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "De qué se trata “Mi gran casamiento hebreo”, el espectáculo de Lea Bensasson que llega a la Argentina",
+        "eventKey": "general|argentina|bensasson|casamiento|espectaculo|hebreo|llega|trata|2026-07-15",
+        "score": 58,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Las acciones de SpaceX caen por primera vez de los 135 dólares, su precio de salida",
+        "eventKey": "general|acciones|dolares|precio|primera|salida|spacex|2026-07-15",
         "score": 55,
-        "topic": "policiales",
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Prensa no perdona desempeño de Francia ante España; expectativas por partido Inglaterra-Argentina",
+        "eventKey": "general|argentina|desempeno|espana|expectativas|francia|inglaterra|partido|2026-07-15",
+        "score": 55,
+        "topic": "deportes",
         "territory": "Mundo",
-        "lane": "strict"
+        "lane": "standard"
       }
     ],
-    "corroborationSearches": 3,
-    "corroborationFound": 2,
+    "corroborationSearches": 2,
+    "corroborationFound": 1,
     "corroborationVerified": 0,
     "corroborationConflicts": 1,
-    "corroborationNoResult": 2,
+    "corroborationNoResult": 1,
     "corroborationAttempts": [
       {
-        "eventKey": "crime|fiscalia|mara salvatrucha hay|internacional|informa|2026-07-15",
-        "title": "El Salvador: con un pedido de miles de años de cárcel termina el juicio masivo a los jefes de la pandilla Mara Salvatrucha",
+        "eventKey": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "title": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
         "priorityRank": 1,
-        "corroborationQuery": "Mara Salvatrucha Hay Fiscalía carcel jefes juicio masivo miles pandilla",
-        "corroborationReason": "newsworthiness=95; freshness=2h; territory=Mundo; impact=13; corroborability=10; pendingAge=2h; attempts=0",
-        "found": 2,
+        "corroborationQuery": "Reserva Natural Argentina Inglaterra Cuba Ushuaia Cerro Castor conectar hotel invierno mundo nieve perder",
+        "corroborationReason": "newsworthiness=100; freshness=2h; territory=Ushuaia; impact=15; corroborability=10; pendingAge=2h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "sports-result|espana|francia|2026-07-15|07-15",
+        "title": "Mundial 2026, EN VIVO: la jornada del miércoles 15 de julio minuto a minuto y últimas noticias",
+        "priorityRank": 2,
+        "corroborationQuery": "Argentina Mexico Inglaterra Francia Espana Mundial resultado jornada julio miercoles minuto ultimas",
+        "corroborationReason": "newsworthiness=89; freshness=0h; territory=Nacionales; impact=6; corroborability=10; pendingAge=0h; attempts=0",
+        "found": 1,
         "verified": false,
         "status": "conflicting-sources"
-      },
-      {
-        "eventKey": "international-conflict|internacional|estados unidos|informa|2026-07-15",
-        "title": "Expreso de Oriente - Irán y EE. UU. rompen la tregua: ¿comienza una guerra prolongada?",
-        "priorityRank": 2,
-        "corroborationQuery": "Estados Unidos conflicto comienza expreso guerra oriente prolongada rompen",
-        "corroborationReason": "newsworthiness=88; freshness=1h; territory=Mundo; impact=10; corroborability=10; pendingAge=1h; attempts=0",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
-      },
-      {
-        "eventKey": "general|antartida|argentina|juegos|parque|patio|pioneros|renovaron|antartida|antartida argentina|2026-07-14",
-        "title": "Renovaron el patio de juegos del Parque Pioneros de la Antártida Argentina",
-        "priorityRank": 3,
-        "corroborationQuery": "Parque Pioneros Argentina Antartida Argentina antartida juegos parque patio pioneros",
-        "corroborationReason": "newsworthiness=70; freshness=5h; territory=Antartida; impact=6; corroborability=10; pendingAge=29h; attempts=5",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "money": 2,
-      "dates": 3
+      "sportsTeams": 1,
+      "teams": 1,
+      "scores": 1,
+      "dates": 2
     },
-    "criticalConflicts": 5,
-    "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 17,
+    "criticalConflicts": 4,
+    "nonCriticalDifferences": 1,
+    "resolvedComplementaryFacts": 13,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 79,
@@ -1002,37 +988,54 @@
         "max": 2539.2
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 707,
-        "avg": 73.1,
+        "count": 721,
+        "avg": 73.5,
         "p50": 0,
         "max": 2646.2
       },
       "cohort": {
         "comparablePublishedCount": 79,
-        "verifiedWithoutPublicationCount": 628,
+        "verifiedWithoutPublicationCount": 642,
         "publicationWithoutVerifiedAtCount": 1,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Provincia": 2
-    },
-    "publishedLast3hBeforeRun": 3,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 2,
     "publishedLast6hBeforeRun": 5,
-    "publishedLast12hBeforeRun": 7,
-    "publishedLast24hBeforeRun": 14,
-    "hoursSinceLastPublicationBeforeRun": 1.6,
+    "publishedLast12hBeforeRun": 9,
+    "publishedLast24hBeforeRun": 16,
+    "hoursSinceLastPublicationBeforeRun": 1.8,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 14,
+      "publishedLast24hBeforeRun": 16,
       "remainingToMin": 0,
-      "slotsRemaining": 2,
+      "slotsRemaining": 0,
       "effectiveRunTarget": 3,
-      "effectiveRunMaxNormal": 2
+      "effectiveRunMaxNormal": 0
     },
     "agendaTop": [
+      {
+        "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "topic": "turismo",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 15,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 15,
+          "socialPotential": 15,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|colombiana|confirmo|desaparecida|edomex|fiscalia|monica|muerte|2026-07-15",
         "headlineSeed": "Fiscalía confirmó la muerte de Mónica Núñez, colombiana reportada como desaparecida en Edomex",
@@ -1108,36 +1111,17 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|inflacion|junio|menor|patagonia|registro|rio grande|ushuaia|2026-07-14",
-        "headlineSeed": "La inflación de junio fue del 1,9% y la Patagonia registró la menor suba del país",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 24,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ],
-    "agendaInvalidStories": 58,
+    "agendaInvalidStories": 56,
     "technicalSuccess": true,
-    "editorialOutcome": "published",
+    "editorialOutcome": "publication-limit",
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
-      "healthy": 31,
+      "healthy": 32,
       "productive": 15,
-      "noResults": 3,
+      "noResults": 2,
       "failed": 0
     }
   },
@@ -1145,8 +1129,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 16,
-    "discoveryAiBudget": 16,
+    "discoveryAiUsed": 15,
+    "discoveryAiBudget": 15,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1155,21 +1139,22 @@
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
-    "effectiveRunMaxNormal": 2,
+    "effectiveRunMaxNormal": 0,
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 14,
-    "candidatesMaterialized": 44,
-    "totalCandidatesBeforeLimit": 44
+    "publishedLast24hBeforeRun": 16,
+    "candidatesMaterialized": 40,
+    "totalCandidatesBeforeLimit": 40
   },
   "reasonNoMorePublished": [
-    "3 evento(s) quedaron pendientes de segunda fuente",
+    "2 evento(s) quedaron pendientes de segunda fuente",
     "1 evento(s) tuvieron conflicto factual",
-    "16 candidato(s) descartados por duplicado/similitud",
-    "7 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 6)",
-    "5 candidato(s) descartados por importancia editorial",
+    "12 candidato(s) descartados por duplicado/similitud",
+    "9 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 5, stale-dated-discovery: 2, homepage,listing-url,short-body: 1)",
+    "7 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) quedaron por cupo editorial de corrida",
     "2 candidato(s) bloqueados por validacion factual",
-    "7 error(es) reales de modelo"
+    "5 error(es) reales de modelo"
   ]
 }

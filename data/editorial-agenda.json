@@ -1,48 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T15:32:02.134Z",
+  "generatedAt": "2026-07-15T17:19:32.324Z",
   "summary": {
-    "totalStories": 1017,
+    "totalStories": 1016,
     "byStatus": {
       "pending-verification": 56,
-      "conflicting-sources": 51,
+      "conflicting-sources": 52,
       "published": 74,
-      "verified-standard-single-source": 539,
+      "verified-standard-single-source": 551,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "verified-local-routine": 10,
-      "agenda-invalid": 58,
-      "rejected-terminal": 158,
+      "agenda-invalid": 56,
+      "rejected-terminal": 151,
       "verified-standard": 14,
-      "verified": 15,
-      "verified-strict": 34
+      "verified-local-routine": 10,
+      "verified": 9,
+      "verified-strict": 35
     },
     "byTopic": {
-      "servicios": 155,
       "turismo": 16,
+      "servicios": 155,
       "agenda": 28,
       "politica": 142,
-      "sociedad": 340,
-      "deportes": 214,
-      "policiales": 46,
+      "sociedad": 342,
+      "deportes": 212,
+      "policiales": 45,
       "salud": 3,
-      "economia": 40,
       "educacion": 27,
+      "economia": 40,
       "cultura": 6
     },
     "byTerritory": {
-      "Mundo": 491,
-      "Ushuaia": 59,
-      "Rio Grande": 55,
+      "Ushuaia": 58,
+      "Mundo": 496,
+      "Rio Grande": 53,
       "Tolhuin": 9,
-      "Nacionales": 252,
+      "Nacionales": 247,
       "Malvinas": 58,
       "Antartida": 5,
       "Provincia": 18,
-      "unknown": 70
+      "unknown": 72
     },
-    "invalidStories": 58,
+    "invalidStories": 56,
     "topStories": [
+      {
+        "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+        "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+        "topic": "turismo",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 15,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 15,
+          "socialPotential": 15,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|colombiana|confirmo|desaparecida|edomex|fiscalia|monica|muerte|2026-07-15",
         "headlineSeed": "Fiscalía confirmó la muerte de Mónica Núñez, colombiana reportada como desaparecida en Edomex",
@@ -209,33 +228,60 @@
           "serviceValue": 20,
           "socialPotential": 7,
           "searchPotential": 15,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|campeonato|escalada|fueguino|primer|rio grande|ushuaia",
-        "headlineSeed": "USHUAIA FUE SEDE DEL PRIMER CAMPEONATO FUEGUINO DE ESCALADA",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-fast-lane",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 8,
           "diversity": 4
         }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Reserva Natural",
+        "Ushuaia",
+        "Cerro Castor",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Inglaterra",
+        "Cuba"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T17:17:52.490Z",
+      "lastSeenAt": "2026-07-15T17:17:52.490Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 15,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 15,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 15,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
     {
       "storyId": "service|colombiana|confirmo|desaparecida|edomex|fiscalia|monica|muerte|2026-07-15",
       "headlineSeed": "Fiscalía confirmó la muerte de Mónica Núñez, colombiana reportada como desaparecida en Edomex",
@@ -617,7 +663,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 21,
@@ -631,7 +677,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -665,7 +711,7 @@
         "A"
       ],
       "editorialLane": "fast",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -679,61 +725,12 @@
         "serviceValue": 20,
         "socialPotential": 11,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 8,
         "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
-      "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Gabriela Castillo",
-        "Vaca Muerta",
-        "Municipio",
-        "Gobierno de Javier Milei",
-        "Gobierno",
-        "Policia",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Malvinas"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.993Z",
-      "lastSeenAt": "2026-07-14T16:36:15.993Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 15,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 15,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 15,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -763,7 +760,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 24,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -777,7 +774,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -1205,55 +1202,6 @@
       ]
     },
     {
-      "storyId": "legislative|camara de diputados|gobierno de zacatecas|gobierno de mexico|ricardo monreal|claudia sheinbaum|david monreal|rio grande|tierra del fuego aias|mexico|francia|informa|202",
-      "headlineSeed": "Ricardo Monreal agradece a la presidenta Claudia Sheinbaum por invitarlo a su gira en Zacatecas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Ricardo Monreal",
-        "Claudia Sheinbaum",
-        "David Monreal",
-        "Cuarta Transformación",
-        "Cámara de Diputados",
-        "Gobierno de Zacatecas",
-        "Gobierno de México",
-        "Rio Grande",
-        "Tierra del Fuego AIAS",
-        "Mexico"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-12T17:03:51.694Z",
-      "lastSeenAt": "2026-07-12T17:03:51.694Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 25,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|ambos|balotaje|factor|kicillof|midieron|milei|saldria|2026-07-12",
       "headlineSeed": "Midieron a Milei y Kicillof de cara a 2027: cómo saldría un balotaje entre ambos y el rol del “factor Villarruel”",
       "topic": "servicios",
@@ -1480,59 +1428,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather|argentina|chile|reino unido|polemica|malvinas la|hms medway|rio grande|islas malvinas|informa|07 08 900",
-      "headlineSeed": "Polémica por el paso de un buque de guerra británico por aguas territoriales argentinas tras zarpar de Malvinas",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Polémica",
-        "Malvinas La",
-        "HMS Medway",
-        "Atlántico Sur",
-        "Desde Defensa",
-        "Argentina",
-        "Chile",
-        "Reino Unido",
-        "Rio Grande",
-        "Islas Malvinas"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-09T00:04:30.693Z",
-      "lastSeenAt": "2026-07-09T00:04:30.693Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 23,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "agenda-invalid",
-      "sourceStatus": "rejected-terminal",
-      "validationReasons": [
-        "story-headline-mismatch",
-        "topic-event-mismatch"
-      ]
-    },
-    {
       "storyId": "service|argentino|banderazo|duelo|inglaterra|multitudinario|previa|malvinas|2026-07-14",
       "headlineSeed": "Multitudinario banderazo argentino en la previa del duelo ante Inglaterra",
       "topic": "servicios",
@@ -1581,6 +1476,55 @@
       "validationReasons": [
         "topic-event-mismatch"
       ]
+    },
+    {
+      "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
+      "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Gabriela Castillo",
+        "Vaca Muerta",
+        "Municipio",
+        "Gobierno de Javier Milei",
+        "Gobierno",
+        "Policia",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Malvinas"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.993Z",
+      "lastSeenAt": "2026-07-14T16:36:15.993Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 15,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 15,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 15,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 99,
+      "status": "verified-local-routine",
+      "validationReasons": []
     },
     {
       "storyId": "service|controles|estudiantiles|invernales|radiouniversidad|refuerza|temporada|viajes|rio grande|ushuaia|2026-07-13",
@@ -1963,6 +1907,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "legislative|camara de diputados|gobierno de zacatecas|gobierno de mexico|ricardo monreal|claudia sheinbaum|david monreal|rio grande|tierra del fuego aias|mexico|francia|informa|202",
+      "headlineSeed": "Ricardo Monreal agradece a la presidenta Claudia Sheinbaum por invitarlo a su gira en Zacatecas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Ricardo Monreal",
+        "Claudia Sheinbaum",
+        "David Monreal",
+        "Cuarta Transformación",
+        "Cámara de Diputados",
+        "Gobierno de Zacatecas",
+        "Gobierno de México",
+        "Rio Grande",
+        "Tierra del Fuego AIAS",
+        "Mexico"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-12T17:03:51.694Z",
+      "lastSeenAt": "2026-07-12T17:03:51.694Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 25,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 98,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|gobierno de javier milei|anses ushuaia|gobierno|cristina fernandez|javier milei|rio grande|ushuaia|argentina|brasil|informa|2026-07-12",
       "headlineSeed": "Scioli sumó una foto con los referentes libertarios fueguinos durante su visita a Ushuaia",
       "topic": "politica",
@@ -2100,52 +2093,6 @@
       },
       "newsworthinessScore": 97,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
-      "headlineSeed": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
-      "topic": "agenda",
-      "subtopic": "cultura",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Daniel Scioli",
-        "Secretaría",
-        "Gobierno",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Cerro Castor",
-        "Argentina"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-11T19:10:07.370Z",
-      "lastSeenAt": "2026-07-13T06:58:23.619Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 15,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 97,
-      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -3591,6 +3538,52 @@
       "validationReasons": []
     },
     {
+      "storyId": "agenda|antorchas|bajada|expectativas|inauguro|mejores|nieve|scioli|ushuaia|tierra del fuego|2026-07-11",
+      "headlineSeed": "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas: «Tenemos las mejores expectativas», dijo Scioli",
+      "topic": "agenda",
+      "subtopic": "cultura",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Daniel Scioli",
+        "Secretaría",
+        "Gobierno",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Cerro Castor",
+        "Argentina"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-11T19:10:07.370Z",
+      "lastSeenAt": "2026-07-13T06:58:23.619Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 15,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 93,
+      "status": "verified-standard",
+      "validationReasons": []
+    },
+    {
       "storyId": "agenda|austral|celebro|fiesta|invierno|nacional|reporte|rio grande|ushuaia|2026-07-11",
       "headlineSeed": "Tierra del Fuego celebró la Fiesta Nacional del Invierno - Reporte Austral",
       "topic": "agenda",
@@ -4219,50 +4212,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|ministerio de defensa de emiratos arabes|onu|medio oriente|emiratos arabes|estados unidos|informa|2026-07-14",
-      "headlineSeed": "Crece la tensión en Medio Oriente: EE.UU. lanzó una nueva ola de ataques contra Irán y Teherán consideró “desmantelado” el acuerdo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Medio Oriente",
-        "Emiratos Árabes",
-        "Ministerio de Defensa de Emiratos Árabes",
-        "ONU",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-14T20:02:06.508Z",
-      "lastSeenAt": "2026-07-14T20:02:06.508Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 91,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|banco central el|banco central|banco|propiedad privada|argentina|informa|2026-07-14",
       "headlineSeed": "\"Podrá volver el populismo\": la cruda advertencia de Ravier para justificar el cerrojo sobre el Banco Central",
       "topic": "politica",
@@ -4534,51 +4483,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|acceso|cancer|desigualdad|juega|tambien|tratamiento|tierra del fuego|2026-07-14",
-      "headlineSeed": "Cáncer. La desigualdad también se juega en el acceso al tratamiento",
-      "topic": "salud",
-      "subtopic": "salud",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Ministerio de Salud de la Nación",
-        "Ministerio de Salud",
-        "Gobierno de",
-        "Tierra del Fuego",
-        "Buenos Aires",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T04:21:20.999Z",
-      "lastSeenAt": "2026-07-14T04:21:20.999Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|otto fritzler|prestige auto racing team|nicolas bonelli|malvinas|argentina|inglaterra|informa|2026-07-12",
       "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
       "topic": "deportes",
@@ -4768,6 +4672,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|espana|francia|2026-07-15|07-15",
+      "headlineSeed": "Mundial 2026, EN VIVO: la jornada del miércoles 15 de julio minuto a minuto y últimas noticias",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Francia",
+        "Espana",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-15T17:17:52.489Z",
+      "lastSeenAt": "2026-07-15T17:17:52.489Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "legislative|camara de diputados y de|gobierno|camara de diputados y|junta preparatoria|congreso bicameral|miguel torres|argentina|peru|informa|2026-07-15",
       "headlineSeed": "Junta Preparatoria del Congreso Bicameral inicia hoy sus funciones",
       "topic": "politica",
@@ -4935,47 +4882,6 @@
         "impactMagnitude": 21,
         "serviceValue": 3,
         "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|justicia|fiscalia|fernando burlando|francisco oneto|argentina|informa|2026-07-14",
-      "headlineSeed": "Juicio por la muerte de Maradona, en vivo: Fernando Burlando y Francisco Oneto al borde de la agresión física tras una tensa discusión",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Fernando Burlando",
-        "Argentina"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T15:27:05.032Z",
-      "lastSeenAt": "2026-07-14T17:20:25.192Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
         "searchPotential": 7,
         "recency": 12,
         "sourceStrength": 3,
@@ -5301,50 +5207,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentina|cerro castor|ushuaia el|ushuaia|argentina|informa|07 08 900",
-      "headlineSeed": "Cerro Castor abrió la temporada y la nieve ya espera en Ushuaia",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Cerro Castor",
-        "Ushuaia El",
-        "Argentina",
-        "Ushuaia",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-09T00:04:30.693Z",
-      "lastSeenAt": "2026-07-09T00:04:30.693Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 15,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "verified",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|fiscalia|mara salvatrucha hay|internacional|informa|2026-07-15",
       "headlineSeed": "El Salvador: con un pedido de miles de años de cárcel termina el juicio masivo a los jefes de la pandilla Mara Salvatrucha",
       "topic": "policiales",
@@ -5427,48 +5289,6 @@
       },
       "newsworthinessScore": 87,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|dirigentes|encuesta|evalua|gobierno|prefiere|preocupa|sociedad|2026-07-14",
-      "headlineSeed": "Encuesta: cómo evalúa la sociedad al Gobierno, qué le preocupa y a qué dirigentes prefiere",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Alessio Irol",
-        "Gobierno",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.996Z",
-      "lastSeenAt": "2026-07-14T16:36:15.996Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 87,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -5880,6 +5700,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "casualty|justicia|fiscalia|fernando burlando|francisco oneto|argentina|informa|2026-07-14",
+      "headlineSeed": "Juicio por la muerte de Maradona, en vivo: Fernando Burlando y Francisco Oneto al borde de la agresión física tras una tensa discusión",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Fernando Burlando",
+        "Argentina"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T15:27:05.032Z",
+      "lastSeenAt": "2026-07-14T17:20:25.192Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|gobierno|banco central|camara nacional de apelaciones|javier milei|adrian ravier|kansas|argentina|estados unidos|informa|2026-07-14",
       "headlineSeed": "🔴 Javier Milei, en vivo: las últimas noticias de la mesa política en Casa Rosada para avanzar con la agenda legislativa",
       "topic": "politica",
@@ -5926,6 +5787,51 @@
       },
       "newsworthinessScore": 86,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|acceso|cancer|desigualdad|juega|tambien|tratamiento|tierra del fuego|2026-07-14",
+      "headlineSeed": "Cáncer. La desigualdad también se juega en el acceso al tratamiento",
+      "topic": "salud",
+      "subtopic": "salud",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Ministerio de Salud de la Nación",
+        "Ministerio de Salud",
+        "Gobierno de",
+        "Tierra del Fuego",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T04:21:20.999Z",
+      "lastSeenAt": "2026-07-14T04:21:20.999Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -6067,52 +5973,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|argentina|mexico|el mundial|argentinos|comparten|argentina|informa|mayo",
-      "headlineSeed": "El Mundial y los algoritmos pendencieros",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "El Mundial",
-        "Argentinos",
-        "Comparten",
-        "Entonces",
-        "No",
-        "Argentina",
-        "Mexico"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-09T00:04:30.693Z",
-      "lastSeenAt": "2026-07-09T00:04:30.693Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 86,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|gobierno|challenger energy group|malvinas|atlantico sur|argentina|uruguay|informa|2026-07-15",
       "headlineSeed": "Cuál es y dónde opera hoy la empresa británica que quiere explotar petróleo en el Mar Argentino",
       "topic": "politica",
@@ -6197,48 +6057,6 @@
       },
       "newsworthinessScore": 85,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|justicia|internacional|francia|informa|2026-07-14",
-      "headlineSeed": "Francia: desfile militar del Día de la Bastilla con Ucrania como protagonista",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Justicia",
-        "Internacional",
-        "Francia"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-14T17:20:25.194Z",
-      "lastSeenAt": "2026-07-14T17:20:25.194Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -6464,50 +6282,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|atiende|consultas|funcionando|primer|semestre|telefono|vivienda|2026-07-15",
-      "headlineSeed": "El teléfono 047 de Vivienda atiende 15.000 consultas en su primer semestre funcionando",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Ministerio de Vivienda y Agenda Urbana",
-        "Espana"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-15T10:07:55.575Z",
-      "lastSeenAt": "2026-07-15T10:07:55.575Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "general|canasta|encima|inflacion|junio|pobreza|subio|2026-07-14",
       "headlineSeed": "La canasta con la que se mide la pobreza subió en junio por encima de la inflación",
       "topic": "economia",
@@ -6582,6 +6356,48 @@
         "socialPotential": 4,
         "searchPotential": 10,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|dirigentes|encuesta|evalua|gobierno|prefiere|preocupa|sociedad|2026-07-14",
+      "headlineSeed": "Encuesta: cómo evalúa la sociedad al Gobierno, qué le preocupa y a qué dirigentes prefiere",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Alessio Irol",
+        "Gobierno",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.996Z",
+      "lastSeenAt": "2026-07-14T16:36:15.996Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -7173,6 +6989,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|ministerio de defensa de emiratos arabes|onu|medio oriente|emiratos arabes|estados unidos|informa|2026-07-14",
+      "headlineSeed": "EEUU lanzó nueva oleada de 90 minutos de ataques contra Irán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-14T20:02:06.508Z",
+      "lastSeenAt": "2026-07-15T17:17:52.490Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|emmanuel macron|volodimir zelenski|paris|internacional|reino unido|francia|informa|2026-07-13",
       "headlineSeed": "¿Pueden los acuerdos de la Coalición de Voluntarios cambiar el curso de la guerra en Ucrania?",
       "topic": "politica",
@@ -7212,6 +7068,48 @@
       },
       "newsworthinessScore": 82,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|justicia|internacional|francia|informa|2026-07-14",
+      "headlineSeed": "Francia: desfile militar del Día de la Bastilla con Ucrania como protagonista",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Justicia",
+        "Internacional",
+        "Francia"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-14T17:20:25.194Z",
+      "lastSeenAt": "2026-07-14T17:20:25.194Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -7488,6 +7386,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|autos|cabify|cambia|desregulacion|remises|seguro|transporte|2026-07-15",
+      "headlineSeed": "Desregulación en Uber, Cabify y remises: cómo cambia el seguro para autos en apps de transporte",
+      "topic": "servicios",
+      "subtopic": "movilidad",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-15T15:30:05.987Z",
+      "lastSeenAt": "2026-07-15T15:30:05.987Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "legislative|gobierno|camara|zona fria|informa|2026-07-15",
       "headlineSeed": "Los libertarios hacen un nuevo intento por aprobar la Ley de Tierras pero se resigna con la modificación de Zona Fría",
       "topic": "politica",
@@ -7521,6 +7460,50 @@
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
+      "storyId": "service|atiende|consultas|funcionando|primer|semestre|telefono|vivienda|2026-07-15",
+      "headlineSeed": "El teléfono 047 de Vivienda atiende 15.000 consultas en su primer semestre funcionando",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Ministerio de Vivienda y Agenda Urbana",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-15T10:07:55.575Z",
+      "lastSeenAt": "2026-07-15T10:07:55.575Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
         "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
@@ -8146,49 +8129,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|clave|definir|ferreres|milei|numero|objetivo|orlando|2026-07-12",
-      "headlineSeed": "El número del objetivo “clave” de Milei que puede definir su reelección, según Orlando Ferreres: “Va a ser...”",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Orlando Ferreres",
-        "Banco Central",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-12T17:03:51.700Z",
-      "lastSeenAt": "2026-07-12T17:03:51.700Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|axel kicillof|argentina|informa|2026-07-12",
       "headlineSeed": "Muchos candidatos, ninguna regla y todo atado a la disputa presidencial",
       "topic": "politica",
@@ -8546,6 +8486,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|acumulo|desaceleracion|inflacion|junio|marco|meses|nueva|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T15:30:05.988Z",
+      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|cobraran|confirmada|domesticas|empleadas|extra|festejan|julio|tierra del fuego|antartida|2026-07-15",
       "headlineSeed": "Festejan las empleadas domésticas: con paritaria confirmada, cobrarán este triple extra en julio 2026",
       "topic": "economia",
@@ -8586,104 +8567,6 @@
       },
       "newsworthinessScore": 79,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|abierta|clase|invita|mujer|municipalidad|participar|ushuaia|tierra del fuego|18 de julio",
-      "headlineSeed": "LA MUNICIPALIDAD INVITA A PARTICIPAR DE UNA CLASE ABIERTA DE YOGA EN LA CASA DE LA MUJER",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "MUJER Sitio",
-        "Municipalidad de Ushuaia",
-        "Secretaría de la Mujer y Desarrollo",
-        "LA MUNICIPALIDAD INVITA",
-        "Municipalidad",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida",
-        "Atlantico Sur",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.997Z",
-      "lastSeenAt": "2026-07-14T16:36:15.997Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
-      "sourceTiers": [
-        "A"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "agenda|alentar|argentina|inglaterra|parque|partido|seleccion|transmitiran|rio grande|ushuaia|2026-07-14",
-      "headlineSeed": "Río Grande vuelve a alentar a la Selección: transmitirán el partido entre Argentina e Inglaterra en el Parque de los 100 Años",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Municipio de Río Grande",
-        "Municipio",
-        "Gobierno de Javier Milei",
-        "Gobierno",
-        "Policia",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Malvinas",
-        "Cerro Castor"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-14T16:22:02.644Z",
-      "lastSeenAt": "2026-07-14T16:22:02.644Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 13,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -8903,55 +8786,6 @@
       },
       "newsworthinessScore": 79,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|brasil|08 de julio de 2026",
-      "headlineSeed": "«Estamos en el camino correcto para posicionar a Tierra del Fuego a nivel internacional” | Sur54.com | Portal de noticias",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Estamos",
-        "Tierra",
-        "Fuego",
-        "Sur",
-        "Portal",
-        "Mónica Urquiza",
-        "Instituto Fueguino",
-        "Turismo",
-        "Gobierno",
-        "Brasil"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T00:04:30.692Z",
-      "lastSeenAt": "2026-07-09T00:04:30.692Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 12,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 12,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -9940,148 +9774,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|diciembre",
-      "headlineSeed": "Zelarayán: \"Se vienen desafíos importantes y este grupo sigue con hambre de gloria\"",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Zelarayán",
-        "Se",
-        "Tras",
-        "Belgrano",
-        "Copa Argentina",
-        "Además",
-        "Argentina",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T00:04:30.693Z",
-      "lastSeenAt": "2026-07-09T00:04:30.693Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|estados unidos|mayo",
-      "headlineSeed": "Río Negro: suspendieron a un intendente libertario mientras la Justicia lo investiga por presunta administración fraudulenta",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Río Negro",
-        "Justicia",
-        "El Concejo Deliberante",
-        "Allen",
-        "Marcelo Román",
-        "Estados Unidos",
-        "Argentina"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T00:04:30.690Z",
-      "lastSeenAt": "2026-07-09T00:04:30.690Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|mayo",
-      "headlineSeed": "La AFA sumó seis nuevos sponsors internacionales durante la Copa del Mundo",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "La AFA",
-        "Copa",
-        "Mundo\nLo",
-        "Leandro Petersen",
-        "Argentina",
-        "Egipto",
-        "Mexico",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-08T15:28:59.145Z",
-      "lastSeenAt": "2026-07-08T18:23:00.504Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|agenda|chile|conjunta|consul|daniel|diagramar|harrington|tolhuin|tierra del fuego aias|2026-07-15",
       "headlineSeed": "Daniel Harrington recibió al cónsul de Chile para diagramar una agenda conjunta de trabajo - Actualidad TDF",
       "topic": "sociedad",
@@ -10265,51 +9957,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "crime|feria caupolican|malvinas|internacional|argentina|brasil|informa|2026-07-12",
-      "headlineSeed": "Un militar de la Armada chilena embistió una feria en Viña del Mar: hay al menos seis muertos",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Feria Caupolicán",
-        "Malvinas",
-        "Internacional",
-        "Argentina",
-        "Brasil",
-        "Chile"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-12T17:03:51.694Z",
-      "lastSeenAt": "2026-07-12T17:03:51.694Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 5,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 5,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "rejected-terminal",
-      "validationReasons": []
     },
     {
       "storyId": "international-conflict|emiratos arabes unidos|internacional|estados unidos|denuncia|2026-07-12",
@@ -10651,45 +10298,102 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|informa|2026-07-14",
-      "headlineSeed": "Fuerte cruce entre Burlando y el abogado de Luque durante el juicio por la muerte de Maradona: discutieron a los gritos y el fiscal los tuvo que separar",
+      "storyId": "general|abierta|clase|invita|mujer|municipalidad|participar|ushuaia|tierra del fuego|18 de julio",
+      "headlineSeed": "LA MUNICIPALIDAD INVITA A PARTICIPAR DE UNA CLASE ABIERTA DE YOGA EN LA CASA DE LA MUJER",
       "topic": "sociedad",
       "subtopic": "sociedad",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T15:27:05.035Z",
-      "lastSeenAt": "2026-07-14T16:22:02.647Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "MUJER Sitio",
+        "Municipalidad de Ushuaia",
+        "Secretaría de la Mujer y Desarrollo",
+        "LA MUNICIPALIDAD INVITA",
+        "Municipalidad",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Atlantico Sur",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.997Z",
+      "lastSeenAt": "2026-07-14T16:36:15.997Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "verified-fast-lane",
+      "validationReasons": []
+    },
+    {
+      "storyId": "agenda|alentar|argentina|inglaterra|parque|partido|seleccion|transmitiran|rio grande|ushuaia|2026-07-14",
+      "headlineSeed": "Río Grande vuelve a alentar a la Selección: transmitirán el partido entre Argentina e Inglaterra en el Parque de los 100 Años",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Municipio de Río Grande",
+        "Municipio",
+        "Gobierno de Javier Milei",
+        "Gobierno",
+        "Policia",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Malvinas",
+        "Cerro Castor"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-14T16:22:02.644Z",
+      "lastSeenAt": "2026-07-14T16:22:02.644Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 21,
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 5,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 21,
+        "publicInterest": 11,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 5,
-        "recency": 12,
+        "socialPotential": 13,
+        "searchPotential": 8,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 76,
-      "status": "agenda-invalid",
-      "sourceStatus": "conflicting-sources",
-      "validationReasons": [
-        "territory-conflict"
-      ]
+      "status": "verified-local-routine",
+      "validationReasons": []
     },
     {
       "storyId": "general|municipio de tolhuin hoy|municipio de tolhuin|concejo deliberante de rio grande|tolhuin hoy|desde tolhuin|rio grande|ushuaia|informa|2026-07-13",
@@ -10874,6 +10578,49 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "general|clave|definir|ferreres|milei|numero|objetivo|orlando|2026-07-12",
+      "headlineSeed": "El número del objetivo “clave” de Milei que puede definir su reelección, según Orlando Ferreres: “Va a ser...”",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Orlando Ferreres",
+        "Banco Central",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T17:03:51.700Z",
+      "lastSeenAt": "2026-07-12T17:03:51.700Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
     },
     {
       "storyId": "sports-result|argentina|brasil|2026-07-11",
@@ -11229,18 +10976,25 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|acumulo|desaceleracion|inflacion|junio|marco|meses|nueva|tierra del fuego aias|2026-07-15",
-      "headlineSeed": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Provincia",
+      "storyId": "general|argentina|jornada|julio|miercoles|mundial|seleccion|malvinas|2026-07-15",
+      "headlineSeed": "Selección argentina, EN VIVO: la jornada del miércoles 15 de julio en el Mundial 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
       "primaryEntities": [
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Lionel Scaloni",
+        "Malvinas",
+        "Argentina",
+        "Chile",
+        "Mexico",
+        "Inglaterra",
+        "Francia",
+        "Espana",
+        "Suiza"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-15T15:30:05.988Z",
-      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "firstSeenAt": "2026-07-15T17:17:52.489Z",
+      "lastSeenAt": "2026-07-15T17:17:52.489Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -11248,25 +11002,25 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 20,
+      "publicInterestScore": 8,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
+      "socialPotentialScore": 12,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 20,
+        "publicInterest": 8,
         "localRelevance": 22,
         "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 4,
+        "socialPotential": 12,
         "searchPotential": 8,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 75,
-      "status": "published",
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -12467,101 +12221,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|municipalidad de ushuaia|gobierno de la municipalidad de ushuaia|municipio|rio grande|ushuaia|argentina|informa",
-      "headlineSeed": "EL MUNICIPIO DE USHUAIA ACOMPAÑÓ EL 105° ANIVERSARIO DE RÍO GRANDE",
+      "storyId": "casualty|informa|2026-07-14",
+      "headlineSeed": "Fuerte cruce entre Burlando y el abogado de Luque durante el juicio por la muerte de Maradona: discutieron a los gritos y el fiscal los tuvo que separar",
       "topic": "sociedad",
       "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Municipalidad de Ushuaia",
-        "Gobierno de la Municipalidad de Ushuaia",
-        "Municipio",
-        "Gobierno",
-        "EL MUNICIPIO DE USHUAIA",
-        "Municipalidad",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.997Z",
-      "lastSeenAt": "2026-07-14T16:36:15.997Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T15:27:05.035Z",
+      "lastSeenAt": "2026-07-14T16:22:02.647Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
-        "A"
+        "B"
       ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 0,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 8,
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 9,
+        "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 73,
-      "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|actos|independencia|oficiales|participo|ushuaia|tierra del fuego",
-      "headlineSeed": "EL MUNICIPIO DE USHUAIA PARTICIPÓ DE LOS ACTOS OFICIALES POR EL DÍA DE LA INDEPENDENCIA",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Municipalidad de Ushuaia",
-        "Municipio",
-        "EL MUNICIPIO DE USHUAIA",
-        "Municipalidad",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Antartida",
-        "Atlantico Sur",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.997Z",
-      "lastSeenAt": "2026-07-14T16:36:15.997Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
-      "sourceTiers": [
-        "A"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 0,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "verified-fast-lane",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "conflicting-sources",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "sports-result|peru|alianza|amistoso|deportivo|matute|2026-07-12|0-1",
@@ -12603,6 +12301,51 @@
       },
       "newsworthinessScore": 73,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|feria caupolican|malvinas|internacional|argentina|brasil|informa|2026-07-12",
+      "headlineSeed": "Un militar de la Armada chilena embistió una feria en Viña del Mar: hay al menos seis muertos",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Feria Caupolicán",
+        "Malvinas",
+        "Internacional",
+        "Argentina",
+        "Brasil",
+        "Chile"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-12T17:03:51.694Z",
+      "lastSeenAt": "2026-07-12T17:03:51.694Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 5,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -12985,51 +12728,6 @@
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|2026-07-08",
-      "headlineSeed": "Las palabras del padre de Henderson sobre el drama de su hijo con la lesión del brazo: “Se lo destrozó por completo”",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Henderson",
-        "Se",
-        "Argentina",
-        "Mexico",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-08T18:23:00.504Z",
-      "lastSeenAt": "2026-07-08T18:23:00.504Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
         "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
@@ -13667,51 +13365,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|club social y deportivo juventud obrera|miguel angel montefusco|informa|2026-07-14",
-      "headlineSeed": "Condenaron a los ladrones que mataron a golpes a un periodista durante un robo frente a su nieto en Lomas de Zamora",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Miguel Ángel Montefusco",
-        "Club Social y Deportivo Juventud Obrera"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-14T16:22:02.648Z",
-      "lastSeenAt": "2026-07-14T16:22:02.648Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 5,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 5,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "topic-event-mismatch",
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "sports-result|racing|suiza|2026-07-12|3-1",
       "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
       "topic": "deportes",
@@ -13752,6 +13405,321 @@
       },
       "newsworthinessScore": 71,
       "status": "verified-standard",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|modernizacion laboral|informa|2026-07-13",
+      "headlineSeed": "Negociación colectiva: lo que cambió con la reforma y cómo aprovecharlo",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Modernización Laboral"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-13T23:00:26.708Z",
+      "lastSeenAt": "2026-07-13T23:00:26.708Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 5,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "agenda-invalid",
+      "sourceStatus": "published",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
+      "storyId": "general|candela|fecha|molla|nacional|natacion|nueva|paralimpica|rio grande|tierra del fuego|2026-07-12",
+      "headlineSeed": "Candela Mollá Ybars representó a Río Grande en una nueva fecha de la Liga Nacional de Natación Paralímpica | radiouniversidad.com.ar",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Candela Mollá Ybars",
+        "Natación Paralímpica",
+        "Natación Adaptada",
+        "Municipio",
+        "Club",
+        "Municipio de Río Grande",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T20:56:08.395Z",
+      "lastSeenAt": "2026-07-12T20:56:08.395Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|caida|doble|durante|edificio|fallecida|familia|grite|2026-07-11",
+      "headlineSeed": "\"Grité y grité\": habló el único sobreviviente de una familia fallecida durante la caída de un edificio en el doble terremoto de Venezuela",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "La Guaira",
+        "Venezuela"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-11T02:53:04.045Z",
+      "lastSeenAt": "2026-07-11T02:53:04.045Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 16,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 16,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|internacional|informa|2026-07-11",
+      "headlineSeed": "Zelenski crea fuerza militar de reacción rápida para Ucrania",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-11T01:26:05.293Z",
+      "lastSeenAt": "2026-07-11T01:26:05.293Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|estatales|gobierno|gremiales|organizaciones|provincial|reunion|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "Reunión entre el Gobierno provincial y organizaciones gremiales estatales - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Comisión Permanente",
+        "Relaciones Laborales Provinciales",
+        "Asuntos Gremiales",
+        "Walter Campos",
+        "Gobierno",
+        "Gobierno de la Provincia",
+        "Actualidad TDF El Gobierno",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T15:30:05.988Z",
+      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 70,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|municipalidad de ushuaia|gobierno de la municipalidad de ushuaia|municipio|rio grande|ushuaia|argentina|informa",
+      "headlineSeed": "EL MUNICIPIO DE USHUAIA ACOMPAÑÓ EL 105° ANIVERSARIO DE RÍO GRANDE",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Municipalidad de Ushuaia",
+        "Gobierno de la Municipalidad de Ushuaia",
+        "Municipio",
+        "Gobierno",
+        "EL MUNICIPIO DE USHUAIA",
+        "Municipalidad",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.997Z",
+      "lastSeenAt": "2026-07-14T16:36:15.997Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 0,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 70,
+      "status": "verified-fast-lane",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|actos|independencia|oficiales|participo|ushuaia|tierra del fuego",
+      "headlineSeed": "EL MUNICIPIO DE USHUAIA PARTICIPÓ DE LOS ACTOS OFICIALES POR EL DÍA DE LA INDEPENDENCIA",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Municipalidad de Ushuaia",
+        "Municipio",
+        "EL MUNICIPIO DE USHUAIA",
+        "Municipalidad",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Antartida",
+        "Atlantico Sur",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-14T16:36:15.997Z",
+      "lastSeenAt": "2026-07-14T16:36:15.997Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 0,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 70,
+      "status": "verified-fast-lane",
       "validationReasons": []
     }
   ]
