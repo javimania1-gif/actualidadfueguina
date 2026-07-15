@@ -36,6 +36,9 @@
       if (typeof gtag === 'function') {
         gtag('consent', 'update', consentState);
       }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'consent_update' });
+      
       localStorage.setItem('af_consent', JSON.stringify(consentState));
       localStorage.setItem('af_consent_resolved', 'true');
       banner.style.display = 'none';

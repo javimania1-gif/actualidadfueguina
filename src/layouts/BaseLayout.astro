@@ -134,6 +134,18 @@ const isActive = (href: string) => currentPath.startsWith(href);
             category_url: navLink.getAttribute('href')
           });
         }
+        
+        // Tracker seguro para related_article_click (preparado para futuro)
+        const relatedLink = e.target.closest('.related-article-link');
+        if (relatedLink) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'related_article_click',
+            related_article_title: relatedLink.getAttribute('data-article-title') || relatedLink.textContent.trim(),
+            related_article_url: relatedLink.getAttribute('href'),
+            related_article_position: parseInt(relatedLink.getAttribute('data-article-position') || '1', 10)
+          });
+        }
       });
     </script>
   </body>

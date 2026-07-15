@@ -49,7 +49,7 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
   document.querySelectorAll('.btn-prev, .btn-next').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const isNext = btn.classList.contains('btn-next');
-      const direction = isNext ? 'next' : 'previous';
+      const direction = isNext ? 'older' : 'newer';
       const toPage = isNext ? currentPage + 1 : currentPage - 1;
       
       window.dataLayer = window.dataLayer || [];
