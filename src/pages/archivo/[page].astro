@@ -50,14 +50,13 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
     btn.addEventListener('click', (e) => {
       const isNext = btn.classList.contains('btn-next');
       const direction = isNext ? 'older' : 'newer';
-      const toPage = isNext ? currentPage + 1 : currentPage - 1;
       
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'archive_navigation',
         direction: direction,
-        from_page: currentPage,
-        to_page: toPage
+        from_page: window.location.pathname,
+        to_page: btn.getAttribute('href')
       });
     });
   });

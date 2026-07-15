@@ -92,9 +92,9 @@ const jsonLd = {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 
         event: 'share',
-        method: navigator.share ? 'native_share' : 'copy_link',
+        method: navigator.share ? 'native' : 'copy_link',
         content_type: 'article',
-        item_id: articleUrl
+        item_id: window.location.pathname
       });
       if (navigator.share) {
         try {
@@ -117,7 +117,7 @@ const jsonLd = {
     btn.addEventListener('click', () => {
       let method = 'unknown';
       if (btn.classList.contains('fb')) method = 'facebook';
-      if (btn.classList.contains('x')) method = 'x_twitter';
+      if (btn.classList.contains('x')) method = 'x';
       if (btn.classList.contains('wa')) method = 'whatsapp';
       
       window.dataLayer = window.dataLayer || [];
@@ -125,7 +125,7 @@ const jsonLd = {
         event: 'share',
         method: method,
         content_type: 'article',
-        item_id: articleUrl
+        item_id: window.location.pathname
       });
     });
   });
