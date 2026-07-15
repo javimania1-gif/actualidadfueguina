@@ -28,8 +28,8 @@ const DRY_RUN = process.argv.includes('--dry-run') || !ALLOW_LOCAL_SOCIAL_WRITE;
 const MAX_FB_PER_RUN = Number(process.env.AF_MAX_FB_PER_RUN || 2);
 const MAX_IG_PER_RUN = Number(process.env.AF_MAX_IG_PER_RUN || 2);
 const SITE_URL = process.env.AF_SITE_URL || 'https://actualidadfueguina.com.ar';
-// Antigüedad máxima para publicación en redes (48 horas), en ms
-const MAX_AGE_SOCIAL_MS = 48 * 60 * 60 * 1000;
+// Antigüedad máxima para publicación en redes (120 horas / 5 días), en ms
+const MAX_AGE_SOCIAL_MS = 120 * 60 * 60 * 1000;
 
 async function main() {
   console.log(`\n=== INICIO PROCESO SOCIAL ${DRY_RUN ? '(DRY RUN)' : ''} ===`);

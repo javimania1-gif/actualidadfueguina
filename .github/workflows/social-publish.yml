@@ -31,8 +31,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ github.token }}
       AF_MODEL: openai/gpt-4o-mini
-      AF_MAX_FB_PER_RUN: '2'
-      AF_MAX_IG_PER_RUN: '2'
+      AF_MAX_FB_PER_RUN: '4'
+      AF_MAX_IG_PER_RUN: '4'
       AF_SITE_URL: 'https://actualidadfueguina.com.ar'
       META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
       META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
