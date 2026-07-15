@@ -1,6 +1,100 @@
 {
   "version": 1,
   "items": {
+    "44b04a62e24aef41a9": {
+      "seenAt": "2026-07-15T17:23:06.176Z",
+      "status": "discarded-editorial",
+      "source": "nacionales-infobae",
+      "validationVersion": 3,
+      "lastError": "BLOCKED_FACTUAL_MISMATCH: [{\"field\":\"dates\",\"value\":\"15 de julio de 2026\",\"reason\":\"unsupported-critical-date\"}]"
+    },
+    "ae542011252eb198f9": {
+      "seenAt": "2026-07-15T17:22:54.704Z",
+      "status": "discarded-editorial",
+      "source": "nacionales-cronista",
+      "validationVersion": 3,
+      "lastError": "BLOCKED_FACTUAL_MISMATCH: [{\"field\":\"money\",\"value\":\"68.300 millones de dolares\",\"reason\":\"unsupported-money\"}]"
+    },
+    "4f3147ff9a75dc9709": {
+      "seenAt": "2026-07-15T17:22:42.360Z",
+      "status": "discarded-editorial",
+      "source": "nacionales-la-nacion",
+      "editorialReason": "importance-threshold"
+    },
+    "575c36c17798f503f4": {
+      "seenAt": "2026-07-15T17:22:30.739Z",
+      "status": "discarded-editorial",
+      "source": "nacionales-infobae",
+      "editorialReason": "importance-threshold"
+    },
+    "f35d668cab66dc8b7c": {
+      "status": "discarded-quality",
+      "reason": "evergreen-or-stale-outside-news-window",
+      "seenAt": "2026-07-15T17:22:19.806Z",
+      "source": "nacionales-la-nacion",
+      "editorialLane": "standard"
+    },
+    "000f888136e796a3e6": {
+      "seenAt": "2026-07-15T17:22:18.983Z",
+      "status": "duplicate",
+      "reason": "published-event",
+      "source": "bing-tdf",
+      "matchedPublishedFile": "src/content/noticias/2026-07-15-el-gobierno-provincial-y-los-gremios-estatales-avanzan-en-la-reglamentacion-de-l.md"
+    },
+    "9e14553ce334bf2773": {
+      "status": "discarded-quality",
+      "reason": "evergreen-or-stale-outside-news-window",
+      "seenAt": "2026-07-15T17:22:18.321Z",
+      "source": "bing-rio-grande",
+      "editorialLane": "standard"
+    },
+    "e57695d7a96dfd9b87": {
+      "seenAt": "2026-07-15T17:22:17.793Z",
+      "status": "duplicate",
+      "reason": "published-event",
+      "source": "nacionales-infobae",
+      "matchedPublishedFile": "2026-07-15-argentina-se-prepara-para-la-semifinal-del-mundial-2026-frente-a-inglaterra.md"
+    },
+    "8eb1b9a14ebe05c238": {
+      "seenAt": "2026-07-15T17:22:16.664Z",
+      "status": "duplicate",
+      "reason": "published-event",
+      "source": "nacionales-ambito",
+      "matchedPublishedFile": "src/content/noticias/2026-07-14-ravier-defiende-la-independencia-del-banco-central-para-evitar-el-populismo.md"
+    },
+    "658582f3b1f1bc6e0c": {
+      "status": "discarded-quality",
+      "reason": "stale-hard-news",
+      "seenAt": "2026-07-15T17:22:16.265Z",
+      "source": "bing-tdf",
+      "editorialLane": "standard"
+    },
+    "2ad961ad315d0f3ac4": {
+      "seenAt": "2026-07-15T17:22:15.697Z",
+      "status": "duplicate",
+      "reason": "published-event",
+      "source": "bing-tdf",
+      "matchedPublishedFile": "src/content/noticias/2026-07-15-autoridades-de-tierra-del-fuego-exploran-tecnologias-petroleras-en-neuquen.md"
+    },
+    "591542411cc0cec46e": {
+      "status": "failed-final",
+      "attempts": 2,
+      "lastAttemptAt": "2026-07-15T17:22:14.711Z",
+      "lastError": "HTTP 403 en https://www.nytimes.com/2026/07/07/world/americas/cuba-power-crisis-oil-blockade.html",
+      "failureReason": "http-403",
+      "resumeFrom": "extraction",
+      "seenAt": "2026-07-15T17:22:14.711Z",
+      "source": "mundo-clarin",
+      "sourceUrl": "https://www.nytimes.com/2026/07/07/world/americas/cuba-power-crisis-oil-blockade.html",
+      "title": "Cómo sobrevive una familia cubana de cuatro generaciones con 60 dólares al mes"
+    },
+    "150a6cde2f723fec58": {
+      "seenAt": "2026-07-15T17:22:14.628Z",
+      "status": "duplicate",
+      "reason": "published-event",
+      "source": "infobae-tdf",
+      "matchedPublishedFile": "src/content/noticias/2026-07-15-el-gobierno-provincial-y-los-gremios-estatales-avanzan-en-la-reglamentacion-de-l.md"
+    },
     "b1a7882f984e8ee081": {
       "status": "failed-retryable",
       "attempts": 1,
@@ -389,39 +483,6 @@
       "seenAt": "2026-07-15T17:17:35.207Z",
       "source": "sur54",
       "editorialLane": "standard"
-    },
-    "658582f3b1f1bc6e0c": {
-      "status": "discarded-quality",
-      "reason": "stale-hard-news",
-      "seenAt": "2026-07-15T17:17:34.725Z",
-      "source": "bing-tdf",
-      "editorialLane": "standard"
-    },
-    "2ad961ad315d0f3ac4": {
-      "seenAt": "2026-07-15T17:17:33.648Z",
-      "status": "duplicate",
-      "reason": "published-event",
-      "source": "bing-tdf",
-      "matchedPublishedFile": "src/content/noticias/2026-07-15-autoridades-de-tierra-del-fuego-exploran-tecnologias-petroleras-en-neuquen.md"
-    },
-    "591542411cc0cec46e": {
-      "status": "failed-final",
-      "attempts": 1,
-      "lastAttemptAt": "2026-07-15T17:17:32.880Z",
-      "lastError": "HTTP 403 en https://www.nytimes.com/2026/07/07/world/americas/cuba-power-crisis-oil-blockade.html",
-      "failureReason": "http-403",
-      "resumeFrom": "extraction",
-      "seenAt": "2026-07-15T17:17:32.880Z",
-      "source": "mundo-clarin",
-      "sourceUrl": "https://www.nytimes.com/2026/07/07/world/americas/cuba-power-crisis-oil-blockade.html",
-      "title": "Cómo sobrevive una familia cubana de cuatro generaciones con 60 dólares al mes"
-    },
-    "150a6cde2f723fec58": {
-      "seenAt": "2026-07-15T17:17:32.776Z",
-      "status": "duplicate",
-      "reason": "published-event",
-      "source": "infobae-tdf",
-      "matchedPublishedFile": "src/content/noticias/2026-07-15-el-gobierno-provincial-y-los-gremios-estatales-avanzan-en-la-reglamentacion-de-l.md"
     },
     "bd39dfceaa2b2cd5ef": {
       "status": "failed-retryable",
