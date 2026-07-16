@@ -91,11 +91,11 @@ export function evaluateImageContext(entry = {}, contextText = '') {
   }
 
   if (
-    has(assetContext, [/\b(memoria verdad justicia|conmemorativo|pancarta|homenaje)\b/]) &&
-    has(context, [/\b(argentina|egipto|mundial|seleccion|partido|deportes|futbol)\b/])
+    has(assetContext, [/\b(memoria verdad justicia|conmemorativo|pancarta|homenaje|24 de marzo|dia de la memoria)\b/]) &&
+    !has(context, [/\b(24 de marzo|memoria|verdad|justicia|dictadura|golpe|derechos humanos|desaparecidos)\b/])
   ) {
-    penalty -= 140;
-    reasons.push('commemorative-context-for-sports-story');
+    penalty -= 200;
+    reasons.push('commemorative-24-marzo-out-of-context');
   }
 
   if (

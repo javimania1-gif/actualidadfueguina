@@ -91,7 +91,9 @@ export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '', fa
   const newEntities = new Set([
     ...(facts.people || []).map(normalizeText),
     ...(facts.places || []).map(normalizeText),
-    ...(facts.organizations || []).map(normalizeText)
+    ...(facts.organizations || []).map(normalizeText),
+    ...(facts.teams || []).map(normalizeText),
+    ...(facts.sportsTeams || []).map(normalizeText)
   ]);
 
   for (const story of publishedStories) {
@@ -103,7 +105,9 @@ export function findLikelyPublishedStoryMatch({ title = '', publishedAt = '', fa
       const existingEntities = new Set([
         ...(story.facts.people || []).map(normalizeText),
         ...(story.facts.places || []).map(normalizeText),
-        ...(story.facts.organizations || []).map(normalizeText)
+        ...(story.facts.organizations || []).map(normalizeText),
+        ...(story.facts.teams || []).map(normalizeText),
+        ...(story.facts.sportsTeams || []).map(normalizeText)
       ]);
 
       if (existingEntities.size > 0) {
