@@ -1,29 +1,29 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T02:14:30.972Z",
+  "generatedAt": "2026-07-16T02:50:15.256Z",
   "summary": {
-    "totalStories": 1016,
+    "totalStories": 1007,
     "byStatus": {
-      "pending-verification": 48,
+      "pending-verification": 46,
       "conflicting-sources": 50,
-      "verified-standard-single-source": 599,
-      "published": 76,
+      "verified-standard-single-source": 604,
+      "published": 75,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "agenda-invalid": 51,
-      "rejected-terminal": 125,
-      "verified-standard": 15,
+      "agenda-invalid": 52,
+      "rejected-terminal": 115,
       "verified-local-routine": 7,
-      "verified-strict": 37
+      "verified-standard": 14,
+      "verified-strict": 36
     },
     "byTopic": {
-      "deportes": 216,
-      "servicios": 155,
+      "deportes": 214,
+      "servicios": 152,
       "agenda": 26,
       "turismo": 12,
-      "politica": 144,
-      "sociedad": 348,
-      "policiales": 37,
+      "politica": 143,
+      "policiales": 36,
+      "sociedad": 346,
       "educacion": 31,
       "salud": 1,
       "economia": 41,
@@ -31,16 +31,16 @@
     },
     "byTerritory": {
       "Malvinas": 69,
-      "Rio Grande": 46,
-      "Ushuaia": 52,
-      "Mundo": 507,
-      "Tolhuin": 8,
+      "Rio Grande": 44,
+      "Ushuaia": 49,
+      "Mundo": 505,
+      "Tolhuin": 7,
       "Nacionales": 243,
       "Antartida": 5,
       "Provincia": 14,
-      "unknown": 72
+      "unknown": 71
     },
-    "invalidStories": 51,
+    "invalidStories": 52,
     "topStories": [
       {
         "storyId": "sports-result|argentina|inglaterra|2026-07-15|2-1",
@@ -1477,53 +1477,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather|argentina|venezuela|tierra|fuego|pasaje drake|rio grande|ushuaia|informa|07 de julio",
-      "headlineSeed": "Un sismo de magnitud 5,9 sacudió a varias ciudades de Tierra del Fuego: dónde fue el epicentro y qué zonas lo sintieron",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Tierra",
-        "Fuego",
-        "Pasaje Drake",
-        "Ushuaia",
-        "Rio Grande",
-        "Tierra del Fuego",
-        "Antartida",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-08T15:28:59.144Z",
-      "lastSeenAt": "2026-07-10T02:30:54.457Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 23,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
       "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
       "topic": "turismo",
@@ -1902,6 +1855,56 @@
       "newsworthinessScore": 99,
       "status": "verified-standard",
       "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|onu las islas malvinas|onu|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-15",
+      "headlineSeed": "Islas Malvinas: ¿dónde están y a quién le pertenecen, a Argentina o a Reino Unido? Esto dice la ONU",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "ONU",
+        "Islas Malvinas",
+        "Malvinas",
+        "Atlantico Sur",
+        "Londres",
+        "Argentina",
+        "Reino Unido",
+        "Espana"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-16T02:11:59.158Z",
+      "lastSeenAt": "2026-07-16T02:11:59.158Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 98,
+      "status": "agenda-invalid",
+      "sourceStatus": "published",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "legislative|camara de diputados|gobierno de zacatecas|gobierno de mexico|ricardo monreal|claudia sheinbaum|david monreal|rio grande|tierra del fuego aias|mexico|francia|informa|202",
@@ -2525,50 +2528,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|cono sur|volkswagen gol|volkswagen tera|rio grande|tierra del fuego aias|informa|2026-07-08",
-      "headlineSeed": "Otro accidente de tránsito en Río Grande - Actualidad TDF",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Cono Sur",
-        "Volkswagen Gol",
-        "Volkswagen Tera",
-        "Rio Grande",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-09T22:47:39.960Z",
-      "lastSeenAt": "2026-07-10T02:23:54.109Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 96,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|justicia|keiko fujimori|pedro sanchez|alberto fujimori|internacional|brasil|chile|informa|2026-07-15",
       "headlineSeed": "Keiko Fujimori recibió las credenciales de presidenta electa de Perú y prometió una \"reconciliación\" tras una década de crisis política",
       "topic": "politica",
@@ -3046,101 +3005,6 @@
       ]
     },
     {
-      "storyId": "general|gobierno de tierra de|gobierno|municipio|san pablo|destino fin|instituto fueguino|rio grande|ushuaia|argentina|brasil|informa|2026-07-09",
-      "headlineSeed": "Se inauguró el vuelo de gol entre San Pablo y Ushuaia, fortaleciendo el posicionamiento del Destino Fin del Mundo en Brasil | Sur54.com | Portal de noticias",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "San Pablo",
-        "Gobierno",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Argentina",
-        "Brasil"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-10T03:36:45.013Z",
-      "lastSeenAt": "2026-07-10T03:36:45.013Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|onu las islas malvinas|onu|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-15",
-      "headlineSeed": "Islas Malvinas: ¿dónde están y a quién le pertenecen, a Argentina o a Reino Unido? Esto dice la ONU",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "ONU",
-        "Islas Malvinas",
-        "Malvinas",
-        "Atlantico Sur",
-        "Londres",
-        "Argentina",
-        "Reino Unido",
-        "Espana"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-16T02:11:59.158Z",
-      "lastSeenAt": "2026-07-16T02:11:59.158Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 94,
-      "status": "agenda-invalid",
-      "sourceStatus": "published",
-      "validationReasons": [
-        "territory-conflict"
-      ]
-    },
-    {
       "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|r",
       "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
       "topic": "politica",
@@ -3582,49 +3446,6 @@
       },
       "newsworthinessScore": 93,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|inglaterra|2026-07-16|2-1",
-      "headlineSeed": "Liam Gallagher felicitó a Argentina tras la victoria ante Inglaterra: “El mejor equipo ganó”",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Liam Gallagher",
-        "Argentina",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T02:11:59.170Z",
-      "lastSeenAt": "2026-07-16T02:11:59.170Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 92,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -4390,49 +4211,6 @@
         "socialPotential": 7,
         "searchPotential": 10,
         "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|ucrania empezaron|moscu|internacional|estados unidos|informa|2026-07-14",
-      "headlineSeed": "Un ejército de robots reinventa la guerra terrestre en Ucrania",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Ucrania Empezaron",
-        "Moscu",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-14T15:27:05.034Z",
-      "lastSeenAt": "2026-07-14T15:27:05.034Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -6010,50 +5788,6 @@
       ]
     },
     {
-      "storyId": "sports-result|espana|francia|2026-07-15|2-0",
-      "headlineSeed": "En imágenes: la emoción y tristeza que deja el duelo entre España y Francia en el Mundial",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Mikel Oyarzabal",
-        "Francia",
-        "Espana",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-15T06:19:29.072Z",
-      "lastSeenAt": "2026-07-15T06:19:29.072Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|espana|francia|2026-07-14",
       "headlineSeed": "Hora de EE.UU., marcador del partido de hoy en el Mundial 2026 y quién juega la semifinal este martes 14 de julio",
       "topic": "deportes",
@@ -6318,6 +6052,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|argentina|inglaterra|2026-07-16|2-1",
+      "headlineSeed": "Mundial 2026: Argentinos celebran la épica remontada de su país ante Inglaterra",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-16T02:11:59.170Z",
+      "lastSeenAt": "2026-07-16T02:48:37.418Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 82,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|gobierno|challenger energy group|malvinas|atlantico sur|argentina|uruguay|informa|2026-07-15",
       "headlineSeed": "Cuál es y dónde opera hoy la empresa británica que quiere explotar petróleo en el Mar Argentino",
       "topic": "politica",
@@ -6577,6 +6353,48 @@
       },
       "newsworthinessScore": 82,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|ucrania empezaron|moscu|internacional|estados unidos|informa|2026-07-14",
+      "headlineSeed": "¿Qué efecto tendrá en la guerra con Putin?: Ucrania se une a la UE para impulsar la producción de drones",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Moscu",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-14T15:27:05.034Z",
+      "lastSeenAt": "2026-07-16T02:48:37.418Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 81,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -7271,6 +7089,50 @@
       },
       "newsworthinessScore": 80,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|espana|francia|2026-07-15|2-0",
+      "headlineSeed": "En imágenes: la emoción y tristeza que deja el duelo entre España y Francia en el Mundial",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Mikel Oyarzabal",
+        "Francia",
+        "Espana",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-15T06:19:29.072Z",
+      "lastSeenAt": "2026-07-15T06:19:29.072Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 80,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -8308,7 +8170,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 78,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -9230,49 +9092,6 @@
       },
       "newsworthinessScore": 77,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|pedro sola|jalisco|mexico|espana|informa|2026-07-10",
-      "headlineSeed": "Aseguran que Pedro Sola maltrató al perrito “Pay de Limón” durante grabación de Ventaneando",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Pedro Sola",
-        "Jalisco",
-        "Mexico",
-        "Espana"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-10T02:31:26.323Z",
-      "lastSeenAt": "2026-07-10T02:31:26.323Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -11669,48 +11488,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|ministerio publico|fiscalia|estados unidos|informa|2026-07-10",
-      "headlineSeed": "Renuncia otro abogado defensor del cirujano plástico guatemalteco que ocultó el cadáver de una paciente",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Ministerio Público",
-        "Fiscalía",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-10T03:36:45.012Z",
-      "lastSeenAt": "2026-07-10T03:36:45.012Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|argentina|increible|inglaterra|messi|principio|victoria|vivimos|malvinas|2026-07-15",
       "headlineSeed": "Messi, tras la victoria de la Argentina ante Inglaterra: “Fue increíble lo que vivimos desde el principio”",
       "topic": "deportes",
@@ -12340,47 +12117,6 @@
       },
       "newsworthinessScore": 72,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|29 de octubre de 2001",
-      "headlineSeed": "El emotivo encuentro del influencer Alonso con Pablo Aimar tras el triunfo de Argentina ante Egipto: “Lloré todo”",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-09T22:47:39.959Z",
-      "lastSeenAt": "2026-07-10T02:23:54.107Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -13527,54 +13263,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|ushuaia|tierra del fuego|argentina|estados unidos|informa|2026-07-09",
-      "headlineSeed": "Ushuaia podría sumar una sede diplomática de Israel - El Rompehielos",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Antartida",
-        "Buenos Aires",
-        "Atlantico Sur",
-        "Argentina",
-        "Reino Unido"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-09T22:47:39.960Z",
-      "lastSeenAt": "2026-07-10T02:23:54.109Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 69,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|club social y deportivo juventud obrera|miguel angel montefusco|informa|2026-07-14",
       "headlineSeed": "Condenaron a los ladrones que mataron a golpes a un periodista durante un robo frente a su nieto en Lomas de Zamora",
       "topic": "deportes",
@@ -13663,6 +13351,329 @@
       },
       "newsworthinessScore": 68,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|ministerio de desregulacion y transformacion de|gobierno|islas malvinas|malvinas|argentina|peru|informa|2026-07-11",
+      "headlineSeed": "La reforma de la Ley de Tierras y una necesaria salvedad vinculada con la cuestión Malvinas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Ministerio de Desregulación y Transformación de",
+        "Gobierno",
+        "Islas Malvinas",
+        "Malvinas",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Peru",
+        "Reino Unido"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-11T13:27:27.734Z",
+      "lastSeenAt": "2026-07-11T13:27:27.734Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 68,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|distintos|exterior|festejos|hinchas|miles|puntos|videos|malvinas|2026-07-15",
+      "headlineSeed": "Los videos de los festejos de miles de hinchas en distintos puntos del país y en el exterior",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Malvinas",
+        "Buenos Aires",
+        "Kansas",
+        "Argentina",
+        "Estados Unidos",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T23:02:41.776Z",
+      "lastSeenAt": "2026-07-15T23:02:41.776Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|estatales|gobierno|gremiales|organizaciones|provincial|reunion|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "Reunión entre el Gobierno provincial y organizaciones gremiales estatales - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Comisión Permanente",
+        "Relaciones Laborales Provinciales",
+        "Asuntos Gremiales",
+        "Walter Campos",
+        "Gobierno",
+        "Gobierno de la Provincia",
+        "Actualidad TDF El Gobierno",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T15:30:05.988Z",
+      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|diario|dijeron|gallegos|patagonia|presente|sureno|rio grande|tolhuin|2026-07-13",
+      "headlineSeed": "Tolhuin y Río Grande dijeron presente en la Expo Patagonia Teje en Río Gallegos - Diario El Sureño",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Expo Patagonia Teje",
+        "Comandante Luis Piedra Buena",
+        "Gobernador Gregores",
+        "Santa Cruz",
+        "Secretaría de Producción",
+        "Municipio",
+        "Municipalidad",
+        "Rio Grande",
+        "Tolhuin",
+        "Tierra del Fuego"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T19:43:04.701Z",
+      "lastSeenAt": "2026-07-14T13:53:21.760Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|durante|familia|fueguina|invernal|juego|radio|receso|rio grande|malvinas|2026-07-13",
+      "headlineSeed": "“Tardes de juego en familia” durante el receso invernal – La 97 Radio Fueguina",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Radio Fueguina Habrá",
+        "Municipio de Río Grande",
+        "Rio Grande",
+        "Malvinas",
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T19:43:04.702Z",
+      "lastSeenAt": "2026-07-14T04:21:21.000Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|dirigencia|fueguino|gobernar|jesus|llamado|politica|radiouniversidad|rio grande|ushuaia|2026-07-13",
+      "headlineSeed": "“Vuelvan a Jesús”: El llamado del Tedeum fueguino a la dirigencia política para recuperar los valores y gobernar con rectitud | radiouniversidad.com.ar",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Te Deum",
+        "Cámara de Comercio",
+        "Cámara de Comercio la",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Chile"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T06:58:23.623Z",
+      "lastSeenAt": "2026-07-13T19:43:04.702Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|doble|heridos|muertos|terremoto|venezuela|2026-07-12",
+      "headlineSeed": "Doble terremoto en Venezuela: 4.118 muertos y 16.740 heridos",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "ONU",
+        "La Guaira",
+        "Venezuela"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-12T09:55:49.249Z",
+      "lastSeenAt": "2026-07-13T11:17:50.738Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "conflicting-sources",
       "validationReasons": []
     }
   ]
