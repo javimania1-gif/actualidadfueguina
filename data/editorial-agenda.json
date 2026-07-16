@@ -1,66 +1,47 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T14:04:01.753Z",
+  "generatedAt": "2026-07-16T15:48:27.376Z",
   "summary": {
     "totalStories": 1021,
     "byStatus": {
-      "pending-verification": 43,
-      "conflicting-sources": 54,
-      "rejected-terminal": 104,
-      "verified-standard-single-source": 637,
+      "conflicting-sources": 52,
+      "pending-verification": 45,
+      "published": 76,
+      "rejected-terminal": 103,
+      "verified-standard-single-source": 635,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "agenda-invalid": 47,
-      "published": 74,
+      "agenda-invalid": 46,
       "verified-local-routine": 7,
       "verified-standard": 12,
-      "verified-strict": 35
+      "verified-strict": 37
     },
     "byTopic": {
-      "deportes": 221,
-      "servicios": 147,
-      "agenda": 23,
+      "servicios": 144,
+      "policiales": 38,
+      "politica": 145,
+      "agenda": 22,
+      "deportes": 222,
       "turismo": 13,
-      "politica": 142,
-      "policiales": 36,
-      "economia": 44,
-      "educacion": 31,
+      "educacion": 30,
       "salud": 1,
-      "sociedad": 358,
+      "sociedad": 357,
+      "economia": 44,
       "cultura": 5
     },
     "byTerritory": {
-      "Malvinas": 72,
       "Ushuaia": 46,
-      "Rio Grande": 42,
-      "Mundo": 519,
-      "Tolhuin": 6,
-      "Nacionales": 249,
-      "Antartida": 6,
       "Provincia": 14,
-      "unknown": 67
+      "Rio Grande": 43,
+      "Malvinas": 71,
+      "Mundo": 521,
+      "Tolhuin": 5,
+      "Nacionales": 250,
+      "Antartida": 6,
+      "unknown": 65
     },
-    "invalidStories": 47,
+    "invalidStories": 46,
     "topStories": [
-      {
-        "storyId": "sports-result|inglaterra|mexico|2026-07-16|2-1",
-        "headlineSeed": "Messi castiga a Inglaterra: la mirada inglesa del partido, entre la autocrítica y el desconcierto",
-        "topic": "deportes",
-        "territory": "Malvinas",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 11,
-          "localRelevance": 22,
-          "impactMagnitude": 25,
-          "serviceValue": 3,
-          "socialPotential": 12,
-          "searchPotential": 8,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
       {
         "storyId": "weather-forecast|2026-07-16|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 16 de julio de 2026",
@@ -75,6 +56,82 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "crime|policia|ministerio publico fiscal|ushuaia|tierra del fuego aias|informa|2026-07-16",
+        "headlineSeed": "Ushuaia: escapó a caballo, golpeó un patrullero y terminó detenido tras enfrentar a la Policía - Actualidad TDF",
+        "topic": "policiales",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 25,
+          "impactMagnitude": 21,
+          "serviceValue": 3,
+          "socialPotential": 8,
+          "searchPotential": 8,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "legislative|victor pesino|tierra del fuego aias|informa|2026-07-16",
+        "headlineSeed": "La Libertad Avanza busca activar el Senado para votar propiedad privada - Actualidad TDF",
+        "topic": "politica",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 22,
+          "impactMagnitude": 20,
+          "serviceValue": 3,
+          "socialPotential": 7,
+          "searchPotential": 8,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "agenda|atractivos|fiesta|invierno|local|nacional|produccion|promociono|rio grande|tierra del fuego|2026-07-16",
+        "headlineSeed": "Río Grande promocionó sus atractivos turísticos y la producción local en la Fiesta Nacional del Invierno",
+        "topic": "agenda",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 12,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 13,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 8,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "sports-result|inglaterra|mexico|2026-07-16|2-1",
+        "headlineSeed": "Messi castiga a Inglaterra: la mirada inglesa del partido, entre la autocrítica y el desconcierto",
+        "topic": "deportes",
+        "territory": "Malvinas",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 11,
+          "localRelevance": 22,
+          "impactMagnitude": 25,
+          "serviceValue": 3,
+          "socialPotential": 12,
+          "searchPotential": 8,
           "recency": 15,
           "sourceStrength": 3,
           "diversity": 4
@@ -174,67 +231,185 @@
           "sourceStrength": 8,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|colombiano|detenciones|maine|mexicano|muerte|suspende|texas|2026-07-14",
-        "headlineSeed": "ICE suspende detenciones de vehículos en EEUU tras la muerte de un mexicano en Texas y un colombiano en Maine",
-        "topic": "servicios",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 7,
-          "impactMagnitude": 21,
-          "serviceValue": 20,
-          "socialPotential": 7,
-          "searchPotential": 15,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|campeonato|escalada|fueguino|primer|rio grande|ushuaia",
-        "headlineSeed": "USHUAIA FUE SEDE DEL PRIMER CAMPEONATO FUEGUINO DE ESCALADA",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-fast-lane",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|cirugia|colaborar|festival|hospital|infantil|monumental|radio|rio grande|ushuaia|2026-07-14",
-        "headlineSeed": "Ushuaia | Radio Monumental realizará un festival solidario para colaborar con la sala de cirugía infantil del Hospital de Ushuaia",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "weather-forecast|2026-07-16|tierra-del-fuego",
+      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 16 de julio de 2026",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "SMN",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Argentina",
+        "Inglaterra",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-15T23:02:41.776Z",
+      "lastSeenAt": "2026-07-16T15:45:17.699Z",
+      "sourceCount": 6,
+      "independentPublisherCount": 4,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|policia|ministerio publico fiscal|ushuaia|tierra del fuego aias|informa|2026-07-16",
+      "headlineSeed": "Ushuaia: escapó a caballo, golpeó un patrullero y terminó detenido tras enfrentar a la Policía - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Policía",
+        "Ministerio Público Fiscal",
+        "Ushuaia",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-16T15:45:17.699Z",
+      "lastSeenAt": "2026-07-16T15:45:17.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|victor pesino|tierra del fuego aias|informa|2026-07-16",
+      "headlineSeed": "La Libertad Avanza busca activar el Senado para votar propiedad privada - Actualidad TDF",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Víctor Pesino",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.699Z",
+      "lastSeenAt": "2026-07-16T15:45:17.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "agenda|atractivos|fiesta|invierno|local|nacional|produccion|promociono|rio grande|tierra del fuego|2026-07-16",
+      "headlineSeed": "Río Grande promocionó sus atractivos turísticos y la producción local en la Fiesta Nacional del Invierno",
+      "topic": "agenda",
+      "subtopic": "cultura",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Secretaría de Desarrollo Productivo",
+        "Municipio",
+        "Municipio de Río Grande",
+        "Rio Grande",
+        "Tierra del Fuego",
+        "Cerro Castor"
+      ],
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-16T15:45:17.699Z",
+      "lastSeenAt": "2026-07-16T15:45:17.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "published",
+      "validationReasons": []
+    },
     {
       "storyId": "sports-result|inglaterra|mexico|2026-07-16|2-1",
       "headlineSeed": "Messi castiga a Inglaterra: la mirada inglesa del partido, entre la autocrítica y el desconcierto",
@@ -279,52 +454,6 @@
       },
       "newsworthinessScore": 100,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather-forecast|2026-07-16|tierra-del-fuego",
-      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 16 de julio de 2026",
-      "topic": "servicios",
-      "subtopic": "clima",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "SMN",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Argentina",
-        "Inglaterra",
-        "Mexico",
-        "Estados Unidos"
-      ],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-15T23:02:41.776Z",
-      "lastSeenAt": "2026-07-16T14:01:29.559Z",
-      "sourceCount": 5,
-      "independentPublisherCount": 4,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -1169,52 +1298,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
-      "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Reserva Natural",
-        "Ushuaia",
-        "Cerro Castor",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Inglaterra",
-        "Cuba"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T17:17:52.490Z",
-      "lastSeenAt": "2026-07-16T06:23:34.266Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 15,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 99,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|controles|estudiantiles|invernales|radiouniversidad|refuerza|temporada|viajes|rio grande|ushuaia|2026-07-13",
       "headlineSeed": "CNRT refuerza los controles en Tierra del Fuego ante la temporada de viajes estudiantiles e invernales | radiouniversidad.com.ar",
       "topic": "servicios",
@@ -1734,6 +1817,52 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Reserva Natural",
+        "Ushuaia",
+        "Cerro Castor",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Inglaterra",
+        "Cuba"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T17:17:52.490Z",
+      "lastSeenAt": "2026-07-16T06:23:34.266Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 15,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 96,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
       "storyId": "weather-forecast|2026-07-15|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 15 de julio de 2026",
       "topic": "servicios",
@@ -2141,6 +2270,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "legislative|gobierno en la|javier milei|buenos aires|estados unidos|informa|2026-07-16",
+      "headlineSeed": "Propiedad privada: qué busca cambiar el proyecto en la compra de tierras por extranjeros y quiénes ganarían",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Javier Milei",
+        "Gobierno En la",
+        "Buenos Aires",
+        "Estados Unidos"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.699Z",
+      "lastSeenAt": "2026-07-16T15:45:17.699Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 95,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|onu las islas malvinas|onu|tierra del fuego|islas malvinas|argentina|reino unido|informa|2026-07-15",
       "headlineSeed": "Islas Malvinas: ¿dónde están y a quién le pertenecen, a Argentina o a Reino Unido? Esto dice la ONU",
       "topic": "politica",
@@ -2483,51 +2655,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|disfrutar|durante|familia|invierno|invita|juego|tardes|rio grande|malvinas|2026-07-13",
-      "headlineSeed": "El Municipio invita a disfrutar de \"Tardes de juego en familia\" durante las vacaciones de invierno",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Municipio",
-        "Municipio de Río Grande",
-        "El Municipio",
-        "Rio Grande",
-        "Malvinas",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T19:43:04.703Z",
-      "lastSeenAt": "2026-07-13T19:43:04.703Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 0,
-      "sourceTiers": [
-        "A"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
-      "publicInterestScore": 12,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 13,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 12,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 13,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|destaco|economico|empleo|fueguino|motor|tiempo|turismo|rio grande|ushuaia|2026-07-13",
       "headlineSeed": "Coto destacó al turismo como motor económico y de empleo para Tierra del Fuego - Tiempo Fueguino",
       "topic": "servicios",
@@ -2618,100 +2745,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|capital|directo|fueguina|inaugurar|llego|paulo|primer|rio grande|ushuaia|2026-07-09",
-      "headlineSeed": "Scioli llegó a Ushuaia para inaugurar el primer vuelo directo entre São Paulo y la capital fueguina",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "Ushuaia",
+      "storyId": "international-conflict|oriente medio|internacional|estados unidos|informa|2026-07-16",
+      "headlineSeed": "Petróleo, transporte marítimo, vuelos: las interrupciones regresan al reavivarse la guerra entre EE.UU. e Irán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
       "primaryEntities": [
-        "GOL Linhas Aéreas",
-        "Gobierno",
-        "Municipio y",
-        "Justicia",
-        "Justicia Federal",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Atlantico Sur",
-        "Hito XIII"
+        "Oriente Medio",
+        "Internacional",
+        "Estados Unidos"
       ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-11T01:26:05.290Z",
-      "lastSeenAt": "2026-07-11T01:26:05.290Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 1,
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 95,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|amigo|edicion|emprender|especial|radiouniversidad|tendra|rio grande|ushuaia|2026-07-10",
-      "headlineSeed": "Emprender TDF tendrá una edición especial por el Día del Amigo en Tolhuin y Ushuaia | radiouniversidad.com.ar",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Emprender TDF",
-        "Gobierno de Tierra de",
-        "Secretaría de Adultos Mayores y de",
-        "Gobierno",
-        "Rio Grande",
-        "Ushuaia",
-        "Tolhuin",
-        "Tierra del Fuego",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-11T01:26:05.290Z",
-      "lastSeenAt": "2026-07-11T01:26:05.290Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 11,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "published",
+      "newsworthinessScore": 94,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -3586,6 +3658,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|disfrutar|durante|familia|invierno|invita|juego|tardes|rio grande|malvinas|2026-07-13",
+      "headlineSeed": "El Municipio invita a disfrutar de \"Tardes de juego en familia\" durante las vacaciones de invierno",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Municipio",
+        "Municipio de Río Grande",
+        "El Municipio",
+        "Rio Grande",
+        "Malvinas",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-13T19:43:04.703Z",
+      "lastSeenAt": "2026-07-13T19:43:04.703Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 0,
+      "sourceTiers": [
+        "A"
+      ],
+      "editorialLane": "fast",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 12,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 12,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 8,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|compartio|cumplen|desayuno|junto|martin|perez|tradicional|rio grande|ushuaia|2026-07-12",
       "headlineSeed": "Martín Perez compartió el tradicional desayuno con los vecinos que cumplen años junto a Río Grande",
       "topic": "turismo",
@@ -3733,6 +3850,53 @@
       "validationReasons": []
     },
     {
+      "storyId": "legislative|camara federal|gobierno|camara de diputados|buenos aires|argentina|inglaterra|informa|2026-07-16",
+      "headlineSeed": "Senado: el oficialismo logró activar la sesión para discutir el proyecto de ley de inviolabilidad de la propiedad privada",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Cámara Federal",
+        "Gobierno",
+        "Cámara de Diputados",
+        "Justicia",
+        "Gobierno de",
+        "Buenos Aires",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 90,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|gobierno|universidad nacional de|universidad nacional de rosario|relaciones internacionales|santa fe|claudio diaz|tierra del fuego|islas malvinas|argentina|r",
       "headlineSeed": "Denuncian como \"provocación\" el paso de un buque británico por Tierra del Fuego",
       "topic": "politica",
@@ -3835,55 +3999,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "legal-policy|universidad complutense de madrid|otan|gobierno|begona gomez|pedro sanchez|audiencia provincial|londres|internacional|espana|informa|2026-07-16",
-      "headlineSeed": "España: confirman el juicio contra Begoña Gómez, esposa del presidente Pedro Sánchez, por tráfico de influencias y malversación",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Begoña Gómez",
-        "Pedro Sánchez",
-        "Audiencia Provincial",
-        "Universidad Complutense de Madrid",
-        "OTAN",
-        "Gobierno",
-        "Gobierno José Luis Rodríguez Zapatero",
-        "Londres",
-        "Internacional",
-        "Espana"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-16T14:01:29.559Z",
-      "lastSeenAt": "2026-07-16T14:01:29.559Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "pending-verification",
-      "validationReasons": []
     },
     {
       "storyId": "election|justicia|keiko fujimori|pedro sanchez|alberto fujimori|internacional|brasil|chile|informa|2026-07-15",
@@ -4027,6 +4142,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|choque|estado|grave|internada|jugadora|murio|voley|2026-07-16",
+      "headlineSeed": "Murió la jugadora de vóley de 14 años internada en grave estado tras un choque en la ruta 88",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Ana Peralta",
+        "Club Once Unidos y de",
+        "Buenos Aires"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|estados unidos sera|pete hegseth|internacional|estados unidos|informa|2026-07-16",
       "headlineSeed": "El Pentágono anunció que empezará a medir los niveles de testosterona de los soldados de Estados Unidos",
       "topic": "politica",
@@ -4040,7 +4197,7 @@
       ],
       "eventType": "international-conflict",
       "firstSeenAt": "2026-07-16T06:23:34.284Z",
-      "lastSeenAt": "2026-07-16T10:13:17.988Z",
+      "lastSeenAt": "2026-07-16T15:45:17.696Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -4339,22 +4496,17 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|comienzos|continua|debajo|dolar|goteo|niveles|2026-07-16",
-      "headlineSeed": "El dólar sube “por goteo” pese a que continúa por debajo de los niveles de comienzos de mes",
-      "topic": "economia",
-      "subtopic": "economia",
+      "storyId": "legislative|camara alta|informa|2026-07-16",
+      "headlineSeed": "🔴 Ley de propiedad privada y pliegos judiciales, en vivo: el minuto a minuto de la sesión en el Senado",
+      "topic": "politica",
+      "subtopic": "politica",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Banco Nación",
-        "Banco Central",
-        "Argentina",
-        "Brasil",
-        "Uruguay",
-        "Estados Unidos"
+        "Cámara Alta"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-16T14:01:29.558Z",
-      "lastSeenAt": "2026-07-16T14:01:29.558Z",
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -4364,20 +4516,20 @@
       "freshness": "breaking",
       "publicInterestScore": 20,
       "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
+      "impactMagnitudeScore": 20,
       "serviceValueScore": 3,
       "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 20,
         "localRelevance": 12,
-        "impactMagnitude": 16,
+        "impactMagnitude": 20,
         "serviceValue": 3,
         "socialPotential": 4,
         "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
-        "diversity": 4
+        "diversity": 0
       },
       "newsworthinessScore": 87,
       "status": "verified-standard-single-source",
@@ -5105,47 +5257,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-15",
-      "headlineSeed": "Expreso de Oriente - Irán y EE. UU. rompen la tregua: ¿comienza una guerra prolongada?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-15T15:30:05.986Z",
-      "lastSeenAt": "2026-07-15T15:30:05.986Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "international-conflict|ministerio de|the new york times|mahmud ahmadineyad|londres|internacional|estados unidos|informa|2026-07-15",
       "headlineSeed": "La oficina del ex líder de Irán niega un informe de The New York Times sobre un complot israelí para elevarlo al poder",
       "topic": "politica",
@@ -5375,94 +5486,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|internacional|colombia|estados unidos|suspende|2026-07-15",
-      "headlineSeed": "EE.UU. suspende controles de ICE tras muerte de migrantes",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Colombia",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-15T06:19:29.071Z",
-      "lastSeenAt": "2026-07-16T10:13:17.989Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
-      "headlineSeed": "\"Devastados\": la reacción del Rey Carlos, el Príncipe William y el primer ministro inglés tras quedar afuera de la final",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Rey Carlos",
-        "Príncipe William",
-        "Internacional",
-        "Argentina",
-        "Reino Unido",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T02:11:59.161Z",
-      "lastSeenAt": "2026-07-16T06:23:34.284Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|lo celso|malvinas|tierra del fuego aias|argentina|estados unidos|informa|2026-07-15",
       "headlineSeed": "Lo Celso exhibió en la celebración un cartel con el lema: 'Las Malvinas son argentinas'",
       "topic": "politica",
@@ -5594,92 +5617,6 @@
       "newsworthinessScore": 84,
       "status": "rejected-terminal",
       "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|donald trump|internacional|estados unidos|informa|2026-07-13",
-      "headlineSeed": "Invitad@ del día - EE. UU. ataca Irán y Teherán amplía ofensivas en el Golfo: ¿nueva escalada militar?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T18:00:09.125Z",
-      "lastSeenAt": "2026-07-13T18:00:09.125Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|paris|tierra del fuego aias|argentina|estados unidos|informa|2026-07-09",
-      "headlineSeed": "El árbol de la Patagonia argentina que desafía el tiempo: su especie es la segunda más antigua del mundo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Tierra del Fuego AIAS",
-        "Argentina"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-09T23:58:25.818Z",
-      "lastSeenAt": "2026-07-10T23:02:43.780Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "agenda-invalid",
-      "sourceStatus": "published",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "sports-result|argentina|inglaterra|2026-07-16|2-1",
@@ -5947,6 +5884,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-15",
+      "headlineSeed": "Expreso de Oriente - Irán y EE. UU. rompen la tregua: ¿comienza una guerra prolongada?",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-15T15:30:05.986Z",
+      "lastSeenAt": "2026-07-15T15:30:05.986Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|espana|2026-07-14|2-0",
       "headlineSeed": "Cuándo y dónde se jugará la final del Mundial entre España y el ganador de Argentina-Inglaterra: todo lo que hay que saber",
       "topic": "deportes",
@@ -6206,6 +6184,97 @@
       },
       "newsworthinessScore": 82,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|final|milei|mirara|mundial|olivos|quinta|viajara|ushuaia|tierra del fuego|2026-07-16",
+      "headlineSeed": "Milei no viajará a la final del Mundial y lo mirará desde la Quinta de Olivos",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Milei",
+        "Selección Argentina",
+        "Gobierno y",
+        "Gobierno",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-16T15:45:17.696Z",
+      "lastSeenAt": "2026-07-16T15:45:17.696Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|internacional|colombia|estados unidos|suspende|2026-07-15",
+      "headlineSeed": "EE.UU. suspende controles de ICE tras muerte de migrantes",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Colombia",
+        "Estados Unidos"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-15T06:19:29.071Z",
+      "lastSeenAt": "2026-07-16T10:13:17.989Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -6508,6 +6577,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "territorial-sovereignty|argentina|peru|informa|2026-07-16",
+      "headlineSeed": "Reino Unido aplicará pruebas universales de atrofia muscular espinal a todos los recién nacidos desde 2027",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Peru",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-16T15:45:17.696Z",
+      "lastSeenAt": "2026-07-16T15:45:17.696Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 80,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|advirtio|agotando|continuidad|escasez|guerra|medio|mundiales|2026-07-15",
       "headlineSeed": "¿Escasez de petróleo?: el FMI advirtió que la continuidad de la guerra en Medio Oriente está agotando las reservas mundiales",
       "topic": "sociedad",
@@ -6549,50 +6661,6 @@
       },
       "newsworthinessScore": 80,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|espana|francia|2026-07-15|2-0",
-      "headlineSeed": "En imágenes: la emoción y tristeza que deja el duelo entre España y Francia en el Mundial",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Mikel Oyarzabal",
-        "Francia",
-        "Espana",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-15T06:19:29.072Z",
-      "lastSeenAt": "2026-07-15T06:19:29.072Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -6763,45 +6831,40 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|policia|camara de los comunes|policia nacional antiterrorista|ann widdecombe|paris|internacional|reino unido|informa|2026-07-13",
-      "headlineSeed": "Ann Widdecombe, la exministra que conquistó a los británicos, víctima de un posible atentado terrorista",
-      "topic": "policiales",
-      "subtopic": "policiales",
+      "storyId": "international-conflict|donald trump|internacional|estados unidos|informa|2026-07-13",
+      "headlineSeed": "Invitad@ del día - EE. UU. ataca Irán y Teherán amplía ofensivas en el Golfo: ¿nueva escalada militar?",
+      "topic": "politica",
+      "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Ann Widdecombe",
-        "Policía",
-        "Cámara de los Comunes",
-        "Policía Nacional Antiterrorista",
-        "Cámara",
-        "Paris",
+        "Donald Trump",
         "Internacional",
-        "Reino Unido"
+        "Estados Unidos"
       ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-13T18:00:09.124Z",
-      "lastSeenAt": "2026-07-13T18:00:09.124Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-13T18:00:09.125Z",
+      "lastSeenAt": "2026-07-13T18:00:09.125Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-context",
+      "freshness": "stale-or-evergreen",
       "publicInterestScore": 20,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 20,
         "localRelevance": 7,
-        "impactMagnitude": 21,
+        "impactMagnitude": 25,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -7023,6 +7086,48 @@
       },
       "newsworthinessScore": 80,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
+      "headlineSeed": "“La Infartoneta”: Argentina juega la final del Mundial 2026 y así se puede calmar la ansiedad hasta el domingo, según los expertos",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-16T02:11:59.161Z",
+      "lastSeenAt": "2026-07-16T15:45:17.697Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 79,
+      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -7503,47 +7608,6 @@
       "newsworthinessScore": 78,
       "status": "verified-standard-single-source",
       "validationReasons": []
-    },
-    {
-      "storyId": "service|autos|cabify|cambia|desregulacion|remises|seguro|transporte|2026-07-15",
-      "headlineSeed": "Desregulación en Uber, Cabify y remises: cómo cambia el seguro para autos en apps de transporte",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-15T15:30:05.987Z",
-      "lastSeenAt": "2026-07-15T15:30:05.987Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "legislative|gobierno|camara|zona fria|informa|2026-07-15",
@@ -8768,44 +8832,47 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|acumulo|desaceleracion|inflacion|junio|marco|meses|nueva|tierra del fuego aias|2026-07-15",
-      "headlineSeed": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Provincia",
+      "storyId": "sports-result|espana|francia|2026-07-15|2-0",
+      "headlineSeed": "En imágenes: la emoción y tristeza que deja el duelo entre España y Francia en el Mundial",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Mikel Oyarzabal",
+        "Francia",
+        "Espana",
+        "Argentina",
+        "Inglaterra"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T15:30:05.988Z",
-      "lastSeenAt": "2026-07-15T15:30:05.988Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-15T06:19:29.072Z",
+      "lastSeenAt": "2026-07-15T06:19:29.072Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 12,
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 76,
-      "status": "published",
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -8947,6 +9014,53 @@
       },
       "newsworthinessScore": 76,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|policia|camara de los comunes|policia nacional antiterrorista|ann widdecombe|paris|internacional|reino unido|informa|2026-07-13",
+      "headlineSeed": "Ann Widdecombe, la exministra que conquistó a los británicos, víctima de un posible atentado terrorista",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ann Widdecombe",
+        "Policía",
+        "Cámara de los Comunes",
+        "Policía Nacional Antiterrorista",
+        "Cámara",
+        "Paris",
+        "Internacional",
+        "Reino Unido"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-13T18:00:09.124Z",
+      "lastSeenAt": "2026-07-13T18:00:09.124Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -9250,6 +9364,47 @@
       "newsworthinessScore": 75,
       "status": "published",
       "validationReasons": []
+    },
+    {
+      "storyId": "service|autos|cabify|cambia|desregulacion|remises|seguro|transporte|2026-07-15",
+      "headlineSeed": "Desregulación en Uber, Cabify y remises: cómo cambia el seguro para autos en apps de transporte",
+      "topic": "servicios",
+      "subtopic": "movilidad",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-15T15:30:05.987Z",
+      "lastSeenAt": "2026-07-15T15:30:05.987Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "casualty|justicia|san francisco|santa fe|argentina|egipto|informa|2026-07-13",
@@ -10411,6 +10566,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|acumulo|desaceleracion|inflacion|junio|marco|meses|nueva|tierra del fuego aias|2026-07-15",
+      "headlineSeed": "La inflación de junio fue de 1,9%, marcó una nueva desaceleración y acumuló 33,5% en doce meses - Actualidad TDF",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Tierra del Fuego AIAS",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-15T15:30:05.988Z",
+      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|cobraran|confirmada|domesticas|empleadas|extra|festejan|julio|tierra del fuego|antartida|2026-07-15",
       "headlineSeed": "Festejan las empleadas domésticas: con paritaria confirmada, cobrarán este triple extra en julio 2026",
       "topic": "economia",
@@ -10834,48 +11030,6 @@
         "impactMagnitude": 25,
         "serviceValue": 3,
         "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|eric sadin|paris|argentina|informa|2026-07-10",
-      "headlineSeed": "La muerte del ruiseñor: responsabilidades cruzadas de la IA",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Paris",
-        "Argentina",
-        "Francia"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-11T00:31:25.064Z",
-      "lastSeenAt": "2026-07-11T00:31:25.064Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 4,
         "searchPotential": 10,
         "recency": 1,
         "sourceStrength": 3,
@@ -11624,47 +11778,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|donald trump|internacional|estados unidos|informa|2026-07-10",
-      "headlineSeed": "Complicado en las encuestas, Donald Trump toma una polémica medida con vistas a las legislativas de noviembre",
-      "topic": "politica",
-      "subtopic": "institucional",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Estados Unidos"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-10T23:02:43.779Z",
-      "lastSeenAt": "2026-07-10T23:02:43.779Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 0,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|agenda|chile|conjunta|consul|daniel|diagramar|harrington|tolhuin|tierra del fuego aias|2026-07-15",
       "headlineSeed": "Daniel Harrington recibió al cónsul de Chile para diagramar una agenda conjunta de trabajo - Actualidad TDF",
       "topic": "sociedad",
@@ -12002,97 +12115,6 @@
       },
       "newsworthinessScore": 71,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|artemis|barreras|logro|persona|romper|antartida|2026-07-15",
-      "headlineSeed": "Artemis: \"Romper barreras no es logro de una sola persona\"",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Antartida",
-      "primaryEntities": [
-        "Artemis II",
-        "América Latina",
-        "Antartida",
-        "Internacional",
-        "Argentina",
-        "Brasil",
-        "Chile",
-        "Estados Unidos",
-        "Alemania"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T15:30:05.986Z",
-      "lastSeenAt": "2026-07-15T15:30:05.986Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|malvinas|argentina|inglaterra|informa|2026-07-15",
-      "headlineSeed": "Argentina vs Inglaterra, en datos: de las asimetrías socio-económicas a la histórica ocupación de Malvinas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Suiza"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-15T06:19:29.071Z",
-      "lastSeenAt": "2026-07-15T06:19:29.071Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -12963,50 +12985,51 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|estatales|gobierno|gremiales|organizaciones|provincial|reunion|tierra del fuego aias|2026-07-15",
-      "headlineSeed": "Reunión entre el Gobierno provincial y organizaciones gremiales estatales - Actualidad TDF",
+      "storyId": "general|artemis|barreras|logro|persona|romper|antartida|2026-07-15",
+      "headlineSeed": "Artemis: \"Romper barreras no es logro de una sola persona\"",
       "topic": "sociedad",
       "subtopic": "sociedad",
-      "territory": "Provincia",
+      "territory": "Antartida",
       "primaryEntities": [
-        "Comisión Permanente",
-        "Relaciones Laborales Provinciales",
-        "Asuntos Gremiales",
-        "Walter Campos",
-        "Gobierno",
-        "Gobierno de la Provincia",
-        "Actualidad TDF El Gobierno",
-        "Tierra del Fuego AIAS"
+        "Artemis II",
+        "América Latina",
+        "Antartida",
+        "Internacional",
+        "Argentina",
+        "Brasil",
+        "Chile",
+        "Estados Unidos",
+        "Alemania"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-15T15:30:05.988Z",
-      "lastSeenAt": "2026-07-15T15:30:05.988Z",
+      "firstSeenAt": "2026-07-15T15:30:05.986Z",
+      "lastSeenAt": "2026-07-15T15:30:05.986Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 11,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 22,
         "impactMagnitude": 0,
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 67,
-      "status": "published",
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -13056,51 +13079,6 @@
       },
       "newsworthinessScore": 67,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|durante|familia|fueguina|invernal|juego|radio|receso|rio grande|malvinas|2026-07-13",
-      "headlineSeed": "“Tardes de juego en familia” durante el receso invernal – La 97 Radio Fueguina",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Radio Fueguina Habrá",
-        "Municipio de Río Grande",
-        "Rio Grande",
-        "Malvinas",
-        "Tierra del Fuego AIAS",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-13T19:43:04.702Z",
-      "lastSeenAt": "2026-07-14T04:21:21.000Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -13277,6 +13255,49 @@
       },
       "newsworthinessScore": 66,
       "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|malvinas|argentina|inglaterra|informa|2026-07-15",
+      "headlineSeed": "Argentina vs Inglaterra, en datos: de las asimetrías socio-económicas a la histórica ocupación de Malvinas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Malvinas",
+        "Argentina",
+        "Inglaterra",
+        "Suiza"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-15T06:19:29.071Z",
+      "lastSeenAt": "2026-07-15T06:19:29.071Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 66,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -13513,49 +13534,6 @@
       "newsworthinessScore": 66,
       "status": "published",
       "validationReasons": []
-    },
-    {
-      "storyId": "weather|italia|espana|informa|2026-07-10",
-      "headlineSeed": "Atrapados por el fuego en pocos minutos: el incendio en Los Gallardos (Almería) sorprendió a las víctimas mientras buscaban una salida en coche o a pie",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Espana"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-10T10:58:50.122Z",
-      "lastSeenAt": "2026-07-10T23:02:43.779Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 66,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-strict",
-      "validationReasons": [
-        "story-headline-mismatch"
-      ]
     },
     {
       "storyId": "territorial-sovereignty|antonio rattin|malvinas|atlantico sur|argentina|chile|informa|2026-07-14",
