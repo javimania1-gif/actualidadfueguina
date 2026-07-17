@@ -1,14 +1,14 @@
 ---
 title: "Tomás Roncero, periodista en la TV de España, sobre la final contra Argentina: “Ganar vale por tres mundiales; España los va a poner en su sitio, no nos conocen todavía”"
 description: "El panelista de El Chiringuito de Jugones calentó la previa del partido decisivo; aseguró que no le teme al equipo albiceleste y afirmó que un triunfo tendría para él un valor espe"
-date: "2026-07-16T19:11:23.000Z"
+date: "2026-07-17T20:58:00.000Z"
 category: "Nacionales"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/futbol/tomas-roncero-periodista-en-la-tv-de-espana-sobre-la-final-contra-argentina-ganar-vale-por-tres-nid16072026/"
 originalImage: "https://www.lanacion.com.ar/resizer/v2/tomas-roncero-en-la-tv-de-QL3JZWWNHNDLVPMFTHSH27SPWY.png?auth=a936428bcbaca347a2e9a9e02bb3e69ae5af00663021323bd064a90424dde27c&width=1200&height=800&quality=70&smart=true"
 status: "draft"
-detectedAt: "2026-07-16T19:17:42.940Z"
+detectedAt: "2026-07-17T21:02:29.730Z"
 mode: "discovery-review"
 ---
 
@@ -16,7 +16,7 @@ mode: "discovery-review"
 
 [
 
-![ln-mas](https://arc-static.glanacion.com/pf/resources/images/ln-mas.svg?d=2031)
+![ln-mas](https://arc-static.glanacion.com/pf/resources/images/ln-mas.svg?d=2032)
 
 ](/lnmas/ "ln-mas")
 
@@ -24,9 +24,9 @@ mode: "discovery-review"
 
 ## El panelista de El Chiringuito de Jugones calentó la previa del partido decisivo; aseguró que no le teme al equipo albiceleste y afirmó que un triunfo tendría para él un valor especial
 
-- 16 de julio de 2026
-- 16:11
-- _![icono tiempo de lectura](/pf/resources/images/svgDegrade/timer-ia.webp?d=2031)_3 minutos de lectura'
+- 17 de julio de 2026
+- 17:58
+- _![icono tiempo de lectura](/pf/resources/images/svgDegrade/timer-ia.webp?d=2032)_3 minutos de lectura'
 
 Escuchar Nota
 
@@ -76,21 +76,21 @@ LA NACION
 
 * * *
 
-[![ln-mas](/pf/resources/images/ln-mas.svg?d=2031)](/lnmas/ "ln-mas")
+[![ln-mas](/pf/resources/images/ln-mas.svg?d=2032)](/lnmas/ "ln-mas")
 
 * * *
 
 [Conforme a
 
-![The Trust Project](/pf/resources/images/the-trust-project.webp?d=2031)
+![The Trust Project](/pf/resources/images/the-trust-project.webp?d=2032)
 
 ](https://www.lanacion.com.ar/tema/the-trust-project-tid68036/ "Ir a Proyecto Trust")
 
 [
 
-![Imagen de celular con la app de Canchallena](https://arc-static.glanacion.com/pf/resources/images/cll_web-image_infobox_mob.webp?d=2031)
+![Imagen de celular con la app de Canchallena](https://arc-static.glanacion.com/pf/resources/images/cll_web-image_infobox_mob.webp?d=2032)
 
-![Logo de Canchallena](https://arc-static.glanacion.com/pf/resources/images/cll-logo.webp?d=2031)
+![Logo de Canchallena](https://arc-static.glanacion.com/pf/resources/images/cll-logo.webp?d=2032)
 
 Encontrá resultados de fútbol en vivo, los próximos partidos, las tablas de posiciones, y todas las estadísticas de los principales torneos del mundo.
 
@@ -102,53 +102,53 @@ Más leídas de Fútbol
 
 1. [
  
- ![Así está la tabla de goleadores del Mundial 2026, con Messi y Mbappé en la cima ](https://www.lanacion.com.ar/resizer/v2/lionel-messi-convirtio-ocho-goles-en-sus-partidos-CWIROANKCBHQ7HYVS2KCC5VMKY.JPG?auth=a21a8cbe03fbae49cd1f59a466901d7f424802b15d564fdb6b6a8c11f4e1f8b6&width=300&height=130&quality=70&smart=true)
+ ![El machete en la botella del arquero de Inglaterra para una potencial definición por penales](https://www.lanacion.com.ar/resizer/v2/messi-y-nico-gonzalez-mirando-con-curiosidad-la-7TGY7ZXJFRESTFGVZC6D7PE75I.jpg?auth=fdb2c0f2bd2ef96d8848679dd2c58cd45d09bd922ed0e1b9ec53198b6b584204&width=300&height=130&quality=70&smart=true)
  
  1
  
- ### Así está la tabla de goleadores del Mundial 2026, con Messi y Mbappé en la cima
+ ### Los argentinos encontraron la botella del arquero de Inglaterra con indicaciones para una potencial definición por penales
  
  
  
  
  
- ](/deportes/futbol/asi-esta-la-tabla-de-goleadores-del-mundial-2026-con-messi-en-la-cima-nid15072026/ "Así está la tabla de goleadores del Mundial 2026, con Messi y Mbappé en la cima ")
+ ](/deportes/futbol/los-argentinos-encontraron-la-botella-del-arquero-de-inglaterra-con-indicaciones-para-una-potencial-nid16072026/ "Los argentinos encontraron la botella del arquero de Inglaterra con indicaciones para una potencial definición por penales ")
 2. [
  
- ![El programa español El Chiringuito anunció que se despide del aire en pleno Mundial](https://www.lanacion.com.ar/resizer/v2/un-programa-de-la-tv-espanola-pidio-enfrentarse-a-UMSVG5YAIFD5VD6VGXMGSNYN4Q.PNG?auth=36acf427ccb711a8691337f052c0f356f43bf3a4e928d26cb79f93e5eab095dd&width=120&height=120&quality=70&smart=true)
+ ![Estas son las tapas de los diarios británicos: así calificaron el partido que los dejó afuera de la final](https://www.lanacion.com.ar/resizer/v2/la-reaccion-de-los-diarios-de-inglaterra-tras-la-JW2ZQIW2V5BZTE52ZZJCVQKI7E.jpg?auth=b17c07c8570449004c6b37f0370a2f369ae80741453467c67d1f68b407dd1dce&width=120&height=120&quality=70&smart=true)
  
  2
  
- ### El programa español El Chiringuito anunció que se despide del aire en pleno Mundial
+ ### La reacción de los diarios de Inglaterra tras la derrota ante Argentina
  
  
  
  
  
- ](/deportes/futbol/el-programa-espanol-el-chiringuito-anuncio-que-se-despide-del-aire-en-pleno-mundial-nid15072026/ "El programa español El Chiringuito anunció que se despide del aire en pleno Mundial")
+ ](/deportes/futbol/la-reaccion-de-los-diarios-de-inglaterra-tras-la-derrota-ante-argentina-nid16072026/ "La reacción de los diarios de Inglaterra tras la derrota ante Argentina")
 3. [
  
- ![Así reflejaron los medios ingleses la derrota de su selección en el épico partido ante Argentina ](https://www.lanacion.com.ar/resizer/v2/tapas-de-diarios-post-argentina-v-MB3W6INE7RH6LPUHVMM6QVFJLM.jpg?auth=0d2672ef2f923018b98e6ed01152f5b0b21f407692f88c38fe84b1d4956d6903&width=120&height=120&quality=70&smart=true)
+ ![El video que no se vio por TV y que revela por qué Bellingham se enojó con Barco: todo empezó en el gol de Enzo Fernández](https://www.lanacion.com.ar/resizer/v2/el-festejo-del-colo-barco-tras-el-gol-de-lautaro-XRDVW6LPCNH6HDAXFIJQZYQQN4.png?auth=43f11ef771af2cb44983ff887fce4c51847d8d12b4a46420b042a68d06d04bd1&width=120&height=120&quality=70&smart=true)
  
  3
  
- ### Así se vivió la victoria argentina ante Inglaterra en los medios del exterior
+ ### El video que revela por qué Bellingham se enojó con Barco y no se vio por TV: todo empezó en el gol de Enzo Fernández
  
  
  
  
  
- ](/deportes/futbol/asi-se-vivio-la-victoria-argentina-ante-inglaterra-en-los-medios-del-exterior-nid15072026/ "Así se vivió la victoria argentina ante Inglaterra en los medios del exterior")
+ ](/deportes/futbol/asi-fue-el-festejo-del-colo-barco-tras-el-gol-de-lautaro-martinez-y-antes-de-que-bellingham-le-nid16072026/ "El video que revela por qué Bellingham se enojó con Barco y no se vio por TV: todo empezó en el gol de Enzo Fernández")
 4. [
  
- ![De la chicana al silencio: la noche que una ciudad se apagó y se fue a dormir antes de tiempo por la fiesta argentina](https://www.lanacion.com.ar/resizer/v2/un-grupo-de-argentinos-celebra-en-la-noche-W72IWDRGMJDP7OFZMCH6MSXJ7M.jpg?auth=c0c1e2c93c57d936acf3f3ec539acccc56c972f4c2fe84d9e9d1f274f86223c1&width=120&height=120&quality=70&smart=true)
+ ![La locura de un exjugador inglés durante su reacción al gol de Lautaro Martínez](https://www.lanacion.com.ar/resizer/v2/la-imagen-derrotada-de-jason-cundy-y-el-enojo-XRSC2NFHPRET5I7DIQGFEEOZFI.png?auth=4cf2f66f14b02372d07445d47a7e04ec9e9b8d5ff889004e6ac62167457a5df0&width=120&height=120&quality=70&smart=true)
  
  4
  
- ### De la chicana al silencio: la noche que Londres se apagó y se fue a dormir antes de tiempo por la fiesta argentina
+ ### Un exjugador inglés pidió la renuncia del técnico de Inglaterra mientras reaccionaba al partido con la selección argentina
  
  
  
  
  
- ](/deportes/futbol/de-la-chicana-al-silencio-la-noche-que-londres-se-apago-y-se-fue-a-dormir-antes-de-tiempo-nid15072026/ "De la chicana al silencio: la noche que Londres se apagó y se fue a dormir antes de tiempo por la fiesta argentina")
+ ](/deportes/futbol/un-exjugador-ingles-pidio-la-renuncia-del-tecnico-de-inglaterra-mientras-reaccionaba-al-partido-con-nid16072026/ "Un exjugador inglés pidió la renuncia del técnico de Inglaterra mientras reaccionaba al partido con la selección argentina")
