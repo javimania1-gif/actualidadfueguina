@@ -1,50 +1,69 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T02:45:04.774Z",
+  "generatedAt": "2026-07-18T06:11:41.122Z",
   "summary": {
-    "totalStories": 1013,
+    "totalStories": 1014,
     "byStatus": {
-      "conflicting-sources": 46,
-      "pending-verification": 54,
+      "verified-standard-single-source": 646,
       "agenda-invalid": 40,
-      "published": 73,
-      "rejected-terminal": 97,
+      "conflicting-sources": 44,
+      "pending-verification": 55,
+      "published": 72,
+      "rejected-terminal": 96,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "verified-standard-single-source": 642,
       "verified-standard": 10,
-      "verified-strict": 38,
-      "verified-local-routine": 5
+      "verified-local-routine": 5,
+      "verified-strict": 38
     },
     "byTopic": {
-      "servicios": 151,
-      "deportes": 212,
-      "turismo": 14,
-      "policiales": 38,
-      "agenda": 18,
       "politica": 141,
-      "sociedad": 354,
-      "economia": 51,
+      "servicios": 153,
+      "deportes": 211,
+      "turismo": 14,
+      "agenda": 18,
+      "policiales": 37,
+      "economia": 53,
+      "sociedad": 355,
       "educacion": 27,
       "salud": 2,
-      "cultura": 5
+      "cultura": 3
     },
     "byTerritory": {
-      "Ushuaia": 38,
-      "Malvinas": 77,
-      "Mundo": 553,
-      "Rio Grande": 35,
-      "Nacionales": 215,
+      "Malvinas": 79,
+      "Ushuaia": 39,
+      "Mundo": 552,
+      "Rio Grande": 34,
       "Tolhuin": 4,
       "Antartida": 10,
       "Provincia": 17,
+      "Nacionales": 215,
       "unknown": 64
     },
     "invalidStories": 40,
     "topStories": [
       {
-        "storyId": "weather-forecast|2026-07-17|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 17 de julio de 2026",
+        "storyId": "legislative|camara|desarrollo economico|jose antonio kast|malvinas|la guaira|brasil|chile|lanza|2026-07-18",
+        "headlineSeed": "Kast lanza una megarreforma económica en Chile que beneficia a las grandes empresas",
+        "topic": "politica",
+        "territory": "Malvinas",
+        "newsworthinessScore": 100,
+        "status": "verified-standard-single-source",
+        "scoreBreakdown": {
+          "publicInterest": 23,
+          "localRelevance": 22,
+          "impactMagnitude": 20,
+          "serviceValue": 3,
+          "socialPotential": 7,
+          "searchPotential": 8,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "weather-forecast|2026-07-18|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 18 de julio de 2026",
         "topic": "servicios",
         "territory": "Ushuaia",
         "newsworthinessScore": 100,
@@ -138,25 +157,6 @@
         }
       },
       {
-        "storyId": "crime|policia|ministerio publico fiscal|ushuaia|tierra del fuego aias|informa|2026-07-16",
-        "headlineSeed": "Ushuaia: escapó a caballo, golpeó un patrullero y terminó detenido tras enfrentar a la Policía - Actualidad TDF",
-        "topic": "policiales",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 25,
-          "impactMagnitude": 21,
-          "serviceValue": 3,
-          "socialPotential": 8,
-          "searchPotential": 8,
-          "recency": 9,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
         "storyId": "service|asueto|desmintio|gobierno|mundial|supuesto|rio grande|ushuaia|2026-07-16",
         "headlineSeed": "El Gobierno de Tierra del Fuego desmintió un supuesto asueto por el Mundial 2026",
         "topic": "servicios",
@@ -236,6 +236,54 @@
   },
   "stories": [
     {
+      "storyId": "legislative|camara|desarrollo economico|jose antonio kast|malvinas|la guaira|brasil|chile|lanza|2026-07-18",
+      "headlineSeed": "Kast lanza una megarreforma económica en Chile que beneficia a las grandes empresas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Desarrollo Económico",
+        "José Antonio Kast",
+        "Cámara",
+        "Malvinas",
+        "La Guaira",
+        "Brasil",
+        "Chile",
+        "Venezuela",
+        "Estados Unidos"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-18T06:09:26.622Z",
+      "lastSeenAt": "2026-07-18T06:09:26.622Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 22,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "weather-forecast|2026-07-17|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 17 de julio de 2026",
       "topic": "servicios",
@@ -244,7 +292,9 @@
       "primaryEntities": [
         "SMN",
         "Ushuaia",
+        "Tierra del Fuego",
         "Internacional",
+        "Malvinas",
         "Argentina",
         "Inglaterra",
         "Francia",
@@ -253,9 +303,54 @@
       ],
       "eventType": "weather-forecast",
       "firstSeenAt": "2026-07-16T23:01:12.844Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
-      "sourceCount": 8,
-      "independentPublisherCount": 5,
+      "lastSeenAt": "2026-07-18T06:09:26.620Z",
+      "sourceCount": 9,
+      "independentPublisherCount": 6,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "agenda-invalid",
+      "sourceStatus": "conflicting-sources",
+      "validationReasons": [
+        "story-headline-mismatch",
+        "topic-event-mismatch"
+      ]
+    },
+    {
+      "storyId": "weather-forecast|2026-07-18|tierra-del-fuego",
+      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 18 de julio de 2026",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "SMN",
+        "Inglaterra"
+      ],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-18T06:09:26.620Z",
+      "lastSeenAt": "2026-07-18T06:09:26.620Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
@@ -519,49 +614,6 @@
       },
       "newsworthinessScore": 100,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|policia|ministerio publico fiscal|ushuaia|tierra del fuego aias|informa|2026-07-16",
-      "headlineSeed": "Ushuaia: escapó a caballo, golpeó un patrullero y terminó detenido tras enfrentar a la Policía - Actualidad TDF",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Policía",
-        "Ministerio Público Fiscal",
-        "Ushuaia",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-16T15:45:17.699Z",
-      "lastSeenAt": "2026-07-16T23:01:12.846Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -888,49 +940,6 @@
         "searchPotential": 13,
         "recency": 1,
         "sourceStrength": 8,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|ambos|balotaje|factor|kicillof|midieron|milei|saldria|2026-07-12",
-      "headlineSeed": "Midieron a Milei y Kicillof de cara a 2027: cómo saldría un balotaje entre ambos y el rol del “factor Villarruel”",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Villarruel",
-        "RDT Consultores",
-        "Gobierno"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 21,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 100,
@@ -1420,6 +1429,49 @@
       },
       "newsworthinessScore": 98,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|policia|ministerio publico fiscal|ushuaia|tierra del fuego aias|informa|2026-07-16",
+      "headlineSeed": "Ushuaia: escapó a caballo, golpeó un patrullero y terminó detenido tras enfrentar a la Policía - Actualidad TDF",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Policía",
+        "Ministerio Público Fiscal",
+        "Ushuaia",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-16T15:45:17.699Z",
+      "lastSeenAt": "2026-07-16T23:01:12.846Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 97,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -1986,49 +2038,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|inglaterra|autocritica|castiga|desconcierto|inglaterra|2026-07-16|2-1",
-      "headlineSeed": "Messi castiga a Inglaterra: la mirada inglesa del partido, entre la autocrítica y el desconcierto",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T14:01:29.560Z",
-      "lastSeenAt": "2026-07-17T21:00:56.836Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 94,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
       "storyId": "agenda|fiesta|gasto|gobierno|invierno|menos|millones|nacional|ushuaia|tierra del fuego|2026-07-13",
       "headlineSeed": "El Gobierno provincial gastó al menos $91,8 millones en la Fiesta Nacional del Invierno | radiouniversidad.com.ar",
       "topic": "agenda",
@@ -2121,51 +2130,6 @@
       },
       "newsworthinessScore": 94,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|ministerio de energia de iran|ministerio de electricidad|ministerio de salud|paris|internacional|estados unidos|informa|2026-07-18",
-      "headlineSeed": "La infraestructura civil: ¿el renovado blanco de la guerra entre Estados Unidos e Irán?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Ministerio de Energía de Irán",
-        "Ministerio de Electricidad",
-        "Ministerio de Salud",
-        "Paris",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-18T02:43:49.665Z",
-      "lastSeenAt": "2026-07-18T02:43:49.665Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 22,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 22,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2970,6 +2934,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|inglaterra|autocritica|castiga|desconcierto|inglaterra|2026-07-16|2-1",
+      "headlineSeed": "Messi castiga a Inglaterra: la mirada inglesa del partido, entre la autocrítica y el desconcierto",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Malvinas",
+        "Argentina",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-16T14:01:29.560Z",
+      "lastSeenAt": "2026-07-17T21:00:56.836Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|espana|2026-07-16|6-1",
       "headlineSeed": "Una rivalidad sin dueño tendrá su capítulo más grande: Argentina y España definen el Mundial",
       "topic": "deportes",
@@ -3589,6 +3596,95 @@
       ]
     },
     {
+      "storyId": "crime|gobierno de estados unidos|gobierno de mexico y|dea mike vigil|operaciones internacionales|infobae mexico|mexico|estados unidos|informa|2026-07-17",
+      "headlineSeed": "Sinaloa perdió más de mil millones de dólares con la captura de El Mayo Zambada por la violencia, asegura ex agente de la DEA",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "DEA Mike Vigil",
+        "Operaciones Internacionales",
+        "Infobae México",
+        "Gobierno de Estados Unidos",
+        "Gobierno de México y",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-17T22:54:50.733Z",
+      "lastSeenAt": "2026-07-18T06:09:26.619Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|racing|canal|minuto|mitre|nacional|2026-07-17|1 - 0",
+      "headlineSeed": "Mitre (SE) vs Racing CBA, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Racing CBA",
+        "Marcos Machado",
+        "Racing",
+        "Argentina"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-18T06:09:26.619Z",
+      "lastSeenAt": "2026-07-18T06:09:26.619Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|independiente|2026-07-18|3-1",
       "headlineSeed": "Batacazo en la Copa Argentina: Aldosivi le ganó 3-1 a River y lo eliminó de la competencia",
       "topic": "deportes",
@@ -3632,48 +3728,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|racing|canal|minuto|mitre|nacional|2026-07-17|1 - 0",
-      "headlineSeed": "Mitre (SE) vs Racing CBA, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Racing CBA",
-        "Marcos Machado",
-        "Argentina"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-17T21:00:56.839Z",
-      "lastSeenAt": "2026-07-18T02:43:49.664Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "crime|gobierno de estados unidos|gobierno de mexico y|dea mike vigil|operaciones internacionales|infobae mexico|uruguay|mexico|informa|2026-07-17",
       "headlineSeed": "Sinaloa perdió más de mil millones de dólares con la captura de El Mayo Zambada por la violencia, asegura ex agente de la DEA",
       "topic": "policiales",
@@ -3692,52 +3746,6 @@
       "eventType": "crime",
       "firstSeenAt": "2026-07-18T02:43:49.664Z",
       "lastSeenAt": "2026-07-18T02:43:49.664Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|gobierno de estados unidos|gobierno de mexico y|dea mike vigil|operaciones internacionales|infobae mexico|mexico|estados unidos|informa|2026-07-17",
-      "headlineSeed": "Sinaloa perdió más de mil millones de dólares con la captura de El Mayo Zambada por la violencia, asegura ex agente de la DEA",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "DEA Mike Vigil",
-        "Operaciones Internacionales",
-        "Infobae México",
-        "Gobierno de Estados Unidos",
-        "Gobierno de México y",
-        "Mexico",
-        "Estados Unidos"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-17T22:54:50.733Z",
-      "lastSeenAt": "2026-07-17T22:54:50.733Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -3897,6 +3905,51 @@
         "diversity": 4
       },
       "newsworthinessScore": 89,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|ministerio de energia de iran|ministerio de electricidad|ministerio de salud|paris|internacional|estados unidos|informa|2026-07-18",
+      "headlineSeed": "La infraestructura civil: ¿el renovado blanco de la guerra entre Estados Unidos e Irán?",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio de Energía de Irán",
+        "Ministerio de Electricidad",
+        "Ministerio de Salud",
+        "Paris",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-18T02:43:49.665Z",
+      "lastSeenAt": "2026-07-18T06:09:26.621Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
       "status": "pending-verification",
       "validationReasons": []
     },
@@ -4093,6 +4146,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|cotiza|cuanto|dolar|julio|sabado|2026-07-18",
+      "headlineSeed": "Dólar hoy: a cuánto cotiza este sábado 18 de julio",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco Nación",
+        "Banco Central",
+        "Argentina",
+        "Uruguay"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-18T06:09:26.620Z",
+      "lastSeenAt": "2026-07-18T06:09:26.620Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|san lorenzo|2026-07-18|1-1",
       "headlineSeed": "Deportivo Riestra eliminó por penales a San Lorenzo y avanzó a octavos de final de la Copa Argentina",
       "topic": "deportes",
@@ -4275,45 +4371,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|argentina|corridos|gonzalez|instala|2026-07-17|6-0",
-      "headlineSeed": "Lucciana Pérez vence en sets corridos a la argentina Julieta González y se instala en las semifinales del W35 de Sao Paulo",
+      "storyId": "sports-result|racing cba|marcos machado|argentina|informa|2026-07-17",
+      "headlineSeed": "Mitre (SE) vs Racing CBA, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Argentina",
-        "Estados Unidos",
-        "Italia"
+        "Racing CBA",
+        "Marcos Machado",
+        "Argentina"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-17T22:54:50.734Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
+      "firstSeenAt": "2026-07-17T21:00:56.839Z",
+      "lastSeenAt": "2026-07-18T02:43:49.664Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
+      "editorialLane": "standard",
+      "freshness": "today",
       "publicInterestScore": 8,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 9,
+      "socialPotentialScore": 12,
       "searchPotentialScore": 7,
       "scoreBreakdown": {
         "publicInterest": 8,
         "localRelevance": 12,
         "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 9,
+        "socialPotential": 12,
         "searchPotential": 7,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 86,
-      "status": "conflicting-sources",
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -4757,89 +4853,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legislative|alfredo deluque|colombia|mexico|informa|2026-07-16",
-      "headlineSeed": "El Pacto Histórico estaría contemplando apoyar la candidatura de Alfredo Deluque para la Presidencia del Senado, según Álvaro Uribe",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Alfredo Deluque",
-        "Colombia",
-        "Mexico",
-        "Francia"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-16T17:22:27.111Z",
-      "lastSeenAt": "2026-07-16T17:22:27.111Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legislative|camara alta|informa|2026-07-16",
-      "headlineSeed": "🔴 Ley de propiedad privada y pliegos judiciales, en vivo: el minuto a minuto de la sesión en el Senado",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Cámara Alta"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-16T15:45:17.698Z",
-      "lastSeenAt": "2026-07-16T15:45:17.698Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|gobierno|camara de diputados|ministerio de relaciones exteriores|tierra del fuego|islas malvinas|argentina|chile|informa|2026-07-14",
       "headlineSeed": "Malvinas: Diputados del PJ quieren reunirse con el embajador británico por el buque de guerra que atravesó aguas argentinas",
       "topic": "politica",
@@ -4934,6 +4947,47 @@
         "diversity": 4
       },
       "newsworthinessScore": 85,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|cuanto|dolar|julio|opera|sabado|2026-07-18",
+      "headlineSeed": "Dólar blue hoy: a cuánto opera este sábado 18 de julio",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Uruguay"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-18T06:09:26.620Z",
+      "lastSeenAt": "2026-07-18T06:09:26.620Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 84,
       "status": "verified-standard-single-source",
       "validationReasons": []
     },
@@ -5341,97 +5395,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|justicia|justicia de la union europea|justicia de espana|pedro sanchez|carles puigdemont|internacional|espana|belgica|informa|2026-07-16",
-      "headlineSeed": "El Tribunal de Justicia europeo avaló la polémica ley de amnistía que Pedro Sánchez prometió a los independentistas catalanes",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
+      "storyId": "sports-result|argentina|argentina|corridos|gonzalez|instala|2026-07-17|6-0",
+      "headlineSeed": "Lucciana Pérez vence en sets corridos a la argentina Julieta González y se instala en las semifinales del W35 de Sao Paulo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Pedro Sánchez",
-        "Carles Puigdemont",
-        "Justicia",
-        "Justicia de la Unión Europea",
-        "Justicia de España",
-        "Internacional",
-        "Espana",
-        "Belgica"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-16T19:17:41.411Z",
-      "lastSeenAt": "2026-07-16T23:01:12.844Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legislative|camara federal|gobierno|camara de diputados|buenos aires|argentina|inglaterra|informa|2026-07-16",
-      "headlineSeed": "Senado: el oficialismo logró activar la sesión para discutir el proyecto de ley de inviolabilidad de la propiedad privada",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Cámara Federal",
-        "Gobierno",
-        "Cámara de Diputados",
-        "Justicia",
-        "Gobierno de",
-        "Buenos Aires",
         "Argentina",
-        "Inglaterra"
+        "Estados Unidos",
+        "Italia"
       ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-16T15:45:17.698Z",
-      "lastSeenAt": "2026-07-16T15:45:17.698Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-17T22:54:50.734Z",
+      "lastSeenAt": "2026-07-18T02:43:49.666Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 83,
-      "status": "published",
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -5665,6 +5667,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|brasil|estados unidos|informa|2026-07-17",
+      "headlineSeed": "¿Qué está dispuesto a hacer Irán por el estrecho de Ormuz?",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Brasil",
+        "Estados Unidos",
+        "Inglaterra"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-17T15:18:18.897Z",
+      "lastSeenAt": "2026-07-18T06:09:26.619Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "scientific|deficit|fiscal|gobierno|junio|milei|observado|primer|malvinas|2026-07-18",
       "headlineSeed": "El Gobierno registró el primer déficit fiscal de junio de Milei y será “observado” por FMI",
       "topic": "economia",
@@ -5708,48 +5752,6 @@
       },
       "newsworthinessScore": 82,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|brasil|estados unidos|informa|2026-07-17",
-      "headlineSeed": "¿Qué está dispuesto a hacer Irán por el estrecho de Ormuz?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Brasil",
-        "Estados Unidos",
-        "Inglaterra"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-17T15:18:18.897Z",
-      "lastSeenAt": "2026-07-18T02:43:49.663Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -5837,48 +5839,6 @@
       },
       "newsworthinessScore": 82,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|choque|estado|grave|internada|jugadora|murio|voley|2026-07-16",
-      "headlineSeed": "Murió la jugadora de vóley de 14 años internada en grave estado tras un choque en la ruta 88",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Ana Peralta",
-        "Club Once Unidos y de",
-        "Buenos Aires"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-16T15:45:17.698Z",
-      "lastSeenAt": "2026-07-16T15:45:17.698Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -6148,6 +6108,89 @@
       },
       "newsworthinessScore": 81,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|alfredo deluque|colombia|mexico|informa|2026-07-16",
+      "headlineSeed": "El Pacto Histórico estaría contemplando apoyar la candidatura de Alfredo Deluque para la Presidencia del Senado, según Álvaro Uribe",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Alfredo Deluque",
+        "Colombia",
+        "Mexico",
+        "Francia"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T17:22:27.111Z",
+      "lastSeenAt": "2026-07-16T17:22:27.111Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|camara alta|informa|2026-07-16",
+      "headlineSeed": "🔴 Ley de propiedad privada y pliegos judiciales, en vivo: el minuto a minuto de la sesión en el Senado",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Cámara Alta"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -6503,47 +6546,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|universidad complutense de madrid|otan|gobierno|begona gomez|pedro sanchez|audiencia provincial|londres|internacional|espana|informa|2026-07-16",
-      "headlineSeed": "España: confirman el juicio contra Begoña Gómez, esposa del presidente Pedro Sánchez, por tráfico de influencias y malversación",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Universidad Complutense de Madrid",
-        "Internacional"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-16T14:01:29.559Z",
-      "lastSeenAt": "2026-07-16T15:45:17.697Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|lamine yamal|leo messi|metlife stadium|internacional|argentina|inglaterra|informa|2026-07-16",
       "headlineSeed": "El 'baño de los dioses': Lamine Yamal y Leo Messi en una final del Mundial",
       "topic": "politica",
@@ -6805,6 +6807,100 @@
       },
       "newsworthinessScore": 79,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|justicia|justicia de la union europea|justicia de espana|pedro sanchez|carles puigdemont|internacional|espana|belgica|informa|2026-07-16",
+      "headlineSeed": "El Tribunal de Justicia europeo avaló la polémica ley de amnistía que Pedro Sánchez prometió a los independentistas catalanes",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Pedro Sánchez",
+        "Carles Puigdemont",
+        "Justicia",
+        "Justicia de la Unión Europea",
+        "Justicia de España",
+        "Internacional",
+        "Espana",
+        "Belgica"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-16T19:17:41.411Z",
+      "lastSeenAt": "2026-07-16T23:01:12.844Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|camara federal|gobierno|camara de diputados|buenos aires|argentina|inglaterra|informa|2026-07-16",
+      "headlineSeed": "Senado: el oficialismo logró activar la sesión para discutir el proyecto de ley de inviolabilidad de la propiedad privada",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Cámara Federal",
+        "Gobierno",
+        "Cámara de Diputados",
+        "Justicia",
+        "Gobierno de",
+        "Buenos Aires",
+        "Argentina",
+        "Inglaterra"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -7257,6 +7353,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|choque|estado|grave|internada|jugadora|murio|voley|2026-07-16",
+      "headlineSeed": "Murió la jugadora de vóley de 14 años internada en grave estado tras un choque en la ruta 88",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Ana Peralta",
+        "Club Once Unidos y de",
+        "Buenos Aires"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-16T15:45:17.698Z",
+      "lastSeenAt": "2026-07-16T15:45:17.698Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-15",
       "headlineSeed": "Expreso de Oriente - Irán y EE. UU. rompen la tregua: ¿comienza una guerra prolongada?",
       "topic": "politica",
@@ -7699,97 +7837,6 @@
       },
       "newsworthinessScore": 78,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|suiza|2026-07-12|1-1",
-      "headlineSeed": "En vivo: Argentina y Suiza empatan 1-1 en la pelea por el pase a semifinales donde espera Inglaterra - BBC News Mundo",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Suiza",
-        "Kansas",
-        "Internacional",
-        "Brasil",
-        "Inglaterra",
-        "Francia",
-        "Alemania",
-        "Egipto",
-        "Mexico"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-12T03:17:10.578Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 6,
-      "independentPublisherCount": 4,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
-      "headlineSeed": "\"Devastados\": la reacción del Rey Carlos, el Príncipe William y el primer ministro inglés tras quedar afuera de la final",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T02:11:59.161Z",
-      "lastSeenAt": "2026-07-16T15:45:17.697Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -8286,7 +8333,7 @@
       ],
       "eventType": "defense",
       "firstSeenAt": "2026-07-17T21:00:56.837Z",
-      "lastSeenAt": "2026-07-18T02:43:49.664Z",
+      "lastSeenAt": "2026-07-18T06:09:26.619Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -8452,6 +8499,47 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "legal-policy|universidad complutense de madrid|otan|gobierno|begona gomez|pedro sanchez|audiencia provincial|londres|internacional|espana|informa|2026-07-16",
+      "headlineSeed": "España: confirman el juicio contra Begoña Gómez, esposa del presidente Pedro Sánchez, por tráfico de influencias y malversación",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Universidad Complutense de Madrid",
+        "Internacional"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-16T14:01:29.559Z",
+      "lastSeenAt": "2026-07-16T15:45:17.697Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "verified-strict",
+      "validationReasons": []
     },
     {
       "storyId": "sports-result|argentina|inglaterra|2026-07-15|1-0",
@@ -8965,68 +9053,25 @@
       "validationReasons": []
     },
     {
-      "storyId": "casualty|camara de representantes|lindsey graham|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "Muere a los 71 años el senador estadounidense Lindsey Graham, aliado clave de Trump",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Lindsey Graham",
-        "Cámara de Representantes",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T13:28:09.458Z",
-      "lastSeenAt": "2026-07-12T13:28:09.458Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 76,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|columna|desenamorado|genero|hincha|indignacion|internet|malvinas|2026-07-17",
-      "headlineSeed": "La columna del hincha “desenamorado” de la Argentina en la revista The New Yorker que generó indignación en internet",
+      "storyId": "general|argentina|definen|entrena|espana|francia|inglaterra|mundial|malvinas|2026-07-18",
+      "headlineSeed": "Mundial 2026, en vivo: Inglaterra y Francia definen el tercer puesto y la Argentina se entrena de cara a España",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Malvinas",
       "primaryEntities": [
-        "The New Yorker",
-        "Ishaan Tharoor",
+        "Gobierno",
         "Malvinas",
-        "Buenos Aires",
         "Argentina",
-        "Egipto",
+        "Estados Unidos",
         "Inglaterra",
         "Francia",
         "Italia",
-        "Suiza"
+        "Espana",
+        "Belgica"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-17T21:00:56.839Z",
-      "lastSeenAt": "2026-07-17T21:00:56.839Z",
+      "firstSeenAt": "2026-07-18T06:09:26.621Z",
+      "lastSeenAt": "2026-07-18T06:09:26.621Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -9034,18 +9079,18 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 8,
+      "publicInterestScore": 11,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
+      "socialPotentialScore": 9,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 22,
         "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 12,
+        "socialPotential": 9,
         "searchPotential": 8,
         "recency": 15,
         "sourceStrength": 3,
@@ -9102,55 +9147,6 @@
       },
       "newsworthinessScore": 75,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|final|milei|mirara|mundial|olivos|quinta|viajara|ushuaia|tierra del fuego|2026-07-16",
-      "headlineSeed": "Milei no viajará a la final del Mundial y lo mirará desde la Quinta de Olivos",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Milei",
-        "Selección Argentina",
-        "Gobierno y",
-        "Gobierno",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Islas Malvinas",
-        "Malvinas",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-16T15:45:17.696Z",
-      "lastSeenAt": "2026-07-16T15:45:17.696Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 15,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 75,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -10239,6 +10235,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
+      "headlineSeed": "\"Devastados\": la reacción del Rey Carlos, el Príncipe William y el primer ministro inglés tras quedar afuera de la final",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-16T02:11:59.161Z",
+      "lastSeenAt": "2026-07-16T15:45:17.697Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|advirtio|agotando|continuidad|escasez|guerra|medio|mundiales|2026-07-15",
       "headlineSeed": "¿Escasez de petróleo?: el FMI advirtió que la continuidad de la guerra en Medio Oriente está agotando las reservas mundiales",
       "topic": "sociedad",
@@ -10626,6 +10664,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|argentina|columna|desenamorado|genero|hincha|indignacion|internet|malvinas|2026-07-17",
+      "headlineSeed": "La columna del hincha “desenamorado” de la Argentina en la revista The New Yorker que generó indignación en internet",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "The New Yorker",
+        "Ishaan Tharoor",
+        "Malvinas",
+        "Buenos Aires",
+        "Argentina",
+        "Egipto",
+        "Inglaterra",
+        "Francia",
+        "Italia",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-17T21:00:56.839Z",
+      "lastSeenAt": "2026-07-17T21:00:56.839Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|artes|busca|convertir|cultura|desarrollo|economico|fondo|malvinas|2026-07-17",
       "headlineSeed": "El Fondo Nacional de las Artes busca convertir la cultura en un motor de desarrollo económico",
       "topic": "cultura",
@@ -10670,51 +10757,6 @@
       "newsworthinessScore": 72,
       "status": "verified-standard-single-source",
       "validationReasons": []
-    },
-    {
-      "storyId": "legislative|gobierno|rogelio frigerio|entre rios|informa|2026-07-17",
-      "headlineSeed": "Rogelio Frigerio lanzó el primer seguro multirriesgo para el maíz con un fondo de u$s1 millón para proteger a pequeños productores",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Rogelio Frigerio",
-        "Entre Ríos",
-        "Gobierno"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-17T21:00:56.836Z",
-      "lastSeenAt": "2026-07-17T21:00:56.836Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 8,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 8,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "general|final|jersey|mundial|nueva|preparativos|primer|seleccion|malvinas|2026-07-17",
@@ -11079,6 +11121,55 @@
       ]
     },
     {
+      "storyId": "general|final|milei|mirara|mundial|olivos|quinta|viajara|ushuaia|tierra del fuego|2026-07-16",
+      "headlineSeed": "Milei no viajará a la final del Mundial y lo mirará desde la Quinta de Olivos",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Milei",
+        "Selección Argentina",
+        "Gobierno y",
+        "Gobierno",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Islas Malvinas",
+        "Malvinas",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-16T15:45:17.696Z",
+      "lastSeenAt": "2026-07-16T15:45:17.696Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 15,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 15,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|argentina|estados unidos|informa|2026-07-16",
       "headlineSeed": "El mensaje de la Corona británica al seleccionado inglés tras la derrota ante Argentina en semifinales",
       "topic": "politica",
@@ -11162,48 +11253,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "casualty|justicia|san francisco|santa fe|argentina|egipto|informa|2026-07-13",
-      "headlineSeed": "Ajuste de cuentas: lo ubicaron entre la gente que festejaba el triunfo de Argentina y le dispararon tres tiros en la nuca",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Argentina",
-        "Egipto",
-        "Suiza"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-14T13:53:21.764Z",
-      "lastSeenAt": "2026-07-15T06:19:29.073Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 71,
-      "status": "published",
-      "validationReasons": []
     },
     {
       "storyId": "international-conflict|emmanuel macron|volodimir zelenski|paris|internacional|reino unido|francia|informa|2026-07-13",
@@ -11806,6 +11855,48 @@
       },
       "newsworthinessScore": 70,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|gobierno|rogelio frigerio|entre rios|informa|2026-07-17",
+      "headlineSeed": "Rogelio Frigerio lanzó el primer seguro multirriesgo para el maíz con un fondo de u$s1 millón para proteger a pequeños productores",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Rogelio Frigerio",
+        "Entre Ríos",
+        "Gobierno"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-17T21:00:56.836Z",
+      "lastSeenAt": "2026-07-17T21:00:56.836Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 8,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 8,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -12565,49 +12656,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentina|julio|kaiyi|precios|tierra del fuego|2026-07-16",
-      "headlineSeed": "Los precios de Kaiyi en julio 2026 en Argentina",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Argentina Cuánto",
-        "Tierra del Fuego",
-        "Buenos Aires",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-16T17:22:27.114Z",
-      "lastSeenAt": "2026-07-16T17:22:27.114Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|agenda|chile|conjunta|consul|daniel|diagramar|harrington|tolhuin|tierra del fuego aias|2026-07-15",
       "headlineSeed": "Daniel Harrington recibió al cónsul de Chile para diagramar una agenda conjunta de trabajo - Actualidad TDF",
       "topic": "sociedad",
@@ -12649,6 +12697,48 @@
         "socialPotential": 11,
         "searchPotential": 8,
         "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|justicia|san francisco|santa fe|argentina|egipto|informa|2026-07-13",
+      "headlineSeed": "Ajuste de cuentas: lo ubicaron entre la gente que festejaba el triunfo de Argentina y le dispararon tres tiros en la nuca",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Argentina",
+        "Egipto",
+        "Suiza"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-14T13:53:21.764Z",
+      "lastSeenAt": "2026-07-15T06:19:29.073Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -12910,49 +13000,6 @@
       },
       "newsworthinessScore": 66,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|malvinas|argentina|inglaterra|informa|2026-07-15",
-      "headlineSeed": "Argentina vs Inglaterra, en datos: de las asimetrías socio-económicas a la histórica ocupación de Malvinas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Suiza"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-15T06:19:29.071Z",
-      "lastSeenAt": "2026-07-15T06:19:29.071Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 66,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -13249,55 +13296,6 @@
       "eventType": "general",
       "firstSeenAt": "2026-07-15T17:17:52.489Z",
       "lastSeenAt": "2026-07-15T17:17:52.489Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 65,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|formaciones|inglaterra|mundial|malvinas|2026-07-15",
-      "headlineSeed": "Argentina vs. Inglaterra, EN VIVO por el Mundial 2026: hora, TV y las formaciones",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Atlanta Stadium",
-        "Policía",
-        "Malvinas",
-        "Kansas",
-        "Argentina",
-        "Egipto",
-        "Estados Unidos",
-        "Inglaterra",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-15T06:19:29.073Z",
-      "lastSeenAt": "2026-07-15T06:19:29.073Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -13635,47 +13633,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|beautiful|claudio|escena|francella|iconica|inglaterra|morning|malvinas|2026-07-16",
-      "headlineSeed": "Claudio Tapia recreó la icónica escena de Francella tras la victoria ante Inglaterra: “Beautiful morning, ¿right?”",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
+      "storyId": "general|argentina|debilidades|fortalezas|inglaterra|juega|mundial|rival|malvinas|2026-07-13",
+      "headlineSeed": "Cómo juega Inglaterra: fortalezas y debilidades del rival de Argentina en el Mundial 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
       "territory": "Malvinas",
       "primaryEntities": [
-        "Claudio Tapia",
+        "Jude Bellingham",
         "Malvinas",
         "Argentina",
-        "Egipto",
-        "Brasil",
         "Uruguay",
-        "Reino Unido",
+        "Mexico",
         "Inglaterra",
         "Francia",
-        "Italia"
+        "Espana"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-16T17:22:27.112Z",
-      "lastSeenAt": "2026-07-16T17:22:27.112Z",
+      "firstSeenAt": "2026-07-13T20:22:58.119Z",
+      "lastSeenAt": "2026-07-13T20:22:58.119Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 11,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
+      "socialPotentialScore": 12,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 22,
         "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 7,
+        "socialPotential": 12,
         "searchPotential": 8,
-        "recency": 9,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
