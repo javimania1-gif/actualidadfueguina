@@ -1,50 +1,52 @@
 {
-  "generatedAt": "2026-07-19T19:14:00.667Z",
+  "generatedAt": "2026-07-19T20:57:03.810Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29700066471",
-    "headSha": "8a6f1a95e10557fa1547f2b71760d1610dda2646"
+    "runId": "29703342571",
+    "headSha": "1c7b1b6312969e52efe815deee0933c9447b9c50"
   },
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
     "candidatesDetected": 98,
-    "candidatesIngested": 23,
-    "extractionSucceeded": 21,
-    "candidatesApproved": 13,
+    "candidatesIngested": 17,
+    "extractionSucceeded": 17,
+    "candidatesApproved": 11,
     "discardedDuplicate": 2,
     "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
     "duplicatePublishedEvent": 0,
-    "discardedQuality": 6,
+    "discardedQuality": 5,
     "discardedQualityByReason": {
       "stale-hard-news": 2,
-      "stale-dated-discovery": 1,
-      "undated-discovery": 3
+      "stale-dated-discovery": 3
     },
     "discardedBySourceAndReason": {
       "nacionales-tn": {
         "stale-hard-news": 1
       },
       "nacionales-infobae": {
-        "stale-hard-news": 1
+        "stale-hard-news": 1,
+        "stale-dated-discovery": 1
       },
-      "critica-sur": {
-        "stale-dated-discovery": 1,
-        "undated-discovery": 3
+      "bing-rio-grande": {
+        "stale-dated-discovery": 1
+      },
+      "mundo-dw": {
+        "stale-dated-discovery": 1
       }
     },
-    "discardedGenericTitle": 2,
-    "discardedEvergreen": 1,
-    "eventsGrouped": 13,
-    "verified": 10,
-    "pendingVerification": 2,
-    "pendingMatchedFromHistory": 1,
+    "discardedGenericTitle": 1,
+    "discardedEvergreen": 3,
+    "eventsGrouped": 11,
+    "verified": 8,
+    "pendingVerification": 3,
+    "pendingMatchedFromHistory": 0,
     "recentEventRepair": {
       "corrected": 0,
-      "compacted": 1,
+      "compacted": 0,
       "conservedPublished": 56
     },
     "pendingEventsCompacted": 0,
@@ -64,49 +66,65 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T22:12:26.717Z",
+        "nextRetryAt": "2026-07-19T23:56:00.545Z",
         "expiresAt": "2026-07-21T19:12:26.717Z",
-        "corroborationAttempts": 1
+        "corroborationAttempts": 2
       },
       {
-        "eventKey": "general|incendio|madrid|norte|quema|2026-07-19",
-        "title": "Un incendio quema 12.000 ha a 100 km al norte de Madrid",
-        "sourceId": "mundo-dw",
-        "publisherDomain": "dw.com",
-        "category": "Mundo",
-        "eventType": "general",
+        "eventKey": "sports-result|belgica|italia|2026-07-19",
+        "title": "Kimi Antonelli se quedó con el GP de Bélgica, y Franco Colapinto culminó 10°",
+        "sourceId": "nacionales-ambito",
+        "publisherDomain": "ambito.com",
+        "category": "Nacionales",
+        "eventType": "sports-result",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T22:12:26.719Z",
-        "expiresAt": "2026-07-21T11:12:23.234Z",
-        "corroborationAttempts": 0
+        "nextRetryAt": "2026-07-19T23:56:00.546Z",
+        "expiresAt": "2026-07-21T20:56:00.546Z",
+        "corroborationAttempts": 1
+      },
+      {
+        "eventKey": "casualty|medio oriente estados unidos|internacional|colombia|estados unidos|informa|2026-07-19",
+        "title": "Estados Unidos vuelve a bombardear Irán y recrudece la tensión en Medio Oriente",
+        "sourceId": "mundo-france24",
+        "publisherDomain": "france24.com",
+        "category": "Mundo",
+        "eventType": "casualty",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-19T23:56:00.548Z",
+        "expiresAt": "2026-07-21T20:56:00.548Z",
+        "corroborationAttempts": 1
       }
     ],
-    "conflicting": 1,
+    "conflicting": 0,
     "published": 0,
     "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 10
+      "standard": 7,
+      "strict": 1
     },
     "pendingByLane": {
       "standard": 1,
-      "strict": 1
+      "strict": 2
     },
     "eventsByTerritory": {
-      "Nacionales": 8,
-      "Mundo": 4,
+      "Mundo": 3,
+      "Nacionales": 7,
       "Malvinas": 1
     },
     "verifiedByTerritory": {
-      "Nacionales": 7,
-      "Mundo": 2,
+      "Nacionales": 6,
+      "Mundo": 1,
       "Malvinas": 1
     },
     "fastPendingAudit": [],
-    "freshCandidates": 15,
-    "staleDiscarded": 3,
+    "freshCandidates": 12,
+    "staleDiscarded": 5,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -330,23 +348,23 @@
       },
       "critica-sur": {
         "detected": 4,
-        "materialized": 4,
+        "materialized": 0,
         "freshCandidates": 0,
-        "qualityDiscarded": 4,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "degraded",
-        "issueCategory": "stale-or-evergreen",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
+        "staleDiscardRate": 0
       },
       "bing-tdf": {
         "detected": 5,
@@ -370,23 +388,23 @@
       },
       "bing-rio-grande": {
         "detected": 4,
-        "materialized": 0,
+        "materialized": 1,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.25,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.25
       },
       "bing-ushuaia": {
         "detected": 4,
@@ -530,23 +548,23 @@
       },
       "nacionales-infobae": {
         "detected": 3,
-        "materialized": 4,
-        "freshCandidates": 3,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "materialized": 2,
+        "freshCandidates": 0,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 3,
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.75,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.75,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
+        "staleDiscardRate": 0.67
       },
       "nacionales-perfil": {
         "detected": 2,
@@ -590,20 +608,20 @@
       },
       "nacionales-ambito": {
         "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "healthy",
+        "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -630,8 +648,8 @@
       },
       "nacionales-tn": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 1,
+        "materialized": 3,
+        "freshCandidates": 2,
         "qualityDiscarded": 1,
         "staleDiscarded": 1,
         "consulted": 1,
@@ -640,15 +658,35 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.33
       },
       "mundo-google": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-clarin": {
         "detected": 3,
         "materialized": 2,
         "freshCandidates": 2,
@@ -660,31 +698,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -710,23 +728,23 @@
       },
       "mundo-dw": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "materialized": 1,
+        "freshCandidates": 0,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "mundo-france24": {
         "detected": 3,
@@ -750,21 +768,21 @@
       },
       "mundo-elpais": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
-        "verificationContributionRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -793,138 +811,138 @@
     "drafts": 0,
     "modelErrors": 0,
     "publicationErrors": 0,
-    "factualValidationErrors": 2,
-    "discardedImportance": 8,
+    "factualValidationErrors": 3,
+    "discardedImportance": 5,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
     "failedRetryable": 0,
-    "failedTerminal": 2,
+    "failedTerminal": 0,
     "failedRetryableByReason": {},
-    "failedTerminalByReason": {
-      "http-403": 2
-    },
+    "failedTerminalByReason": {},
     "aiReused": 0,
     "rescueQueued": 3,
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
-    "extractErrors": 2,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 10,
-    "aiCalls": 10,
-    "articlesDrafted": 8,
+    "aiAttempts": 8,
+    "aiCalls": 8,
+    "articlesDrafted": 5,
     "imagesResolved": 0,
     "approvedForPublication": 0,
     "imageSelections": [],
-    "agendaStories": 1010,
-    "newsworthinessAverage": 62,
+    "agendaStories": 1009,
+    "newsworthinessAverage": 64,
     "newsworthinessTop": [
       {
-        "title": "Ryan Fox se consagró en el British Open con un birdie en el hoyo final",
-        "eventKey": "territorial-sovereignty|ryan fox|british open|royal birkdale|argentina|inglaterra|informa|2026-07-19",
-        "score": 84,
+        "title": "Rusia bombardeó Kiev por cinco horas, en uno de sus mayores ataques con misiles balísticos",
+        "eventKey": "international-conflict|moscu|internacional|informa|2026-07-19",
+        "score": 88,
         "topic": "politica",
-        "territory": "Nacionales",
-        "lane": "standard"
+        "territory": "Mundo",
+        "lane": "strict"
       },
       {
-        "title": "Todo sobre el show del medio tiempo en la final del Mundial 2026: quiénes cantan y cuánto durará",
-        "eventKey": "general|cantan|cuanto|durara|final|medio|mundial|quienes|malvinas|2026-07-19",
-        "score": 75,
-        "topic": "deportes",
+        "title": "Donald Trump al llegar a la final del Mundial: “Es difícil apostar contra Messi”",
+        "eventKey": "general|apostar|contra|dificil|donald|final|llegar|messi|malvinas|2026-07-19",
+        "score": 73,
+        "topic": "sociedad",
         "territory": "Malvinas",
         "lane": "standard"
       },
       {
-        "title": "Claudia Sheinbaum aparece junto a Donald Trump para presenciar la final España vs Argentina del Mundial 2026",
-        "eventKey": "general|aparece|argentina|claudia|donald|espana|final|junto|2026-07-19",
-        "score": 60,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "El momento en el que Carlos Alcaraz y Andrés Iniesta han mostrado al mundo el trofeo del Mundial",
-        "eventKey": "general|alcaraz|andres|carlos|iniesta|momento|mostrado|mundial|2026-07-19",
+        "title": "Donald Trump buscará robarse todas las miradas con la copa del mundo en la mano: \"Es difícil apostar contra Messi\"",
+        "eventKey": "general|apostar|buscara|contra|dificil|donald|messi|miradas|2026-07-19",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Final del Mundial 2026, EN VIVO: Argentina y España, a minutos de iniciar el partido que paraliza al mundo",
-        "eventKey": "general|argentina|espana|final|iniciar|minutos|mundial|mundo|2026-07-19",
+        "title": "Madonna, BTS, Justin Bieber y Shakira brillaron en el show del entretiempo de la final del Mundial 2026",
+        "eventKey": "general|bieber|brillaron|entretiempo|final|justin|madonna|mundial|2026-07-19",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Los mejores memes de Argentina vs. España: del “Hola Dios” al gatito de Cucurella",
-        "eventKey": "general|argentina|cucurella|espana|gatito|mejores|memes|2026-07-19",
+        "title": "El premio récord en dólares que se llevará el campeón de la final entre la Argentina y España",
+        "eventKey": "general|argentina|campeon|dolares|espana|final|llevara|premio|2026-07-19",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "El conmovedor momento del himno antes de Argentina-España: de la interpretación de María Becerra a la pasión de los jugadores",
-        "eventKey": "general|antes|argentina|becerra|conmovedor|espana|himno|interpretacion|2026-07-19",
-        "score": 55,
-        "topic": "sociedad",
+        "title": "Quién es Facundo Medina, el número 25 de la Selección argentina que reemplazó a Cuti Romero en la final del Mundial 2026",
+        "eventKey": "general|argentina|facundo|final|medina|mundial|numero|quien|2026-07-19",
+        "score": 60,
+        "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Por qué genera dudas la economía de Indonesia",
-        "eventKey": "general|dudas|economia|genera|indonesia|2026-07-19",
-        "score": 55,
-        "topic": "economia",
-        "territory": "Mundo",
-        "lane": "standard"
-      },
-      {
-        "title": "Video: el saludo entre Lionel Messi y Lamine Yamal en la previa de la final del Mundial 2026",
-        "eventKey": "general|final|lamine|lionel|messi|mundial|previa|saludo|2026-07-19",
-        "score": 55,
-        "topic": "sociedad",
+        "title": "Por qué Caro Calvagni casi se pierde la final del Mundial entre Argentina y España",
+        "eventKey": "general|argentina|calvagni|espana|final|mundial|pierde|2026-07-19",
+        "score": 60,
+        "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Grupos de colonos israelíes marchan hacia Gaza para reclamar el restablecimiento de asentamientos en la Franja",
-        "eventKey": "general|asentamientos|colonos|franja|grupos|hacia|israelies|marchan|2026-07-19",
+        "title": "La arenga de Messi en el túnel antes del comienzo del segundo tiempo ante España: “A jugarla”",
+        "eventKey": "general|antes|arenga|comienzo|espana|jugarla|messi|segundo|2026-07-19",
         "score": 52,
         "topic": "sociedad",
-        "territory": "Mundo",
+        "territory": "Nacionales",
         "lane": "standard"
       }
     ],
-    "corroborationSearches": 1,
+    "corroborationSearches": 3,
     "corroborationFound": 0,
     "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 1,
+    "corroborationNoResult": 3,
     "corroborationAttempts": [
+      {
+        "eventKey": "casualty|medio oriente estados unidos|internacional|colombia|estados unidos|informa|2026-07-19",
+        "title": "Estados Unidos vuelve a bombardear Irán y recrudece la tensión en Medio Oriente",
+        "priorityRank": 1,
+        "corroborationQuery": "Medio Oriente Estados Unidos Colombia Estados Unidos Cuba bombardear estados medio oriente recrudece tension",
+        "corroborationReason": "newsworthiness=90; freshness=1h; territory=Mundo; impact=12; corroborability=10; pendingAge=1h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
+      {
+        "eventKey": "sports-result|belgica|italia|2026-07-19",
+        "title": "Kimi Antonelli se quedó con el GP de Bélgica, y Franco Colapinto culminó 10°",
+        "priorityRank": 2,
+        "corroborationQuery": "Kimi Antonelli Franco Colapinto Argentina Brasil Estados Unidos resultado antonelli belgica colapinto culmino franco quedo",
+        "corroborationReason": "newsworthiness=92; freshness=0h; territory=Nacionales; impact=7; corroborability=10; pendingAge=0h; attempts=0",
+        "found": 0,
+        "verified": false,
+        "status": "no-result"
+      },
       {
         "eventKey": "sports-result|argentina|francia|2026-07-18|0-2",
         "title": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
-        "priorityRank": 1,
+        "priorityRank": 3,
         "corroborationQuery": "Lionel Scaloni Argentina Egipto Inglaterra Francia resultado batallas lionel madre parte scaloni todas",
-        "corroborationReason": "newsworthiness=86; freshness=21h; territory=Nacionales; impact=6; corroborability=10; pendingAge=21h; attempts=0",
+        "corroborationReason": "newsworthiness=84; freshness=2h; territory=Mundo; impact=6; corroborability=10; pendingAge=2h; attempts=1",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "casualties": 1
-    },
-    "criticalConflicts": 1,
+    "conflictsByField": {},
+    "criticalConflicts": 0,
     "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 8,
+    "resolvedComplementaryFacts": 3,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 56,
@@ -946,7 +964,7 @@
       },
       "discoveryToVerificationAllMinutes": {
         "count": 810,
-        "avg": 57.3,
+        "avg": 58.3,
         "p50": 0,
         "max": 2737.6
       },
@@ -959,11 +977,11 @@
       }
     },
     "byCategory": {},
-    "publishedLast3hBeforeRun": 1,
+    "publishedLast3hBeforeRun": 0,
     "publishedLast6hBeforeRun": 2,
     "publishedLast12hBeforeRun": 2,
     "publishedLast24hBeforeRun": 3,
-    "hoursSinceLastPublicationBeforeRun": 2.2,
+    "hoursSinceLastPublicationBeforeRun": 3.9,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -1070,14 +1088,14 @@
         }
       }
     ],
-    "agendaInvalidStories": 38,
+    "agendaInvalidStories": 36,
     "technicalSuccess": true,
     "editorialOutcome": "no-publishable-story",
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
       "healthy": 32,
-      "productive": 9,
+      "productive": 8,
       "noResults": 2,
       "failed": 0
     }
@@ -1086,8 +1104,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 10,
-    "discoveryAiBudget": 10,
+    "discoveryAiUsed": 8,
+    "discoveryAiBudget": 8,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1101,15 +1119,14 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 3,
-    "candidatesMaterialized": 23,
-    "totalCandidatesBeforeLimit": 23
+    "candidatesMaterialized": 17,
+    "totalCandidatesBeforeLimit": 17
   },
   "reasonNoMorePublished": [
-    "2 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
+    "3 evento(s) quedaron pendientes de segunda fuente",
     "2 candidato(s) descartados por duplicado/similitud",
-    "6 candidato(s) descartados por causas especificas (stale-hard-news: 2, stale-dated-discovery: 1, undated-discovery: 3)",
-    "8 candidato(s) descartados por importancia editorial",
-    "2 candidato(s) bloqueados por validacion factual"
+    "5 candidato(s) descartados por causas especificas (stale-hard-news: 2, stale-dated-discovery: 3)",
+    "5 candidato(s) descartados por importancia editorial",
+    "3 candidato(s) bloqueados por validacion factual"
   ]
 }
