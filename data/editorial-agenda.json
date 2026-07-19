@@ -1,27 +1,27 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-19T09:57:49.827Z",
+  "generatedAt": "2026-07-19T11:13:16.175Z",
   "summary": {
-    "totalStories": 1014,
+    "totalStories": 1011,
     "byStatus": {
-      "verified-standard-single-source": 666,
-      "conflicting-sources": 44,
+      "conflicting-sources": 43,
+      "verified-standard-single-source": 664,
       "agenda-invalid": 39,
-      "published": 60,
+      "published": 59,
       "verified-tier-a": 1,
       "verified-fast-lane": 7,
-      "rejected-terminal": 96,
+      "rejected-terminal": 97,
       "pending-verification": 47,
       "verified-strict": 37,
       "verified-local-routine": 5,
       "verified-standard": 12
     },
     "byTopic": {
-      "politica": 130,
-      "servicios": 164,
-      "agenda": 11,
+      "servicios": 165,
+      "politica": 128,
+      "agenda": 10,
       "turismo": 12,
-      "deportes": 217,
+      "deportes": 216,
       "policiales": 43,
       "economia": 58,
       "sociedad": 353,
@@ -30,18 +30,37 @@
       "cultura": 2
     },
     "byTerritory": {
-      "Malvinas": 82,
       "Ushuaia": 32,
+      "Malvinas": 82,
       "Antartida": 10,
-      "Mundo": 552,
+      "Mundo": 549,
       "Rio Grande": 26,
       "Provincia": 16,
       "Tolhuin": 4,
-      "Nacionales": 226,
-      "unknown": 66
+      "Nacionales": 225,
+      "unknown": 67
     },
     "invalidStories": 39,
     "topStories": [
+      {
+        "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "legal-policy|gobierno de|banco provincia|justicia|malvinas|buenos aires|argentina|espana|informa|2026-07-19",
         "headlineSeed": "El Gobierno decretó feriado el 20 de julio en Buenos Aires: de qué trata",
@@ -57,25 +76,6 @@
           "socialPotential": 4,
           "searchPotential": 8,
           "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -236,6 +236,47 @@
   },
   "stories": [
     {
+      "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
+      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "SMN",
+        "Ushuaia"
+      ],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-18T22:55:08.517Z",
+      "lastSeenAt": "2026-07-19T11:12:23.233Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "legal-policy|gobierno de|banco provincia|justicia|malvinas|buenos aires|argentina|espana|informa|2026-07-19",
       "headlineSeed": "El Gobierno decretó feriado el 20 de julio en Buenos Aires: de qué trata",
       "topic": "politica",
@@ -281,49 +322,6 @@
       },
       "newsworthinessScore": 100,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
-      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
-      "topic": "servicios",
-      "subtopic": "clima",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "SMN",
-        "El SMN",
-        "Ushuaia",
-        "Tierra del Fuego"
-      ],
-      "eventType": "weather-forecast",
-      "firstSeenAt": "2026-07-18T22:55:08.517Z",
-      "lastSeenAt": "2026-07-18T22:55:08.517Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "today",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -2204,6 +2202,50 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|francia|inglaterra|2026-07-18|4-0",
+      "headlineSeed": "Inglaterra es tercer lugar del Mundial tras vencer a Francia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Inglaterra",
+        "Francia",
+        "Internacional",
+        "Espana",
+        "Argentina"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-19T02:57:35.772Z",
+      "lastSeenAt": "2026-07-19T11:12:23.234Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "crime|ministerio de energia|ministerio|jordania hay|internacional|estados unidos|informa|2026-07-18",
       "headlineSeed": "Grave escalada de la guerra: mueren dos militares estadounidenses en ataques de Irán en Jordania",
       "topic": "policiales",
@@ -3345,48 +3387,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|volodimir zelensky|moscu|estados unidos|informa|2026-07-18",
-      "headlineSeed": "Ucrania atacó con drones un centro logístico ruso y mató a 7 personas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Volodimir Zelensky",
-        "Moscu",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-18T11:08:54.588Z",
-      "lastSeenAt": "2026-07-18T11:08:54.588Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|conectar|hotel|invierno|mundo|nieve|perder|permite|ushuaia|tierra del fuego aias|2026-07-15",
       "headlineSeed": "Vacaciones de invierno en el Fin del Mundo: el hotel de Ushuaia que permite conectar con la nieve sin perder tiempo en traslados",
       "topic": "turismo",
@@ -3937,6 +3937,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|volodimir zelensky|moscu|estados unidos|informa|2026-07-18",
+      "headlineSeed": "Ucrania atacó con drones un centro logístico ruso y mató a 7 personas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Volodimir Zelensky",
+        "Moscu",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-18T11:08:54.588Z",
+      "lastSeenAt": "2026-07-18T11:08:54.588Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 85,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|universidad de chile y|otan|marco enriquez|argentina|brasil|informa|2026-07-17",
       "headlineSeed": "Candidato presidencial chileno explica la derechización en las elecciones latinoamericanas",
       "topic": "politica",
@@ -4170,7 +4212,7 @@
     },
     {
       "storyId": "general|cotiza|cuanto|dolar|domingo|julio|2026-07-19",
-      "headlineSeed": "Dólar hoy y dólar blue hoy: a cuánto cotiza este domingo 19 de julio",
+      "headlineSeed": "Dólar hoy: a cuánto cotiza este domingo 19 de julio",
       "topic": "economia",
       "subtopic": "economia",
       "territory": "Nacionales",
@@ -4208,49 +4250,6 @@
       },
       "newsworthinessScore": 84,
       "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|francia|inglaterra|2026-07-18|4-0",
-      "headlineSeed": "Inglaterra es tercer lugar del Mundial tras vencer a Francia",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Inglaterra",
-        "Francia",
-        "Internacional",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-19T02:57:35.772Z",
-      "lastSeenAt": "2026-07-19T02:57:35.772Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -4524,89 +4523,6 @@
       "newsworthinessScore": 83,
       "status": "conflicting-sources",
       "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|peru|clausura|cristal|deportivo|garcilaso|2026-07-17|0-0",
-      "headlineSeed": "Las sedes argentinas para el Mundial 2030, la otra final que podría definir el partido contra España",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-17T21:00:56.837Z",
-      "lastSeenAt": "2026-07-19T09:55:31.894Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather|informa|2026-07-19",
-      "headlineSeed": "Hay alerta naranja por viento zonda para este domingo 19 de julio en Catamarca: las zonas afectadas",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-19T06:34:31.260Z",
-      "lastSeenAt": "2026-07-19T06:34:31.260Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 4,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "agenda-invalid",
-      "sourceStatus": "verified-standard-single-source",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "sports-result|argentina|independiente|2026-07-18|3-1",
@@ -5417,6 +5333,97 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|argentina|francia|2026-07-18|0-2",
+      "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Lionel Scaloni",
+        "Argentina",
+        "Independiente",
+        "Francia",
+        "Egipto",
+        "Inglaterra",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-19T11:12:23.233Z",
+      "lastSeenAt": "2026-07-19T11:12:23.233Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|capturan|escaparon|gatova|localizan|valencia|vaquillas|2026-07-19",
+      "headlineSeed": "Capturan al toro y localizan a las vaquillas que se escaparon en Gátova (Valencia)",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Policía Local",
+        "Espana"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-19T09:55:31.893Z",
+      "lastSeenAt": "2026-07-19T09:55:31.893Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "service|alcaudete|investigan|muerte|mujer|violenta|2026-07-19",
       "headlineSeed": "Investigan la muerte violenta de una mujer de 86 años en Alcaudete (Jaén)",
       "topic": "servicios",
@@ -5461,7 +5468,7 @@
       ]
     },
     {
-      "storyId": "sports-result|argentina|francia|2026-07-18|0-2",
+      "storyId": "sports-result|lionel scaloni|argentina|egipto|informa|2026-07-18",
       "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
       "topic": "deportes",
       "subtopic": "deportes",
@@ -5476,7 +5483,7 @@
         "Suiza"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-19T06:34:31.258Z",
+      "firstSeenAt": "2026-07-18T22:55:08.519Z",
       "lastSeenAt": "2026-07-19T09:55:31.892Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
@@ -5504,93 +5511,6 @@
       },
       "newsworthinessScore": 81,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|lionel scaloni|argentina|egipto|informa|2026-07-18",
-      "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Lionel Scaloni",
-        "Argentina",
-        "Egipto",
-        "Inglaterra",
-        "Francia",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-18T22:55:08.519Z",
-      "lastSeenAt": "2026-07-19T02:57:35.769Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|baratos|cuales|destinos|invierno|vacaciones|viajar|2026-07-18",
-      "headlineSeed": "Vacaciones de invierno: cuáles son los destinos más baratos para viajar",
-      "topic": "economia",
-      "subtopic": "finanzas-publicas",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-18T11:08:54.588Z",
-      "lastSeenAt": "2026-07-18T11:08:54.588Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 81,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -5986,6 +5906,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "weather|informa|2026-07-19",
+      "headlineSeed": "Hay alerta naranja por viento zonda para este domingo 19 de julio en Catamarca: las zonas afectadas",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-19T06:34:31.260Z",
+      "lastSeenAt": "2026-07-19T06:34:31.260Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 80,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "crime|gobierno|fuerzas armadas|estados unidos|informa|2026-07-18",
       "headlineSeed": "Irán atacó una base de Estados Unidos en Jordania: murieron dos militares y otro permanece desaparecido",
       "topic": "policiales",
@@ -6039,48 +6000,6 @@
       "eventType": "sports-result",
       "firstSeenAt": "2026-07-18T02:43:49.666Z",
       "lastSeenAt": "2026-07-18T09:30:27.411Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|argentina|corridos|gonzalez|instala|2026-07-17|6-0",
-      "headlineSeed": "Lucciana Pérez vence en sets corridos a la argentina Julieta González y se instala en las semifinales del W35 de Sao Paulo",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Estados Unidos",
-        "Italia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-17T22:54:50.734Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
@@ -6325,49 +6244,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|gobierno|benjamin netanyahu|kansas|internacional|argentina|venezuela|informa|2026-07-13",
-      "headlineSeed": "Elecciones en Israel: ¿Netanyahu enfrenta riesgo de perder el poder?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gobierno",
-        "Kansas",
-        "Argentina",
-        "Suiza"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-13T03:20:18.636Z",
-      "lastSeenAt": "2026-07-13T14:42:54.148Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 80,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|racing cba|marcos machado|argentina|informa|2026-07-17",
       "headlineSeed": "Mitre (SE) vs Racing CBA, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
       "topic": "deportes",
@@ -6591,47 +6467,87 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|espana|informa|2026-07-18",
-      "headlineSeed": "Los candidatos del PP en las capitales de provincia confiesan su apetencia de elecciones",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "unknown",
+      "storyId": "sports-result|peru|clausura|cristal|deportivo|garcilaso|2026-07-17|0-0",
+      "headlineSeed": "Sporting Cristal vs Deportivo Garcilaso EN VIVO 0-0: minuto a minuto del partido por Torneo Clausura de Liga 1 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
       "primaryEntities": [
+        "Argentina",
+        "Estados Unidos",
         "Espana"
       ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-18T11:08:54.581Z",
-      "lastSeenAt": "2026-07-18T11:08:54.581Z",
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-17T21:00:56.837Z",
+      "lastSeenAt": "2026-07-19T09:55:31.894Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|baratos|cuales|destinos|invierno|vacaciones|viajar|2026-07-18",
+      "headlineSeed": "Vacaciones de invierno: cuáles son los destinos más baratos para viajar",
+      "topic": "economia",
+      "subtopic": "finanzas-publicas",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-18T11:08:54.588Z",
+      "lastSeenAt": "2026-07-18T11:08:54.588Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "today",
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
       "serviceValueScore": 3,
       "socialPotentialScore": 4,
-      "searchPotentialScore": 5,
+      "searchPotentialScore": 7,
       "scoreBreakdown": {
         "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
         "serviceValue": 3,
         "socialPotential": 4,
-        "searchPotential": 5,
-        "recency": 12,
+        "searchPotential": 7,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 78,
-      "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
-      "validationReasons": [
-        "territory-conflict"
-      ]
+      "status": "verified-standard-single-source",
+      "validationReasons": []
     },
     {
       "storyId": "international-conflict|internacional|brasil|estados unidos|informa|2026-07-17",
@@ -6757,7 +6673,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 78,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -7756,45 +7672,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|hugo mario gimenez|informa|2026-07-18",
-      "headlineSeed": "Un hombre de 85 años murió tras ser atropellado por una mujer que manejaba una moto sin licencia de conducir en La Plata",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "unknown",
-      "primaryEntities": [],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-18T11:08:54.588Z",
-      "lastSeenAt": "2026-07-18T11:08:54.588Z",
+      "storyId": "sports-result|argentina|argentina|corridos|gonzalez|instala|2026-07-17|6-0",
+      "headlineSeed": "Lucciana Pérez vence en sets corridos a la argentina Julieta González y se instala en las semifinales del W35 de Sao Paulo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Estados Unidos",
+        "Italia"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-17T22:54:50.734Z",
+      "lastSeenAt": "2026-07-18T02:43:49.666Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 21,
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 5,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 21,
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 5,
-        "recency": 12,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 76,
-      "status": "agenda-invalid",
-      "sourceStatus": "conflicting-sources",
-      "validationReasons": [
-        "territory-conflict"
-      ]
+      "status": "conflicting-sources",
+      "validationReasons": []
     },
     {
       "storyId": "scientific|deficit|fiscal|gobierno|junio|milei|observado|primer|malvinas|2026-07-18",
@@ -7923,49 +7840,6 @@
       },
       "newsworthinessScore": 76,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|inglaterra|2026-07-16|3-1",
-      "headlineSeed": "Argentina sufrió, venció a Suiza en el alargue y ya pensaba en Inglaterra",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Egipto",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T06:23:34.284Z",
-      "lastSeenAt": "2026-07-16T10:13:17.988Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 76,
-      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -8356,6 +8230,49 @@
       "newsworthinessScore": 75,
       "status": "verified-standard-single-source",
       "validationReasons": []
+    },
+    {
+      "storyId": "election|espana|informa|2026-07-18",
+      "headlineSeed": "Los candidatos del PP en las capitales de provincia confiesan su apetencia de elecciones",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Espana"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-18T11:08:54.581Z",
+      "lastSeenAt": "2026-07-18T11:08:54.581Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "international-conflict|argentina|egipto|informa|2026-07-16",
@@ -9275,46 +9192,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|gobierno|otan de|oriente medio|donald trump|estados unidos insinuo|internacional|estados unidos|informa|2026-07-12",
-      "headlineSeed": "La guerra en Oriente Medio: “Destruir a los iraníes”, la orden de Donald Trump en caso de que sea asesinado",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-13T03:20:18.637Z",
-      "lastSeenAt": "2026-07-13T14:42:54.146Z",
+      "storyId": "crime|hugo mario gimenez|informa|2026-07-18",
+      "headlineSeed": "Un hombre de 85 años murió tras ser atropellado por una mujer que manejaba una moto sin licencia de conducir en La Plata",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "unknown",
+      "primaryEntities": [],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-18T11:08:54.588Z",
+      "lastSeenAt": "2026-07-18T11:08:54.588Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
       "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 1,
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 74,
-      "status": "published",
-      "validationReasons": []
+      "newsworthinessScore": 73,
+      "status": "agenda-invalid",
+      "sourceStatus": "conflicting-sources",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
@@ -9857,6 +9773,49 @@
       "validationReasons": [
         "territory-conflict"
       ]
+    },
+    {
+      "storyId": "sports-result|argentina|inglaterra|2026-07-16|3-1",
+      "headlineSeed": "Argentina sufrió, venció a Suiza en el alargue y ya pensaba en Inglaterra",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Argentina",
+        "Egipto",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-16T06:23:34.284Z",
+      "lastSeenAt": "2026-07-16T10:13:17.988Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified-strict",
+      "validationReasons": []
     },
     {
       "storyId": "sports-result|argentina|inglaterra|2026-07-16|2-1",
@@ -10831,48 +10790,6 @@
       },
       "newsworthinessScore": 70,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "scientific|aliado|donald|fallecio|graham|historico|lindsey|republicano|2026-07-12",
-      "headlineSeed": "Falleció Lindsey Graham, el histórico senador republicano aliado de Donald Trump",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "OTAN",
-        "Moscu",
-        "Estados Unidos"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-12T17:03:51.699Z",
-      "lastSeenAt": "2026-07-13T14:42:54.146Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -13540,18 +13457,71 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentino|comprar|dolar|entrada|final|hincha|mundo|2026-07-19",
-      "headlineSeed": "Un hincha argentino ofrece un beso por un dólar para comprar la entrada para la final de la Copa del Mundo",
+      "storyId": "general|argentina|espana|partido|2026-07-19",
+      "headlineSeed": "A qué hora es el partido de Argentina vs. España hoy",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Mundo Iñaki Reche",
-        "Espana"
+        "Furia Roja",
+        "Universidad de Buenos Aires",
+        "Buenos Aires",
+        "Argentina",
+        "Egipto",
+        "Uruguay",
+        "Mexico",
+        "Estados Unidos",
+        "Inglaterra",
+        "Francia"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-19T09:55:31.894Z",
-      "lastSeenAt": "2026-07-19T09:55:31.894Z",
+      "firstSeenAt": "2026-07-19T11:12:23.236Z",
+      "lastSeenAt": "2026-07-19T11:12:23.236Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|advertencia|argentina|eligio|favorito|final|kroos|lanzo|2026-07-19",
+      "headlineSeed": "Toni Kroos eligió a su favorito para la final del Mundial y lanzó una dura advertencia para la Selección argentina",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Toni Kroos",
+        "Real Madrid",
+        "Argentina",
+        "Alemania",
+        "Espana",
+        "Cuba"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-19T11:12:23.236Z",
+      "lastSeenAt": "2026-07-19T11:12:23.236Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -13581,20 +13551,26 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|argentino|banderazo|dolar|durante|final|hincha|intercambio|2026-07-19",
-      "headlineSeed": "Un hincha argentino intercambió “un beso por un dólar” durante el banderazo en Times Square para ir a la final del Mundial 2026",
+      "storyId": "general|alineacion|antes|argentina|directo|espana|final|horario|2026-07-19",
+      "headlineSeed": "España - Argentina, final del Mundial 2026, en directo | Horario, alineación y última hora de ‘La Roja’ en Nueva York antes del partido",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Times Square",
+        "Nueva York",
+        "Buenos Aires",
         "Argentina",
-        "Mexico",
-        "Espana"
+        "Ecuador",
+        "Brasil",
+        "Chile",
+        "Uruguay",
+        "Paraguay",
+        "Bolivia",
+        "Peru"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-19T09:55:31.894Z",
-      "lastSeenAt": "2026-07-19T09:55:31.894Z",
+      "firstSeenAt": "2026-07-19T11:12:23.235Z",
+      "lastSeenAt": "2026-07-19T11:12:23.235Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -13607,14 +13583,14 @@
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
       "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 11,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 3,
         "socialPotential": 12,
-        "searchPotential": 7,
+        "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -13624,18 +13600,25 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|capturan|escaparon|gatova|localizan|valencia|vaquillas|2026-07-19",
-      "headlineSeed": "Capturan al toro y localizan a las vaquillas que se escaparon en Gátova (Valencia)",
+      "storyId": "service|arranca|carrera|empieza|entra|fracturado|juego|milei|2026-07-19",
+      "headlineSeed": "La TRASTIENDA del PODER | Tras el MUNDIAL, arranca la carrera 2027: MILEI empieza a rodar, el PERONISMO fracturado y el nuevo outsider entra al juego",
       "topic": "servicios",
       "subtopic": "servicios",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Policía Local",
-        "Espana"
+        "MILEI",
+        "Gobierno",
+        "Buenos Aires",
+        "Argentina",
+        "Brasil",
+        "Chile",
+        "Peru",
+        "Colombia",
+        "Estados Unidos"
       ],
       "eventType": "service",
-      "firstSeenAt": "2026-07-19T09:55:31.893Z",
-      "lastSeenAt": "2026-07-19T09:55:31.893Z",
+      "firstSeenAt": "2026-07-19T11:12:23.235Z",
+      "lastSeenAt": "2026-07-19T11:12:23.235Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -13643,19 +13626,68 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 18,
+      "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 20,
-      "socialPotentialScore": 4,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 15,
       "scoreBreakdown": {
-        "publicInterest": 18,
+        "publicInterest": 21,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 20,
-        "socialPotential": 4,
+        "socialPotential": 7,
         "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|disputa|espana|final|frente|mundial|2026-07-19",
+      "headlineSeed": "Argentina disputa hoy frente a España la final del Mundial",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Lionel Messi",
+        "Lamine Yamal",
+        "MetLife Stadium",
+        "Nueva York",
+        "Secretaría de Defensa Nacional de México",
+        "Gobierno",
+        "Internacional",
+        "Argentina",
+        "Colombia",
+        "Mexico"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-19T11:12:23.234Z",
+      "lastSeenAt": "2026-07-19T11:12:23.234Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4

@@ -1,48 +1,58 @@
 {
-  "generatedAt": "2026-07-19T09:57:50.027Z",
+  "generatedAt": "2026-07-19T11:13:16.433Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29682368394",
-    "headSha": "827cc7653c6de0216bd65f23fb611e1f0ce1b0b3"
+    "runId": "29684638294",
+    "headSha": "950db9f4433b30c677383cd18a7b87cd743036a3"
   },
   "metrics": {
     "sourcesConfigured": 34,
     "sourcesConsulted": 34,
-    "candidatesDetected": 83,
-    "candidatesIngested": 21,
-    "extractionSucceeded": 21,
-    "candidatesApproved": 19,
-    "discardedDuplicate": 0,
-    "duplicateExactUrl": 0,
+    "candidatesDetected": 85,
+    "candidatesIngested": 22,
+    "extractionSucceeded": 22,
+    "candidatesApproved": 15,
+    "discardedDuplicate": 1,
+    "duplicateExactUrl": 1,
     "duplicateExactContent": 0,
     "duplicatePublishedEvent": 0,
-    "discardedQuality": 1,
+    "discardedQuality": 5,
     "discardedQualityByReason": {
-      "stale-hard-news": 1
+      "stale-hard-news": 2,
+      "stale-dated-discovery": 3
     },
     "discardedBySourceAndReason": {
       "nacionales-tn": {
         "stale-hard-news": 1
+      },
+      "nacionales-cronista": {
+        "stale-hard-news": 1
+      },
+      "provincia23": {
+        "stale-dated-discovery": 2
+      },
+      "nacionales-perfil": {
+        "stale-dated-discovery": 1
       }
     },
-    "discardedGenericTitle": 0,
-    "discardedEvergreen": 0,
-    "eventsGrouped": 19,
-    "verified": 14,
+    "discardedGenericTitle": 2,
+    "discardedEvergreen": 3,
+    "eventsGrouped": 14,
+    "verified": 8,
     "pendingVerification": 4,
     "pendingMatchedFromHistory": 2,
     "recentEventRepair": {
       "corrected": 0,
-      "compacted": 0,
-      "conservedPublished": 63
+      "compacted": 1,
+      "conservedPublished": 62
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
-    "pendingRecoveryAttempted": 2,
-    "pendingTerminalizedExpired": 0,
-    "pendingTerminalizedAttempts": 1,
+    "pendingRecoveryAttempted": 3,
+    "pendingTerminalizedExpired": 2,
+    "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
         "eventKey": "sports-result|argentina|francia|2026-07-18|0-2",
@@ -55,80 +65,77 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T12:55:31.892Z",
-        "expiresAt": "2026-07-21T06:34:31.258Z",
+        "nextRetryAt": "2026-07-19T14:12:23.233Z",
+        "expiresAt": "2026-07-21T11:12:23.233Z",
         "corroborationAttempts": 1
       },
       {
-        "eventKey": "service|alcaudete|investigan|muerte|mujer|violenta|2026-07-19",
-        "title": "Investigan la muerte violenta de una mujer de 86 años en Alcaudete (Jaén)",
+        "eventKey": "general|incendio|madrid|norte|quema|2026-07-19",
+        "title": "Un incendio quema 12.000 ha a 100 km al norte de Madrid",
+        "sourceId": "mundo-dw",
+        "publisherDomain": "dw.com",
+        "category": "Mundo",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-19T14:12:23.234Z",
+        "expiresAt": "2026-07-21T11:12:23.234Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "legal-policy|justicia|ministerio fiscal|chile|espana|informa|2026-07-19",
+        "title": "Una niña vive en Chile con su madre, su padre en España y no le pasaba una pensión de alimentos: la Justicia aplica el derecho europeo para obligarle a pagarla",
         "sourceId": "nacionales-infobae",
         "publisherDomain": "infobae.com",
         "category": "Nacionales",
-        "eventType": "service",
+        "eventType": "legal-policy",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T12:55:31.893Z",
-        "expiresAt": "2026-07-21T09:55:31.893Z",
+        "nextRetryAt": "2026-07-19T14:12:23.235Z",
+        "expiresAt": "2026-07-21T11:12:23.235Z",
         "corroborationAttempts": 0
       },
       {
-        "eventKey": "crime|jordania dos|internacional|colombia|estados unidos|informa|2026-07-19",
-        "title": "Informe desde Washington: primeras bajas estadounidenses tras ataque en Jordania",
-        "sourceId": "mundo-france24",
-        "publisherDomain": "france24.com",
-        "category": "Mundo",
-        "eventType": "crime",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T12:55:31.893Z",
-        "expiresAt": "2026-07-21T02:57:35.770Z",
-        "corroborationAttempts": 3
-      },
-      {
-        "eventKey": "service|confirmo|estos|extension|fecha|migrantes|nueva|permisos|2026-07-19",
-        "title": "El Uscis confirmó una extensión para estos permisos de trabajo: la nueva fecha para migrantes con TPS",
+        "eventKey": "general|banda|chino|ciudadano|cocaina|intento|lider|malasia|2026-07-19",
+        "title": "Un ciudadano chino, el líder prófugo de una banda que intentó traficar cocaína a Malasia",
         "sourceId": "nacionales-la-nacion",
         "publisherDomain": "lanacion.com.ar",
         "category": "Nacionales",
-        "eventType": "service",
+        "eventType": "general",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-19T12:55:31.894Z",
-        "expiresAt": "2026-07-21T09:55:31.894Z",
+        "nextRetryAt": "2026-07-19T14:12:23.236Z",
+        "expiresAt": "2026-07-21T11:12:23.236Z",
         "corroborationAttempts": 0
       }
     ],
-    "conflicting": 1,
+    "conflicting": 2,
     "published": 0,
     "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 13,
-      "strict": 1
+      "standard": 8
     },
     "pendingByLane": {
       "standard": 1,
       "strict": 3
     },
     "eventsByTerritory": {
-      "Mundo": 5,
-      "Nacionales": 13,
-      "Malvinas": 1
+      "Nacionales": 12,
+      "Ushuaia": 1,
+      "Mundo": 1
     },
     "verifiedByTerritory": {
-      "Nacionales": 10,
-      "Malvinas": 1,
-      "Mundo": 3
+      "Nacionales": 8
     },
     "fastPendingAudit": [],
-    "freshCandidates": 19,
-    "staleDiscarded": 1,
+    "freshCandidates": 17,
+    "staleDiscarded": 5,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -332,23 +339,23 @@
       },
       "provincia23": {
         "detected": 4,
-        "materialized": 0,
+        "materialized": 2,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "qualityDiscarded": 2,
+        "staleDiscarded": 2,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.5
       },
       "critica-sur": {
         "detected": 4,
@@ -391,26 +398,6 @@
         "staleDiscardRate": 0
       },
       "bing-rio-grande": {
-        "detected": 0,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 1,
-        "noItems": 0,
-        "lastError": "Unquoted attribute value\nLine: 0\nColumn: 42\nChar: h",
-        "status": "unhealthy",
-        "issueCategory": "fetch-error",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-ushuaia": {
         "detected": 4,
         "materialized": 0,
         "freshCandidates": 0,
@@ -422,6 +409,26 @@
         "lastError": "",
         "status": "idle",
         "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-ushuaia": {
+        "detected": 0,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 1,
+        "noItems": 0,
+        "lastError": "Unquoted attribute value\nLine: 0\nColumn: 42\nChar: h",
+        "status": "unhealthy",
+        "issueCategory": "fetch-error",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -451,6 +458,26 @@
         "staleDiscardRate": 0
       },
       "bing-malvinas": {
+        "detected": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-antartida": {
         "detected": 0,
         "materialized": 0,
         "freshCandidates": 0,
@@ -462,26 +489,6 @@
         "lastError": "Unquoted attribute value\nLine: 0\nColumn: 42\nChar: h",
         "status": "unhealthy",
         "issueCategory": "fetch-error",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-antartida": {
-        "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -552,26 +559,6 @@
       },
       "nacionales-infobae": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-perfil": {
-        "detected": 2,
         "materialized": 2,
         "freshCandidates": 2,
         "qualityDiscarded": 0,
@@ -582,13 +569,33 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.5
       },
       "nacionales-la-nacion": {
         "detected": 3,
@@ -633,27 +640,27 @@
       "nacionales-cronista": {
         "detected": 3,
         "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "freshCandidates": 2,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
+        "freshCandidateRate": 0.67,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "nacionales-tn": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 2,
+        "materialized": 4,
+        "freshCandidates": 3,
         "qualityDiscarded": 1,
         "staleDiscarded": 1,
         "consulted": 1,
@@ -664,28 +671,28 @@
         "issueCategory": "",
         "verifiedContribution": 2,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
+        "freshCandidateRate": 0.75,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "verificationContributionRate": 0.5,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
+        "staleDiscardRate": 0.25
       },
       "mundo-google": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 0,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "degraded",
-        "issueCategory": "zero-useful-candidates",
+        "status": "healthy",
+        "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -732,8 +739,8 @@
       },
       "mundo-dw": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -742,30 +749,30 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 3,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-france24": {
         "detected": 3,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -791,17 +798,17 @@
         "staleDiscardRate": 0
       },
       "mundo-bing": {
-        "detected": 0,
+        "detected": 3,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
-        "fetchErrors": 1,
+        "fetchErrors": 0,
         "noItems": 0,
-        "lastError": "Feed not recognized as RSS 1 or 2.",
-        "status": "unhealthy",
-        "issueCategory": "fetch-error",
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -812,18 +819,18 @@
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 0,
-    "modelErrors": 0,
+    "drafts": 2,
+    "modelErrors": 2,
     "publicationErrors": 0,
-    "factualValidationErrors": 5,
-    "discardedImportance": 9,
+    "factualValidationErrors": 1,
+    "discardedImportance": 5,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 1,
+    "failedRetryable": 2,
     "failedTerminal": 0,
     "failedRetryableByReason": {
-      "short-body": 1
+      "rate-limit": 2
     },
     "failedTerminalByReason": {},
     "aiReused": 0,
@@ -832,160 +839,135 @@
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
     "discardedPublicationLimit": 0,
-    "extractErrors": 1,
+    "extractErrors": 0,
     "imageErrors": 0,
-    "aiAttempts": 14,
-    "aiCalls": 14,
-    "articlesDrafted": 9,
+    "aiAttempts": 8,
+    "aiCalls": 6,
+    "articlesDrafted": 5,
     "imagesResolved": 0,
     "approvedForPublication": 0,
     "imageSelections": [],
-    "agendaStories": 1014,
-    "newsworthinessAverage": 65,
+    "agendaStories": 1011,
+    "newsworthinessAverage": 59,
     "newsworthinessTop": [
       {
-        "title": "El Gobierno decretó feriado el 20 de julio en Buenos Aires: de qué trata",
-        "eventKey": "legal-policy|gobierno de|banco provincia|justicia|malvinas|buenos aires|argentina|espana|informa|2026-07-19",
-        "score": 100,
-        "topic": "politica",
-        "territory": "Malvinas",
-        "lane": "standard"
-      },
-      {
-        "title": "Dólar hoy y dólar blue hoy: a cuánto cotiza este domingo 19 de julio",
-        "eventKey": "general|cotiza|cuanto|dolar|domingo|julio|2026-07-19",
-        "score": 84,
-        "topic": "economia",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Luz amarilla en la economía argentina: las dos amenazas que enfrenta la anhelada recuperación",
-        "eventKey": "general|amarilla|amenazas|anhelada|argentina|economia|enfrenta|recuperacion|2026-07-19",
-        "score": 84,
-        "topic": "economia",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Las sedes argentinas para el Mundial 2030, la otra final que podría definir el partido contra España",
-        "eventKey": "sports-result|peru|clausura|cristal|deportivo|garcilaso|2026-07-17|0-0",
-        "score": 83,
+        "title": "Argentina disputa hoy frente a España la final del Mundial",
+        "eventKey": "general|argentina|disputa|espana|final|frente|mundial|2026-07-19",
+        "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
-        "lane": "strict"
+        "lane": "standard"
       },
       {
-        "title": "Capturan al toro y localizan a las vaquillas que se escaparon en Gátova (Valencia)",
-        "eventKey": "service|capturan|escaparon|gatova|localizan|valencia|vaquillas|2026-07-19",
+        "title": "La oficina de IPS que cerrará temporalmente: cuál es y a dónde ir si necesito realizar algún trámite",
+        "eventKey": "service|algun|cerrara|donde|necesito|oficina|realizar|temporalmente|2026-07-19",
         "score": 60,
         "topic": "servicios",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Un hincha argentino ofrece un beso por un dólar para comprar la entrada para la final de la Copa del Mundo",
-        "eventKey": "general|argentino|comprar|dolar|entrada|final|hincha|mundo|2026-07-19",
+        "title": "España - Argentina, final del Mundial 2026, en directo | Horario, alineación y última hora de ‘La Roja’ en Nueva York antes del partido",
+        "eventKey": "general|alineacion|antes|argentina|directo|espana|final|horario|2026-07-19",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Un hincha argentino intercambió “un beso por un dólar” durante el banderazo en Times Square para ir a la final del Mundial 2026",
-        "eventKey": "general|argentino|banderazo|dolar|durante|final|hincha|intercambio|2026-07-19",
+        "title": "La TRASTIENDA del PODER | Tras el MUNDIAL, arranca la carrera 2027: MILEI empieza a rodar, el PERONISMO fracturado y el nuevo outsider entra al juego",
+        "eventKey": "service|arranca|carrera|empieza|entra|fracturado|juego|milei|2026-07-19",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "A qué hora es el partido de Argentina vs. España hoy",
+        "eventKey": "general|argentina|espana|partido|2026-07-19",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Qué santo se recuerda hoy, 19 de julio",
-        "eventKey": "general|julio|recuerda|santo|2026-07-19",
-        "score": 58,
-        "topic": "sociedad",
+        "title": "Toni Kroos eligió a su favorito para la final del Mundial y lanzó una dura advertencia para la Selección argentina",
+        "eventKey": "general|advertencia|argentina|eligio|favorito|final|kroos|lanzo|2026-07-19",
+        "score": 60,
+        "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Insaurralde solicita cerrar el caso en su contra por enriquecimiento ilícito usando como argumento un préstamo de Cirio",
-        "eventKey": "general|argumento|cerrar|cirio|contra|enriquecimiento|ilicito|insaurralde|2026-07-19",
-        "score": 58,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "China pide compensación por nacionalización de British Steel",
-        "eventKey": "territorial-sovereignty|gobierno de|gobierno|ministerio de exteriores|jingye steel|londres|internacional|reino unido|inglaterra|informa|2026-07-19",
+        "title": "En qué canal pasan el GP de Bélgica de la Fórmula 1 2026 hoy",
+        "eventKey": "general|belgica|canal|formula|pasan|2026-07-19",
         "score": 55,
-        "topic": "politica",
-        "territory": "Mundo",
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "🔴 Franco Colapinto en el GP de Bélgica: a qué hora corre y cómo ver la carrera de la F1 en vivo por TV",
+        "eventKey": "general|belgica|carrera|colapinto|corre|franco|2026-07-19",
+        "score": 55,
+        "topic": "sociedad",
+        "territory": "Nacionales",
         "lane": "standard"
       }
     ],
-    "corroborationSearches": 2,
+    "corroborationSearches": 1,
     "corroborationFound": 0,
     "corroborationVerified": 0,
     "corroborationConflicts": 0,
-    "corroborationNoResult": 3,
+    "corroborationNoResult": 1,
     "corroborationAttempts": [
-      {
-        "eventKey": "crime|jordania dos|internacional|colombia|estados unidos|informa|2026-07-19",
-        "title": "Informe desde Washington: primeras bajas estadounidenses tras ataque en Jordania",
-        "priorityRank": 1,
-        "corroborationQuery": "Jordania Dos Colombia Estados Unidos Inglaterra Francia ataque bajas estadounidenses informe jordania primeras",
-        "corroborationReason": "newsworthiness=92; freshness=3h; territory=Mundo; impact=12; corroborability=10; pendingAge=7h; attempts=2",
-        "found": 0,
-        "verified": false,
-        "status": "fetch-error"
-      },
       {
         "eventKey": "sports-result|argentina|francia|2026-07-18|0-2",
         "title": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
-        "priorityRank": 4,
+        "priorityRank": 1,
         "corroborationQuery": "Lionel Scaloni Argentina Egipto Inglaterra Francia resultado batallas lionel madre parte scaloni todas",
-        "corroborationReason": "newsworthiness=84; freshness=3h; territory=Mundo; impact=6; corroborability=10; pendingAge=3h; attempts=0",
+        "corroborationReason": "newsworthiness=86; freshness=13h; territory=Nacionales; impact=6; corroborability=10; pendingAge=13h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "dates": 2,
-      "scores": 1
+      "dates": 3,
+      "percentages": 1,
+      "scores": 3
     },
-    "criticalConflicts": 2,
+    "criticalConflicts": 6,
     "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 25,
+    "resolvedComplementaryFacts": 11,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 63,
-        "avg": 141,
+        "count": 62,
+        "avg": 132.2,
         "p50": 0,
         "max": 2121.5
       },
       "verificationToPublicationMinutes": {
-        "count": 63,
-        "avg": 59,
+        "count": 62,
+        "avg": 60,
         "p50": 0.4,
         "max": 622.9
       },
       "discoveryToPublicationMinutes": {
-        "count": 63,
-        "avg": 200,
+        "count": 62,
+        "avg": 192.2,
         "p50": 0.6,
         "max": 2121.9
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 812,
-        "avg": 61.1,
+        "count": 810,
+        "avg": 60.4,
         "p50": 0,
         "max": 2737.6
       },
       "cohort": {
-        "comparablePublishedCount": 63,
-        "verifiedWithoutPublicationCount": 749,
+        "comparablePublishedCount": 62,
+        "verifiedWithoutPublicationCount": 748,
         "publicationWithoutVerifiedAtCount": 0,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
@@ -996,7 +978,7 @@
     "publishedLast6hBeforeRun": 0,
     "publishedLast12hBeforeRun": 1,
     "publishedLast24hBeforeRun": 2,
-    "hoursSinceLastPublicationBeforeRun": 7,
+    "hoursSinceLastPublicationBeforeRun": 8.2,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -1007,6 +989,25 @@
       "effectiveRunMaxNormal": 4
     },
     "agendaTop": [
+      {
+        "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "legal-policy|gobierno de|banco provincia|justicia|malvinas|buenos aires|argentina|espana|informa|2026-07-19",
         "headlineSeed": "El Gobierno decretó feriado el 20 de julio en Buenos Aires: de qué trata",
@@ -1022,25 +1023,6 @@
           "socialPotential": 4,
           "searchPotential": 8,
           "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "weather-forecast|2026-07-19|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 19 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1109,18 +1091,18 @@
     "sourceHealthSummary": {
       "configured": 34,
       "consulted": 34,
-      "healthy": 27,
+      "healthy": 28,
       "productive": 9,
       "noResults": 3,
-      "failed": 4
+      "failed": 3
     }
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 14,
-    "discoveryAiBudget": 14,
+    "discoveryAiUsed": 8,
+    "discoveryAiBudget": 8,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1134,14 +1116,16 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 2,
-    "candidatesMaterialized": 21,
-    "totalCandidatesBeforeLimit": 21
+    "candidatesMaterialized": 22,
+    "totalCandidatesBeforeLimit": 22
   },
   "reasonNoMorePublished": [
     "4 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "1 candidato(s) descartados por causas especificas (stale-hard-news: 1)",
-    "9 candidato(s) descartados por importancia editorial",
-    "5 candidato(s) bloqueados por validacion factual"
+    "2 evento(s) tuvieron conflicto factual",
+    "1 candidato(s) descartados por duplicado/similitud",
+    "5 candidato(s) descartados por causas especificas (stale-hard-news: 2, stale-dated-discovery: 3)",
+    "5 candidato(s) descartados por importancia editorial",
+    "1 candidato(s) bloqueados por validacion factual",
+    "2 error(es) reales de modelo"
   ]
 }
