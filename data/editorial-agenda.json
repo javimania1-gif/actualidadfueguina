@@ -1,46 +1,46 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-20T10:59:10.513Z",
+  "generatedAt": "2026-07-20T14:16:09.056Z",
   "summary": {
-    "totalStories": 1013,
+    "totalStories": 1020,
     "byStatus": {
-      "conflicting-sources": 42,
-      "verified-standard-single-source": 682,
-      "agenda-invalid": 33,
-      "published": 53,
+      "conflicting-sources": 41,
+      "verified-standard-single-source": 685,
+      "agenda-invalid": 36,
+      "published": 54,
       "verified-tier-a": 1,
       "verified-fast-lane": 6,
       "rejected-terminal": 104,
-      "pending-verification": 44,
+      "pending-verification": 46,
       "verified-local-routine": 5,
-      "verified-strict": 33,
+      "verified-strict": 32,
       "verified-standard": 10
     },
     "byTopic": {
       "servicios": 161,
-      "politica": 121,
-      "deportes": 237,
+      "politica": 126,
+      "deportes": 243,
       "agenda": 10,
       "turismo": 11,
-      "policiales": 39,
+      "policiales": 37,
+      "sociedad": 349,
       "economia": 59,
-      "sociedad": 350,
       "educacion": 21,
-      "salud": 2,
-      "cultura": 2
+      "cultura": 2,
+      "salud": 1
     },
     "byTerritory": {
       "Ushuaia": 32,
+      "Provincia": 17,
       "Mundo": 529,
       "Malvinas": 74,
       "Rio Grande": 21,
-      "Nacionales": 265,
+      "Nacionales": 269,
       "Antartida": 10,
-      "Provincia": 16,
-      "unknown": 64,
+      "unknown": 66,
       "Tolhuin": 2
     },
-    "invalidStories": 33,
+    "invalidStories": 36,
     "topStories": [
       {
         "storyId": "weather-forecast|2026-07-20|tierra-del-fuego",
@@ -56,9 +56,28 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 15,
           "sourceStrength": 3,
           "diversity": 4
+        }
+      },
+      {
+        "storyId": "legislative|victoria villarruel|martin menem|tierra del fuego aias|informa|2026-07-20",
+        "headlineSeed": "Los senadores pasarán a cobrar 12 millones de pesos por mes - Actualidad TDF",
+        "topic": "politica",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "verified-standard-single-source",
+        "scoreBreakdown": {
+          "publicInterest": 23,
+          "localRelevance": 22,
+          "impactMagnitude": 20,
+          "serviceValue": 3,
+          "socialPotential": 7,
+          "searchPotential": 8,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
         }
       },
       {
@@ -212,25 +231,6 @@
           "sourceStrength": 8,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|celebraron|cierre|estudiantiles|juventudes|olimpiadas|riograndenses|rio grande|2026-07-14",
-        "headlineSeed": "Juventudes riograndenses celebraron el gran cierre de las Olimpiadas Estudiantiles 2026",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "published",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 1,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
       }
     ]
   },
@@ -247,14 +247,14 @@
       ],
       "eventType": "weather-forecast",
       "firstSeenAt": "2026-07-19T22:58:57.165Z",
-      "lastSeenAt": "2026-07-20T03:27:51.814Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
+      "lastSeenAt": "2026-07-20T14:13:22.224Z",
+      "sourceCount": 4,
+      "independentPublisherCount": 4,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "breaking",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -268,12 +268,54 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 100,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legislative|victoria villarruel|martin menem|tierra del fuego aias|informa|2026-07-20",
+      "headlineSeed": "Los senadores pasarán a cobrar 12 millones de pesos por mes - Actualidad TDF",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Victoria Villarruel",
+        "Martín Menem",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-20T14:13:22.224Z",
+      "lastSeenAt": "2026-07-20T14:13:22.224Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 22,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -736,6 +778,53 @@
       },
       "newsworthinessScore": 100,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|gobierno|banco central|ministerio de economia|milei|uruguay|informa|2026-07-20",
+      "headlineSeed": "Provincias: tras dos meses sin envíos, el Gobierno reactivó los ATN para cinco gobernadores en julio",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Gobierno",
+        "Banco Central",
+        "Ministerio de Economía",
+        "Gobierno Nacional",
+        "Secretaría de Agricultura",
+        "Gobierno y la CGT",
+        "Uruguay"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-20T14:13:22.224Z",
+      "lastSeenAt": "2026-07-20T14:13:22.224Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 99,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -1763,6 +1852,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "legislative|camara|camara de diputados|informa|2026-07-20",
+      "headlineSeed": "Nuevo aumento en el Congreso: los senadores cobrarán casi $12 millones brutos desde agosto",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Cámara",
+        "Cámara de Diputados"
+      ],
+      "eventType": "legislative",
+      "firstSeenAt": "2026-07-20T14:13:22.227Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "casualty|secretaria de emergencias y gestion de|policia de la|policia y la justicia|argentina|espana|informa|2026-07-20",
       "headlineSeed": "Una persona murió en Neuquén por el estallido de una bomba de estruendo durante los festejos por la Selección",
       "topic": "deportes",
@@ -1845,53 +1975,6 @@
       },
       "newsworthinessScore": 93,
       "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|peru|cristal|femenina|final|minuto|2026-07-17|2-1",
-      "headlineSeed": "Universitario 2-1 Sporting Cristal EN VIVO HOY: minuto a minuto del partido por final vuelta de Liga Femenina 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Liga Femenina",
-        "Ministerio Público",
-        "Peru",
-        "Malvinas",
-        "Argentina",
-        "Uruguay",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-18T02:43:49.666Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
-      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -1982,6 +2065,53 @@
       },
       "newsworthinessScore": 93,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|gobierno|buenos aires|argentina|brasil|informa|2026-07-20",
+      "headlineSeed": "“En la diferencia entre la devaluación e inflación debería haber una manera de ser más competitivos”, dice el CEO de Nestlé",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "Buenos Aires",
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Paraguay",
+        "Estados Unidos",
+        "Suiza"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-20T14:13:22.227Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2378,6 +2508,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|masoud pezeshkian|internacional|estados unidos|anuncia|2026-07-20",
+      "headlineSeed": "En directo: Irán declara una “guerra total” con EE. UU.; hutíes de Yemen anuncian bloqueo naval a Arabia Saudita",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Masoud Pezeshkian",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-20T14:13:22.226Z",
+      "lastSeenAt": "2026-07-20T14:13:22.226Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
       "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
       "topic": "turismo",
@@ -2469,47 +2641,6 @@
       },
       "newsworthinessScore": 91,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|internacional|estados unidos|denuncia|2026-07-19",
-      "headlineSeed": "En directo: Irán denuncia un ataque de EE. UU. contra la central nuclear en construcción de Darkhovin",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-19T15:00:35.866Z",
-      "lastSeenAt": "2026-07-19T15:00:35.866Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 22,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 22,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2615,7 +2746,7 @@
     },
     {
       "storyId": "sports-result|argentina|espana|2026-07-20|1-0",
-      "headlineSeed": "La prensa alaba la victoria de España en el Mundial",
+      "headlineSeed": "Scaloni, hasta cuando se equivoca, genera admiración: es un DT que (también) decide con el corazón",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
@@ -2653,49 +2784,6 @@
       },
       "newsworthinessScore": 89,
       "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|espana|2026-07-20|1 - 0",
-      "headlineSeed": "¡España campeón!: los hinchas reaccionan al resultado de la final del Mundial 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Espana",
-        "Internacional",
-        "Mexico"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-20T03:27:51.815Z",
-      "lastSeenAt": "2026-07-20T03:27:51.815Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2789,6 +2877,100 @@
       "sourceStatus": "verified-standard-single-source",
       "validationReasons": [
         "topic-event-mismatch"
+      ]
+    },
+    {
+      "storyId": "sports-result|peru|cristal|femenina|final|minuto|2026-07-17|2-1",
+      "headlineSeed": "Universitario 2-1 Sporting Cristal EN VIVO HOY: minuto a minuto del partido por final vuelta de Liga Femenina 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Liga Femenina",
+        "Ministerio Público",
+        "Peru",
+        "Malvinas",
+        "Argentina",
+        "Uruguay",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-18T02:43:49.666Z",
+      "lastSeenAt": "2026-07-18T02:43:49.666Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "casualty|policia|policia de corrientes|justicia|jose maria soto|informa|2026-07-20",
+      "headlineSeed": "Tragedia en Corrientes: un hombre de 56 años murió apuñalado tras una pelea en la vía pública",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "unknown",
+      "primaryEntities": [
+        "José María Soto",
+        "Policía",
+        "Policía de Corrientes",
+        "Justicia",
+        "Justicia De Corrientes"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-20T14:13:22.227Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 4,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
       ]
     },
     {
@@ -2976,22 +3158,18 @@
       ]
     },
     {
-      "storyId": "general|arrancar|circulo|economia|mundial|sectores|segun|tienen|2026-07-20",
-      "headlineSeed": "La economía post Mundial: qué sectores tienen que arrancar, según el círculo rojo",
+      "storyId": "general|cordoba|cotiza|cuanto|dolar|julio|lunes|2026-07-20",
+      "headlineSeed": "El dólar en Córdoba: a cuánto cotiza este lunes 20 de julio",
       "topic": "economia",
       "subtopic": "economia",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Gobierno",
-        "Gobierno de",
-        "Gobierno y",
-        "Banco Provincia la",
-        "Buenos Aires",
-        "Inglaterra"
+        "Banco Nación",
+        "Gobierno"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-20T10:57:01.046Z",
-      "lastSeenAt": "2026-07-20T10:57:01.046Z",
+      "firstSeenAt": "2026-07-20T14:13:22.227Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -3062,6 +3240,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|cuando|declaracion|extienden|ganancias|hasta|impuesto|jurada|2026-07-20",
+      "headlineSeed": "ARCA volvió a prorrogar el Impuesto a las Ganancias: extienden el plazo para presentar la declaración jurada: hasta cuándo y cómo presentarla",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "unknown",
+      "primaryEntities": [
+        "Resolución General",
+        "Gobierno",
+        "Banco Central"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-20T10:57:01.043Z",
+      "lastSeenAt": "2026-07-20T10:57:01.043Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 4,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "territory-conflict"
+      ]
+    },
+    {
       "storyId": "casualty|medio oriente estados unidos|internacional|colombia|estados unidos|informa|2026-07-19",
       "headlineSeed": "Estados Unidos vuelve a bombardear Irán y recrudece la tensión en Medio Oriente",
       "topic": "sociedad",
@@ -3106,48 +3329,44 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|economia|gobierno|mundial|nueva|provincias|reformas|relacion|2026-07-19",
-      "headlineSeed": "El Gobierno y el post Mundial: economía, reformas y nueva relación con las provincias",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
+      "storyId": "international-conflict|internacional|estados unidos|denuncia|2026-07-19",
+      "headlineSeed": "En directo: Irán denuncia un ataque de EE. UU. contra la central nuclear en construcción de Darkhovin",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Milei",
-        "Gobierno y",
-        "Gobierno",
-        "El Gobierno",
-        "Casa de Gobierno",
-        "Argentina"
+        "Internacional",
+        "Estados Unidos"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T02:57:35.770Z",
-      "lastSeenAt": "2026-07-19T02:57:35.770Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-19T15:00:35.866Z",
+      "lastSeenAt": "2026-07-19T15:00:35.866Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
+      "editorialLane": "strict",
       "freshness": "recent-hard-news",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
+      "publicInterestScore": 22,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
+        "publicInterest": 22,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 7,
+        "socialPotential": 4,
         "searchPotential": 10,
         "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 87,
-      "status": "verified-standard-single-source",
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -3196,24 +3415,22 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|espana|2026-07-20|0-0",
-      "headlineSeed": "Empujones, cruces y golpes entre jugadores de España y la Argentina después de la final del Mundial",
+      "storyId": "sports-result|argentina|espana|2026-07-20|1 - 0",
+      "headlineSeed": "Así reacciona la prensa internacional al título de España en el Mundial 2026",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
         "Internacional",
         "Argentina",
-        "Estados Unidos",
-        "Espana",
-        "Cuba",
-        "Mexico"
+        "Mexico",
+        "Espana"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-20T06:51:51.802Z",
-      "lastSeenAt": "2026-07-20T10:57:01.044Z",
-      "sourceCount": 6,
-      "independentPublisherCount": 5,
+      "firstSeenAt": "2026-07-20T03:27:51.815Z",
+      "lastSeenAt": "2026-07-20T14:13:22.228Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
@@ -3241,48 +3458,48 @@
       "validationReasons": []
     },
     {
-      "storyId": "crime|jordania dos|internacional|colombia|estados unidos|informa|2026-07-19",
-      "headlineSeed": "Informe desde Washington: primeras bajas estadounidenses tras ataque en Jordania",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Mundo",
+      "storyId": "sports-result|argentina|espana|2026-07-20|0-0",
+      "headlineSeed": "Análisis de la BBC: por qué el triunfo de España frente a Argentina fue una victoria para el fútbol - BBC News Mundo",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Jordania Dos",
         "Internacional",
-        "Colombia",
+        "Argentina",
         "Estados Unidos",
-        "Inglaterra",
-        "Francia"
+        "Espana",
+        "Cuba",
+        "Mexico"
       ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-19T02:57:35.770Z",
-      "lastSeenAt": "2026-07-19T13:24:31.716Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-20T06:51:51.802Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
+      "sourceCount": 6,
+      "independentPublisherCount": 5,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
+      "socialPotentialScore": 9,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 7,
+        "socialPotential": 9,
         "searchPotential": 10,
-        "recency": 9,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 86,
-      "status": "rejected-terminal",
+      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -4190,6 +4407,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|economia|gobierno|mundial|nueva|provincias|reformas|relacion|2026-07-19",
+      "headlineSeed": "El Gobierno y el post Mundial: economía, reformas y nueva relación con las provincias",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Gobierno y",
+        "Gobierno",
+        "El Gobierno",
+        "Casa de Gobierno",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-19T02:57:35.770Z",
+      "lastSeenAt": "2026-07-19T02:57:35.770Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|ministerio de electricidad|internacional|estados unidos|informa|2026-07-17",
       "headlineSeed": "En directo: Kuwait reporta varios soldados heridos tras ataque iraní, mientras escala la tensión Washington-Teherán",
       "topic": "politica",
@@ -4371,91 +4633,92 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|cuotas|factores|interes|invierno|marcan|mundial|ritmo|ushuaia|tierra del fuego aias|2026-07-20",
-      "headlineSeed": "Del Mundial a las cuotas sin interés: los factores que marcan el ritmo del turismo en las vacaciones de invierno",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Ushuaia",
+      "storyId": "casualty|policia nacional|espana|investiga|2026-07-20",
+      "headlineSeed": "Investigan la muerte a puñaladas de una mujer en una vivienda de Antequera (Málaga)",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "unknown",
       "primaryEntities": [
-        "Ministerio de Turismo y Deportes",
-        "Ushuaia",
-        "Buenos Aires",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Brasil",
-        "Chile",
-        "Estados Unidos"
+        "Policía Nacional",
+        "Espana"
       ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-20T06:51:51.800Z",
-      "lastSeenAt": "2026-07-20T06:51:51.800Z",
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-20T14:13:22.225Z",
+      "lastSeenAt": "2026-07-20T14:13:22.225Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
+      "editorialLane": "strict",
       "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 21,
       "serviceValueScore": 3,
-      "socialPotentialScore": 13,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 21,
         "serviceValue": 3,
-        "socialPotential": 13,
+        "socialPotential": 4,
         "searchPotential": 8,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 82,
-      "status": "published",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "pending-verification",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
-      "storyId": "international-conflict|medio oriente|guardia revolucionaria|internacional|estados unidos|informa|2026-07-19",
-      "headlineSeed": "Conflicto en Medio Oriente: Estados Unidos bombardeó instalaciones de la Guardia Revolucionaria de Irán",
-      "topic": "politica",
-      "subtopic": "politica",
+      "storyId": "crime|jordania dos|internacional|colombia|estados unidos|informa|2026-07-19",
+      "headlineSeed": "Informe desde Washington: primeras bajas estadounidenses tras ataque en Jordania",
+      "topic": "policiales",
+      "subtopic": "policiales",
       "territory": "Mundo",
       "primaryEntities": [
-        "Medio Oriente",
-        "Estados Unidos"
+        "Jordania Dos",
+        "Internacional",
+        "Colombia",
+        "Estados Unidos",
+        "Inglaterra",
+        "Francia"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-19T13:24:31.716Z",
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-19T02:57:35.770Z",
       "lastSeenAt": "2026-07-19T13:24:31.716Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 17,
+        "publicInterest": 20,
         "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 12,
+        "searchPotential": 10,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 82,
-      "status": "conflicting-sources",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -4783,48 +5046,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|universidad de harvard|internacional|estados unidos|informa|2026-07-17",
-      "headlineSeed": "Una obsesión con Trump que tiene un costo para la democracia",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Universidad de Harvard",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-17T15:18:18.895Z",
-      "lastSeenAt": "2026-07-17T15:18:18.895Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|ascension|escapada|estas|invierno|rompehielos|vacaciones|tierra del fuego aias|2026-07-14",
       "headlineSeed": "La Ascensión: una escapada para estas vacaciones de invierno - El Rompehielos",
       "topic": "turismo",
@@ -4905,51 +5126,6 @@
       },
       "newsworthinessScore": 82,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|acceso|cancer|desigualdad|juega|tambien|tratamiento|tierra del fuego|2026-07-14",
-      "headlineSeed": "Cáncer. La desigualdad también se juega en el acceso al tratamiento",
-      "topic": "salud",
-      "subtopic": "salud",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Ministerio de Salud de la Nación",
-        "Ministerio de Salud",
-        "Gobierno de",
-        "Tierra del Fuego",
-        "Buenos Aires",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T04:21:20.999Z",
-      "lastSeenAt": "2026-07-14T04:21:20.999Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 82,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -5433,6 +5609,94 @@
       },
       "newsworthinessScore": 80,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|cuotas|factores|interes|invierno|marcan|mundial|ritmo|ushuaia|tierra del fuego aias|2026-07-20",
+      "headlineSeed": "Del Mundial a las cuotas sin interés: los factores que marcan el ritmo del turismo en las vacaciones de invierno",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Ministerio de Turismo y Deportes",
+        "Ushuaia",
+        "Buenos Aires",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Brasil",
+        "Chile",
+        "Estados Unidos"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-20T06:51:51.800Z",
+      "lastSeenAt": "2026-07-20T06:51:51.800Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 13,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|medio oriente|guardia revolucionaria|internacional|estados unidos|informa|2026-07-19",
+      "headlineSeed": "Conflicto en Medio Oriente: Estados Unidos bombardeó instalaciones de la Guardia Revolucionaria de Irán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Medio Oriente",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-19T13:24:31.716Z",
+      "lastSeenAt": "2026-07-19T13:24:31.716Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -5954,46 +6218,45 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|onu|ministerio de salud|mientras iran|naciones unidas|internacional|estados unidos|denuncia|2026-07-17",
-      "headlineSeed": "Irán denuncia ante la ONU \"crímenes de guerra\" de EE.UU.",
+      "storyId": "election|universidad de harvard|internacional|estados unidos|informa|2026-07-17",
+      "headlineSeed": "Una obsesión con Trump que tiene un costo para la democracia",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Naciones Unidas",
-        "ONU",
-        "Ministerio de Salud",
+        "Universidad de Harvard",
+        "Internacional",
         "Estados Unidos"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-17T13:46:08.735Z",
-      "lastSeenAt": "2026-07-17T13:46:08.735Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
+      "eventType": "election",
+      "firstSeenAt": "2026-07-17T15:18:18.895Z",
+      "lastSeenAt": "2026-07-17T15:18:18.895Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 23,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 17,
+        "publicInterest": 23,
         "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 4,
         "searchPotential": 10,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 78,
-      "status": "verified-strict",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -6375,52 +6638,6 @@
         "serviceValue": 3,
         "socialPotential": 4,
         "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|espacio|estabilidad|glaciar|historica|moreno|perdio|perito|antartida|tierra del fuego aias|2026-07-17",
-      "headlineSeed": "El glaciar Perito Moreno perdió su histórica estabilidad y su retroceso ya se ve desde el espacio",
-      "topic": "educacion",
-      "subtopic": "educacion",
-      "territory": "Antartida",
-      "primaryEntities": [
-        "Perito Moreno",
-        "Universidad de Concepción",
-        "Universidad de Concepción y",
-        "Antartida",
-        "Tierra del Fuego AIAS",
-        "Argentina",
-        "Chile"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-17T15:18:18.896Z",
-      "lastSeenAt": "2026-07-17T19:15:49.088Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 7,
-        "searchPotential": 13,
         "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
@@ -7379,48 +7596,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|alerto|aumento|creditos|hernan|letcher|pagar|puede|2026-07-14",
-      "headlineSeed": "\"El 25% no puede pagar sus créditos\", alertó Hernán Letcher en \"QR!\" sobre el aumento de la mora",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Hernán Letcher",
-        "Gobierno",
-        "Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T04:21:20.999Z",
-      "lastSeenAt": "2026-07-14T04:21:20.999Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 76,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|capturan|escaparon|gatova|localizan|valencia|vaquillas|2026-07-19",
       "headlineSeed": "Capturan al toro y localizan a las vaquillas que se escaparon en Gátova (Valencia)",
       "topic": "servicios",
@@ -7549,52 +7724,6 @@
       "newsworthinessScore": 75,
       "status": "rejected-terminal",
       "validationReasons": []
-    },
-    {
-      "storyId": "casualty|gobierno|mercedes gonzalez|santos cerdan|leire diez mercedes gonzalez|espana|informa|2026-07-17",
-      "headlineSeed": "Mercedes González afirma ser víctima de Santos Cerdán y de la trama de Leire Díez",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "unknown",
-      "primaryEntities": [
-        "Mercedes González",
-        "Santos Cerdán",
-        "Gobierno",
-        "Espana"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-17T11:38:31.727Z",
-      "lastSeenAt": "2026-07-17T11:38:31.727Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 4,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 4,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 75,
-      "status": "agenda-invalid",
-      "sourceStatus": "published",
-      "validationReasons": [
-        "territory-conflict"
-      ]
     },
     {
       "storyId": "legal-policy|justicia|justicia de la union europea|justicia de espana|pedro sanchez|carles puigdemont|internacional|espana|belgica|informa|2026-07-16",
@@ -8047,55 +8176,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|acompanarnos|agradecio|apoyo|argentinos|gracias|siempre|rio grande|ushuaia|2026-07-20",
-      "headlineSeed": "La AFA agradeció el apoyo de los argentinos: \"Gracias por acompañarnos siempre\"",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Policia",
-        "Rio Grande",
-        "Ushuaia",
-        "Tolhuin",
-        "Tierra del Fuego",
-        "Argentina",
-        "Colombia",
-        "Estados Unidos",
-        "Inglaterra",
-        "Francia"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T06:51:51.799Z",
-      "lastSeenAt": "2026-07-20T06:51:51.799Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 8,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|lionel scaloni|argentina|egipto|informa|2026-07-18",
       "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
       "topic": "deportes",
@@ -8224,6 +8304,49 @@
       },
       "newsworthinessScore": 74,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|onu|ministerio de salud|mientras iran|naciones unidas|internacional|estados unidos|denuncia|2026-07-17",
+      "headlineSeed": "Irán denuncia ante la ONU \"crímenes de guerra\" de EE.UU.",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Naciones Unidas",
+        "ONU",
+        "Ministerio de Salud",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-17T13:46:08.735Z",
+      "lastSeenAt": "2026-07-17T13:46:08.735Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -8638,6 +8761,52 @@
       },
       "newsworthinessScore": 73,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|espacio|estabilidad|glaciar|historica|moreno|perdio|perito|antartida|tierra del fuego aias|2026-07-17",
+      "headlineSeed": "El glaciar Perito Moreno perdió su histórica estabilidad y su retroceso ya se ve desde el espacio",
+      "topic": "educacion",
+      "subtopic": "educacion",
+      "territory": "Antartida",
+      "primaryEntities": [
+        "Perito Moreno",
+        "Universidad de Concepción",
+        "Universidad de Concepción y",
+        "Antartida",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Chile"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-17T15:18:18.896Z",
+      "lastSeenAt": "2026-07-17T19:15:49.088Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -9251,6 +9420,100 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|argentina|messi|regresa|seleccion|tierra del fuego aias|2026-07-20",
+      "headlineSeed": "La Selección argentina regresa al país, pero sin Messi - Actualidad TDF",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Lionel Messi",
+        "Policía de Seguridad Aeroportuaria",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Estados Unidos",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T14:13:22.224Z",
+      "lastSeenAt": "2026-07-20T14:13:22.224Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|acompanarnos|agradecio|apoyo|argentinos|gracias|siempre|rio grande|ushuaia|2026-07-20",
+      "headlineSeed": "La AFA agradeció el apoyo de los argentinos: \"Gracias por acompañarnos siempre\"",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Policia",
+        "Rio Grande",
+        "Ushuaia",
+        "Tolhuin",
+        "Tierra del Fuego",
+        "Argentina",
+        "Colombia",
+        "Estados Unidos",
+        "Inglaterra",
+        "Francia"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T06:51:51.799Z",
+      "lastSeenAt": "2026-07-20T06:51:51.799Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 8,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 71,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|espana|informa|2026-07-18",
       "headlineSeed": "Los candidatos del PP en las capitales de provincia confiesan su apetencia de elecciones",
       "topic": "politica",
@@ -9288,7 +9551,7 @@
       },
       "newsworthinessScore": 71,
       "status": "agenda-invalid",
-      "sourceStatus": "pending-verification",
+      "sourceStatus": "rejected-terminal",
       "validationReasons": [
         "territory-conflict"
       ]
@@ -9340,47 +9603,50 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|argentina|avanzo|final|golazos|2026-07-17|2-0",
-      "headlineSeed": "Boca le ganó a Sarmiento con dos golazos y avanzó a octavos de final de la Copa Argentina",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
+      "storyId": "casualty|gobierno|mercedes gonzalez|santos cerdan|leire diez mercedes gonzalez|espana|informa|2026-07-17",
+      "headlineSeed": "Mercedes González afirma ser víctima de Santos Cerdán y de la trama de Leire Díez",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "unknown",
       "primaryEntities": [
-        "Argentina",
-        "Brasil",
-        "Uruguay",
+        "Mercedes González",
+        "Santos Cerdán",
+        "Gobierno",
         "Espana"
       ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-17T02:51:30.216Z",
-      "lastSeenAt": "2026-07-17T13:46:08.734Z",
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-17T11:38:31.727Z",
+      "lastSeenAt": "2026-07-17T11:38:31.727Z",
       "sourceCount": 2,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 4,
+      "impactMagnitudeScore": 21,
       "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
+        "publicInterest": 20,
+        "localRelevance": 4,
+        "impactMagnitude": 21,
         "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 5,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 71,
-      "status": "conflicting-sources",
-      "validationReasons": []
+      "status": "agenda-invalid",
+      "sourceStatus": "published",
+      "validationReasons": [
+        "territory-conflict"
+      ]
     },
     {
       "storyId": "international-conflict|panorama internacional|donald trump|golfo estados unidos|internacional|brasil|estados unidos|informa|2026-07-17",
@@ -10148,54 +10414,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|universidad estatal de carolina de|malvinas|kansas|argentina|estados unidos|informa|2026-07-17",
-      "headlineSeed": "La FIFA podría embolsar u$s9.000 millones con el Mundial 2026, pero EEUU no logró el “boom” turístico esperado",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Universidad Estatal de Carolina de",
-        "Malvinas",
-        "Kansas",
-        "Argentina",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-17T13:46:08.735Z",
-      "lastSeenAt": "2026-07-17T13:46:08.735Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 69,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|rey carlos|principe william|internacional|argentina|reino unido|informa|2026-07-15",
       "headlineSeed": "\"Devastados\": la reacción del Rey Carlos, el Príncipe William y el primer ministro inglés tras quedar afuera de la final",
       "topic": "deportes",
@@ -10823,6 +11041,49 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|argentina|argentina|avanzo|final|golazos|2026-07-17|2-0",
+      "headlineSeed": "Boca le ganó a Sarmiento con dos golazos y avanzó a octavos de final de la Copa Argentina",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-17T02:51:30.216Z",
+      "lastSeenAt": "2026-07-17T13:46:08.734Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|final|milei|mirara|mundial|olivos|quinta|viajara|ushuaia|tierra del fuego|2026-07-16",
       "headlineSeed": "Milei no viajará a la final del Mundial y lo mirará desde la Quinta de Olivos",
       "topic": "deportes",
@@ -11364,6 +11625,54 @@
       "validationReasons": []
     },
     {
+      "storyId": "territorial-sovereignty|universidad estatal de carolina de|malvinas|kansas|argentina|estados unidos|informa|2026-07-17",
+      "headlineSeed": "La FIFA podría embolsar u$s9.000 millones con el Mundial 2026, pero EEUU no logró el “boom” turístico esperado",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Universidad Estatal de Carolina de",
+        "Malvinas",
+        "Kansas",
+        "Argentina",
+        "Estados Unidos",
+        "Reino Unido",
+        "Inglaterra",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-17T13:46:08.735Z",
+      "lastSeenAt": "2026-07-17T13:46:08.735Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 65,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "defense|leo werthein|tyc sports|antartida|antartida argentina|argentina|ecuador|informa|2026-07-16",
       "headlineSeed": "Conectando los confines de la Argentina: la final del Mundial se vivirá desde la Antártida hasta la Puna jujeña - TyC Sports",
       "topic": "politica",
@@ -11581,54 +11890,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|desbordes|mundial|pleno|preocupacion|programados|sospechosos|viajes|malvinas|2026-07-19",
-      "headlineSeed": "Preocupación por los desbordes y sospechosos viajes programados en pleno Mundial",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Gobierno",
-        "Gobierno y",
-        "Cámara Alta",
-        "Secretaría General",
-        "Malvinas",
-        "Estados Unidos",
-        "Inglaterra",
-        "Italia",
-        "Cuba"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T13:24:31.716Z",
-      "lastSeenAt": "2026-07-19T13:24:31.716Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 64,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "sports-result|racing|carretera|fritzler|historia|mercedes|2026-07-12",
       "headlineSeed": "Otto Fritzler hizo historia en Posadas y le dio a Mercedes-Benz su primer triunfo en el Turismo Carretera",
       "topic": "deportes",
@@ -11752,96 +12013,6 @@
         "socialPotential": 4,
         "searchPotential": 13,
         "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 63,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|definio|espana|final|lunes|martes|partidos|malvinas|2026-07-18",
-      "headlineSeed": "La AFA definió qué pasará con los partidos del lunes y martes por la final entre la Selección argentina y España",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-18T22:55:08.519Z",
-      "lastSeenAt": "2026-07-19T02:57:35.768Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 0,
-        "socialPotential": 9,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 63,
-      "status": "verified-standard",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|cierne|final|incendios|mundial|malvinas|2026-07-17",
-      "headlineSeed": "Humo de incendios se cierne sobre la final del Mundial 2026",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Nueva Jersey",
-        "Malvinas",
-        "Internacional",
-        "Argentina",
-        "Estados Unidos",
-        "Inglaterra",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-17T13:46:08.735Z",
-      "lastSeenAt": "2026-07-17T13:46:08.735Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -12401,6 +12572,54 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|desbordes|mundial|pleno|preocupacion|programados|sospechosos|viajes|malvinas|2026-07-19",
+      "headlineSeed": "Preocupación por los desbordes y sospechosos viajes programados en pleno Mundial",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Gobierno",
+        "Gobierno y",
+        "Cámara Alta",
+        "Secretaría General",
+        "Malvinas",
+        "Estados Unidos",
+        "Inglaterra",
+        "Italia",
+        "Cuba"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-19T13:24:31.716Z",
+      "lastSeenAt": "2026-07-19T13:24:31.716Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 61,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|final|jersey|mundial|nueva|preparativos|primer|seleccion|malvinas|2026-07-17",
       "headlineSeed": "Mundial 2026, en vivo: el primer día de la selección en Nueva Jersey y los preparativos para la final",
       "topic": "deportes",
@@ -12875,25 +13094,20 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|interna|javier|jugadores|llegada|medidas|milei|operativo|2026-07-20",
-      "headlineSeed": "Javier Milei y sus medidas, en vivo: el operativo por la llegada de los jugadores y la interna peronista",
-      "topic": "servicios",
-      "subtopic": "servicios",
+      "storyId": "general|argentina|delegacion|futbolistas|quienes|seleccion|volveran|2026-07-20",
+      "headlineSeed": "Quiénes son los futbolistas de la Selección argentina que no volverán al país con la delegación",
+      "topic": "deportes",
+      "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Javier Milei",
-        "Gobierno",
-        "Banco Central",
-        "Gobierno de",
         "Buenos Aires",
-        "Moscu",
         "Argentina",
-        "Brasil",
-        "Estados Unidos"
+        "Estados Unidos",
+        "Espana"
       ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-20T10:57:01.046Z",
-      "lastSeenAt": "2026-07-20T10:57:01.046Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T14:13:22.228Z",
+      "lastSeenAt": "2026-07-20T14:13:22.228Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -12901,19 +13115,205 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 21,
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|castro|energetica|ganaron|hermanos|historia|muerta|2026-07-20",
+      "headlineSeed": "De la Cuba de Castro a Vaca Muerta: la historia de los hermanos que ganaron la obra energética más grande de la Argentina",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Vaca Muerta",
+        "Argentina Jorge",
+        "José Mas",
+        "Inter Miami",
+        "Club de Lens",
+        "Universidad de Miami",
+        "Argentina",
+        "Brasil",
+        "Bolivia",
+        "Venezuela"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T14:13:22.228Z",
+      "lastSeenAt": "2026-07-20T14:13:22.228Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|afecta|cautelar|comercio|empleadores|frena|laboral|reforma|2026-07-20",
+      "headlineSeed": "Cómo afecta a los empleadores de Comercio la cautelar que frena la reforma laboral",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Modernización Laboral",
+        "Capital Humano",
+        "Justicia",
+        "Ministerio de Capital Humano y",
+        "Ministerio de Capital Humano",
+        "Federación Argentina de Empleados de Comercio",
+        "Gobierno",
+        "Ministerio de Capital Humano El",
+        "Sindicato Empleados de Comercio de San",
+        "Cámara"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-20T14:13:22.227Z",
+      "lastSeenAt": "2026-07-20T14:13:22.227Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 24,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 20,
       "socialPotentialScore": 7,
       "searchPotentialScore": 15,
       "scoreBreakdown": {
-        "publicInterest": 21,
+        "publicInterest": 24,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|carta|cuando|emotiva|esposa|final|hiciste|lautaro|2026-07-20",
+      "headlineSeed": "“Vi todo lo que hiciste cuando nadie miraba”: la emotiva carta de la esposa de Lautaro Martínez tras la final del Mundial",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Lautaro Martínez",
+        "Argentina",
+        "Chile",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T14:13:22.225Z",
+      "lastSeenAt": "2026-07-20T14:13:22.225Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|causa|escenas|lamentables|rispidez|titulares|2026-07-20",
+      "headlineSeed": "Rispidez argentina causa titulares: \"Escenas lamentables\"",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Internacional",
+        "Argentina",
+        "Inglaterra",
+        "Alemania",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T14:13:22.225Z",
+      "lastSeenAt": "2026-07-20T14:13:22.225Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
@@ -12943,7 +13343,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 8,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -12957,7 +13357,7 @@
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -13096,48 +13496,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|cuando|declaracion|extienden|ganancias|hasta|impuesto|jurada|2026-07-20",
-      "headlineSeed": "ARCA volvió a prorrogar el Impuesto a las Ganancias: extienden el plazo para presentar la declaración jurada: hasta cuándo y cómo presentarla",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Resolución General",
-        "Gobierno",
-        "Banco Central"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-20T10:57:01.043Z",
-      "lastSeenAt": "2026-07-20T10:57:01.043Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|argentina|estara|lionel|messi|presente|recibimiento|seleccion|2026-07-20",
       "headlineSeed": "Lionel Messi no viene al país y no estará presente en el recibimiento a la Selección argentina",
       "topic": "deportes",
@@ -13247,7 +13605,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -13261,374 +13619,6 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|detenidos|final|grupo|incidentes|menos|mundial|obelisco|2026-07-20",
-      "headlineSeed": "Incidentes en el Obelisco entre un grupo de personas y la policía tras la final del Mundial: hay al menos 12 detenidos",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Lionel Scaloni",
-        "Policía",
-        "Policía de la Ciudad",
-        "Argentina",
-        "Espana"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-20T03:27:51.817Z",
-      "lastSeenAt": "2026-07-20T03:27:51.817Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|espana|frente|impone|informe|jersey|mundo|2026-07-19",
-      "headlineSeed": "Informe desde Nueva Jersey: España alza la Copa del Mundo y se impone frente a Argentina",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Nueva Jersey",
-        "MetLife Stadium",
-        "Ferrán Torres",
-        "Internacional",
-        "Argentina",
-        "Estados Unidos",
-        "Espana",
-        "Cuba"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T03:27:51.816Z",
-      "lastSeenAt": "2026-07-20T03:27:51.816Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|capitan|demostro|futbol|gracias|leyenda|messi|2026-07-20",
-      "headlineSeed": "\"Gracias Messi\": por qué el capitán de Argentina demostró en este Mundial que es una leyenda del fútbol - BBC News Mundo",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gracias Messi",
-        "BBC News Mundo Participó",
-        "Buenos Aires",
-        "Internacional",
-        "Argentina",
-        "Egipto",
-        "Chile",
-        "Estados Unidos",
-        "Reino Unido",
-        "Inglaterra"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T03:27:51.816Z",
-      "lastSeenAt": "2026-07-20T03:27:51.816Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|coronacion|futbol|genio|lamine|mundial|nuevo|yamal|2026-07-20",
-      "headlineSeed": "Lamine Yamal, la coronación del nuevo genio del fútbol mundial",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Lamine Yamal",
-        "Lionel Messi",
-        "Internacional",
-        "Argentina",
-        "Estados Unidos",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T03:27:51.815Z",
-      "lastSeenAt": "2026-07-20T03:27:51.815Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|campeones|enorme|espanol|gobierno|mensaje|mundo|nuestra|2026-07-19",
-      "headlineSeed": "El mensaje del presidente del gobierno español, Pedro Sánchez, a los nuevos campeones del mundo: “¡Enorme nuestra selección!”",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Pedro Sánchez",
-        "Felipe VI",
-        "Gobierno",
-        "OTAN y",
-        "Argentina",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T22:58:57.167Z",
-      "lastSeenAt": "2026-07-19T22:58:57.167Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|campeona|espana|mundial|2026-07-19",
-      "headlineSeed": "¡España es campeona del Mundial 2026!",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Ferrán Torres",
-        "Internacional",
-        "Argentina",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T22:58:57.166Z",
-      "lastSeenAt": "2026-07-19T22:58:57.166Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|espana|futbol|mundo|2026-07-19",
-      "headlineSeed": "España gana la Copa del Mundo 2026 de fútbol",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Ferran Torres",
-        "Internacional",
-        "Argentina",
-        "Brasil",
-        "Uruguay",
-        "Inglaterra",
-        "Francia",
-        "Alemania",
-        "Italia",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T22:58:57.165Z",
-      "lastSeenAt": "2026-07-19T22:58:57.165Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|bieber|brillaron|entretiempo|final|justin|madonna|mundial|2026-07-19",
-      "headlineSeed": "Madonna, BTS, Justin Bieber y Shakira brillaron en el show del entretiempo de la final del Mundial 2026",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Justin Bieber",
-        "Burna Boy",
-        "Argentina",
-        "Brasil",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T20:56:00.547Z",
-      "lastSeenAt": "2026-07-19T20:56:00.547Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
         "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
