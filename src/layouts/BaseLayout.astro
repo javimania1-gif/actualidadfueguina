@@ -36,6 +36,65 @@ const isActive = (href: string) => currentPath.startsWith(href);
         });
       });
     </script>
+
+    <!-- OneSignal Web Push SDK -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script is:inline>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "cfc2594a-72fd-4000-9be5-77f897c07475",
+          notifyButton: {
+            enable: true,
+            text: {
+              'tip.state.unsubscribed': 'Suscribite a las noticias',
+              'tip.state.subscribed': 'Estás suscripto',
+              'tip.state.blocked': 'Has bloqueado las notificaciones',
+              'message.prenotify': 'Hacé clic para suscribirte a las noticias de Actualidad Fueguina',
+              'message.action.subscribed': '¡Gracias por suscribirte!',
+              'message.action.resubscribed': 'Estás suscripto a las noticias',
+              'message.action.unsubscribed': 'Ya no recibirás notificaciones',
+              'dialog.main.title': 'Notificaciones de Actualidad Fueguina',
+              'dialog.main.button.subscribe': 'SUSCRIBIRSE',
+              'dialog.main.button.unsubscribe': 'DESUSCRIBIRSE',
+              'dialog.blocked.title': 'Desbloquear Notificaciones',
+              'dialog.blocked.message': 'Seguí estas instrucciones para permitir las notificaciones:'
+            },
+            colors: {
+              'circle.background': 'rgb(0, 71, 171)',
+              'circle.foreground': 'white',
+              'badge.background': 'rgb(0, 71, 171)',
+              'badge.foreground': 'white',
+              'badge.bordercolor': 'white',
+              'pulse.color': 'white',
+              'dialog.button.background.hovering': 'rgb(0, 50, 120)',
+              'dialog.button.background.active': 'rgb(0, 50, 120)',
+              'dialog.button.background': 'rgb(0, 71, 171)',
+              'dialog.button.foreground': 'white',
+            }
+          },
+          promptOptions: {
+            slidedown: {
+              prompts: [
+                {
+                  type: "push",
+                  autoPrompt: true,
+                  text: {
+                    actionMessage: "Deseás recibir las últimas noticias de Tierra del Fuego en tu celular?",
+                    acceptButton: "Permitir",
+                    cancelButton: "Más tarde"
+                  },
+                  delay: {
+                    pageViews: 1,
+                    timeDelay: 3
+                  }
+                }
+              ]
+            }
+          }
+        });
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
