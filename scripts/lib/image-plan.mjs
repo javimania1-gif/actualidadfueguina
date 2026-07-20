@@ -106,6 +106,15 @@ export function evaluateImageContext(entry = {}, contextText = '') {
     reasons.push('opponent-celebration-for-argentina-win');
   }
 
+  if (
+    has(assetContext, [/\b(gustavo melella|melella|walter vuoto|vuoto|martin perez|daniel harrington|gobernador de tierra del fuego|municipio de|gobierno provincial)\b/]) &&
+    has(context, [/\b(mundo|internacional|nacionales|españa|estados unidos)\b/]) &&
+    !has(context, [/\b(gustavo melella|melella|walter vuoto|vuoto|martin perez|daniel harrington)\b/])
+  ) {
+    penalty -= 200;
+    reasons.push('local-politician-in-foreign-or-national-news');
+  }
+
   return {
     ok: penalty > -100,
     penalty,

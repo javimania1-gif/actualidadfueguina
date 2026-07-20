@@ -106,10 +106,11 @@ export function inferAgendaTerritory({ facts = {}, source = {}, category = '', t
     ...(facts.countries || [])
   ].join(' '));
   if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
-  if (/\bargentina\b/.test(text) && /\b(nacionales|deportes|seleccion|mundial|copa del mundo)\b/.test(text)) return 'Nacionales';
+  if (/\b(seleccion argentina|mundial|copa del mundo|afa|lionel messi|scaloni|luis caputo|adorni|bullrich|gabinete nacional)\b/.test(text)) return 'Nacionales';
+  if (/\bargentina\b/.test(text) && /\b(nacionales|deportes|seleccion)\b/.test(text)) return 'Nacionales';
   if (/\b(cdmx|mexico|mexico df|colombia|cuba|iran|teheran|moscu|ucrania|rusia|estados unidos|reino unido|inglaterra|francia|alemania|italia|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(text)) return 'Mundo';
   if (/\bmundo\b|\binternacional\b/.test(text)) return 'Mundo';
-  if (/\b(nacionales|argentina|milei|fmi|villa allende|chaco|cordoba|buenos aires|congreso|senado|diputados)\b/.test(text)) return 'Nacionales';
+  if (/\b(nacionales|argentina|milei|fmi|villa allende|chaco|cordoba|buenos aires|congreso|senado|diputados|santa cruz|chubut|neuquen|rio negro|la pampa)\b/.test(text)) return 'Nacionales';
   if (/\bprovincia\b/.test(text) && (source.mode === 'official-auto' || /\b(provincial|gobierno|tdf)\b/.test(text))) return 'Provincia';
   return 'unknown';
 }

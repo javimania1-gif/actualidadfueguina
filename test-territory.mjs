@@ -72,6 +72,18 @@ const tests = [
     title: 'El Congreso argentino debatirá una reforma nacional',
     description: '',
     source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' }
+  },
+  {
+    name: 'La Selección Argentina regresa al país tras la final del Mundial',
+    title: 'La Selección Argentina regresa al país tras la final del Mundial',
+    description: '',
+    source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' }
+  },
+  {
+    name: 'Arroyo Marea: un refugio natural en Santa Cruz',
+    title: 'Arroyo Marea: un refugio natural en Santa Cruz',
+    description: '',
+    source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' }
   }
 ];
 
