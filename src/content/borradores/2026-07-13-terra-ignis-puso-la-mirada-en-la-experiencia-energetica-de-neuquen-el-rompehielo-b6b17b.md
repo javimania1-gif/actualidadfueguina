@@ -2,7 +2,7 @@
 title: "Terra Ignis puso la mirada en la experiencia energética de Neuquén - El Rompehielos"
 description: "Terra Ignis recorrió experiencias de gestión energética y ambiental en Neuquén para fortalecer el desarrollo hidrocarburífero de Tierra del Fuego"
 date: "2026-07-13T22:36:33.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/terra-ignis-puso-la-mirada-en-la-experiencia-energetica-de-neuquen?utm_source=rss&utm_medium=rss&utm_campaign=terra-ignis-puso-la-mirada-en-la-experiencia-energetica-de-neuquen"

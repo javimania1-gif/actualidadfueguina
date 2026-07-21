@@ -3,7 +3,7 @@ title: "Río Grande habilita la Laguna de los Patos para patinaje sobre hielo"
 description: "El Municipio de Río Grande autoriza actividades recreativas en la Laguna de los Patos tras evaluaciones de Defensa Civil."
 date: "2026-07-19T17:02:47.657Z"
 sourcePublishedAt: "2026-07-19T15:36:26.000Z"
-category: "Rio Grande"
+category: "Sociedad"
 location: "Río Grande"
 tags: ["Río Grande", "Laguna de los Patos", "Defensa Civil", "patinaje sobre hielo"]
 image: "/uploads/auto/2026-07-19-216c0104ba58feb69c.webp"

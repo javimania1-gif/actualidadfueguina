@@ -2,7 +2,7 @@
 title: "Alejandra Lizardo: las voces de mujeres que escriben la historia de Río Grande – La 97 Radio Fueguina"
 description: "A través de Mujeres de nuestra historia, Alejandra Lizardo recupera trayectorias femeninas que amplían y resignifican la memoria histórica de Río Grande."
 date: "2026-06-30T05:00:00.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 sourceName: "Bing News — Río Grande"
 sourceUrl: "https://www.radiofueguina.com/2026/06/alejandra-lizardo-las-voces-de-mujeres-que-escriben-la-historia-de-rio-grande/"

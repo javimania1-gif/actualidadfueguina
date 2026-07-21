@@ -2,7 +2,7 @@
 title: "El mar de Santa Cruz, protagonista en el Planetario - El Rompehielos"
 description: "El film “Te quiero, desde el mar hasta el cielo”, filmado en parte en Santa Cruz, se estrenará el 18 de julio en el Planetario de Buenos Aires"
 date: "2026-07-16T21:46:19.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/el-mar-de-santa-cruz-protagonista-en-el-planetario?utm_source=rss&utm_medium=rss&utm_campaign=el-mar-de-santa-cruz-protagonista-en-el-planetario"

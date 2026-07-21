@@ -2,7 +2,7 @@
 title: "El rock fueguino brilló en la Fiesta Nacional de la Noche Más Larga 2026"
 description: "Siete bandas locales se presentaron en el Medio Caño ante una multitud, en una jornada que combinó música, gastronomía y apoyo al talento provincial."
 date: "2026-07-06T13:54:55.000Z"
-category: "Ushuaia"
+category: "Cultura"
 location: "Ushuaia"
 tags: ["Ushuaia", "Cultura", "Noche mas larga", "Rock", "Musica local"]
 image: "/uploads/auto/2026-07-06-56ed2d7bf7a709bc94.jpg"

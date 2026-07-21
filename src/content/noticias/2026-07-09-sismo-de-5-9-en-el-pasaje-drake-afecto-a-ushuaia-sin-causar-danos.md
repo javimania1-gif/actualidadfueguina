@@ -3,7 +3,7 @@ title: "Sismo de 5.9 en el Pasaje Drake afectó a Ushuaia sin causar daños"
 description: "Un sismo de magnitud 5.9 se registró en el Pasaje Drake, a 303 km de Ushuaia. No hubo daños ni alerta de tsunami."
 date: "2026-07-09T16:51:53.784Z"
 sourcePublishedAt: "2026-07-07T15:25:00.000Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 tags: ["sismo", "Ushuaia", "Pasaje Drake"]
 image: "/uploads/auto/2026-07-09-856619c92c2c5c43ac.webp"

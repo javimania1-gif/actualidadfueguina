@@ -2,7 +2,7 @@
 title: "Argentina vs. Inglaterra: La pelota no se mancha…¿pero negocia?"
 description: "La referencia a Malvinas es ineludible en este caso. La emoción que la produce es legítima. El problema es cuando esa emoción se convierte en análisis y confunde los planos."
 date: "2026-07-13T04:04:28.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Clarín — Cobertura TdF"
 sourceUrl: "https://www.clarin.com/opinion/argentina-vs-inglaterra-pelota-manchapero-negocia_0_WPKQNtBQvq.html"

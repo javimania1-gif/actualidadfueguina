@@ -2,7 +2,7 @@
 title: "“Vuelvan a Jesús”: El llamado del Tedeum fueguino a la dirigencia política para recuperar los valores y gobernar con rectitud | radiouniversidad.com.ar"
 description: "En el marco de la celebración por el Día de la Independencia, el tradicional Te Deum realizado el jueves 9 de julio en l"
 date: "2026-07-13T06:02:53.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/vuelvan-a-jesus-el-llamado-del-tedeum-fueguino-a-la-dirigencia-politica-para-recuperar-los-valores-y-gobernar-con-rectitud/"

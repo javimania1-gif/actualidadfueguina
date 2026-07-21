@@ -2,7 +2,7 @@
 title: "Dep. Español vs Cañuelas, en vivo, por la Primera C: minuto a minuto y qué canal pasa el partido por TV"
 description: "Dep. Español enfrenta a Cañuelas desde las 13:00 horas del sábado 11 de julio. Podés seguirlo minuto a minuto por la web de TN."
 date: "2026-07-11T06:04:27.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/11/dep-espanol-vs-canuelas-en-vivo-por-la-fecha-19-de-la-primera-c-hora-donde-ver-y-formaciones/"

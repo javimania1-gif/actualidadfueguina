@@ -2,7 +2,7 @@
 title: "Lecciones de economía, no de fútbol, de Noruega a la Argentina"
 description: "Material detectado automáticamente para evaluación editorial."
 date: "2026-07-14T23:47:05.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "El Cronista - Nacionales"
 sourceUrl: "https://www.cronista.com/columnistas/lecciones-de-economia-no-de-futbol-de-noruega-a-la-argentina/"

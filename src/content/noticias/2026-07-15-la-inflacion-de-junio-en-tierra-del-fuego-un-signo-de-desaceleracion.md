@@ -3,7 +3,7 @@ title: "La inflación de junio en Tierra del Fuego: un signo de desaceleración"
 description: "La inflación de junio fue de 1,9%, marcando una desaceleración en el costo de vida en Tierra del Fuego."
 date: "2026-07-15T15:30:18.596Z"
 sourcePublishedAt: "2026-07-15T14:34:46.000Z"
-category: "Provincia"
+category: "Economia"
 location: "Tierra del Fuego AIAS"
 tags: ["inflación", "economía", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-15-ea03ec27c8169c2ffb.webp"

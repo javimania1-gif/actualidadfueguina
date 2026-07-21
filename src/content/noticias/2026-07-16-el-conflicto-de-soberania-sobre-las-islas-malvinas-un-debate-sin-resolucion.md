@@ -3,7 +3,7 @@ title: "El Conflicto de Soberanía sobre las Islas Malvinas: Un Debate sin Resol
 description: "Las Islas Malvinas siguen siendo un territorio en disputa entre Argentina y el Reino Unido, con la ONU instando a negociaciones pacíficas."
 date: "2026-07-16T02:12:13.047Z"
 sourcePublishedAt: "2026-07-15T23:49:16.000Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags: ["Malvinas", "Soberanía", "Argentina", "Reino Unido", "ONU"]
 image: "/uploads/auto/2026-07-16-f6ea1a257bf4b0f05b.webp"

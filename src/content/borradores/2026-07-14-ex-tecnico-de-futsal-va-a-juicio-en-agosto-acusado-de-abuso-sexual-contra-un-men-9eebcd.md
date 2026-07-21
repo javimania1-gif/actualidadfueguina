@@ -2,7 +2,7 @@
 title: "Ex técnico de Futsal va a juicio en agosto acusado de abuso sexual contra un menor que entrenaba - Actualidad TDF"
 description: "La causa es contra un hombre mayor de edad acusado de abuso sexual gravemente ultrajante contra uno de los chicos que entrenaba. El Tribunal de Juicio del Distrito Judicial Norte y"
 date: "2026-07-14T12:03:58.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/ex-tecnico-de-futsal-va-a-juicio-en-agosto-acusado-de-abuso-sexual-contra-un-menor-que-entrenaba/"

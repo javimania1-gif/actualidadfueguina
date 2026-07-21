@@ -2,7 +2,7 @@
 title: "Agustín Coto: “El turismo es un gran motor económico y de generación de empleo para los fueguinos” | radiouniversidad.com.ar"
 description: "El senador nacional se reunió con el secretario de Turismo de la Nación, Daniel Scioli, en el marco del inicio de la tem"
 date: "2026-07-13T05:49:45.000Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/agustin-coto-el-turismo-es-un-gran-motor-economico-y-de-generacion-de-empleo-para-los-fueguinos/"

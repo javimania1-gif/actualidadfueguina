@@ -2,7 +2,7 @@
 title: "Las escuelas abren sus puertas en vacaciones para aprender jugando en Tierra del Fuego - El Rompehielos"
 description: "Tierra del Fuego ofrece durante las vacaciones de invierno actividades gratuitas de aprendizaje, juegos y deporte para niñas y niños"
 date: "2026-07-13T23:16:23.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/las-escuelas-abren-sus-puertas-en-vacaciones-para-aprender-jugando-en-tierra-del-fuego?utm_source=rss&utm_medium=rss&utm_campaign=las-escuelas-abren-sus-puertas-en-vacaciones-para-aprender-jugando-en-tierra-del-fuego"

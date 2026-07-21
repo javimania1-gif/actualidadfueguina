@@ -3,7 +3,7 @@ title: "La Embajada Británica sorprende con un comunicado humorístico previo a
 description: "La Embajada Británica en Buenos Aires rompió el protocolo diplomático con un comunicado humorístico antes del partido contra Argentina."
 date: "2026-07-14T23:02:01.227Z"
 sourcePublishedAt: "2026-07-14T23:01:06.087Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 tags: ["Mundial 2026", "Reino Unido", "Argentina", "humor", "diplomacia"]
 image: "/uploads/auto/2026-07-14-bcdd507a1c9898f962.webp"

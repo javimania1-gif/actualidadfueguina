@@ -3,7 +3,7 @@ title: "Río Grande destaca su producción local y atractivos turísticos en la 
 description: "El Municipio de Río Grande participó en la Fiesta Nacional del Invierno, promoviendo sus productos locales y su oferta turística."
 date: "2026-07-16T15:45:43.879Z"
 sourcePublishedAt: "2026-07-16T13:33:04.000Z"
-category: "Rio Grande"
+category: "Turismo"
 location: "Río Grande"
 tags: ["turismo", "producción local", "Fiesta Nacional del Invierno", "Río Grande", "Cerro Castor"]
 image: "/uploads/auto/2026-07-16-30b1d793073703ae1e.webp"

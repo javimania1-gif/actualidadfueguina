@@ -2,7 +2,7 @@
 title: "Claudia Villafañe apareció con su tapado icónico tras el triunfo de la Selección Argentina y contó la historia detrás de la prenda"
 description: "Invitada a “La cocina rebelde”, la empresaria sorprendió con un detalle de su placard."
 date: "2026-07-16T19:02:34.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/show/famosos/2026/07/16/claudia-villafane-aparecio-con-su-tapado-iconico-tras-el-triunfo-de-la-seleccion-argentina-y-conto-la-historia-detras-de-la-prenda/"

@@ -3,7 +3,7 @@ title: "Villarruel critica la prohibición de símbolos de Malvinas en el Mundia
 description: "La vicepresidenta Victoria Villarruel desafió al Gobierno por la prohibición de banderas y camisetas alusivas a Malvinas en el partido Argentina-Inglaterra."
 date: "2026-07-15T13:52:13.686Z"
 sourcePublishedAt: "2026-07-15T13:50:31.484Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags: ["Malvinas", "Victoria Villarruel", "Gobierno", "Mundial 2026"]
 image: "/uploads/auto/2026-07-15-3e5b084f15ea1250de.webp"

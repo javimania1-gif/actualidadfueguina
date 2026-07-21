@@ -2,7 +2,7 @@
 title: "Felices 105 años, Río Grande - Municipio de Tolhuin"
 description: "Hoy celebramos un nuevo año de vida de una ciudad que forma parte de la historia, la identidad y el crecimiento tanto de nuestra ciudad como de Tierra del Fuego. Desde Tolhuin salu"
 date: "2026-07-13T17:13:30.000Z"
-category: "Tolhuin"
+category: "Sociedad"
 location: "Tolhuin"
 sourceName: "Municipio de Tolhuin"
 sourceUrl: "https://tolhuin.gob.ar/felices-105-anos-rio-grande/"

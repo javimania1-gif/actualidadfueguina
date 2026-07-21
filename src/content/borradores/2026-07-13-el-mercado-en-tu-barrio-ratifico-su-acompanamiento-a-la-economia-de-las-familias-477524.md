@@ -2,7 +2,7 @@
 title: "\"El mercado en tu barrio\" ratificó su acompañamiento a la economía de las familias riograndenses"
 description: "Noticias de Río Grande"
 date: "2026-07-13T17:55:27.000Z"
-category: "Río Grande"
+category: "Economia"
 location: "Río Grande"
 sourceName: "Municipio de Río Grande"
 sourceUrl: "https://info.riogrande.gob.ar/el-mercado-en-tu-barrio-ratifico-su-acompanamiento-a-la-economia-de-las-familias-riograndenses"

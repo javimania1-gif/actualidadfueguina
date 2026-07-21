@@ -2,7 +2,7 @@
 title: "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero"
 description: "La ministra de Energía de Tierra del Fuego encabezó una agenda técnica en Neuquén para conocer de primera mano los procesos de explotación no convencional. La recorrida se produce "
 date: "2026-07-14T16:36:47.516Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27883/tras-su-paso-por-canada-y-estados-unidos-gabriela-castillo-recorre-vaca-muerta-p"

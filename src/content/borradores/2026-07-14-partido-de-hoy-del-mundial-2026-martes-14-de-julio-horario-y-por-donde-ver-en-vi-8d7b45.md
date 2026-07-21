@@ -2,7 +2,7 @@
 title: "Partido de hoy del Mundial 2026, martes 14 de julio: horario y por dónde ver en vivo online"
 description: "En la jornada 34 de la Copa del Mundo inician las semifinales con un encuentro que define al primer finalista para el choque del 19 de julio en el MetLife Stadium - LA NACION"
 date: "2026-07-14T10:00:00.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/futbol/partido-de-hoy-del-mundial-2026-martes-14-de-julio-horario-y-por-donde-ver-en-vivo-online-nid15072026/"

@@ -3,7 +3,7 @@ title: "Identificación de hantavirus en roedores de Tierra del Fuego"
 description: "El laboratorio ANLIS Malbrán identificó hantavirus en roedores de Tierra del Fuego, sin vínculo con brote del crucero MV Hondius."
 date: "2026-07-09T00:05:10.000Z"
 sourcePublishedAt: "2026-07-08T23:38:15.242Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["hantavirus", "Tierra del Fuego", "ANLIS Malbrán", "roedores"]
 image: "/uploads/auto/2026-07-09-32f02a4f2f0f0f59da.webp"

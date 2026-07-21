@@ -2,7 +2,7 @@
 title: "Río Grande vuelve a alentar a la Selección: el partido contra Inglaterra se verá en pantalla gigante"
 description: "El Municipio transmitirá en vivo la semifinal del Mundial 2026 entre Argentina e Inglaterra. La convocatoria es libre y gratuita en el Parque de los 100 Años."
 date: "2026-07-14T19:44:37.822Z"
-category: "Río Grande"
+category: "Deportes"
 location: "Río Grande"
 tags: []
 image: "/uploads/auto/2026-07-14-41e2c1765e1ef8ecea.webp"

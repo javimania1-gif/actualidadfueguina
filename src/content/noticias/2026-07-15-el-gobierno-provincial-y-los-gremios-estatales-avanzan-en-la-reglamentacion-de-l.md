@@ -3,7 +3,7 @@ title: "El Gobierno provincial y los gremios estatales avanzan en la reglamentac
 description: "El Gobierno de Tierra del Fuego se reunió con organizaciones gremiales para elaborar la reglamentación de la COPARLAP, buscando fortalecer las relaciones laborales."
 date: "2026-07-15T15:30:44.643Z"
 sourcePublishedAt: "2026-07-15T15:07:27.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Gobierno", "gremios", "COPARLAP", "relaciones laborales"]
 image: "/uploads/auto/2026-07-15-15bf768bf104006a94.webp"

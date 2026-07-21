@@ -2,7 +2,7 @@
 title: "“Tardes de juego en familia” durante el receso invernal – La 97 Radio Fueguina"
 description: "Habrá actividades deportivas, recreativas y lúdicas para que niñas, niños y sus familias compartan tardes de diversión de manera libre y gratuita."
 date: "2026-07-13T15:31:00.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Fueguina"
 sourceUrl: "https://www.radiofueguina.com/2026/07/tardes-de-juego-en-familia-durante-el-receso-invernal/"

@@ -3,7 +3,7 @@ title: "Nicolás Pino destaca el crecimiento del stand de Santa Cruz en la Rural
 description: "El presidente de la SRA, Nicolás Pino, resalta la calidad y expansión del stand de Santa Cruz en la Exposición Rural de Palermo."
 date: "2026-07-17T02:52:04.902Z"
 sourcePublishedAt: "2026-07-16T22:38:46.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Nicolás Pino", "Santa Cruz", "Exposición Rural", "Producción"]
 image: "/uploads/auto/2026-07-17-eae5309e775c0e9067.webp"

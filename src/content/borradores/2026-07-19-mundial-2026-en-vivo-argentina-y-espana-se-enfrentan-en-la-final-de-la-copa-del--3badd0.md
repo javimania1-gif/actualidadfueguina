@@ -2,7 +2,7 @@
 title: "Mundial 2026, en vivo: Argentina y España se enfrentan en la final de la Copa del Mundo"
 description: "Scaloni se debate entre mantener a Simeone o devolverle la titularidad a De Paul; en una histórica convocatoria en el centro de Nueva York, las calles están colapsadas de argentino"
 date: "2026-07-19T06:09:32.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/futbol/mundial-2026-en-vivo-argentina-y-espana-se-enfrentan-en-la-final-de-la-copa-del-mundo-nid19072026/"

@@ -2,7 +2,7 @@
 title: "Luis Caputo cruzó al periodista británico Piers Morgan por criticar a la selección argentina: “Mocoso malcriado”"
 description: "El columnista apuntó contra la reacción de algunos jugadores de la Scaloneta que se enfrentaron a golpes con futbolistas de España en el final del partido; habló de “comportamiento"
 date: "2026-07-20T03:14:27.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/futbol/luis-caputo-cruzo-al-periodista-britanico-piers-morgan-por-criticar-a-la-seleccion-argentina-mocoso-nid20072026/"

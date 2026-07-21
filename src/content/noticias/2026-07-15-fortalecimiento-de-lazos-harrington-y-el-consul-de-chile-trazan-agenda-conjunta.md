@@ -3,7 +3,7 @@ title: "Fortalecimiento de lazos: Harrington y el cónsul de Chile trazan agenda
 description: "El intendente de Tolhuin, Daniel Harrington, se reunió con el cónsul de Chile para establecer una colaboración que beneficie a la comunidad."
 date: "2026-07-15T13:52:25.173Z"
 sourcePublishedAt: "2026-07-15T13:10:56.000Z"
-category: "Tolhuin"
+category: "Sociedad"
 location: "Tolhuin"
 tags: ["Tolhuin", "Chile", "Daniel Harrington", "relaciones internacionales"]
 image: "/uploads/auto/2026-07-15-da380efd551a483533.webp"

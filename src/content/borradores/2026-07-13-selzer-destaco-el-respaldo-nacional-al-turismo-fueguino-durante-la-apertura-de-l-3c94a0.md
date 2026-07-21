@@ -2,7 +2,7 @@
 title: "Selzer destacó el respaldo nacional al turismo fueguino durante la apertura de la temporada invernal | radiouniversidad.com.ar"
 description: "El legislador de La Libertad Avanza participó de las actividades encabezadas por el secretario de Turismo de la Nación,"
 date: "2026-07-13T20:06:43.000Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/selzer-destaco-el-respaldo-nacional-al-turismo-fueguino-durante-la-apertura-de-la-temporada-invernal/"

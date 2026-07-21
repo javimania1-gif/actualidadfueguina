@@ -3,7 +3,7 @@ title: "Inauguración del vuelo Gol entre San Pablo y Ushuaia"
 description: "Se inauguró el vuelo Gol que conecta San Pablo con Ushuaia, mejorando la conectividad y el turismo en Tierra del Fuego."
 date: "2026-07-10T14:34:49.844Z"
 sourcePublishedAt: "2026-07-10T13:34:45.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["turismo", "conectividad", "GOL", "Ushuaia", "San Pablo"]
 image: "/uploads/auto/2026-07-10-8189ce4230916de369.webp"

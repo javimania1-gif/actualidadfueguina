@@ -2,7 +2,7 @@
 title: "Río Grande celebró en comunidad sus 105 años – La 97 Radio Fueguina"
 description: "En su mensaje, el intendente Martín Perez destacó la emoción de celebrar un nuevo aniversario junto a la comunidad. \"Río Grande es una ciudad que nos llena de orgullo, que nos llen"
 date: "2026-07-13T13:04:43.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Fueguina"
 sourceUrl: "https://www.radiofueguina.com/2026/07/rio-grande-celebro-en-comunidad-sus-105-anos/"

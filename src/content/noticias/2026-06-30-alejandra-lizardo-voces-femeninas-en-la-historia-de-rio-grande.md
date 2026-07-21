@@ -3,7 +3,7 @@ title: "Alejandra Lizardo: Voces Femeninas en la Historia de Río Grande"
 description: "Alejandra Lizardo rescata historias de mujeres que han contribuido a la memoria de Río Grande, ampliando su historia con relatos olvidados."
 date: "2026-07-09T13:47:08.000Z"
 sourcePublishedAt: "2026-06-30T12:00:00.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 tags: ["Alejandra Lizardo", "Mujeres", "Historia", "Río Grande"]
 image: "/uploads/auto/2026-07-09-eafceeeb3a3e466c7b.webp"

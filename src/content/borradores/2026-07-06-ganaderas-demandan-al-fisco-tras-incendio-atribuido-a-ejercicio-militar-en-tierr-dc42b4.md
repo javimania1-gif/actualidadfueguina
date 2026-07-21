@@ -2,7 +2,7 @@
 title: "Ganaderas demandan al fisco tras incendio atribuido a ejercicio militar en Tierra del Fuego"
 description: "Piden una indemnización de más de $600 millones."
 date: "2026-07-06T08:21:00.000Z"
-category: "Provincia"
+category: "Economia"
 location: "Tierra del Fuego AIAS"
 sourceName: "Bing News — Tierra del Fuego"
 sourceUrl: "https://www.emol.com/noticias/Economia/2026/07/06/1204795/ganaderas-demandan-fisco-militares-incendio.html"

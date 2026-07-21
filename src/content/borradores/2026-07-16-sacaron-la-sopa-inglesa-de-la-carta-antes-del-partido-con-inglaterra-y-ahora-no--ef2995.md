@@ -2,7 +2,7 @@
 title: "Sacaron la sopa inglesa de la carta antes del partido con Inglaterra y ahora no van a vender tarta gallega"
 description: "La Americana dejará de vender ese plato tradicional hasta que termine el Mundial - LA NACION"
 date: "2026-07-16T19:11:32.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/sabado/sacaron-la-sopa-inglesa-de-la-carta-antes-del-partido-con-inglaterra-y-ahora-no-van-a-vender-tarta-nid16072026/"

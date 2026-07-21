@@ -3,7 +3,7 @@ title: "La bandera de Malvinas en el Mundial: un mensaje de los jugadores argent
 description: "Tras el triunfo ante Inglaterra, jugadores argentinos mostraron una bandera que reafirma la soberanía sobre Malvinas, generando un fuerte mensaje en el contexto del Mundial 2026."
 date: "2026-07-15T23:03:20.147Z"
 sourcePublishedAt: "2026-07-15T21:36:08.272Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags: ["Malvinas", "Mundial 2026", "Fútbol", "Argentina", "Inglaterra"]
 image: "/uploads/auto/2026-07-15-8d30346fb1a4df5e82.webp"

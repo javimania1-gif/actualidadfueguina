@@ -2,7 +2,7 @@
 title: "La Cámara de Comercio de Ushuaia presentó PAIX, la plataforma que busca potenciar el desarrollo antártico | Sur54.com | Portal de noticias"
 description: "El proyecto, impulsado por la institución junto a otras entidades y un equipo técnico especializado, busca consolidar a Ushuaia como un nodo estratégico para el desarrollo de activ"
 date: "2026-07-07T17:00:00.000Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Bing News — Ushuaia"
 sourceUrl: "https://www.sur54.com/noticias/2026/07/08/126985-la-camara-de-comercio-de-ushuaia-presento-paix-la-plataforma-que-busca-potenciar-el-desarrollo-antartico"

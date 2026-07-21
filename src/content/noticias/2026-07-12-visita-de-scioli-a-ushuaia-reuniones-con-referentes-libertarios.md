@@ -3,7 +3,7 @@ title: "Visita de Scioli a Ushuaia: Reuniones con referentes libertarios"
 description: "El secretario de Turismo, Daniel Scioli, se reunió con legisladores de La Libertad Avanza durante su visita a Ushuaia."
 date: "2026-07-12T15:02:12.828Z"
 sourcePublishedAt: "2026-07-12T15:01:50.076Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 tags: ["Daniel Scioli", "La Libertad Avanza", "Ushuaia", "turismo"]
 image: "/uploads/auto/2026-07-12-3a3903a91a8d441c42.webp"

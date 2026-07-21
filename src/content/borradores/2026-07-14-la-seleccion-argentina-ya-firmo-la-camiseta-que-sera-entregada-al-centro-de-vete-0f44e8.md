@@ -2,7 +2,7 @@
 title: "La Selección Argentina ya firmó la camiseta que será entregada al Centro de Veteranos de Guerra de Malvinas - Actualidad TDF"
 description: "Esta generación de la Selección Argentina no solo será recordada para siempre por todos los títulos que consiguió, sino que también quedará en la historia por un gesto para la post"
 date: "2026-07-14T12:47:14.000Z"
-category: "Provincia"
+category: "Deportes"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/la-seleccion-argentina-ya-firmo-la-camiseta-que-sera-entregada-al-centro-de-veteranos-de-guerra-de-malvinas/"

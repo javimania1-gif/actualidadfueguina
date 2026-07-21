@@ -2,7 +2,7 @@
 title: "Animales extintos: el lobo de Malvinas cuya desaparición predijo Darwin"
 description: "El guará fue una especie de mamífero carnívoro que habitó hasta mediados del siglo XIX en las Islas Malvinas.Su desaparición se debió a la intensiva caza promovida por los colonos "
 date: "2026-07-14T08:14:00.000Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 sourceName: "Bing News — Islas Malvinas"
 sourceUrl: "https://www.clarin.com/internacional/animales-extintos-lobo-malvinas-cuya-desaparicion-predijo-darwin_0_F1kmlTWhx9.html"

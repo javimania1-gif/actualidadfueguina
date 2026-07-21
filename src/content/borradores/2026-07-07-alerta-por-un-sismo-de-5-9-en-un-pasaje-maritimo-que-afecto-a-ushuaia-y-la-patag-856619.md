@@ -2,7 +2,7 @@
 title: "Alerta por un sismo de 5.9 en un pasaje marítimo que afectó a Ushuaia y la Patagonia: cómo fue"
 description: "Sismo de 5,9 en el Pasaje Drake sentido en Ushuaia. No hubo daños ni alerta de tsunami. El epicentro fue a 303 km. Monitoreo permanente."
 date: "2026-07-07T08:29:00.000Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Bing News — Ushuaia"
 sourceUrl: "https://www.eldestapeweb.com/sociedad/alerta-sismo-5-9-pasaje-maritimo-afecto-ushuaia-patagonia-fue-202677122537"

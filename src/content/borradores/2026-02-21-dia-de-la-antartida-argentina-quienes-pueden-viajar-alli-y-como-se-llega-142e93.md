@@ -2,7 +2,7 @@
 title: "Día de la Antártida Argentina: quiénes pueden viajar allí y cómo se llega"
 description: "Es posible arribar a este continente desde cruceros o incluso sobrevolar algunos de sus territorios en helicóptero; ¿cuál es el origen de esta efeméride?"
 date: "2026-02-21T16:01:00.000Z"
-category: "Antártida"
+category: "Sociedad"
 location: "Antártida Argentina"
 sourceName: "Bing News — Antártida Argentina"
 sourceUrl: "https://es-us.noticias.yahoo.com/d%C3%ADa-ant%C3%A1rtida-argentina-qui%C3%A9nes-viajar-124055161.html"

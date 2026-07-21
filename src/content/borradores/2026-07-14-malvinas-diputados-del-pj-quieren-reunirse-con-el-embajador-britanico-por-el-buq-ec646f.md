@@ -2,7 +2,7 @@
 title: "Malvinas: Diputados del PJ quieren reunirse con el embajador británico por el buque de guerra que atravesó aguas argentinas"
 description: "El pedido lo encabeza el peronismo pero se suman más legisladoresTambién enviaron al Gobierno un pedido de informes para que den explicaciones sobre el hecho."
 date: "2026-07-14T15:03:13.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Clarín — Cobertura TdF"
 sourceUrl: "https://www.clarin.com/politica/malvinas-diputados-pj-quieren-reunirse-embajador-britanico-buque-guerra-atraveso-aguas-argentinas_0_l0MvNqqWsL.html"

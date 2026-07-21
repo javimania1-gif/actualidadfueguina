@@ -2,7 +2,7 @@
 title: "Argentina presenta su Plan Nacional de Turismo Antártico y refuerza la presencia en el continente blanco"
 description: "El Gobierno nacional presentó el Plan de Turismo en la Antártida Argentina para regular el acceso al continente blanco desde Ushuaia, puerta de entrada al sur del mundo."
 date: 2026-06-30T15:00:00-03:00
-category: "Antártida"
+category: "Turismo"
 location: "Antártida Argentina"
 tags:
   - Turismo

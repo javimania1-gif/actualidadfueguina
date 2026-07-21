@@ -2,7 +2,7 @@
 title: "Harrington destacó el trabajo conjunto entre el BTF, GADA S.A. y el Municipio para ampliar el acceso a la vivienda | radiouniversidad.com.ar"
 description: "El intendente de Tolhuin valoró el trabajo articulado entre el Banco de Tierra del Fuego, la empresa constructora GADA S"
 date: "2026-07-10T18:16:24.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/harrington-destaco-el-trabajo-conjunto-entre-el-btf-gada-s-a-y-el-municipio-para-ampliar-el-acceso-a-la-vivienda/"

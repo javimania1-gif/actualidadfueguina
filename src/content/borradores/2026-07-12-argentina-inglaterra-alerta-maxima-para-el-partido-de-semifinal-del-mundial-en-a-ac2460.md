@@ -2,7 +2,7 @@
 title: "Argentina-Inglaterra: alerta máxima para el partido de semifinal del Mundial en Atlanta"
 description: "La selección se enfrentará al equipo que dirige el alemán Thomas Tuchel por el pase a la final de la Copa del Mundial; anticipan un amplio operativo de seguridad - LA NACION"
 date: "2026-07-12T19:01:05.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/futbol/argentina-inglaterra-alerta-maxima-para-el-partido-de-semifinal-del-mundial-en-atlanta-nid12072026/"

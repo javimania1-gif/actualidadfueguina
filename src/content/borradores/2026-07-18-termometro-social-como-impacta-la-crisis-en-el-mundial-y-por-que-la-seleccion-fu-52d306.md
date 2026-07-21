@@ -2,7 +2,7 @@
 title: "Termómetro social: cómo impacta la crisis en el Mundial y por qué la Selección funciona como “escape”"
 description: "Según un estudio de Datos Claros y la UBA, el 73% de los argentinos sigue con atención lo que sucede en el torneo, a pesar de que a muchos no les interesa el deporte. La paradoja d"
 date: "2026-07-18T13:30:00.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "El Cronista - Nacionales"
 sourceUrl: "https://www.cronista.com/economia-politica/termometro-social-como-impacta-la-crisis-en-el-mundial-y-por-que-la-seleccion-funciona-como-escape/"

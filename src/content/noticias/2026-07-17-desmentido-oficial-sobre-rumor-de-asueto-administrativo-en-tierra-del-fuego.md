@@ -3,7 +3,7 @@ title: "Desmentido oficial sobre rumor de asueto administrativo en Tierra del Fu
 description: "El Gobierno Provincial aclara que no habrá asueto administrativo los días 16 y 17 de julio, instando a verificar la información antes de compartir."
 date: "2026-07-17T11:39:16.190Z"
 sourcePublishedAt: "2026-07-17T11:04:00.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Gobierno Provincial", "Asueto Administrativo", "Información Oficial"]
 image: "/uploads/auto/2026-07-17-e62f5f08813743f7fa.webp"

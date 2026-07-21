@@ -2,7 +2,7 @@
 title: "Corte de emergencia: una falla en la línea Cabo Domingo dejó sin luz a distintos sectores de la ciudad - Actualidad TDF"
 description: "La Cooperativa Eléctrica de Río Grande informó que una falla registrada en la línea Cabo Domingo provocó un corte de energía que afecta a distintos sectores de la ciudad. A través "
 date: "2026-07-18T14:11:52.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/corte-de-emergencia-una-falla-en-la-linea-cabo-domingo-dejo-sin-luz-a-distintos-sectores-de-la-ciudad/"

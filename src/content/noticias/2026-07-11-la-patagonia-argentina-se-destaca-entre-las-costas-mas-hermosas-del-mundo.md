@@ -3,7 +3,7 @@ title: "La Patagonia argentina se destaca entre las costas más hermosas del mun
 description: "La Patagonia argentina, con Ushuaia y el Parque Nacional Tierra del Fuego, es reconocida por su belleza natural y biodiversidad."
 date: "2026-07-11T06:19:39.327Z"
 sourcePublishedAt: "2026-07-11T05:00:00.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Patagonia", "Ushuaia", "costas", "naturaleza"]
 image: "/uploads/auto/2026-07-11-c20b591a7ada1380c5.webp"

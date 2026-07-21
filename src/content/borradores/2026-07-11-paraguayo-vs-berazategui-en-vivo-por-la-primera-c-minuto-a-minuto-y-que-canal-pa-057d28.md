@@ -2,7 +2,7 @@
 title: "Paraguayo vs Berazategui, en vivo, por la Primera C: minuto a minuto y qué canal pasa el partido por TV"
 description: "Paraguayo enfrenta a Berazategui desde las 14:00 horas del sábado 11 de julio. Podés seguirlo minuto a minuto por la web de TN."
 date: "2026-07-11T06:02:27.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/11/paraguayo-vs-berazategui-en-vivo-por-la-fecha-19-de-la-primera-c-hora-donde-ver-y-formaciones/"

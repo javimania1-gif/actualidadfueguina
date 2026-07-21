@@ -2,7 +2,7 @@
 title: "Martín Pérez defendió el diálogo con Sciurano y pidió naturalizar los acuerdos entre distintos espacios políticos | radiouniversidad.com.ar"
 description: "El intendente de Río Grande sostuvo que reunirse con dirigentes de otras fuerzas “no debería ser novedad” y afirmó que m"
 date: "2026-07-13T00:59:56.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/martin-perez-defendio-el-dialogo-con-sciurano-y-pidio-naturalizar-los-acuerdos-entre-distintos-espacios-politicos/"

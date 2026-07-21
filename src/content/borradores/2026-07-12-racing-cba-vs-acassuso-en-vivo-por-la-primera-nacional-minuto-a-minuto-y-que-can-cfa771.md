@@ -2,7 +2,7 @@
 title: "Racing CBA vs Acassuso, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV"
 description: "Racing CBA enfrenta a Acassuso desde las 16:00 horas. Seguilo minuto a minuto por la web de TN."
 date: "2026-07-12T19:03:28.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/12/racing-cba-vs-acassuso-en-vivo-por-la-fecha-20-de-la-primera-nacional-hora-donde-ver-y-formaciones/"

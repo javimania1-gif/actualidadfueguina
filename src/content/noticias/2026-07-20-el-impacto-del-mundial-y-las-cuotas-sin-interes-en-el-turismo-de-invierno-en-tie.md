@@ -3,7 +3,7 @@ title: "El impacto del Mundial y las cuotas sin interés en el turismo de invier
 description: "Las vacaciones de invierno reflejan un cambio en el comportamiento del consumidor en Tierra del Fuego, con un enfoque en la planificación y el presupuesto."
 date: "2026-07-20T06:52:04.664Z"
 sourcePublishedAt: "2026-07-20T05:41:03.729Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 tags: ["turismo", "vacaciones", "invierno", "Ushuaia", "economía"]
 image: "/uploads/auto/2026-07-20-5948fdea40a553a3c8.webp"

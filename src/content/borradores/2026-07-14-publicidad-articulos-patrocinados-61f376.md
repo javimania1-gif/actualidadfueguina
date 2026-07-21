@@ -2,7 +2,7 @@
 title: "Publicidad + artículos patrocinados"
 description: "Material detectado automáticamente para evaluación editorial."
 date: "2026-07-14T16:36:26.302Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/26025/publicidad-articulos-patrocinados"

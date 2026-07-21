@@ -2,7 +2,7 @@
 title: "Martín Pérez compartió un desayuno con vecinos y vecinas que celebran su cumpleaños junto a Río Grande | radiouniversidad.com.ar"
 description: "La actividad se realizó en el Polideportivo Carlos Margalot como parte de los festejos por el 105° aniversario de la ciu"
 date: "2026-07-11T18:34:22.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/martin-perez-compartio-un-desayuno-con-vecinos-y-vecinas-que-celebran-su-cumpleanos-junto-a-rio-grande/"

@@ -2,7 +2,7 @@
 title: "Conocé el cronograma de actividades por los 105 años de Río Grande - Actualidad TDF"
 description: "El Municipio invita a ser partepor un nuevo aniversario de la ciudad. El cronograma incluyó el tradicional desayuno con los cumpleañeros, el Acto Central, y continuará con dos gran"
 date: "2026-07-11T17:04:35.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/conoce-el-cronograma-de-actividades-por-los-105-anos-de-rio-grande/"

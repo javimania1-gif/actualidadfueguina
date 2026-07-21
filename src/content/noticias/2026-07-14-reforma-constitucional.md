@@ -1,7 +1,7 @@
 ---
 title: "Mónica Urquiza sobre la reforma constitucional: 'Parece más un capricho del Gobernador que una necesidad real'"
 description: "La vicegobernadora expuso fisuras en el oficialismo al cuestionar la urgencia y el millonario costo de la convocatoria a elecciones constituyentes impulsada por Melella."
-category: "Provincia"
+category: "Sociedad"
 date: 2026-07-14T17:21:55.334Z
 detectedAt: 2026-07-14T10:00:00-03:00
 author: "Redacción"

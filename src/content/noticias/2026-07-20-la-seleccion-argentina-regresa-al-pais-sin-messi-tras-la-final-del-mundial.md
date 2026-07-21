@@ -3,7 +3,7 @@ title: "La Selección Argentina Regresa al País Sin Messi Tras la Final del Mun
 description: "La delegación argentina vuelve a casa tras la derrota en la final del Mundial, pero el capitán Lionel Messi se queda en Estados Unidos."
 date: "2026-07-20T14:14:43.120Z"
 sourcePublishedAt: "2026-07-20T11:51:27.000Z"
-category: "Provincia"
+category: "Deportes"
 location: "Tierra del Fuego AIAS"
 tags: ["Selección Argentina", "Mundial", "Lionel Messi", "Fútbol", "Deportes"]
 image: "/uploads/auto/2026-07-20-e2cc643eb002d9cec0.webp"

@@ -2,7 +2,7 @@
 title: "Reino Unido: ¿Qué representa Andy Burnham en el Partido Laborista?"
 description: "El exalcalde de Manchester, Andy Burnham, fue elegido este viernes 17 de julio, sin oposición, como el nuevo líder del Partido Laborista, en reemplazo del actual primer ministro, K"
 date: "2026-07-17T20:00:13.000Z"
-category: "Mundo"
+category: "Deportes"
 location: "Internacional"
 sourceName: "France 24 Espanol"
 sourceUrl: "https://www.france24.com/es/video/20260717-reino-unido-qu%C3%A9-representa-andy-burnham-en-el-partido-laborista"

@@ -2,7 +2,7 @@
 title: "San Lorenzo vs Riestra, en vivo, por la Copa Argentina: minuto a minuto y qué canal pasa el partido por TV"
 description: "San Lorenzo enfrenta a Riestra desde las 18:45 horas del viernes 17 de julio. Podés seguirlo minuto a minuto por la web de TN."
 date: "2026-07-17T09:45:26.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/17/san-lorenzo-vs-riestra-en-vivo-por-los-dieciseisavos-de-la-copa-argentina-hora-donde-ver-y-formaciones/"

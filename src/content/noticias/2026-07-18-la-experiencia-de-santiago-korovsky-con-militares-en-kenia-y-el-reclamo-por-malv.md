@@ -3,7 +3,7 @@ title: "La experiencia de Santiago Korovsky con militares en Kenia y el reclamo 
 description: "El director de 'División Palermo' compartió un episodio que revive el debate sobre la soberanía de las Malvinas tras el Mundial."
 date: "2026-07-18T02:44:11.868Z"
 sourcePublishedAt: "2026-07-18T01:40:27.472Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags: ["Santiago Korovsky", "Malvinas", "Mundial 2026"]
 image: "/uploads/auto/2026-07-18-8a446e89601ce13236.webp"

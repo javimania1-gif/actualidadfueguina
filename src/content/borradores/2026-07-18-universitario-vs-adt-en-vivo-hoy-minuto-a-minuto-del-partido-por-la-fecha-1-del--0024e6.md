@@ -2,7 +2,7 @@
 title: "Universitario vs ADT EN VIVO HOY: minuto a minuto del partido por la fecha 1 del Torneo Clausura de la Liga 1 2026"
 description: "El equipo de Héctor Cúper enfrentará al ‘vendaval celeste’ en la altura de Tarma. Gianluca Lapadula podría debutar oficialmente con el club ‘crema’. Sigue todas las incidencias"
 date: "2026-07-18T14:53:46.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "Infobae — Nacionales"
 sourceUrl: "https://www.infobae.com/peru/deportes/2026/07/18/universitario-vs-adt-en-vivo-hoy-minuto-a-minuto-partido-fecha-1-torneo-clausura-liga-1-2026-goles-resumen-resultado/"

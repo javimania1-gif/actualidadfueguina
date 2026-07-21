@@ -2,7 +2,7 @@
 title: "Qué hacer en Tolhuin, la aldea más joven de Tierra del Fuego rodeada de lagos andinos y bosques de lengas"
 description: "Una pequeña aldea patagonica ofrece un epectacular paisaje de montañas, lagos glaciares y bosques andinos. Se llama Tolhuin, está situada en Tierra del Fuego y tiene solo 6 mil hab"
 date: "2024-07-10T17:00:00.000Z"
-category: "Tolhuin"
+category: "Sociedad"
 location: "Tolhuin"
 sourceName: "Bing News — Tolhuin"
 sourceUrl: "https://www.diariouno.com.ar/sociedad/que-hacer-tolhuin-la-aldea-mas-joven-tierra-del-fuego-rodeada-lagos-andinos-y-bosques-lengas-n1333863"

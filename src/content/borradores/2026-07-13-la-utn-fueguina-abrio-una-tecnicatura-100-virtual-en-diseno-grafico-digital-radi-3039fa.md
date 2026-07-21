@@ -2,7 +2,7 @@
 title: "La UTN fueguina abrió una tecnicatura 100% virtual en Diseño Gráfico Digital | radiouniversidad.com.ar"
 description: "La carrera impulsada por la Facultad Regional Tierra del Fuego de la Universidad Tecnológica Nacional dura dos años, tie"
 date: "2026-07-13T20:19:49.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/la-utn-fueguina-abrio-una-tecnicatura-100-virtual-en-diseno-grafico-digital/"

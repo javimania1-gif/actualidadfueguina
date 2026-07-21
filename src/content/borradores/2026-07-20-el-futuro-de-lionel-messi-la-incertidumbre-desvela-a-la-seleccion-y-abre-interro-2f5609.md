@@ -2,7 +2,7 @@
 title: "El futuro de Lionel Messi: la incertidumbre desvela a la Selección y abre interrogantes para los próximos desafíos"
 description: "La historia demuestra que el retiro de las grandes leyendas deja huellas profundas y años de sequía. El dilema de sostener el éxito colectivo ante la eventual partida del ídolo."
 date: "2026-07-20T12:27:56.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/20/el-futuro-de-lionel-messi-la-incertidumbre-desvela-a-la-seleccion-y-abre-interrogantes-para-los-proximos-desafios/"

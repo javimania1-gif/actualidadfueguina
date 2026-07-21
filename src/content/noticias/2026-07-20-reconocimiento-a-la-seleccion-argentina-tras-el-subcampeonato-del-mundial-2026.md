@@ -3,7 +3,7 @@ title: "Reconocimiento a la Selección Argentina tras el subcampeonato del Mundi
 description: "El gobernador Melella y el intendente Martín Perez expresaron su orgullo por la actuación del equipo nacional en la Copa del Mundo."
 date: "2026-07-20T03:28:11.908Z"
 sourcePublishedAt: "2026-07-20T03:27:29.975Z"
-category: "Rio Grande"
+category: "Deportes"
 location: "Río Grande"
 tags: ["Mundial 2026", "Selección Argentina", "Gustavo Melella", "Martín Perez"]
 image: "/uploads/auto/2026-07-20-0f675608f2f7aff2b0.webp"

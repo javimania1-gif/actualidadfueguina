@@ -2,7 +2,7 @@
 title: "Diego Romero advirtió que el homeschooling “rompe con el modelo inclusivo” y debilita el rol social de la escuela | radiouniversidad.com.ar"
 description: "El ex ministro de Educación de Tierra del Fuego analizó la propuesta impulsada desde sectores del Gobierno nacional y so"
 date: "2026-07-13T23:00:32.000Z"
-category: "Provincia"
+category: "Educacion"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/diego-romero-advirtio-que-el-homeschooling-rompe-con-el-modelo-inclusivo-y-debilita-el-rol-social-de-la-escuela/"

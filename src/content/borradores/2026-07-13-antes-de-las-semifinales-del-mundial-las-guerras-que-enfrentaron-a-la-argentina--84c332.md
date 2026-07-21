@@ -2,7 +2,7 @@
 title: "Antes de las semifinales del Mundial: las guerras que enfrentaron a la Argentina con Inglaterra, España y Francia"
 description: "Las cuatro selecciones que siguen en carrera en el Mundial 2026 también comparten una historia que excede al fútbol. Desde las Invasiones Inglesas hasta la Guerra de Malvinas y la "
 date: "2026-07-13T23:34:12.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/internacional/antes-de-las-semifinales-del-mundial-las-guerras-que-enfrentaron-a-la-argentina-con-inglaterra-espana-y-francia.phtml"

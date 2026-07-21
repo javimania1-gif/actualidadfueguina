@@ -3,7 +3,7 @@ title: "OSEF refuerza atención en farmacias ante aumento histórico en demanda 
 description: "La OSEF implementa medidas para mejorar la atención en farmacias debido a un incremento significativo en la demanda de medicamentos."
 date: "2026-07-19T15:00:43.970Z"
 sourcePublishedAt: "2026-07-19T14:20:30.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["OSEF", "medicamentos", "salud", "atención farmacéutica"]
 image: "/uploads/auto/2026-07-19-54f3376de951b3981d.webp"

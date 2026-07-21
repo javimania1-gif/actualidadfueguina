@@ -3,7 +3,7 @@ title: "Fortalecimiento de la Gestión en la Península Mitre: Avances y Comprom
 description: "La Secretaría de Ambiente impulsa la conservación del Área Natural Protegida Península Mitre con un plan de gestión participativo."
 date: "2026-07-20T18:09:38.807Z"
 sourcePublishedAt: "2026-07-20T17:42:16.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Península Mitre", "Conservación", "Gestión Ambiental", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-20-a0c0332512847388c8.webp"

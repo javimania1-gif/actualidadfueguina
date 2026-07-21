@@ -2,7 +2,7 @@
 title: "El ISPRG abrió una convocatoria para incorporar docentes de Inglés | radiouniversidad.com.ar"
 description: "La búsqueda está dirigida a profesores y licenciados en Inglés para cubrir cargos en espacios curriculares de la formaci"
 date: "2026-07-13T22:12:39.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/el-isprg-abrio-una-convocatoria-para-incorporar-docentes-de-ingles/"

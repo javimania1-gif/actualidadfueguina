@@ -2,7 +2,7 @@
 title: "La ONU exigió al Reino Unido que negocie con Argentina la soberanía de las Islas Malvinas"
 description: "El Comité de Descolonización de la ONU aprobó una resolución que insta al Reino Unido a negociar con Argentina la soberanía de las Islas Malvinas."
 date: 2026-06-24T17:28:00-03:00
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags:
   - Soberanía

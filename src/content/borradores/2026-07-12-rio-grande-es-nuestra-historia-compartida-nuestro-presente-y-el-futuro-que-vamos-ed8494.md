@@ -2,7 +2,7 @@
 title: "“Río Grande es nuestra historia compartida, nuestro presente y el futuro que vamos a construir juntos” | radiouniversidad.com.ar"
 description: "Lo afirmó el intendente Martín Pérez en el marco del Acto Central por el 105° aniversario de Río Grande. Durante su disc"
 date: "2026-07-12T21:15:24.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/rio-grande-es-nuestra-historia-compartida-nuestro-presente-y-el-futuro-que-vamos-a-construir-juntos/"

@@ -3,7 +3,7 @@ title: "Luis Caputo responde a Piers Morgan tras críticas a la selección argen
 description: "El ministro de Economía argentino, Luis Caputo, confronta al periodista británico Piers Morgan tras la final del Mundial 2026."
 date: "2026-07-20T06:52:21.197Z"
 sourcePublishedAt: "2026-07-20T03:56:51.000Z"
-category: "Provincia"
+category: "Deportes"
 location: "Tierra del Fuego AIAS"
 tags: ["Luis Caputo", "Piers Morgan", "Mundial 2026", "Argentina", "Malvinas"]
 image: "/uploads/auto/2026-07-20-4ac34c61a5464478a2.webp"

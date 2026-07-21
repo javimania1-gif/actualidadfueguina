@@ -2,7 +2,7 @@
 title: "Martín Perez en el aniversario de Río Grande: \"No hay desarrollo sin trabajo y no hay futuro sin comunidad\""
 description: "En el acto central por los 105 años de la ciudad, el intendente convocó a defender la industria fueguina, el empleo y la soberanía sobre Malvinas. También llamó a construir una ciu"
 date: "2026-07-13T06:58:54.208Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27867/martin-perez-en-el-aniversario-de-rio-grande-no-hay-desarrollo-sin-trabajo-y-no-"

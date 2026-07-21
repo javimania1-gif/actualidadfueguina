@@ -3,7 +3,7 @@ title: "Pronóstico de frío extremo y nevadas para Ushuaia"
 description: "Se anticipan temperaturas bajo cero y posibles nevadas en Ushuaia. El martes será el día más frío de la semana."
 date: "2026-07-12T15:02:05.850Z"
 sourcePublishedAt: "2026-07-12T15:01:49.712Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 tags: ["clima", "Ushuaia", "pronóstico", "bajo cero"]
 image: "/uploads/auto/2026-07-12-76bd86d4074b989d5f.webp"

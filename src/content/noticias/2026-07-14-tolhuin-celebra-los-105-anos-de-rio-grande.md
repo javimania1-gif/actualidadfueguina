@@ -3,7 +3,7 @@ title: "Tolhuin celebra los 105 años de Río Grande"
 description: "El Municipio de Tolhuin saluda a Río Grande en su 105° aniversario, destacando el vínculo de hermandad entre ambas ciudades fueguinas."
 date: "2026-07-14T04:23:04.902Z"
 sourcePublishedAt: "2026-07-13T17:13:30.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Río Grande", "Tolhuin", "aniversario", "hermandad"]
 image: "/uploads/auto/2026-07-14-3f28f9f29659545050.webp"

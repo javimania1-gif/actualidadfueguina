@@ -2,7 +2,7 @@
 title: "CNRT refuerza los controles en Tierra del Fuego ante la temporada de viajes estudiantiles e invernales | radiouniversidad.com.ar"
 description: "El delegado regional, Cristhian Svetlitze, destacó el trabajo coordinado con organismos nacionales y provinciales para g"
 date: "2026-07-13T22:04:23.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/cnrt-refuerza-los-controles-en-tierra-del-fuego-ante-la-temporada-de-viajes-estudiantiles-e-invernales/"

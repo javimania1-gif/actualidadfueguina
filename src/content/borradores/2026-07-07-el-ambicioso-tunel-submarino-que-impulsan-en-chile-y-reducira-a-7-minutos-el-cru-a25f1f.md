@@ -2,7 +2,7 @@
 title: "El ambicioso túnel submarino que impulsan en Chile y reducirá a 7 minutos el cruce con Tierra del Fuego"
 description: "El ambicioso proyecto chileno busca reemplazar las barcazas actuales por un túnel submarino que conecte con Tierra del Fuego."
 date: "2026-07-07T08:24:00.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Bing News — Tierra del Fuego"
 sourceUrl: "https://www.mdzol.com/tendencias/el-ambicioso-tunel-submarino-que-impulsan-chile-y-reducira-7-minutos-el-cruce-tierra-del-fuego-n1560002"

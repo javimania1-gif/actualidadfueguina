@@ -2,7 +2,7 @@
 title: "Actividades Destacadas en Río Grande para Disfrutar en Julio"
 description: "Descubre las propuestas culturales y recreativas en Río Grande durante julio, desde mercados hasta festivales y talleres."
 date: "2026-07-03T17:47:12.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 tags: ["cultura", "eventos", "comunidad", "mercado", "talleres"]
 image: "/uploads/auto/2026-07-05-f0d2bfb4c20e007eb8.jpg"

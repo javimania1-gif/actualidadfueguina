@@ -2,7 +2,7 @@
 title: "Tres bebés nacieron en el aniversario de Río Grande y serán sumados a los festejos venideros - Actualidad TDF"
 description: "En el marco de la celebración por el 105° aniversario de Río Grande, tres bebés nacieron este sábado 11 de julio, sumándose a la comunidad riograndense en una fecha de profundo sig"
 date: "2026-07-12T19:15:15.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/tres-bebes-nacieron-en-el-aniversario-de-rio-grande-y-seran-sumados-a-los-festejos-venideros/"

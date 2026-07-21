@@ -2,7 +2,7 @@
 title: "Así estará el tiempo este fin de semana en Ushuaia"
 description: "El sábado se presentará estable, con temperaturas bajo cero y poco viento. Para el domingo se espera un leve ascenso de la temperatura, aunque hacia la noche podrían registrarse ne"
 date: "2026-07-11T01:26:55.306Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27847/asi-estara-el-tiempo-este-fin-de-semana-en-ushuaia"

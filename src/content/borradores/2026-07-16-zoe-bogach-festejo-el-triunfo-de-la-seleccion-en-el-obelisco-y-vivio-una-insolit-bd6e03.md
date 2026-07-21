@@ -2,7 +2,7 @@
 title: "Zoe Bogach festejó el triunfo de la Selección en el Obelisco y vivió una insólita situación"
 description: "La ex Gran Hermano dejó de lado la tristeza por haberse quedado sin trabajo y gritó con euforia los goles de Argentina, que este domingo jugará la final del Mundial 2026."
 date: "2026-07-16T10:08:36.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/show/famosos/2026/07/16/zoe-bogach-festejo-el-triunfo-de-la-seleccion-en-el-obelisco-y-vivio-una-insolita-situacion/"

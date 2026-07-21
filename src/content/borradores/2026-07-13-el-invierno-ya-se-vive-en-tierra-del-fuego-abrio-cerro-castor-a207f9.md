@@ -2,7 +2,7 @@
 title: "El invierno ya se vive en Tierra del Fuego: abrió Cerro Castor"
 description: "El centro de esquí de Tierra del Fuego abre sus puertas con 35 pistas y 14 medios de elevación, garantizando nieve con tecnología de punta y una renovada oferta gastronómica."
 date: "2026-07-13T08:56:00.000Z"
-category: "Ushuaia"
+category: "Turismo"
 location: "Ushuaia"
 sourceName: "Bing News — Ushuaia"
 sourceUrl: "https://www.diariouno.com.ar/nieve/el-invierno-ya-se-vive-tierra-del-fuego-abrio-cerro-castor-n1574791"

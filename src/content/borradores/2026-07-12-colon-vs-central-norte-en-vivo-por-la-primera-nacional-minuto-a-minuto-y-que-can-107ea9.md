@@ -2,7 +2,7 @@
 title: "Colón vs Central Norte, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV"
 description: "Colón enfrenta a Central Norte desde las 15:30 horas. Seguilo minuto a minuto por la web de TN."
 date: "2026-07-12T19:04:28.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/12/colon-vs-central-norte-en-vivo-por-la-fecha-20-de-la-primera-nacional-hora-donde-ver-y-formaciones/"

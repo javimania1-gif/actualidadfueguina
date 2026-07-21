@@ -2,7 +2,7 @@
 title: "No, Haaland no dijo que va a alentar por Argentina ni que Inglaterra ocupa las Islas Malvinas “de forma ilegítima”"
 description: "Tras la victoria de Argentina ante Suiza en los cuartos de final del Mundial 2026, comenzó a circular un video en redes sociales del jugador noruego Erling Haaland en el que supues"
 date: "2026-07-13T11:09:00.000Z"
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 sourceName: "Bing News — Islas Malvinas"
 sourceUrl: "https://chequeado.com/ultimas-noticias/no-haaland-no-dijo-que-va-a-alentar-por-argentina-ni-que-inglaterra-ocupa-las-islas-malvinas-de-forma-ilegitima/"

@@ -2,7 +2,7 @@
 title: "\"El deporte no es la guerra\": el firme pedido de los ex combatientes de Malvinas en la previa del choque contra Inglaterra"
 description: "A horas del trascendental cruce por la Copa del Mundo 2026, la Federación de Veteranos \"2 de Abril\" lanzó un comunicado exigiendo que el fervor futbolístico no se confunda con \"rev"
 date: "2026-07-13T23:25:06.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/politica/el-deporte-no-es-la-guerra-el-firme-pedido-de-los-ex-combatientes-de-malvinas-en-la-previa-del-choque-contra-inglaterra.phtml"

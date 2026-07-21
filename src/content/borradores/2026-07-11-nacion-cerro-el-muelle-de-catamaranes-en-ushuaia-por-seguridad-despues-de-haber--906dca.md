@@ -2,7 +2,7 @@
 title: "Nación cerró el muelle de catamaranes en Ushuaia “por seguridad” después de haber operado toda la temporada - Actualidad TDF"
 description: "Tras siete meses de intervención del puerto de Ushuaia y haber operado toda la temporada de cruceros y turística, la ANPYN anunció recién la detección de “fallas de seguridad” en e"
 date: "2026-07-11T14:33:12.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Actualidad TDF"
 sourceUrl: "https://www.actualidadtdf.com.ar/nacion-cerro-el-muelle-de-catamaranes-en-ushuaia-por-seguridad-despues-de-haber-operado-toda-la-temporada/"

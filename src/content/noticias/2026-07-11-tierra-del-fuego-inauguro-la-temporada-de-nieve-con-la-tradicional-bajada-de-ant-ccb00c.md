@@ -2,7 +2,7 @@
 title: "Tierra del Fuego inauguró la temporada de nieve con la tradicional bajada de antorchas en Cerro Castor"
 description: "La Provincia dio inicio oficial a la temporada invernal 2026 con una multitudinaria participación. El evento destacó el turismo y la conectividad fueguina."
 date: "2026-07-14T19:44:37.811Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 tags: []
 image: "/uploads/auto/2026-07-14-41ad907dc0a566ff82.webp"

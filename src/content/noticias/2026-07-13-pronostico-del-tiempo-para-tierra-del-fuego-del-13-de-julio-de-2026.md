@@ -3,7 +3,7 @@ title: "Pronóstico del tiempo para Tierra del Fuego del 13 de julio de 2026"
 description: "El SMN anticipa temperaturas bajo cero y probabilidad de lluvias en Tierra del Fuego para el 13 de julio de 2026."
 date: "2026-07-13T03:20:26.500Z"
 sourcePublishedAt: "2026-07-12T22:00:36.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["pronóstico del tiempo", "Tierra del Fuego", "SMN"]
 image: "/uploads/auto/2026-07-13-1f8d94a710003187d3.webp"

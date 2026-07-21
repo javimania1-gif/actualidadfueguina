@@ -2,7 +2,7 @@
 title: "Héroes de Malvinas en las aulas: el profesor que convirtió las historias de los veteranos en cuentos para las nuevas generaciones"
 description: "El libro escrito por Jorge Flores cumple una doble función: por un lado acerca Malvinas a los niños y adolescentes y por otro es una herramienta didáctica para docentes. Las histor"
 date: "2026-07-11T06:31:48.972Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Infobae — Cobertura TdF"
 sourceUrl: "https://www.infobae.com/sociedad/2026/07/11/heroes-de-malvinas-en-las-aulas-el-profesor-que-convirtio-las-historias-de-los-veteranos-en-cuentos-para-las-nuevas-generaciones/"

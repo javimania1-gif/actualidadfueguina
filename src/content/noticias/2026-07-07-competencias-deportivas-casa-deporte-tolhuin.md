@@ -2,7 +2,7 @@
 title: "Competencias deportivas en la Casa del Deporte de Tolhuin reunieron a más de 100 participantes"
 description: "El Municipio de Tolhuin organizó una jornada de competencias en la Casa del Deporte con actividades para jóvenes y adultos de todas las disciplinas del establecimiento."
 date: 2026-07-07T12:56:00-03:00
-category: "Tolhuin"
+category: "Sociedad"
 location: "Tolhuin"
 tags:
   - Deportes

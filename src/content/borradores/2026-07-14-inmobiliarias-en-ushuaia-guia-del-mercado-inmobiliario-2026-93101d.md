@@ -2,7 +2,7 @@
 title: "Inmobiliarias en Ushuaia: guía del mercado inmobiliario 2026"
 description: "El mercado inmobiliario de Ushuaia presenta un escenario único: oferta escasa y demanda constante impulsada por inmigración laboral. Esta dinámica convierte a las inmobiliarias Ush"
 date: "2026-07-14T08:10:00.000Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Bing News — Ushuaia"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27881/inmobiliarias-en-ushuaia-guia-del-mercado-inmobiliario-2026"

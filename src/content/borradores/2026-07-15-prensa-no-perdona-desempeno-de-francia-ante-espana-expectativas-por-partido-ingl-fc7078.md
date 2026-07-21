@@ -2,7 +2,7 @@
 title: "Prensa no perdona desempeño de Francia ante España; expectativas por partido Inglaterra-Argentina"
 description: "La derrota de Francia ante España todavía sigue causando reacciones. Les Bleus se vieron pequeños ante los españoles, que ganaron 2 a 0, y la prensa internacional y deportiva no lo"
 date: "2026-07-15T16:50:07.000Z"
-category: "Mundo"
+category: "Deportes"
 location: "Internacional"
 sourceName: "France 24 Espanol"
 sourceUrl: "https://www.france24.com/es/video/20260715-prensa-no-perdona-desempe%C3%B1o-de-francia-ante-espa%C3%B1a-expectativas-por-partido-inglaterra-argentina"

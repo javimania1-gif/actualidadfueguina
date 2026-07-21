@@ -2,7 +2,7 @@
 title: "Política de privacidad"
 description: "Conozca los reglamentos"
 date: "2026-07-14T16:36:36.045Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/4832/politica-de-privacidad"

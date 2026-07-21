@@ -2,7 +2,7 @@
 title: "Francia declaró \"persona no grata\" a la vicegobernadora de Mendoza por un posteo sobre su selección"
 description: "La decisión fue tomada por la embajada francesa tras un posteo de Hebe Casado sobre la selección de ese país durante el Mundial 2026. El embajador Romain Nadal afirmó que \"el racis"
 date: "2026-07-11T20:57:20.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "Perfil — Nacionales"
 sourceUrl: "https://www.perfil.com/noticias/politica/francia-declaro-persona-no-grata-a-la-vicegobernadora-de-mendoza-por-un-posteo-sobre-su-seleccion.phtml"

@@ -2,7 +2,7 @@
 title: "Financial Times destacó la posición de Argentina ante el proyecto de ley sobre Malvinas en el Parlamento británico"
 description: "El Financial Times publicó un artículo sobre el malestar argentino ante un proyecto legislativo británico que afecta los intereses de Buenos Aires en la disputa por Malvinas."
 date: 2026-07-02T04:56:00-03:00
-category: "Malvinas"
+category: "Sociedad"
 location: "Islas Malvinas"
 tags:
   - Soberanía

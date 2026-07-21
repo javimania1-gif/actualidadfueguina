@@ -2,7 +2,7 @@
 title: "Mundial 2026, en vivo: la previa del partido contra Suiza y el choque por un lugar en semis entre España y Bélgica"
 description: "El minuto a minuto de las últimas noticias de la selección argentina, declaraciones de los jugadores y entrenadores, y repercusiones sobre los partidos - LA NACION"
 date: "2026-07-11T00:37:28.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "La Nacion - Nacionales"
 sourceUrl: "https://www.lanacion.com.ar/deportes/mundial-2026-en-vivo-nid10072026/"

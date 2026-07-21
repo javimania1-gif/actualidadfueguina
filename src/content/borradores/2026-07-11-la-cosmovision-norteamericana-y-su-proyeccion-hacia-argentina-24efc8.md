@@ -2,7 +2,7 @@
 title: "La cosmovisión norteamericana y su proyección hacia Argentina"
 description: "El repliegue geopolítico de Estados Unidos impacta de modo directo en la Patagonia, las Malvinas y la Antártida, considerados espacios estratégicos"
 date: "2026-07-11T08:01:14.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Infobae — Cobertura TdF"
 sourceUrl: "https://www.infobae.com/opinion/2026/07/11/la-cosmovision-norteamericana-y-su-proyeccion-hacia-argentina/"

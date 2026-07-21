@@ -3,7 +3,7 @@ title: "Martín Pérez critica al Gobierno tras la victoria de Argentina sobre I
 description: "El intendente de Río Grande, Martín Pérez, celebra la clasificación de Argentina y cuestiona la postura del Gobierno sobre Malvinas."
 date: "2026-07-16T14:01:53.895Z"
 sourcePublishedAt: "2026-07-16T14:01:15.180Z"
-category: "Rio Grande"
+category: "Sociedad"
 location: "Río Grande"
 tags: ["Martín Pérez", "Malvinas", "Gobierno", "Argentina", "Copa del Mundo"]
 image: "/uploads/auto/2026-07-16-a00f72e22b7a1ed620.webp"

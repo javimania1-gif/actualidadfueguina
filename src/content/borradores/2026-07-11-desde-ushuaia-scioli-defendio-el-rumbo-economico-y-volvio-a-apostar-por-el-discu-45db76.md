@@ -2,7 +2,7 @@
 title: "Desde Ushuaia, Scioli defendió el rumbo económico y volvió a apostar por el discurso de las inversiones"
 description: "Durante la Fiesta Nacional del Invierno, el secretario de Turismo aseguró que la estabilidad económica impulsada por el Gobierno genera confianza para invertir y afirmó que existen"
 date: "2026-07-11T13:27:35.033Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27854/desde-ushuaia-scioli-defendio-el-rumbo-economico-y-volvio-a-apostar-por-el-discu"

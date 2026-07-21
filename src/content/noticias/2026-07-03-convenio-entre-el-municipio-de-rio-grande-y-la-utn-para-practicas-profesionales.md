@@ -2,7 +2,7 @@
 title: "Convenio entre el Municipio de Río Grande y la UTN para prácticas profesionales"
 description: "Se firmó un acuerdo que permitirá a estudiantes de ingeniería realizar prácticas en el Municipio de Río Grande."
 date: "2026-07-03T13:00:13.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 tags: ["educación", "prácticas profesionales", "UTN", "Río Grande", "ingeniería"]
 image: "/uploads/auto/2026-07-05-a6378abb20480220b2.jpg"

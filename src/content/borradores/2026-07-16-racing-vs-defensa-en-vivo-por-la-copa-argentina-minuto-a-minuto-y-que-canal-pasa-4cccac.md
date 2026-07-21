@@ -2,7 +2,7 @@
 title: "Racing vs Defensa, en vivo, por la Copa Argentina: minuto a minuto y qué canal pasa el partido por TV"
 description: "Racing enfrenta a Defensa desde las 18:45 horas. Seguilo minuto a minuto por la web de TN."
 date: "2026-07-16T22:59:26.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/16/racing-vs-defensa-en-vivo-por-los-dieciseisavos-de-la-copa-argentina-hora-donde-ver-y-formaciones/"

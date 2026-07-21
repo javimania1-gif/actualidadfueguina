@@ -53,7 +53,8 @@ import { selectImageForNews, logImageSelection } from './lib/image-plan.mjs';
 import {
   buildEditorialAgenda,
   saveEditorialAgenda,
-  scoreCandidateNewsworthiness
+  scoreCandidateNewsworthiness,
+  inferAgendaTopic
 } from './lib/editorial-agenda.mjs';
 import {
   buildCorroborationQuery,
@@ -1370,7 +1371,7 @@ for (const candidate of verifiedCandidates) {
       aiCompleted = true;
       metrics.articlesDrafted++;
 
-      // Resolver jerarquía territorial y de ubicación determinísticamente
+      // Resolver jerarquía territorial y de ubicación determinísticamente (Escudo)
       const territoryResolution = resolvePublicationTerritory({
         title: ai.title,
         description: ai.description,
@@ -1380,7 +1381,38 @@ for (const candidate of verifiedCandidates) {
         source,
         sourceUrl: sourceRef.url || article.finalUrl
       });
-      ai.category = territoryResolution.category;
+      
+      if (territoryResolution.category === 'unknown' && territoryResolution.reason === 'discard-patagonia-leak') {
+         console.log(`  DESCARTADA por filtro geográfico estricto (Patagonia/Chile Leak): ${ai.title}`);
+         seen.items[canonicalKey] = {
+           seenAt: new Date().toISOString(),
+           status: 'discarded-editorial',
+           source: source.id,
+           editorialReason: 'discard-patagonia-leak'
+         };
+         seen.items[initialKey] = seen.items[canonicalKey];
+         continue;
+      }
+
+      // Asignar CATEGORIA TEMATICA final
+      let finalTopic = inferAgendaTopic({
+        facts: verification?.verifiedFacts || {},
+        title: ai.title,
+        category: source.forceCategory || source.defaultCategory
+      });
+      // Capitalizar (e.g. 'policiales' -> 'Policiales')
+      finalTopic = finalTopic.charAt(0).toUpperCase() + finalTopic.slice(1);
+      if (finalTopic === 'Agenda') finalTopic = 'Actualidad';
+      if (finalTopic === 'Servicios') finalTopic = 'Actualidad';
+      
+      // Override Mundo / Nacionales si es explícito territorialmente (ej: Rusia, o Congreso Nacional)
+      if (territoryResolution.category === 'Mundo' || territoryResolution.category === 'Nacionales') {
+        if (!['Deportes', 'Policiales'].includes(finalTopic)) {
+          finalTopic = territoryResolution.category;
+        }
+      }
+
+      ai.category = finalTopic;
       ai.location = territoryResolution.location;
 
       ai.importance = deriveEffectiveImportance(ai.importance, candidate.newsworthiness || {});

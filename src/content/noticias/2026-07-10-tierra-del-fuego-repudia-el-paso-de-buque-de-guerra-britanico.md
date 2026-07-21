@@ -3,7 +3,7 @@ title: "Tierra del Fuego repudia el paso de buque de guerra británico"
 description: "El Gobierno de Tierra del Fuego expresa su rechazo al tránsito del HMS Medway por aguas argentinas, considerándolo una provocación inadmisible."
 date: "2026-07-10T23:02:51.278Z"
 sourcePublishedAt: "2026-07-10T23:02:31.923Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Malvinas", "Reino Unido", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-10-9c451befb883cb0154.webp"

@@ -2,7 +2,7 @@
 title: "Nevadas en Tierra del Fuego: advierten por nieve, escarcha y sectores críticos en la Ruta Nacional 3"
 description: "El subsecretario de Seguridad Vial pidió extremar las precauciones al circular por las rutas fueguinas. Alertó sobre acumulación de nieve, escarcha y recordó que los sobrepasos ind"
 date: "2026-07-20T18:10:02.091Z"
-category: "Ushuaia"
+category: "Sociedad"
 location: "Ushuaia"
 sourceName: "Ushuaia 24"
 sourceUrl: "https://ushuaia24.com.ar/contenido/27946/nevadas-en-tierra-del-fuego-advierten-por-nieve-escarcha-y-sectores-criticos-en-"

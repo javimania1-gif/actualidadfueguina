@@ -2,7 +2,7 @@
 title: "Fe de Erratas: Argentina avanzó a cuartos de final tras vencer a Egipto, no a Ecuador"
 description: "Actualidad Fueguina rectifica la información publicada erróneamente sobre el rival de la Selección Argentina en los octavos de final del Mundial 2026."
 date: "2026-07-08T01:30:00.000Z"
-category: "Institucional"
+category: "Sociedad"
 location: "Tierra del Fuego"
 tags:
   - Fe de Erratas

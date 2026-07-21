@@ -2,7 +2,7 @@
 title: "Dock Sud vs UAI Urquiza, en vivo, por la Primera División B: minuto a minuto y qué canal pasa el partido por TV"
 description: "Dock Sud enfrenta a UAI Urquiza desde las 15:00 horas. Seguilo minuto a minuto por la web de TN."
 date: "2026-07-14T19:35:32.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "TN - Nacionales"
 sourceUrl: "https://tn.com.ar/deportes/futbol/2026/07/14/dock-sud-vs-uai-urquiza-en-vivo-por-la-fecha-25-de-la-primera-division-b-hora-donde-ver-y-formaciones/"

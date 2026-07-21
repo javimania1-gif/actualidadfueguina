@@ -2,7 +2,7 @@
 title: "El Municipio continúa desarrollando el programa “Conociendo el motor productivo”"
 description: "Noticias de Río Grande"
 date: "2026-07-13T19:27:00.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 sourceName: "Municipio de Río Grande"
 sourceUrl: "https://info.riogrande.gob.ar/el-municipio-continua-desarrollando-el-programa-conociendo-el-motor-productivo"

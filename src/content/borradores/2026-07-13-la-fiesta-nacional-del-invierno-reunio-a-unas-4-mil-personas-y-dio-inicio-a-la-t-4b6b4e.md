@@ -2,7 +2,7 @@
 title: "La Fiesta Nacional del Invierno reunió a unas 4 mil personas y dio inicio a la temporada turística fueguina | radiouniversidad.com.ar"
 description: "El evento organizado por el InFueTur y Cerro Castor marcó el lanzamiento oficial de la temporada de nieve y hielo en Tie"
 date: "2026-07-13T01:37:17.000Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/la-fiesta-nacional-del-invierno-reunio-a-unas-4-mil-personas-y-dio-inicio-a-la-temporada-turistica-fueguina/"

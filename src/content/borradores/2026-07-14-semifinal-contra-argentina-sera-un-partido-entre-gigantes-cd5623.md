@@ -2,7 +2,7 @@
 title: "\"Semifinal contra Argentina será un partido entre gigantes\""
 description: "El encuentro de Atlanta entre Argentina e Inglaterra llega cargado de historia, pero es es secundario, afirmó Harry Kane, delantero del Bayern Múnich."
 date: "2026-07-14T14:37:00.000Z"
-category: "Mundo"
+category: "Deportes"
 location: "Internacional"
 sourceName: "DW Espanol"
 sourceUrl: "https://www.dw.com/es/harry-kane-semifinal-contra-argentina-ser%C3%A1-un-partido-entre-gigantes/a-77957389?maca=spa-rss-sp-all-1122-rdf"

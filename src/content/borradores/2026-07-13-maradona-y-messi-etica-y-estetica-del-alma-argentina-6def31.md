@@ -2,7 +2,7 @@
 title: "Maradona y Messi: Ética y estética del alma argentina"
 description: "La semifinal del Mundial reactiva el recuerdo de México 86. Pero aquel partido ocurrió cuatro años después de Malvinas y este pertenece a otra Argentina, a otro fútbol y a otra man"
 date: "2026-07-13T19:01:14.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Clarín — Cobertura TdF"
 sourceUrl: "https://www.clarin.com/opinion/maradona-messi-etica-estetica-alma-argentina_0_aBiYG3k4N6.html"

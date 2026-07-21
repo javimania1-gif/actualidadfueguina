@@ -2,7 +2,7 @@
 title: "Panelista del programa de España \"El Chiringuito\": \"Argentina es la madre patria del fútbol español\""
 description: "El exfutbolista Jorge D'Alessandro analizó las diferencias futbolísticas y culturales entre Argentina y España antes de una gran final, con foco en la rivalidad entre ambas selecci"
 date: "2026-07-17T17:00:00.000Z"
-category: "Nacionales"
+category: "Deportes"
 location: "Argentina"
 sourceName: "Perfil — Nacionales"
 sourceUrl: "https://www.perfil.com/noticias/modo-fontevecchia/panelista-del-programa-de-espana-el-chiringuito-argentina-es-la-madre-patria-del-futbol-espanol-modof.phtml"

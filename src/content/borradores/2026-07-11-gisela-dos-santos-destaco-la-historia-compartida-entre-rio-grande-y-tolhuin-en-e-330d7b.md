@@ -2,7 +2,7 @@
 title: "Gisela Dos Santos destacó la historia compartida entre Río Grande y Tolhuin en el 105° aniversario de la ciudad | radiouniversidad.com.ar"
 description: "La legisladora provincial saludó a la comunidad riograndense por un nuevo aniversario de la ciudad, resaltó su aporte al"
 date: "2026-07-11T19:34:03.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "Radio Universidad"
 sourceUrl: "https://www.radiouniversidad.com.ar/gisela-dos-santos-destaco-la-historia-compartida-entre-rio-grande-y-tolhuin-en-el-105-aniversario-de-la-ciudad/"

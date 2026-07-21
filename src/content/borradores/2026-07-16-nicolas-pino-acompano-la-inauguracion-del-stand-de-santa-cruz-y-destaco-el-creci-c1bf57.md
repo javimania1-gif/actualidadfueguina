@@ -2,7 +2,7 @@
 title: "Nicolás Pino acompañó la inauguración del stand de Santa Cruz y destacó el crecimiento de la propuesta provincial - El Rompehielos"
 description: "Nicolás Pino destacó su crecimiento y la calidad de la propuesta productiva del stand de Santa Cruz en la Rural de Palermo"
 date: "2026-07-16T22:38:46.000Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 sourceName: "El Rompehielos"
 sourceUrl: "https://elrompehielos.com.ar/nicolas-pino-acompano-la-inauguracion-del-stand-de-santa-cruz-y-destaco-el-crecimiento-de-la-propuesta-provincial?utm_source=rss&utm_medium=rss&utm_campaign=nicolas-pino-acompano-la-inauguracion-del-stand-de-santa-cruz-y-destaco-el-crecimiento-de-la-propuesta-provincial"

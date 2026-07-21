@@ -2,7 +2,7 @@
 title: "Cuidar la ciudad también es hacer un uso responsable de los contenedores"
 description: "Noticias de Río Grande"
 date: "2026-07-07T12:57:07.000Z"
-category: "Río Grande"
+category: "Sociedad"
 location: "Río Grande"
 sourceName: "Municipio de Río Grande"
 sourceUrl: "https://info.riogrande.gob.ar/cuidar-la-ciudad-tambien-es-hacer-un-uso-responsable-de-los-contenedores"

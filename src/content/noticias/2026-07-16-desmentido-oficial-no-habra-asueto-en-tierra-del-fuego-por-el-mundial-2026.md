@@ -3,7 +3,7 @@ title: "Desmentido oficial: No habrá asueto en Tierra del Fuego por el Mundial 
 description: "El Gobierno de Tierra del Fuego aclara que la Administración Pública funcionará con normalidad, desmintiendo rumores sobre un asueto administrativo."
 date: "2026-07-16T23:01:21.592Z"
 sourcePublishedAt: "2026-07-16T23:00:55.105Z"
-category: "Provincia"
+category: "Sociedad"
 location: "Tierra del Fuego AIAS"
 tags: ["Gobierno", "Mundial 2026", "Asueto", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-16-ba28c276e2ba57628e.webp"

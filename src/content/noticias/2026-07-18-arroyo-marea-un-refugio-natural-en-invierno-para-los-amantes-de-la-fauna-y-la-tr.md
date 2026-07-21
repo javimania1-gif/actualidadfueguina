@@ -3,7 +3,7 @@ title: "Arroyo Marea: un refugio natural en invierno para los amantes de la faun
 description: "Arroyo Marea, en el Parque Provincial Patagonia Azul, ofrece un espacio de acampe y avistaje de fauna durante el invierno, destacando su belleza natural."
 date: "2026-07-18T14:58:18.488Z"
 sourcePublishedAt: "2026-07-18T13:13:34.000Z"
-category: "Provincia"
+category: "Turismo"
 location: "Tierra del Fuego AIAS"
 tags: ["Arroyo Marea", "Parque Provincial Patagonia Azul", "turismo", "naturaleza", "conservación"]
 image: "/uploads/auto/2026-07-18-db27c364e8033f056f.webp"
