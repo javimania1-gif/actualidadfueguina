@@ -1,135 +1,119 @@
 {
-  "generatedAt": "2026-07-21T21:16:40.417Z",
+  "generatedAt": "2026-07-21T22:15:51.440Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
-    "eventName": "schedule",
-    "runId": "29869021058",
-    "headSha": "cccf138bf895d0d15e7d82a0aadb80fc9ace8344"
+    "eventName": "push",
+    "runId": "29872922172",
+    "headSha": "20d90e3130e486d5c1e76472ee57ae628b5ccbe6"
   },
   "metrics": {
     "sourcesConfigured": 32,
     "sourcesConsulted": 32,
     "candidatesDetected": 92,
-    "candidatesIngested": 36,
-    "extractionSucceeded": 34,
-    "candidatesApproved": 21,
-    "discardedDuplicate": 9,
-    "duplicateExactUrl": 3,
+    "candidatesIngested": 25,
+    "extractionSucceeded": 23,
+    "candidatesApproved": 16,
+    "discardedDuplicate": 3,
+    "duplicateExactUrl": 1,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 6,
-    "discardedQuality": 7,
+    "duplicatePublishedEvent": 2,
+    "discardedQuality": 4,
     "discardedQualityByReason": {
-      "evergreen-or-stale-outside-news-window": 1,
-      "undated-discovery": 3,
-      "stale-dated-discovery": 2,
-      "stale-weather-forecast": 1
+      "stale-hard-news": 1,
+      "undated-discovery": 3
     },
     "discardedBySourceAndReason": {
-      "tolhuin-oficial": {
-        "evergreen-or-stale-outside-news-window": 1
+      "bing-tdf": {
+        "stale-hard-news": 1
       },
       "sur54": {
         "undated-discovery": 3
-      },
-      "nacionales-infobae": {
-        "stale-dated-discovery": 1
-      },
-      "bing-ushuaia": {
-        "stale-weather-forecast": 1
-      },
-      "bing-tdf": {
-        "stale-dated-discovery": 1
       }
     },
     "discardedGenericTitle": 0,
-    "discardedEvergreen": 3,
-    "eventsGrouped": 20,
-    "verified": 15,
+    "discardedEvergreen": 0,
+    "eventsGrouped": 16,
+    "verified": 12,
     "pendingVerification": 3,
-    "pendingMatchedFromHistory": 2,
+    "pendingMatchedFromHistory": 0,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 63
+      "conservedPublished": 64
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 1,
-    "pendingTerminalizedAttempts": 0,
+    "pendingTerminalizedExpired": 0,
+    "pendingTerminalizedAttempts": 1,
     "pendingAudit": [
       {
-        "eventKey": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
-        "title": "Mortal accidente en una central hidroeléctrica en India",
-        "sourceId": "mundo-dw",
-        "publisherDomain": "dw.com",
-        "category": "Mundo",
-        "eventType": "casualty",
-        "lane": "standard",
-        "riskLevel": "high",
-        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T00:14:53.600Z",
-        "expiresAt": "2026-07-23T17:26:16.432Z",
-        "corroborationAttempts": 2
-      },
-      {
-        "eventKey": "election|gobierno|banco central|argentina|espana|informa|2026-07-21",
-        "title": "Nueva etapa del plan económico rumbo a la final",
-        "sourceId": "nacionales-cronista",
-        "publisherDomain": "cronista.com",
-        "category": "Nacionales",
-        "eventType": "election",
-        "lane": "standard",
-        "riskLevel": "high",
-        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T00:14:53.600Z",
-        "expiresAt": "2026-07-23T02:54:40.185Z",
-        "corroborationAttempts": 4
-      },
-      {
-        "eventKey": "general|barcaza|capitan|culpable|declaro|miami|tragedia|yankelevich|2026-07-21",
-        "title": "Caso Mila Yankelevich: el capitán de la barcaza se declaró culpable por la tragedia en Miami",
-        "sourceId": "nacionales-tn",
-        "publisherDomain": "tn.com.ar",
+        "eventKey": "general|autor|carlos|contra|crimen|fiscalia|intelectual|juicio|2026-07-21",
+        "title": "Caso Carlos Manzo: Fiscalía de Michoacán va a juicio contra “El Licenciado”, presunto autor intelectual del crimen",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
         "category": "Nacionales",
         "eventType": "general",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T00:14:53.605Z",
-        "expiresAt": "2026-07-23T21:14:53.605Z",
+        "nextRetryAt": "2026-07-22T01:14:48.661Z",
+        "expiresAt": "2026-07-23T22:14:48.661Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "general|aerolineas|condena|defensa|estrategia|expropiacion|justicia|millones|2026-07-21",
+        "title": "La justicia de EE.UU. condena a pagar u$s 390 millones por la expropiación de Aerolíneas: cuál es la estrategia de la defensa",
+        "sourceId": "nacionales-cronista",
+        "publisherDomain": "cronista.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-22T01:14:48.663Z",
+        "expiresAt": "2026-07-23T22:14:48.663Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "general|algoritmo|castiga|esfuerza|quien|2026-07-21",
+        "title": "El algoritmo castiga a quien no se esfuerza",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "category": "Nacionales",
+        "eventType": "general",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-22T01:14:48.664Z",
+        "expiresAt": "2026-07-23T22:14:48.664Z",
         "corroborationAttempts": 0
       }
     ],
-    "conflicting": 2,
-    "published": 1,
-    "publishedByLane": {
-      "standard": 1
-    },
+    "conflicting": 1,
+    "published": 0,
+    "publishedByLane": {},
     "verifiedByLane": {
-      "standard": 15
+      "standard": 12
     },
     "pendingByLane": {
-      "standard": 2,
-      "strict": 1
+      "strict": 3
     },
     "eventsByTerritory": {
-      "Mundo": 15,
-      "Ushuaia": 1,
-      "Nacionales": 4
+      "Mundo": 11,
+      "Nacionales": 5
     },
     "verifiedByTerritory": {
-      "Ushuaia": 1,
-      "Mundo": 10,
-      "Nacionales": 4
+      "Nacionales": 5,
+      "Mundo": 7
     },
     "fastPendingAudit": [],
-    "freshCandidates": 27,
-    "staleDiscarded": 4,
+    "freshCandidates": 18,
+    "staleDiscarded": 1,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -193,23 +177,23 @@
       },
       "tolhuin-oficial": {
         "detected": 1,
-        "materialized": 1,
+        "materialized": 0,
         "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "degraded",
-        "issueCategory": "stale-or-evergreen",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 1,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 1
+        "staleDiscardRate": 0
       },
       "actualidad-tdf": {
         "detected": 5,
@@ -313,21 +297,21 @@
       },
       "ushuaia24": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0.25,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -413,23 +397,23 @@
       },
       "bing-ushuaia": {
         "detected": 4,
-        "materialized": 1,
+        "materialized": 0,
         "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "degraded",
-        "issueCategory": "stale-or-evergreen",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.25,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
+        "staleDiscardRate": 0
       },
       "bing-tolhuin": {
         "detected": 3,
@@ -554,22 +538,22 @@
       "nacionales-infobae": {
         "detected": 3,
         "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
+        "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
+        "staleDiscardRate": 0
       },
       "nacionales-perfil": {
         "detected": 2,
@@ -603,11 +587,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 3,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -633,8 +617,8 @@
       },
       "nacionales-cronista": {
         "detected": 3,
-        "materialized": 4,
-        "freshCandidates": 4,
+        "materialized": 3,
+        "freshCandidates": 3,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -643,37 +627,17 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 3,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.75,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-tn": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 2,
+        "materialized": 3,
         "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
@@ -684,14 +648,74 @@
         "status": "healthy",
         "issueCategory": "",
         "verifiedContribution": 2,
-        "publicationContribution": 1,
+        "publicationContribution": 0,
         "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-bbc": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-dw": {
+        "detected": 3,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-france24": {
         "detected": 3,
         "materialized": 1,
         "freshCandidates": 1,
@@ -708,46 +732,6 @@
         "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-dw": {
-        "detected": 3,
-        "materialized": 4,
-        "freshCandidates": 4,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-france24": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -773,17 +757,20 @@
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 6,
-    "modelErrors": 0,
+    "drafts": 7,
+    "modelErrors": 3,
     "publicationErrors": 0,
-    "factualValidationErrors": 4,
-    "discardedImportance": 4,
+    "factualValidationErrors": 3,
+    "discardedImportance": 2,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 0,
+    "failedRetryable": 4,
     "failedTerminal": 2,
-    "failedRetryableByReason": {},
+    "failedRetryableByReason": {
+      "short-body": 1,
+      "rate-limit": 3
+    },
     "failedTerminalByReason": {
       "http-403": 2
     },
@@ -792,151 +779,111 @@
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
-    "discardedPublicationLimit": 6,
-    "extractErrors": 2,
+    "discardedPublicationLimit": 4,
+    "extractErrors": 3,
     "imageErrors": 0,
-    "aiAttempts": 15,
-    "aiCalls": 15,
-    "articlesDrafted": 11,
-    "imagesResolved": 1,
-    "approvedForPublication": 1,
-    "imageSelections": [
-      {
-        "title": "Francia prohíbe el uso de redes sociales a menores de 15 años",
-        "strategy": "article-og",
-        "query": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
-        "score": 82,
-        "source": "https://www.clarin.com/img/2026/07/21/4diMY8RhQ_2000x1500__1.jpg"
-      }
-    ],
-    "agendaStories": 1017,
-    "newsworthinessAverage": 60,
+    "aiAttempts": 12,
+    "aiCalls": 9,
+    "articlesDrafted": 6,
+    "imagesResolved": 0,
+    "approvedForPublication": 0,
+    "imageSelections": [],
+    "agendaStories": 1015,
+    "newsworthinessAverage": 55,
     "newsworthinessTop": [
       {
-        "title": "Inspectores salieron a recorrer las veredas de Ushuaia tras las nevadas",
-        "eventKey": "weather|municipalidad de ushuaia|secretaria de politicas ambientales|municipalidad|rio grande|ushuaia|argentina|espana|informa|2026-07-21",
-        "score": 100,
+        "title": "Impactante rescate en Santa Cruz: una pareja estuvo más de 40 horas atrapada en su camioneta por la nieve y bajo -22°C",
+        "eventKey": "weather|concejo deliberante|ministerio de seguridad|santa cruz|informa|2026-07-21",
+        "score": 60,
         "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      },
-      {
-        "title": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
-        "eventKey": "legal-policy|gobierno|emmanuel macron|consejo constitucional|internacional|francia|espana|informa|2026-07-21",
-        "score": 92,
-        "topic": "politica",
-        "territory": "Mundo",
-        "lane": "standard"
-      },
-      {
-        "title": "Canje de deuda: cómo le fue al Gobierno con la conversión de letras dólar linked",
-        "eventKey": "general|canje|conversion|deuda|dolar|gobierno|letras|linked|2026-07-21",
-        "score": 87,
-        "topic": "economia",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Gianni Infantino elogió la “excelencia duradera” de la selección argentina tras el Mundial",
-        "eventKey": "general|argentina|duradera|elogio|excelencia|gianni|infantino|mundial|2026-07-21",
+        "title": "Una mayor demanda de logística farmacéutica pide inversiones de infraestructura",
+        "eventKey": "service|demanda|farmaceutica|infraestructura|inversiones|logistica|mayor|2026-07-21",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Las 3 joyas de Mendoza para aprovechar al máximo las vacaciones de invierno",
+        "eventKey": "general|aprovechar|invierno|joyas|maximo|mendoza|vacaciones|2026-07-21",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Chau papel y nuevo control de medicamentos: los puntos clave de la medida del SENASA para los veterinarios",
-        "eventKey": "service|clave|control|medicamentos|medida|nuevo|papel|puntos|2026-07-21",
-        "score": 60,
-        "topic": "servicios",
+        "title": "Nacional vs Tigre, en vivo, por la Copa Sudamericana: minuto a minuto y qué canal pasa el partido por TV",
+        "eventKey": "general|canal|minuto|nacional|partido|sudamericana|tigre|2026-07-21",
+        "score": 57,
+        "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Antiargentinismo: ¿odio real o eco de las redes sociales?",
-        "eventKey": "general|antiargentinismo|redes|sociales|2026-07-21",
+        "title": "Pablo Míguez rompió el silencio tras su abrupta salida de FC Cajamarca: “El club no se manejó de la mejor manera”",
+        "eventKey": "general|abrupta|cajamarca|manejo|manera|mejor|miguez|pablo|2026-07-21",
         "score": 55,
-        "topic": "educacion",
+        "topic": "deportes",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Naufragio de un ferry frente a las costas de Guyana: al menos 41 muertos",
-        "eventKey": "weather|gobierno de guyana|mv barima|internacional|informa|2026-07-21",
+        "title": "La agenda de la TV del miércoles: siguen los playoffs de la Copa Sudamericana, con Lanús vs. Cienciano",
+        "eventKey": "agenda|agenda|cienciano|lanus|miercoles|playoffs|siguen|sudamericana|2026-07-21",
+        "score": 55,
+        "topic": "agenda",
+        "territory": "Mundo",
+        "lane": "standard"
+      },
+      {
+        "title": "Qué es el “Sleep divorce” y por qué cada vez más famosos se unen a esta tendencia",
+        "eventKey": "service|divorce|famosos|sleep|tendencia|2026-07-21",
         "score": 55,
         "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "La bomba demográfica que amenaza las jubilaciones: por qué cada vez hay menos aportantes que sostengan el sistema",
-        "eventKey": "general|amenaza|aportantes|bomba|demografica|jubilaciones|menos|sistema|2026-07-21",
+        "title": "Con transporte aéreo se hace presente la ayuda humanitaria en Venezuela",
+        "eventKey": "service|aereo|ayuda|humanitaria|presente|transporte|venezuela|2026-07-21",
         "score": 55,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Empresas familiares: de los campos de Bahía Blanca a conquistar el mercado de carnes premium en Miami",
-        "eventKey": "general|bahia|blanca|campos|carnes|conquistar|empresas|familiares|2026-07-21",
-        "score": 52,
-        "topic": "sociedad",
+        "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "La marca de lujo favorita de los arquitectos en EE.UU. desembarca en Buenos Aires",
-        "eventKey": "general|aires|arquitectos|buenos|desembarca|favorita|marca|2026-07-21",
-        "score": 52,
-        "topic": "sociedad",
+        "title": "Casi seis millones de ucranianos se fueron de su país y la mayoría buscó refugio en países de la Unión Europea",
+        "eventKey": "territorial-sovereignty|ministerio de economia|ministerio|alto comisionado|naciones unidas|union europea|moscu|internacional|reino unido|alemania|informa|2026-07-21",
+        "score": 55,
+        "topic": "politica",
+        "territory": "Mundo",
+        "lane": "standard"
+      },
+      {
+        "title": "Legisladores de LLA y el PRO presentaron un proyecto para arancelar la salud y la educación a extranjeros en la Provincia",
+        "eventKey": "service|arancelar|educacion|extranjeros|legisladores|presentaron|provincia|proyecto|2026-07-21",
+        "score": 55,
+        "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       }
     ],
-    "corroborationSearches": 3,
-    "corroborationFound": 2,
+    "corroborationSearches": 0,
+    "corroborationFound": 0,
     "corroborationVerified": 0,
-    "corroborationConflicts": 1,
-    "corroborationNoResult": 2,
-    "corroborationAttempts": [
-      {
-        "eventKey": "election|daniel ortega|internacional|argentina|venezuela|advierte|2026-07-21",
-        "title": "EE.UU. advierte a Daniel Ortega que no se quedará \"de brazos cruzados\" ante el anuncio de que no habrá más elecciones en Nicaragua - BBC News Mundo",
-        "priorityRank": 1,
-        "corroborationQuery": "Daniel Ortega Argentina Venezuela Estados Unidos Espana elecciones resultado advierte anuncio brazos cruzados daniel",
-        "corroborationReason": "newsworthiness=94; freshness=21h; territory=Mundo; impact=14; corroborability=10; pendingAge=21h; attempts=0",
-        "found": 2,
-        "verified": false,
-        "status": "conflicting-sources"
-      },
-      {
-        "eventKey": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
-        "title": "Mortal accidente en una central hidroeléctrica en India",
-        "priorityRank": 2,
-        "corroborationQuery": "India Al Gobierno de Sikkim accidente central hidroelectrica india mortal",
-        "corroborationReason": "newsworthiness=90; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=4h; attempts=1",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
-      },
-      {
-        "eventKey": "election|gobierno|banco central|argentina|espana|informa|2026-07-21",
-        "title": "Nueva etapa del plan económico rumbo a la final",
-        "priorityRank": 3,
-        "corroborationQuery": "Gobierno Banco Central Argentina Espana elecciones resultado economico etapa final nueva rumbo",
-        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=18h; attempts=3",
-        "found": 0,
-        "verified": false,
-        "status": "no-result"
-      }
-    ],
+    "corroborationConflicts": 0,
+    "corroborationNoResult": 0,
+    "corroborationAttempts": [],
     "conflictsByField": {
-      "percentages": 1,
-      "dates": 4
+      "dates": 1
     },
-    "criticalConflicts": 5,
+    "criticalConflicts": 1,
     "nonCriticalDifferences": 0,
-    "resolvedComplementaryFacts": 14,
+    "resolvedComplementaryFacts": 6,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 64,
@@ -957,27 +904,25 @@
         "max": 2121.9
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 818,
-        "avg": 45.7,
+        "count": 815,
+        "avg": 45.9,
         "p50": 0,
         "max": 2737.6
       },
       "cohort": {
         "comparablePublishedCount": 64,
-        "verifiedWithoutPublicationCount": 754,
+        "verifiedWithoutPublicationCount": 751,
         "publicationWithoutVerifiedAtCount": 0,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {
-      "Mundo": 1
-    },
-    "publishedLast3hBeforeRun": 2,
-    "publishedLast6hBeforeRun": 5,
-    "publishedLast12hBeforeRun": 7,
+    "byCategory": {},
+    "publishedLast3hBeforeRun": 3,
+    "publishedLast6hBeforeRun": 6,
+    "publishedLast12hBeforeRun": 8,
     "publishedLast24hBeforeRun": 16,
-    "hoursSinceLastPublicationBeforeRun": 1.8,
+    "hoursSinceLastPublicationBeforeRun": 1,
     "dailyTarget": {
       "min": 12,
       "max": 16,
@@ -988,6 +933,25 @@
       "effectiveRunMaxNormal": 0
     },
     "agendaTop": [
+      {
+        "storyId": "service|clave|control|medicamentos|medida|nuevo|papel|puntos|2026-07-21",
+        "headlineSeed": "Chau papel y nuevo control de medicamentos: los puntos clave de la medida del SENASA para los veterinarios",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "verified-standard-single-source",
+        "scoreBreakdown": {
+          "publicInterest": 24,
+          "localRelevance": 22,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 4,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "weather-forecast|2026-07-21|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 21 de julio de 2026",
@@ -1021,7 +985,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 8,
           "diversity": 4
         }
@@ -1063,35 +1027,16 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|aisladas|algunas|catastrofe|chile|declaran|estado|fuertes|2026-07-20",
-        "headlineSeed": "Declaran estado de \"catástrofe\" en algunas zonas de Chile por fuertes temporales: hay 5 muertos y 100.000 personas aisladas",
-        "topic": "servicios",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "published",
-        "scoreBreakdown": {
-          "publicInterest": 23,
-          "localRelevance": 7,
-          "impactMagnitude": 23,
-          "serviceValue": 20,
-          "socialPotential": 4,
-          "searchPotential": 15,
-          "recency": 9,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ],
-    "agendaInvalidStories": 21,
+    "agendaInvalidStories": 20,
     "technicalSuccess": true,
-    "editorialOutcome": "published",
+    "editorialOutcome": "publication-limit",
     "sourceHealthSummary": {
       "configured": 32,
       "consulted": 32,
       "healthy": 29,
-      "productive": 12,
+      "productive": 9,
       "noResults": 3,
       "failed": 0
     }
@@ -1100,8 +1045,8 @@
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 15,
-    "discoveryAiBudget": 15,
+    "discoveryAiUsed": 12,
+    "discoveryAiBudget": 12,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1115,16 +1060,17 @@
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
     "publishedLast24hBeforeRun": 16,
-    "candidatesMaterialized": 36,
-    "totalCandidatesBeforeLimit": 36
+    "candidatesMaterialized": 25,
+    "totalCandidatesBeforeLimit": 25
   },
   "reasonNoMorePublished": [
     "3 evento(s) quedaron pendientes de segunda fuente",
-    "2 evento(s) tuvieron conflicto factual",
-    "9 candidato(s) descartados por duplicado/similitud",
-    "7 candidato(s) descartados por causas especificas (evergreen-or-stale-outside-news-window: 1, undated-discovery: 3, stale-dated-discovery: 2, stale-weather-forecast: 1)",
-    "4 candidato(s) descartados por importancia editorial",
-    "6 candidato(s) quedaron por cupo editorial de corrida",
-    "4 candidato(s) bloqueados por validacion factual"
+    "1 evento(s) tuvieron conflicto factual",
+    "3 candidato(s) descartados por duplicado/similitud",
+    "4 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 3)",
+    "2 candidato(s) descartados por importancia editorial",
+    "4 candidato(s) quedaron por cupo editorial de corrida",
+    "3 candidato(s) bloqueados por validacion factual",
+    "3 error(es) reales de modelo"
   ]
 }

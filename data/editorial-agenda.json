@@ -1,44 +1,63 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T21:16:40.124Z",
+  "generatedAt": "2026-07-21T22:15:51.166Z",
   "summary": {
-    "totalStories": 1017,
+    "totalStories": 1015,
     "byStatus": {
-      "agenda-invalid": 21,
-      "conflicting-sources": 46,
+      "verified-standard-single-source": 695,
+      "agenda-invalid": 20,
+      "conflicting-sources": 44,
       "published": 63,
-      "verified-standard-single-source": 697,
-      "pending-verification": 47,
-      "rejected-terminal": 104,
+      "pending-verification": 49,
+      "rejected-terminal": 105,
       "verified-strict": 31,
       "verified-local-routine": 2,
       "verified-standard": 6
     },
     "byTopic": {
-      "servicios": 140,
-      "politica": 137,
-      "sociedad": 363,
+      "servicios": 143,
+      "politica": 136,
+      "sociedad": 362,
       "deportes": 239,
-      "agenda": 12,
+      "agenda": 13,
       "turismo": 6,
       "policiales": 39,
-      "economia": 53,
-      "educacion": 26,
+      "economia": 51,
+      "educacion": 24,
       "salud": 1,
       "cultura": 1
     },
     "byTerritory": {
+      "Provincia": 81,
       "Ushuaia": 11,
       "Rio Grande": 4,
       "Tolhuin": 2,
-      "Mundo": 592,
-      "Provincia": 78,
-      "Nacionales": 313,
+      "Mundo": 587,
+      "Nacionales": 314,
       "Antartida": 6,
-      "Malvinas": 11
+      "Malvinas": 10
     },
-    "invalidStories": 21,
+    "invalidStories": 20,
     "topStories": [
+      {
+        "storyId": "service|clave|control|medicamentos|medida|nuevo|papel|puntos|2026-07-21",
+        "headlineSeed": "Chau papel y nuevo control de medicamentos: los puntos clave de la medida del SENASA para los veterinarios",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "verified-standard-single-source",
+        "scoreBreakdown": {
+          "publicInterest": 24,
+          "localRelevance": 22,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 4,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "weather-forecast|2026-07-21|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 21 de julio de 2026",
@@ -72,7 +91,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 8,
           "diversity": 4
         }
@@ -209,29 +228,95 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "weather|ministerio de salud|gobierno|policia nacional de|internacional|argentina|peru|informa|2026-07-19",
-        "headlineSeed": "Un sismo de magnitud 5.5 sacudió Perú: hay al menos seis muertos y 20 heridos",
-        "topic": "servicios",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 7,
-          "impactMagnitude": 23,
-          "serviceValue": 20,
-          "socialPotential": 4,
-          "searchPotential": 15,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|clave|control|medicamentos|medida|nuevo|papel|puntos|2026-07-21",
+      "headlineSeed": "Chau papel y nuevo control de medicamentos: los puntos clave de la medida del SENASA para los veterinarios",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Gobierno"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T21:14:53.606Z",
+      "lastSeenAt": "2026-07-21T21:14:53.606Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 24,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 24,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather|gobierno de guyana|mv barima|internacional|informa|2026-07-21",
+      "headlineSeed": "Naufragio de un ferry frente a las costas de Guyana: al menos 41 muertos",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "MV Barima",
+        "Gobierno de Guyana",
+        "Internacional"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-21T21:14:53.602Z",
+      "lastSeenAt": "2026-07-21T21:14:53.602Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "agenda-invalid",
+      "sourceStatus": "verified-standard-single-source",
+      "validationReasons": [
+        "story-headline-mismatch"
+      ]
+    },
     {
       "storyId": "weather|municipalidad de ushuaia|secretaria de politicas ambientales|municipalidad|rio grande|ushuaia|argentina|espana|informa|2026-07-21",
       "headlineSeed": "Inspectores salieron a recorrer las veredas de Ushuaia tras las nevadas",
@@ -351,7 +436,7 @@
         "A"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -365,7 +450,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 8,
         "diversity": 4
       },
@@ -1169,48 +1254,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|ceder|europea|evitar|millonaria|multa|union|2026-07-18",
-      "headlineSeed": "Elon Musk tuvo que ceder ante la Unión Europea para evitar una multa millonaria",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Elon Musk",
-        "Unión Europea",
-        "Internacional"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-19T02:57:35.770Z",
-      "lastSeenAt": "2026-07-19T02:57:35.770Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "weather-forecast|2026-07-18|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 18 de julio de 2026",
       "topic": "servicios",
@@ -1301,55 +1344,6 @@
       },
       "newsworthinessScore": 95,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|policia|policia provincial|ministerio publico fiscal|matias gomez|rio grande|ushuaia|argentina|espana|informa|2026-07-21",
-      "headlineSeed": "Ushuaia | Volvió a caer un conocido ladrón con múltiples causas por robos y hurtos",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Ushuaia",
-      "primaryEntities": [
-        "Matías Gómez",
-        "Policia",
-        "Policía Provincial",
-        "Ministerio Público Fiscal",
-        "Justicia",
-        "Justicia Federal",
-        "Gobierno",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-21T15:50:37.226Z",
-      "lastSeenAt": "2026-07-21T19:26:13.337Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 5,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 11,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 25,
-        "impactMagnitude": 5,
-        "serviceValue": 3,
-        "socialPotential": 11,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 94,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -1691,6 +1685,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "legal-policy|gobierno|emmanuel macron|consejo constitucional|internacional|francia|espana|informa|2026-07-21",
+      "headlineSeed": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Emmanuel Macron",
+        "Consejo Constitucional",
+        "Gobierno",
+        "Internacional",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-21T21:14:53.602Z",
+      "lastSeenAt": "2026-07-21T21:14:53.602Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|gobierno|banco central la|camara de diputados|inocencia fiscal|buenos aires|presenta|2026-07-21",
       "headlineSeed": "Tras el Mundial, el Gobierno reunió a la mesa política y definió presentar la reforma del Banco Central la próxima semana",
       "topic": "deportes",
@@ -1933,6 +1972,55 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|policia|policia provincial|ministerio publico fiscal|matias gomez|rio grande|ushuaia|argentina|espana|informa|2026-07-21",
+      "headlineSeed": "Ushuaia | Volvió a caer un conocido ladrón con múltiples causas por robos y hurtos",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "Matías Gómez",
+        "Policia",
+        "Policía Provincial",
+        "Ministerio Público Fiscal",
+        "Justicia",
+        "Justicia Federal",
+        "Gobierno",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-21T15:50:37.226Z",
+      "lastSeenAt": "2026-07-21T19:26:13.337Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 11,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 25,
+        "impactMagnitude": 5,
+        "serviceValue": 3,
+        "socialPotential": 11,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|otan y|gobierno|union europea|guerra fria|moscu|internacional|estados unidos|informa|2026-07-20",
       "headlineSeed": "El dilema del rearme europeo: se protege de Rusia, pero beneficia a China y a Vladimir Putin",
       "topic": "politica",
@@ -2061,6 +2149,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "service|ceder|europea|evitar|millonaria|multa|union|2026-07-18",
+      "headlineSeed": "Elon Musk tuvo que ceder ante la Unión Europea para evitar una multa millonaria",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Elon Musk",
+        "Unión Europea",
+        "Internacional"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-19T02:57:35.770Z",
+      "lastSeenAt": "2026-07-19T02:57:35.770Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "crime|fiscalia|mara salvatrucha hay|internacional|informa|2026-07-15",
       "headlineSeed": "El Salvador: con un pedido de miles de años de cárcel termina el juicio masivo a los jefes de la pandilla Mara Salvatrucha",
       "topic": "policiales",
@@ -2098,94 +2228,6 @@
       },
       "newsworthinessScore": 91,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
-      "headlineSeed": "Mortal accidente en una central hidroeléctrica en India",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "India Al",
-        "Gobierno de Sikkim",
-        "Internacional"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-21T17:26:16.432Z",
-      "lastSeenAt": "2026-07-21T21:14:53.600Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|gobierno de la|fiscalia de|gobierno|abderrahim fakir|internacional|italia|espana|investiga|2026-07-21",
-      "headlineSeed": "Protestas en Italia tras la muerte de un marroquí detenido por la policía: Meloni pidió investigar responsabilidades pero rechazó la violencia contra las fuerzas de seguridad",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Abderrahim Fakir",
-        "Gobierno de la",
-        "Fiscalía de",
-        "Gobierno",
-        "Internacional",
-        "Italia",
-        "Espana"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-21T17:26:16.433Z",
-      "lastSeenAt": "2026-07-21T17:26:16.433Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 90,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2319,91 +2361,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|policia|gustavo petro|internacional|colombia|estados unidos|informa|2026-07-21",
-      "headlineSeed": "Gustavo Petro se despide del poder en Colombia con llamado a una huelga general contra Abelardo De la Espriella",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gustavo Petro",
-        "Colombia",
-        "Estados Unidos"
-      ],
-      "eventType": "election",
-      "firstSeenAt": "2026-07-21T19:26:13.340Z",
-      "lastSeenAt": "2026-07-21T19:26:13.340Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legal-policy|donald trump|internacional|mexico|estados unidos|informa|2026-07-20",
-      "headlineSeed": "Donald Trump impone aranceles del 50% a la mayoría de las importaciones de Canadá",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Internacional",
-        "Mexico",
-        "Estados Unidos"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-20T23:05:38.981Z",
-      "lastSeenAt": "2026-07-20T23:05:38.981Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "legal-policy|secretaria de ambiente de|ministerio de produccion y ambiente|secretaria de ambiente|rea natural protegida peninsula|comision consultiva|natural protegida|tierra del f",
       "headlineSeed": "GOBIERNO FORTALECE LAS HERRAMIENTAS PARA LA CONSERVACIÓN DEL ÁREA NATURAL PROTEGIDA PENÍNSULA MITRE",
       "topic": "politica",
@@ -2494,51 +2451,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|gobierno|emmanuel macron|consejo constitucional|internacional|francia|espana|informa|2026-07-21",
-      "headlineSeed": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Emmanuel Macron",
-        "Consejo Constitucional",
-        "Gobierno",
-        "Internacional",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-21T21:14:53.602Z",
-      "lastSeenAt": "2026-07-21T21:14:53.602Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 0
-      },
-      "newsworthinessScore": 88,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|argentina|armadas|cazas|compra|fuerzas|guerra|helicopteros|2026-07-21",
       "headlineSeed": "Argentina se REARMA y compra cazas de guerra, tanques y helicópteros para sus FUERZAS ARMADAS: todas las novedades",
       "topic": "sociedad",
@@ -2579,46 +2491,6 @@
       },
       "newsworthinessScore": 88,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|onu|ministerio de asuntos exteriores de india|ucrania segun|derechos humanos|moscu|internacional|informa|2026-07-21",
-      "headlineSeed": "Las muertes de civiles se disparan en la primera mitad de 2026 en la guerra entre Rusia y Ucrania",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "ONU"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-21T15:50:37.228Z",
-      "lastSeenAt": "2026-07-21T15:50:37.228Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 88,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -2841,45 +2713,91 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|canje|conversion|deuda|dolar|gobierno|letras|linked|2026-07-21",
-      "headlineSeed": "Canje de deuda: cómo le fue al Gobierno con la conversión de letras dólar linked",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
+      "storyId": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
+      "headlineSeed": "Mortal accidente en una central hidroeléctrica en India",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Gobierno",
-        "Ministerio de Economía",
-        "Secretaría de Finanzas"
+        "India Al",
+        "Gobierno de Sikkim",
+        "Internacional"
       ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-21T21:14:53.605Z",
-      "lastSeenAt": "2026-07-21T21:14:53.605Z",
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-21T17:26:16.432Z",
+      "lastSeenAt": "2026-07-21T21:14:53.600Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
         "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
         "serviceValue": 3,
-        "socialPotential": 4,
+        "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 87,
-      "status": "verified-standard-single-source",
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|gobierno de la|fiscalia de|gobierno|abderrahim fakir|internacional|italia|espana|investiga|2026-07-21",
+      "headlineSeed": "Protestas en Italia tras la muerte de un marroquí detenido por la policía: Meloni pidió investigar responsabilidades pero rechazó la violencia contra las fuerzas de seguridad",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Abderrahim Fakir",
+        "Gobierno de la",
+        "Fiscalía de",
+        "Gobierno",
+        "Internacional",
+        "Italia",
+        "Espana"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-21T17:26:16.433Z",
+      "lastSeenAt": "2026-07-21T17:26:16.433Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -3138,7 +3056,49 @@
         "diversity": 4
       },
       "newsworthinessScore": 86,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|policia|gustavo petro|internacional|colombia|estados unidos|informa|2026-07-21",
+      "headlineSeed": "Gustavo Petro se despide del poder en Colombia con llamado a una huelga general contra Abelardo De la Espriella",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gustavo Petro",
+        "Colombia",
+        "Estados Unidos"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-21T19:26:13.340Z",
+      "lastSeenAt": "2026-07-21T19:26:13.340Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -3222,6 +3182,89 @@
         "diversity": 4
       },
       "newsworthinessScore": 86,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|donald trump|internacional|mexico|estados unidos|informa|2026-07-20",
+      "headlineSeed": "Donald Trump impone aranceles del 50% a la mayoría de las importaciones de Canadá",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Donald Trump",
+        "Internacional",
+        "Mexico",
+        "Estados Unidos"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-20T23:05:38.981Z",
+      "lastSeenAt": "2026-07-20T23:05:38.981Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|onu|ministerio de asuntos exteriores de india|ucrania segun|derechos humanos|moscu|internacional|informa|2026-07-21",
+      "headlineSeed": "Las muertes de civiles se disparan en la primera mitad de 2026 en la guerra entre Rusia y Ucrania",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "ONU"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-21T15:50:37.228Z",
+      "lastSeenAt": "2026-07-21T15:50:37.228Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 85,
       "status": "conflicting-sources",
       "validationReasons": []
     },
@@ -3708,48 +3751,6 @@
       },
       "newsworthinessScore": 83,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|espana|2026-07-20|1-0",
-      "headlineSeed": "Scaloni, hasta cuando se equivoca, genera admiración: es un DT que (también) decide con el corazón",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Espana",
-        "Francia"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-20T06:51:51.800Z",
-      "lastSeenAt": "2026-07-20T10:57:01.045Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 83,
-      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -5186,6 +5187,48 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|canje|conversion|deuda|dolar|gobierno|letras|linked|2026-07-21",
+      "headlineSeed": "Canje de deuda: cómo le fue al Gobierno con la conversión de letras dólar linked",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Gobierno",
+        "Ministerio de Economía",
+        "Secretaría de Finanzas"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T21:14:53.605Z",
+      "lastSeenAt": "2026-07-21T21:14:53.605Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 79,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|ministerio de vivienda y comunidades de|ministerio de empresa|andy burnham|gran bretana|keir starmer|paris|internacional|informa|2026-07-21",
       "headlineSeed": "Andy Burnham toma las riendas en Gran Bretaña con una purga de ministros y un regreso a las bases del Laborismo",
       "topic": "politica",
@@ -5232,29 +5275,25 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|lionel scaloni|argentina|egipto|informa|2026-07-18",
-      "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
+      "storyId": "sports-result|argentina|espana|2026-07-20|1-0",
+      "headlineSeed": "Scaloni, hasta cuando se equivoca, genera admiración: es un DT que (también) decide con el corazón",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Lionel Scaloni",
         "Argentina",
-        "Egipto",
-        "Inglaterra",
-        "Francia",
         "Espana",
-        "Suiza"
+        "Francia"
       ],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-19T22:58:57.164Z",
-      "lastSeenAt": "2026-07-20T03:27:51.813Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "firstSeenAt": "2026-07-20T06:51:51.800Z",
+      "lastSeenAt": "2026-07-20T10:57:01.045Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
+      "editorialLane": "strict",
       "freshness": "recent-context",
       "publicInterestScore": 8,
       "localRelevanceScore": 12,
@@ -5274,7 +5313,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 79,
-      "status": "pending-verification",
+      "status": "verified-strict",
       "validationReasons": []
     },
     {
@@ -7312,6 +7351,52 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|lionel scaloni|argentina|egipto|informa|2026-07-18",
+      "headlineSeed": "La madre de todas las batallas que Lionel Scaloni ya ganó (Parte 2)",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Lionel Scaloni",
+        "Argentina",
+        "Egipto",
+        "Inglaterra",
+        "Francia",
+        "Espana",
+        "Suiza"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-19T22:58:57.164Z",
+      "lastSeenAt": "2026-07-20T03:27:51.813Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "international-conflict|medio oriente|guardia revolucionaria|internacional|estados unidos|informa|2026-07-19",
       "headlineSeed": "Conflicto en Medio Oriente: Estados Unidos bombardeó instalaciones de la Guardia Revolucionaria de Irán",
       "topic": "politica",
@@ -8165,46 +8250,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|moscu|estados unidos|informa|2026-07-14",
-      "headlineSeed": "Estados Unidos completó la cuarta ola de ataques contra Irán y comenzó el bloqueo naval sobre sus puertos y costas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-15T02:42:20.319Z",
-      "lastSeenAt": "2026-07-15T02:42:20.319Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|frena|justicia|megafusion|paramount|temporalmente|warner|2026-07-21",
       "headlineSeed": "Justicia de EE.UU. frena temporalmente la megafusión entre Paramount y Warner Bros.",
       "topic": "sociedad",
@@ -8246,46 +8291,6 @@
       },
       "newsworthinessScore": 73,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "crime|gobierno|fuerzas armadas|estados unidos|informa|2026-07-18",
-      "headlineSeed": "Irán atacó una base de Estados Unidos en Jordania: murieron dos militares y otro permanece desaparecido",
-      "topic": "policiales",
-      "subtopic": "policiales",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Estados Unidos"
-      ],
-      "eventType": "crime",
-      "firstSeenAt": "2026-07-18T22:55:08.519Z",
-      "lastSeenAt": "2026-07-18T22:55:08.519Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 0,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -9556,6 +9561,46 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|gobierno|fuerzas armadas|estados unidos|informa|2026-07-18",
+      "headlineSeed": "Irán atacó una base de Estados Unidos en Jordania: murieron dos militares y otro permanece desaparecido",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Estados Unidos"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-18T22:55:08.519Z",
+      "lastSeenAt": "2026-07-18T22:55:08.519Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 0,
+        "socialPotential": 4,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|argentina|river plate|2026-07-17|3-1",
       "headlineSeed": "Sorpresa en la Copa Argentina: River Plate perdió 3-1 ante Aldosivi y quedó eliminado",
       "topic": "deportes",
@@ -10069,50 +10114,6 @@
       },
       "newsworthinessScore": 67,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|espana|francia|2026-07-15|2-0",
-      "headlineSeed": "En imágenes: la emoción y tristeza que deja el duelo entre España y Francia en el Mundial",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Mikel Oyarzabal",
-        "Francia",
-        "Espana",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-15T06:19:29.072Z",
-      "lastSeenAt": "2026-07-15T06:19:29.072Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -10912,49 +10913,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|malvinas|argentina|inglaterra|informa|2026-07-15",
-      "headlineSeed": "Argentina vs Inglaterra, en datos: de las asimetrías socio-económicas a la histórica ocupación de Malvinas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Suiza"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-15T06:19:29.071Z",
-      "lastSeenAt": "2026-07-15T06:19:29.071Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 62,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|falta|hasta|inmobiliario|margen|mercado|multiplicarse|ocurra|2026-07-21",
       "headlineSeed": "El mercado inmobiliario de Pinamar tiene margen para multiplicarse hasta 5 veces: qué falta para que ocurra",
       "topic": "sociedad",
@@ -11299,17 +11257,21 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|clave|control|medicamentos|medida|nuevo|papel|puntos|2026-07-21",
-      "headlineSeed": "Chau papel y nuevo control de medicamentos: los puntos clave de la medida del SENASA para los veterinarios",
-      "topic": "servicios",
-      "subtopic": "servicios",
+      "storyId": "general|aprovechar|invierno|joyas|maximo|mendoza|vacaciones|2026-07-21",
+      "headlineSeed": "Las 3 joyas de Mendoza para aprovechar al máximo las vacaciones de invierno",
+      "topic": "deportes",
+      "subtopic": "deportes",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Gobierno"
+        "Cámara de Turismo de Mendoza",
+        "Club Mendoza de Regatas y los",
+        "Cámara de Turismo de Mendoza La",
+        "Argentina",
+        "Uruguay"
       ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-21T21:14:53.606Z",
-      "lastSeenAt": "2026-07-21T21:14:53.606Z",
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T22:14:48.664Z",
+      "lastSeenAt": "2026-07-21T22:14:48.664Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -11317,18 +11279,98 @@
       ],
       "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 24,
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|demanda|farmaceutica|infraestructura|inversiones|logistica|mayor|2026-07-21",
+      "headlineSeed": "Una mayor demanda de logística farmacéutica pide inversiones de infraestructura",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T22:14:48.663Z",
+      "lastSeenAt": "2026-07-21T22:14:48.663Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 20,
       "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
+      "searchPotentialScore": 12,
       "scoreBreakdown": {
-        "publicInterest": 24,
+        "publicInterest": 21,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 20,
         "socialPotential": 4,
+        "searchPotential": 12,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather|concejo deliberante|ministerio de seguridad|santa cruz|informa|2026-07-21",
+      "headlineSeed": "Impactante rescate en Santa Cruz: una pareja estuvo más de 40 horas atrapada en su camioneta por la nieve y bajo -22°C",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Santa Cruz",
+        "Concejo Deliberante",
+        "Ministerio de Seguridad"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-21T22:14:48.661Z",
+      "lastSeenAt": "2026-07-21T22:14:48.661Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
         "searchPotential": 15,
         "recency": 15,
         "sourceStrength": 3,
@@ -11627,7 +11669,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -11641,7 +11683,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -13326,47 +13368,6 @@
       },
       "newsworthinessScore": 60,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|alerta|amarilla|julio|provincias|tormentas|viernes|2026-07-17",
-      "headlineSeed": "Hay alerta amarilla por tormentas en 3 provincias para hoy, viernes 17 de julio",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "SMN",
-        "Buenos Aires"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-17T10:02:06.708Z",
-      "lastSeenAt": "2026-07-17T10:02:06.708Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     }
   ]
