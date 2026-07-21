@@ -38,6 +38,14 @@ export function resolvePublicationTerritory({
     }
   }
 
+  // 1.5 Strict Geographic Guillotine (Discard Santa Cruz / Patagonia leaks)
+  if (/\b(santa cruz|chubut|neuquen|rio negro|la pampa|rio gallegos|arroyo marea|cabo virgenes|punta arenas|magallanes)\b/i.test(explicitText)) {
+    // If it's not a major national/sports event, discard it
+    if (!/\b(congreso|senado|diputados|presidente argentino|gobierno nacional|milei|caputo|seleccion argentina|afa|mundial)\b/i.test(explicitText)) {
+      return { category: 'unknown', location: 'Patagonia/Chile', confidence: 'high', reason: 'discard-patagonia-leak' };
+    }
+  }
+
   // 2. High confidence explicit locations from central facts (title/description/lead)
   
   // Foreign indicators
@@ -58,7 +66,7 @@ export function resolvePublicationTerritory({
   }
 
   // Nacionales
-  if (/\b(congreso|senado|diputados|presidente argentino|gobierno nacional|buenos aires|cordoba|mendoza|chaco|rosario|santa fe|tucuman|salta|jujuy|santa cruz|chubut|neuquen|rio negro|la pampa|rio gallegos|arroyo marea|banco central|bcra|javier milei|milei|ravier|adrian ravier|luis caputo|caputo|adorni|seleccion argentina|afa|mundial|messi|scaloni|copa del mundo)\b/i.test(explicitText)) {
+  if (/\b(congreso|senado|diputados|presidente argentino|gobierno nacional|buenos aires|cordoba|mendoza|chaco|rosario|santa fe|tucuman|salta|jujuy|banco central|bcra|javier milei|milei|ravier|adrian ravier|luis caputo|caputo|adorni|seleccion argentina|afa|mundial|messi|scaloni|copa del mundo)\b/i.test(explicitText)) {
     if (!/\b(tierra del fuego|ushuaia|rio grande|tolhuin|antartida|malvinas)\b/i.test(explicitText)) {
       return { category: 'Nacionales', location: 'Argentina', confidence: 'high', reason: 'explicit-national' };
     }

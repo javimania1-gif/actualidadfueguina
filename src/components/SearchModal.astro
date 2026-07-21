@@ -1,0 +1,151 @@
+---
+---
+<div id="search-modal" class="search-modal" aria-hidden="true">
+  <div class="search-modal-content">
+    <div class="search-header">
+      <input type="text" id="search-input" placeholder="Buscar noticias..." autocomplete="off" />
+      <button id="close-search" aria-label="Cerrar buscador">&times;</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<style>
+  .search-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .search-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .search-modal-content {
+    background: var(--color-bg);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  .search-header {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .search-header input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+  }
+  .search-header button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+  .search-results {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  .search-result-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+  }
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+  .search-result-item img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .search-result-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+  .search-result-info p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+</style>
+
+<script>
+  let searchIndex = [];
+  const modal = document.getElementById('search-modal');
+  const input = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('search-results');
+  const closeBtn = document.getElementById('close-search');
+  
+  // Listen for custom event from nav
+  document.addEventListener('open-search', async () => {
+    modal.classList.add('active');
+    input.focus();
+    
+    if (searchIndex.length === 0) {
+      try {
+        const res = await fetch('/search.json');
+        searchIndex = await res.json();
+      } catch (e) {
+        console.error('Error loading search index');
+      }
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('active');
+  });
+
+  input.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    if (!term) {
+      resultsContainer.innerHTML = '';
+      return;
+    }
+    
+    const results = searchIndex.filter(item => 
+      item.title.toLowerCase().includes(term) || 
+      (item.description && item.description.toLowerCase().includes(term))
+    ).slice(0, 10);
+    
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<p style="color: var(--color-text-muted)">No se encontraron noticias.</p>';
+      return;
+    }
+    
+    resultsContainer.innerHTML = results.map(item => `
+      <a href="/noticias/${item.slug}/" class="search-result-item">
+        ${item.image ? `<img src="${item.image}" alt="" />` : ''}
+        <div class="search-result-info">
+          <h4>${item.title}</h4>
+          <p>${item.category || 'Noticia'} &bull; ${new Date(item.date).toLocaleDateString('es-AR')}</p>
+        </div>
+      </a>
+    `).join('');
+  });
+</script>

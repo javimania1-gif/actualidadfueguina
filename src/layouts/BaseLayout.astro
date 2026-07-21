@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { SITE } from '../data/site';
 import AnalyticsHead from '../components/analytics/AnalyticsHead.astro';
 import PrivacyBanner from '../components/analytics/PrivacyBanner.astro';
+import SearchModal from '../components/SearchModal.astro';
 
 const {
   title = SITE.name,
@@ -151,6 +152,12 @@ const isActive = (href: string) => currentPath.startsWith(href);
           <a href="/malvinas-antartica/" class:list={['nav-link', { active: isActive('/malvinas-antartica') }]}>Malvinas y Antártida</a>
           <a href="/categorias/nacionales/" class:list={['nav-link', { active: isActive('/categorias/nacionales') }]}>Nacionales</a>
           <a href="/categorias/mundo/" class:list={['nav-link', { active: isActive('/categorias/mundo') }]}>Mundo</a>
+          <button id="nav-search-btn" class="nav-search-btn" aria-label="Buscar noticias" style="background: none; border: none; cursor: pointer; color: var(--color-text); padding: 0 0.5rem; display: flex; align-items: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -181,8 +188,13 @@ const isActive = (href: string) => currentPath.startsWith(href);
       </div>
     </footer>
     <PrivacyBanner />
+    <SearchModal />
     <script is:inline>
       document.addEventListener('click', function(e) {
+        if (e.target.closest('#nav-search-btn')) {
+          document.dispatchEvent(new CustomEvent('open-search'));
+        }
+
         // Tracker para category_click
         const navLink = e.target.closest('.nav-link');
         if (navLink) {
