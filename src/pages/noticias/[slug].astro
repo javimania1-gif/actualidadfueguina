@@ -32,6 +32,23 @@ const related = allNoticias
   .slice(0, 3)
   .map(({ item }) => item);
 const visibleLocation = nota.data.classificationConfidence === 'high' ? nota.data.location : '';
+const contentType = nota.data.contentType || 'noticia';
+const editorialProcess = nota.data.editorialProcess || (nota.data.automated ? 'automatico' : 'revisado');
+const displayAuthor = nota.data.automated ? 'Redacción Actualidad Fueguina' : nota.data.author;
+const contentTypeLabels = {
+  noticia: 'Noticia',
+  'claves-af': 'Claves AF',
+  analisis: 'Análisis',
+  entrevista: 'Entrevista',
+  opinion: 'Opinión',
+  patrocinado: 'Contenido patrocinado'
+};
+const processDescriptions = {
+  automatico: 'Esta nota fue elaborada por el sistema de redacción automática de Actualidad Fueguina y pasó controles de fuente, coherencia factual, originalidad, clasificación e imagen.',
+  revisado: 'Esta nota fue preparada o revisada por la redacción de Actualidad Fueguina antes de su publicación.',
+  original: 'Este contenido fue producido por su autor para Actualidad Fueguina a partir de trabajo editorial propio.'
+};
+const isOriginal = editorialProcess === 'original';
 const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -39,8 +56,8 @@ const jsonLd = {
   headline: nota.data.title,
   description: nota.data.description,
   datePublished: nota.data.date.toISOString(),
-  dateModified: nota.data.date.toISOString(),
-  author: { '@type': 'Organization', name: nota.data.author },
+  dateModified: (nota.data.updatedAt || nota.data.date).toISOString(),
+  author: { '@type': isOriginal ? 'Person' : 'Organization', name: displayAuthor },
   publisher: { '@type': 'Organization', name: 'Actualidad Fueguina', logo: { '@type': 'ImageObject', url: new URL('/logo-af.png', Astro.site).toString() } },
   image: nota.data.image ? new URL(nota.data.image, Astro.site).toString() : new URL('/og-default.png', Astro.site).toString(),
   mainEntityOfPage: Astro.url.href
@@ -50,15 +67,36 @@ const jsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="article">
     <header class="article-header">
-      <span class="eyebrow">{nota.data.category}</span>
+      <div class="content-flags">
+        <span class="eyebrow">{nota.data.category}</span>
+        {contentType !== 'noticia' && <span class:list={['content-type', { sponsored: contentType === 'patrocinado' }]}>{contentTypeLabels[contentType]}</span>}
+      </div>
       <h1>{nota.data.title}</h1>
       <p class="lead">{nota.data.description}</p>
-      <div class="meta"><span>{fmt.format(nota.data.date)}</span>{visibleLocation && <span>{visibleLocation}</span>}<span>{nota.data.author}</span></div>
+      <div class="meta"><span>{fmt.format(nota.data.date)}</span>{visibleLocation && <span>{visibleLocation}</span>}<span>Por {displayAuthor}</span></div>
+      {contentType === 'patrocinado' && (
+        <aside class="sponsor-disclosure" aria-label="Información comercial">
+          <strong>Contenido patrocinado por {nota.data.sponsorName}</strong>
+          <span>{nota.data.disclosure}</span>
+        </aside>
+      )}
     </header>
     <figure class="article-cover">
       <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="eager" />
     </figure>
     <div class="article-body">
+      {nota.data.keyPoints?.length >= 2 && (
+        <aside class="reader-value key-points" aria-labelledby="key-points-title">
+          <h2 id="key-points-title">Puntos clave</h2>
+          <ul>{nota.data.keyPoints.map((point) => <li>{point}</li>)}</ul>
+        </aside>
+      )}
+      {nota.data.whyItMatters && (
+        <aside class="reader-value why-it-matters" aria-labelledby="why-title">
+          <h2 id="why-title">Por qué importa</h2>
+          <p>{nota.data.whyItMatters}</p>
+        </aside>
+      )}
       <Content />
       {nota.data.tags?.length > 0 && (
         <div class="tags">
@@ -74,6 +112,12 @@ const jsonLd = {
           <a href={nota.data.sourceUrl} target="_blank" rel="noopener noreferrer nofollow">{nota.data.sourceName}</a>
         </aside>
       )}
+
+      <details class="process-note">
+        <summary>Cómo se elaboró esta nota</summary>
+        <p>{processDescriptions[editorialProcess]}</p>
+        <a href="/politica-editorial/">Conocé nuestros criterios editoriales</a>
+      </details>
 
       {related.length > 0 && (
         <section class="related" aria-labelledby="related-title">
@@ -116,14 +160,18 @@ const jsonLd = {
   <script is:inline define:vars={{ 
     articleTitle: nota.data.title, 
     articleCategory: nota.data.category, 
-    articleAuthor: nota.data.author 
+    articleAuthor: displayAuthor,
+    articleContentType: contentType,
+    articleEditorialProcess: editorialProcess
   }}>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'article_view',
       article_title: articleTitle,
       article_category: articleCategory,
-      article_author: articleAuthor
+      article_author: articleAuthor,
+      article_content_type: articleContentType,
+      editorial_process: articleEditorialProcess
     });
   </script>
 </BaseLayout>
@@ -197,6 +245,50 @@ const jsonLd = {
 </script>
 
 <style>
+  .content-flags { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+  .content-type {
+    display: inline-flex;
+    padding: .22rem .55rem;
+    border-radius: 999px;
+    background: #e8f0ff;
+    color: #174ea6;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .content-type.sponsored { background: #fff3cd; color: #725500; }
+  .sponsor-disclosure {
+    display: grid;
+    gap: .3rem;
+    margin-top: 1.25rem;
+    padding: 1rem;
+    border: 1px solid #e5c34b;
+    border-radius: .5rem;
+    background: #fff9e8;
+    color: #4b3b00;
+  }
+  .reader-value {
+    margin: 0 0 1.5rem;
+    padding: 1.1rem 1.25rem;
+    border-left: 4px solid var(--color-accent, #0047ab);
+    border-radius: .35rem;
+    background: var(--color-bg-alt, #f8fafc);
+  }
+  .reader-value h2 { margin: 0 0 .65rem; font-size: 1.15rem; }
+  .reader-value p, .reader-value ul { margin: 0; }
+  .reader-value li + li { margin-top: .4rem; }
+  .why-it-matters { border-left-color: #d8292f; }
+  .process-note {
+    margin-top: 1rem;
+    padding: .85rem 1rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: .5rem;
+    color: var(--color-text-muted, #5f6875);
+    font-size: .9rem;
+  }
+  .process-note summary { cursor: pointer; font-weight: 700; color: var(--color-text, #111827); }
+  .process-note p { margin: .75rem 0 .35rem; }
   .share-section {
     margin-top: 3rem;
     padding-top: 2rem;

@@ -1048,7 +1048,13 @@ export function selectBaseCandidate(candidates = []) {
 }
 
 export function validateArticleAgainstFacts(ai = {}, verification = {}) {
-  const text = normalizeText(`${ai.title || ''}\n${ai.description || ''}\n${ai.body || ''}`);
+  const text = normalizeText([
+    ai.title || '',
+    ai.description || '',
+    ai.body || '',
+    ...(Array.isArray(ai.keyPoints) ? ai.keyPoints : []),
+    ai.whyItMatters || ''
+  ].join('\n'));
   const verifiedFacts = verification.verifiedFacts || verification;
   const eventType = verification.eventType || verifiedFacts.eventType || 'general';
   const mismatches = [];

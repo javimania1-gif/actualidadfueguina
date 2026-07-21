@@ -576,6 +576,25 @@ test('5 victimas bloquea salida que altera a 50 victimas', () => {
   assert.equal(validation.code, 'BLOCKED_FACTUAL_MISMATCH');
 });
 
+test('los puntos clave y el valor agregado pasan por el control factual', () => {
+  const validation = validateArticleAgainstFacts(
+    {
+      title: 'El accidente dejó cinco víctimas',
+      description: 'El parte oficial confirmó el alcance del hecho.',
+      body: 'Los equipos de emergencia intervinieron después del accidente.',
+      keyPoints: ['El hecho dejó 50 víctimas'],
+      whyItMatters: 'El impacto total alcanzó a 200 víctimas.'
+    },
+    {
+      verifiedFacts: { teams: [], scores: [], dates: [], places: [], people: [], numbers: ['5 victimas'] },
+      conflicts: []
+    }
+  );
+  assert.equal(validation.ok, false);
+  assert(validation.mismatches.some((item) => item.value.includes('50')));
+  assert(validation.mismatches.some((item) => item.value.includes('200')));
+});
+
 test('la validacion no exige hechos secundarios ruidosos en la salida', () => {
   const validation = validateArticleAgainstFacts(
     {

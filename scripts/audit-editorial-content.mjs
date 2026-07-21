@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { NEWS_DIR } from './lib/news-utils.mjs';
 import { PUBLICATION_CATEGORIES, TERRITORIES } from './lib/taxonomy.mjs';
 import { normalizeText } from './lib/pipeline-utils.mjs';
+import { validateEditorialProduct } from './lib/editorial-product.mjs';
 
 function titleTokens(value = '') {
   return new Set(normalizeText(value).split(/\s+/).filter((word) => word.length >= 4));
@@ -27,6 +28,9 @@ for (const file of await fs.readdir(NEWS_DIR)) {
 const critical = [];
 const warnings = [];
 for (const note of notes) {
+  const editorialProduct = validateEditorialProduct(note);
+  for (const issue of editorialProduct.errors) critical.push({ file: note.file, issue });
+  for (const issue of editorialProduct.warnings) warnings.push({ file: note.file, issue });
   if (!PUBLICATION_CATEGORIES.includes(note.category)) critical.push({ file: note.file, issue: 'invalid-publication-category', value: note.category });
   if (!TERRITORIES.includes(note.territory)) critical.push({ file: note.file, issue: 'invalid-territory', value: note.territory });
   if (!note.scope || !note.classificationVersion) critical.push({ file: note.file, issue: 'missing-classification-metadata' });

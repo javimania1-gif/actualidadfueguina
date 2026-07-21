@@ -448,6 +448,7 @@ REGLAS DE ESTILO Y REDACCIÓN:
 4. Contexto: explica el impacto fueguino únicamente cuando esté respaldado por los hechos. No infieras consecuencias.
 5. Usa titulo informativo, bajada SEO de 100 a 170 caracteres.
 6. Si el material fuente incluye "TIPO: PRONOSTICO_PROVINCIAL", redacta una sola nota provincial de pronostico del tiempo para Tierra del Fuego. No generes una nota por localidad. El cuerpo debe incluir subtitulos breves para Rio Grande, Tolhuin, Ushuaia o las localidades disponibles, y no agregar localidades sin datos confiables.
+7. Valor para el lector: entrega de 2 a 4 puntos clave estrictamente factuales. Explica "por qué importa" solo si el material respalda una consecuencia concreta; si no la respalda, usa una cadena vacía. No presentes opiniones, predicciones ni inferencias como valor agregado.
 
 Entrega exclusivamente JSON con esta estructura:
 {
@@ -459,6 +460,8 @@ Entrega exclusivamente JSON con esta estructura:
     "tags": ["...", "..."],
     "imageAlt": "...",
     "body": "...",
+    "keyPoints": ["...", "..."],
+    "whyItMatters": "...",
     "importance": 1-10
   }
 }`;
@@ -488,6 +491,8 @@ ${String(sourceText || '').slice(0, 14000)}`;
     tags: Array.isArray(n.tags) ? n.tags.map(cleanText).filter(Boolean).slice(0, 6) : [],
     imageAlt: cleanText(n.imageAlt || n.title),
     body: cleanText(n.body),
+    keyPoints: Array.isArray(n.keyPoints) ? n.keyPoints.map(cleanText).filter(Boolean).slice(0, 4) : [],
+    whyItMatters: cleanText(n.whyItMatters || '').slice(0, 500),
     importance: Math.max(1, Math.min(10, Number(n.importance) || 5)),
     facts: verifiedFacts || null
   };
@@ -635,9 +640,13 @@ storyId: ${yamlString(ai.storyId || '')}
 storyVersion: ${Number(ai.storyVersion) || 1}
 location: ${yamlString(ai.location)}
 tags: ${yamlArray(ai.tags)}
+contentType: "noticia"
+editorialProcess: "automatico"
+keyPoints: ${yamlArray(ai.keyPoints || [])}
+whyItMatters: ${yamlString(ai.whyItMatters || '')}
 image: ${yamlString(image || '')}
 imageAlt: ${yamlString(ai.imageAlt || ai.title)}
-${imageSourceBlock}author: "Actualidad Fueguina"
+${imageSourceBlock}author: "Redacción Actualidad Fueguina"
 featured: ${featured ? 'true' : 'false'}
 importance: ${importance}
 social:

@@ -400,6 +400,8 @@ test('markdown separa fecha de publicacion y fecha original de fuente', () => {
       tags: ['cultura', 'Rio Grande'],
       imageAlt: 'Actividad cultural',
       body: 'El municipio informo una nueva actividad cultural abierta a la comunidad.',
+      keyPoints: ['La actividad es abierta a la comunidad', 'La convocatoria fue realizada por el municipio'],
+      whyItMatters: 'La propuesta amplía la agenda cultural disponible en Río Grande.',
       importance: 4
     },
     date: new Date('2026-07-09T13:47:08.000Z'),
@@ -411,6 +413,11 @@ test('markdown separa fecha de publicacion y fecha original de fuente', () => {
 
   assert.match(md, /date: "2026-07-09T13:47:08\.000Z"/);
   assert.match(md, /sourcePublishedAt: "2026-06-30T12:00:00\.000Z"/);
+  assert.match(md, /contentType: "noticia"/);
+  assert.match(md, /editorialProcess: "automatico"/);
+  assert.match(md, /author: "Redacción Actualidad Fueguina"/);
+  assert.match(md, /keyPoints: \["La actividad es abierta a la comunidad", "La convocatoria fue realizada por el municipio"\]/);
+  assert.match(md, /whyItMatters: "La propuesta amplía la agenda cultural disponible en Río Grande\."/);
 });
 
 test('newsworthiness prioriza historia local util frente a nacional menor', () => {
