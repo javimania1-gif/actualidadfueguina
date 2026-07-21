@@ -57,6 +57,26 @@ function textIncludesAny(text, values = []) {
   });
 }
 
+const TDF_IMAGE_ANCHORS = [
+  'tierra del fuego',
+  'rio grande',
+  'ushuaia',
+  'tolhuin',
+  'malvinas',
+  'antartida'
+];
+
+export function isSafeCommonsIntentForContext(intent = {}, contextText = '') {
+  const context = normalizeText(contextText);
+  if (!TDF_IMAGE_ANCHORS.some((anchor) => context.includes(anchor))) return true;
+
+  const reason = normalizeText(intent.reason || '');
+  if (!['organization-fact', 'place-fact'].includes(reason)) return true;
+
+  const query = normalizeText(intent.query || '');
+  return TDF_IMAGE_ANCHORS.some((anchor) => query.includes(anchor));
+}
+
 export function evaluateImageContext(entry = {}, contextText = '') {
   const context = normalizeText(contextText);
   const assetContext = normalizeText([
@@ -289,8 +309,9 @@ export function scoreCommonsResult(page = {}, query = '') {
   return score;
 }
 
-export async function searchCommonsExact(plan = [], { fetchImpl = fetch } = {}) {
+export async function searchCommonsExact(plan = [], { fetchImpl = fetch, contextText = '' } = {}) {
   for (const intent of plan.slice(0, 6)) {
+    if (!isSafeCommonsIntentForContext(intent, contextText)) continue;
     const params = new URLSearchParams({
       action: 'query',
       generator: 'search',
@@ -419,7 +440,7 @@ export async function selectImageForNews({
     };
   }
 
-  const commons = await searchCommonsExact(plan).catch(() => null);
+  const commons = await searchCommonsExact(plan, { contextText }).catch(() => null);
   if (commons?.imageUrl) {
     const imageResult = await normalizeImageAsset(commons.imageUrl, {
       seed: commons.sourceUrl || commons.imageUrl || hash(contextText),

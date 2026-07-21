@@ -4,6 +4,13 @@ description: "La Dirección Provincial de Vialidad refuerza el mantenimiento de 
 date: "2026-07-21T17:27:59.680Z"
 sourcePublishedAt: "2026-07-21T12:47:11.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "explicit-provincial-road-agency"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["infraestructura", "vialidad", "Tierra del Fuego", "nevada", "Ileana Zarantonello"]
 image: "/uploads/auto/2026-07-21-a3b4bcb17bb0ad08f9.webp"
@@ -12,7 +19,9 @@ imageStrategy: "article-og"
 imageSourceUrl: "https://www.actualidadtdf.com.ar/wp-content/uploads/2025/04/ileana-zarantonelo1.jpg"
 imageCredit: "https://www.actualidadtdf.com.ar/la-disponibilidad-de-recursos-condiciona-la-planificacion-y-ejecucion-de-los-proyectos-de-infraestructura/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+author: "Redacción Actualidad Fueguina"
+contentType: "noticia"
+editorialProcess: "automatico"
 featured: false
 importance: 1
 social:

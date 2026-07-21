@@ -3,16 +3,25 @@ title: "El Laboratorio Municipal de Río Grande acerca servicios de salud a los 
 description: "El Municipio de Río Grande amplía el acceso a estudios clínicos a través de su Laboratorio Municipal, facilitando diagnósticos a la comunidad."
 date: "2026-07-21T17:26:45.711Z"
 sourcePublishedAt: "2026-07-21T16:01:58.000Z"
-category: "Actualidad"
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "explicit-rio-grande-municipal-source"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["salud", "laboratorio", "municipio", "análisis clínicos"]
-image: "/uploads/auto/2026-07-21-13251fd1d308153cf6.webp"
-imageAlt: "Fachada del edificio de la Secretaria de Salud"
-imageStrategy: "commons-exact"
-imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Secretaria_de_Salud_06.jpg"
-imageCredit: "GAED"
-imageLicense: "Public domain"
-author: "Actualidad Fueguina"
+image: "/uploads/auto/2026-07-21-laboratorio-municipal-rio-grande.webp"
+imageAlt: "Personal del Laboratorio Municipal de Río Grande procesa muestras clínicas"
+imageStrategy: "article-og"
+imageSourceUrl: "https://info.riogrande.gob.ar/wp-content/uploads/2024/10/LABORATORIO.jpg"
+imageCredit: "Municipio de Río Grande"
+imageLicense: "Imagen de la comunicación oficial; procedencia registrada"
+author: "Redacción Actualidad Fueguina"
+contentType: "noticia"
+editorialProcess: "automatico"
 featured: false
 importance: 1
 social:

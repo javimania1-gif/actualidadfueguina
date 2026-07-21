@@ -3,7 +3,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import { ROOT, normalizeImageBuffer, normalizeImageAsset } from '../lib/news-utils.mjs';
-import { buildImagePlan, scoreMediaAsset, evaluateImageContext } from '../lib/image-plan.mjs';
+import {
+  buildImagePlan,
+  scoreMediaAsset,
+  evaluateImageContext,
+  isSafeCommonsIntentForContext
+} from '../lib/image-plan.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -188,6 +193,17 @@ await test('plan visual no interpreta cualquier mención a Argentina como fútbo
     scope: 'national'
   });
   assert.equal(plan.some((item) => item.query.includes('Selección Argentina')), false);
+});
+
+await test('Commons no usa una institución genérica extranjera para una noticia fueguina', async () => {
+  assert.equal(isSafeCommonsIntentForContext(
+    { query: 'Secretaría de Salud', reason: 'organization-fact' },
+    'El Laboratorio Municipal de Río Grande acerca sus servicios a los barrios'
+  ), false);
+  assert.equal(isSafeCommonsIntentForContext(
+    { query: 'Secretaría de Salud de Río Grande', reason: 'organization-fact' },
+    'El Laboratorio Municipal de Río Grande acerca sus servicios a los barrios'
+  ), true);
 });
 
 await test('biblioteca prioriza ONU para nota de descolonizacion de Malvinas', async () => {

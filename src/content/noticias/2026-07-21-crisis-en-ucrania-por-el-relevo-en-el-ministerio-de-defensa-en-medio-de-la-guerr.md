@@ -4,6 +4,13 @@ description: "Protestas masivas exigen la restitución del exministro de Defensa
 date: "2026-07-21T17:27:34.058Z"
 sourcePublishedAt: "2026-07-21T00:00:00.000Z"
 category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "explicit-foreign-country"
+classificationVersion: 2
 location: "Ucrania"
 tags: ["Ucrania", "Defensa", "Protestas", "Guerra", "Rusia"]
 image: "/uploads/auto/2026-07-21-1bf1151a83aacd304e.webp"
@@ -12,7 +19,9 @@ imageStrategy: "article-og"
 imageSourceUrl: "https://ichef.bbci.co.uk/news/1200/branded_mundo/9701/live/c3da9000-84f9-11f1-bee8-53ce494e1abc.jpg"
 imageCredit: "https://www.bbc.com/mundo/articles/cr596evgv1jo?at_medium=RSS&at_campaign=rss"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
-author: "Actualidad Fueguina"
+author: "Redacción Actualidad Fueguina"
+contentType: "noticia"
+editorialProcess: "automatico"
 featured: false
 importance: 8
 social:
