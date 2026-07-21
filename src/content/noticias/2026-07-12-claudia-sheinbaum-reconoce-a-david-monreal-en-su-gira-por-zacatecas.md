@@ -5,8 +5,15 @@ description: >-
   la Cuarta Transformación durante su visita a Río Grande.
 date: '2026-07-12T17:03:59.855Z'
 sourcePublishedAt: '2026-07-12T15:45:44.422Z'
-category: Mundo
-location: 'Río Grande, Zacatecas, México'
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: ["Río Grande"]
+classificationConfidence: "high"
+classificationReason: "zacatecas-homonym"
+classificationVersion: 2
+location: "Río Grande, Zacatecas, México"
 tags:
   - Claudia Sheinbaum
   - David Monreal

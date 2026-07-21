@@ -29,6 +29,7 @@ const GENERIC_TITLE_WORDS = new Set([
 ]);
 
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
+const sources = config.sources.filter((source) => source.enabled !== false);
 const parser = new Parser();
 let previousHealth = {};
 try {
@@ -71,21 +72,23 @@ async function readSourceItems(source) {
   return [];
 }
 
-function classifyIssue(result) {
+function classifyIssue(result, source = {}) {
   if (result.error) return /timeout|abort/i.test(result.error) ? 'temporary-error' : 'fetch-error';
-  if (result.itemsFetched === 0) return 'zero-items';
+  if (result.itemsFetched === 0) return source.filterKeywords?.length ? 'no-matching-items' : 'zero-items';
   if (result.linksResolved === 0) return 'zero-links-resolved';
   if (result.articlesExtracted === 0) return result.extractErrors > 0 ? 'extractor-incompatible' : 'zero-articles-extracted';
   if (result.validArticles === 0) return result.avgBodyLen < MIN_BODY_LEN ? 'zero-valid-articles' : 'generic-title-only';
   return '';
 }
 
-function finalizeResult(result) {
+function finalizeResult(result, source = {}) {
   const previous = previousHealth[result.id] || {};
-  result.issueCategory = classifyIssue(result);
-  result.status = result.healthy ? 'healthy' : 'unhealthy';
-  result.consecutiveFailures = result.healthy ? 0 : (Number(previous.consecutiveFailures) || 0) + 1;
-  result.lastHealthyAt = result.healthy
+  result.issueCategory = classifyIssue(result, source);
+  const idle = result.issueCategory === 'no-matching-items';
+  result.status = result.healthy ? 'healthy' : idle ? 'idle' : 'unhealthy';
+  result.operational = result.healthy || idle;
+  result.consecutiveFailures = result.operational ? 0 : (Number(previous.consecutiveFailures) || 0) + 1;
+  result.lastHealthyAt = result.operational
     ? new Date().toISOString()
     : previous.lastHealthyAt || null;
   return result;
@@ -97,7 +100,7 @@ if (VERBOSE && !JSON_OUTPUT) {
   console.log('\n=== SOURCE HEALTH CHECK ===\n');
 }
 
-for (const source of config.sources) {
+for (const source of sources) {
   const result = {
     id: source.id,
     name: source.name,
@@ -120,7 +123,7 @@ for (const source of config.sources) {
   } catch (err) {
     result.error = err.message.slice(0, 120);
     result.healthy = false;
-    results.push(finalizeResult(result));
+    results.push(finalizeResult(result, source));
     if (VERBOSE && !JSON_OUTPUT) {
       console.log(`❌ [${source.id}] FETCH ERROR: ${result.error}`);
     }
@@ -173,7 +176,7 @@ for (const source of config.sources) {
     : 0;
   result.healthy = result.validArticles > 0;
 
-  results.push(finalizeResult(result));
+  results.push(finalizeResult(result, source));
 
   if (VERBOSE && !JSON_OUTPUT) {
     const icon = result.healthy ? '✅' : '❌';
@@ -190,25 +193,26 @@ for (const source of config.sources) {
 if (JSON_OUTPUT) {
   console.log(JSON.stringify(results, null, 2));
 } else {
-  const healthy = results.filter(r => r.healthy).length;
+  const healthy = results.filter(r => r.operational).length;
   const total = results.length;
   console.log(`\n=== RESUMEN: ${healthy}/${total} fuentes HEALTHY ===`);
   if (healthy < total) {
     console.log('Fuentes UNHEALTHY (no consumirán presupuesto IA):');
-    results.filter(r => !r.healthy).forEach(r => console.log(`  - ${r.id}: ${r.error || '0 artículos válidos'}`));
+    results.filter(r => !r.operational).forEach(r => console.log(`  - ${r.id}: ${r.error || '0 artículos válidos'}`));
   }
 }
 
 // Exportar lista de IDs unhealthy para que collect-news pueda leerla
-const unhealthyIds = results.filter(r => !r.healthy).map(r => r.id);
+const unhealthyIds = results.filter(r => !r.operational).map(r => r.id);
 const healthDataPath = path.join(ROOT, 'data/sources-health.json');
 await fs.mkdir(path.dirname(healthDataPath), { recursive: true });
 await fs.writeFile(healthDataPath, JSON.stringify({
   generatedAt: new Date().toISOString(),
   summary: {
     configured: results.length,
-    healthy: results.filter(r => r.healthy).length,
-    unhealthy: results.filter(r => !r.healthy).length,
+    healthy: results.filter(r => r.operational).length,
+    idle: results.filter(r => r.status === 'idle').length,
+    unhealthy: results.filter(r => !r.operational).length,
     productive: results.filter(r => r.validArticles > 0).length,
     zeroResults: results.filter(r => r.issueCategory === 'zero-items').length,
     failed: results.filter(r => ['fetch-error', 'temporary-error', 'extractor-incompatible'].includes(r.issueCategory)).length

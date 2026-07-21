@@ -5,8 +5,15 @@ description: >-
   enfrentando escasez de insumos y el dolor de los casos graves.
 date: '2026-07-11T06:19:30.128Z'
 sourcePublishedAt: '2026-07-10T00:00:00.000Z'
-category: Mundo
-location: Venezuela
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Venezuela"
 tags:
   - Venezuela
   - terremoto

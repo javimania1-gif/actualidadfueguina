@@ -3,7 +3,14 @@ title: "Tolhuin se destacó en la Fiesta Nacional del Invierno"
 description: "El Municipio de Tolhuin participó en la Fiesta Nacional del Invierno, mostrando su identidad y productos locales."
 date: "2026-07-13T18:00:18.281Z"
 sourcePublishedAt: "2026-07-13T17:15:43.000Z"
-category: "Turismo"
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-tolhuin"
+classificationVersion: 2
 location: "Tolhuin"
 tags: ["Fiesta Nacional del Invierno", "Tolhuin", "productos locales"]
 image: "/uploads/auto/2026-07-13-24924d257f9d09cba1.webp"

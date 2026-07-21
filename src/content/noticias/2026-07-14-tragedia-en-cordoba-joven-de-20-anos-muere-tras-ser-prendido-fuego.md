@@ -4,6 +4,13 @@ description: "Un joven de 20 años falleció en Córdoba tras sufrir graves quem
 date: "2026-07-14T23:01:43.525Z"
 sourcePublishedAt: "2026-07-14T18:07:41.620Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Córdoba", "Justicia", "quemaduras", "tragedia"]
 image: "/uploads/auto/2026-07-14-4c7daec58a30252cff.webp"

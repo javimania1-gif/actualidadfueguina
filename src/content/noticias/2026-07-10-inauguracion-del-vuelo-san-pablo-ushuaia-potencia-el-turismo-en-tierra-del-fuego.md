@@ -7,8 +7,15 @@ description: >-
   la región. La inauguración se realizó en el aeropuerto internacional.
 date: '2026-07-10T03:36:53.616Z'
 sourcePublishedAt: '2026-07-09T15:10:00.000Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Malvinas","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - Turismo
   - GOL

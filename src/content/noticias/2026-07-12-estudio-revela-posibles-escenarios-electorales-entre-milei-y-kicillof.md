@@ -4,6 +4,13 @@ description: "Un análisis de RDT Consultores muestra la proyección electoral d
 date: "2026-07-12T13:28:18.940Z"
 sourcePublishedAt: "2026-07-12T12:59:58.354Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Milei", "Kicillof", "elecciones 2027", "RDT Consultores"]
 image: "/uploads/auto/2026-07-12-c40717c4543ef15bd5.webp"

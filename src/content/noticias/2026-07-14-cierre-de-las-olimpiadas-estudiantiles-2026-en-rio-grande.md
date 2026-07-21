@@ -4,6 +4,13 @@ description: "Estudiantes de Río Grande celebraron el cierre de las Olimpiadas 
 date: "2026-07-14T13:53:34.548Z"
 sourcePublishedAt: "2026-07-14T12:52:46.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["Olimpiadas Estudiantiles", "Juventud", "Río Grande", "Municipio"]
 image: "/uploads/auto/2026-07-14-5a75fd521739db1055.webp"

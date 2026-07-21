@@ -4,7 +4,14 @@ description: "El presidente de EE.UU. firma una orden ejecutiva que impactará l
 date: "2026-07-20T23:06:20.861Z"
 sourcePublishedAt: "2026-07-20T21:22:28.000Z"
 category: "Mundo"
-location: "Mexico"
+topic: "Economía"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Canada"
 tags: ["Donald Trump", "Canadá", "aranceles", "comercio internacional"]
 image: "/uploads/auto/2026-07-20-998ab3c31b77904f87.webp"
 imageAlt: "Donald Trump durante una conferencia de prensa"

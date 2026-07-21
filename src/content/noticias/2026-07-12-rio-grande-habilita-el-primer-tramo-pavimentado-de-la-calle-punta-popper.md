@@ -5,8 +5,15 @@ description: >-
   y circulación en la ciudad, ejecutada con recursos municipales.
 date: '2026-07-12T03:17:13.553Z'
 sourcePublishedAt: '2026-07-12T03:16:52.898Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - obra pública
   - Río Grande

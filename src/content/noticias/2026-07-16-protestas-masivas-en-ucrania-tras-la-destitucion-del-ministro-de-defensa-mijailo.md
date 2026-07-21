@@ -4,6 +4,13 @@ description: "Miles de ucranianos se manifiestan en diversas ciudades en rechazo
 date: "2026-07-16T17:23:06.084Z"
 sourcePublishedAt: "2026-07-16T11:11:27.000Z"
 category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Ucrania"
 tags: ["Ucrania", "Protestas", "Defensa", "Zelenski"]
 image: "/uploads/auto/2026-07-16-50f2826d67c4c548a1.webp"

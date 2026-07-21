@@ -5,8 +5,15 @@ description: >-
   alcanzando refinerías en Tatarstán y una planta química.
 date: '2026-07-12T11:16:18.266Z'
 sourcePublishedAt: '2026-07-12T10:23:00.000Z'
-category: Mundo
-location: Ucrania
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Ucrania"
 tags:
   - Ucrania
   - Rusia

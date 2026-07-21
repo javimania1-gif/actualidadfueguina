@@ -4,6 +4,13 @@ description: "El Congreso de Colombia inicia su periodo 2026-2030 con la instala
 date: "2026-07-20T21:16:14.990Z"
 sourcePublishedAt: "2026-07-20T05:00:27.356Z"
 category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Colombia"
 tags: ["Congreso", "Gustavo Petro", "Colombia", "Legislativo"]
 image: "/uploads/auto/2026-07-20-f256a895c29dc691a5.webp"

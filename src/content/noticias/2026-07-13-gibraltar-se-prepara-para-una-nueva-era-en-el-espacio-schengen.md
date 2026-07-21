@@ -5,8 +5,15 @@ description: >-
   del Peñón en el contexto de su integración a Europa.
 date: '2026-07-13T18:00:47.018Z'
 sourcePublishedAt: '2026-07-13T17:02:33.000Z'
-category: Mundo
-location: Gibraltar
+category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: ["Malvinas"]
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Gibraltar"
 tags:
   - Gibraltar
   - Espacio Schengen

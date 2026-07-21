@@ -4,7 +4,14 @@ description: "La muerte de 17 soldados estadounidenses en la guerra con Irán pl
 date: "2026-07-20T23:06:46.517Z"
 sourcePublishedAt: "2026-07-20T23:03:07.000Z"
 category: "Mundo"
-location: "Iran"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Irán"
 tags: ["Donald Trump", "Irán", "militares estadounidenses", "guerra", "política"]
 image: "/uploads/auto/2026-07-20-e2bc1ba7318ad343ef.webp"
 imageAlt: "El presidente de Estados Unidos, Donald Trump, durante un acto militar."

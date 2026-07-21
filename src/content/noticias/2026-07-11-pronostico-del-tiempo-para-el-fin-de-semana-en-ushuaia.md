@@ -3,7 +3,14 @@ title: "Pronóstico del tiempo para el fin de semana en Ushuaia"
 description: "El fin de semana en Ushuaia se presentará estable, con temperaturas bajo cero y posibilidad de nevadas el domingo por la noche."
 date: "2026-07-11T06:19:06.504Z"
 sourcePublishedAt: "2026-07-11T06:18:52.334Z"
-category: "Sociedad"
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
 location: "Ushuaia"
 tags: ["pronóstico", "tiempo", "Ushuaia"]
 image: "/uploads/auto/2026-07-11-51b35430c5aa327c1a.webp"

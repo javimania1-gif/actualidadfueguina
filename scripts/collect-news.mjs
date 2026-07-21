@@ -16,6 +16,7 @@ import {
   generateWebPlate
 } from './lib/news-utils.mjs';
 import { resolvePublicationTerritory } from './lib/territory-resolver.mjs';
+import { categoryForPublication, inferCanonicalTopic } from './lib/taxonomy.mjs';
 import {
   isGenericTitle as isGenericTitleShared,
   isSimilarTitle as isSimilarTitleShared,
@@ -24,6 +25,7 @@ import {
   editorialScore as editorialScoreShared,
   canPublishWithinRunLimit,
   allocateAiBudget,
+  assessSourceOriginality,
   buildRetryState,
   canonicalizeNewsUrl,
   createContentFingerprint,
@@ -53,8 +55,7 @@ import { selectImageForNews, logImageSelection } from './lib/image-plan.mjs';
 import {
   buildEditorialAgenda,
   saveEditorialAgenda,
-  scoreCandidateNewsworthiness,
-  inferAgendaTopic
+  scoreCandidateNewsworthiness
 } from './lib/editorial-agenda.mjs';
 import {
   buildCorroborationQuery,
@@ -71,6 +72,7 @@ import { loadRescueQueue, saveRescueQueue, selectRunnableRescueItems } from './l
 
 const parser = new Parser();
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'config/sources.json'), 'utf8'));
+const sources = config.sources.filter((source) => source.enabled !== false);
 const seen = await loadSeen();
 const events = await loadEvents();
 const rescueQueue = await loadRescueQueue();
@@ -116,7 +118,7 @@ const GENERIC_TITLE_WORDS = new Set([
 
 // Métricas
 const metrics = {
-  sourcesConfigured: config.sources.length,
+  sourcesConfigured: sources.length,
   sourcesConsulted: 0,
   candidatesDetected: 0,
   candidatesIngested: 0,
@@ -564,7 +566,7 @@ function getNextRetryAt(attempts) {
   return getNextRetryAtShared(attempts);
 }
 
-console.log(`\n=== FASE A: Recolección global de ${config.sources.length} fuentes ===`);
+console.log(`\n=== FASE A: Recolección global de ${sources.length} fuentes ===`);
 
 const allCandidates = []; // { source, item, initialKey }
 const runDiscoveryUrls = new Set();
@@ -575,7 +577,7 @@ const pendingRecoveryItems = selectPendingRecoverySources(events.events || {}, {
 
 for (const pendingItem of pendingRecoveryItems) {
   const sourceRef = pendingItem.sourceRef;
-  const source = config.sources.find((item) => item.id === sourceRef.sourceId) || {
+  const source = sources.find((item) => item.id === sourceRef.sourceId) || {
     id: sourceRef.sourceId || 'pending-recovery',
     name: sourceRef.sourceName || sourceRef.publisherDomain || 'Recuperacion de pending',
     mode: sourceRef.sourceMode || 'discovery-draft',
@@ -605,7 +607,7 @@ const runnableRescueItems = selectRunnableRescueItems(rescueQueue, { max: MAX_RE
 metrics.rescueQueued = (rescueQueue.items || []).filter((item) => item.status === 'rescue-pending').length;
 
 for (const rescueItem of runnableRescueItems) {
-  const source = config.sources.find((item) => item.id === rescueItem.sourceId) || {
+  const source = sources.find((item) => item.id === rescueItem.sourceId) || {
     id: rescueItem.sourceId || 'rescue-backfill',
     name: 'Rescate editorial',
     mode: 'discovery-draft',
@@ -634,7 +636,7 @@ for (const rescueItem of runnableRescueItems) {
   metrics.rescueAttempted++;
 }
 
-await Promise.all(config.sources.map(async (source) => {
+await Promise.all(sources.map(async (source) => {
   metrics.sourcesConsulted++;
   const health = sourceHealth(source.id);
   health.consulted++;
@@ -1368,6 +1370,12 @@ for (const candidate of verifiedCandidates) {
         validationError.mismatches = factualValidation.mismatches;
         throw validationError;
       }
+      const originality = assessSourceOriginality({ sourceText: article.text, generatedText: ai.body });
+      if (!originality.ok) {
+        const originalityError = new Error(`ORIGINALITY_CHECK_FAILED: overlap=${originality.overlapRatio} longCopy=${originality.hasLongCopy}`);
+        originalityError.code = 'ORIGINALITY_CHECK_FAILED';
+        throw originalityError;
+      }
       aiCompleted = true;
       metrics.articlesDrafted++;
 
@@ -1382,37 +1390,24 @@ for (const candidate of verifiedCandidates) {
         sourceUrl: sourceRef.url || article.finalUrl
       });
       
-      if (territoryResolution.category === 'unknown' && territoryResolution.reason === 'discard-patagonia-leak') {
-         console.log(`  DESCARTADA por filtro geográfico estricto (Patagonia/Chile Leak): ${ai.title}`);
-         seen.items[canonicalKey] = {
-           seenAt: new Date().toISOString(),
-           status: 'discarded-editorial',
-           source: source.id,
-           editorialReason: 'discard-patagonia-leak'
-         };
-         seen.items[initialKey] = seen.items[canonicalKey];
-         continue;
-      }
-
-      // Asignar CATEGORIA TEMATICA final
-      let finalTopic = inferAgendaTopic({
+      // Tema y territorio son dimensiones independientes. La IA no puede
+      // convertir una ubicación (Mundo/Nacionales) en categoría temática.
+      ai.topic = inferCanonicalTopic({
         facts: verification?.verifiedFacts || {},
         title: ai.title,
-        category: source.forceCategory || source.defaultCategory
+        description: ai.description,
+        body: ai.body,
+        current: ai.category
       });
-      // Capitalizar (e.g. 'policiales' -> 'Policiales')
-      finalTopic = finalTopic.charAt(0).toUpperCase() + finalTopic.slice(1);
-      if (finalTopic === 'Agenda') finalTopic = 'Actualidad';
-      if (finalTopic === 'Servicios') finalTopic = 'Actualidad';
-      
-      // Override Mundo / Nacionales si es explícito territorialmente (ej: Rusia, o Congreso Nacional)
-      if (territoryResolution.category === 'Mundo' || territoryResolution.category === 'Nacionales') {
-        if (!['Deportes', 'Policiales'].includes(finalTopic)) {
-          finalTopic = territoryResolution.category;
-        }
-      }
-
-      ai.category = finalTopic;
+      ai.category = categoryForPublication(ai.topic, territoryResolution.scope);
+      ai.territory = territoryResolution.primaryTerritory;
+      ai.secondaryTerritories = territoryResolution.secondaryTerritories;
+      ai.scope = territoryResolution.scope;
+      ai.classificationConfidence = territoryResolution.confidence;
+      ai.classificationReason = territoryResolution.reason;
+      ai.classificationVersion = territoryResolution.classificationVersion;
+      ai.storyId = eventKey;
+      ai.storyVersion = 1;
       ai.location = territoryResolution.location;
 
       ai.importance = deriveEffectiveImportance(ai.importance, candidate.newsworthiness || {});
@@ -1511,7 +1506,7 @@ for (const candidate of verifiedCandidates) {
 
       const filename = `${datePrefix(publicationDate)}-${slugify(ai.title)}.md`;
       const target = path.join(NEWS_DIR, filename);
-      const featured = ai.importance >= 9;
+      const featured = ai.importance >= 9 && ai.classificationConfidence === 'high';
 
       await fs.writeFile(target, makeNewsMarkdown({
         ai,
@@ -1667,7 +1662,7 @@ metrics.technicalSuccess = true;
 metrics.editorialOutcome = classifyEditorialOutcome(metrics);
 
 function finalizeSourceHealth() {
-  for (const source of config.sources) sourceHealth(source.id);
+  for (const source of sources) sourceHealth(source.id);
   let healthy = 0;
   let productive = 0;
   let noResults = 0;
@@ -1703,7 +1698,7 @@ function finalizeSourceHealth() {
     }
   }
   metrics.sourceHealthSummary = {
-    configured: config.sources.length,
+    configured: sources.length,
     consulted: metrics.sourcesConsulted,
     healthy,
     productive,

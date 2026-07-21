@@ -4,7 +4,14 @@ description: "Un sismo de 7,3 grados sacudió la frontera entre México y Guatem
 date: "2026-07-17T17:17:47.276Z"
 sourcePublishedAt: "2026-07-17T15:31:50.000Z"
 category: "Mundo"
-location: "Mexico"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "México"
 tags: ["terremoto", "México", "tsunami", "sismo", "Guatemala"]
 image: "/uploads/auto/2026-07-17-0aaccf9e03a372988d.webp"
 imageAlt: "Evacuación de edificios en el sur de México tras el sismo."

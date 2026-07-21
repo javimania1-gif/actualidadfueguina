@@ -5,8 +5,15 @@ description: >-
   BTF, GADA S.A. y el Municipio para facilitar soluciones habitacionales.
 date: '2026-07-11T02:53:19.746Z'
 sourcePublishedAt: '2026-07-10T18:16:24.000Z'
-category: Tolhuin
-location: Tolhuin
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: ["Provincia"]
+classificationConfidence: "high"
+classificationReason: "central-tolhuin"
+classificationVersion: 2
+location: "Tolhuin"
 tags:
   - vivienda
   - Tolhuin

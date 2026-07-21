@@ -3,6 +3,13 @@ title: "Un error en la IA de Discord desata baneos masivos por imágenes inofens
 description: "Miles de usuarios de Discord sufrieron suspensiones automáticas de sus cuentas debido a un fallo en los sistemas de moderación por inteligencia artificial de la plataforma."
 date: "2026-07-08T03:00:00.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Internacional"
 tags:
   - Tecnología

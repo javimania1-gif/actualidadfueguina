@@ -3,6 +3,13 @@ title: "Actualidad Fueguina inicia una nueva etapa digital"
 description: "El portal provincial prepara una estructura más liviana, rápida y sostenible para seguir publicando noticias de Tierra del Fuego AIAS."
 date: "2026-07-03T08:30:00-03:00"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Río Grande","Ushuaia","Tolhuin","Malvinas","Antártida"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 tags: ["Actualidad Fueguina", "Tierra del Fuego", "Noticias"]
 image: "/uploads/auto/plate-bienvenidos-a-actualidad-fueguina.jpg"
 imageAlt: "Logo de Actualidad Fueguina"

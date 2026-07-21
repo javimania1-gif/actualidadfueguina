@@ -5,8 +5,15 @@ description: >-
   edificio en La Guaira, comparte su desgarrador relato.
 date: '2026-07-11T02:53:11.769Z'
 sourcePublishedAt: '2026-07-11T00:34:16.000Z'
-category: Mundo
-location: Venezuela
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Venezuela"
 tags:
   - Venezuela
   - terremoto

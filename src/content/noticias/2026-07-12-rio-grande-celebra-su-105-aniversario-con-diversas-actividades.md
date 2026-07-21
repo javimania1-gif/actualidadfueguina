@@ -5,8 +5,15 @@ description: >-
   celebrar su 105° aniversario, incluyendo kermesses y un mercado especial.
 date: '2026-07-12T03:17:12.195Z'
 sourcePublishedAt: '2026-07-12T03:16:52.551Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Río Grande
   - aniversario

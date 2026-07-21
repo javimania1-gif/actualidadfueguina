@@ -8,24 +8,26 @@ export async function getStaticPaths() {
   const slugifyPath = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const noticias = await getCollection('noticias');
   
-  // Todas las categorías editoriales base (siempre generadas para evitar 404)
-  const baseCategories = ['Río Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antártida', 'Nacionales', 'Mundo'];
-  const newsCategories = noticias.map((n) => n.data.category).filter(Boolean);
-  const uniqueCategories = [...new Set([...baseCategories, ...newsCategories])];
+  // Categorías públicas generales y rutas territoriales históricas.
+  const baseCategories = ['Actualidad', 'Política', 'Economía', 'Sociedad', 'Policiales', 'Deportes', 'Nacionales', 'Mundo'];
+  const legacyTerritories = ['Río Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antártida'];
+  const uniqueCategories = [...new Set([...baseCategories, ...legacyTerritories])];
 
   return uniqueCategories.map((category) => ({ params: { category: slugifyPath(category) }, props: { category } }));
 }
 
 const { category } = Astro.props;
+const territoryCategories = new Set(['Río Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antártida']);
+const isTerritoryPage = territoryCategories.has(category);
 const noticias = (await getCollection('noticias'))
-  .filter((n) => slugify(n.data.category) === slugify(category))
+  .filter((n) => slugify(isTerritoryPage ? n.data.territory : n.data.category) === slugify(category))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
 ---
-<BaseLayout title={category} description={`Noticias de ${category} en Actualidad Fueguina.`}>
+<BaseLayout title={category} description={`${isTerritoryPage ? 'Cobertura de' : 'Noticias de'} ${category} en Actualidad Fueguina.`}>
   <section class="section">
     <div class="container">
-      <div class="section-head"><h1 class="title-lg">{category}</h1><p class="lead">Cobertura de Actualidad Fueguina.</p></div>
+      <div class="section-head"><h1 class="title-lg">{category}</h1><p class="lead">{isTerritoryPage ? 'Archivo territorial.' : 'Categoría editorial.'} Actualidad Fueguina.</p></div>
       <div class="grid">
         {noticias.length === 0 ? (
           <p class="lead" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; color: var(--color-text-muted); font-style: italic;">
@@ -35,7 +37,7 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
           noticias.map((nota) => (
             <article class="card news-card">
               <a href={`/noticias/${nota.slug}/`}>
-                <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+                <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
                 <div class="card-content">
                   <span class="eyebrow">{nota.data.category}</span>
                   <h2 class="title-md">{nota.data.title}</h2>

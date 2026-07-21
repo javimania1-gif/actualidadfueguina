@@ -4,6 +4,13 @@ description: "Un joven colombiano de 26 años, con permiso de trabajo en EE.UU.,
 date: "2026-07-13T19:43:12.383Z"
 sourcePublishedAt: "2026-07-13T18:36:33.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
 location: "Internacional"
 tags: ["Colombia", "Estados Unidos", "ICE", "Derechos Humanos"]
 image: "/uploads/auto/2026-07-13-98da1c5cd3d19f5623.webp"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.clarin.com/img/2026/07/13/nne5FxiJ1_2000x1500__1.jp
 imageCredit: "https://www.clarin.com/mundo/joven-colombiano-murio-baleado-agentes-migratorios-ice-maine-permiso-trabajo-estados-unidos_0_b4ah4TaPk5.html"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

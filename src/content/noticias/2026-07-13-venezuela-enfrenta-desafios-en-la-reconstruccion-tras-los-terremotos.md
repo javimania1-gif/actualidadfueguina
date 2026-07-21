@@ -4,6 +4,13 @@ description: "El país lidia con una alta demanda de recursos para reparar daño
 date: "2026-07-13T23:08:22.303Z"
 sourcePublishedAt: "2026-07-13T21:05:59.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Venezuela"
 tags: ["Venezuela", "terremotos", "reconstrucción"]
 image: "/uploads/auto/2026-07-13-89969784a98a0f0e20.webp"

@@ -5,8 +5,15 @@ description: >-
   asalto, drones y artillería para mejorar la respuesta militar.
 date: '2026-07-11T01:26:49.324Z'
 sourcePublishedAt: '2026-07-11T00:11:00.000Z'
-category: Mundo
-location: Ucrania
+category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Ucrania"
 tags:
   - Ucrania
   - Zelenski

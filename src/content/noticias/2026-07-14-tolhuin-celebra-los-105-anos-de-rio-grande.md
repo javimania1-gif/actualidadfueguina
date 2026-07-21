@@ -4,7 +4,14 @@ description: "El Municipio de Tolhuin saluda a Río Grande en su 105° aniversar
 date: "2026-07-14T04:23:04.902Z"
 sourcePublishedAt: "2026-07-13T17:13:30.000Z"
 category: "Sociedad"
-location: "Tierra del Fuego AIAS"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: ["Río Grande","Provincia"]
+classificationConfidence: "high"
+classificationReason: "protagonist-tolhuin"
+classificationVersion: 2
+location: "Tolhuin"
 tags: ["Río Grande", "Tolhuin", "aniversario", "hermandad"]
 image: "/uploads/auto/2026-07-14-3f28f9f29659545050.webp"
 imageAlt: "Celebración del aniversario de Río Grande"

@@ -4,7 +4,14 @@ description: "La muerte de Joan Sebastian Guerrero por disparos de un agente de 
 date: "2026-07-14T13:54:11.784Z"
 sourcePublishedAt: "2026-07-14T12:07:41.000Z"
 category: "Mundo"
-location: "Colombia"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Joan Sebastian Guerrero", "ICE", "protestas", "migración", "Maine"]
 image: "/uploads/auto/2026-07-14-8a9652d098f5de998e.webp"
 imageAlt: "Escena del operativo de ICE en Biddeford, Maine."
@@ -13,7 +20,7 @@ imageSourceUrl: "https://s.france24.com/media/display/5348c430-7f7a-11f1-853f-00
 imageCredit: "https://www.france24.com/es/ee-uu-y-canad%C3%A1/20260714-el-operativo-de-ice-en-el-que-muri%C3%B3-un-colombiano-en-ee-uu-la-versi%C3%B3n-oficial-y-el-relato-de-los-testigos"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

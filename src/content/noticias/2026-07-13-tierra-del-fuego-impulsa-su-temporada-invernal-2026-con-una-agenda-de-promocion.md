@@ -7,8 +7,15 @@ description: >-
   invernal 2026 con diversas actividades y la visita de autoridades nacionales.
 date: '2026-07-13T03:20:38.901Z'
 sourcePublishedAt: '2026-07-13T01:47:23.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - turismo
   - invierno

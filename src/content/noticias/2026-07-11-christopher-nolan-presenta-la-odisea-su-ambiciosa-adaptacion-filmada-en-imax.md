@@ -4,6 +4,13 @@ description: "El director británico Christopher Nolan habla sobre su nueva pel�
 date: "2026-07-11T14:59:35.512Z"
 sourcePublishedAt: "2026-07-11T14:55:00.000Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Christopher Nolan", "La Odisea", "cine", "adaptación", "mitología"]
 image: "/uploads/auto/2026-07-11-132eca07c1a67996a0.webp"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.infobae.com/resizer/v2/CGFDSSEYXBEWXJBGNAVFR7326E.J
 imageCredit: "https://www.infobae.com/cultura/2026/07/11/una-ambicion-que-tenia-desde-los-16-anos-christopher-nolan-habla-de-la-odisea-rodada-enteramente-en-formato-imax/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

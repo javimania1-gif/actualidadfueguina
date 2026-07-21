@@ -2,7 +2,14 @@
 title: "Río Grande impulsa el programa 'Conociendo el Motor Productivo'"
 description: "Del 7 al 14 de julio, vecinos podrán visitar empresas locales y conocer su impacto en la economía de la ciudad."
 date: "2026-07-03T19:26:21.000Z"
-category: "Sociedad"
+category: "Economía"
+topic: "Economía"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["programa", "producción", "empresas", "Río Grande", "desarrollo local"]
 image: "/uploads/auto/2026-07-05-d8320f52b3b4c6fed4.jpg"

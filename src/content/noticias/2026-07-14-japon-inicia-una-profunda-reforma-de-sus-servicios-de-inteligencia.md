@@ -4,7 +4,14 @@ description: "Japón implementa una reestructuración de sus servicios secretos,
 date: "2026-07-14T04:21:34.893Z"
 sourcePublishedAt: "2026-07-14T03:30:01.000Z"
 category: "Mundo"
-location: "Peru"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Japón"
 tags: ["Japón", "inteligencia", "reforma", "Sanae Takaichi"]
 image: "/uploads/auto/2026-07-14-bdca93979a6014ed38.webp"
 imageAlt: "Sanae Takaichi, primera ministra de Japón"

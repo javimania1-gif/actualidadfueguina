@@ -7,8 +7,15 @@ description: >-
   Ushuaia respecto a la intervención del puerto.
 date: '2026-07-10T21:09:51.287Z'
 sourcePublishedAt: '2026-07-10T15:46:22.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: ["Provincia"]
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
+location: "Ushuaia"
 tags:
   - Puerto de Ushuaia
   - Procurador General

@@ -5,8 +5,15 @@ description: >-
   los recientes terremotos en el país.
 date: '2026-07-12T03:17:10.798Z'
 sourcePublishedAt: '2026-07-11T18:56:05.000Z'
-category: Mundo
-location: Venezuela
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Venezuela"
 tags:
   - Venezuela
   - Terremotos

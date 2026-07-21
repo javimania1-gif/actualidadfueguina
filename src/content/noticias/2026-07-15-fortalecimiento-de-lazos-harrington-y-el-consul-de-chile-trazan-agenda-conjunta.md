@@ -4,6 +4,13 @@ description: "El intendente de Tolhuin, Daniel Harrington, se reunió con el có
 date: "2026-07-15T13:52:25.173Z"
 sourcePublishedAt: "2026-07-15T13:10:56.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-tolhuin"
+classificationVersion: 2
 location: "Tolhuin"
 tags: ["Tolhuin", "Chile", "Daniel Harrington", "relaciones internacionales"]
 image: "/uploads/auto/2026-07-15-da380efd551a483533.webp"

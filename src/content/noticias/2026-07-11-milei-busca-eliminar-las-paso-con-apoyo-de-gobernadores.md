@@ -4,6 +4,13 @@ description: "El presidente Javier Milei negocia con gobernadores para eliminar 
 date: "2026-07-11T11:10:49.656Z"
 sourcePublishedAt: "2026-07-11T11:01:00.000Z"
 category: "Nacionales"
+topic: "Política"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Milei", "PASO", "Gobernadores", "Reforma Política"]
 image: "/uploads/auto/2026-07-11-ba53051a12139572f2.webp"

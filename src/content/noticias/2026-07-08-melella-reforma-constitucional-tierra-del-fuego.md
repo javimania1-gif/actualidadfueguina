@@ -6,8 +6,15 @@ description: >-
   El Ejecutivo provincial retomó el proceso para reformar la Constitución
   fueguina fijando el 9 de agosto para elegir convencionales constituyentes.
 date: '2026-07-07T16:52:00.000Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Política"
+topic: "Política"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - Política
   - Reforma Constitucional

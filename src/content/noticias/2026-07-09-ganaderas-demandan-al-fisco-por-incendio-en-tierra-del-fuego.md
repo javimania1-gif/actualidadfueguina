@@ -3,7 +3,14 @@ title: "Ganaderas demandan al fisco por incendio en Tierra del Fuego"
 description: "Ganaderas de Tierra del Fuego solicitan una indemnización de más de $600 millones tras un incendio atribuido a un ejercicio militar."
 date: "2026-07-09T14:44:57.470Z"
 sourcePublishedAt: "2026-07-06T12:21:11.000Z"
-category: "Economia"
+category: "Economía"
+topic: "Economía"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["incendio", "indemnización", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-09-dc42b43c4b0994de1b.webp"

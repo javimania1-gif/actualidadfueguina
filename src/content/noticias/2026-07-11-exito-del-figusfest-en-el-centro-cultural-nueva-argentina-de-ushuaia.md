@@ -5,8 +5,15 @@ description: >-
   figuritas del Mundial 2026 en un evento familiar lleno de alegría.
 date: '2026-07-11T01:26:25.789Z'
 sourcePublishedAt: '2026-07-10T17:44:23.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Deportes"
+topic: "Deportes"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
+location: "Ushuaia"
 tags:
   - FigusFest
   - Ushuaia

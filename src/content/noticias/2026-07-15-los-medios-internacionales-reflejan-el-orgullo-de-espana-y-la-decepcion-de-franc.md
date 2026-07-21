@@ -4,7 +4,14 @@ description: "Los medios del mundo destacan la victoria de España sobre Francia
 date: "2026-07-15T10:08:07.733Z"
 sourcePublishedAt: "2026-07-14T22:17:19.000Z"
 category: "Mundo"
-location: "Espana"
+topic: "Deportes"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "España"
 tags: ["Mundial 2026", "España", "Francia", "Fútbol", "Medios Internacionales"]
 image: "/uploads/auto/2026-07-15-8df41098e653462ef6.webp"
 imageAlt: "Portadas de medios españoles y franceses tras la semifinal del Mundial 2026"

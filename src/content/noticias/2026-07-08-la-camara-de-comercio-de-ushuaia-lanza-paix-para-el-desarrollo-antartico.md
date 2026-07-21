@@ -5,8 +5,15 @@ description: >-
   el desarrollo antártico y diversificar la economía de Tierra del Fuego.
 date: '2026-07-08T17:14:02.000Z'
 sourcePublishedAt: '2026-07-08T05:29:00.000Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Economía"
+topic: "Economía"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Antártida","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - Cámara de Comercio
   - PAIX

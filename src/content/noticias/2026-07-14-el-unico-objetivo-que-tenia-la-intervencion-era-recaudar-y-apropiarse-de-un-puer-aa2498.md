@@ -2,7 +2,14 @@
 title: 'Fuerte polémica por el cierre del muelle de catamaranes: "El único objetivo era recaudar y apropiarse de un puerto"'
 description: "El presidente de la DPP apuntó contra la AGP por la clausura del muelle en Ushuaia, calificando la medida de extorsiva y sin fundamentos."
 date: "2026-07-14T19:44:37.821Z"
-category: "Sociedad"
+category: "Política"
+topic: "Política"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
 location: "Ushuaia"
 tags: []
 image: "/uploads/auto/2026-07-14-b10c04ce251b5f1a91.webp"

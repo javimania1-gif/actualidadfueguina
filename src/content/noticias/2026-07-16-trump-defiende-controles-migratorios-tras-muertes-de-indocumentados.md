@@ -4,7 +4,14 @@ description: "El presidente de EE.UU. reafirma la necesidad de los controles de 
 date: "2026-07-16T10:13:39.797Z"
 sourcePublishedAt: "2026-07-16T08:45:13.000Z"
 category: "Mundo"
-location: "Colombia"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Trump", "ICE", "inmigración", "Estados Unidos", "Colombia"]
 image: "/uploads/auto/2026-07-16-2b472a28483337d534.webp"
 imageAlt: "El presidente de EEUU, Donald Trump, en el Despacho Oval."

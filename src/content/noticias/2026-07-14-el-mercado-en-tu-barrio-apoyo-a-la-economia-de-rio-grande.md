@@ -3,7 +3,14 @@ title: "El Mercado en tu Barrio: Apoyo a la Economía de Río Grande"
 description: "La iniciativa del Municipio de Río Grande refuerza el acceso a productos esenciales a precios accesibles y apoya a productores locales."
 date: "2026-07-14T04:22:52.137Z"
 sourcePublishedAt: "2026-07-13T17:55:27.000Z"
-category: "Economia"
+category: "Economía"
+topic: "Economía"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["Mercado en tu Barrio", "Economía Local", "Municipio de Río Grande"]
 image: "/uploads/auto/2026-07-14-4775240053fd0f1efa.webp"

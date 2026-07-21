@@ -4,6 +4,13 @@ description: "La vicepresidenta Victoria Villarruel expresó su apoyo a los doce
 date: "2026-07-12T20:56:15.598Z"
 sourcePublishedAt: "2026-07-12T20:27:36.167Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Victoria Villarruel", "educación", "financiamiento universitario"]
 image: "/uploads/auto/2026-07-12-e2eb15e3a149289d70.webp"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.cronista.com/resizer/v2/K7IZDQVINFDJHNSRU2RWMKHUJU.
 imageCredit: "https://www.cronista.com/economia-politica/victoria-villarruel-mostro-su-apoyo-a-los-docentes-y-envio-un-tiro-por-elevacion-al-presidente-merecen-reconocimiento/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

@@ -4,6 +4,13 @@ description: "El Gobierno Provincial aclara que no habrá asueto administrativo 
 date: "2026-07-17T11:39:16.190Z"
 sourcePublishedAt: "2026-07-17T11:04:00.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["Gobierno Provincial", "Asueto Administrativo", "Información Oficial"]
 image: "/uploads/auto/2026-07-17-e62f5f08813743f7fa.webp"

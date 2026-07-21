@@ -4,6 +4,13 @@ description: "Trump desarma la comisión electoral bipartidista, generando prote
 date: "2026-07-10T23:02:59.924Z"
 sourcePublishedAt: "2026-07-10T21:08:27.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Internacional"
 tags: ["Donald Trump", "elecciones", "Estados Unidos"]
 image: "/uploads/auto/2026-07-10-6723f59be46d22d617.webp"

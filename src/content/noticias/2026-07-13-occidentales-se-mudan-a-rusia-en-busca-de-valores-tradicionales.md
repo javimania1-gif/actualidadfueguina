@@ -5,8 +5,15 @@ description: >-
   busca de una vida basada en valores familiares y tradicionales.
 date: '2026-07-13T18:01:01.089Z'
 sourcePublishedAt: '2026-07-13T00:00:00.000Z'
-category: Mundo
-location: Rusia
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Rusia"
 tags:
   - Rusia
   - migración

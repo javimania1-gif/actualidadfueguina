@@ -4,7 +4,14 @@ description: "El repentino giro de Trump sobre el estrecho de Ormuz destaca las 
 date: "2026-07-15T06:19:55.265Z"
 sourcePublishedAt: "2026-07-15T00:00:00.000Z"
 category: "Mundo"
-location: "Iran"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Irán"
 tags: ["Trump", "Irán", "Ormuz", "conflicto internacional", "geopolítica"]
 image: "/uploads/auto/2026-07-15-97fff0aaffaa48f262.webp"
 imageAlt: "Donald Trump vistiendo un traje con una corbata amarilla."

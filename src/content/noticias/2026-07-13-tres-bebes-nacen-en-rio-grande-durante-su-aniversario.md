@@ -5,8 +5,15 @@ description: >-
   comunidad en una fecha significativa para la ciudad.
 date: '2026-07-13T19:43:20.145Z'
 sourcePublishedAt: '2026-07-13T11:12:00.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - nacimientos
   - Río Grande

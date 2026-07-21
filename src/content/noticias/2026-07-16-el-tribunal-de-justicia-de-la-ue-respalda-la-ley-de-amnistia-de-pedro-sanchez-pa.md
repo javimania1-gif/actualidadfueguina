@@ -4,7 +4,14 @@ description: "El fallo del Tribunal de Justicia de la UE valida la ley de amnist
 date: "2026-07-16T23:01:43.535Z"
 sourcePublishedAt: "2026-07-16T18:00:50.000Z"
 category: "Mundo"
-location: "Espana"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Pedro Sánchez", "Carles Puigdemont", "amnistía", "Cataluña", "Unión Europea"]
 image: "/uploads/auto/2026-07-16-ee1aa7b6313c5f05b3.webp"
 imageAlt: "El ministro de Justicia de España, Félix Bolaños."

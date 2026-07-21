@@ -5,8 +5,15 @@ description: >-
   infraestructura y eventos especiales.
 date: '2026-07-09T00:05:10.000Z'
 sourcePublishedAt: '2026-07-08T22:00:00.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
+location: "Ushuaia"
 tags:
   - Cerro Castor
   - esquí

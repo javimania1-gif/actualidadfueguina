@@ -5,8 +5,15 @@ description: >-
   música, danza y sabores locales en el Polideportivo Ezequiel Rivero.
 date: '2026-07-09T16:05:01.713Z'
 sourcePublishedAt: '2026-07-09T14:55:24.000Z'
-category: Tolhuin
-location: Tolhuin
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-tolhuin"
+classificationVersion: 2
+location: "Tolhuin"
 tags:
   - Peña
   - Independencia

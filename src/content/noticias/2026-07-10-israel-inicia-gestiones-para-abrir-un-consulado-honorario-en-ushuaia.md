@@ -5,8 +5,15 @@ description: >-
   apoyar el reclamo argentino por Malvinas.
 date: '2026-07-10T02:24:11.421Z'
 sourcePublishedAt: '2026-07-09T15:41:57.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Malvinas"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Provincia","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-malvinas"
+classificationVersion: 2
+location: "Islas Malvinas"
 tags:
   - Israel
   - Ushuaia

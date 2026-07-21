@@ -46,6 +46,7 @@ export function selectRescueBackfillCandidates({
 export function selectRunnableRescueItems(queue = {}, { now = Date.now(), max = 4 } = {}) {
   return (queue.items || [])
     .filter((item) => ['rescue-pending', 'failed-retryable', 'budget-deferred', 'publication-deferred'].includes(item.status))
+    .filter((item) => Boolean(canonicalizeNewsUrl(item.sourceUrl || '')))
     .filter((item) => {
       const next = new Date(item.nextRetryAt || 0).getTime();
       return !item.nextRetryAt || !Number.isFinite(next) || next <= now;
@@ -56,7 +57,15 @@ export function selectRunnableRescueItems(queue = {}, { now = Date.now(), max = 
 
 export async function loadRescueQueue() {
   try {
-    return JSON.parse(await fs.readFile(RESCUE_QUEUE_PATH, 'utf8'));
+    const queue = JSON.parse(await fs.readFile(RESCUE_QUEUE_PATH, 'utf8'));
+    queue.items = (queue.items || []).map((item) => {
+      const isPending = ['rescue-pending', 'failed-retryable', 'budget-deferred', 'publication-deferred'].includes(item.status);
+      if (isPending && !canonicalizeNewsUrl(item.sourceUrl || '')) {
+        return { ...item, status: 'failed-final', failureReason: 'invalid-rescue-item-missing-source-url', nextRetryAt: null };
+      }
+      return item;
+    });
+    return queue;
   } catch {
     return { version: 1, updatedAt: null, items: [] };
   }

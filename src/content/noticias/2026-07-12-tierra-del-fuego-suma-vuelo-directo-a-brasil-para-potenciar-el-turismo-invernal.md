@@ -3,7 +3,14 @@ title: "Tierra del Fuego suma vuelo directo a Brasil para potenciar el turismo i
 description: "Se inaugura un nuevo vuelo directo entre San Pablo y Ushuaia, fortaleciendo la llegada de turistas brasileños a la provincia."
 date: "2026-07-12T09:55:56.043Z"
 sourcePublishedAt: "2026-07-12T07:25:00.000Z"
-category: "Turismo"
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["turismo", "conectividad", "Brasil", "Ushuaia"]
 image: "/uploads/auto/2026-07-12-67669a0994870571be.webp"

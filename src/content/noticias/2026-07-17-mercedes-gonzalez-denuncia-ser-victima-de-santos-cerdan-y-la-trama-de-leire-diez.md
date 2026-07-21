@@ -4,20 +4,26 @@ description: "La directora de la Guardia Civil se defiende ante el juez y niega 
 date: "2026-07-17T11:38:42.291Z"
 sourcePublishedAt: "2026-07-17T11:35:19.715Z"
 category: "Mundo"
-location: "Espana"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Mercedes González", "Santos Cerdán", "PSOE", "Guardia Civil"]
-image: "/uploads/auto/2026-07-17-9f07a795e4fe0bde55.webp"
-imageAlt: "Gustavo Melella junto a autoridades nacionales en una actividad oficial"
-imageStrategy: "media-library"
-imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Base_Marambio_Fern%C3%A1ndez,_Taiana,_Melella.jpg"
-imageCredit: "Casa Rosada"
-imageLicense: "CC BY 2.5 AR"
+image: "/uploads/auto/plate-mercedes-gonzalez-mundo.jpg"
+imageAlt: "Placa informativa de Actualidad Fueguina para una noticia internacional"
+imageStrategy: "fallback-plate"
+imageCredit: "Actualidad Fueguina"
+imageLicense: "Imagen generada internamente"
 author: "Actualidad Fueguina"
-featured: true
-importance: 9
+featured: false
+importance: 5
 social:
   enabled: true
-  urgent: true
+  urgent: false
 sourceName: "Infobae — Nacionales"
 sourceUrl: "https://www.infobae.com/espana/agencias/2026/07/17/mercedes-gonzalez-afirma-ser-victima-de-santos-cerdan-y-de-la-trama-de-leire-diez/"
 automated: true

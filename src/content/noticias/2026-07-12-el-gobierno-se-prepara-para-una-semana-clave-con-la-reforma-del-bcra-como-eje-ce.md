@@ -4,6 +4,13 @@ description: "Javier Milei se reunirá con legisladores para discutir la reforma
 date: "2026-07-12T19:11:25.541Z"
 sourcePublishedAt: "2026-07-12T19:02:00.000Z"
 category: "Nacionales"
+topic: "Economía"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Javier Milei", "Banco Central", "La Libertad Avanza", "reforma económica"]
 image: "/uploads/auto/2026-07-12-0dfaf4cfa9a37a968a.webp"

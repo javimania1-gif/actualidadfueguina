@@ -7,8 +7,15 @@ description: >-
   Ormuz sigue operativo para todas las embarcaciones.
 date: '2026-07-12T19:11:33.412Z'
 sourcePublishedAt: '2026-07-12T17:31:00.000Z'
-category: Mundo
-location: Estados Unidos
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Estados Unidos"
 tags:
   - Estrecho de Ormuz
   - Estados Unidos

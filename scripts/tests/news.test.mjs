@@ -10,6 +10,7 @@ import {
   isStaleDatedDiscoveryCandidate,
   classifyCandidateFreshness,
   allocateAiBudget,
+  assessSourceOriginality,
   buildRetryState,
   canonicalizeNewsUrl,
   classifyPipelineError,
@@ -146,6 +147,20 @@ test('deduplicación de contenido exige mismo medio y contenido exacto', () => {
   assert.notEqual(first, otherPublisher);
 });
 
+test('control de originalidad bloquea copia extensa y permite redacción propia', () => {
+  const sourceText = 'El gobierno anunció una inversión de cien millones de pesos para ampliar el hospital regional durante el segundo semestre. La obra tendrá tres etapas y deberá finalizar el próximo año.';
+  const copied = assessSourceOriginality({
+    sourceText,
+    generatedText: `Según se informó, ${sourceText} La medida fue presentada este martes.`
+  });
+  const original = assessSourceOriginality({
+    sourceText,
+    generatedText: 'La ampliación del hospital regional se realizará en tres fases. El proyecto oficial prevé una inversión de cien millones de pesos y terminación durante el año próximo.'
+  });
+  assert.equal(copied.ok, false);
+  assert.equal(original.ok, true);
+});
+
 test('detecta el duplicado publicado real del vuelo GOL sin fusionar cifras incompatibles', () => {
   const published = [{
     title: 'Inauguración del vuelo San Pablo-Ushuaia potencia el turismo en Tierra del Fuego',
@@ -217,7 +232,8 @@ test('backfill rescata solo registros recientes, filtrados y no publicados', () 
   const selected = selectRescueBackfillCandidates({ records, now, sinceHours: 72, max: 5, reason: 'no-ai-budget' });
   assert.equal(selected.length, 1);
   assert.equal(selected[0].sourceUrl, 'https://medio.test/a');
-  assert.equal(selectRunnableRescueItems({ items: [{ status: 'rescue-pending' }, { status: 'failed-final' }] }, { max: 4 }).length, 1);
+  assert.equal(selectRunnableRescueItems({ items: [{ status: 'rescue-pending' }, { status: 'failed-final' }] }, { max: 4 }).length, 0);
+  assert.equal(selectRunnableRescueItems({ items: [{ status: 'rescue-pending', sourceUrl: 'https://medio.test/rescate' }] }, { max: 4 }).length, 1);
 });
 
 test('pronosticos ordinarios de distintas ciudades agrupan en una nota provincial diaria', () => {

@@ -26,7 +26,13 @@ if (!base) {
 }
 
 const origin = new URL(base).origin;
-const checks = ['/rss.xml', '/categorias/rio-grande/', '/categorias/ushuaia/', '/categorias/provincia/'];
+const checks = [
+  '/rss.xml', '/news-sitemap.xml', '/search.json',
+  '/categorias/actualidad/', '/categorias/politica/', '/categorias/economia/', '/categorias/sociedad/',
+  '/categorias/policiales/', '/categorias/deportes/', '/categorias/nacionales/', '/categorias/mundo/',
+  '/categorias/malvinas/', '/categorias/antartida/', '/malvinas-antartica/',
+  '/privacidad/', '/cookies/', '/terminos/', '/politica-editorial/', '/correcciones/'
+];
 let failures = 0;
 
 for (const pathname of checks) {

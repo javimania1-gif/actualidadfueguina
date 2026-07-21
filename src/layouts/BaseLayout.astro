@@ -8,8 +8,11 @@ import SearchModal from '../components/SearchModal.astro';
 const {
   title = SITE.name,
   description = SITE.description,
-  image = SITE.logo,
-  canonical = Astro.url.href
+  image = SITE.ogImage,
+  canonical = Astro.url.href,
+  ogType = 'website',
+  publishedTime = '',
+  robots = 'index, follow'
 } = Astro.props;
 
 const pageTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.name}`;
@@ -79,7 +82,7 @@ const isActive = (href: string) => currentPath.startsWith(href);
               prompts: [
                 {
                   type: "push",
-                  autoPrompt: true,
+                  autoPrompt: false,
                   text: {
                     actionMessage: "Deseás recibir las últimas noticias de Tierra del Fuego en tu celular?",
                     acceptButton: "Permitir",
@@ -101,8 +104,9 @@ const isActive = (href: string) => currentPath.startsWith(href);
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="website" />
+    <meta name="robots" content={robots} />
+    <meta property="og:type" content={ogType} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     <meta property="og:locale" content={SITE.locale} />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={pageTitle} />
@@ -184,6 +188,9 @@ const isActive = (href: string) => currentPath.startsWith(href);
         <p class="footer-privacy" style="margin-top: 0.5rem; font-size: 0.85rem;">
           <a href="/privacidad/" style="color: var(--color-text-muted); text-decoration: none;">Privacidad</a> | 
           <a href="/cookies/" style="color: var(--color-text-muted); text-decoration: none;">Cookies</a> | 
+          <a href="/terminos/" style="color: var(--color-text-muted); text-decoration: none;">Términos</a> |
+          <a href="/politica-editorial/" style="color: var(--color-text-muted); text-decoration: none;">Política editorial</a> |
+          <a href="/correcciones/" style="color: var(--color-text-muted); text-decoration: none;">Correcciones</a> |
           <a href="/privacidad/#preferencias" style="color: var(--color-text-muted); text-decoration: none;">Preferencias de privacidad</a>
         </p>
       </div>

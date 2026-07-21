@@ -2,7 +2,14 @@
 title: "Presentaron el mapa interactivo 'Ushuaia, Ciudad de Murales' en Casa Pena"
 description: "La iniciativa reúne más de 350 intervenciones artísticas urbanas desarrolladas desde 2018 para potenciar el turismo cultural y la identidad fueguina."
 date: "2026-07-06T13:54:55.000Z"
-category: "Cultura"
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
 location: "Ushuaia"
 tags: ["Ushuaia", "Muralismo", "Cultura", "Turismo", "Casa Pena"]
 image: "/uploads/auto/2026-07-06-56e8ede022a62ec916.jpg"

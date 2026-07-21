@@ -4,6 +4,13 @@ description: "El Presidente Javier Milei se reunió con diputados y senadores pa
 date: "2026-07-13T19:43:39.335Z"
 sourcePublishedAt: "2026-07-13T17:11:11.951Z"
 category: "Nacionales"
+topic: "Economía"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Milei", "Banco Central", "reforma"]
 image: "/uploads/auto/2026-07-13-ffe71817aab1a3b4b7.webp"

@@ -4,6 +4,13 @@ description: "En un contexto de guerra, Ucrania y la UE establecen un acuerdo pa
 date: "2026-07-16T02:48:58.503Z"
 sourcePublishedAt: "2026-07-16T02:15:05.000Z"
 category: "Mundo"
+topic: "Economía"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Ucrania"
 tags: ["Ucrania", "Unión Europea", "drones", "misiles", "guerra"]
 image: "/uploads/auto/2026-07-16-fad91b49599579b9b3.webp"

@@ -3,8 +3,15 @@ title: "El Papa llama a humanizar la inteligencia artificial por la paz mundial"
 description: "El Papa León XIV aboga por la paz y la regulación de la inteligencia artificial en su encíclica 'Magnífica Humanidad'."
 date: "2026-07-13T03:21:24.340Z"
 sourcePublishedAt: "2026-07-13T03:15:00.000Z"
-category: "Nacionales"
-location: "Argentina"
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Ciudad del Vaticano"
 tags: ["Papa", "inteligencia artificial", "paz", "León XIV"]
 image: "/uploads/auto/2026-07-13-c0507f9e2db0dd85d8.webp"
 imageAlt: "El Papa León XIV"

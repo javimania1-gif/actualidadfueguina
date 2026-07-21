@@ -7,8 +7,15 @@ description: >-
   solidariamente en el acto por el 105° aniversario de Río Grande.
 date: '2026-07-11T20:56:16.037Z'
 sourcePublishedAt: '2026-07-11T20:49:27.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Tolhuin"]
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Río Grande
   - Martín Pérez

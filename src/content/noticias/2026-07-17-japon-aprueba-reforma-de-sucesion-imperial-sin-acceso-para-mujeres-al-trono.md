@@ -4,7 +4,14 @@ description: "El Parlamento japonés modifica la ley de sucesión, permitiendo h
 date: "2026-07-17T19:16:05.052Z"
 sourcePublishedAt: "2026-07-17T19:12:15.483Z"
 category: "Mundo"
-location: "Estados Unidos"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Japón"
 tags: ["Japón", "sucesión imperial", "derechos de las mujeres", "política"]
 image: "/uploads/auto/2026-07-17-0ef22d8e098388560d.webp"
 imageAlt: "Palacio Imperial de Tokio"

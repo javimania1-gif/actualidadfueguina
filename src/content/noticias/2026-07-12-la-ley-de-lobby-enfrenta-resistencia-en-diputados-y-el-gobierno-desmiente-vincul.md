@@ -3,8 +3,15 @@ title: "La Ley de Lobby enfrenta resistencia en Diputados y el Gobierno desmient
 description: "El proyecto de Ley de Lobby se encuentra estancado en la Cámara de Diputados tras el rechazo unánime de diversos sectores. El Gobierno niega que la iniciativa responda a presiones "
 date: "2026-07-12T09:56:05.761Z"
 sourcePublishedAt: "2026-07-12T09:00:01.000Z"
-category: "Nacionales"
-location: "Argentina"
+category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Ley de Lobby", "Cámara de Diputados", "Gobierno", "Estados Unidos"]
 image: "/uploads/auto/2026-07-12-d125ef8e3cc929c39e.webp"
 imageAlt: "Reunión en la Cámara de Diputados sobre la Ley de Lobby"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.cronista.com/resizer/v2/2JQEJKCDKVCTLBJLHGH4XRIXNY.
 imageCredit: "https://www.cronista.com/economia-politica/la-ley-de-lobby-se-estanca-en-diputados-y-el-gobierno-niega-un-pedido-de-estados-unidos/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

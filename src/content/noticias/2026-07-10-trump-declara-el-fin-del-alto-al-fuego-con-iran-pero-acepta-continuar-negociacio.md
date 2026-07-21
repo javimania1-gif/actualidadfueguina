@@ -7,8 +7,15 @@ description: >-
   tras recientes ataques, pero está dispuesto a seguir dialogando.
 date: '2026-07-10T19:50:11.070Z'
 sourcePublishedAt: '2026-07-10T18:34:01.000Z'
-category: Mundo
-location: Iran
+category: "Mundo"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Irán"
 tags:
   - Donald Trump
   - Irán

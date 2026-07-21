@@ -4,6 +4,13 @@ description: "El Parlamento francés aprueba el derecho a la muerte asistida, un
 date: "2026-07-15T19:18:11.674Z"
 sourcePublishedAt: "2026-07-15T18:08:48.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Francia"
 tags: ["Francia", "Eutanasia", "Muerte asistida", "Emmanuel Macron", "Legislación"]
 image: "/uploads/auto/2026-07-15-e71cf3e04e6b144365.webp"

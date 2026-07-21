@@ -4,8 +4,15 @@ description: >-
   Continúan las inscripciones para estudiar en el Instituto Universitario River
   Plate en Río Grande. ¡No te lo pierdas!
 date: '2026-07-06T19:25:39.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - educación
   - IURP

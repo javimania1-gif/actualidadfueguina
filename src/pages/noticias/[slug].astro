@@ -12,6 +12,26 @@ export async function getStaticPaths() {
 
 const { nota } = Astro.props;
 const { Content } = await render(nota);
+const allNoticias = await getCollection('noticias');
+const normalizeSlug = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const tagCounts = new Map();
+for (const item of allNoticias) {
+  for (const tag of item.data.tags || []) {
+    const key = normalizeSlug(tag);
+    tagCounts.set(key, (tagCounts.get(key) || 0) + 1);
+  }
+}
+const related = allNoticias
+  .filter((item) => item.id !== nota.id)
+  .map((item) => ({
+    item,
+    score: (item.data.category === nota.data.category ? 2 : 0) + (item.data.territory === nota.data.territory ? 3 : 0)
+  }))
+  .filter(({ score }) => score > 0)
+  .sort((a, b) => b.score - a.score || b.item.data.date.valueOf() - a.item.data.date.valueOf())
+  .slice(0, 3)
+  .map(({ item }) => item);
+const visibleLocation = nota.data.classificationConfidence === 'high' ? nota.data.location : '';
 const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -26,14 +46,14 @@ const jsonLd = {
   mainEntityOfPage: Astro.url.href
 };
 ---
-<BaseLayout title={nota.data.title} description={nota.data.description} image={nota.data.image || '/og-default.png'} canonical={Astro.url.href}>
+<BaseLayout title={nota.data.title} description={nota.data.description} image={nota.data.image || '/og-default.png'} canonical={Astro.url.href} ogType="article" publishedTime={nota.data.date.toISOString()}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="article">
     <header class="article-header">
       <span class="eyebrow">{nota.data.category}</span>
       <h1>{nota.data.title}</h1>
       <p class="lead">{nota.data.description}</p>
-      <div class="meta"><span>{fmt.format(nota.data.date)}</span>{nota.data.location && <span>{nota.data.location}</span>}<span>{nota.data.author}</span></div>
+      <div class="meta"><span>{fmt.format(nota.data.date)}</span>{visibleLocation && <span>{visibleLocation}</span>}<span>{nota.data.author}</span></div>
     </header>
     <figure class="article-cover">
       <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="eager" />
@@ -42,8 +62,31 @@ const jsonLd = {
       <Content />
       {nota.data.tags?.length > 0 && (
         <div class="tags">
-          {nota.data.tags.map((tag) => <a class="tag" href={`/etiquetas/${tag.toLowerCase().replaceAll(' ', '-')}/`}>{tag}</a>)}
+          {nota.data.tags.map((tag) => tagCounts.get(normalizeSlug(tag)) >= 2
+            ? <a class="tag" href={`/etiquetas/${normalizeSlug(tag)}/`}>{tag}</a>
+            : <span class="tag">{tag}</span>)}
         </div>
+      )}
+
+      {nota.data.sourceName && nota.data.sourceUrl && (
+        <aside class="source-box" aria-label="Fuente consultada">
+          <strong>Fuente consultada</strong>
+          <a href={nota.data.sourceUrl} target="_blank" rel="noopener noreferrer nofollow">{nota.data.sourceName}</a>
+        </aside>
+      )}
+
+      {related.length > 0 && (
+        <section class="related" aria-labelledby="related-title">
+          <h2 id="related-title">Noticias relacionadas</h2>
+          <div class="related-grid">
+            {related.map((item, index) => (
+              <a class="related-article-link" href={`/noticias/${item.slug}/`} data-article-title={item.data.title} data-article-position={index + 1}>
+                <span class="eyebrow">{item.data.category}</span>
+                <strong>{item.data.title}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
       )}
       
       <div class="share-section">
@@ -92,7 +135,7 @@ const jsonLd = {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 
         event: 'share',
-        method: navigator.share ? 'native' : 'copy_link',
+        method: 'native',
         content_type: 'article',
         item_id: window.location.pathname
       });
@@ -132,7 +175,11 @@ const jsonLd = {
   
   // Track scroll depth
   let scrollMarks = { 25: false, 50: false, 75: false, 90: false };
+  let scrollScheduled = false;
   window.addEventListener('scroll', () => {
+    if (scrollScheduled) return;
+    scrollScheduled = true;
+    requestAnimationFrame(() => {
     let scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     for (const mark in scrollMarks) {
       if (scrollPercent >= mark && !scrollMarks[mark]) {
@@ -144,7 +191,9 @@ const jsonLd = {
         });
       }
     }
-  });
+      scrollScheduled = false;
+    });
+  }, { passive: true });
 </script>
 
 <style>
@@ -152,6 +201,28 @@ const jsonLd = {
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-border, #e5e7eb);
+  }
+  .source-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: .5rem;
+    background: var(--color-bg-alt, #f8fafc);
+  }
+  .related { margin-top: 2.5rem; }
+  .related h2 { font-size: 1.35rem; margin-bottom: 1rem; }
+  .related-grid { display: grid; gap: .75rem; }
+  .related-article-link {
+    display: grid;
+    gap: .25rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: .5rem;
+    color: inherit;
+    text-decoration: none;
   }
   .share-section h3 {
     font-size: 1.1rem;

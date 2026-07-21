@@ -7,8 +7,15 @@ description: >-
   y la comunidad en el 105° aniversario de la ciudad.
 date: '2026-07-13T11:17:52.367Z'
 sourcePublishedAt: '2026-07-13T11:17:30.523Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Malvinas"]
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Río Grande
   - Martín Perez

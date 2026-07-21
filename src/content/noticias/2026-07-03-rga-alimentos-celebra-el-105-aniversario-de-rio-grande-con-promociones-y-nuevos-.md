@@ -3,6 +3,13 @@ title: "RGA Alimentos celebra el 105º aniversario de Río Grande con promocione
 description: "Disfrutá del 50% de descuento en pollos RGA y conocé los nuevos condimentos deshidratados en Río Grande."
 date: "2026-07-03T16:00:03.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["RGA Alimentos", "promociones", "productos locales", "aniversario", "deshidratados"]
 image: "/uploads/auto/2026-07-05-eea95fb2aac76b5193.jpg"

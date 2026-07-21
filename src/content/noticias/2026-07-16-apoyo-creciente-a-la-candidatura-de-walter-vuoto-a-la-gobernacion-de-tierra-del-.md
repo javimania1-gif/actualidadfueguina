@@ -3,8 +3,15 @@ title: "Apoyo creciente a la candidatura de Walter Vuoto a la gobernación de Ti
 description: "El concejal Nicolás Pellolli destaca el respaldo a Vuoto como candidato a gobernador, enfatizando su capacidad de gestión y liderazgo."
 date: "2026-07-16T23:02:10.722Z"
 sourcePublishedAt: "2026-07-16T21:36:47.000Z"
-category: "Sociedad"
-location: "Ushuaia"
+category: "Política"
+topic: "Política"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags: ["Walter Vuoto", "Nicolás Pellolli", "Partido Justicialista", "Ushuaia", "Gobernación"]
 image: "/uploads/auto/2026-07-16-e48191a8b8cba265db.webp"
 imageAlt: "Nicolás Pellolli"

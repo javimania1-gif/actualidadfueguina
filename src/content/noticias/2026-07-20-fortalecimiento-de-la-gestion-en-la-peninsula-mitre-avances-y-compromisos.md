@@ -4,6 +4,13 @@ description: "La Secretaría de Ambiente impulsa la conservación del Área Natu
 date: "2026-07-20T18:09:38.807Z"
 sourcePublishedAt: "2026-07-20T17:42:16.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["Península Mitre", "Conservación", "Gestión Ambiental", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-20-a0c0332512847388c8.webp"

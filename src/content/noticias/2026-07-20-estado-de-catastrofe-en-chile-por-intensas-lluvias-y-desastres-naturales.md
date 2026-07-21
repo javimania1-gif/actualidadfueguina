@@ -4,6 +4,13 @@ description: "Fuertes temporales en Chile dejan 5 muertos y 100.000 personas ais
 date: "2026-07-20T23:05:48.793Z"
 sourcePublishedAt: "2026-07-20T21:01:56.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Chile"
 tags: ["Chile", "Desastres Naturales", "Clima", "Emergencia"]
 image: "/uploads/auto/2026-07-20-47a69bf3ca5749314a.webp"

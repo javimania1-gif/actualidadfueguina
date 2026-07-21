@@ -1,9 +1,10 @@
 ---
 ---
-<div id="search-modal" class="search-modal" aria-hidden="true">
-  <div class="search-modal-content">
+<div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-title" aria-hidden="true">
+  <div class="search-modal-content" tabindex="-1">
     <div class="search-header">
-      <input type="text" id="search-input" placeholder="Buscar noticias..." autocomplete="off" />
+      <label id="search-title" class="sr-only" for="search-input">Buscar noticias</label>
+      <input type="search" id="search-input" placeholder="Buscar noticias..." autocomplete="off" />
       <button id="close-search" aria-label="Cerrar buscador">&times;</button>
     </div>
     <div id="search-results" class="search-results"></div>
@@ -23,6 +24,17 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
   .search-modal.active {
     opacity: 1;
@@ -93,14 +105,47 @@
 
 <script>
   let searchIndex = [];
+  let previousFocus = null;
   const modal = document.getElementById('search-modal');
   const input = document.getElementById('search-input');
   const resultsContainer = document.getElementById('search-results');
   const closeBtn = document.getElementById('close-search');
   
+  function closeSearch() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    if (previousFocus instanceof HTMLElement) previousFocus.focus();
+  }
+
+  function makeResult(item) {
+    const link = document.createElement('a');
+    link.href = `/noticias/${encodeURIComponent(String(item.slug || ''))}/`;
+    link.className = 'search-result-item';
+    if (item.image) {
+      const image = document.createElement('img');
+      image.src = String(item.image);
+      image.alt = '';
+      image.loading = 'lazy';
+      link.append(image);
+    }
+    const info = document.createElement('div');
+    info.className = 'search-result-info';
+    const title = document.createElement('h4');
+    title.textContent = String(item.title || 'Noticia');
+    const meta = document.createElement('p');
+    const date = new Date(item.date);
+    const formattedDate = Number.isNaN(date.valueOf()) ? '' : date.toLocaleDateString('es-AR');
+    meta.textContent = `${item.category || 'Noticia'}${formattedDate ? ` · ${formattedDate}` : ''}`;
+    info.append(title, meta);
+    link.append(info);
+    return link;
+  }
+
   // Listen for custom event from nav
   document.addEventListener('open-search', async () => {
+    previousFocus = document.activeElement;
     modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
     input.focus();
     
     if (searchIndex.length === 0) {
@@ -114,17 +159,21 @@
   });
 
   closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
+    closeSearch();
   });
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.remove('active');
+    if (e.target === modal) closeSearch();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('active')) closeSearch();
   });
 
   input.addEventListener('input', (e) => {
     const term = e.target.value.toLowerCase().trim();
     if (!term) {
-      resultsContainer.innerHTML = '';
+      resultsContainer.replaceChildren();
       return;
     }
     
@@ -134,18 +183,13 @@
     ).slice(0, 10);
     
     if (results.length === 0) {
-      resultsContainer.innerHTML = '<p style="color: var(--color-text-muted)">No se encontraron noticias.</p>';
+      const empty = document.createElement('p');
+      empty.textContent = 'No se encontraron noticias.';
+      empty.style.color = 'var(--color-text-muted)';
+      resultsContainer.replaceChildren(empty);
       return;
     }
-    
-    resultsContainer.innerHTML = results.map(item => `
-      <a href="/noticias/${item.slug}/" class="search-result-item">
-        ${item.image ? `<img src="${item.image}" alt="" />` : ''}
-        <div class="search-result-info">
-          <h4>${item.title}</h4>
-          <p>${item.category || 'Noticia'} &bull; ${new Date(item.date).toLocaleDateString('es-AR')}</p>
-        </div>
-      </a>
-    `).join('');
+
+    resultsContainer.replaceChildren(...results.map(makeResult));
   });
 </script>

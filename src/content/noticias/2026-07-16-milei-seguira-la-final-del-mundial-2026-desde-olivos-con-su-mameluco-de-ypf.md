@@ -3,8 +3,15 @@ title: "Milei seguirá la final del Mundial 2026 desde Olivos con su mameluco de
 description: "El Presidente Javier Milei confirmó que no viajará a Estados Unidos para la final del Mundial y la seguirá desde la Quinta de Olivos."
 date: "2026-07-16T15:46:59.254Z"
 sourcePublishedAt: "2026-07-16T15:44:58.610Z"
-category: "Mundo"
-location: "Estados Unidos"
+category: "Nacionales"
+topic: "Deportes"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
+location: "Argentina"
 tags: ["Milei", "Mundial 2026", "Quinta de Olivos", "YPF"]
 image: "/uploads/auto/2026-07-16-4b2470d6f18859cb37.webp"
 imageAlt: "Javier Milei con mameluco de YPF"

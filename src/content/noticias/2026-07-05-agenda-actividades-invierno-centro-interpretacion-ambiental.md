@@ -7,8 +7,15 @@ description: >-
   recorridos guiados sobre la fauna, flora y ecosistemas autóctonos de Tierra
   del Fuego.
 date: '2026-07-05T16:43:00.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Río Grande"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - Rio Grande
   - Medio ambiente

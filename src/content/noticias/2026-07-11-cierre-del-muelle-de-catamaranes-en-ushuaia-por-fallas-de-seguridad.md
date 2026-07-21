@@ -5,8 +5,15 @@ description: >-
   seguridad, a pesar de haber operado toda la temporada turística.
 date: '2026-07-11T22:55:19.730Z'
 sourcePublishedAt: '2026-07-11T14:33:12.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
+location: "Ushuaia"
 tags:
   - Ushuaia
   - catamaranes

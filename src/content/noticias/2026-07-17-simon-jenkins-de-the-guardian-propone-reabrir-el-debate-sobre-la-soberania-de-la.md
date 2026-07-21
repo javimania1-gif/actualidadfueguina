@@ -3,8 +3,15 @@ title: "Simon Jenkins de The Guardian propone reabrir el debate sobre la soberan
 description: "El columnista británico argumenta que el Reino Unido debe reconsiderar su posición sobre las Islas Malvinas y retomar negociaciones con Argentina."
 date: "2026-07-17T19:16:29.724Z"
 sourcePublishedAt: "2026-07-17T19:15:38.899Z"
-category: "Sociedad"
-location: "Ushuaia"
+category: "Política"
+topic: "Política"
+territory: "Malvinas"
+scope: "provincial"
+secondaryTerritories: ["Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-malvinas"
+classificationVersion: 2
+location: "Islas Malvinas"
 tags: ["Malvinas", "Soberanía", "Simon Jenkins", "The Guardian"]
 image: "/uploads/auto/2026-07-17-3eb3f94fe5c38df678.webp"
 imageAlt: "Simon Jenkins The Guardian"

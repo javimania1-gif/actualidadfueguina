@@ -1,7 +1,8 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  const noticias = await getCollection('noticias');
+  const noticias = (await getCollection('noticias'))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   
   const searchIndex = noticias.map((nota) => ({
     title: nota.data.title,

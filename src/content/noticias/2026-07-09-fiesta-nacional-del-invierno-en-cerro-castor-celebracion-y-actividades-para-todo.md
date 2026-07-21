@@ -7,8 +7,15 @@ description: >-
   actividades familiares y el encendido del pebetero.
 date: '2026-07-09T16:05:17.085Z'
 sourcePublishedAt: '2026-07-08T14:36:58.000Z'
-category: Ushuaia
-location: Ushuaia
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
+location: "Ushuaia"
 tags:
   - Fiesta Nacional del Invierno
   - Cerro Castor

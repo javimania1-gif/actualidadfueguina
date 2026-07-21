@@ -4,6 +4,13 @@ description: "El film 'Te quiero, desde el mar hasta el cielo' se estrenará en 
 date: "2026-07-17T02:52:06.614Z"
 sourcePublishedAt: "2026-07-16T21:46:19.000Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["biodiversidad", "conservación", "cine", "Santa Cruz", "Planetario"]
 image: "/uploads/auto/2026-07-17-6da28171ddd9c83a81.webp"

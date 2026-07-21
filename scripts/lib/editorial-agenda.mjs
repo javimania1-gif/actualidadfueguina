@@ -3,6 +3,7 @@ import path from 'node:path';
 import { ROOT, cleanText } from './news-utils.mjs';
 import { normalizeText } from './pipeline-utils.mjs';
 import { SOURCE_TIERS, countIndependentEditorialSources } from './source-policy.mjs';
+import { resolvePublicationTerritory } from './territory-resolver.mjs';
 
 export const EDITORIAL_AGENDA_PATH = path.join(ROOT, 'data/editorial-agenda.json');
 
@@ -77,42 +78,13 @@ export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {})
 }
 
 export function inferAgendaTerritory({ facts = {}, source = {}, category = '', title = '' } = {}) {
-  const firstLocalMention = (...values) => {
-    const text = normalizeText(values.flat().filter(Boolean).join(' '));
-    const matches = [
-      ['Rio Grande', /\brio grande\b/.exec(text)],
-      ['Ushuaia', /\bushuaia\b/.exec(text)],
-      ['Tolhuin', /\btolhuin\b/.exec(text)],
-      ['Malvinas', /\bmalvinas\b/.exec(text)],
-      ['Antartida', /\bantartida\b/.exec(text)]
-    ].filter(([, match]) => match);
-    matches.sort((a, b) => a[1].index - b[1].index);
-    return matches[0]?.[0] || '';
-  };
-  const explicitLocality = firstLocalMention(title) || firstLocalMention(facts.rawSummary);
-  if (explicitLocality) return explicitLocality;
-  const sourceLocality = firstLocalMention(category, source.defaultCategory, source.location);
-  if (sourceLocality) return sourceLocality;
-  const factLocality = firstLocalMention(facts.places || []);
-  if (factLocality) return factLocality;
-
-  const text = normalizeText([
-    category,
-    source.defaultCategory,
-    source.location,
+  return resolvePublicationTerritory({
     title,
-    facts.rawSummary,
-    ...(facts.places || []),
-    ...(facts.countries || [])
-  ].join(' '));
-  if (/\btierra del fuego\b|\bfueguin/.test(text)) return 'Provincia';
-  if (/\b(seleccion argentina|mundial|copa del mundo|afa|lionel messi|scaloni|luis caputo|adorni|bullrich|gabinete nacional)\b/.test(text)) return 'Nacionales';
-  if (/\bargentina\b/.test(text) && /\b(nacionales|deportes|seleccion)\b/.test(text)) return 'Nacionales';
-  if (/\b(cdmx|mexico|mexico df|colombia|cuba|iran|teheran|moscu|ucrania|rusia|estados unidos|reino unido|inglaterra|francia|alemania|italia|brasil|chile|uruguay|paraguay|bolivia|peru|venezuela)\b/.test(text)) return 'Mundo';
-  if (/\bmundo\b|\binternacional\b/.test(text)) return 'Mundo';
-  if (/\b(nacionales|argentina|milei|fmi|villa allende|chaco|cordoba|buenos aires|congreso|senado|diputados|santa cruz|chubut|neuquen|rio negro|la pampa)\b/.test(text)) return 'Nacionales';
-  if (/\bprovincia\b/.test(text) && (source.mode === 'official-auto' || /\b(provincial|gobierno|tdf)\b/.test(text))) return 'Provincia';
-  return 'unknown';
+    description: facts.rawSummary || '',
+    verifiedFacts: facts,
+    agendaTerritory: category,
+    source
+  }).category;
 }
 
 function inferSubtopic({ topic, facts = {}, title = '', category = '' }) {

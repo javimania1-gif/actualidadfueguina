@@ -3,7 +3,14 @@ title: "Ex técnico de Futsal enfrentará juicio por abuso sexual de un menor"
 description: "Un ex entrenador de Futsal será juzgado por abuso sexual gravemente ultrajante contra un menor que entrenaba. El juicio comenzará en agosto."
 date: "2026-07-14T23:01:32.582Z"
 sourcePublishedAt: "2026-07-14T12:03:58.000Z"
-category: "Sociedad"
+category: "Policiales"
+topic: "Policiales"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["juicio", "abuso sexual", "futsal", "Tierra del Fuego"]
 image: "/uploads/auto/2026-07-14-afc96c33fc9d20c204.webp"

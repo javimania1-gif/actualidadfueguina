@@ -4,6 +4,13 @@ description: "La selección argentina busca un lugar en la final del Mundial 202
 date: "2026-07-15T06:19:41.548Z"
 sourcePublishedAt: "2026-07-15T05:46:26.289Z"
 category: "Nacionales"
+topic: "Deportes"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Mundial 2026", "Argentina", "Inglaterra", "Fútbol", "Deportes"]
 image: "/uploads/auto/2026-07-15-1f1c6bbd1693e53ddf.webp"

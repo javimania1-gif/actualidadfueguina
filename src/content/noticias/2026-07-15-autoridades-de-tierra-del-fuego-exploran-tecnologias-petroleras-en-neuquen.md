@@ -3,7 +3,14 @@ title: "Autoridades de Tierra del Fuego exploran tecnologías petroleras en Neuq
 description: "Una delegación fueguina visitó instalaciones en Neuquén para aprender sobre producción y tratamiento de residuos en la industria petrolera."
 date: "2026-07-15T10:08:19.632Z"
 sourcePublishedAt: "2026-07-15T07:51:01.000Z"
-category: "Sociedad"
+category: "Economía"
+topic: "Economía"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["energía", "hidrocarburos", "Tierra del Fuego", "Neuquén", "sustentabilidad"]
 image: "/uploads/auto/2026-07-15-218500f05fea6b2a53.webp"

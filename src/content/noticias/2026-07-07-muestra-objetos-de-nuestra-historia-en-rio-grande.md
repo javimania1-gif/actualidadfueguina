@@ -4,8 +4,15 @@ description: >-
   La exposición en el Museo Municipal celebra el patrimonio histórico y cultural
   de Río Grande durante julio.
 date: '2026-07-07T16:59:00.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - patrimonio
   - muestra

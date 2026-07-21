@@ -4,6 +4,13 @@ description: "El Gobierno de Tierra del Fuego se reunió con organizaciones grem
 date: "2026-07-15T15:30:44.643Z"
 sourcePublishedAt: "2026-07-15T15:07:27.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["Gobierno", "gremios", "COPARLAP", "relaciones laborales"]
 image: "/uploads/auto/2026-07-15-15bf768bf104006a94.webp"

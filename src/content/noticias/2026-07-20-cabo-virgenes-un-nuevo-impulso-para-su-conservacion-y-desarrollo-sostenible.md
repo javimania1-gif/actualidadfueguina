@@ -3,8 +3,15 @@ title: "Cabo Vírgenes: Un nuevo impulso para su conservación y desarrollo sost
 description: "El Consejo Agrario Provincial y la Fundación Por el Mar firman un acuerdo para desarrollar el Master Plan de la reserva en Cabo Vírgenes."
 date: "2026-07-20T23:06:32.741Z"
 sourcePublishedAt: "2026-07-20T22:20:16.000Z"
-category: "Sociedad"
-location: "Tierra del Fuego AIAS"
+category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
+location: "Argentina"
 tags: ["Cabo Vírgenes", "conservación", "desarrollo sostenible", "Master Plan"]
 image: "/uploads/auto/2026-07-20-677cca31dfe7b4a0e7.webp"
 imageAlt: "Cabo Vírgenes avanza en su conservación con la firma de una Carta de Intención junto a Fundación Por el Mar"

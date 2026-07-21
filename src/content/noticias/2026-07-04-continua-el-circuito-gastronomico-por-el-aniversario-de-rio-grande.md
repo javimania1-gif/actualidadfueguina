@@ -4,8 +4,15 @@ description: >-
   Comercios locales se suman con promociones especiales, espectáculos en vivo y
   sorteos durante todos los fines de semana de julio.
 date: '2026-07-04T20:41:00.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Rio Grande
   - Gastronomia

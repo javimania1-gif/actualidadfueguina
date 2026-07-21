@@ -3,8 +3,15 @@ title: "Controversia por el paso del HMS Medway en aguas argentinas"
 description: "El patrullero británico HMS Medway navega hacia Punta Arenas, generando tensiones diplomáticas entre Argentina y el Reino Unido."
 date: "2026-07-11T06:19:19.162Z"
 sourcePublishedAt: "2026-07-11T04:14:22.365Z"
-category: "Sociedad"
-location: "Islas Malvinas"
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: ["Provincia","Malvinas","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Reino Unido"
 tags: ["HMS Medway", "Malvinas", "Reino Unido", "Argentina", "diplomacia"]
 image: "/uploads/auto/2026-07-11-d4c00f12c4dd28ffc1.webp"
 imageAlt: "HMS Medway navegando en aguas del Atlántico Sur"

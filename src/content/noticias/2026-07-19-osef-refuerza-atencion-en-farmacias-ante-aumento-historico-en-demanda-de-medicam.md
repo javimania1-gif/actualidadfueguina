@@ -4,6 +4,13 @@ description: "La OSEF implementa medidas para mejorar la atención en farmacias 
 date: "2026-07-19T15:00:43.970Z"
 sourcePublishedAt: "2026-07-19T14:20:30.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["OSEF", "medicamentos", "salud", "atención farmacéutica"]
 image: "/uploads/auto/2026-07-19-54f3376de951b3981d.webp"

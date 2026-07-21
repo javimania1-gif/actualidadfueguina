@@ -3,7 +3,14 @@ title: "La AFA agradece el apoyo de los argentinos tras el subcampeonato en el M
 description: "La Asociación del Fútbol Argentino destacó el respaldo de los hinchas durante el torneo y detalló el regreso del plantel."
 date: "2026-07-20T06:52:31.986Z"
 sourcePublishedAt: "2026-07-20T06:51:40.944Z"
-category: "Mundo"
+category: "Nacionales"
+topic: "Deportes"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["AFA", "Mundial 2026", "Fútbol", "Argentina"]
 image: "/uploads/auto/2026-07-20-dd0186ab9e81322c33.webp"

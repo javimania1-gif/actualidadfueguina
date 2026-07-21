@@ -7,8 +7,15 @@ description: >-
   Ushuaia, impulsando el turismo en Tierra del Fuego.
 date: '2026-07-09T23:58:34.159Z'
 sourcePublishedAt: '2026-07-09T16:23:00.000Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - turismo
   - GOL Linhas Aéreas

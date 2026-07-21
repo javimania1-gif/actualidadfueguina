@@ -4,8 +4,15 @@ description: >-
   El SMN prevé una jornada fría en la provincia, con mínimas bajo cero en Río
   Grande y Ushuaia, vientos moderados y sin lluvias relevantes.
 date: '2026-07-08T03:20:46.000Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Río Grande","Ushuaia","Tolhuin","Malvinas"]
+classificationConfidence: "high"
+classificationReason: "multi-city-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - Clima
   - Pronóstico del tiempo

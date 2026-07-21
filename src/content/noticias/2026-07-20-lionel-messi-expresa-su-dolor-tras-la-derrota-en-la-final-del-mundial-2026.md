@@ -3,8 +3,15 @@ title: "Lionel Messi expresa su dolor tras la derrota en la final del Mundial 20
 description: "El capitán argentino compartió un emotivo mensaje en redes sociales tras la derrota ante España, agradeciendo el apoyo de los hinchas."
 date: "2026-07-20T21:03:40.889Z"
 sourcePublishedAt: "2026-07-20T21:03:08.735Z"
-category: "Mundo"
-location: "Espana"
+category: "Nacionales"
+topic: "Deportes"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
+location: "Argentina"
 tags: ["Lionel Messi", "Mundial 2026", "Selección Argentina", "fútbol", "deporte"]
 image: "/uploads/auto/2026-07-20-5206823ef0d91c7e55.webp"
 imageAlt: "Lionel Messi tras la final del Mundial 2026"

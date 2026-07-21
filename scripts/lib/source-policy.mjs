@@ -136,7 +136,19 @@ function firstUsablePublishedAt(...values) {
     const text = String(value || '').trim();
     if (!text) continue;
     const date = new Date(text);
-    if (Number.isFinite(date.getTime())) return date.toISOString();
+    if (!Number.isFinite(date.getTime())) continue;
+
+    // JavaScript interpreta fechas textuales sin hora (por ejemplo,
+    // "10 July 2026") en la zona horaria local. Al convertirlas a ISO, una
+    // máquina ubicada al oeste de UTC puede retroceder al día anterior. Para
+    // una fecha editorial sin hora, el día es el dato relevante y debe ser
+    // estable en cualquier runner.
+    const hasExplicitTimeOrZone = /(?:\d{1,2}:\d{2}|T\d{2}|\b(?:GMT|UTC)\b|[+-]\d{2}:?\d{2}\b)/i.test(text);
+    if (!hasExplicitTimeOrZone) {
+      return new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())).toISOString();
+    }
+
+    return date.toISOString();
   }
   return String(values.find(Boolean) || '');
 }

@@ -4,8 +4,15 @@ description: >-
   El Municipio de Río Grande ofrece herramientas para fortalecer la producción
   alimentaria local y promover la soberanía alimentaria.
 date: '2026-07-06T16:52:55.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - capacitación
   - productores locales

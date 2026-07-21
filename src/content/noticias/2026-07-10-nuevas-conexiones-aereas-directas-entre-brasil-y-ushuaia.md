@@ -5,8 +5,15 @@ description: >-
   fortaleciendo el turismo en Tierra del Fuego.
 date: '2026-07-10T19:26:05.498Z'
 sourcePublishedAt: '2026-07-10T19:25:43.561Z'
-category: Provincia
-location: Tierra del Fuego AIAS
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Malvinas","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
+location: "Tierra del Fuego AIAS"
 tags:
   - turismo
   - vuelos

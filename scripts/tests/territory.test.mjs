@@ -114,6 +114,57 @@ function runTests() {
       description: '',
       source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
       expectedCategory: 'Nacionales'
+    },
+    {
+      name: 'DEBE DAR MUNDO: Senado de Colombia no es Senado argentino',
+      title: 'El Senado de Colombia elige nuevas autoridades',
+      description: 'El presidente Gustavo Petro participó de la apertura en Bogotá',
+      source: { defaultCategory: 'Actualidad', location: 'Internacional' },
+      expectedCategory: 'Mundo'
+    },
+    {
+      name: 'DEBE DAR PROVINCIA: autoridades fueguinas viajan a Neuquén',
+      title: 'El Gobierno de Tierra del Fuego explora tecnologías petroleras en Neuquén',
+      description: 'Funcionarios provinciales realizaron una visita técnica',
+      source: { defaultCategory: 'Actualidad', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Provincia'
+    },
+    {
+      name: 'DEBE DAR MALVINAS aunque mencione Santa Cruz',
+      title: 'El reclamo argentino por Malvinas sumó respaldo desde Santa Cruz',
+      description: 'La cuestión de soberanía volvió al debate público',
+      source: { defaultCategory: 'Actualidad', location: 'Argentina' },
+      expectedCategory: 'Malvinas'
+    },
+    {
+      name: 'DEBE DAR ANTARTIDA antes que Ushuaia',
+      title: 'Argentina presentó en Ushuaia su nuevo plan para la Antártida',
+      description: 'La iniciativa contempla actividad científica y logística antártica',
+      source: { defaultCategory: 'Actualidad', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Antartida'
+    },
+    {
+      name: 'DEBE DAR NACIONALES: Cabo Vírgenes pertenece a Santa Cruz',
+      title: 'Cabo Vírgenes tendrá un nuevo plan de conservación en Santa Cruz',
+      description: 'El Consejo Agrario Provincial presentó el acuerdo',
+      source: { defaultCategory: 'Actualidad', location: 'Argentina' },
+      expectedCategory: 'Nacionales'
+    },
+    {
+      name: 'DEBE DAR MUNDO: una fuente fueguina no vuelve local una noticia extranjera',
+      title: 'Una reforma histórica genera debate político',
+      description: 'La cámara alta eligió sus nuevas autoridades',
+      body: 'El Senado de Colombia inició un nuevo período legislativo en Bogotá.',
+      source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Mundo'
+    },
+    {
+      name: 'DEBE DAR PROVINCIA: el cuerpo local confirma un titular ambiguo',
+      title: 'El operativo comienza esta semana',
+      description: 'Habrá atención extendida para los vecinos',
+      body: 'El Gobierno de Tierra del Fuego informó el cronograma provincial en Argentina.',
+      source: { defaultCategory: 'Provincia', location: 'Tierra del Fuego AIAS' },
+      expectedCategory: 'Provincia'
     }
   ];
 
@@ -121,7 +172,7 @@ function runTests() {
   let failed = 0;
 
   for (const t of tests) {
-    const result = resolvePublicationTerritory({ title: t.title, description: t.description, source: t.source });
+    const result = resolvePublicationTerritory({ title: t.title, description: t.description, body: t.body, source: t.source });
     try {
       assert.strictEqual(result.category, t.expectedCategory, `Falla en test: ${t.name}`);
       passed++;

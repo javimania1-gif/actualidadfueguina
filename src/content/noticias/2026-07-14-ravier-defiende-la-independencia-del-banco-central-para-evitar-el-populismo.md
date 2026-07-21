@@ -4,6 +4,13 @@ description: "El vocero presidencial Adrián Ravier justifica el cerrojo sobre e
 date: "2026-07-14T15:27:45.080Z"
 sourcePublishedAt: "2026-07-14T15:08:00.000Z"
 category: "Nacionales"
+topic: "Economía"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Banco Central", "Adrián Ravier", "Gobierno", "Propiedad Privada"]
 image: "/uploads/auto/2026-07-14-f353959d7f359fe8f7.webp"

@@ -7,8 +7,15 @@ description: >-
   disfrutar en familia durante las vacaciones de invierno.
 date: '2026-07-13T19:43:27.984Z'
 sourcePublishedAt: '2026-07-13T15:34:04.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Deportes"
+topic: "Deportes"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - vacaciones de invierno
   - juegos en familia

@@ -3,8 +3,15 @@ title: "Reforma en la compra de tierras por extranjeros: implicancias y benefici
 description: "El proyecto de Javier Milei busca desregular la compra de tierras rurales por extranjeros, generando controversia y oportunidades de inversión."
 date: "2026-07-16T15:45:56.342Z"
 sourcePublishedAt: "2026-07-16T14:14:53.326Z"
-category: "Mundo"
-location: "Estados Unidos"
+category: "Nacionales"
+topic: "Economía"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-argentine-subject"
+classificationVersion: 2
+location: "Argentina"
 tags: ["tierras rurales", "Javier Milei", "desregulación", "inversiones", "Ley 26.737"]
 image: "/uploads/auto/2026-07-16-c3c4746128cdff2382.webp"
 imageAlt: "Reforma en la compra de tierras por extranjeros"

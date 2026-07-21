@@ -4,7 +4,14 @@ description: "Álvaro Uribe denuncia que el Pacto Histórico se reuniría para r
 date: "2026-07-16T17:22:39.266Z"
 sourcePublishedAt: "2026-07-16T17:20:40.393Z"
 category: "Mundo"
-location: "Colombia"
+topic: "Política"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
+location: "Internacional"
 tags: ["Alfredo Deluque", "Pacto Histórico", "Álvaro Uribe", "Presidencia del Senado"]
 image: "/uploads/auto/2026-07-16-477b7dea11233d74a5.webp"
 imageAlt: "Alfredo Deluque habría asistido a una reunión con los compromisarios del Pacto Histórico"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.infobae.com/resizer/v2/YT4XF442EFFPFCJURXMHPPZN3M.j
 imageCredit: "https://www.infobae.com/colombia/2026/07/16/el-pacto-historico-estaria-contemplando-apoyar-la-candidatura-de-alfredo-deluque-para-la-presidencia-del-senado-segun-alvaro-uribe/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

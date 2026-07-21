@@ -4,6 +4,13 @@ description: "Rusia intensifica su ofensiva en Ucrania, mientras Ucrania respond
 date: "2026-07-20T23:06:09.552Z"
 sourcePublishedAt: "2026-07-20T23:04:12.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Rusia"
 tags: ["Rusia", "Ucrania", "Conflicto", "Drones", "Misiles"]
 image: "/uploads/auto/2026-07-20-066b1e39853a7049ac.webp"

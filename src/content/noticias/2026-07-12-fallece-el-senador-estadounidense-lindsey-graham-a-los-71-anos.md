@@ -4,6 +4,13 @@ description: "Lindsey Graham, senador de Carolina del Sur y aliado de Trump, mue
 date: "2026-07-12T17:04:15.931Z"
 sourcePublishedAt: "2026-07-12T00:00:00.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
 location: "Internacional"
 tags: ["Lindsey Graham", "Trump", "política estadounidense"]
 image: "/uploads/auto/2026-07-12-ff0f468ccb718e238a.webp"

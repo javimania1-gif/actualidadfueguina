@@ -7,8 +7,15 @@ description: >-
   de Natación Paralímpica en Entre Ríos y se prepara para Santiago del Estero.
 date: '2026-07-12T20:56:31.518Z'
 sourcePublishedAt: '2026-07-12T20:49:41.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Provincia","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Natación Paralímpica
   - Candela Mollá Ybars

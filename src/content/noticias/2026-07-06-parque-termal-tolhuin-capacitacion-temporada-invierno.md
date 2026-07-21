@@ -2,7 +2,14 @@
 title: "Parque Termal Municipal de Tolhuin cierra temporada de invierno con capacitación para operadores"
 description: "El Municipio de Tolhuin finalizó el ciclo de formación para trabajadores del Parque Termal, apuntando a mejorar la calidad del servicio turístico durante la temporada alta."
 date: 2026-07-06T18:12:00-03:00
-category: "Educacion"
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-tolhuin"
+classificationVersion: 2
 location: "Tolhuin"
 tags:
   - Turismo

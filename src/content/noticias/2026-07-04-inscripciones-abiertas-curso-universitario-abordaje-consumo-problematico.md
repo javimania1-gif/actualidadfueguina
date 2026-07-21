@@ -7,8 +7,15 @@ description: >-
   una capacitación virtual de formación en salud mental con alcance para toda la
   región.
 date: '2026-07-04T16:39:00.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Rio Grande
   - Salud mental

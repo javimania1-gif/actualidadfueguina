@@ -5,6 +5,7 @@ export const SITE = {
   description: 'Noticias de Tierra del Fuego AIAS, con foco provincial: Río Grande, Tolhuin, Ushuaia, Malvinas y Antártida.',
   locale: 'es_AR',
   logo: '/logo-af.png',
+  ogImage: '/og-default.png',
   email: '',
   social: {
     facebook: '',

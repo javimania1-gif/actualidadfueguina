@@ -4,6 +4,13 @@ description: "Conocé la cotización actual del euro oficial y el euro blue en A
 date: "2026-07-13T03:21:42.209Z"
 sourcePublishedAt: "2026-07-13T03:00:00.000Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Euro", "Economía", "Divisas"]
 image: "/uploads/auto/2026-07-13-c74dacd87bbc20fe9d.webp"

@@ -4,6 +4,13 @@ description: "El laboratorio ANLIS Malbrán identificó hantavirus en roedores d
 date: "2026-07-09T00:05:10.000Z"
 sourcePublishedAt: "2026-07-08T23:38:15.242Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["hantavirus", "Tierra del Fuego", "ANLIS Malbrán", "roedores"]
 image: "/uploads/auto/2026-07-09-32f02a4f2f0f0f59da.webp"

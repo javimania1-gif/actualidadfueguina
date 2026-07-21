@@ -115,6 +115,23 @@ export function evaluateImageContext(entry = {}, contextText = '') {
     reasons.push('local-politician-in-foreign-or-national-news');
   }
 
+  if (
+    has(assetContext, [/\b(seleccion argentina|futbol|mundial|afa)\b/]) &&
+    !has(context, [/\b(futbol|mundial|seleccion argentina|afa|partido|torneo|campeonato)\b/])
+  ) {
+    penalty -= 200;
+    reasons.push('football-image-for-non-sports-news');
+  }
+
+  if (
+    has(context, [/\bscope (national|international)\b/]) &&
+    has(assetContext, [/\b(tierra del fuego|rio grande|ushuaia|tolhuin|melella|vuoto|martin perez|harrington)\b/]) &&
+    !has(context, [/\b(melella|vuoto|martin perez|harrington|tierra del fuego|rio grande|ushuaia|tolhuin)\b/])
+  ) {
+    penalty -= 240;
+    reasons.push('local-asset-outside-tdf-scope');
+  }
+
   return {
     ok: penalty > -100,
     penalty,
@@ -131,6 +148,7 @@ export function buildImagePlan({
   people = [],
   places = [],
   eventType = '',
+  scope = '',
   sourceArticle = {}
 } = {}) {
   const intents = [];
@@ -162,7 +180,8 @@ export function buildImagePlan({
     addIntent(intents, 'Discord official brand', 'brand-resource', 80);
   }
 
-  if (textIncludesAny(combined, ['Argentina', 'Egipto', 'Ecuador', 'Seleccion Argentina', 'Selección Argentina'])) {
+  if (textIncludesAny(combined, ['Seleccion Argentina', 'Selección Argentina', 'AFA', 'Copa del Mundo'])
+    || (/\b(futbol|mundial|partido|seleccion)\b/.test(normalizeText(combined)) && textIncludesAny(combined, ['Argentina']))) {
     addIntent(intents, 'Selección Argentina fútbol', 'organization-main', 95);
     addIntent(intents, 'Argentina national football team', 'commons-exact', 90);
   }
@@ -322,6 +341,8 @@ export async function selectImageForNews({
     ai.description,
     ai.category,
     ai.location,
+    `scope ${ai.scope || ''}`,
+    ai.territory,
     article.title,
     sourceArticle.title,
     ...(ai.tags || [])
@@ -359,11 +380,13 @@ export async function selectImageForNews({
     people: verifiedFacts.people || [],
     places: verifiedFacts.places || [],
     eventType: verifiedFacts.eventType || '',
+    scope: ai.scope || '',
     sourceArticle: sourceArticle.title ? sourceArticle : article
   });
 
   const library = await loadMediaLibrary();
   const rankedLibrary = library
+    .filter((entry) => entry.enabled !== false)
     .map((entry) => ({ entry, ...scoreMediaAsset(entry, plan, contextText) }))
     .filter((result) => result.score >= 75)
     .sort((a, b) => b.score - a.score);

@@ -4,6 +4,13 @@ description: "La Peña de la Independencia reunió a la comunidad en una noche d
 date: "2026-07-13T18:00:28.048Z"
 sourcePublishedAt: "2026-07-13T17:11:58.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Tolhuin"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-tolhuin"
+classificationVersion: 2
 location: "Tolhuin"
 tags: ["Independencia", "Tolhuin", "tradiciones", "comunidad"]
 image: "/uploads/auto/2026-07-13-69d99af70c38b9fb6d.webp"

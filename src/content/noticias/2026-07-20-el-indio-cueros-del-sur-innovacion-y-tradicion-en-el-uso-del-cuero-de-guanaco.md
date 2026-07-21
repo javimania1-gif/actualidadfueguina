@@ -4,6 +4,13 @@ description: "Un emprendimiento de Santa Cruz transforma cuero de guanaco en pro
 date: "2026-07-20T23:05:59.326Z"
 sourcePublishedAt: "2026-07-20T22:43:38.000Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["cuero de guanaco", "artesanía", "Santa Cruz", "Exposición Rural", "emprendimiento"]
 image: "/uploads/auto/2026-07-20-2cb0d3b0bf316cb340.webp"

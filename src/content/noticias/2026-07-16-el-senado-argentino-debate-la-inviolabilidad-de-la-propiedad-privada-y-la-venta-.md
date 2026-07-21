@@ -3,7 +3,14 @@ title: "El Senado argentino debate la inviolabilidad de la propiedad privada y l
 description: "El oficialismo busca aprobar un proyecto controvertido que modifica la venta de tierras a extranjeros y presenta pliegos judiciales en el Senado."
 date: "2026-07-16T15:46:09.891Z"
 sourcePublishedAt: "2026-07-16T15:29:13.586Z"
-category: "Mundo"
+category: "Nacionales"
+topic: "Política"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["Senado", "propiedad privada", "tierras", "legislación", "política"]
 image: "/uploads/auto/2026-07-16-019925b4a129a72514.webp"

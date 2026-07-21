@@ -5,8 +5,15 @@ description: >-
   debería recibir compensación, mientras Irán responde que no lo permitirá.
 date: '2026-07-13T14:43:03.534Z'
 sourcePublishedAt: '2026-07-13T13:51:47.000Z'
-category: Mundo
-location: Iran
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Irán"
 tags:
   - Donald Trump
   - Ormuz

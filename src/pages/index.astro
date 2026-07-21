@@ -6,9 +6,12 @@ import { SITE } from '../data/site';
 const noticias = (await getCollection('noticias'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const principal = noticias.find((n) => n.data.featured) ?? noticias[0];
-const secundarias = noticias.filter((n) => n.id !== principal?.id).slice(0, 2);
-const ultimas = noticias.filter((n) => n.id !== principal?.id).slice(0, 9);
+const fueguinas = noticias.filter((n) => n.data.scope === 'local' || n.data.scope === 'provincial');
+const externas = noticias.filter((n) => n.data.scope === 'national' || n.data.scope === 'international');
+const principal = fueguinas.find((n) => n.data.featured) ?? fueguinas[0] ?? noticias[0];
+const secundarias = fueguinas.filter((n) => n.id !== principal?.id).slice(0, 2);
+const ultimasFueguinas = fueguinas.filter((n) => n.id !== principal?.id && !secundarias.some((s) => s.id === n.id)).slice(0, 9);
+const panorama = externas.slice(0, 6);
 const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
 ---
 <BaseLayout title={SITE.name} description={SITE.description}>
@@ -17,12 +20,12 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
       {principal ? (
         <article class="card featured">
           <a href={`/noticias/${principal.slug}/`}>
-            <img class="cover" src={principal.data.image || '/logo-af.jpg'} alt={principal.data.imageAlt || principal.data.title} loading="eager" />
+            <img class="cover" src={principal.data.image || '/og-default.png'} alt={principal.data.imageAlt || principal.data.title} loading="eager" />
             <div class="card-content">
               <span class="eyebrow">{principal.data.category}</span>
               <h1 class="title-xl">{principal.data.title}</h1>
               <p class="lead">{principal.data.description}</p>
-              <div class="meta"><span>{fmt.format(principal.data.date)}</span>{principal.data.location && <span>{principal.data.location}</span>}</div>
+              <div class="meta"><span>{fmt.format(principal.data.date)}</span></div>
             </div>
           </a>
         </article>
@@ -48,11 +51,11 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Últimas noticias</h2>
-        <p class="lead">Actualidad provincial, política, comunidad, economía y agenda pública.</p>
+        <h2>Tierra del Fuego</h2>
+        <p class="lead">Información provincial y municipal seleccionada por relevancia y actualidad.</p>
       </div>
       <div class="grid">
-        {ultimas.map((nota) => (
+        {ultimasFueguinas.map((nota) => (
           <article class="card news-card">
             <a href={`/noticias/${nota.slug}/`}>
               <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
@@ -60,12 +63,36 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
                 <span class="eyebrow">{nota.data.category}</span>
                 <h3 class="title-md">{nota.data.title}</h3>
                 <p>{nota.data.description}</p>
-                <div class="meta"><span>{fmt.format(nota.data.date)}</span>{nota.data.location && <span>{nota.data.location}</span>}</div>
+                <div class="meta"><span>{fmt.format(nota.data.date)}</span></div>
               </div>
             </a>
           </article>
         ))}
       </div>
+
+      {panorama.length > 0 && (
+        <>
+          <div class="section-head panorama-head">
+            <h2>Nacionales y Mundo</h2>
+            <p class="lead">Los hechos externos de mayor impacto, separados de la cobertura fueguina.</p>
+          </div>
+          <div class="grid">
+            {panorama.map((nota) => (
+              <article class="card news-card">
+                <a href={`/noticias/${nota.slug}/`}>
+                  <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+                  <div class="card-content">
+                    <span class="eyebrow">{nota.data.category}</span>
+                    <h3 class="title-md">{nota.data.title}</h3>
+                    <p>{nota.data.description}</p>
+                    <div class="meta"><span>{fmt.format(nota.data.date)}</span></div>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </>
+      )}
       
       <div class="archive-link">
         <a href="/archivo/1/" class="btn-archive">
@@ -85,6 +112,7 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
     justify-content: center;
     margin-top: 3rem;
   }
+  .panorama-head { margin-top: 3rem; }
   .btn-archive {
     display: inline-flex;
     align-items: center;

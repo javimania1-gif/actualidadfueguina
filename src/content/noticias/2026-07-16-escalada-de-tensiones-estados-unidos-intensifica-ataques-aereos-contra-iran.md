@@ -4,6 +4,13 @@ description: "Estados Unidos lanza ataques aéreos por sexto día consecutivo en
 date: "2026-07-16T21:05:22.729Z"
 sourcePublishedAt: "2026-07-16T19:59:08.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
 location: "Estados Unidos"
 tags: ["Estados Unidos", "Irán", "conflicto internacional", "tensión geopolítica"]
 image: "/uploads/auto/2026-07-16-8b164a622dffa4cdcb.webp"

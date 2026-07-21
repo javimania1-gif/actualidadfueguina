@@ -7,8 +7,15 @@ description: >-
   los días 17 y 24 de julio para niñas y niños de Río Grande.
 date: '2026-07-08T17:14:02.000Z'
 sourcePublishedAt: '2026-07-08T16:10:36.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Juegoteca Municipal
   - vacaciones de invierno

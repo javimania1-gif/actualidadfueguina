@@ -4,6 +4,13 @@ description: "El gobernador Melella y el intendente Martín Perez expresaron su 
 date: "2026-07-20T03:28:11.908Z"
 sourcePublishedAt: "2026-07-20T03:27:29.975Z"
 category: "Deportes"
+topic: "Deportes"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Provincia","Nacionales","Mundo"]
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["Mundial 2026", "Selección Argentina", "Gustavo Melella", "Martín Perez"]
 image: "/uploads/auto/2026-07-20-0f675608f2f7aff2b0.webp"

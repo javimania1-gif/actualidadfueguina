@@ -4,7 +4,14 @@ description: "El legendario boxeador José Legrá, conocido como 'el pequeño Ca
 date: "2026-07-15T13:51:20.659Z"
 sourcePublishedAt: "2026-07-15T12:13:00.000Z"
 category: "Mundo"
-location: "Espana"
+topic: "Deportes"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
+location: "Internacional"
 tags: ["boxeo", "José Legrá", "deporte", "España", "Cuba"]
 image: "/uploads/auto/2026-07-15-a919dafe378cc071e2.webp"
 imageAlt: "José Legrá, leyenda del boxeo español"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://static.dw.com/image/77968468_6.jpg"
 imageCredit: "https://www.dw.com/es/muere-jos%C3%A9-pepe-legr%C3%A1-campe%C3%B3n-del-mundo-y-leyenda-del-boxeo-espa%C3%B1ol-de-origen-cubano/a-77968171?maca=spa-rss-sp-all-1122-rdf"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

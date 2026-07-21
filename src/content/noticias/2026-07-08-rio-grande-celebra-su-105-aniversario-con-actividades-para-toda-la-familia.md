@@ -5,8 +5,15 @@ description: >-
   festejar su 105º aniversario con propuestas recreativas para todos.
 date: '2026-07-08T18:23:45.000Z'
 sourcePublishedAt: '2026-07-08T18:01:05.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - aniversario
   - actividades familiares

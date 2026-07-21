@@ -4,8 +4,15 @@ description: >-
   El Municipio invita a vecinos a sumarse a las propuestas recreativas,
   culturales y deportivas familiares durante las vacaciones de invierno.
 date: '2026-07-06T13:14:48.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Deportes"
+topic: "Deportes"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Rio Grande
   - Vacaciones de invierno

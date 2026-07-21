@@ -4,6 +4,13 @@ description: "Los recientes bombardeos en Gaza, que resultaron en la muerte de o
 date: "2026-07-19T02:57:56.016Z"
 sourcePublishedAt: "2026-07-19T02:20:00.000Z"
 category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-foreign"
+classificationVersion: 2
 location: "Internacional"
 tags: ["Gaza", "Israel", "Hamás", "conflicto", "alto el fuego"]
 image: "/uploads/auto/2026-07-19-79df20b5cf178ef168.webp"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://static.dw.com/image/76537321_6.jpg"
 imageCredit: "https://www.dw.com/es/once-muertos-en-bombardeos-israel%C3%ADes-en-gaza/a-78022596?maca=spa-rss-sp-all-1122-rdf"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

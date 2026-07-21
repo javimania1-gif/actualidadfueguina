@@ -7,8 +7,18 @@ const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]
 export async function getStaticPaths() {
   const slugifyPath = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const noticias = await getCollection('noticias');
-  const tags = [...new Set(noticias.flatMap((n) => n.data.tags || []))];
-  return tags.map((tag) => ({ params: { tag: slugifyPath(tag) }, props: { tag } }));
+  const groups = new Map();
+  for (const tag of noticias.flatMap((n) => n.data.tags || [])) {
+    const slug = slugifyPath(tag);
+    if (!slug) continue;
+    const current = groups.get(slug) || { tag, count: 0 };
+    current.count++;
+    if (tag.normalize('NFC') !== tag.normalize('NFD')) current.tag = tag;
+    groups.set(slug, current);
+  }
+  return [...groups.entries()]
+    .filter(([, value]) => value.count >= 2)
+    .map(([slug, value]) => ({ params: { tag: slug }, props: { tag: value.tag } }));
 }
 
 const { tag } = Astro.props;
@@ -16,7 +26,7 @@ const noticias = (await getCollection('noticias'))
   .filter((n) => (n.data.tags || []).some((t) => slugify(t) === slugify(tag)))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<BaseLayout title={`Etiqueta: ${tag}`} description={`Noticias etiquetadas como ${tag} en Actualidad Fueguina.`}>
+<BaseLayout title={`Etiqueta: ${tag}`} description={`Noticias etiquetadas como ${tag} en Actualidad Fueguina.`} robots={noticias.length >= 3 ? 'index, follow' : 'noindex, follow'}>
   <section class="section">
     <div class="container">
       <div class="section-head"><h1 class="title-lg">Etiqueta: {tag}</h1></div>
@@ -24,7 +34,7 @@ const noticias = (await getCollection('noticias'))
         {noticias.map((nota) => (
           <article class="card news-card">
             <a href={`/noticias/${nota.slug}/`}>
-              <img class="cover" src={nota.data.image || '/logo-af.jpg'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
+              <img class="cover" src={nota.data.image || '/og-default.png'} alt={nota.data.imageAlt || nota.data.title} loading="lazy" />
               <div class="card-content">
                 <span class="eyebrow">{nota.data.category}</span>
                 <h2 class="title-md">{nota.data.title}</h2>

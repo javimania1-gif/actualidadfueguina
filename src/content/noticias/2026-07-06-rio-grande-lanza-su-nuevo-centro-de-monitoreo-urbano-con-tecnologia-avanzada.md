@@ -4,8 +4,15 @@ description: >-
   El nuevo Centro de Monitoreo Urbano en Río Grande optimiza la atención
   ciudadana y la respuesta ante emergencias.
 date: '2026-07-06T18:21:17.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - tecnología
   - emergencias

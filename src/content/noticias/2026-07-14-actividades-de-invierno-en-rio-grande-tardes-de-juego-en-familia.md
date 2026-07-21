@@ -3,7 +3,14 @@ title: "Actividades de invierno en Río Grande: Tardes de Juego en Familia"
 description: "El Municipio de Río Grande organiza actividades recreativas y deportivas para disfrutar en familia durante el receso invernal 2026."
 date: "2026-07-14T04:23:06.410Z"
 sourcePublishedAt: "2026-07-13T15:31:00.000Z"
-category: "Turismo"
+category: "Deportes"
+topic: "Deportes"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: ["Malvinas"]
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["Río Grande", "actividades familiares", "recreación"]
 image: "/uploads/auto/2026-07-14-e8541cf7adbaff47e3.webp"

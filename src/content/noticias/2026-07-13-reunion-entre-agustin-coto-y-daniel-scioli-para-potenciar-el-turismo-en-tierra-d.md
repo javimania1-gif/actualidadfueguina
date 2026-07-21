@@ -3,7 +3,14 @@ title: "Reunión entre Agustín Coto y Daniel Scioli para potenciar el turismo e
 description: "El senador Agustín Coto se reunió con el secretario de Turismo de la Nación, Daniel Scioli, para fortalecer el turismo en Tierra del Fuego."
 date: "2026-07-13T11:17:50.985Z"
 sourcePublishedAt: "2026-07-13T05:49:45.000Z"
-category: "Turismo"
+category: "Actualidad"
+topic: "Actualidad"
+territory: "Provincia"
+scope: "provincial"
+secondaryTerritories: ["Ushuaia","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-provincia"
+classificationVersion: 2
 location: "Tierra del Fuego AIAS"
 tags: ["turismo", "Tierra del Fuego", "Agustín Coto", "Daniel Scioli"]
 image: "/uploads/auto/2026-07-13-b0b31d759d92901aaf.webp"

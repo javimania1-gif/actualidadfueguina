@@ -4,6 +4,13 @@ description: "La Ley de Modernización Laboral introduce cambios en la negociaci
 date: "2026-07-13T23:00:48.829Z"
 sourcePublishedAt: "2026-07-13T21:57:55.824Z"
 category: "Nacionales"
+topic: "Sociedad"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: []
+classificationConfidence: "low"
+classificationReason: "body-national"
+classificationVersion: 2
 location: "Argentina"
 tags: ["negociación colectiva", "reforma laboral", "Ley de Modernización Laboral"]
 image: "/uploads/auto/2026-07-13-973a858ce6e4713a7c.webp"
@@ -13,7 +20,7 @@ imageSourceUrl: "https://www.cronista.com/resizer/v2/4ZAUA7JBV5C2XKVNS4E5FJVI5I.
 imageCredit: "https://www.cronista.com/columnistas/negociacion-colectiva-lo-que-cambio-con-la-reforma-y-como-aprovecharlo/"
 imageLicense: "Imagen del articulo fuente; procedencia registrada"
 author: "Actualidad Fueguina"
-featured: true
+featured: false
 importance: 9
 social:
   enabled: true

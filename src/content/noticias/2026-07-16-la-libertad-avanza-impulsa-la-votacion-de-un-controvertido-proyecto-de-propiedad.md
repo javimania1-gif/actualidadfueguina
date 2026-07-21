@@ -4,6 +4,13 @@ description: "El bloque busca activar el Senado para aprobar un proyecto que eli
 date: "2026-07-16T15:45:29.294Z"
 sourcePublishedAt: "2026-07-16T13:22:04.000Z"
 category: "Nacionales"
+topic: "Política"
+territory: "Nacionales"
+scope: "national"
+secondaryTerritories: ["Provincia"]
+classificationConfidence: "lowest"
+classificationReason: "source-location-fallback"
+classificationVersion: 2
 location: "Argentina"
 tags: ["propiedad privada", "Senado", "Tierra del Fuego", "La Libertad Avanza"]
 image: "/uploads/auto/2026-07-16-21c27aff4a4700e89d.webp"

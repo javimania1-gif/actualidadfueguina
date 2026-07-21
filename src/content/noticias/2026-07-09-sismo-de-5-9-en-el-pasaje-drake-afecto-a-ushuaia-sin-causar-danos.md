@@ -4,6 +4,13 @@ description: "Un sismo de magnitud 5.9 se registró en el Pasaje Drake, a 303 km
 date: "2026-07-09T16:51:53.784Z"
 sourcePublishedAt: "2026-07-07T15:25:00.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Ushuaia"
+scope: "local"
+secondaryTerritories: ["Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-ushuaia"
+classificationVersion: 2
 location: "Ushuaia"
 tags: ["sismo", "Ushuaia", "Pasaje Drake"]
 image: "/uploads/auto/2026-07-09-856619c92c2c5c43ac.webp"

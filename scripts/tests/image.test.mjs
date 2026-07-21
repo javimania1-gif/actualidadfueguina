@@ -7,7 +7,7 @@ import { buildImagePlan, scoreMediaAsset, evaluateImageContext } from '../lib/im
 
 let passed = 0;
 let failed = 0;
-const tmpDir = path.join(ROOT, 'scratch/test-images');
+const tmpDir = path.join(ROOT, 'scratch/test-images-runtime');
 const originalFetch = globalThis.fetch;
 
 function test(name, fn) {
@@ -169,6 +169,25 @@ await test('contexto visual acepta Termas como lugar para capacitacion realizada
     contextTags: ['lugar exacto', 'parque termal']
   }, 'Capacitacion para operadores en el Parque Termal de Tolhuin');
   assert.equal(result.ok, true);
+});
+
+await test('contexto visual rechaza a Melella para una noticia extranjera', async () => {
+  const result = evaluateImageContext({
+    label: 'Gustavo Melella',
+    type: 'person',
+    tags: ['Tierra del Fuego', 'gobernador']
+  }, 'Donald Trump anunció aranceles para Canadá scope international Mundo');
+  assert.equal(result.ok, false);
+  assert(result.reasons.includes('local-asset-outside-tdf-scope'));
+});
+
+await test('plan visual no interpreta cualquier mención a Argentina como fútbol', async () => {
+  const plan = buildImagePlan({
+    title: 'El Banco Central de Argentina modificó una regulación monetaria',
+    category: 'Nacionales',
+    scope: 'national'
+  });
+  assert.equal(plan.some((item) => item.query.includes('Selección Argentina')), false);
 });
 
 await test('biblioteca prioriza ONU para nota de descolonizacion de Malvinas', async () => {

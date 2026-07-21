@@ -7,8 +7,15 @@ description: >-
   que cumplen años el mismo día del aniversario de la ciudad.
 date: '2026-07-13T03:20:49.183Z'
 sourcePublishedAt: '2026-07-13T03:19:53.713Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "protagonist-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Río Grande
   - Martín Perez

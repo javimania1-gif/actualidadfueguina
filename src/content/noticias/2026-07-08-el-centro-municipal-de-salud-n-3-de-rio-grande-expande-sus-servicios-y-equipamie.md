@@ -6,8 +6,15 @@ description: >-
   El Centro Municipal de Salud N.° 3 en Río Grande amplía sus especialidades y
   mejora su equipamiento para ofrecer más atención a la comunidad.
 date: '2026-07-08T13:05:42.000Z'
-category: Rio Grande
-location: Río Grande
+category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
+location: "Río Grande"
 tags:
   - Salud
   - Río Grande

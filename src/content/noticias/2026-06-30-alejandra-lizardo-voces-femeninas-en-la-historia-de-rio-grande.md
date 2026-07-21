@@ -4,6 +4,13 @@ description: "Alejandra Lizardo rescata historias de mujeres que han contribuido
 date: "2026-07-09T13:47:08.000Z"
 sourcePublishedAt: "2026-06-30T12:00:00.000Z"
 category: "Sociedad"
+topic: "Sociedad"
+territory: "Río Grande"
+scope: "local"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-rio-grande"
+classificationVersion: 2
 location: "Río Grande"
 tags: ["Alejandra Lizardo", "Mujeres", "Historia", "Río Grande"]
 image: "/uploads/auto/2026-07-09-eafceeeb3a3e466c7b.webp"

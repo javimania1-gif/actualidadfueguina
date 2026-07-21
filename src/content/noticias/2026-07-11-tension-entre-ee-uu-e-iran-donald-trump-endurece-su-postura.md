@@ -5,8 +5,15 @@ description: >-
   entre EE. UU. e Irán, mientras Trump intensifica su discurso contra Teherán.
 date: '2026-07-11T01:26:33.249Z'
 sourcePublishedAt: '2026-07-11T00:09:25.000Z'
-category: Mundo
-location: Iran
+category: "Mundo"
+topic: "Sociedad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Irán"
 tags:
   - Donald Trump
   - Irán

@@ -4,7 +4,14 @@ description: "Damasco intenta recuperar el turismo como motor económico tras a�
 date: "2026-07-17T02:51:40.919Z"
 sourcePublishedAt: "2026-07-17T00:34:27.000Z"
 category: "Mundo"
-location: "Egipto"
+topic: "Actualidad"
+territory: "Mundo"
+scope: "international"
+secondaryTerritories: []
+classificationConfidence: "high"
+classificationReason: "central-foreign"
+classificationVersion: 2
+location: "Siria"
 tags: ["Siria", "turismo", "guerra", "economía", "Damasco"]
 image: "/uploads/auto/2026-07-17-93c79c686b00921f36.webp"
 imageAlt: "Agricultores sirios trabajan cerca de los restos de un misil balístico iraní."

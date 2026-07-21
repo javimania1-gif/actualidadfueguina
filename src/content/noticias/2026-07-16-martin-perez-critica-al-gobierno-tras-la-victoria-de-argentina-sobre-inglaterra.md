@@ -4,7 +4,14 @@ description: "El intendente de Río Grande, Martín Pérez, celebra la clasifica
 date: "2026-07-16T14:01:53.895Z"
 sourcePublishedAt: "2026-07-16T14:01:15.180Z"
 category: "Sociedad"
-location: "Río Grande"
+topic: "Sociedad"
+territory: "Malvinas"
+scope: "provincial"
+secondaryTerritories: ["Río Grande","Nacionales"]
+classificationConfidence: "high"
+classificationReason: "central-malvinas"
+classificationVersion: 2
+location: "Islas Malvinas"
 tags: ["Martín Pérez", "Malvinas", "Gobierno", "Argentina", "Copa del Mundo"]
 image: "/uploads/auto/2026-07-16-a00f72e22b7a1ed620.webp"
 imageAlt: "Martín Pérez celebrando la clasificación de Argentina"

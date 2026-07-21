@@ -172,6 +172,9 @@ export function classifyPipelineError(error) {
   if (/BLOCKED_FACTUAL_MISMATCH|FACT_CHECK_FAILED/i.test(message)) {
     return { retryable: false, reason: 'factual-validation' };
   }
+  if (/ORIGINALITY_CHECK_FAILED/i.test(message)) {
+    return { retryable: true, reason: 'originality-validation' };
+  }
   const httpStatus = Number(message.match(/HTTP\s+(\d{3})/i)?.[1] || 0);
   if (httpStatus && httpStatus < 500 && ![408, 409, 425, 429].includes(httpStatus)) {
     return { retryable: false, reason: `http-${httpStatus}` };
@@ -428,4 +431,33 @@ export function isStaleDatedDiscoveryCandidate({
   }
 
   return false;
+}
+
+export function assessSourceOriginality({ sourceText = '', generatedText = '', ngramSize = 8, maxOverlap = 0.22 } = {}) {
+  const tokens = (value) => normalizeText(String(value || ''))
+    .split(/\s+/)
+    .filter((token) => token.length > 1);
+  const sourceTokens = tokens(sourceText);
+  const generatedTokens = tokens(generatedText);
+  if (sourceTokens.length < ngramSize || generatedTokens.length < ngramSize) {
+    return { ok: true, overlapRatio: 0, hasLongCopy: false, comparedNgrams: 0 };
+  }
+
+  const ngrams = (items, size) => {
+    const output = [];
+    for (let index = 0; index <= items.length - size; index++) output.push(items.slice(index, index + size).join(' '));
+    return output;
+  };
+  const sourceNgrams = new Set(ngrams(sourceTokens, ngramSize));
+  const generatedNgrams = ngrams(generatedTokens, ngramSize);
+  const overlap = generatedNgrams.filter((value) => sourceNgrams.has(value)).length;
+  const overlapRatio = generatedNgrams.length ? overlap / generatedNgrams.length : 0;
+  const sourceLong = new Set(ngrams(sourceTokens, 21));
+  const hasLongCopy = ngrams(generatedTokens, 21).some((value) => sourceLong.has(value));
+  return {
+    ok: overlapRatio <= maxOverlap && !hasLongCopy,
+    overlapRatio: Number(overlapRatio.toFixed(3)),
+    hasLongCopy,
+    comparedNgrams: generatedNgrams.length
+  };
 }
