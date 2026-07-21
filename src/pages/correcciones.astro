@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
 ---
 <BaseLayout title="Política de correcciones" description="Cómo Actualidad Fueguina revisa y comunica correcciones editoriales.">
   <article class="container page-content">
@@ -11,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <li>Una noticia con un conflicto factual no resuelto puede retirarse temporalmente de portada mientras se revisa.</li>
       <li>Las correcciones no se utilizan para ocultar cambios sustanciales en el acontecimiento.</li>
     </ul>
-    <p>El canal editorial específico para solicitudes de corrección se publicará aquí cuando esté habilitado.</p>
+    <p>Podés solicitar una revisión escribiendo a <a href={`mailto:${SITE.email}?subject=${encodeURIComponent('Solicitud de corrección editorial')}`}>{SITE.email}</a>. Incluí el enlace de la noticia y explicá con precisión qué dato debería revisarse.</p>
   </article>
 </BaseLayout>
 

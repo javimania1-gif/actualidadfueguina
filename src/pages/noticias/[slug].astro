@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CommercialPromo from '../../components/CommercialPromo.astro';
 
 export async function getStaticPaths() {
   const noticias = await getCollection('noticias');
@@ -118,6 +119,8 @@ const jsonLd = {
         <p>{processDescriptions[editorialProcess]}</p>
         <a href="/politica-editorial/">Conocé nuestros criterios editoriales</a>
       </details>
+
+      <CommercialPromo placement="article_after_content" />
 
       {related.length > 0 && (
         <section class="related" aria-labelledby="related-title">

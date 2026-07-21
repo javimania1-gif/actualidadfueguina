@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+---
+<BaseLayout title="Quiénes somos" description="Conocé la misión, el alcance y los criterios de Actualidad Fueguina.">
+  <article class="container page-content">
+    <p class="eyebrow">El medio</p>
+    <h1>Quiénes somos</h1>
+    <p class="lead">Actualidad Fueguina es un portal digital de noticias con identidad provincial y base en Río Grande.</p>
+
+    <h2>Nuestra misión</h2>
+    <p>Buscamos informar con claridad sobre Tierra del Fuego, Antártida e Islas del Atlántico Sur, con cobertura de Río Grande, Tolhuin y Ushuaia. También seleccionamos noticias nacionales e internacionales relevantes, presentadas en espacios diferenciados.</p>
+
+    <h2>Cómo trabajamos</h2>
+    <p>Usamos tecnología para descubrir, comparar, ordenar y redactar información, con reglas destinadas a evitar errores de protagonistas, lugares, imágenes y datos centrales. Cada noticia identifica sus fuentes y explica cómo fue elaborada. Los análisis, entrevistas y opiniones requieren autor humano y revisión editorial.</p>
+
+    <h2>Confianza y transparencia</h2>
+    <p>No presentamos publicidad como periodismo independiente. Los contenidos patrocinados se identifican de forma visible y la contratación comercial no condiciona la cobertura editorial. Cuando comprobamos un error sustancial, lo corregimos de acuerdo con nuestra <a href="/correcciones/">política de correcciones</a>.</p>
+
+    <h2>Gestión comercial</h2>
+    <p>La contratación y facturación de los servicios publicitarios de {SITE.name} se realiza a través de {SITE.commercial.billingName}.</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-content { max-width: 820px; padding: 2.5rem 1rem 4rem; }
+  h1 { font-size: clamp(2.5rem, 7vw, 4.6rem); line-height: .98; letter-spacing: -.065em; margin: .5rem 0 1rem; }
+  h2 { margin-top: 2rem; margin-bottom: .7rem; }
+  .lead { font-size: 1.2rem; }
+  a { color: var(--brand-dark); text-decoration: underline; text-underline-offset: 3px; }
+</style>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+
+const whatsappText = encodeURIComponent('Hola, quiero recibir una propuesta de publicidad para Actualidad Fueguina.');
+---
+<BaseLayout title="Anunciá con nosotros" description="Opciones publicitarias transparentes para llegar a la audiencia de Tierra del Fuego con Actualidad Fueguina.">
+  <section class="container commercial-page">
+    <div class="intro">
+      <p class="eyebrow">Publicidad provincial</p>
+      <h1>Tu marca, cerca de la audiencia fueguina</h1>
+      <p class="lead">Creamos propuestas mensuales para comercios, profesionales e instituciones que quieren tener presencia en un medio enfocado en Tierra del Fuego.</p>
+      <div class="actions">
+        <a class="button whatsapp" href={`${SITE.commercial.whatsappUrl}?text=${whatsappText}`} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+        <a class="button secondary" href={`mailto:${SITE.email}?subject=${encodeURIComponent('Consulta publicitaria')}`}>Consultar por correo</a>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <article><h2>Banners</h2><p>Presencia visual en portada o secciones, con formatos adaptados a computadora y celular.</p></article>
+      <article><h2>Patrocinios</h2><p>Asociación de marca con espacios temáticos, agenda, pronóstico o resúmenes, según disponibilidad.</p></article>
+      <article><h2>Contenido comercial</h2><p>Gacetillas y publicaciones patrocinadas claramente identificadas, sin confundir publicidad con cobertura periodística.</p></article>
+      <article><h2>Portal + redes</h2><p>Propuestas combinadas para ampliar la difusión de campañas, actividades o lanzamientos.</p></article>
+    </div>
+
+    <aside class="trust-box">
+      <h2>Una relación comercial transparente</h2>
+      <ul>
+        <li>Cada propuesta detalla ubicación, duración y entregables.</li>
+        <li>Las estadísticas se informan con métricas reales, sin promesas de alcance inventadas.</li>
+        <li>Todo contenido pago se señala de manera visible.</li>
+        <li>La publicidad no compra decisiones editoriales ni cobertura favorable.</li>
+      </ul>
+      <p>Los servicios publicitarios son contratados y facturados por <strong>{SITE.commercial.billingName}</strong>.</p>
+    </aside>
+  </section>
+</BaseLayout>
+
+<style>
+  .commercial-page { padding: 3rem 0 4.5rem; }
+  .intro { max-width: 850px; }
+  h1 { font-size: clamp(2.7rem, 8vw, 5.5rem); line-height: .93; letter-spacing: -.075em; margin: .6rem 0 1rem; }
+  .lead { font-size: clamp(1.1rem, 2vw, 1.3rem); max-width: 760px; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+  .button { display: inline-flex; padding: .9rem 1.2rem; border-radius: 999px; color: white; font-weight: 850; }
+  .button:hover { color: white; transform: translateY(-1px); }
+  .button.whatsapp { background: #087f4b; }
+  .button.secondary { background: var(--accent); }
+  .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 3rem 0 1.5rem; }
+  .product-grid article { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
+  .product-grid h2 { margin: 0 0 .6rem; }
+  .product-grid p { margin: 0; color: var(--muted); }
+  .trust-box { margin-top: 1rem; border-radius: var(--radius); padding: 1.6rem; color: white; background: var(--accent); }
+  .trust-box h2 { margin-top: 0; }
+  .trust-box li { margin-bottom: .55rem; }
+  @media (max-width: 700px) { .product-grid { grid-template-columns: 1fr; } }
+</style>

@@ -79,11 +79,16 @@ El primer objetivo es conseguir entre tres y cinco anunciantes recurrentes, no m
 - consultas comerciales, propuestas y anunciantes activos;
 - ingreso mensual recurrente.
 
-## Datos que faltan para lanzar la venta
+## Datos confirmados para el lanzamiento comercial
 
-- correo o WhatsApp comercial público;
+- WhatsApp público: 2964 621291;
+- correo: infoactualidadfueguina@gmail.com;
+- facturación: Buenas Vibras TDF SAS;
+- modalidad inicial: contratación mensual, con banners, patrocinios, gacetillas comerciales y paquetes de portal + redes.
+
+## Datos que todavía faltan para lanzar la venta
+
 - redes oficiales definitivas;
-- responsable legal y nombre de facturación del medio;
 - métricas reales de audiencia;
 - formatos y ubicaciones publicitarias que Javier acepta;
 - rubros que el portal no publicitará;

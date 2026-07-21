@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../data/site';
+import CommercialPromo from '../components/CommercialPromo.astro';
 
 const noticias = (await getCollection('noticias'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -69,6 +70,8 @@ const fmt = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long' });
           </article>
         ))}
       </div>
+
+      <CommercialPromo placement="home_between_local_and_external" />
 
       {panorama.length > 0 && (
         <>

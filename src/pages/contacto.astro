@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+
+const generalSubject = encodeURIComponent('Consulta para Actualidad Fueguina');
+const commercialText = encodeURIComponent('Hola, quiero consultar por publicidad en Actualidad Fueguina.');
+---
+<BaseLayout title="Contacto" description="Canales de contacto editorial y comercial de Actualidad Fueguina.">
+  <section class="container contact-page">
+    <p class="eyebrow">Contacto</p>
+    <h1>Hablemos</h1>
+    <p class="lead">Elegí el canal según el motivo de tu consulta.</p>
+
+    <div class="contact-grid">
+      <article class="contact-card">
+        <h2>Información y prensa</h2>
+        <p>Para enviar información, documentos, comunicados o proponer una entrevista.</p>
+        <a class="button" href={`mailto:${SITE.email}?subject=${generalSubject}`}>Escribir por correo</a>
+      </article>
+
+      <article class="contact-card">
+        <h2>Correcciones</h2>
+        <p>Si detectaste un posible error, enviá el enlace y el dato que debería revisarse.</p>
+        <a class="button secondary" href="/correcciones/">Solicitar una revisión</a>
+      </article>
+
+      <article class="contact-card featured">
+        <h2>Publicidad</h2>
+        <p>Consultas sobre banners, patrocinios, contenidos comerciales y propuestas para marcas.</p>
+        <a class="button whatsapp" href={`${SITE.commercial.whatsappUrl}?text=${commercialText}`} target="_blank" rel="noopener noreferrer">WhatsApp {SITE.commercial.whatsappDisplay}</a>
+        <p class="billing">Facturación a cargo de {SITE.commercial.billingName}.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-page { padding: 2.5rem 0 4rem; }
+  h1 { font-size: clamp(2.5rem, 7vw, 4.6rem); line-height: .98; letter-spacing: -.065em; margin: .5rem 0 1rem; }
+  .lead { font-size: 1.18rem; }
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+  .contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
+  .contact-card.featured { border-color: rgba(242,106,33,.45); }
+  .contact-card h2 { margin: 0 0 .7rem; }
+  .button { display: inline-flex; margin-top: .7rem; padding: .8rem 1rem; border-radius: 999px; background: var(--brand); color: white; font-weight: 800; }
+  .button:hover { background: var(--brand-dark); color: white; }
+  .button.secondary { background: var(--accent); }
+  .button.whatsapp { background: #087f4b; }
+  .billing { margin: 1rem 0 0; color: var(--muted); font-size: .88rem; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+</style>

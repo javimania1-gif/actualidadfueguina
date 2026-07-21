@@ -11,7 +11,8 @@ const required = [
   'categorias/nacionales/index.html', 'categorias/mundo/index.html',
   'categorias/malvinas/index.html', 'categorias/antartida/index.html',
   'malvinas-antartica/index.html', 'privacidad/index.html', 'cookies/index.html',
-  'terminos/index.html', 'politica-editorial/index.html', 'correcciones/index.html'
+  'terminos/index.html', 'politica-editorial/index.html', 'correcciones/index.html',
+  'quienes-somos/index.html', 'contacto/index.html', 'anuncia/index.html'
 ];
 
 const missing = [];
@@ -20,6 +21,23 @@ for (const relative of required) {
     await fs.access(path.join(dist, relative));
   } catch {
     missing.push(relative);
+  }
+}
+
+const requiredContent = [
+  ['index.html', 'data-commercial-promo'],
+  ['index.html', 'wa.me/5492964621291'],
+  ['contacto/index.html', '2964 621291'],
+  ['anuncia/index.html', 'Buenas Vibras TDF SAS'],
+  ['quienes-somos/index.html', 'Cómo trabajamos']
+];
+const missingContent = [];
+for (const [relative, expected] of requiredContent) {
+  try {
+    const html = await fs.readFile(path.join(dist, relative), 'utf8');
+    if (!html.includes(expected)) missingContent.push({ relative, expected });
+  } catch {
+    missingContent.push({ relative, expected });
   }
 }
 
@@ -48,8 +66,8 @@ for (const file of htmlFiles) {
   }
 }
 
-if (missing.length || brokenInternalLinks.size) {
-  console.error(JSON.stringify({ missing, brokenInternalLinks: [...brokenInternalLinks].sort() }, null, 2));
+if (missing.length || missingContent.length || brokenInternalLinks.size) {
+  console.error(JSON.stringify({ missing, missingContent, brokenInternalLinks: [...brokenInternalLinks].sort() }, null, 2));
   process.exit(1);
 }
 console.log(`Auditoría estática OK: ${htmlFiles.length} páginas HTML, ${required.length} rutas críticas.`);

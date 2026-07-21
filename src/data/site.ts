@@ -6,7 +6,12 @@ export const SITE = {
   locale: 'es_AR',
   logo: '/logo-af.png',
   ogImage: '/og-default.png',
-  email: '',
+  email: 'infoactualidadfueguina@gmail.com',
+  commercial: {
+    whatsappDisplay: '2964 621291',
+    whatsappUrl: 'https://wa.me/5492964621291',
+    billingName: 'Buenas Vibras TDF SAS'
+  },
   social: {
     facebook: '',
     instagram: '',
