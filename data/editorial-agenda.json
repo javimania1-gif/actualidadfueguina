@@ -1,47 +1,66 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T00:20:31.495Z",
+  "generatedAt": "2026-07-21T02:56:55.977Z",
   "summary": {
-    "totalStories": 1004,
+    "totalStories": 1017,
     "byStatus": {
-      "conflicting-sources": 43,
+      "conflicting-sources": 44,
       "published": 57,
-      "verified-standard-single-source": 682,
-      "agenda-invalid": 32,
+      "verified-standard-single-source": 692,
+      "agenda-invalid": 33,
       "verified-tier-a": 1,
       "verified-fast-lane": 5,
-      "rejected-terminal": 94,
-      "pending-verification": 46,
-      "verified-local-routine": 4,
+      "rejected-terminal": 95,
+      "pending-verification": 47,
       "verified-strict": 32,
+      "verified-local-routine": 3,
       "verified-standard": 8
     },
     "byTopic": {
-      "servicios": 149,
+      "deportes": 243,
+      "servicios": 150,
       "agenda": 12,
-      "politica": 123,
-      "turismo": 10,
-      "deportes": 241,
+      "politica": 125,
+      "turismo": 9,
       "policiales": 38,
-      "educacion": 22,
-      "sociedad": 347,
+      "educacion": 24,
+      "sociedad": 354,
       "economia": 59,
       "cultura": 2,
       "salud": 1
     },
     "byTerritory": {
+      "Mundo": 507,
       "Ushuaia": 26,
       "Provincia": 19,
-      "Mundo": 504,
       "Malvinas": 69,
-      "Rio Grande": 11,
+      "Rio Grande": 10,
+      "Nacionales": 309,
       "Antartida": 10,
-      "Nacionales": 298,
       "unknown": 66,
       "Tolhuin": 1
     },
-    "invalidStories": 32,
+    "invalidStories": 33,
     "topStories": [
+      {
+        "storyId": "election|gobierno|daniel ortega|paris|argentina|uruguay|informa|2026-07-21",
+        "headlineSeed": "Daniel Ortega anunció la clausura definitiva de las elecciones en Nicaragua: “Que se olviden”",
+        "topic": "deportes",
+        "territory": "Mundo",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 23,
+          "localRelevance": 7,
+          "impactMagnitude": 23,
+          "serviceValue": 3,
+          "socialPotential": 12,
+          "searchPotential": 10,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "weather-forecast|2026-07-21|tierra-del-fuego",
         "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 21 de julio de 2026",
@@ -212,29 +231,57 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|adelante|caminos|construyendo|convenios|firma|llevo|municipalidad|ushuaia|tierra del fuego",
-        "headlineSeed": "LA MUNICIPALIDAD DE USHUAIA LLEVÓ ADELANTE LA FIRMA DE CONVENIOS PARTE DEL PROGRAMA “CONSTRUYENDO CAMINOS”",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "verified-tier-a",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 11,
-          "searchPotential": 13,
-          "recency": 1,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "election|gobierno|daniel ortega|paris|argentina|uruguay|informa|2026-07-21",
+      "headlineSeed": "Daniel Ortega anunció la clausura definitiva de las elecciones en Nicaragua: “Que se olviden”",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Daniel Ortega",
+        "Gobierno",
+        "Argentina",
+        "Mexico",
+        "Estados Unidos",
+        "Francia",
+        "Cuba",
+        "Brasil"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-21T02:54:40.185Z",
+      "lastSeenAt": "2026-07-21T02:54:40.185Z",
+      "sourceCount": 4,
+      "independentPublisherCount": 4,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
     {
       "storyId": "weather-forecast|2026-07-21|tierra-del-fuego",
       "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 21 de julio de 2026",
@@ -961,47 +1008,46 @@
       "validationReasons": []
     },
     {
-      "storyId": "election|onu|daniel ortega|internacional|estados unidos|espana|informa|2026-07-20",
-      "headlineSeed": "El régimen sandinista: Daniel Ortega descartó llamar a elecciones en Nicaragua para evitar un triunfo de la oposición",
+      "storyId": "election|gobierno|banco central|argentina|espana|informa|2026-07-21",
+      "headlineSeed": "Nueva etapa del plan económico rumbo a la final",
       "topic": "politica",
-      "subtopic": "institucional",
-      "territory": "Mundo",
+      "subtopic": "politica",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Daniel Ortega",
-        "ONU",
-        "Estados Unidos",
-        "Espana",
-        "Francia"
+        "Gobierno",
+        "Banco Central",
+        "Argentina",
+        "Espana"
       ],
       "eventType": "election",
-      "firstSeenAt": "2026-07-20T21:03:29.139Z",
-      "lastSeenAt": "2026-07-20T21:03:29.139Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
+      "firstSeenAt": "2026-07-21T02:54:40.185Z",
+      "lastSeenAt": "2026-07-21T02:54:40.185Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
+      "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 25,
-      "localRelevanceScore": 7,
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
       "impactMagnitudeScore": 23,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
+      "socialPotentialScore": 4,
       "searchPotentialScore": 10,
       "scoreBreakdown": {
-        "publicInterest": 25,
-        "localRelevance": 7,
+        "publicInterest": 23,
+        "localRelevance": 12,
         "impactMagnitude": 23,
         "serviceValue": 3,
-        "socialPotential": 7,
+        "socialPotential": 4,
         "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 97,
-      "status": "conflicting-sources",
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -1419,6 +1465,50 @@
       },
       "newsworthinessScore": 94,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "election|onu|daniel ortega|internacional|estados unidos|espana|informa|2026-07-20",
+      "headlineSeed": "El régimen sandinista: Daniel Ortega descartó llamar a elecciones en Nicaragua para evitar un triunfo de la oposición",
+      "topic": "politica",
+      "subtopic": "institucional",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Daniel Ortega",
+        "ONU",
+        "Estados Unidos",
+        "Espana",
+        "Francia"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-20T21:03:29.139Z",
+      "lastSeenAt": "2026-07-20T21:03:29.139Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 94,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -2179,51 +2269,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|ministerio de defensa y|ministerio de defensa|mijailo fedorov|volodimir zelenski|internacional|argentina|informa|2026-07-20",
-      "headlineSeed": "Ucrania: por qué la caída de Fedorov genera protestas",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Mijailo Fedorov",
-        "Volodimir Zelenski",
-        "Ministerio de Defensa y",
-        "Ministerio de Defensa",
-        "Internacional",
-        "Argentina"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-20T21:03:29.139Z",
-      "lastSeenAt": "2026-07-20T21:03:29.139Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 91,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|camara|camara de diputados|informa|2026-07-20",
       "headlineSeed": "Nuevo aumento en el Congreso: los senadores cobrarán casi $12 millones brutos desde agosto",
       "topic": "politica",
@@ -2309,55 +2354,6 @@
       },
       "newsworthinessScore": 91,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|analizar|canada|castillo|desarrollo|estados|gabriela|hidrocarburifero|rio grande|ushuaia|2026-07-14",
-      "headlineSeed": "Tras su paso por Canadá y Estados Unidos, Gabriela Castillo recorre Vaca Muerta para analizar el desarrollo hidrocarburífero",
-      "topic": "turismo",
-      "subtopic": "turismo",
-      "territory": "Rio Grande",
-      "primaryEntities": [
-        "Gabriela Castillo",
-        "Vaca Muerta",
-        "Municipio",
-        "Gobierno de Javier Milei",
-        "Gobierno",
-        "Policia",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Malvinas"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-14T16:36:15.993Z",
-      "lastSeenAt": "2026-07-14T16:36:15.993Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "fast",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 15,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 15,
-      "searchPotentialScore": 13,
-      "scoreBreakdown": {
-        "publicInterest": 15,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 15,
-        "searchPotential": 13,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 91,
-      "status": "verified-local-routine",
       "validationReasons": []
     },
     {
@@ -2632,6 +2628,51 @@
       },
       "newsworthinessScore": 89,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|ministerio de defensa y|ministerio de defensa|mijailo fedorov|volodimir zelenski|internacional|argentina|informa|2026-07-20",
+      "headlineSeed": "Ucrania: por qué la caída de Fedorov genera protestas",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Mijailo Fedorov",
+        "Volodimir Zelenski",
+        "Ministerio de Defensa y",
+        "Ministerio de Defensa",
+        "Internacional",
+        "Argentina"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-20T21:03:29.139Z",
+      "lastSeenAt": "2026-07-20T21:03:29.139Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2910,47 +2951,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|internacional|estados unidos|denuncia|2026-07-19",
-      "headlineSeed": "En directo: Irán denuncia un ataque de EE. UU. contra la central nuclear en construcción de Darkhovin",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-19T15:00:35.866Z",
-      "lastSeenAt": "2026-07-19T15:00:35.866Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 22,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 22,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 87,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "agenda|argentina|entero|epica|fiesta|inglaterra|logro|remontada|malvinas|2026-07-15",
       "headlineSeed": "Argentina logró una remontada épica ante Inglaterra y el país entero es una fiesta",
       "topic": "agenda",
@@ -3039,7 +3039,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 86,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -3435,87 +3435,6 @@
       "validationReasons": [
         "territory-conflict"
       ]
-    },
-    {
-      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-20",
-      "headlineSeed": "EE.UU. bombardea Irán por noveno día consecutivo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-20T03:27:51.815Z",
-      "lastSeenAt": "2026-07-20T06:51:51.801Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|internacional|informa|2026-07-20",
-      "headlineSeed": "Kuwait y Baréin afirma que responden a ataques de Irán",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-20T03:27:51.815Z",
-      "lastSeenAt": "2026-07-20T06:51:51.801Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 85,
-      "status": "pending-verification",
-      "validationReasons": []
     },
     {
       "storyId": "crime|ministerio de energia|ministerio|jordania hay|internacional|estados unidos|informa|2026-07-18",
@@ -4224,6 +4143,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|internacional|estados unidos|denuncia|2026-07-19",
+      "headlineSeed": "En directo: Irán denuncia un ataque de EE. UU. contra la central nuclear en construcción de Darkhovin",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-19T15:00:35.866Z",
+      "lastSeenAt": "2026-07-19T15:00:35.866Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 22,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 22,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 83,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|economia|gobierno|mundial|nueva|provincias|reformas|relacion|2026-07-19",
       "headlineSeed": "El Gobierno y el post Mundial: economía, reformas y nueva relación con las provincias",
       "topic": "economia",
@@ -4309,6 +4269,87 @@
       },
       "newsworthinessScore": 83,
       "status": "verified-strict",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-20",
+      "headlineSeed": "EE.UU. bombardea Irán por noveno día consecutivo",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-20T03:27:51.815Z",
+      "lastSeenAt": "2026-07-20T06:51:51.801Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|internacional|informa|2026-07-20",
+      "headlineSeed": "Kuwait y Baréin afirma que responden a ataques de Irán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-20T03:27:51.815Z",
+      "lastSeenAt": "2026-07-20T06:51:51.801Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -5157,90 +5198,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|medio oriente|guardia revolucionaria|internacional|estados unidos|informa|2026-07-19",
-      "headlineSeed": "Conflicto en Medio Oriente: Estados Unidos bombardeó instalaciones de la Guardia Revolucionaria de Irán",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Medio Oriente",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-19T13:24:31.716Z",
-      "lastSeenAt": "2026-07-19T13:24:31.716Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 3,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|independiente|2026-07-18|3-1",
-      "headlineSeed": "Batacazo en la Copa Argentina: Aldosivi le ganó 3-1 a River y lo eliminó de la competencia",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Independiente Rivadavia",
-        "Argentina",
-        "Independiente",
-        "Espana"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-18T02:43:49.666Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "international-conflict|ministerio de electricidad|internacional|estados unidos|informa|2026-07-17",
       "headlineSeed": "En directo: Kuwait reporta varios soldados heridos tras ataque iraní, mientras escala la tensión Washington-Teherán",
       "topic": "politica",
@@ -5701,51 +5658,6 @@
       "eventType": "international-conflict",
       "firstSeenAt": "2026-07-18T14:58:06.515Z",
       "lastSeenAt": "2026-07-18T14:58:06.515Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 78,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|ministerio de energia de iran|ministerio de electricidad|ministerio de salud|paris|internacional|estados unidos|informa|2026-07-18",
-      "headlineSeed": "La infraestructura civil: ¿el renovado blanco de la guerra entre Estados Unidos e Irán?",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Ministerio de Energía de Irán",
-        "Ministerio de Electricidad",
-        "Ministerio de Salud",
-        "Paris",
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-18T02:43:49.665Z",
-      "lastSeenAt": "2026-07-18T13:22:52.345Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -6996,6 +6908,47 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|medio oriente|guardia revolucionaria|internacional|estados unidos|informa|2026-07-19",
+      "headlineSeed": "Conflicto en Medio Oriente: Estados Unidos bombardeó instalaciones de la Guardia Revolucionaria de Irán",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Medio Oriente",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-19T13:24:31.716Z",
+      "lastSeenAt": "2026-07-19T13:24:31.716Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 5,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|racing cba|marcos machado|argentina|informa|2026-07-17",
       "headlineSeed": "Mitre (SE) vs Racing CBA, en vivo, por la Primera Nacional: minuto a minuto y qué canal pasa el partido por TV",
       "topic": "deportes",
@@ -7035,6 +6988,49 @@
       },
       "newsworthinessScore": 75,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|argentina|independiente|2026-07-18|3-1",
+      "headlineSeed": "Batacazo en la Copa Argentina: Aldosivi le ganó 3-1 a River y lo eliminó de la competencia",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Independiente Rivadavia",
+        "Argentina",
+        "Independiente",
+        "Espana"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-18T02:43:49.666Z",
+      "lastSeenAt": "2026-07-18T02:43:49.666Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 75,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -7523,6 +7519,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "international-conflict|ministerio de energia de iran|ministerio de electricidad|ministerio de salud|paris|internacional|estados unidos|informa|2026-07-18",
+      "headlineSeed": "La infraestructura civil: ¿el renovado blanco de la guerra entre Estados Unidos e Irán?",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio de Energía de Irán",
+        "Ministerio de Electricidad",
+        "Ministerio de Salud",
+        "Paris",
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-18T02:43:49.665Z",
+      "lastSeenAt": "2026-07-18T13:22:52.345Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 74,
+      "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|baratos|cuales|destinos|invierno|vacaciones|viajar|2026-07-18",
       "headlineSeed": "Vacaciones de invierno: cuáles son los destinos más baratos para viajar",
       "topic": "economia",
@@ -7893,51 +7934,6 @@
       },
       "newsworthinessScore": 74,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|contra|declaraciones|jackson|paises|polemicas|racistas|malvinas|2026-07-20",
-      "headlineSeed": "Polémicas declaraciones de Samuel L. Jackson contra Argentina: “Es uno de los países más racistas”",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Lionel Scaloni",
-        "Malvinas",
-        "Argentina",
-        "Paraguay",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T21:03:29.140Z",
-      "lastSeenAt": "2026-07-20T21:03:29.140Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 73,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -8455,52 +8451,6 @@
       },
       "newsworthinessScore": 72,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "scientific|deficit|fiscal|gobierno|junio|milei|observado|primer|malvinas|2026-07-18",
-      "headlineSeed": "El Gobierno registró el primer déficit fiscal de junio de Milei y será “observado” por FMI",
-      "topic": "economia",
-      "subtopic": "finanzas-publicas",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Milei",
-        "Javier Milei",
-        "Gobierno",
-        "El Gobierno",
-        "Malvinas",
-        "Argentina",
-        "Inglaterra"
-      ],
-      "eventType": "scientific",
-      "firstSeenAt": "2026-07-18T02:43:49.666Z",
-      "lastSeenAt": "2026-07-18T02:43:49.666Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -9387,6 +9337,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|argentina|contra|declaraciones|jackson|paises|polemicas|racistas|malvinas|2026-07-20",
+      "headlineSeed": "Polémicas declaraciones de Samuel L. Jackson contra Argentina: “Es uno de los países más racistas”",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Lionel Scaloni",
+        "Malvinas",
+        "Argentina",
+        "Paraguay",
+        "Inglaterra",
+        "Espana"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-20T21:03:29.140Z",
+      "lastSeenAt": "2026-07-20T21:03:29.140Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 70,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "service|banco|cotizaron|cuanto|dolar|julio|oficial|tarjeta|2026-07-17",
       "headlineSeed": "Dólar oficial y dólar tarjeta: banco por banco, a cuánto cotizaron este viernes 17 de julio",
       "topic": "servicios",
@@ -10143,52 +10138,49 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|santiago korovsky|division palermo|islas malvinas|malvinas|argentina|peru|informa|2026-07-18",
-      "headlineSeed": "La reacción de Santiago Korovsky luego de que unos militares le preguntaran por las Malvinas tras el partido con Inglaterra",
-      "topic": "deportes",
-      "subtopic": "deportes",
+      "storyId": "scientific|deficit|fiscal|gobierno|junio|milei|observado|primer|malvinas|2026-07-18",
+      "headlineSeed": "El Gobierno registró el primer déficit fiscal de junio de Milei y será “observado” por FMI",
+      "topic": "economia",
+      "subtopic": "finanzas-publicas",
       "territory": "Malvinas",
       "primaryEntities": [
-        "Santiago Korovsky",
-        "División Palermo",
-        "Islas Malvinas",
+        "Milei",
+        "Javier Milei",
+        "Gobierno",
+        "El Gobierno",
         "Malvinas",
-        "Paris",
-        "Tierra del Fuego AIAS",
         "Argentina",
-        "Peru",
-        "Reino Unido",
         "Inglaterra"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-18T02:43:49.664Z",
-      "lastSeenAt": "2026-07-18T02:43:49.664Z",
+      "eventType": "scientific",
+      "firstSeenAt": "2026-07-18T02:43:49.666Z",
+      "lastSeenAt": "2026-07-18T02:43:49.666Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 11,
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 11,
+        "publicInterest": 20,
         "localRelevance": 22,
         "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 12,
+        "socialPotential": 7,
         "searchPotential": 8,
-        "recency": 5,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 68,
-      "status": "published",
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -10365,55 +10357,6 @@
       },
       "newsworthinessScore": 68,
       "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|hinchada|messi|mundial|rendida|seguidora|tristeza|malvinas|2026-07-20",
-      "headlineSeed": "La hinchada más seguidora del Mundial se fue con tristeza pero rendida ante Messi",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Messi Hubo",
-        "Nueva Jersey",
-        "Malvinas",
-        "Kansas",
-        "Argentina",
-        "Egipto",
-        "Estados Unidos",
-        "Inglaterra",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T06:51:51.801Z",
-      "lastSeenAt": "2026-07-20T06:51:51.801Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 67,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -11232,24 +11175,32 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|atencion|demanda|farmacias|fuerte|medicamentos|refuerza|tierra del fuego aias|2026-07-19",
-      "headlineSeed": "Ante la fuerte demanda de medicamentos, OSEF refuerza la atención en farmacias - Actualidad TDF",
+      "storyId": "general|hinchada|messi|mundial|rendida|seguidora|tristeza|malvinas|2026-07-20",
+      "headlineSeed": "La hinchada más seguidora del Mundial se fue con tristeza pero rendida ante Messi",
       "topic": "sociedad",
       "subtopic": "sociedad",
-      "territory": "Provincia",
+      "territory": "Malvinas",
       "primaryEntities": [
-        "Estado Fueguino",
-        "Tierra del Fuego AIAS"
+        "Messi Hubo",
+        "Nueva Jersey",
+        "Malvinas",
+        "Kansas",
+        "Argentina",
+        "Egipto",
+        "Estados Unidos",
+        "Inglaterra",
+        "Espana",
+        "Suiza"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-19T15:00:35.866Z",
-      "lastSeenAt": "2026-07-19T15:00:35.866Z",
+      "firstSeenAt": "2026-07-20T06:51:51.801Z",
+      "lastSeenAt": "2026-07-20T06:51:51.801Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "fast",
+      "editorialLane": "standard",
       "freshness": "recent-hard-news",
       "publicInterestScore": 8,
       "localRelevanceScore": 22,
@@ -11265,6 +11216,55 @@
         "socialPotential": 7,
         "searchPotential": 8,
         "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 64,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|santiago korovsky|division palermo|islas malvinas|malvinas|argentina|peru|informa|2026-07-18",
+      "headlineSeed": "La reacción de Santiago Korovsky luego de que unos militares le preguntaran por las Malvinas tras el partido con Inglaterra",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Santiago Korovsky",
+        "División Palermo",
+        "Islas Malvinas",
+        "Malvinas",
+        "Paris",
+        "Tierra del Fuego AIAS",
+        "Argentina",
+        "Peru",
+        "Reino Unido",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-18T02:43:49.664Z",
+      "lastSeenAt": "2026-07-18T02:43:49.664Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 1,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -11768,54 +11768,6 @@
       },
       "newsworthinessScore": 62,
       "status": "verified-fast-lane",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|desbordes|mundial|pleno|preocupacion|programados|sospechosos|viajes|malvinas|2026-07-19",
-      "headlineSeed": "Preocupación por los desbordes y sospechosos viajes programados en pleno Mundial",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Gobierno",
-        "Gobierno y",
-        "Cámara Alta",
-        "Secretaría General",
-        "Malvinas",
-        "Estados Unidos",
-        "Inglaterra",
-        "Italia",
-        "Cuba"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-19T13:24:31.716Z",
-      "lastSeenAt": "2026-07-19T13:24:31.716Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 61,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -12344,6 +12296,262 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|celebrar|elogio|gobierno|jugadores|milei|ofrecio|opciones|2026-07-21",
+      "headlineSeed": "Milei elogió a la Selección y dijo que el Gobierno ofreció seis “opciones” a los jugadores para celebrar",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Gobierno",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T02:54:40.185Z",
+      "lastSeenAt": "2026-07-21T02:54:40.185Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "scientific|ciencia|conocimiento|internacionalmente|movimiento|produce|2026-07-21",
+      "headlineSeed": "Ciencia en movimiento: el conocimiento que se produce internacionalmente",
+      "topic": "educacion",
+      "subtopic": "educacion",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Universidad",
+        "Universidad de Belgrano",
+        "Argentina",
+        "Estados Unidos"
+      ],
+      "eventType": "scientific",
+      "firstSeenAt": "2026-07-21T02:54:40.184Z",
+      "lastSeenAt": "2026-07-21T02:54:40.184Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|deben|identidad|juridica|sociedades|tener|2026-07-21",
+      "headlineSeed": "Las sociedades IA no deben tener identidad jurídica",
+      "topic": "educacion",
+      "subtopic": "educacion",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Milei",
+        "Universidad Nacional de Avellaneda y Presidente",
+        "Argentina"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T02:54:40.184Z",
+      "lastSeenAt": "2026-07-21T02:54:40.184Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|aborto|declaraciones|enrique|guzman|intenciones|pasquel|pinal|2026-07-21",
+      "headlineSeed": "Sylvia Pasquel reacciona a las declaraciones de Enrique Guzmán y las intenciones de aborto de Silvia Pinal",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Sylvia Pasquel",
+        "Enrique Guzmán",
+        "Silvia Pinal",
+        "Luis Enrique",
+        "Alejandra Guzmán",
+        "Gobierno",
+        "Mexico"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T02:54:40.183Z",
+      "lastSeenAt": "2026-07-21T02:54:40.183Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|ahorrar|bajos|combustible|diesel|estos|gasolina|grifos|2026-07-20",
+      "headlineSeed": "Cómo ahorrar en combustible en Lima: estos son los grifos con los precios más bajos de gasolina y diésel",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Peru"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T02:54:40.183Z",
+      "lastSeenAt": "2026-07-21T02:54:40.183Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 12,
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 12,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|aficionados|armaron|atletico|estadio|identifican|pelea|vetan|2026-07-21",
+      "headlineSeed": "Mano dura en la Liga MX: identifican y vetan de por vida a los aficionados que armaron la pelea en el estadio del Atlético San Luis",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Liga MX",
+        "Gobierno",
+        "Mexico"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T02:54:40.182Z",
+      "lastSeenAt": "2026-07-21T02:54:40.182Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|argentina|artificiales|ezeiza|fuegos|llegada|multitud|seleccion|2026-07-20",
       "headlineSeed": "Fuegos artificiales y una multitud: la llegada de la Selección Argentina a Ezeiza",
       "topic": "deportes",
@@ -12628,7 +12836,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -12642,7 +12850,7 @@
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -12677,7 +12885,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -12691,7 +12899,7 @@
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -13006,52 +13214,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|disputo|galardonados|jugadores|lionel|messi|mundial|sexto|2026-07-20",
-      "headlineSeed": "Mundial 2026: Lionel Messi disputó su sexto torneo como uno de los jugadores más galardonados",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Lionel Messi",
-        "Nueva Jersey",
-        "Internacional",
-        "Argentina",
-        "Mexico",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-20T06:51:51.801Z",
-      "lastSeenAt": "2026-07-20T06:51:51.801Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|acoge|argentino|artista|exposicion|hispano|hortaleza|julio|2026-07-20",
       "headlineSeed": "El Silo de Hortaleza acoge una exposición del artista hispano-argentino Julio Ovejero",
       "topic": "servicios",
@@ -13340,7 +13502,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 20,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 5,
@@ -13354,7 +13516,7 @@
         "serviceValue": 3,
         "socialPotential": 9,
         "searchPotential": 7,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -13366,240 +13528,44 @@
       ]
     },
     {
-      "storyId": "service|arranca|carrera|empieza|entra|fracturado|juego|milei|2026-07-19",
-      "headlineSeed": "La TRASTIENDA del PODER | Tras el MUNDIAL, arranca la carrera 2027: MILEI empieza a rodar, el PERONISMO fracturado y el nuevo outsider entra al juego",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
+      "storyId": "general|atencion|demanda|farmacias|fuerte|medicamentos|refuerza|tierra del fuego aias|2026-07-19",
+      "headlineSeed": "Ante la fuerte demanda de medicamentos, OSEF refuerza la atención en farmacias - Actualidad TDF",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
       "primaryEntities": [
-        "MILEI",
-        "Gobierno",
-        "Buenos Aires",
-        "Argentina",
-        "Brasil",
-        "Chile",
-        "Peru",
-        "Colombia",
-        "Estados Unidos"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-19T11:12:23.235Z",
-      "lastSeenAt": "2026-07-19T11:12:23.235Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|algun|cerrara|donde|necesito|oficina|realizar|temporalmente|2026-07-19",
-      "headlineSeed": "La oficina de IPS que cerrará temporalmente: cuál es y a dónde ir si necesito realizar algún trámite",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "ANSES",
-        "Gobierno",
-        "Buenos Aires",
-        "Argentina",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-19T11:12:23.234Z",
-      "lastSeenAt": "2026-07-19T11:12:23.234Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|dinero|ganaron|mundial|mundo|perdieron|quienes|2026-07-18",
-      "headlineSeed": "Quiénes ganaron dinero y quiénes lo perdieron con el Mundial 2026 - BBC News Mundo",
-      "topic": "educacion",
-      "subtopic": "educacion",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Universidad de Oxford y",
-        "Londres",
-        "Internacional",
-        "Argentina",
-        "Brasil",
-        "Paraguay",
-        "Venezuela",
-        "Mexico",
-        "Estados Unidos",
-        "Reino Unido"
+        "Estado Fueguino",
+        "Tierra del Fuego AIAS"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-18T22:55:08.518Z",
-      "lastSeenAt": "2026-07-18T22:55:08.518Z",
+      "firstSeenAt": "2026-07-19T15:00:35.866Z",
+      "lastSeenAt": "2026-07-19T15:00:35.866Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|colectivos|final|funcionaran|mundial|subtes|trenes|2026-07-18",
-      "headlineSeed": "Final del Mundial: cómo funcionarán los colectivos, trenes y subtes en el AMBA",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "AMBA Algunas",
-        "Gobierno",
-        "Policía Federal y Gendarmería",
-        "Buenos Aires",
-        "Argentina",
-        "Egipto",
-        "Inglaterra",
-        "Espana"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-18T20:54:32.633Z",
-      "lastSeenAt": "2026-07-18T20:54:32.633Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
+      "editorialLane": "fast",
       "freshness": "recent-context",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 12,
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legislative|nueva jersey|red bull performance center|giuliano simeone|argentina|espana|informa|2026-07-18",
-      "headlineSeed": "🔴 Selección argentina EN VIVO: práctica en Nueva Jersey, el posible equipo contra España, último entrenamiento antes de la final y más noticias este sábado 18 de julio",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Nueva Jersey",
-        "Red Bull Performance Center",
-        "Giuliano Simeone",
-        "Thiago Almada",
-        "Giovani Lo Celso",
-        "Times Square",
-        "Argentina",
-        "Espana",
-        "Suiza"
-      ],
-      "eventType": "legislative",
-      "firstSeenAt": "2026-07-18T19:11:05.815Z",
-      "lastSeenAt": "2026-07-18T19:11:05.815Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 8,
       "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
       "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 8,
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
+        "socialPotential": 7,
+        "searchPotential": 8,
         "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
       "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
+      "status": "published",
       "validationReasons": []
     }
   ]
