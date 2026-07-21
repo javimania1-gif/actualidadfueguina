@@ -3,13 +3,16 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../data/site';
 import CommercialPromo from '../components/CommercialPromo.astro';
+import { isCurrentFeatured, isHomepageEligible } from '../../scripts/lib/homepage-policy.mjs';
 
+const now = Date.now();
 const noticias = (await getCollection('noticias'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const noticiasVigentes = noticias.filter((nota) => isHomepageEligible(nota, now));
 
-const fueguinas = noticias.filter((n) => n.data.scope === 'local' || n.data.scope === 'provincial');
-const externas = noticias.filter((n) => n.data.scope === 'national' || n.data.scope === 'international');
-const principal = fueguinas.find((n) => n.data.featured) ?? fueguinas[0] ?? noticias[0];
+const fueguinas = noticiasVigentes.filter((n) => n.data.scope === 'local' || n.data.scope === 'provincial');
+const externas = noticiasVigentes.filter((n) => n.data.scope === 'national' || n.data.scope === 'international');
+const principal = fueguinas.find((n) => isCurrentFeatured(n, now)) ?? fueguinas[0] ?? noticiasVigentes[0];
 const secundarias = fueguinas.filter((n) => n.id !== principal?.id).slice(0, 2);
 const ultimasFueguinas = fueguinas.filter((n) => n.id !== principal?.id && !secundarias.some((s) => s.id === n.id)).slice(0, 9);
 const panorama = externas.slice(0, 6);

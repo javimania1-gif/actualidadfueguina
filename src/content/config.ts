@@ -32,6 +32,7 @@ const noticias = defineCollection({
     sponsorName: z.string().optional(),
     disclosure: z.string().max(500).optional(),
     updatedAt: z.coerce.date().optional(),
+    expiresAt: z.coerce.date().optional(),
     featured: z.boolean().default(false),
     location: z.string().optional(),
     sourceName: z.string().optional(),

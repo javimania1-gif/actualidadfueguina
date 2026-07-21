@@ -22,6 +22,11 @@ import {
   unwrapDiscoveryUrl
 } from '../lib/pipeline-utils.mjs';
 import {
+  isCurrentFeatured,
+  isExpiredSportsPreview,
+  isHomepageEligible
+} from '../lib/homepage-policy.mjs';
+import {
   extractFacts,
   generateEventKey,
   isOrdinaryWeatherForecastText
@@ -64,6 +69,46 @@ function test(name, fn) {
 }
 
 console.log('\n--- News Pipeline Utils ---');
+
+test('la portada excluye previas deportivas vencidas y conserva resultados posteriores', () => {
+  const now = new Date('2026-07-21T18:00:00Z').getTime();
+  const previa = {
+    title: 'Río Grande vuelve a alentar a la Selección: el partido contra Inglaterra se verá en pantalla gigante',
+    description: 'La transmisión de la semifinal comenzará este miércoles a las 14:30.',
+    category: 'Deportes',
+    date: '2026-07-14T19:44:37.822Z',
+    featured: true
+  };
+  const resultado = {
+    title: 'Argentina perdió la final del Mundial ante España y terminó subcampeona',
+    description: 'La Selección cayó en la definición disputada el domingo.',
+    category: 'Deportes',
+    date: '2026-07-20T03:00:00Z',
+    featured: false
+  };
+
+  assert.equal(isExpiredSportsPreview(previa, now), true);
+  assert.equal(isHomepageEligible(previa, now), false);
+  assert.equal(isHomepageEligible(resultado, now), true);
+});
+
+test('una marca featured vence a las 48 horas y no desplaza noticias locales nuevas', () => {
+  const now = new Date('2026-07-21T18:00:00Z').getTime();
+  assert.equal(isCurrentFeatured({
+    title: 'Nota local antigua',
+    description: 'Información general de Tierra del Fuego.',
+    category: 'Sociedad',
+    date: '2026-07-18T12:00:00Z',
+    featured: true
+  }, now), false);
+  assert.equal(isCurrentFeatured({
+    title: 'Nota local reciente',
+    description: 'Información reciente de Tierra del Fuego.',
+    category: 'Sociedad',
+    date: '2026-07-21T12:00:00Z',
+    featured: true
+  }, now), true);
+});
 
 test('fuente oficial reciente supera fuente discovery antigua', () => {
   const now = new Date();

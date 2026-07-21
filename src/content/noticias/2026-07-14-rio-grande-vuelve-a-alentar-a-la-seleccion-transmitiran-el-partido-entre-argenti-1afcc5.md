@@ -18,7 +18,8 @@ imageStrategy: "article-og"
 imageSourceUrl: "https://actualidadfueguina.com.ar"
 imageLicense: "Imagen normalizada desde origen"
 author: "Redacción"
-featured: true
+featured: false
+expiresAt: "2026-07-15T23:59:59.000Z"
 importance: 9
 social:
   enabled: true
