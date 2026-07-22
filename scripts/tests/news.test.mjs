@@ -32,10 +32,13 @@ import {
   isOrdinaryWeatherForecastText
 } from '../lib/factual-utils.mjs';
 import {
+  makeDraftMarkdown,
   makeNewsMarkdown
 } from '../lib/news-utils.mjs';
 import {
+  analyzeEditorialOpportunity,
   buildEditorialAgenda,
+  buildCrossStoryOpportunities,
   inferAgendaTerritory,
   inferAgendaTopic,
   validateAgendaStoryCoherence,
@@ -557,6 +560,153 @@ test('gacetilla local menor no desplaza una actividad local útil', () => {
     pubDate: new Date()
   });
   assert(useful.newsworthinessScore > minor.newsworthinessScore);
+});
+
+test('radar comunitario detecta cobertura central de futsal formativo', () => {
+  const score = scoreCandidateNewsworthiness({
+    title: 'Nacional C13 y C15: resultados de la jornada en Rio Grande',
+    facts: {
+      eventType: 'sports-result',
+      places: ['Rio Grande'],
+      sportsTeams: ['Club A', 'Club B'],
+      scores: ['4-2'],
+      rawSummary: 'El torneo nacional de futsal formativo disputo una nueva fecha.'
+    },
+    source: {
+      id: 'futsal-9420-youtube',
+      name: 'FUTSAL 9420',
+      location: 'Rio Grande',
+      defaultCategory: 'Rio Grande',
+      communitySource: true,
+      editorialFocus: 'futsal fueguino'
+    },
+    sourceRef: { tier: 'B', publisherDomain: 'youtube.com' },
+    pubDate: new Date()
+  });
+
+  assert.equal(score.topic, 'deportes');
+  assert.equal(score.editorialOpportunity.opportunityType, 'live-community-coverage');
+  assert.equal(score.editorialOpportunity.recommendedFormat, 'cobertura-central-actualizable');
+  assert(score.editorialOpportunity.communityMobilizationScore >= 12);
+  assert.equal(score.editorialOpportunity.requiresHumanReview, false);
+});
+
+test('datos de INDEC se recomiendan como Claves AF sin inventar comparaciones', () => {
+  const opportunity = analyzeEditorialOpportunity({
+    title: 'INDEC informo la inflacion y la variacion de la canasta basica',
+    facts: {
+      eventType: 'general',
+      organizations: ['INDEC'],
+      percentages: ['3,2%'],
+      numbers: ['2026', '3,2'],
+      rawSummary: 'El IPC y la canasta basica registraron nuevas variaciones.'
+    },
+    source: { id: 'indec', name: 'INDEC' },
+    topic: 'economia',
+    territory: 'Nacionales'
+  });
+  assert.equal(opportunity.opportunityType, 'data-explainer');
+  assert.equal(opportunity.recommendedFormat, 'claves-af');
+  assert.equal(opportunity.requiresHumanReview, false);
+});
+
+test('artista local poco difundido activa amplificacion y seguimiento propio', () => {
+  const opportunity = analyzeEditorialOpportunity({
+    title: 'Una joven artista de Rio Grande presenta su primera muestra',
+    facts: {
+      eventType: 'agenda',
+      people: ['Camila Perez'],
+      places: ['Rio Grande'],
+      rawSummary: 'La artista fueguina presentara su obra en un espacio cultural local.'
+    },
+    source: { id: 'agenda-cultural-local', name: 'Agenda cultural' },
+    topic: 'cultura',
+    territory: 'Rio Grande',
+    socialPotentialScore: 14
+  });
+  assert.equal(opportunity.opportunityType, 'emerging-voice');
+  assert.equal(opportunity.recommendedAction, 'publish-and-notify-protagonists');
+  assert.equal(opportunity.followUpFormat, 'perfil-o-entrevista');
+});
+
+test('contraste simbolico queda bloqueado para revision humana', () => {
+  const opportunity = analyzeEditorialOpportunity({
+    title: 'La palabra Love en la ceremonia mientras continuaban los bombardeos en Iran',
+    facts: {
+      eventType: 'international-conflict',
+      people: ['Donald Trump'],
+      countries: ['Iran', 'Estados Unidos']
+    },
+    topic: 'politica',
+    territory: 'Mundo',
+    impactMagnitudeScore: 25
+  });
+  assert.equal(opportunity.opportunityType, 'contrast-analysis');
+  assert.equal(opportunity.recommendedFormat, 'analisis');
+  assert.equal(opportunity.requiresHumanReview, true);
+});
+
+test('agenda relaciona crisis y espectaculo solo con protagonista compartido', () => {
+  const opportunities = buildCrossStoryOpportunities([
+    {
+      storyId: 'iran-trump',
+      headlineSeed: 'Trump aparece simbolicamente en un ataud durante la guerra con Iran',
+      eventType: 'international-conflict',
+      topic: 'politica',
+      primaryEntities: ['Donald Trump', 'Iran'],
+      people: ['Donald Trump'],
+      freshness: 'today',
+      status: 'verified-standard',
+      newsworthinessScore: 92
+    },
+    {
+      storyId: 'premiacion-trump',
+      headlineSeed: 'Trump entrega el trofeo en la ceremonia de la final del Mundial',
+      eventType: 'sports-result',
+      topic: 'deportes',
+      primaryEntities: ['Donald Trump'],
+      people: ['Donald Trump'],
+      freshness: 'today',
+      status: 'verified-standard',
+      newsworthinessScore: 88
+    }
+  ]);
+  assert.equal(opportunities.length, 1);
+  assert.deepEqual(opportunities[0].sharedPeople, ['Donald Trump']);
+  assert.equal(opportunities[0].requiresHumanReview, true);
+});
+
+test('borrador de analisis conserva la propuesta y no se marca como publicado', () => {
+  const md = makeDraftMarkdown({
+    item: { title: 'Dos hechos para analizar', pubDate: '2026-07-22T12:00:00Z' },
+    article: {
+      title: 'Dos hechos para analizar',
+      description: 'Una propuesta editorial relaciona dos hechos verificados y requiere revision.',
+      text: 'Material factual de origen para revisar.',
+      finalUrl: 'https://example.com/hecho'
+    },
+    source: { name: 'Fuente', defaultCategory: 'Mundo', location: 'Internacional' },
+    mode: 'discovery-review',
+    reason: 'editorial-opportunity-review',
+    ai: {
+      title: 'El contraste entre una ceremonia y la guerra',
+      description: 'Dos escenas simultaneas abren una pregunta editorial que debe revisarse antes de publicar.',
+      category: 'Politica',
+      location: 'Internacional',
+      body: 'Base factual generada sin atribuir intenciones.'
+    },
+    opportunity: {
+      opportunityType: 'contrast-analysis',
+      recommendedFormat: 'analisis',
+      recommendedAction: 'draft-for-editorial-review',
+      requiresHumanReview: true,
+      reasons: ['verified-symbolic-contrast-candidate']
+    }
+  });
+  assert.match(md, /status: "review"/);
+  assert.match(md, /requiresHumanReview: true/);
+  assert.match(md, /Borrador factual generado/);
+  assert.match(md, /Material fuente detectado/);
 });
 
 test('agenda editorial registra historias con tema territorio y score', () => {

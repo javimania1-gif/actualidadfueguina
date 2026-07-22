@@ -429,7 +429,8 @@ export async function writeArticleWithModel({
   sourceText,
   defaultCategory,
   defaultLocation,
-  verifiedFacts = null
+  verifiedFacts = null,
+  editorialOpportunity = null
 }) {
   const system = `Sos un periodista senior y editor jefe de Actualidad Fueguina, un diario digital de Tierra del Fuego.
 Tu objetivo es redactar una nota periodística original, precisa y útil, basándote exclusivamente en el material fuente y, cuando se entreguen, en los hechos verificados.
@@ -449,6 +450,11 @@ REGLAS DE ESTILO Y REDACCIÓN:
 5. Usa titulo informativo, bajada SEO de 100 a 170 caracteres.
 6. Si el material fuente incluye "TIPO: PRONOSTICO_PROVINCIAL", redacta una sola nota provincial de pronostico del tiempo para Tierra del Fuego. No generes una nota por localidad. El cuerpo debe incluir subtitulos breves para Rio Grande, Tolhuin, Ushuaia o las localidades disponibles, y no agregar localidades sin datos confiables.
 7. Valor para el lector: entrega de 2 a 4 puntos clave estrictamente factuales. Explica "por qué importa" solo si el material respalda una consecuencia concreta; si no la respalda, usa una cadena vacía. No presentes opiniones, predicciones ni inferencias como valor agregado.
+8. CRITERIO EDITORIAL PREVIO: recibirás, cuando corresponda, una evaluación estratégica. Usala para jerarquizar y estructurar la nota, pero nunca como fuente factual.
+   - Si recomienda "claves-af", explica los datos en puntos claros sin compararlos con salarios, períodos o indicadores que no estén verificados.
+   - Si detecta una comunidad movilizable, identifica con precisión protagonistas, categoría, club o institución, sin pedir que compartan.
+   - Si recomienda "analisis", redacta solamente una base factual prudente: no atribuyas intenciones ni afirmes hipocresía o contradicción como hecho. El sistema la enviará a revisión humana.
+   - Si recomienda cobertura central actualizable, prioriza fixture, resultados, posiciones, horarios y próximos hitos presentes en los hechos verificados; no inventes una tabla incompleta.
 
 Entrega exclusivamente JSON con esta estructura:
 {
@@ -475,6 +481,9 @@ UBICACION SUGERIDA: ${defaultLocation || 'Tierra del Fuego AIAS'}
 
 HECHOS VERIFICADOS:
 ${verifiedFacts ? JSON.stringify(verifiedFacts, null, 2) : 'No hay registro externo adicional; no agregues hechos fuera del material fuente.'}
+
+EVALUACION ESTRATEGICA PREVIA (NO ES FUENTE FACTUAL):
+${editorialOpportunity ? JSON.stringify(editorialOpportunity, null, 2) : 'Sin recomendación especial; aplicar formato de noticia.'}
 
 MATERIAL FUENTE:
 ${String(sourceText || '').slice(0, 14000)}`;
@@ -640,7 +649,7 @@ storyId: ${yamlString(ai.storyId || '')}
 storyVersion: ${Number(ai.storyVersion) || 1}
 location: ${yamlString(ai.location)}
 tags: ${yamlArray(ai.tags)}
-contentType: "noticia"
+contentType: ${yamlString(ai.contentType || 'noticia')}
 editorialProcess: "automatico"
 keyPoints: ${yamlArray(ai.keyPoints || [])}
 whyItMatters: ${yamlString(ai.whyItMatters || '')}
@@ -661,24 +670,45 @@ ${ai.body.trim()}
 `;
 }
 
-export function makeDraftMarkdown({ item, article, source, mode }) {
-  const summary = cleanText(article.description || item.description || '').slice(0, 180);
+export function makeDraftMarkdown({ item, article, source, mode, reason = '', ai = null, opportunity = null }) {
+  const title = cleanText(ai?.title || article.title || item.title || 'Sin título');
+  const summary = cleanText(ai?.description || article.description || item.description || '').slice(0, 180);
   const material = cleanText(article.text || item.description || '').slice(0, 14000);
+  const reasons = opportunity?.reasons || [];
+  const opportunitySection = opportunity ? `## Análisis previo de oportunidad editorial
+
+- Tipo: ${opportunity.opportunityType || 'standard-news'}
+- Formato recomendado: ${opportunity.recommendedFormat || 'noticia'}
+- Acción sugerida: ${opportunity.recommendedAction || 'revisar'}
+- Revisión humana obligatoria: ${opportunity.requiresHumanReview ? 'sí' : 'no'}
+${opportunity.followUpFormat ? `- Seguimiento posible: ${opportunity.followUpFormat}\n` : ''}${reasons.length ? `- Motivos: ${reasons.join(', ')}\n` : ''}
+` : '';
+  const draftSection = ai?.body ? `## Borrador factual generado
+
+${ai.body.trim()}
+
+` : '';
   return `---
-title: ${yamlString(article.title || item.title || 'Sin título')}
+title: ${yamlString(title)}
 description: ${yamlString(summary || 'Material detectado automáticamente para evaluación editorial.')}
 date: ${yamlString(safeDate(item.pubDate || article.date).toISOString())}
-category: ${yamlString(source.defaultCategory || 'Provincia')}
-location: ${yamlString(source.location || 'Tierra del Fuego AIAS')}
+category: ${yamlString(ai?.category || source.defaultCategory || 'Provincia')}
+location: ${yamlString(ai?.location || source.location || 'Tierra del Fuego AIAS')}
 sourceName: ${yamlString(source.name)}
 sourceUrl: ${yamlString(article.finalUrl || item.link)}
 originalImage: ${yamlString(article.image || '')}
-status: "draft"
+status: ${yamlString(opportunity?.requiresHumanReview ? 'review' : 'draft')}
 detectedAt: ${yamlString(new Date().toISOString())}
 mode: ${yamlString(mode)}
+editorialReason: ${yamlString(reason)}
+opportunityType: ${yamlString(opportunity?.opportunityType || '')}
+recommendedFormat: ${yamlString(opportunity?.recommendedFormat || '')}
+recommendedAction: ${yamlString(opportunity?.recommendedAction || '')}
+opportunityReasons: ${yamlArray(reasons)}
+requiresHumanReview: ${opportunity?.requiresHumanReview ? 'true' : 'false'}
 ---
 
-## Material fuente detectado
+${opportunitySection}${draftSection}## Material fuente detectado
 
 ${material || 'No se pudo extraer el cuerpo completo. Revisar la URL de origen antes de publicar.'}
 `;
