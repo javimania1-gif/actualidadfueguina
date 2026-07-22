@@ -1,16 +1,37 @@
 ---
-title: "\"Tuvimos que sortear cadenillas de oro para pagar la atención médica de mi hija\": cómo el sistema de salud en Paraguay lleva a los pacientes a endeudarse - BBC News Mundo"
-description: "En Paraguay, 7 de cada 10 personas no tienen un seguro de salud y dependen de un sistema público mal financiado para acceder a la atención médica."
+title: "Crisis del sistema de salud en Paraguay: el costo de la atención médica"
+description: "El 70% de la población paraguaya carece de seguro de salud, lo que agrava la crisis sanitaria en el país."
 date: "2026-07-22T11:47:59.000Z"
 category: "Mundo"
-location: "Internacional"
+location: "Paraguay"
 sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/cn754lv856ko?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/40ad/live/f05f6900-85dc-11f1-9837-c51febdbeb82.jpg"
 status: "draft"
-detectedAt: "2026-07-22T19:28:05.879Z"
+detectedAt: "2026-07-22T23:09:34.112Z"
 mode: "discovery-review"
+editorialReason: "daily-target-max"
+opportunityType: "standard-news"
+recommendedFormat: "noticia"
+recommendedAction: "publish-if-verified"
+opportunityReasons: []
+requiresHumanReview: false
 ---
+
+## Análisis previo de oportunidad editorial
+
+- Tipo: standard-news
+- Formato recomendado: noticia
+- Acción sugerida: publish-if-verified
+- Revisión humana obligatoria: no
+
+## Borrador factual generado
+
+En Paraguay, la situación del sistema de salud es alarmante, ya que aproximadamente el 70% de la población no cuenta con seguro médico y depende de un sistema público que enfrenta serios problemas de financiamiento y recursos. La falta de insumos y la escasez de personal médico son solo algunas de las dificultades que enfrentan los pacientes, quienes a menudo deben cubrir de su propio bolsillo los costos de atención médica. Esta crisis se ha visto reflejada en historias de familias que, ante la urgencia de atención, han tenido que recurrir a colectas o vender pertenencias para poder costear tratamientos.
+
+El presidente de Paraguay, Santiago Peña, ha reconocido que la salud pública es un desafío importante para su gobierno, a pesar de las inversiones anunciadas en el sector. Sin embargo, expertos y sindicatos de médicos advierten que las medidas implementadas no son suficientes para abordar la falta de medicamentos y la sobrecarga laboral de los profesionales de la salud. La situación es aún más crítica en áreas rurales, donde el porcentaje de personas sin seguro médico supera el 82%. 
+
+La crisis de salud en Paraguay contrasta con el crecimiento económico del país, que ha registrado un aumento del 6,6% en su PIB, pero sigue siendo uno de los países que menos invierte en salud pública en América Latina, con un gasto del 4,1% de su PIB, muy por debajo de la recomendación de la Organización Panamericana de la Salud.
 
 ## Material fuente detectado
 
@@ -26,7 +47,7 @@ Pie de foto, La falta de equipamiento y medicamentos están entre los principale
 
 - - Autor, [Ayelén Oliva](https://www.bbc.com/mundo/topics/cxwwy1xe43wt)
  - Título del autor, BBC News Mundo
-- Fecha de publicación 7 horas
+- Fecha de publicación 22 julio 2026, 11:47 GMT
  
 - Tiempo de lectura: 11 min
  
@@ -63,17 +84,17 @@ La historia de Daniela es una de las muchas que reflejan la crisis del sistema d
  
  [Escribía versos entre entrega y entrega: el repartidor de comida que ganó uno de los mayores premios literarios de China](https://www.bbc.com/mundo/articles/c8enw1n5ngjo)
  
-- ![Daniel Siad con un puro en una mano](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/a6fe/live/b3a6dd80-85dd-11f1-926f-c90d1bcfbc84.jpg.webp)
- 
- [Encuentran muerto en París al reclutador de modelos vinculado con Jeffrey Epstein](https://www.bbc.com/mundo/articles/cewr51rjjn5o)
- 
 - ![Logotipo de ChatGPT en un teléfono](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/afb5/live/29a46380-85da-11f1-8f00-252bc70ad71a.jpg.webp)
  
  [OpenAI dice que su inteligencia artificial se rebeló y lanzó un ciberataque "sin precedentes"](https://www.bbc.com/mundo/articles/c935qp64qvpo)
  
-- ![El argentino Leandro Paredes (5) reacciona de forma violenta contra el español Gavi (9) tras la final de la Copa Mundial de la FIFA 2026.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/c38f/live/977eddb0-8475-11f1-ac57-abae38e66d9e.jpg.webp)
+- ![Daniel Siad con un puro en una mano](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/a6fe/live/b3a6dd80-85dd-11f1-926f-c90d1bcfbc84.jpg.webp)
  
- [La FIFA abre una investigación contra Argentina por los incidentes tras la derrota en la final del Mundial 2026](https://www.bbc.com/mundo/articles/cwye8j2yq83o)
+ [Encuentran muerto en París al reclutador de modelos vinculado con Jeffrey Epstein](https://www.bbc.com/mundo/articles/cewr51rjjn5o)
+ 
+- ![Imagen del Clipper Endeavor](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/bbcf/live/dd8dc810-85d9-11f1-8f00-252bc70ad71a.jpg.webp)
+ 
+ [Hallan los restos del avión de Pan Am cuyo accidente hace más de 70 años marcó un antes y un después en la seguridad aérea](https://www.bbc.com/mundo/articles/c4gv3pzy95no)
  
 
 Final de Más leídas
@@ -208,4 +229,6 @@ Ante las dificultades que enfrenta el sistema de salud paraguayo, algunos pacien
 
 "Agradezco mucho a la Argentina por abrirles a los pacientes de mi pueblo las puertas de su salud en auxilio", dice Daniela, en relación a la atención que reciben de la provincia de Formosa, en el noroeste argentino, limítrofe con Paraguay.
 
-Esa realidad comenzó a cambiar en mayo de 2025, cuando el gobierno del presidente argentino Javier Milei impulsó restricciones al acceso a la atención sanitaria para extranjeros s
+Esa realidad comenzó a cambiar en mayo de 2025, cuando el gobierno del presidente argentino Javier Milei impulsó restricciones al acceso a la atención sanitaria para extranjeros sin residencia permanente en el país.
+
+Para Patricia Lima, de Alames, detrás de est
