@@ -63,7 +63,13 @@ const borradores = defineCollection({
     originalImage: z.string().optional(),
     status: z.enum(['draft', 'review', 'approved']).default('draft'),
     detectedAt: z.coerce.date(),
-    mode: z.string().optional()
+    mode: z.string().optional(),
+    editorialReason: z.string().optional(),
+    opportunityType: z.string().optional(),
+    recommendedFormat: z.string().optional(),
+    recommendedAction: z.string().optional(),
+    opportunityReasons: z.array(z.string()).default([]),
+    requiresHumanReview: z.boolean().default(false)
   })
 });
 

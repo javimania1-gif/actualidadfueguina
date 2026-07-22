@@ -59,10 +59,150 @@ function factText(facts = {}, title = '', category = '') {
   ].join(' ');
 }
 
+const LOCAL_TERRITORIES = new Set(['Rio Grande', 'Ushuaia', 'Tolhuin', 'Provincia', 'Malvinas', 'Antartida']);
+const COMMUNITY_TOPICS = new Set(['deportes', 'cultura', 'agenda', 'educacion']);
+
+function opportunityText({ facts = {}, title = '', category = '', source = {} } = {}) {
+  return normalizeText([
+    factText(facts, title, category),
+    source.id,
+    source.name,
+    source.editorialFocus,
+    ...(source.specialties || [])
+  ].filter(Boolean).join(' '));
+}
+
+export function analyzeEditorialOpportunity({
+  facts = {},
+  title = '',
+  category = '',
+  source = {},
+  topic = '',
+  territory = '',
+  impactMagnitudeScore = 0,
+  socialPotentialScore = 0
+} = {}) {
+  const text = opportunityText({ facts, title, category, source });
+  const eventText = normalizeText(factText(facts, title, category));
+  const headlineText = normalizeText(title);
+  const local = LOCAL_TERRITORIES.has(territory);
+  const explicitLocalSignal = /\b(rio grande|ushuaia|tolhuin|tierra del fuego|fueguin)\b/.test(eventText);
+  const namedCommunity = (facts.people || []).length > 0 ||
+    (facts.organizations || []).length > 0 ||
+    (facts.sportsTeams || facts.teams || []).length > 0;
+  const communitySource = source.communitySource === true;
+  const localCommunity = local && (communitySource || explicitLocalSignal);
+  const communityTopic = COMMUNITY_TOPICS.has(topic);
+  const youthOrVeterans = /\b(c ?13|c ?15|sub ?13|sub ?15|juvenil|infantil|veteran|femenin|formativas?)\b/.test(text);
+  const tournament = /\b(nacional|patagonico|torneo|campeonato|liga|copa|fixture|fecha|semifinal|final|resultado|posiciones)\b/.test(text);
+  const localSport = topic === 'deportes' && /\b(futsal|club|seleccion|liga|equipo|jugador|jugadora)\b/.test(text);
+  const localCompetition = explicitLocalSignal && /\b(futsal|liga local|torneo local|club fueguino|club de rio grande|seleccion de rio grande|hockey|handball|basquet local)\b/.test(eventText);
+  const emergingVoice = /\b(artista|musico|musica|banda|cantante|escritor|emprendedor|deportista|investigador|estudiante|proyecto cultural)\b/.test(text);
+  const dataInstitution = /\b(indec|ipc|emae|ripte|canasta basica|estadisticas? oficiales?|indice de precios)\b/.test(text);
+  const economicData = /\b(inflacion|salarios?|jubilaciones?|tarifas?|empleo|desempleo|pobreza|actividad economica|poder adquisitivo)\b/.test(text);
+  const hasNumbers = (facts.percentages || []).length > 0 || (facts.money || []).length > 0 || (facts.numbers || []).length >= 2;
+  const qualifiedDataExplainer = dataInstitution || (topic === 'economia' && economicData && hasNumbers && territory !== 'Mundo');
+  const contrastConnector = /\b(mientras|al mismo tiempo|en paralelo|en medio de|contraste|contradiccion|paradoja|hipocres)\b/.test(headlineText);
+  const crisisImage = /\b(guerra|bombarde|misil|ataque militar|ataud|muert|victimas?|iran|gaza|ucrania)\b/.test(headlineText) ||
+    ['international-conflict', 'casualty', 'defense'].includes(facts.eventType);
+  const celebratoryImage = /\b(love|amor|paz|premio|trofeo|festej|celebracion|ceremonia|gala|final del mundial)\b/.test(headlineText);
+
+  let communityMobilizationScore = 0;
+  if (localCommunity) communityMobilizationScore += 5;
+  if (communityTopic) communityMobilizationScore += 4;
+  if (namedCommunity) communityMobilizationScore += 3;
+  if (communitySource) communityMobilizationScore += 4;
+  if (youthOrVeterans) communityMobilizationScore += 2;
+  if (localSport || emergingVoice) communityMobilizationScore += 2;
+  communityMobilizationScore = clamp(communityMobilizationScore, 0, 20);
+
+  let originalReportingPotentialScore = 0;
+  if (localCommunity) originalReportingPotentialScore += 4;
+  if (communitySource) originalReportingPotentialScore += 4;
+  if (namedCommunity) originalReportingPotentialScore += 4;
+  if (localSport || emergingVoice) originalReportingPotentialScore += 5;
+  if (youthOrVeterans) originalReportingPotentialScore += 3;
+  originalReportingPotentialScore = clamp(originalReportingPotentialScore, 0, 20);
+
+  let dataExplainerPotentialScore = 0;
+  if (topic === 'economia') dataExplainerPotentialScore += 4;
+  if (dataInstitution) dataExplainerPotentialScore += 7;
+  if (economicData) dataExplainerPotentialScore += 5;
+  if (hasNumbers) dataExplainerPotentialScore += 4;
+  dataExplainerPotentialScore = clamp(dataExplainerPotentialScore, 0, 20);
+
+  let contrastPotentialScore = 0;
+  if (contrastConnector) contrastPotentialScore += 6;
+  if (crisisImage) contrastPotentialScore += 5;
+  if (celebratoryImage) contrastPotentialScore += 5;
+  if (contrastConnector && crisisImage && celebratoryImage) contrastPotentialScore += 4;
+  contrastPotentialScore = clamp(contrastPotentialScore, 0, 20);
+
+  const reasons = [];
+  if (communitySource) reasons.push('community-specialist-source');
+  if (communityMobilizationScore >= 12) reasons.push('mobilizable-local-community');
+  if (youthOrVeterans) reasons.push('undercovered-age-or-gender-category');
+  if (emergingVoice) reasons.push('undercovered-protagonist');
+  if (dataExplainerPotentialScore >= 12) reasons.push('official-data-needs-explanation');
+  if (contrastPotentialScore >= 14) reasons.push('verified-symbolic-contrast-candidate');
+  if (impactMagnitudeScore >= 20) reasons.push('high-impact-event');
+  if (socialPotentialScore >= 12) reasons.push('strong-sharing-potential');
+
+  let opportunityType = 'standard-news';
+  let recommendedFormat = 'noticia';
+  let recommendedAction = 'publish-if-verified';
+  let followUpFormat = '';
+  let requiresHumanReview = false;
+
+  if (contrastPotentialScore >= 14) {
+    opportunityType = 'contrast-analysis';
+    recommendedFormat = 'analisis';
+    recommendedAction = 'draft-for-editorial-review';
+    requiresHumanReview = true;
+  } else if (dataExplainerPotentialScore >= 12 && qualifiedDataExplainer) {
+    opportunityType = 'data-explainer';
+    recommendedFormat = 'claves-af';
+    recommendedAction = 'publish-factual-explainer-if-verified';
+    followUpFormat = 'analisis-comparativo-con-series-verificadas';
+  } else if (topic === 'deportes' && localCommunity && tournament && (communitySource || youthOrVeterans || localCompetition)) {
+    opportunityType = 'live-community-coverage';
+    recommendedFormat = 'cobertura-central-actualizable';
+    recommendedAction = 'update-central-coverage-or-publish-milestone';
+    followUpFormat = 'historia-humana-o-entrevista';
+  } else if (communityMobilizationScore >= 12 && localCommunity && (communitySource || emergingVoice || youthOrVeterans)) {
+    opportunityType = emergingVoice ? 'emerging-voice' : 'community-amplification';
+    recommendedAction = 'publish-and-notify-protagonists';
+    followUpFormat = 'perfil-o-entrevista';
+  } else if (impactMagnitudeScore >= 20) {
+    opportunityType = 'high-impact-news';
+  }
+
+  const strategicValueScore = clamp(Math.round(Math.max(
+    communityMobilizationScore,
+    originalReportingPotentialScore,
+    dataExplainerPotentialScore,
+    contrastPotentialScore
+  ) * 0.6), 0, 12);
+
+  return {
+    opportunityType,
+    recommendedFormat,
+    recommendedAction,
+    followUpFormat,
+    requiresHumanReview,
+    communityMobilizationScore,
+    originalReportingPotentialScore,
+    dataExplainerPotentialScore,
+    contrastPotentialScore,
+    strategicValueScore,
+    reasons: unique(reasons)
+  };
+}
+
 export function inferAgendaTopic({ facts = {}, title = '', category = '' } = {}) {
   const eventType = facts.eventType || 'general';
   const text = factText(facts, title, category);
-  if (eventType === 'sports-result' || hasAny(text, ['deportes', 'futbol', 'mundial de futbol', 'copa del mundo', 'partido', 'seleccion', 'club'])) return 'deportes';
+  if (eventType === 'sports-result' || hasAny(text, ['deportes', 'futbol', 'futsal', 'mundial de futbol', 'copa del mundo', 'partido', 'seleccion', 'club', 'torneo', 'campeonato'])) return 'deportes';
   if (eventType === 'crime') return 'policiales';
   if (['international-conflict', 'territorial-sovereignty', 'defense'].includes(eventType)) return 'politica';
   if (eventType === 'weather' || eventType === 'weather-forecast' || eventType === 'service') return 'servicios';
@@ -220,6 +360,17 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
   const socialPotentialScore = scoreSocialPotential({ topic, facts, territory });
   const searchPotentialScore = scoreSearchPotential({ topic, facts, territory });
   const sourceStrengthScore = sourceScore(sourceRefs);
+  const editorialOpportunity = analyzeEditorialOpportunity({
+    facts,
+    title,
+    category,
+    source,
+    topic,
+    territory,
+    impactMagnitudeScore,
+    socialPotentialScore
+  });
+  const strategicValueScore = editorialOpportunity.strategicValueScore;
   const diversityBonus = byCategory[category] ? 0 : 4;
   let newsworthinessScore = Math.round(
     publicInterestScore +
@@ -230,6 +381,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     searchPotentialScore +
     freshness.score +
     sourceStrengthScore +
+    strategicValueScore +
     diversityBonus
   );
   if (territory === 'Mundo' && impactMagnitudeScore < 18) newsworthinessScore = Math.min(newsworthinessScore - 8, 55);
@@ -251,6 +403,8 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
     socialPotentialScore,
     searchPotentialScore,
     sourceStrengthScore,
+    strategicValueScore,
+    editorialOpportunity,
     recencyScore: freshness.score,
     scoreBreakdown: {
       publicInterest: publicInterestScore,
@@ -261,6 +415,7 @@ export function scoreCandidateNewsworthiness(candidate = {}, { verification = {}
       searchPotential: searchPotentialScore,
       recency: freshness.score,
       sourceStrength: sourceStrengthScore,
+      strategicValue: strategicValueScore,
       diversity: diversityBonus
     },
     newsworthinessScore
@@ -317,6 +472,7 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
     subtopic: score.subtopic,
     territory: score.territory,
     primaryEntities,
+    people: unique(facts.people || []).slice(0, 8),
     eventType: facts.eventType || 'general',
     firstSeenAt: event.firstDetectedAt || event.lastSeenAt || null,
     lastSeenAt: event.lastSeenAt || null,
@@ -331,6 +487,8 @@ export function buildAgendaStory({ eventKey = '', event = {}, candidate = null, 
     serviceValueScore: score.serviceValueScore,
     socialPotentialScore: score.socialPotentialScore,
     searchPotentialScore: score.searchPotentialScore,
+    strategicValueScore: score.strategicValueScore,
+    editorialOpportunity: score.editorialOpportunity,
     scoreBreakdown: score.scoreBreakdown,
     newsworthinessScore: score.newsworthinessScore,
     status: event.status || 'unknown'
@@ -385,6 +543,67 @@ export function validateAgendaStoryCoherence(story = {}) {
   return { ok: reasons.length === 0, reasons: unique(reasons) };
 }
 
+function storyPeople(story = {}) {
+  return new Map((story.people || []).map((value) => [normalizeText(value), value]).filter(([key]) => key));
+}
+
+function isRecentOpportunityStory(story = {}) {
+  return ['breaking', 'today', 'recent-hard-news', 'recent-context'].includes(story.freshness);
+}
+
+export function buildCrossStoryOpportunities(stories = []) {
+  const candidates = stories
+    .filter((story) => story.status !== 'agenda-invalid' && isRecentOpportunityStory(story))
+    .slice(0, 60);
+  const opportunities = [];
+  const seenPairs = new Set();
+
+  for (let leftIndex = 0; leftIndex < candidates.length; leftIndex++) {
+    const left = candidates[leftIndex];
+    const leftPeople = storyPeople(left);
+    if (leftPeople.size === 0) continue;
+    for (let rightIndex = leftIndex + 1; rightIndex < candidates.length; rightIndex++) {
+      const right = candidates[rightIndex];
+      const sharedPeople = [...storyPeople(right).entries()]
+        .filter(([key]) => leftPeople.has(key))
+        .map(([key, value]) => leftPeople.get(key) || value);
+      if (sharedPeople.length === 0) continue;
+
+      const leftText = normalizeText(`${left.headlineSeed} ${left.eventType} ${left.topic}`);
+      const rightText = normalizeText(`${right.headlineSeed} ${right.eventType} ${right.topic}`);
+      const crisisTypes = new Set(['international-conflict', 'casualty', 'defense']);
+      const publicSpectacle = /\b(final|mundial|premio|trofeo|ceremonia|gala|festej|love|paz)\b/;
+      const leftIsCrisis = crisisTypes.has(left.eventType);
+      const rightIsCrisis = crisisTypes.has(right.eventType);
+      const leftIsSpectacle = ['deportes', 'cultura'].includes(left.topic) && publicSpectacle.test(leftText);
+      const rightIsSpectacle = ['deportes', 'cultura'].includes(right.topic) && publicSpectacle.test(rightText);
+      const hasContrast = (leftIsCrisis && rightIsSpectacle) || (rightIsCrisis && leftIsSpectacle);
+      if (!hasContrast) continue;
+
+      const pairKey = [normalizeText(left.headlineSeed), normalizeText(right.headlineSeed)].sort().join('|');
+      if (seenPairs.has(pairKey)) continue;
+      seenPairs.add(pairKey);
+
+      opportunities.push({
+        opportunityId: `contrast|${[left.storyId, right.storyId].sort().join('|')}`,
+        opportunityType: 'cross-story-contrast',
+        storyIds: [left.storyId, right.storyId],
+        headlineSeeds: [left.headlineSeed, right.headlineSeed],
+        sharedPeople: unique(sharedPeople),
+        recommendedFormat: 'analisis',
+        recommendedAction: 'verify-context-and-draft-for-editorial-review',
+        requiresHumanReview: true,
+        priorityScore: clamp(Math.round(((left.newsworthinessScore || 0) + (right.newsworthinessScore || 0)) / 2 + 8)),
+        reasons: ['shared-person', 'simultaneous-crisis-and-public-spectacle', 'do-not-infer-intent']
+      });
+    }
+  }
+
+  return opportunities
+    .sort((a, b) => b.priorityScore - a.priorityScore)
+    .slice(0, 30);
+}
+
 function countBy(stories = [], field) {
   const out = {};
   for (const story of stories) {
@@ -415,9 +634,21 @@ export function buildEditorialAgenda(events = {}, { verifiedCandidates = [], met
     return String(b.lastSeenAt || '').localeCompare(String(a.lastSeenAt || ''));
   });
   const rankableStories = stories.filter((story) => story.status !== 'agenda-invalid');
+  const storyOpportunities = rankableStories
+    .filter((story) => !['standard-news', 'high-impact-news'].includes(story.editorialOpportunity?.opportunityType))
+    .map((story) => ({
+      opportunityId: `story|${story.storyId}`,
+      storyIds: [story.storyId],
+      headlineSeeds: [story.headlineSeed],
+      priorityScore: story.newsworthinessScore,
+      ...story.editorialOpportunity
+    }));
+  const crossStoryOpportunities = buildCrossStoryOpportunities(rankableStories);
+  const opportunities = [...crossStoryOpportunities, ...storyOpportunities]
+    .sort((a, b) => (b.priorityScore || 0) - (a.priorityScore || 0));
 
   return {
-    version: 1,
+    version: 2,
     generatedAt: asDate(now).toISOString(),
     summary: {
       totalStories: stories.length,
@@ -425,6 +656,8 @@ export function buildEditorialAgenda(events = {}, { verifiedCandidates = [], met
       byTopic: countBy(stories, 'topic'),
       byTerritory: countBy(stories, 'territory'),
       invalidStories: stories.filter((story) => story.status === 'agenda-invalid').length,
+      editorialOpportunities: opportunities.length,
+      topOpportunities: opportunities.slice(0, 10),
       topStories: rankableStories.slice(0, 10).map((story) => ({
         storyId: story.storyId,
         headlineSeed: story.headlineSeed,
@@ -435,7 +668,8 @@ export function buildEditorialAgenda(events = {}, { verifiedCandidates = [], met
         scoreBreakdown: story.scoreBreakdown
       }))
     },
-    stories: stories.slice(0, 300)
+    stories: stories.slice(0, 300),
+    opportunities: opportunities.slice(0, 100)
   };
 }
 

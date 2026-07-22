@@ -8,6 +8,10 @@
 - Deja otras detecciones como borradores para revisión opcional.
 - Evita duplicados mediante `data/seen.json`.
 - Genera un resumen diario si hubo al menos tres noticias.
+- Evalúa antes de redactar el potencial de servicio, impacto, comunidad, difusión, análisis de datos y contraste entre acontecimientos.
+- Genera una agenda de oportunidades con formato y acción recomendados: noticia, Claves AF, cobertura central actualizable, perfil/entrevista o análisis supervisado.
+- Los análisis simbólicos o de contraste nunca se publican automáticamente: se guardan como borradores para revisión humana.
+- Incorpora fuentes comunitarias especializadas, como FUTSAL 9420, como radar; sus resultados deportivos siguen sujetos a corroboración.
 - Limpia borradores de más de 10 días.
 - Ejecuta un control técnico diario del build y del sitio publicado.
 

@@ -187,6 +187,7 @@ const metrics = {
   approvedForPublication: 0,
   imageSelections: [],
   agendaStories: 0,
+  editorialOpportunityReview: 0,
   newsworthinessAverage: 0,
   newsworthinessTop: [],
   corroborationSearches: 0,
@@ -1356,7 +1357,8 @@ for (const candidate of verifiedCandidates) {
           sourceText: article.text,
           defaultCategory: source.forceCategory || source.defaultCategory,
           defaultLocation: source.location,
-          verifiedFacts: verification?.verifiedFacts || null
+          verifiedFacts: verification?.verifiedFacts || null,
+          editorialOpportunity: candidate.newsworthiness?.editorialOpportunity || null
         });
         metrics.aiCalls++;
       } else {
@@ -1411,6 +1413,28 @@ for (const candidate of verifiedCandidates) {
       ai.location = territoryResolution.location;
 
       ai.importance = deriveEffectiveImportance(ai.importance, candidate.newsworthiness || {});
+      const editorialOpportunity = candidate.newsworthiness?.editorialOpportunity || null;
+      if (
+        editorialOpportunity?.recommendedFormat === 'claves-af' &&
+        (ai.keyPoints || []).length >= 2 &&
+        String(ai.whyItMatters || '').trim()
+      ) {
+        ai.contentType = 'claves-af';
+      }
+
+      if (editorialOpportunity?.requiresHumanReview) {
+        metrics.editorialOpportunityReview++;
+        if (draftCount < MAX_DRAFTS_PER_RUN) {
+          await saveDraft(candidate, 'editorial-opportunity-review', {
+            status: 'draft',
+            draftAi: ai
+          });
+          draftCount++;
+          metrics.drafts++;
+        }
+        console.log(`  REVISION EDITORIAL [${editorialOpportunity.opportunityType}]: ${ai.title}`);
+        continue;
+      }
 
       // Si la fuente tiene minImportance, descartar si la IA le dio importancia menor
       if (source.minImportance && ai.importance < source.minImportance) {
@@ -1602,6 +1626,7 @@ for (const candidate of verifiedCandidates) {
 
 async function saveDraft(candidate, reason, state = {}) {
   const { source, item, article, initialKey, canonicalKey, isOfficial } = candidate;
+  const { draftAi = null, ...persistedState } = state;
   const title = article.title || item.title || 'nota-detectada';
   const pubDate = safeDate(article.date || item.pubDate || new Date());
   const filename = `${datePrefix(pubDate)}-${slugify(title)}-${canonicalKey.slice(0, 6)}.md`;
@@ -1612,10 +1637,13 @@ async function saveDraft(candidate, reason, state = {}) {
   }
   await fs.writeFile(target, makeDraftMarkdown({
     item, article, source,
-    mode: isOfficial ? 'official-review' : 'discovery-review'
+    mode: isOfficial ? 'official-review' : 'discovery-review',
+    reason,
+    ai: draftAi || state.aiResult || null,
+    opportunity: candidate.newsworthiness?.editorialOpportunity || null
   }), 'utf8');
   seen.items[canonicalKey] = {
-    ...state,
+    ...persistedState,
     seenAt: new Date().toISOString(),
     status: state.status || 'draft',
     source: source.id,
