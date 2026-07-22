@@ -1,51 +1,55 @@
 {
-  "generatedAt": "2026-07-22T02:55:13.106Z",
+  "generatedAt": "2026-07-22T06:34:31.604Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29886836013",
-    "headSha": "8c82d81db9fbf0d66d85826307158538e49d89a1"
+    "runId": "29896980117",
+    "headSha": "669d1fc7834c0f3916682b1210d6d6fcbbd3dbcb"
   },
   "metrics": {
     "sourcesConfigured": 32,
     "sourcesConsulted": 32,
-    "candidatesDetected": 87,
-    "candidatesIngested": 37,
-    "extractionSucceeded": 35,
-    "candidatesApproved": 25,
+    "candidatesDetected": 91,
+    "candidatesIngested": 33,
+    "extractionSucceeded": 31,
+    "candidatesApproved": 18,
     "discardedDuplicate": 9,
     "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
     "duplicatePublishedEvent": 7,
-    "discardedQuality": 3,
+    "discardedQuality": 5,
     "discardedQualityByReason": {
-      "undated-discovery": 2,
-      "stale-dated-discovery": 1
+      "stale-hard-news": 1,
+      "stale-dated-discovery": 1,
+      "undated-discovery": 3
     },
     "discardedBySourceAndReason": {
-      "sur54": {
-        "undated-discovery": 2
+      "mundo-france24": {
+        "stale-hard-news": 1
       },
-      "bing-ushuaia": {
+      "nacionales-tn": {
         "stale-dated-discovery": 1
+      },
+      "critica-sur": {
+        "undated-discovery": 3
       }
     },
     "discardedGenericTitle": 0,
     "discardedEvergreen": 1,
-    "eventsGrouped": 25,
-    "verified": 19,
-    "pendingVerification": 4,
+    "eventsGrouped": 18,
+    "verified": 11,
+    "pendingVerification": 6,
     "pendingMatchedFromHistory": 0,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 59
+      "conservedPublished": 61
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 0,
+    "pendingTerminalizedExpired": 5,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
@@ -59,23 +63,38 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T05:53:32.440Z",
+        "nextRetryAt": "2026-07-22T09:33:01.771Z",
         "expiresAt": "2026-07-23T17:26:16.432Z",
-        "corroborationAttempts": 2
+        "corroborationAttempts": 3
       },
       {
-        "eventKey": "international-conflict|defensa pete hegseth|internacional|estados unidos|informa|2026-07-22",
-        "title": "La guerra en Irán le ha costado USD 37.500 millones a EE.UU.",
-        "sourceId": "mundo-dw",
-        "publisherDomain": "dw.com",
-        "category": "Mundo",
-        "eventType": "international-conflict",
+        "eventKey": "general|acusado|almeria|juicio|matar|miercoles|mujer|punaladas|2026-07-22",
+        "title": "A juicio este miércoles acusado de matar de 49 puñaladas a su mujer en Roquetas de Mar (Almería)",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "category": "Nacionales",
+        "eventType": "general",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T05:53:32.442Z",
-        "expiresAt": "2026-07-24T02:53:32.442Z",
+        "nextRetryAt": "2026-07-22T09:33:01.771Z",
+        "expiresAt": "2026-07-24T06:33:01.771Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "service|ataque|civiles|contra|fuente|menos|muertos|paramilitares|2026-07-22",
+        "title": "Al menos 21 civiles muertos en ataque de paramilitares contra una fuente de agua en Sudán",
+        "sourceId": "nacionales-infobae",
+        "publisherDomain": "infobae.com",
+        "category": "Nacionales",
+        "eventType": "service",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-22T09:33:01.771Z",
+        "expiresAt": "2026-07-24T06:33:01.771Z",
         "corroborationAttempts": 0
       },
       {
@@ -89,55 +108,66 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T05:53:32.443Z",
+        "nextRetryAt": "2026-07-22T09:33:01.772Z",
         "expiresAt": "2026-07-24T02:53:32.443Z",
-        "corroborationAttempts": 1
+        "corroborationAttempts": 2
       },
       {
-        "eventKey": "casualty|policia|policia la|justicia|informa|2026-07-22",
-        "title": "Se hicieron pasar por policías para entrar a robar en una casa, balearon al dueño y volcaron al escapar",
+        "eventKey": "crime|policia de misiones|informa|2026-07-22",
+        "title": "Maltrato animal en Misiones: detuvieron a un hombre acusado de golpear a dos perros con un bate de béisbol",
         "sourceId": "nacionales-tn",
         "publisherDomain": "tn.com.ar",
         "category": "Nacionales",
-        "eventType": "casualty",
+        "eventType": "crime",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T05:53:32.444Z",
-        "expiresAt": "2026-07-24T02:53:32.444Z",
-        "corroborationAttempts": 1
+        "nextRetryAt": "2026-07-22T09:33:01.773Z",
+        "expiresAt": "2026-07-24T06:33:01.773Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "crime|fiscalia de instruccion|justicia de|maximiliano baudraco|informa|2026-07-22",
+        "title": "Diez puñaladas y una aorta perforada: la autopsia confirmó la brutalidad del femicidio de Rocío Gómez",
+        "sourceId": "nacionales-perfil",
+        "publisherDomain": "perfil.com",
+        "category": "Nacionales",
+        "eventType": "crime",
+        "lane": "strict",
+        "riskLevel": "high",
+        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-22T09:33:01.774Z",
+        "expiresAt": "2026-07-24T06:33:01.774Z",
+        "corroborationAttempts": 0
       }
     ],
-    "conflicting": 2,
-    "published": 4,
+    "conflicting": 1,
+    "published": 2,
     "publishedByLane": {
-      "standard": 3,
-      "fast": 1
+      "standard": 2
     },
     "verifiedByLane": {
-      "standard": 18,
-      "fast": 1
+      "standard": 11
     },
     "pendingByLane": {
       "standard": 1,
-      "strict": 3
+      "strict": 5
     },
     "eventsByTerritory": {
-      "Mundo": 18,
-      "Tolhuin": 1,
-      "Ushuaia": 1,
-      "Nacionales": 5
+      "Mundo": 12,
+      "Nacionales": 5,
+      "Rio Grande": 1
     },
     "verifiedByTerritory": {
-      "Mundo": 13,
-      "Provincia": 1,
-      "Ushuaia": 1,
-      "Nacionales": 4
+      "Mundo": 8,
+      "Nacionales": 2,
+      "Rio Grande": 1
     },
     "fastPendingAudit": [],
-    "freshCandidates": 32,
-    "staleDiscarded": 1,
+    "freshCandidates": 25,
+    "staleDiscarded": 2,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -221,22 +251,22 @@
       },
       "actualidad-tdf": {
         "detected": 5,
-        "materialized": 4,
-        "freshCandidates": 4,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.8,
-        "materializationSuccessRate": 0.8,
-        "verificationContributionRate": 0.2,
-        "publicationContributionRate": 0.2,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "el-rompehielos": {
@@ -281,6 +311,26 @@
       },
       "radio-universidad": {
         "detected": 4,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.5,
+        "materializationSuccessRate": 0.5,
+        "verificationContributionRate": 0.25,
+        "publicationContributionRate": 0.25,
+        "staleDiscardRate": 0
+      },
+      "sur54": {
+        "detected": 5,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
@@ -299,44 +349,24 @@
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "sur54": {
-        "detected": 5,
-        "materialized": 2,
-        "freshCandidates": 0,
-        "qualityDiscarded": 2,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "degraded",
-        "issueCategory": "zero-useful-candidates",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.4,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
       "ushuaia24": {
         "detected": 4,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 1,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.25,
-        "verificationContributionRate": 0.25,
-        "publicationContributionRate": 0.25,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "provincia23": {
@@ -360,29 +390,29 @@
         "staleDiscardRate": 0
       },
       "critica-sur": {
-        "detected": 0,
-        "materialized": 0,
+        "detected": 4,
+        "materialized": 3,
         "freshCandidates": 0,
-        "qualityDiscarded": 0,
+        "qualityDiscarded": 3,
         "staleDiscarded": 0,
         "consulted": 1,
-        "fetchErrors": 1,
+        "fetchErrors": 0,
         "noItems": 0,
-        "lastError": "HTTP 403 en https://criticasur.com.ar/",
-        "status": "unhealthy",
-        "issueCategory": "fetch-error",
+        "lastError": "",
+        "status": "degraded",
+        "issueCategory": "zero-useful-candidates",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.75,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "bing-tdf": {
         "detected": 5,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 2,
+        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -393,8 +423,8 @@
         "issueCategory": "",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.2,
-        "materializationSuccessRate": 0.2,
+        "freshCandidateRate": 0.4,
+        "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -421,23 +451,23 @@
       },
       "bing-ushuaia": {
         "detected": 4,
-        "materialized": 2,
-        "freshCandidates": 1,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.25,
-        "materializationSuccessRate": 0.5,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.25
+        "staleDiscardRate": 0
       },
       "bing-tolhuin": {
         "detected": 3,
@@ -526,11 +556,11 @@
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
-        "fetchErrors": 1,
-        "noItems": 0,
-        "lastError": "fetch failed",
+        "fetchErrors": 0,
+        "noItems": 1,
+        "lastError": "",
         "status": "unhealthy",
-        "issueCategory": "fetch-error",
+        "issueCategory": "zero-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -546,11 +576,11 @@
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
-        "fetchErrors": 1,
-        "noItems": 0,
-        "lastError": "fetch failed",
+        "fetchErrors": 0,
+        "noItems": 1,
+        "lastError": "",
         "status": "unhealthy",
-        "issueCategory": "fetch-error",
+        "issueCategory": "zero-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -571,11 +601,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -591,15 +621,35 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 1,
+        "verifiedContribution": 1,
+        "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
-        "publicationContributionRate": 0.5,
+        "verificationContributionRate": 0.5,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-la-nacion": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 2,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.67,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-ambito": {
         "detected": 3,
         "materialized": 3,
         "freshCandidates": 3,
@@ -616,26 +666,6 @@
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-ambito": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 3,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -652,14 +682,34 @@
         "status": "healthy",
         "issueCategory": "",
         "verifiedContribution": 2,
-        "publicationContribution": 0,
+        "publicationContribution": 1,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
+        "publicationContributionRate": 0.33,
         "staleDiscardRate": 0
       },
       "nacionales-tn": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
+      },
+      "mundo-clarin": {
         "detected": 3,
         "materialized": 2,
         "freshCandidates": 2,
@@ -672,57 +722,17 @@
         "status": "healthy",
         "issueCategory": "",
         "verifiedContribution": 1,
-        "publicationContribution": 1,
+        "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0.33,
-        "staleDiscardRate": 0
-      },
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-bbc": {
         "detected": 3,
-        "materialized": 0,
-        "freshCandidates": 0,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "mundo-dw": {
-        "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -733,13 +743,13 @@
         "issueCategory": "",
         "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
-      "mundo-france24": {
+      "mundo-dw": {
         "detected": 3,
         "materialized": 4,
         "freshCandidates": 4,
@@ -758,6 +768,26 @@
         "verificationContributionRate": 0.5,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
+      },
+      "mundo-france24": {
+        "detected": 3,
+        "materialized": 2,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.67,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0.33
       },
       "mundo-bing": {
         "detected": 3,
@@ -781,145 +811,131 @@
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 10,
-    "modelErrors": 1,
+    "drafts": 5,
+    "modelErrors": 0,
     "publicationErrors": 0,
-    "factualValidationErrors": 1,
-    "discardedImportance": 3,
+    "factualValidationErrors": 3,
+    "discardedImportance": 1,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
     "failedRetryable": 1,
     "failedTerminal": 2,
     "failedRetryableByReason": {
-      "rate-limit": 1
+      "short-body": 1
     },
     "failedTerminalByReason": {
       "http-403": 2
     },
-    "aiReused": 3,
+    "aiReused": 1,
     "rescueQueued": 0,
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
-    "discardedPublicationLimit": 10,
-    "extractErrors": 2,
+    "discardedPublicationLimit": 5,
+    "extractErrors": 3,
     "imageErrors": 0,
-    "aiAttempts": 16,
-    "aiCalls": 15,
-    "articlesDrafted": 17,
-    "imagesResolved": 4,
-    "approvedForPublication": 4,
+    "aiAttempts": 10,
+    "aiCalls": 10,
+    "articlesDrafted": 8,
+    "imagesResolved": 2,
+    "approvedForPublication": 2,
     "imageSelections": [
       {
-        "title": "Inspectores de Ushuaia verifican limpieza de veredas tras nevadas",
+        "title": "El Gobierno y la Cámara de Comercio de Río Grande lanzan una Expo Outlet para reactivar el comercio local",
         "strategy": "article-og",
-        "query": "Inspectores salieron a recorrer las veredas de Ushuaia tras las nevadas",
+        "query": "Gobierno y la Cámara de Comercio De Río Grande impulsan una expo outlet para fortalecer las ventas del sector | radiouniversidad.com.ar",
         "score": 82,
-        "source": "https://ushuaia24.com.ar/download/multimedia.normal.bfd5bdc2edf78259.bm9ybWFsLndlYnA%3D.webp"
+        "source": "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/GIGI-scaled.jpg"
       },
       {
-        "title": "Corte de luz programado en Tolhuin para el 22 de julio",
+        "title": "Aumento de peajes en el Puente Rosario-Victoria: hasta un 700% más caro",
         "strategy": "article-og",
-        "query": "Corte de luz programado en Tolhuin - Actualidad TDF",
+        "query": "Tarifazo en el Puente Rosario-Victoria: los peajes aumentan hasta un 700% y ya no aceptan efectivo",
         "score": 82,
-        "source": "https://www.actualidadtdf.com.ar/wp-content/uploads/2024/11/dpe.jpg"
-      },
-      {
-        "title": "Caputo impulsa reforma para facilitar ingreso de dólares no declarados",
-        "strategy": "article-og",
-        "query": "Inocencia fiscal: Caputo busca eliminar límites y ampliar beneficios para incentivar el ingreso de dólares del colchón",
-        "score": 82,
-        "source": "https://fotos.perfil.com/2026/04/28/trim/1140/641/luis-caputo-expo-efi-2026-28042026-2229136.jpg"
-      },
-      {
-        "title": "Boca Juniors busca reforzar su delantera con David Romero de Tigre",
-        "strategy": "article-og",
-        "query": "Pedido de Arruabarrena: Riquelme consultó por un goleador del fútbol argentino y sueña con incorporarlo a Boca",
-        "score": 82,
-        "source": "https://tn.com.ar/resizer/v2/boca-busca-un-arquero-y-riquelme-apunta-a-un-campeon-del-mundo-foto-xbocajrs-CFYRXFNSHNAJXOUFU7CSKEFMFM.jpg?auth=b7f3ede7f6d51f82ecd6007d1e7aa8c241e5ff2f5b98481747be398937897e0c&width=1023"
+        "source": "https://www.cronista.com/resizer/v2/YH76TDDJPZEVRNPVFGLHFUNG3U.webp?auth=a9c62576fef9dc4f2dce934e7adc5899f9e35a255f79fa17c434ce840210eeaf&height=630&width=1200&quality=70&smart=true"
       }
     ],
-    "agendaStories": 1020,
-    "newsworthinessAverage": 60,
+    "agendaStories": 1014,
+    "newsworthinessAverage": 57,
     "newsworthinessTop": [
       {
-        "title": "Inspectores salieron a recorrer las veredas de Ushuaia tras las nevadas",
-        "eventKey": "weather|municipalidad de ushuaia|secretaria de politicas ambientales|municipalidad|rio grande|ushuaia|argentina|espana|informa|2026-07-21",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "lane": "standard"
-      },
-      {
-        "title": "Corte de luz programado en Tolhuin - Actualidad TDF",
-        "eventKey": "service|municipalidad de tolhuin|tolhuin|tierra del fuego aias|informa|2026-07-21",
-        "score": 99,
-        "topic": "servicios",
-        "territory": "Provincia",
-        "lane": "fast"
-      },
-      {
-        "title": "Inocencia fiscal: Caputo busca eliminar límites y ampliar beneficios para incentivar el ingreso de dólares del colchón",
-        "eventKey": "general|ampliar|beneficios|busca|caputo|colchon|dolares|eliminar|2026-07-22",
-        "score": 90,
-        "topic": "economia",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Pedido de Arruabarrena: Riquelme consultó por un goleador del fútbol argentino y sueña con incorporarlo a Boca",
-        "eventKey": "general|argentino|arruabarrena|consulto|futbol|goleador|incorporarlo|pedido|2026-07-22",
-        "score": 60,
-        "topic": "deportes",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "¿Ortodoxia o pragmatismo? Tesoro, Finanzas y BCRA",
-        "eventKey": "general|finanzas|ortodoxia|pragmatismo|tesoro|2026-07-21",
-        "score": 58,
+        "title": "A casi un mes del terremoto en Venezuela, ya son más de 5.300 los muertos y miles de personas siguen desaparecidas",
+        "eventKey": "general|desaparecidas|miles|muertos|personas|siguen|terremoto|venezuela|2026-07-22",
+        "score": 80,
         "topic": "sociedad",
+        "territory": "Mundo",
+        "lane": "standard"
+      },
+      {
+        "title": "Gobierno y la Cámara de Comercio De Río Grande impulsan una expo outlet para fortalecer las ventas del sector | radiouniversidad.com.ar",
+        "eventKey": "general|camara|comercio|fortalecer|gobierno|impulsan|outlet|radiouniversidad|rio grande|tierra del fuego aias|2026-07-22",
+        "score": 74,
+        "topic": "sociedad",
+        "territory": "Rio Grande",
+        "lane": "standard"
+      },
+      {
+        "title": "Tarifazo en el Puente Rosario-Victoria: los peajes aumentan hasta un 700% y ya no aceptan efectivo",
+        "eventKey": "service|aceptan|aumentan|efectivo|hasta|peajes|puente|rosario|2026-07-22",
+        "score": 60,
+        "topic": "servicios",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Economía - Un alivio a la agobiante factura de energía en Reino Unido: ¿de cuánto y a qué costo?",
-        "eventKey": "territorial-sovereignty|andy burnham|internacional|colombia|reino unido|informa|2026-07-22",
+        "title": "Córdoba: qué cambia para taxis y remises con la nueva ordenanza que impulsa el Concejo",
+        "eventKey": "service|cambia|concejo|cordoba|impulsa|nueva|ordenanza|remises|2026-07-22",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Dólar blue hoy: a cuánto opera este miércoles 22 de julio",
+        "eventKey": "general|cuanto|dolar|julio|miercoles|opera|2026-07-22",
         "score": 55,
-        "topic": "politica",
+        "topic": "economia",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Francia: Críticas contra ley agrícola de emergencia que permite el uso de pesticidas",
-        "eventKey": "service|agricola|contra|criticas|emergencia|francia|permite|pesticidas|2026-07-22",
+        "title": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
+        "eventKey": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
+        "score": 55,
+        "topic": "economia",
+        "territory": "Mundo",
+        "lane": "standard"
+      },
+      {
+        "title": "Cómo es la iniciativa para crear el ‘cielo único sudamericano’",
+        "eventKey": "service|cielo|crear|iniciativa|sudamericano|unico|2026-07-21",
         "score": 55,
         "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Un micro con hinchas de Tigre fue agredido y una persona resultó herida de bala",
-        "eventKey": "service|agredido|herida|hinchas|micro|persona|resulto|tigre|2026-07-22",
-        "score": 55,
-        "topic": "servicios",
+        "title": "La gasolina más barata y más cara de Madrid, Barcelona y otras ciudades este 22 de julio",
+        "eventKey": "general|barata|barcelona|ciudades|gasolina|julio|madrid|otras|2026-07-22",
+        "score": 49,
+        "topic": "sociedad",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Aranceles a Canadá: la batalla de fondo del pacto comercial que Estados Unidos quiere cambiar nuevamente",
-        "eventKey": "service|aranceles|batalla|cambiar|canada|comercial|estados|fondo|2026-07-21",
-        "score": 55,
-        "topic": "servicios",
+        "title": "Voraz incendio forestal consume 1.700 hectáreas en Francia",
+        "eventKey": "general|consume|forestal|francia|hectareas|incendio|voraz|2026-07-22",
+        "score": 49,
+        "topic": "sociedad",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Alerta meteorológica por vientos, tormentas y nieve: qué provincias estarán afectadas este miércoles y cómo seguirá el clima en el AMBA",
-        "eventKey": "weather|smn|gobierno|el smn|buenos aires|argentina|brasil|informa|2026-07-22",
-        "score": 55,
-        "topic": "servicios",
+        "title": "Teherán activa defensa aérea ante más ataques de EE. UU.",
+        "eventKey": "general|activa|aerea|ataques|defensa|teheran|2026-07-22",
+        "score": 49,
+        "topic": "sociedad",
         "territory": "Mundo",
         "lane": "standard"
       }
@@ -931,43 +947,43 @@
     "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "weather-forecast|2026-07-22|tierra-del-fuego",
-        "title": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 22 de julio de 2026",
+        "eventKey": "international-conflict|defensa pete hegseth|internacional|estados unidos|informa|2026-07-22",
+        "title": "La guerra en Irán le ha costado USD 37.500 millones a EE.UU.",
         "priorityRank": 1,
-        "corroborationQuery": "SMN Chile Francia Ushuaia clima julio pronostico tiempo",
-        "corroborationReason": "newsworthiness=100; freshness=5h; territory=Ushuaia; impact=21; corroborability=10; pendingAge=5h; attempts=0",
+        "corroborationQuery": "Defensa Pete Hegseth Estados Unidos conflicto costado guerra millones",
+        "corroborationReason": "newsworthiness=94; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=4h; attempts=0",
         "found": 1,
         "verified": false,
         "status": "conflicting-sources"
       },
       {
-        "eventKey": "election|internacional|estados unidos|cuba|informa|2026-07-22",
-        "title": "Estados Unidos ahora pone el foco en Nicaragua y dice que \"no se quedará de brazos cruzados\" ante la avanzada del régimen de Ortega para eliminar las elecciones",
+        "eventKey": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
+        "title": "Mortal accidente en una central hidroeléctrica en India",
         "priorityRank": 2,
-        "corroborationQuery": "Estados Unidos Cuba elecciones resultado ahora avanzada brazos cruzados eliminar",
-        "corroborationReason": "newsworthiness=94; freshness=1h; territory=Mundo; impact=14; corroborability=10; pendingAge=1h; attempts=0",
+        "corroborationQuery": "India Al Gobierno de Sikkim accidente central hidroelectrica india mortal",
+        "corroborationReason": "newsworthiness=90; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=13h; attempts=2",
         "found": 0,
         "verified": false,
         "status": "no-result"
       },
       {
-        "eventKey": "casualty|policia|policia la|justicia|informa|2026-07-22",
-        "title": "Se hicieron pasar por policías para entrar a robar en una casa, balearon al dueño y volcaron al escapar",
-        "priorityRank": 3,
-        "corroborationQuery": "Policia Policía la Justicia balearon dueno entrar escapar hicieron pasar",
-        "corroborationReason": "newsworthiness=92; freshness=0h; territory=Nacionales; impact=12; corroborability=10; pendingAge=0h; attempts=0",
+        "eventKey": "election|internacional|estados unidos|cuba|informa|2026-07-22",
+        "title": "Estados Unidos ahora pone el foco en Nicaragua y dice que \"no se quedará de brazos cruzados\" ante la avanzada del régimen de Ortega para eliminar las elecciones",
+        "priorityRank": 4,
+        "corroborationQuery": "Estados Unidos Cuba elecciones resultado ahora avanzada brazos cruzados eliminar",
+        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=4h; attempts=1",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "dates": 2,
-      "percentages": 1
+      "money": 1,
+      "dates": 1
     },
-    "criticalConflicts": 2,
+    "criticalConflicts": 1,
     "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 13,
+    "resolvedComplementaryFacts": 7,
     "latency": {
       "discoveryToVerificationMinutes": {
         "count": 63,
@@ -977,7 +993,7 @@
       },
       "verificationToPublicationMinutes": {
         "count": 63,
-        "avg": 23.7,
+        "avg": 23.6,
         "p50": 0.4,
         "max": 338.7
       },
@@ -988,39 +1004,57 @@
         "max": 2121.9
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 820,
-        "avg": 41.9,
+        "count": 816,
+        "avg": 41.6,
         "p50": 0,
         "max": 2737.6
       },
       "cohort": {
         "comparablePublishedCount": 63,
-        "verifiedWithoutPublicationCount": 757,
+        "verifiedWithoutPublicationCount": 753,
         "publicationWithoutVerifiedAtCount": 0,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
     "byCategory": {
-      "Actualidad": 2,
-      "Nacionales": 1,
-      "Mundo": 1
+      "Economía": 1,
+      "Nacionales": 1
     },
     "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 1,
-    "publishedLast12hBeforeRun": 6,
-    "publishedLast24hBeforeRun": 10,
-    "hoursSinceLastPublicationBeforeRun": 5.6,
+    "publishedLast6hBeforeRun": 4,
+    "publishedLast12hBeforeRun": 7,
+    "publishedLast24hBeforeRun": 14,
+    "hoursSinceLastPublicationBeforeRun": 3.6,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 10,
-      "remainingToMin": 2,
-      "slotsRemaining": 6,
+      "publishedLast24hBeforeRun": 14,
+      "remainingToMin": 0,
+      "slotsRemaining": 2,
       "effectiveRunTarget": 3,
-      "effectiveRunMaxNormal": 4
+      "effectiveRunMaxNormal": 2
     },
     "agendaTop": [
+      {
+        "storyId": "service|ataque|civiles|contra|fuente|menos|muertos|paramilitares|2026-07-22",
+        "headlineSeed": "Al menos 21 civiles muertos en ataque de paramilitares contra una fuente de agua en Sudán",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 21,
+          "localRelevance": 22,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 7,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "casualty|policia|policia la|justicia|informa|2026-07-22",
         "headlineSeed": "Se hicieron pasar por policías para entrar a robar en una casa, balearon al dueño y volcaron al escapar",
@@ -1054,7 +1088,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1073,7 +1107,7 @@
           "serviceValue": 20,
           "socialPotential": 4,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1096,25 +1130,6 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|acerca|barrios|laboratorio|municipal|servicios|rio grande|2026-07-21",
-        "headlineSeed": "El Laboratorio Municipal acerca sus servicios a los barrios",
-        "topic": "servicios",
-        "territory": "Rio Grande",
-        "newsworthinessScore": 100,
-        "status": "published",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
-          "sourceStrength": 8,
-          "diversity": 4
-        }
       }
     ],
     "agendaInvalidStories": 20,
@@ -1123,18 +1138,18 @@
     "sourceHealthSummary": {
       "configured": 32,
       "consulted": 32,
-      "healthy": 27,
-      "productive": 13,
-      "noResults": 1,
-      "failed": 4
+      "healthy": 28,
+      "productive": 12,
+      "noResults": 3,
+      "failed": 1
     }
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 16,
-    "discoveryAiBudget": 16,
+    "discoveryAiUsed": 10,
+    "discoveryAiBudget": 11,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1143,22 +1158,21 @@
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
-    "effectiveRunMaxNormal": 4,
+    "effectiveRunMaxNormal": 2,
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 10,
-    "candidatesMaterialized": 37,
-    "totalCandidatesBeforeLimit": 37
+    "publishedLast24hBeforeRun": 14,
+    "candidatesMaterialized": 33,
+    "totalCandidatesBeforeLimit": 33
   },
   "reasonNoMorePublished": [
-    "4 evento(s) quedaron pendientes de segunda fuente",
-    "2 evento(s) tuvieron conflicto factual",
+    "6 evento(s) quedaron pendientes de segunda fuente",
+    "1 evento(s) tuvieron conflicto factual",
     "9 candidato(s) descartados por duplicado/similitud",
-    "3 candidato(s) descartados por causas especificas (undated-discovery: 2, stale-dated-discovery: 1)",
-    "3 candidato(s) descartados por importancia editorial",
-    "10 candidato(s) quedaron por cupo editorial de corrida",
-    "1 candidato(s) bloqueados por validacion factual",
-    "1 error(es) reales de modelo"
+    "5 candidato(s) descartados por causas especificas (stale-hard-news: 1, stale-dated-discovery: 1, undated-discovery: 3)",
+    "1 candidato(s) descartados por importancia editorial",
+    "5 candidato(s) quedaron por cupo editorial de corrida",
+    "3 candidato(s) bloqueados por validacion factual"
   ]
 }

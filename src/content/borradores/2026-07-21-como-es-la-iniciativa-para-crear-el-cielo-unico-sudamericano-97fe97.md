@@ -8,7 +8,7 @@ sourceName: "El Cronista - Nacionales"
 sourceUrl: "https://www.cronista.com/transport-cargo/como-es-la-iniciativa-para-crear-el-cielo-unico-sudamericano/"
 originalImage: "https://www.cronista.com/resizer/v2/G374XLASOREJFJSIPOUQ44CFGA.jpg?auth=501836271b8acda94e6416a23ea3cc68fe54ecf651d5ad63b185a41ab276b2c3&height=630&width=1200&quality=70&smart=true"
 status: "draft"
-detectedAt: "2026-07-22T02:54:36.119Z"
+detectedAt: "2026-07-22T06:33:54.851Z"
 mode: "discovery-review"
 ---
 
