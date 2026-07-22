@@ -8,7 +8,7 @@ sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/c70gekd822wo?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/6bc9/live/bda693f0-854e-11f1-babf-f7c4cd6e0619.jpg"
 status: "draft"
-detectedAt: "2026-07-22T06:34:31.334Z"
+detectedAt: "2026-07-22T10:32:08.896Z"
 mode: "discovery-review"
 ---
 
@@ -26,7 +26,7 @@ Pie de foto, El presidente del Parlamento iraní, Mohammad Bagher Ghalibaf; el p
 
 - - Autor, Amir Azimi
  - Título del autor, BBC Persa
-- Fecha de publicación 2 horas
+- Fecha de publicación 5 horas
  
 - Tiempo de lectura: 7 min
  
@@ -51,21 +51,21 @@ Mientras tanto, el programa nuclear se ha presentado durante mucho tiempo como u
 
 **Más leídas**
 
-- ![Kaylee Hottle lleva un vestido brillante azul y morado y pendientes de aro plateados. ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/ffef/live/f1da0c10-8521-11f1-97e8-4f50dea2b016.jpg.webp)
- 
- [Kaylee Hottle: muere la actriz de "Godzilla vs. Kong" a los 18 años](https://www.bbc.com/mundo/articles/c8enw5668l6o)
- 
 - ![El comandante en jefe de Ucrania, Oleksandr Syrskyi, fue destituido después de varios días de protestas.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/61d1/live/96d1f5a0-8556-11f1-a14f-8ba87eff6282.jpg.webp)
  
  [Zelensky destituye al comandante en jefe de Ucrania después de días de protestas en las calles por el relevo del ministro de Defensa](https://www.bbc.com/mundo/articles/cr596evgv1jo)
+ 
+- ![Kaylee Hottle lleva un vestido brillante azul y morado y pendientes de aro plateados. ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/ffef/live/f1da0c10-8521-11f1-97e8-4f50dea2b016.jpg.webp)
+ 
+ [Kaylee Hottle: muere la actriz de "Godzilla vs. Kong" a los 18 años](https://www.bbc.com/mundo/articles/c8enw5668l6o)
  
 - ![Nico Williams y Lamine Yamal con los brazos en alto celebran la Copa del Mundo rodeados de otros jugadores de la selección española. 19 de julio de 2026](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/f4eb/live/5da28630-846d-11f1-b286-f1d324aa6c22.jpg.webp)
  
  [La historia de migración y éxito de las familias de Lamine Yamal y Nico Williams, dos de las jóvenes estrellas de la España campeona del mundo](https://www.bbc.com/mundo/articles/c6294plwxejo)
  
-- ![Hombres japoneses en la oficina vistiendo pantalones cortos.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/fd1c/live/66a05f50-84d6-11f1-8a1f-271692b35cb6.jpg.webp)
+- ![El argentino Leandro Paredes (5) reacciona de forma violenta contra el español Gavi (9) tras la final de la Copa Mundial de la FIFA 2026.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/c38f/live/977eddb0-8475-11f1-ac57-abae38e66d9e.jpg.webp)
  
- [Tokio insta a los hombres a usar pantalones cortos en el trabajo, pero algunas mujeres dicen que es "acoso por el vello de las piernas"](https://www.bbc.com/mundo/articles/c0kmv273ed8o)
+ [La FIFA abre una investigación contra Argentina por los incidentes tras la derrota en la final del Mundial 2026](https://www.bbc.com/mundo/articles/cwye8j2yq83o)
  
 
 Final de Más leídas

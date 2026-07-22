@@ -1,46 +1,38 @@
 {
-  "generatedAt": "2026-07-22T06:34:31.604Z",
+  "generatedAt": "2026-07-22T10:32:16.043Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "29896980117",
-    "headSha": "669d1fc7834c0f3916682b1210d6d6fcbbd3dbcb"
+    "runId": "29911969242",
+    "headSha": "e9a426d87c3d9093a20b6ab10d9f10fd6d15115d"
   },
   "metrics": {
     "sourcesConfigured": 32,
     "sourcesConsulted": 32,
-    "candidatesDetected": 91,
-    "candidatesIngested": 33,
-    "extractionSucceeded": 31,
-    "candidatesApproved": 18,
-    "discardedDuplicate": 9,
+    "candidatesDetected": 92,
+    "candidatesIngested": 28,
+    "extractionSucceeded": 26,
+    "candidatesApproved": 19,
+    "discardedDuplicate": 8,
     "duplicateExactUrl": 2,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 7,
-    "discardedQuality": 5,
+    "duplicatePublishedEvent": 6,
+    "discardedQuality": 1,
     "discardedQualityByReason": {
-      "stale-hard-news": 1,
-      "stale-dated-discovery": 1,
-      "undated-discovery": 3
+      "stale-hard-news": 1
     },
     "discardedBySourceAndReason": {
       "mundo-france24": {
         "stale-hard-news": 1
-      },
-      "nacionales-tn": {
-        "stale-dated-discovery": 1
-      },
-      "critica-sur": {
-        "undated-discovery": 3
       }
     },
     "discardedGenericTitle": 0,
-    "discardedEvergreen": 1,
-    "eventsGrouped": 18,
-    "verified": 11,
-    "pendingVerification": 6,
-    "pendingMatchedFromHistory": 0,
+    "discardedEvergreen": 0,
+    "eventsGrouped": 19,
+    "verified": 15,
+    "pendingVerification": 2,
+    "pendingMatchedFromHistory": 1,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
@@ -49,7 +41,7 @@
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
     "pendingRecoveryAttempted": 4,
-    "pendingTerminalizedExpired": 5,
+    "pendingTerminalizedExpired": 2,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
@@ -63,39 +55,9 @@
         "riskLevel": "high",
         "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.771Z",
+        "nextRetryAt": "2026-07-22T13:30:15.752Z",
         "expiresAt": "2026-07-23T17:26:16.432Z",
-        "corroborationAttempts": 3
-      },
-      {
-        "eventKey": "general|acusado|almeria|juicio|matar|miercoles|mujer|punaladas|2026-07-22",
-        "title": "A juicio este miércoles acusado de matar de 49 puñaladas a su mujer en Roquetas de Mar (Almería)",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
-        "eventType": "general",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.771Z",
-        "expiresAt": "2026-07-24T06:33:01.771Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "service|ataque|civiles|contra|fuente|menos|muertos|paramilitares|2026-07-22",
-        "title": "Al menos 21 civiles muertos en ataque de paramilitares contra una fuente de agua en Sudán",
-        "sourceId": "nacionales-infobae",
-        "publisherDomain": "infobae.com",
-        "category": "Nacionales",
-        "eventType": "service",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.771Z",
-        "expiresAt": "2026-07-24T06:33:01.771Z",
-        "corroborationAttempts": 0
+        "corroborationAttempts": 4
       },
       {
         "eventKey": "election|internacional|estados unidos|cuba|informa|2026-07-22",
@@ -108,66 +70,38 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.772Z",
+        "nextRetryAt": "2026-07-22T13:30:15.756Z",
         "expiresAt": "2026-07-24T02:53:32.443Z",
-        "corroborationAttempts": 2
-      },
-      {
-        "eventKey": "crime|policia de misiones|informa|2026-07-22",
-        "title": "Maltrato animal en Misiones: detuvieron a un hombre acusado de golpear a dos perros con un bate de béisbol",
-        "sourceId": "nacionales-tn",
-        "publisherDomain": "tn.com.ar",
-        "category": "Nacionales",
-        "eventType": "crime",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.773Z",
-        "expiresAt": "2026-07-24T06:33:01.773Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "crime|fiscalia de instruccion|justicia de|maximiliano baudraco|informa|2026-07-22",
-        "title": "Diez puñaladas y una aorta perforada: la autopsia confirmó la brutalidad del femicidio de Rocío Gómez",
-        "sourceId": "nacionales-perfil",
-        "publisherDomain": "perfil.com",
-        "category": "Nacionales",
-        "eventType": "crime",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-22T09:33:01.774Z",
-        "expiresAt": "2026-07-24T06:33:01.774Z",
-        "corroborationAttempts": 0
+        "corroborationAttempts": 3
       }
     ],
-    "conflicting": 1,
-    "published": 2,
+    "conflicting": 2,
+    "published": 3,
     "publishedByLane": {
+      "fast": 1,
       "standard": 2
     },
     "verifiedByLane": {
-      "standard": 11
+      "standard": 14,
+      "fast": 1
     },
     "pendingByLane": {
       "standard": 1,
-      "strict": 5
+      "strict": 1
     },
     "eventsByTerritory": {
-      "Mundo": 12,
-      "Nacionales": 5,
-      "Rio Grande": 1
+      "Mundo": 10,
+      "Nacionales": 8,
+      "Ushuaia": 1
     },
     "verifiedByTerritory": {
-      "Mundo": 8,
-      "Nacionales": 2,
-      "Rio Grande": 1
+      "Nacionales": 7,
+      "Mundo": 7,
+      "Ushuaia": 1
     },
     "fastPendingAudit": [],
     "freshCandidates": 25,
-    "staleDiscarded": 2,
+    "staleDiscarded": 1,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
@@ -210,17 +144,17 @@
         "staleDiscardRate": 0
       },
       "gobierno-tdf-oficial": {
-        "detected": 0,
+        "detected": 1,
         "materialized": 0,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
-        "fetchErrors": 1,
+        "fetchErrors": 0,
         "noItems": 0,
-        "lastError": "HTTP 500 en https://www.tierradelfuego.gob.ar/feed/",
-        "status": "unhealthy",
-        "issueCategory": "fetch-error",
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
@@ -311,8 +245,8 @@
       },
       "radio-universidad": {
         "detected": 4,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 4,
+        "freshCandidates": 4,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -323,8 +257,8 @@
         "issueCategory": "",
         "verifiedContribution": 1,
         "publicationContribution": 1,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0.25,
         "publicationContributionRate": 0.25,
         "staleDiscardRate": 0
@@ -391,40 +325,40 @@
       },
       "critica-sur": {
         "detected": 4,
-        "materialized": 3,
+        "materialized": 0,
         "freshCandidates": 0,
-        "qualityDiscarded": 3,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "degraded",
-        "issueCategory": "zero-useful-candidates",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.75,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "bing-tdf": {
-        "detected": 5,
-        "materialized": 2,
-        "freshCandidates": 2,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.4,
-        "materializationSuccessRate": 0.4,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "bing-tdf": {
+        "detected": 5,
+        "materialized": 0,
+        "freshCandidates": 0,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -601,12 +535,12 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
+        "verifiedContribution": 3,
+        "publicationContribution": 1,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
+        "verificationContributionRate": 1,
+        "publicationContributionRate": 0.33,
         "staleDiscardRate": 0
       },
       "nacionales-perfil": {
@@ -621,11 +555,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
+        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -641,11 +575,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
+        "verifiedContribution": 2,
         "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0,
+        "verificationContributionRate": 0.67,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -661,12 +595,12 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
+        "verifiedContribution": 3,
+        "publicationContribution": 1,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
+        "verificationContributionRate": 1,
+        "publicationContributionRate": 0.33,
         "staleDiscardRate": 0
       },
       "nacionales-cronista": {
@@ -682,19 +616,39 @@
         "status": "healthy",
         "issueCategory": "",
         "verifiedContribution": 2,
-        "publicationContribution": 1,
+        "publicationContribution": 0,
         "freshCandidateRate": 0.67,
         "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0.33,
+        "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-tn": {
         "detected": 3,
         "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 0,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 0,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "mundo-clarin": {
+        "detected": 3,
+        "materialized": 1,
         "freshCandidates": 1,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -704,28 +658,8 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 1,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "mundo-clarin": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -761,30 +695,30 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.5,
+        "verificationContributionRate": 0.25,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "mundo-france24": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 1,
+        "materialized": 1,
+        "freshCandidates": 0,
         "qualityDiscarded": 1,
         "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
+        "status": "degraded",
+        "issueCategory": "stale-or-evergreen",
         "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.33,
-        "materializationSuccessRate": 0.67,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0.33
@@ -811,19 +745,17 @@
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 5,
+    "drafts": 7,
     "modelErrors": 0,
     "publicationErrors": 0,
     "factualValidationErrors": 3,
-    "discardedImportance": 1,
+    "discardedImportance": 2,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 1,
+    "failedRetryable": 0,
     "failedTerminal": 2,
-    "failedRetryableByReason": {
-      "short-body": 1
-    },
+    "failedRetryableByReason": {},
     "failedTerminalByReason": {
       "http-403": 2
     },
@@ -832,136 +764,133 @@
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
-    "discardedPublicationLimit": 5,
-    "extractErrors": 3,
+    "discardedPublicationLimit": 7,
+    "extractErrors": 2,
     "imageErrors": 0,
-    "aiAttempts": 10,
-    "aiCalls": 10,
-    "articlesDrafted": 8,
-    "imagesResolved": 2,
-    "approvedForPublication": 2,
+    "aiAttempts": 14,
+    "aiCalls": 14,
+    "articlesDrafted": 12,
+    "imagesResolved": 3,
+    "approvedForPublication": 3,
     "imageSelections": [
       {
-        "title": "El Gobierno y la Cámara de Comercio de Río Grande lanzan una Expo Outlet para reactivar el comercio local",
+        "title": "Ushuaia intensifica el Operativo Invierno para garantizar la transitabilidad",
         "strategy": "article-og",
-        "query": "Gobierno y la Cámara de Comercio De Río Grande impulsan una expo outlet para fortalecer las ventas del sector | radiouniversidad.com.ar",
+        "query": "El Municipio de Ushuaia mantiene un amplio despliegue para garantizar la transitabilidad durante el Operativo Invierno | radiouniversidad.com.ar",
         "score": 82,
-        "source": "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/GIGI-scaled.jpg"
+        "source": "https://www.radiouniversidad.com.ar/wp-content/uploads/2026/07/03-29-scaled.jpg"
       },
       {
-        "title": "Aumento de peajes en el Puente Rosario-Victoria: hasta un 700% más caro",
+        "title": "Transformación estructural de la economía argentina y su impacto en la natalidad",
         "strategy": "article-og",
-        "query": "Tarifazo en el Puente Rosario-Victoria: los peajes aumentan hasta un 700% y ya no aceptan efectivo",
+        "query": "Baja de la natalidad y mercado laboral: el debate que Argentina se debe en un contexto de transformación estructural",
         "score": 82,
-        "source": "https://www.cronista.com/resizer/v2/YH76TDDJPZEVRNPVFGLHFUNG3U.webp?auth=a9c62576fef9dc4f2dce934e7adc5899f9e35a255f79fa17c434ce840210eeaf&height=630&width=1200&quality=70&smart=true"
+        "source": "https://www.infobae.com/resizer/v2/EVIBOBGPJJHTFFFERLCBSIX5MM.png?auth=5007cea7991ab2120e3ce5edbec165004424f360e2beea6c1b4c7589e1dad551&smart=true&width=1200&height=630&quality=85"
+      },
+      {
+        "title": "Calendario de pagos ANSES: Beneficios para jubilados y AUH el 22 de julio",
+        "strategy": "article-og",
+        "query": "Calendario ANSES: ¿quiénes cobran este miércoles 22 de julio?",
+        "score": 82,
+        "source": "https://media.ambito.com/p/0e38424a8262010864987265cd369d81/adjuntos/239/imagenes/043/446/0043446373/1200x675/smart/anses.jpg"
       }
     ],
     "agendaStories": 1014,
-    "newsworthinessAverage": 57,
+    "newsworthinessAverage": 56,
     "newsworthinessTop": [
       {
-        "title": "A casi un mes del terremoto en Venezuela, ya son más de 5.300 los muertos y miles de personas siguen desaparecidas",
-        "eventKey": "general|desaparecidas|miles|muertos|personas|siguen|terremoto|venezuela|2026-07-22",
-        "score": 80,
-        "topic": "sociedad",
-        "territory": "Mundo",
-        "lane": "standard"
+        "title": "El Municipio de Ushuaia mantiene un amplio despliegue para garantizar la transitabilidad durante el Operativo Invierno | radiouniversidad.com.ar",
+        "eventKey": "service|amplio|despliegue|durante|garantizar|invierno|mantiene|operativo|ushuaia|tierra del fuego aias|2026-07-22",
+        "score": 100,
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "lane": "fast"
       },
       {
-        "title": "Gobierno y la Cámara de Comercio De Río Grande impulsan una expo outlet para fortalecer las ventas del sector | radiouniversidad.com.ar",
-        "eventKey": "general|camara|comercio|fortalecer|gobierno|impulsan|outlet|radiouniversidad|rio grande|tierra del fuego aias|2026-07-22",
-        "score": 74,
-        "topic": "sociedad",
-        "territory": "Rio Grande",
-        "lane": "standard"
-      },
-      {
-        "title": "Tarifazo en el Puente Rosario-Victoria: los peajes aumentan hasta un 700% y ya no aceptan efectivo",
-        "eventKey": "service|aceptan|aumentan|efectivo|hasta|peajes|puente|rosario|2026-07-22",
+        "title": "Baja de la natalidad y mercado laboral: el debate que Argentina se debe en un contexto de transformación estructural",
+        "eventKey": "service|argentina|contexto|debate|estructural|laboral|mercado|natalidad|2026-07-22",
         "score": 60,
         "topic": "servicios",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Córdoba: qué cambia para taxis y remises con la nueva ordenanza que impulsa el Concejo",
-        "eventKey": "service|cambia|concejo|cordoba|impulsa|nueva|ordenanza|remises|2026-07-22",
-        "score": 60,
-        "topic": "servicios",
+        "title": "Calendario ANSES: ¿quiénes cobran este miércoles 22 de julio?",
+        "eventKey": "general|anses|calendario|cobran|julio|miercoles|quienes|2026-07-22",
+        "score": 58,
+        "topic": "sociedad",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Dólar blue hoy: a cuánto opera este miércoles 22 de julio",
-        "eventKey": "general|cuanto|dolar|julio|miercoles|opera|2026-07-22",
-        "score": 55,
-        "topic": "economia",
-        "territory": "Mundo",
+        "title": "Calendario de pagos de ANSES para el miércoles 22 de julio",
+        "eventKey": "general|anses|calendario|julio|miercoles|pagos|2026-07-22",
+        "score": 58,
+        "topic": "sociedad",
+        "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
-        "eventKey": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
-        "score": 55,
-        "topic": "economia",
-        "territory": "Mundo",
+        "title": "Tras cierta “calma”, vuelven los problemas en una referente de la maquinaria agrícola",
+        "eventKey": "general|agricola|calma|cierta|maquinaria|problemas|referente|vuelven|2026-07-22",
+        "score": 58,
+        "topic": "sociedad",
+        "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "Cómo es la iniciativa para crear el ‘cielo único sudamericano’",
-        "eventKey": "service|cielo|crear|iniciativa|sudamericano|unico|2026-07-21",
+        "title": "Advierten que los dólares de Vaca Muerta no alcanzan: el rol de la política industrial y las lecciones de 3 países",
+        "eventKey": "general|advierten|alcanzan|dolares|industrial|lecciones|muerta|paises|2026-07-22",
+        "score": 55,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "YPF, una joya para comprar y mantener",
+        "eventKey": "service|onu y|argentina|peru|informa|2026-07-22",
         "score": 55,
         "topic": "servicios",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "La gasolina más barata y más cara de Madrid, Barcelona y otras ciudades este 22 de julio",
-        "eventKey": "general|barata|barcelona|ciudades|gasolina|julio|madrid|otras|2026-07-22",
-        "score": 49,
-        "topic": "sociedad",
+        "title": "El ingeniero que el sistema financiero necesita y que casi no existe",
+        "eventKey": "legal-policy|onu y|argentina|peru|informa|2026-07-22",
+        "score": 55,
+        "topic": "politica",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Voraz incendio forestal consume 1.700 hectáreas en Francia",
-        "eventKey": "general|consume|forestal|francia|hectareas|incendio|voraz|2026-07-22",
-        "score": 49,
-        "topic": "sociedad",
+        "title": "Qué documentación necesito para salir del país en estas vacaciones de invierno",
+        "eventKey": "general|documentacion|estas|invierno|necesito|salir|vacaciones|2026-07-22",
+        "score": 55,
+        "topic": "turismo",
         "territory": "Mundo",
         "lane": "standard"
       },
       {
-        "title": "Teherán activa defensa aérea ante más ataques de EE. UU.",
-        "eventKey": "general|activa|aerea|ataques|defensa|teheran|2026-07-22",
-        "score": 49,
+        "title": "¿Primer RIGI de una automotriz? El sugerente posteo de un asesor de Caputo sobre millonaria inversión de Toyota",
+        "eventKey": "general|asesor|automotriz|caputo|inversion|millonaria|posteo|primer|2026-07-21",
+        "score": 55,
         "topic": "sociedad",
-        "territory": "Mundo",
+        "territory": "Nacionales",
         "lane": "standard"
       }
     ],
-    "corroborationSearches": 3,
-    "corroborationFound": 1,
+    "corroborationSearches": 2,
+    "corroborationFound": 0,
     "corroborationVerified": 0,
-    "corroborationConflicts": 1,
+    "corroborationConflicts": 0,
     "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "international-conflict|defensa pete hegseth|internacional|estados unidos|informa|2026-07-22",
-        "title": "La guerra en Irán le ha costado USD 37.500 millones a EE.UU.",
-        "priorityRank": 1,
-        "corroborationQuery": "Defensa Pete Hegseth Estados Unidos conflicto costado guerra millones",
-        "corroborationReason": "newsworthiness=94; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=4h; attempts=0",
-        "found": 1,
-        "verified": false,
-        "status": "conflicting-sources"
-      },
-      {
         "eventKey": "casualty|gobierno de sikkim|india al|internacional|informa|2026-07-21",
         "title": "Mortal accidente en una central hidroeléctrica en India",
-        "priorityRank": 2,
+        "priorityRank": 1,
         "corroborationQuery": "India Al Gobierno de Sikkim accidente central hidroelectrica india mortal",
-        "corroborationReason": "newsworthiness=90; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=13h; attempts=2",
+        "corroborationReason": "newsworthiness=90; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=17h; attempts=3",
         "found": 0,
         "verified": false,
         "status": "no-result"
@@ -969,73 +898,111 @@
       {
         "eventKey": "election|internacional|estados unidos|cuba|informa|2026-07-22",
         "title": "Estados Unidos ahora pone el foco en Nicaragua y dice que \"no se quedará de brazos cruzados\" ante la avanzada del régimen de Ortega para eliminar las elecciones",
-        "priorityRank": 4,
+        "priorityRank": 2,
         "corroborationQuery": "Estados Unidos Cuba elecciones resultado ahora avanzada brazos cruzados eliminar",
-        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=4h; attempts=1",
+        "corroborationReason": "newsworthiness=89; freshness=4h; territory=Mundo; impact=12; corroborability=10; pendingAge=8h; attempts=2",
         "found": 0,
         "verified": false,
         "status": "no-result"
       }
     ],
     "conflictsByField": {
-      "money": 1,
-      "dates": 1
+      "dates": 4,
+      "percentages": 1
     },
-    "criticalConflicts": 1,
+    "criticalConflicts": 4,
     "nonCriticalDifferences": 1,
-    "resolvedComplementaryFacts": 7,
+    "resolvedComplementaryFacts": 13,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 63,
-        "avg": 121.3,
+        "count": 64,
+        "avg": 119.4,
         "p50": 0,
         "max": 2121.5
       },
       "verificationToPublicationMinutes": {
-        "count": 63,
-        "avg": 23.6,
+        "count": 64,
+        "avg": 23.3,
         "p50": 0.4,
         "max": 338.7
       },
       "discoveryToPublicationMinutes": {
-        "count": 63,
-        "avg": 144.9,
+        "count": 64,
+        "avg": 142.7,
         "p50": 0.4,
         "max": 2121.9
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 816,
-        "avg": 41.6,
+        "count": 819,
+        "avg": 39.5,
         "p50": 0,
         "max": 2737.6
       },
       "cohort": {
-        "comparablePublishedCount": 63,
-        "verifiedWithoutPublicationCount": 753,
+        "comparablePublishedCount": 64,
+        "verifiedWithoutPublicationCount": 755,
         "publicationWithoutVerifiedAtCount": 0,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
     "byCategory": {
-      "Economía": 1,
-      "Nacionales": 1
+      "Actualidad": 1,
+      "Nacionales": 2
     },
     "publishedLast3hBeforeRun": 0,
-    "publishedLast6hBeforeRun": 4,
-    "publishedLast12hBeforeRun": 7,
-    "publishedLast24hBeforeRun": 14,
-    "hoursSinceLastPublicationBeforeRun": 3.6,
+    "publishedLast6hBeforeRun": 2,
+    "publishedLast12hBeforeRun": 6,
+    "publishedLast24hBeforeRun": 13,
+    "hoursSinceLastPublicationBeforeRun": 3.9,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 14,
+      "publishedLast24hBeforeRun": 13,
       "remainingToMin": 0,
-      "slotsRemaining": 2,
+      "slotsRemaining": 3,
       "effectiveRunTarget": 3,
-      "effectiveRunMaxNormal": 2
+      "effectiveRunMaxNormal": 3
     },
     "agendaTop": [
+      {
+        "storyId": "service|amplio|despliegue|durante|garantizar|invierno|mantiene|operativo|ushuaia|tierra del fuego aias|2026-07-22",
+        "headlineSeed": "El Municipio de Ushuaia mantiene un amplio despliegue para garantizar la transitabilidad durante el Operativo Invierno | radiouniversidad.com.ar",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 0
+        }
+      },
+      {
+        "storyId": "weather-forecast|2026-07-22|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 22 de julio de 2026",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|ataque|civiles|contra|fuente|menos|muertos|paramilitares|2026-07-22",
         "headlineSeed": "Al menos 21 civiles muertos en ataque de paramilitares contra una fuente de agua en Sudán",
@@ -1051,44 +1018,6 @@
           "socialPotential": 7,
           "searchPotential": 13,
           "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "casualty|policia|policia la|justicia|informa|2026-07-22",
-        "headlineSeed": "Se hicieron pasar por policías para entrar a robar en una casa, balearon al dueño y volcaron al escapar",
-        "topic": "sociedad",
-        "territory": "Provincia",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 20,
-          "localRelevance": 22,
-          "impactMagnitude": 21,
-          "serviceValue": 3,
-          "socialPotential": 4,
-          "searchPotential": 8,
-          "recency": 15,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "weather-forecast|2026-07-22|tierra-del-fuego",
-        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 22 de julio de 2026",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "conflicting-sources",
-        "scoreBreakdown": {
-          "publicInterest": 21,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 12,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -1138,18 +1067,18 @@
     "sourceHealthSummary": {
       "configured": 32,
       "consulted": 32,
-      "healthy": 28,
-      "productive": 12,
+      "healthy": 29,
+      "productive": 10,
       "noResults": 3,
-      "failed": 1
+      "failed": 0
     }
   },
   "budget": {
     "maxAiPerRun": 16,
     "officialAiUsed": 0,
     "officialAiBudget": 0,
-    "discoveryAiUsed": 10,
-    "discoveryAiBudget": 11,
+    "discoveryAiUsed": 14,
+    "discoveryAiBudget": 15,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1158,21 +1087,21 @@
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
-    "effectiveRunMaxNormal": 2,
+    "effectiveRunMaxNormal": 3,
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 14,
-    "candidatesMaterialized": 33,
-    "totalCandidatesBeforeLimit": 33
+    "publishedLast24hBeforeRun": 13,
+    "candidatesMaterialized": 28,
+    "totalCandidatesBeforeLimit": 28
   },
   "reasonNoMorePublished": [
-    "6 evento(s) quedaron pendientes de segunda fuente",
-    "1 evento(s) tuvieron conflicto factual",
-    "9 candidato(s) descartados por duplicado/similitud",
-    "5 candidato(s) descartados por causas especificas (stale-hard-news: 1, stale-dated-discovery: 1, undated-discovery: 3)",
-    "1 candidato(s) descartados por importancia editorial",
-    "5 candidato(s) quedaron por cupo editorial de corrida",
+    "2 evento(s) quedaron pendientes de segunda fuente",
+    "2 evento(s) tuvieron conflicto factual",
+    "8 candidato(s) descartados por duplicado/similitud",
+    "1 candidato(s) descartados por causas especificas (stale-hard-news: 1)",
+    "2 candidato(s) descartados por importancia editorial",
+    "7 candidato(s) quedaron por cupo editorial de corrida",
     "3 candidato(s) bloqueados por validacion factual"
   ]
 }
