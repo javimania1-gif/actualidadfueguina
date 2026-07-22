@@ -8,7 +8,7 @@ sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/c70gekd822wo?at_medium=RSS&at_campaign=rss"
 originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/6bc9/live/bda693f0-854e-11f1-babf-f7c4cd6e0619.jpg"
 status: "draft"
-detectedAt: "2026-07-22T14:05:04.627Z"
+detectedAt: "2026-07-22T19:28:31.903Z"
 mode: "discovery-review"
 ---
 
@@ -26,7 +26,7 @@ Pie de foto, El presidente del Parlamento iraní, Mohammad Bagher Ghalibaf; el p
 
 - - Autor, Amir Azimi
  - Título del autor, BBC Persa
-- Fecha de publicación 9 horas
+- Fecha de publicación 22 julio 2026, 04:01 GMT
  
 - Tiempo de lectura: 7 min
  
@@ -51,21 +51,21 @@ Mientras tanto, el programa nuclear se ha presentado durante mucho tiempo como u
 
 **Más leídas**
 
-- ![Kaylee Hottle lleva un vestido brillante azul y morado y pendientes de aro plateados. ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/ffef/live/f1da0c10-8521-11f1-97e8-4f50dea2b016.jpg.webp)
- 
- [Kaylee Hottle: muere la actriz de "Godzilla vs. Kong" a los 18 años](https://www.bbc.com/mundo/articles/c8enw5668l6o)
- 
-- ![Hospital en Paraguay](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/d996/live/f5294740-8496-11f1-b857-73b0ba4a1b36.jpg.webp)
- 
- ["Tuvimos que sortear cadenillas de oro para pagar la atención médica de mi hija": cómo el sistema de salud en Paraguay lleva a los pacientes a endeudarse](https://www.bbc.com/mundo/articles/cn754lv856ko)
- 
 - ![Wang Jibing sonríe a la cámara](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/fe1b/live/bf88fb10-84f7-11f1-926f-c90d1bcfbc84.jpg.webp)
  
- ["Garabateaba" versos entre entrega y entrega: el repartidor de comida de 56 años que ganó uno de los mayores premios literarios de China](https://www.bbc.com/mundo/articles/c8enw1n5ngjo)
+ [Escribía versos entre entrega y entrega: el repartidor de comida que ganó uno de los mayores premios literarios de China](https://www.bbc.com/mundo/articles/c8enw1n5ngjo)
  
-- ![El comandante en jefe de Ucrania, Oleksandr Syrskyi, fue destituido después de varios días de protestas.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/61d1/live/96d1f5a0-8556-11f1-a14f-8ba87eff6282.jpg.webp)
+- ![Daniel Siad con un puro en una mano](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/a6fe/live/b3a6dd80-85dd-11f1-926f-c90d1bcfbc84.jpg.webp)
  
- [Zelensky destituye al comandante en jefe de Ucrania después de días de protestas en las calles por el relevo del ministro de Defensa](https://www.bbc.com/mundo/articles/cr596evgv1jo)
+ [Encuentran muerto en París al reclutador de modelos vinculado con Jeffrey Epstein](https://www.bbc.com/mundo/articles/cewr51rjjn5o)
+ 
+- ![Logotipo de ChatGPT en un teléfono](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/afb5/live/29a46380-85da-11f1-8f00-252bc70ad71a.jpg.webp)
+ 
+ [OpenAI dice que su inteligencia artificial se rebeló y lanzó un ciberataque "sin precedentes"](https://www.bbc.com/mundo/articles/c935qp64qvpo)
+ 
+- ![El argentino Leandro Paredes (5) reacciona de forma violenta contra el español Gavi (9) tras la final de la Copa Mundial de la FIFA 2026.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/c38f/live/977eddb0-8475-11f1-ac57-abae38e66d9e.jpg.webp)
+ 
+ [La FIFA abre una investigación contra Argentina por los incidentes tras la derrota en la final del Mundial 2026](https://www.bbc.com/mundo/articles/cwye8j2yq83o)
  
 
 Final de Más leídas

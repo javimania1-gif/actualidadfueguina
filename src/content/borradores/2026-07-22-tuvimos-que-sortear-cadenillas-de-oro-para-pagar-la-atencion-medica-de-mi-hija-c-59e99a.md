@@ -6,9 +6,9 @@ category: "Mundo"
 location: "Internacional"
 sourceName: "BBC Mundo"
 sourceUrl: "https://www.bbc.com/mundo/articles/cn754lv856ko?at_medium=RSS&at_campaign=rss"
-originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/d996/live/f5294740-8496-11f1-b857-73b0ba4a1b36.jpg"
+originalImage: "https://ichef.bbci.co.uk/news/1200/branded_mundo/40ad/live/f05f6900-85dc-11f1-9837-c51febdbeb82.jpg"
 status: "draft"
-detectedAt: "2026-07-22T14:04:41.348Z"
+detectedAt: "2026-07-22T19:28:05.879Z"
 mode: "discovery-review"
 ---
 
@@ -16,15 +16,17 @@ mode: "discovery-review"
 
 # "Tuvimos que sortear cadenillas de oro para pagar la atención médica de mi hija": cómo el sistema de salud en Paraguay lleva a los pacientes a endeudarse
 
-![Hospital en Paraguay](https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/d996/live/f5294740-8496-11f1-b857-73b0ba4a1b36.jpg.webp)
+![Manifestantes frente al Hospital de Santa Rosa del Aguaray para denunciar el abandono de los servicios públicos de salud, a 250 km de Asunción, Paraguay. ](https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/40ad/live/f05f6900-85dc-11f1-9837-c51febdbeb82.jpg.webp)
 
-Fuente de la imagen, Getty Images
+Fuente de la imagen, Plataforma por el Derecho a la Salud de Paraguay
+
+Pie de foto, La falta de equipamiento y medicamentos están entre los principales reclamos de médicos, pacientes y activistas en Paraguay.
 
 **Información del artículo**
 
 - - Autor, [Ayelén Oliva](https://www.bbc.com/mundo/topics/cxwwy1xe43wt)
  - Título del autor, BBC News Mundo
-- Fecha de publicación 2 horas
+- Fecha de publicación 7 horas
  
 - Tiempo de lectura: 11 min
  
@@ -43,7 +45,7 @@ Los problemas en el cuidado de su hija no terminaron ahí. A la escasez de insum
 
 Tras pasar un año en el hospital, María del Pilar murió.
 
-![Pacientes con síntomas de dengue esperan ser atendidos en el hospital de Ñemby, Paraguay, el 20 de enero de 2020. ](https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/a514/live/dfcfb340-7efe-11f1-a870-d5554760d715.jpg.webp)
+![Hospital en Paraguay](https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/d996/live/f5294740-8496-11f1-b857-73b0ba4a1b36.jpg.webp)
 
 Fuente de la imagen, Getty Images
 
@@ -57,21 +59,21 @@ La historia de Daniela es una de las muchas que reflejan la crisis del sistema d
 
 **Más leídas**
 
-- ![Kaylee Hottle lleva un vestido brillante azul y morado y pendientes de aro plateados. ](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/ffef/live/f1da0c10-8521-11f1-97e8-4f50dea2b016.jpg.webp)
- 
- [Kaylee Hottle: muere la actriz de "Godzilla vs. Kong" a los 18 años](https://www.bbc.com/mundo/articles/c8enw5668l6o)
- 
 - ![Wang Jibing sonríe a la cámara](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/fe1b/live/bf88fb10-84f7-11f1-926f-c90d1bcfbc84.jpg.webp)
  
- ["Garabateaba" versos entre entrega y entrega: el repartidor de comida de 56 años que ganó uno de los mayores premios literarios de China](https://www.bbc.com/mundo/articles/c8enw1n5ngjo)
+ [Escribía versos entre entrega y entrega: el repartidor de comida que ganó uno de los mayores premios literarios de China](https://www.bbc.com/mundo/articles/c8enw1n5ngjo)
  
-- ![El comandante en jefe de Ucrania, Oleksandr Syrskyi, fue destituido después de varios días de protestas.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/61d1/live/96d1f5a0-8556-11f1-a14f-8ba87eff6282.jpg.webp)
+- ![Daniel Siad con un puro en una mano](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/a6fe/live/b3a6dd80-85dd-11f1-926f-c90d1bcfbc84.jpg.webp)
  
- [Zelensky destituye al comandante en jefe de Ucrania después de días de protestas en las calles por el relevo del ministro de Defensa](https://www.bbc.com/mundo/articles/cr596evgv1jo)
+ [Encuentran muerto en París al reclutador de modelos vinculado con Jeffrey Epstein](https://www.bbc.com/mundo/articles/cewr51rjjn5o)
  
-- ![Nico Williams y Lamine Yamal con los brazos en alto celebran la Copa del Mundo rodeados de otros jugadores de la selección española. 19 de julio de 2026](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/f4eb/live/5da28630-846d-11f1-b286-f1d324aa6c22.jpg.webp)
+- ![Logotipo de ChatGPT en un teléfono](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/afb5/live/29a46380-85da-11f1-8f00-252bc70ad71a.jpg.webp)
  
- [La historia de migración y éxito de las familias de Lamine Yamal y Nico Williams, dos de las jóvenes estrellas de la España campeona del mundo](https://www.bbc.com/mundo/articles/c6294plwxejo)
+ [OpenAI dice que su inteligencia artificial se rebeló y lanzó un ciberataque "sin precedentes"](https://www.bbc.com/mundo/articles/c935qp64qvpo)
+ 
+- ![El argentino Leandro Paredes (5) reacciona de forma violenta contra el español Gavi (9) tras la final de la Copa Mundial de la FIFA 2026.](https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/c38f/live/977eddb0-8475-11f1-ac57-abae38e66d9e.jpg.webp)
+ 
+ [La FIFA abre una investigación contra Argentina por los incidentes tras la derrota en la final del Mundial 2026](https://www.bbc.com/mundo/articles/cwye8j2yq83o)
  
 
 Final de Más leídas
@@ -206,4 +208,4 @@ Ante las dificultades que enfrenta el sistema de salud paraguayo, algunos pacien
 
 "Agradezco mucho a la Argentina por abrirles a los pacientes de mi pueblo las puertas de su salud en auxilio", dice Daniela, en relación a la atención que reciben de la provincia de Formosa, en el noroeste argentino, limítrofe con Paraguay.
 
-Esa realidad comenzó a cambiar en mayo de 2025, cuando el gobierno del presidente argentino Javier Milei impulsó restricciones al acceso a la atención sanitaria para extranjeros sin resi
+Esa realidad comenzó a cambiar en mayo de 2025, cuando el gobierno del presidente argentino Javier Milei impulsó restricciones al acceso a la atención sanitaria para extranjeros s

@@ -1,44 +1,82 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-22T17:27:00.043Z",
+  "generatedAt": "2026-07-22T19:28:31.904Z",
   "summary": {
-    "totalStories": 1021,
+    "totalStories": 1019,
     "byStatus": {
-      "verified-standard-single-source": 703,
-      "conflicting-sources": 46,
-      "published": 62,
-      "pending-verification": 43,
+      "conflicting-sources": 48,
+      "pending-verification": 40,
+      "verified-standard-single-source": 696,
+      "published": 66,
       "agenda-invalid": 19,
-      "rejected-terminal": 109,
-      "verified-strict": 28,
+      "rejected-terminal": 112,
+      "verified-strict": 27,
       "verified-standard": 8,
       "verified-local-routine": 3
     },
     "byTopic": {
-      "servicios": 148,
-      "sociedad": 368,
-      "politica": 136,
-      "deportes": 235,
-      "agenda": 13,
-      "turismo": 8,
-      "policiales": 35,
-      "economia": 54,
-      "educacion": 22,
+      "sociedad": 373,
+      "turismo": 9,
+      "servicios": 146,
+      "politica": 137,
+      "deportes": 230,
+      "agenda": 15,
+      "policiales": 36,
+      "economia": 53,
+      "educacion": 18,
       "salud": 1,
       "cultura": 1
     },
     "byTerritory": {
+      "Provincia": 85,
+      "Tolhuin": 2,
       "Ushuaia": 14,
-      "Provincia": 79,
       "Rio Grande": 5,
-      "Mundo": 589,
-      "Nacionales": 314,
-      "Tolhuin": 1,
-      "Malvinas": 14,
+      "Mundo": 585,
+      "Nacionales": 311,
+      "Malvinas": 12,
       "Antartida": 5
     },
     "invalidStories": 19,
     "topStories": [
+      {
+        "storyId": "casualty|kaylee hottle|estados unidos|informa|2026-07-22",
+        "headlineSeed": "Todos los detalles del accidente que le costó la vida a Kaylee Hottle, la joven actriz de “Godzilla vs. Kong”",
+        "topic": "sociedad",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 20,
+          "localRelevance": 22,
+          "impactMagnitude": 21,
+          "serviceValue": 3,
+          "socialPotential": 7,
+          "searchPotential": 5,
+          "recency": 15,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "general|acompana|comunitario|fortalecer|infuetur|iniciativa|licuadora|saberes|tolhuin|tierra del fuego|2026-07-22",
+        "headlineSeed": "EL INFUETUR ACOMPAÑA LA INICIATIVA \"SABERES DE TOLHUIN\" PARA FORTALECER EL TURISMO COMUNITARIO - La Licuadora",
+        "topic": "turismo",
+        "territory": "Tolhuin",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 15,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 15,
+          "socialPotential": 13,
+          "searchPotential": 13,
+          "recency": 12,
+          "sourceStrength": 3,
+          "diversity": 4
+        }
+      },
       {
         "storyId": "service|crisis|estado|preocupa|puerto|recupera|servicios|turismo|rio grande|ushuaia|2026-07-22",
         "headlineSeed": "El turismo se recupera en Ushuaia, pero preocupa la crisis de los servicios y el estado del puerto",
@@ -148,7 +186,7 @@
           "serviceValue": 20,
           "socialPotential": 8,
           "searchPotential": 13,
-          "recency": 12,
+          "recency": 9,
           "sourceStrength": 3,
           "diversity": 4
         }
@@ -190,48 +228,91 @@
           "sourceStrength": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|aisladas|algunas|catastrofe|chile|declaran|estado|fuertes|2026-07-20",
-        "headlineSeed": "Declaran estado de \"catástrofe\" en algunas zonas de Chile por fuertes temporales: hay 5 muertos y 100.000 personas aisladas",
-        "topic": "servicios",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "published",
-        "scoreBreakdown": {
-          "publicInterest": 23,
-          "localRelevance": 7,
-          "impactMagnitude": 23,
-          "serviceValue": 20,
-          "socialPotential": 4,
-          "searchPotential": 15,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|combustible|derrumba|falta|guerra|imagen|kremlin|lider|2026-07-19",
-        "headlineSeed": "Los rusos pierden la paciencia con Vladimir Putin: la falta de combustible derrumba por la guerra la imagen del líder del Kremlin",
-        "topic": "servicios",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "verified-standard-single-source",
-        "scoreBreakdown": {
-          "publicInterest": 25,
-          "localRelevance": 7,
-          "impactMagnitude": 23,
-          "serviceValue": 20,
-          "socialPotential": 7,
-          "searchPotential": 15,
-          "recency": 5,
-          "sourceStrength": 3,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "casualty|kaylee hottle|estados unidos|informa|2026-07-22",
+      "headlineSeed": "Todos los detalles del accidente que le costó la vida a Kaylee Hottle, la joven actriz de “Godzilla vs. Kong”",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Kaylee Hottle"
+      ],
+      "eventType": "casualty",
+      "firstSeenAt": "2026-07-22T19:27:12.514Z",
+      "lastSeenAt": "2026-07-22T19:27:12.514Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 21,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 21,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|acompana|comunitario|fortalecer|infuetur|iniciativa|licuadora|saberes|tolhuin|tierra del fuego|2026-07-22",
+      "headlineSeed": "EL INFUETUR ACOMPAÑA LA INICIATIVA \"SABERES DE TOLHUIN\" PARA FORTALECER EL TURISMO COMUNITARIO - La Licuadora",
+      "topic": "turismo",
+      "subtopic": "turismo",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Tolhuin",
+        "Tierra del Fuego"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T19:27:12.513Z",
+      "lastSeenAt": "2026-07-22T19:27:12.513Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "fast",
+      "freshness": "today",
+      "publicInterestScore": 15,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 13,
+      "searchPotentialScore": 13,
+      "scoreBreakdown": {
+        "publicInterest": 15,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 13,
+        "searchPotential": 13,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
     {
       "storyId": "service|crisis|estado|preocupa|puerto|recupera|servicios|turismo|rio grande|ushuaia|2026-07-22",
       "headlineSeed": "El turismo se recupera en Ushuaia, pero preocupa la crisis de los servicios y el estado del puerto",
@@ -521,7 +602,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 25,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
@@ -535,7 +616,7 @@
         "serviceValue": 20,
         "socialPotential": 7,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -569,7 +650,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 18,
       "localRelevanceScore": 25,
       "impactMagnitudeScore": 0,
@@ -583,7 +664,7 @@
         "serviceValue": 20,
         "socialPotential": 8,
         "searchPotential": 13,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -771,48 +852,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "weather|ministerio de salud|gobierno|policia nacional de|internacional|argentina|peru|informa|2026-07-19",
-      "headlineSeed": "Un sismo de magnitud 5.5 sacudió Perú: hay al menos seis muertos y 20 heridos",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Gobierno",
-        "Internacional",
-        "Peru"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-19T17:02:39.613Z",
-      "lastSeenAt": "2026-07-19T19:12:26.720Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-context",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 5,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 100,
-      "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|advertencia|emitio|estadounidenses|guerra|medio|mundial|oriente|2026-07-20",
       "headlineSeed": "Guerra en Medio Oriente EN VIVO: EEUU emitió una advertencia mundial para los estadounidenses por las tensiones en Medio Oriente",
       "topic": "servicios",
@@ -935,6 +974,48 @@
       },
       "newsworthinessScore": 97,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather|ministerio de salud|gobierno|policia nacional de|internacional|argentina|peru|informa|2026-07-19",
+      "headlineSeed": "Un sismo de magnitud 5.5 sacudió Perú: hay al menos seis muertos y 20 heridos",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Gobierno",
+        "Internacional",
+        "Peru"
+      ],
+      "eventType": "weather",
+      "firstSeenAt": "2026-07-19T17:02:39.613Z",
+      "lastSeenAt": "2026-07-19T19:12:26.720Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 1,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 97,
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -1334,50 +1415,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|secretaria de energia|gobierno|secretaria|vaca muerta|argentina|informa|2026-07-22",
-      "headlineSeed": "Boom de Vaca Muerta: facilitan la exportación de petróleo, combustibles y GNL",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Vaca Muerta",
-        "Secretaría de Energía",
-        "Gobierno",
-        "Secretaría",
-        "Argentina"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-22T14:03:41.023Z",
-      "lastSeenAt": "2026-07-22T14:03:41.023Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 25,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 25,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 95,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|victoria villarruel|martin menem|tierra del fuego aias|informa|2026-07-20",
       "headlineSeed": "Los senadores pasarán a cobrar 12 millones de pesos por mes - Actualidad TDF",
       "topic": "politica",
@@ -1556,7 +1593,7 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|uruguay|baleados|bandera|espanol|fueron|2026-07-22|3-0",
+      "storyId": "sports-result|islas malvinas|malvinas|argentina|uruguay|informa|2026-07-22",
       "headlineSeed": "Nacional provocó con un \"himno mundialista\" español, Tigre ganó, mostró la bandera de Malvinas, y los hinchas fueron baleados en la ruta",
       "topic": "deportes",
       "subtopic": "deportes",
@@ -1686,6 +1723,50 @@
       },
       "newsworthinessScore": 92,
       "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|secretaria de energia|gobierno|secretaria|vaca muerta|argentina|informa|2026-07-22",
+      "headlineSeed": "Boom de Vaca Muerta: facilitan la exportación de petróleo, combustibles y GNL",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Vaca Muerta",
+        "Secretaría de Energía",
+        "Gobierno",
+        "Secretaría",
+        "Argentina"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-22T14:03:41.023Z",
+      "lastSeenAt": "2026-07-22T14:03:41.023Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 25,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 25,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 92,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -2134,97 +2215,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|gobierno|emmanuel macron|consejo constitucional|internacional|francia|espana|informa|2026-07-21",
-      "headlineSeed": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Emmanuel Macron",
-        "Consejo Constitucional",
-        "Gobierno",
-        "Internacional",
-        "Francia",
-        "Espana"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-21T21:14:53.602Z",
-      "lastSeenAt": "2026-07-21T21:14:53.602Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 20,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 7,
-        "impactMagnitude": 20,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|gobierno|banco central la|camara de diputados|inocencia fiscal|buenos aires|presenta|2026-07-21",
-      "headlineSeed": "Tras el Mundial, el Gobierno reunió a la mesa política y definió presentar la reforma del Banco Central la próxima semana",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Inocencia Fiscal",
-        "Gobierno",
-        "Banco Central la",
-        "Cámara de Diputados",
-        "Banco Central",
-        "Banco Nación",
-        "Buenos Aires"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-21T19:26:13.341Z",
-      "lastSeenAt": "2026-07-21T19:26:13.341Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|gobierno|corte suprema|brasil|mexico|informa|2026-07-21",
       "headlineSeed": "Alerta comercial: Trump define una nueva ola de aranceles y apunta a 60 países",
       "topic": "politica",
@@ -2347,7 +2337,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 89,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -2395,6 +2385,50 @@
       },
       "newsworthinessScore": 89,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|ministerio de relaciones exteriores de iran|onu de|internacional|estados unidos|italia|informa|2026-07-22",
+      "headlineSeed": "En directo: Trump amenaza con bombardear un puente o central eléctrica iraní por cada barco que Teherán ataque en Ormuz",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Ministerio de Relaciones Exteriores de Irán",
+        "ONU de",
+        "Internacional",
+        "Estados Unidos",
+        "Italia"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-22T19:27:12.511Z",
+      "lastSeenAt": "2026-07-22T19:27:12.511Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 88,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2712,6 +2746,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "legal-policy|ministerio de educacion|ministerio de educacion de|ministerio|tierra del fuego aias|informa|2026-07-22",
+      "headlineSeed": "El Ministerio de Educación extiende una semana el receso invernal - Actualidad TDF",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Ministerio de Educación",
+        "Ministerio de Educación de",
+        "Ministerio",
+        "El Ministerio",
+        "Actualidad TDF El Ministerio",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-22T19:27:12.516Z",
+      "lastSeenAt": "2026-07-22T19:27:12.516Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 8,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 8,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 87,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|argentina|crecer|cuanto|definio|economica|nueva|puede|2026-07-22",
       "headlineSeed": "Nueva fase económica: Daza definió cuánto puede crecer Argentina",
       "topic": "economia",
@@ -2941,9 +3020,9 @@
       ],
       "eventType": "election",
       "firstSeenAt": "2026-07-22T02:53:32.443Z",
-      "lastSeenAt": "2026-07-22T14:03:41.021Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
+      "lastSeenAt": "2026-07-22T19:27:12.516Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
@@ -2963,6 +3042,97 @@
         "socialPotential": 4,
         "searchPotential": 10,
         "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|gobierno|emmanuel macron|consejo constitucional|internacional|francia|espana|informa|2026-07-21",
+      "headlineSeed": "Francia aprobó la prohibición del uso de redes sociales para menores de 15 años, una ley pionera en Europa",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Emmanuel Macron",
+        "Consejo Constitucional",
+        "Gobierno",
+        "Internacional",
+        "Francia",
+        "Espana"
+      ],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-21T21:14:53.602Z",
+      "lastSeenAt": "2026-07-21T21:14:53.602Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 20,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 7,
+        "impactMagnitude": 20,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 86,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "sports-result|gobierno|banco central la|camara de diputados|inocencia fiscal|buenos aires|presenta|2026-07-21",
+      "headlineSeed": "Tras el Mundial, el Gobierno reunió a la mesa política y definió presentar la reforma del Banco Central la próxima semana",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Inocencia Fiscal",
+        "Gobierno",
+        "Banco Central la",
+        "Cámara de Diputados",
+        "Banco Central",
+        "Banco Nación",
+        "Buenos Aires"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-21T19:26:13.341Z",
+      "lastSeenAt": "2026-07-21T19:26:13.341Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 10,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -3264,51 +3434,6 @@
         "diversity": 4
       },
       "newsworthinessScore": 85,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|anticipo|argentina|bajar|calificacion|cuanto|deberia|destaco|2026-07-22",
-      "headlineSeed": "Daza destacó la mejora de la calificación de Argentina y anticipó a cuánto debería bajar riesgo país",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gobierno",
-        "Banco Central",
-        "Argentina",
-        "Chile",
-        "Peru",
-        "Mexico"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T14:03:41.024Z",
-      "lastSeenAt": "2026-07-22T14:03:41.024Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 84,
       "status": "verified-standard-single-source",
       "validationReasons": []
     },
@@ -4313,6 +4438,51 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|anticipo|argentina|bajar|calificacion|cuanto|deberia|destaco|2026-07-22",
+      "headlineSeed": "Daza destacó la mejora de la calificación de Argentina y anticipó a cuánto debería bajar riesgo país",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Gobierno",
+        "Banco Central",
+        "Argentina",
+        "Chile",
+        "Peru",
+        "Mexico"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T14:03:41.024Z",
+      "lastSeenAt": "2026-07-22T14:03:41.024Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 81,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "crime|policia de misiones|informa|2026-07-22",
       "headlineSeed": "Maltrato animal en Misiones: detuvieron a un hombre acusado de golpear a dos perros con un bate de béisbol",
       "topic": "policiales",
@@ -4889,55 +5059,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|policia y bomberos|policia de cordoba y bomberos|municipalidad|monte cristo|rally cordobes|campeonato provincial|malvinas|tierra del fuego aias|argentina|in",
-      "headlineSeed": "Monte Cristo se prepara para el Rally Cordobés: cómo será el operativo con el que buscan prevenir accidentes e incendios",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Monte Cristo",
-        "Rally Cordobés",
-        "Campeonato Provincial",
-        "Malvinas Argentinas",
-        "Policía y Bomberos",
-        "Policía de Córdoba y Bomberos",
-        "Municipalidad",
-        "Policía",
-        "Malvinas",
-        "Tierra del Fuego AIAS"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-22T14:03:41.024Z",
-      "lastSeenAt": "2026-07-22T14:03:41.024Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|gobierno|banco central|argentina|espana|informa|2026-07-21",
       "headlineSeed": "Nueva etapa del plan económico rumbo a la final",
       "topic": "politica",
@@ -5320,6 +5441,47 @@
       },
       "newsworthinessScore": 79,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|africa|brote|ebola|muertos|2026-07-22",
+      "headlineSeed": "Brote de ébola en África ya deja más de mil muertos",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "República Democrática",
+        "Internacional"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.347Z",
+      "lastSeenAt": "2026-07-22T17:24:57.347Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 16,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 16,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 78,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -6443,7 +6605,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 77,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -7085,6 +7247,55 @@
       },
       "newsworthinessScore": 77,
       "status": "rejected-terminal",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|policia y bomberos|policia de cordoba y bomberos|municipalidad|monte cristo|rally cordobes|campeonato provincial|malvinas|tierra del fuego aias|argentina|in",
+      "headlineSeed": "Monte Cristo se prepara para el Rally Cordobés: cómo será el operativo con el que buscan prevenir accidentes e incendios",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Monte Cristo",
+        "Rally Cordobés",
+        "Campeonato Provincial",
+        "Malvinas Argentinas",
+        "Policía y Bomberos",
+        "Policía de Córdoba y Bomberos",
+        "Municipalidad",
+        "Policía",
+        "Malvinas",
+        "Tierra del Fuego AIAS"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-22T14:03:41.024Z",
+      "lastSeenAt": "2026-07-22T14:03:41.024Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 76,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -8692,6 +8903,44 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
+      "headlineSeed": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T06:33:01.771Z",
+      "lastSeenAt": "2026-07-22T17:24:57.346Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 73,
+      "status": "verified-standard",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|francia|inglaterra|2026-07-18|4-0",
       "headlineSeed": "Inglaterra es tercer lugar del Mundial tras vencer a Francia",
       "topic": "deportes",
@@ -8964,50 +9213,6 @@
       },
       "newsworthinessScore": 73,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "territorial-sovereignty|islas malvinas|malvinas|argentina|egipto|informa|2026-07-22",
-      "headlineSeed": "Malvinas en la camiseta: un local de Berazategui estampa gratis la silueta de las islas tras el triunfo ante Inglaterra",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Islas Malvinas",
-        "Malvinas",
-        "Argentina",
-        "Egipto",
-        "Inglaterra"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-22T17:24:57.345Z",
-      "lastSeenAt": "2026-07-22T17:24:57.345Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 72,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -9743,50 +9948,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|frena|justicia|megafusion|paramount|temporalmente|warner|2026-07-21",
-      "headlineSeed": "Justicia de EE.UU. frena temporalmente la megafusión entre Paramount y Warner Bros.",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Warner Bros",
-        "Araceli Martínez",
-        "Justicia de EE",
-        "Justicia",
-        "Gobierno"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-21T19:26:13.341Z",
-      "lastSeenAt": "2026-07-21T19:26:13.341Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 12,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 70,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "territorial-sovereignty|justicia|fiscalia de la corona|camara de diputados|paris|londres|informa|2026-07-21",
       "headlineSeed": "Con 21 golpes de martillo: así asesinaron a la diputada británica Ann Widdecombe",
       "topic": "politica",
@@ -9912,6 +10073,50 @@
       },
       "newsworthinessScore": 70,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "territorial-sovereignty|islas malvinas|malvinas|argentina|egipto|informa|2026-07-22",
+      "headlineSeed": "Malvinas en la camiseta: un local de Berazategui estampa gratis la silueta de las islas tras el triunfo ante Inglaterra",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
+      "primaryEntities": [
+        "Islas Malvinas",
+        "Malvinas",
+        "Argentina",
+        "Egipto",
+        "Inglaterra"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-22T17:24:57.345Z",
+      "lastSeenAt": "2026-07-22T17:24:57.345Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 9,
+        "searchPotential": 8,
+        "recency": 12,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 69,
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -10121,6 +10326,50 @@
         "socialPotential": 7,
         "searchPotential": 5,
         "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 67,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|frena|justicia|megafusion|paramount|temporalmente|warner|2026-07-21",
+      "headlineSeed": "Justicia de EE.UU. frena temporalmente la megafusión entre Paramount y Warner Bros.",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Warner Bros",
+        "Araceli Martínez",
+        "Justicia de EE",
+        "Justicia",
+        "Gobierno"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-21T19:26:13.341Z",
+      "lastSeenAt": "2026-07-21T19:26:13.341Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -10530,6 +10779,82 @@
         "diversity": 4
       },
       "newsworthinessScore": 65,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|conviene|criolla|lechuga|mantecosa|plato|romana|2026-07-22",
+      "headlineSeed": "Lechuga criolla, mantecosa y romana: para qué plato conviene usar cada una",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.348Z",
+      "lastSeenAt": "2026-07-22T17:24:57.348Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 64,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|calidad|envejecer|importancia|mejor|movilidad|quiropraxia|2026-07-22",
+      "headlineSeed": "Envejecer con movilidad: la importancia de la quiropraxia para una mejor calidad de vida",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.347Z",
+      "lastSeenAt": "2026-07-22T17:24:57.347Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 64,
       "status": "verified-standard-single-source",
       "validationReasons": []
     },
@@ -11152,52 +11477,85 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|gobierno el presidente|gobierno|gobierno de la|quinta residencial|karina milei|villarruel|islas malvinas|malvinas|argentina|egipto|informa|2026-07-15",
-      "headlineSeed": "El partido más politizado del Mundial, con Malvinas como telón de fondo: la reacción del Gobierno",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
+      "storyId": "agenda|barrios|buscan|cercania|elegir|jovenes|realmente|salario|2026-07-22",
+      "headlineSeed": "Ni el salario ni la cercanía: ¿qué buscan realmente los jóvenes de barrios vulnerables a la hora de elegir un trabajo?",
+      "topic": "agenda",
+      "subtopic": "inscripciones",
+      "territory": "Nacionales",
       "primaryEntities": [
-        "Quinta Residencial",
-        "Karina Milei",
-        "Villarruel",
-        "Gobierno El Presidente",
-        "Gobierno",
-        "Gobierno de la",
-        "Gobierno de Milei",
-        "Gobierno Nacional",
-        "Islas Malvinas",
-        "Malvinas"
+        "Universidad Católica Argentina y",
+        "Argentina"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-15T19:17:58.230Z",
-      "lastSeenAt": "2026-07-15T19:17:58.230Z",
+      "eventType": "agenda",
+      "firstSeenAt": "2026-07-22T19:27:12.516Z",
+      "lastSeenAt": "2026-07-22T19:27:12.516Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
+      "freshness": "breaking",
+      "publicInterestScore": 15,
+      "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 9,
+      "searchPotentialScore": 15,
       "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
+        "publicInterest": 15,
+        "localRelevance": 12,
         "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 9,
+        "searchPotential": 15,
+        "recency": 15,
+        "sourceStrength": 3,
+        "diversity": 0
+      },
+      "newsworthinessScore": 60,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "crime|santa fe|argentina|informa|2026-07-22",
+      "headlineSeed": "Tras el nacimiento de “Lionela”, llegó Carlos: el primer cordero que se robó todas las miradas en La Rural",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Santa Fe",
+        "Argentina"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-22T19:27:12.516Z",
+      "lastSeenAt": "2026-07-22T19:27:12.516Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 12,
+        "impactMagnitude": 5,
         "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 1,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 15,
         "sourceStrength": 3,
         "diversity": 4
       },
-      "newsworthinessScore": 61,
-      "status": "verified-standard-single-source",
+      "newsworthinessScore": 60,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -11294,44 +11652,6 @@
       },
       "newsworthinessScore": 60,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
-      "headlineSeed": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T06:33:01.771Z",
-      "lastSeenAt": "2026-07-22T17:24:57.346Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 7,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -11752,7 +12072,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 15,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -11766,7 +12086,7 @@
         "serviceValue": 15,
         "socialPotential": 12,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -11796,7 +12116,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "today",
+      "freshness": "recent-hard-news",
       "publicInterestScore": 21,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -11810,7 +12130,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 12,
+        "recency": 9,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -11906,104 +12226,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|javier|medidas|mensaje|milei|presidente|proyecto|seleccion|malvinas|2026-07-21",
-      "headlineSeed": "Javier Milei y sus medidas, en vivo: el mensaje del Presidente a la selección y el proyecto para suspender las PASO",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Javier Milei",
-        "Gobierno de",
-        "Banco Nación El Gobierno de",
-        "Banco de la Nación Argentina",
-        "Secretaría de Comunicación y Prensa de",
-        "Justicia",
-        "Gobierno",
-        "Gobierno y la Asociación de",
-        "Banco Nación y",
-        "Malvinas"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-21T10:29:14.491Z",
-      "lastSeenAt": "2026-07-21T10:29:14.491Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|messi|scaloni|2026-07-21",
-      "headlineSeed": "Scaloni y Messi: la otra Argentina",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Santiago Caputo",
-        "Justicia",
-        "Justicia Penal y Económica de la",
-        "Cámara de Casación",
-        "Cámara Federal Penal de la Capital",
-        "Gobierno",
-        "Justicia de Estados Unidos",
-        "Buenos Aires",
-        "Argentina",
-        "Estados Unidos"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-21T06:32:54.558Z",
-      "lastSeenAt": "2026-07-21T06:32:54.558Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|accesos|cortaran|marchas|movimientos|piquetes|programa|rechazo|2026-07-21",
       "headlineSeed": "Marchas y piquetes: los movimientos sociales cortarán accesos en rechazo a la baja del programa Volver al Trabajo",
       "topic": "servicios",
@@ -12030,7 +12252,7 @@
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 18,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -12044,7 +12266,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "diversity": 4
       },
@@ -13139,255 +13361,6 @@
       "searchPotentialScore": 15,
       "scoreBreakdown": {
         "publicInterest": 18,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|argentina|buses|camiones|financiacion|flotas|impulsa|mercedes|2026-07-17",
-      "headlineSeed": "Mercedes-Benz Camiones y Buses impulsa nuevos planes de financiación para renovar flotas en la Argentina",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Benz Camiones",
-        "Gobierno",
-        "Argentina",
-        "Uruguay"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-17T15:18:18.895Z",
-      "lastSeenAt": "2026-07-17T15:18:18.895Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 7,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather|policia vial de san andres de|buenos aires|informa|2026-07-17",
-      "headlineSeed": "Volcó un micro y cayó desde un puente en medio del temporal en Buenos Aires: hay heridos",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Policía Vial de San Andrés de",
-        "Buenos Aires"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-17T15:18:18.894Z",
-      "lastSeenAt": "2026-07-17T15:18:18.894Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|areco|carmen|estremecedor|micro|pasajeros|puente|relato|2026-07-17",
-      "headlineSeed": "El estremecedor relato de uno de los pasajeros que iba en el micro que volcó y cayó de un puente en Carmen de Areco",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Buenos Aires"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-17T13:46:08.736Z",
-      "lastSeenAt": "2026-07-17T13:46:08.736Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "agenda|aniversario|atentado|encabeza|javier|milei|2026-07-17",
-      "headlineSeed": "Javier Milei encabeza el acto por el 32° aniversario del atentado a la AMIA",
-      "topic": "agenda",
-      "subtopic": "agenda",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Javier Milei",
-        "Gobierno",
-        "AMIA El Gobierno",
-        "Argentina"
-      ],
-      "eventType": "agenda",
-      "firstSeenAt": "2026-07-17T13:46:08.736Z",
-      "lastSeenAt": "2026-07-17T13:46:08.736Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 12,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "weather|policia|buenos aires|informa|2026-07-17",
-      "headlineSeed": "Volcó un micro y cayó desde un puente en medio del temporal en Buenos Aires: hay pasajeros atrapados y heridos",
-      "topic": "servicios",
-      "subtopic": "movilidad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Policía",
-        "Buenos Aires"
-      ],
-      "eventType": "weather",
-      "firstSeenAt": "2026-07-17T11:38:31.727Z",
-      "lastSeenAt": "2026-07-17T11:38:31.727Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 15,
-        "recency": 1,
-        "sourceStrength": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "service|alerta|amarilla|julio|provincias|tormentas|viernes|2026-07-17",
-      "headlineSeed": "Hay alerta amarilla por tormentas en 3 provincias para hoy, viernes 17 de julio",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "SMN",
-        "Buenos Aires"
-      ],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-17T10:02:06.708Z",
-      "lastSeenAt": "2026-07-17T10:02:06.708Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 15,
-      "scoreBreakdown": {
-        "publicInterest": 21,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 20,
