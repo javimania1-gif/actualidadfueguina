@@ -1,16 +1,16 @@
 ---
-title: "Irán detiene a tres petroleros en el estrecho de Ormuz"
-description: "Mientras tanto, Estados Unidos completó el miércoles 12 noches de ataques continuos contra objetivos militares iraníes."
+title: "Irán detiene tres petroleros en el estrecho de Ormuz en medio de tensiones con EE.UU."
+description: "Los Guardianes de la Revolución iraníes impiden el paso de buques en una ruta estratégica, mientras EE.UU. intensifica sus ataques."
 date: "2026-07-23T02:12:00.000Z"
 category: "Mundo"
-location: "Internacional"
+location: "Irán"
 sourceName: "DW Espanol"
 sourceUrl: "https://www.dw.com/es/ir%C3%A1n-detiene-a-tres-petroleros-en-el-estrecho-de-ormuz/a-78078042?maca=spa-rss-sp-all-1122-rdf"
 originalImage: "https://static.dw.com/image/77562786_6.jpg"
 status: "draft"
-detectedAt: "2026-07-23T02:59:28.445Z"
+detectedAt: "2026-07-23T06:35:16.851Z"
 mode: "discovery-review"
-editorialReason: "rate-limit"
+editorialReason: "daily-target-max"
 opportunityType: "standard-news"
 recommendedFormat: "noticia"
 recommendedAction: "publish-if-verified"
@@ -24,6 +24,14 @@ requiresHumanReview: false
 - Formato recomendado: noticia
 - Acción sugerida: publish-if-verified
 - Revisión humana obligatoria: no
+
+## Borrador factual generado
+
+Recientemente, Irán ha detenido a tres petroleros que intentaban cruzar el estrecho de Ormuz, un punto clave para el tránsito marítimo de petróleo. Los Guardianes de la Revolución afirmaron que los buques estaban intentando transitar por una ruta considerada peligrosa y que uno de ellos sufrió un incidente que provocó su retirada. Esta acción se enmarca en un contexto de creciente tensión entre Irán y Estados Unidos, que ha intensificado sus operaciones militares en la región.
+
+Los Guardianes de la Revolución declararon que el estrecho está bajo su control y advirtieron que cualquier embarcación que intente pasar sin coordinación con Irán enfrentará consecuencias similares. Esta afirmación resalta la importancia estratégica de esta vía marítima, que es crucial para el comercio de petróleo a nivel mundial.
+
+Por otro lado, Estados Unidos ha llevado a cabo ataques continuos contra objetivos militares iraníes, completando ya doce noches de operaciones. Estas acciones buscan desactivar la capacidad de Irán para amenazar a la navegación civil en la región. A pesar de un reciente acuerdo de alto el fuego firmado entre ambas naciones, la situación se ha deteriorado nuevamente, lo que genera preocupación sobre la estabilidad en el área.
 
 ## Material fuente detectado
 
