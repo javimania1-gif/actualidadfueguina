@@ -1,14 +1,14 @@
 ---
 title: "Trágico incendio en La Victoria deja diez víctimas fatales, entre ellas cinco menores"
 description: "Un incendio en La Victoria, Perú, cobró la vida de diez personas, incluidos cinco niños, tras ser provocado por desconocidos."
-date: "2026-07-22T23:02:16.000Z"
+date: "2026-07-23T17:19:59.000Z"
 category: "Mundo"
 location: "Perú"
 sourceName: "Infobae — Nacionales"
 sourceUrl: "https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/"
-originalImage: "https://www.infobae.com/resizer/v2/NIDYGS5MDFDBNIGVYXA2FQ3I6M.jpg?auth=19c5aaab7294696532450b946f2aadc448f1d040c653e144ba1efc62f77172e1&smart=true&width=1200&height=630&quality=85"
+originalImage: "https://www.infobae.com/resizer/v2/ACFZSD535ZE25DLOTE7BGIM3EM.jpg?auth=d4fbd036354a5656fb1bf64d6b504b88b62741d66f059adc3e47a3d6fbe980a2&smart=true&width=1200&height=630&quality=85"
 status: "draft"
-detectedAt: "2026-07-22T23:09:28.084Z"
+detectedAt: "2026-07-23T17:28:50.845Z"
 mode: "discovery-review"
 editorialReason: "daily-target-max"
 opportunityType: "standard-news"
@@ -41,7 +41,7 @@ La comunidad ha expresado su dolor y solidaridad hacia los deudos, mientras que 
 
 # Incendio en La Victoria EN VIVO: 10 integrantes de una familia fallecen en siniestro provocado por extorsionadores
 
-## Deudos denunciaron que el siniestro comenzó después de que desconocidos incendiaran una mototaxi eléctrica. Hay al menos cinco menores, entre 7 y 8 años de edad, que murieron calcinados
+## Deudos denunciaron que el siniestro comenzó después de que desconocidos incendiaran una mototaxi eléctrica. Cinco menores, entre 7 y 8 años de edad, que murieron calcinados
 
 ![Analí Espinoza](https://www.infobae.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Finfobae%2FBKQOH5C2NJC6PF7RQVSFJQHVHM.jpg?auth=273ca25bd68ddb4575790f252d4811b9bfbab9253cdbb865fa61832afbaba68f&smart=true&width=40&height=40&quality=85)
 
@@ -51,13 +51,13 @@ Por [Analí Espinoza](/autor/analí-espinoza/)
 
 Agrega Infobae a tus medios preferidos en Google
 
-22 Jul, 2026 07:02 p. m. EST
+23 Jul, 2026 01:21 p. m. EST
 
 Guardar
 
 [![Google icon](https://www.infobae.com/assets/images/icons/IconGoogle.svg)](https://profile.google.com/cp/CgsvbS8wMTI1aDVmaA)
 
-La tragedia inició luego que desconocidos atentaran contra el inmueble ubicado en el distrito de La Victoria
+Este video es una cobertura noticiosa sobre un incendio residencial en Cercado de Lima. Las imágenes muestran a personas en una ventana, un edificio en llamas con presencia de bomberos y policía, y el interior del inmueble completamente calcinado y acordonado con cinta policial. Equipos de emergencia y agentes policiales se observan en la escena. La información en pantalla indica la muerte de diez miembros de una familia.
 
 Una tragedia terminó con la vida de **10 personas** que vivían en un espacio ubicado en el Girón Pisagua, en la urbanización Manzanilla. En un área de aproximadamente **80 m²**, la familia había levantado una casa de madera y, en la parte superior, un cuarto que también era usado por integrantes del mismo grupo familiar. En ese lugar vivían **17 personas**.
 
@@ -65,73 +65,25 @@ Según lo que comentaron vecinos y familiares de la familia **Vilches**, el ince
 
 Siempre de acuerdo con esos testimonios, el fuego se propagó porque la familia se dedicaba a la venta de colchones y los colocaba en la entrada del inmueble. Una familiar señaló que, cuando los colchones comenzaron a arder, la emergencia se volvió prácticamente incontrolable.
 
+La tragedia inició luego que desconocidos atentaran contra el inmueble ubicado en el distrito de La Victoria
+
 Solo **siete** de las **17** personas que vivían allí lograron salir. En el lugar, la estructura quedó reducida casi por completo: lo único que permaneció en pie fue un lavadero. El inmueble, al estar construido principalmente con madera, facilitó la expansión del fuego. En la parte interior había columnas de madera y, según lo descrito en el lugar, allí descansaban menores de edad.
 
-El saldo de víctimas incluyó a **cinco menores de edad** y **cinco adultos**. Entre los fallecidos, familiares identificaron a **Leónidas Vilches Moscoso**, **José María Vilchez Cuadros**, **Orestes Vilches Cuadros**, **Paola Vilches Cuadros** y **Catherine Gómez**, pareja de Orestes, una ciudadana venezolana que se encontraba en el espacio cuando comenzaron las llamas. Ninguno de ellos logró escapar.
+El saldo de víctimas incluyó a **cinco menores de edad** y **cinco adultos**. Entre los fallecidos, familiares identificaron a **Leónidas Vilches Moscoso**, **José María Vilchez Cuadros**, **Orestes Vilches Cuadros**, **Paola Vilches Cuadros** y **Catherine Gómez**, pareja de Orestes, una ciudadana venezolana que se encontraba en el espacio cuando comenzaron las llamas. Ninguno de ellos logró escapar. En cuanto a los menores de edad, se informó que tenían entre **3 y 15 años**.
 
-En cuanto a los menores de edad, se informó que tenían entre **3 y 15 años**.
-
-Un vecino relató cómo se enteraron del incendio y ubicó el inicio del impacto en el barrio hacia las **3 de la mañana**. “A las 3 de la mañana se inició el, bueno, por el mismo humo y todo, si ven las casas como está, todo el todo el humo salió, bueno, más que nada los gritos de los niños y de la gente que avisó a los vecinos. Eso más que nada, joven”, contó.
+Un vecino relató cómo se enteraron del incendio y ubicó el inicio del impacto en el barrio hacia las **3 de la mañana**. “A las 3 de la mañana se inició, por el mismo humo y todo, si ven las casas como está, todo el humo salió, más que nada los gritos de los niños y de la gente que avisó a los vecinos”, contó.
 
 La escena, marcada por restos calcinados y una vivienda arrasada, dejó a la familia Vilches con pérdidas irreparables y a la comunidad con preguntas sobre cómo se originó y se expandió el fuego en cuestión de minutos.
 
-22:53 hsHoy
-
-## Keiko Fujimori visita zona de tragedia en La Victoria
-
-**Keiko Fujimori**, presidenta electa, acudió al lugar del incendio en **La Victoria** que dejó diez víctimas fatales, incluyendo cinco menores de edad. Durante su recorrido, Fujimori ofreció muestras de solidaridad a los familiares directos de las víctimas, acercándose personalmente a quienes se encontraban en el sitio, incluso poniéndose en cuclillas frente a un arreglo floral para expresar su apoyo.
-
-Fujimori fue recibida por familiares y vecinos que le agradecieron su presencia y solicitaron apoyo ante la emergencia. La lideresa de Fuerza Popular intercambió palabras con sobrevivientes y personas visiblemente afectadas, quienes la escucharon entre lágrimas, mientras el entorno permanecía rodeado de residentes y allegados a las víctimas.
-
-La lideresa de Fuerza Popular, Keiko Fujimori, llegó al distrito de La Victoria para expresar su solidaridad a los familiares de las 10 víctimas, entre ellas 5 menores, que dejó un trágico incendio. En la zona del siniestro, se le vio consolando a los deudos. | Latina Noticias
-
-21:23 hsHoy
-
-## Policía anuncia investigación por incendio mortal en La Victoria
-
-El comandante general de la **Policía Nacional**, **Óscar Arriola**, declaró que se realizará una investigación exhaustiva sobre el incendio ocurrido en **La Victoria**, donde diez miembros de una familia fallecieron. Arriola aseguró que personal especializado ya se encuentra trabajando en el lugar del siniestro y reiteró en varias ocasiones que la indagación será profunda.
-
-En respuesta a preguntas de la prensa, **Arriola** enfatizó que, una vez se obtengan resultados concretos, estos serán comunicados oficialmente. El mando policial evitó entregar detalles preliminares sobre las circunstancias del incendio, centrándose en la promesa de esclarecer los hechos a través del trabajo de los equipos especializados.
-
-En medio de una multitud de periodistas y ciudadanos, un general de la Policía Nacional del Perú (PNP) declara que se realizará una 'profunda investigación' para esclarecer las causas del devastador incendio en La Victoria que cobró la vida de 10 personas. | Canal N
-
-19:52 hsHoy
-
-## Identifican a las víctimas mayores de edad
-
-El incendio dejó **10 víctimas fatales**: **cinco menores de edad** (de entre **3 y 15 años**) y **cinco adultos**. En la vivienda vivían **17 personas** y **siete** lograron salir.
-
-Los adultos identificados en el relato fueron: **Leónidas Vilches Moscoso**, **José María Vilchez Cuadros**, **Orestes Vilches Cuadros**, **Paola Vilches Cuadros** y **Catherine Gómez** (pareja de Orestes, ciudadana venezolana).
-
-18:28 hsHoy
-
-### Defensoría llega al lugar
-
-La Defensoría del Pueblo expresó sus condolencias a los familiares de las diez víctimas, entre ellas cinco menores, del incendio en La Victoria. Además, supervisa en la zona que las entidades brinden atención inmediata a los deudos y exige a las autoridades acciones rápidas para garantizar asistencia integral y esclarecer lo sucedido.
-
-![Defensoría del Pueblo en la zona](https://www.infobae.com/resizer/v2/KMRS3J4G4ZFPJKVI7MZANO2AB4.jpg?auth=8b18bc506deb6aea7b105e4d09e84e908c73e1b7aa69aec1c108da62145f284d&smart=true&width=350&height=197&quality=85)
-
-Defensoría del Pueblo en la zona
-
-17:24 hsHoy
-
-### MML correrá con los gastos del sepelio de las 10 víctimas
-
-La MML se encargará de apoyar a los vecinos afectados por el incendio registrado en el pasaje Feliciano. Según el comunicado oficial, la Gerencia de Desarrollo Humano ha distribuido alimentos y continuará haciéndose responsable de la alimentación mientras sea necesario. Además, la MML ha gestionado el apoyo total para los gastos de sepelio y ha puesto a disposición de los damnificados las casas de paso municipales.
-
-![MML](https://www.infobae.com/resizer/v2/GC4UIUIZZJAELK7W3CLSAO2URQ.jpg?auth=91acf9f78755f24b72fa1c3fd0fa1d58427a2831399075d63df6964c3362f73c&smart=true&width=350&height=438&quality=85)
-
-MML
-
-15:56 hsHoy
+16:42 hsHoy
 
 [
 
-## “Perdí a mis hijos y a mi esposa”: padre pide ayuda para comprar 10 ataúdes tras incendio en La Victoria
+## “No pude salvar a nadie”: padre que perdió a su esposa e hijos en incendio de La Victoria pide agilizar la entrega de cuerpos
 
-](https://www.infobae.com/peru/2026/07/22/perdi-a-mis-hijos-y-a-mi-esposa-padre-pide-ayuda-para-comprar-10-ataudes-tras-incendio-en-la-victoria/)
+](https://www.infobae.com/peru/2026/07/23/no-pude-salvar-a-nadie-padre-que-perdio-a-su-esposa-e-hijos-en-incendio-de-la-victoria-pide-agilizar-la-entrega-de-cuerpos/)
 
-### Renzo Rojas Mesa sufrió quemaduras al intentar salvar a su familia de las llamas. El padre perdió a tres de sus hijos y a su esposa en el incendio que habría sido provocado por extorsionadores
+### El sobreviviente de la tragedia en la calle Pisagua pidió justicia por la muerte de su esposa, sus tres hijos y otros familiares. La identificación de las víctimas podría demorar varios días debido al estado en que quedaron los cuerpos
 
 ![Analí Espinoza](https://www.infobae.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Finfobae%2FBKQOH5C2NJC6PF7RQVSFJQHVHM.jpg?auth=273ca25bd68ddb4575790f252d4811b9bfbab9253cdbb865fa61832afbaba68f&smart=true&width=40&height=40&quality=85)
 
@@ -139,31 +91,21 @@ Por [Analí Espinoza](/autor/analí-espinoza/)
 
 [Agregar Infobae en![Icono de Google para seguir en redes sociales](https://www.infobae.com/assets/images/icons/IconGoogle.svg)](https://www.google.com/preferences/source?q=infobae.com "Agregar Infobae en Google")
 
-![Un padre expresa su dolor en una entrevista mientras, al fondo, el edificio dañado por un incendio intencional en La Victoria, Perú, muestra el lugar del trágico suceso. (Andina)](https://www.infobae.com/resizer/v2/KKDRWF7AYZEWXP7XPXQZCGUVLM.jpg?auth=28e7a130597b032a0f112a86e815a0862f21af815560df98377abd2ff453acc3&smart=true&width=350&height=197&quality=85)
+Un video de tipo cobertura de noticias presenta imágenes de un incendio. Se observa un espacio interior con paredes de ladrillo y escombros calcinados. También se muestran fotografías de varias personas, incluyendo niños, y una corona fúnebre. Un texto sobreimpreso hace referencia a un sobreviviente que perdió a sus hijos en el incendio ocurrido en La Victoria. La secuencia sugiere un reportaje periodístico sobre el evento.
 
-Un padre expresa su dolor en una entrevista mientras, al fondo, el edificio dañado por un incendio intencional en La Victoria, Perú, muestra el lugar del trágico suceso. (Andina)
+[**R****enzo Rojas Mesa sobrevivió al incendio que dejó 10 integrantes de una familia fallecidos**](https://www.infobae.com/peru/2026/07/22/perdi-a-mis-hijos-y-a-mi-esposa-padre-pide-ayuda-para-comprar-10-ataudes-tras-incendio-en-la-victoria/ "https://www.infobae.com/peru/2026/07/22/perdi-a-mis-hijos-y-a-mi-esposa-padre-pide-ayuda-para-comprar-10-ataudes-tras-incendio-en-la-victoria/") en la calle Pisagua, en **La Victoria**. El hombre perdió a su esposa, a sus tres hijos en la tragedia, además de otros familiares y, mientras espera la identificación de los cuerpos, pidió justicia y solicitó a las autoridades acelerar el proceso para la entrega de los cuerpos para poder darles sepultura.
 
-**Renzo Rojas Mesa** sobrevivió al [incendio que consumió una vivienda multifamiliar](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/ "https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/") ubicada en la calle Pisagua, en la urbanización Manzanilla, en **La Victoria**, pero la tragedia le arrebató a parte de su familia. El hombre perdió a **tres de sus hijos y a su esposa**, quienes forman parte de las **10 víctimas mortales** que dejó el siniestro que habría sido provocado por extorsionadores.
+[**Leer la nota completa**](https://www.infobae.com/peru/2026/07/23/no-pude-salvar-a-nadie-padre-que-perdio-a-su-esposa-e-hijos-en-incendio-de-la-victoria-pide-agilizar-la-entrega-de-cuerpos/)
 
-[**Leer la nota completa**](https://www.infobae.com/peru/2026/07/22/perdi-a-mis-hijos-y-a-mi-esposa-padre-pide-ayuda-para-comprar-10-ataudes-tras-incendio-en-la-victoria/)
-
-15:51 hsHoy
-
-## Retiro de cuerpos
-
-Alrededor de las 10:30 de la mañana, los restos de los cuerpos de las diez personas fallecidas durante el incendio fueron retirados en camionetas blancas. Vecinos de la zona observaron la escena con asombro y conmoción.
-
-Un devastador incendio en el distrito de La Victoria ha dejado un trágico saldo de 10 personas fallecidas, incluyendo cinco menores de edad. Las autoridades investigan las causas del siniestro, mientras los familiares de las víctimas atraviesan un inmenso dolor. - Canal N
-
-14:54 hsHoy
+14:43 hsHoy
 
 [
 
-## ¿Incendio en La Victoria fue provocado por extorsión o descuido? Esto dice la PNP
+## Incendio en La Victoria: PNP identifica a presuntos responsables; crimen habría sido por disputa entre mototaxistas
 
-](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-fue-provocado-por-extorsion-o-descuido-esto-dice-la-pnp/)
+](https://www.infobae.com/peru/2026/07/23/incendio-en-la-victoria-pnp-identifica-a-presuntos-responsables-crimen-habria-sido-por-disputa-entre-mototaxistas/)
 
-### El siniestro de código 2, consumió una vivienda donde residían cerca de 17 personas, y dejó 10 fallecidos, entre ellos cinco menores de edad
+### Tras las primeras pericias, la Dirincri descartó que el caso sea tratado como un accidente e informó que el principal móvil sería una disputa entre grupos dedicados al transporte informal en los alrededores de Gamarra
 
 ![Analí Espinoza](https://www.infobae.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Finfobae%2FBKQOH5C2NJC6PF7RQVSFJQHVHM.jpg?auth=273ca25bd68ddb4575790f252d4811b9bfbab9253cdbb865fa61832afbaba68f&smart=true&width=40&height=40&quality=85)
 
@@ -171,22 +113,66 @@ Por [Analí Espinoza](/autor/analí-espinoza/)
 
 [Agregar Infobae en![Icono de Google para seguir en redes sociales](https://www.infobae.com/assets/images/icons/IconGoogle.svg)](https://www.google.com/preferences/source?q=infobae.com "Agregar Infobae en Google")
 
-![Agentes de policía supervisan un área afectada por un incendio en el distrito de La Victoria, donde se observan edificios con daños y vecinos atentos. (Andina)](https://www.infobae.com/resizer/v2/XLUPL5AB4RHJPFF5LRT2BF7ZHI.jpg?auth=3e18c45019b6f88c6c8d680d4ae7b88ec1a4f8b0f7aa85a5f32af4f9144a9d12&smart=true&width=350&height=197&quality=85)
+El Gral. PNP Víctor Revoredo, director de la DIRINCRI, ofrece detalles sobre el trágico incendio en el Cercado de Lima que cobró la vida de diez personas. Las investigaciones apuntan a que el fuego fue provocado intencionalmente como resultado de una disputa entre grupos criminales. - América Noticias
 
-Agentes de policía supervisan un área afectada por un incendio en el distrito de La Victoria, donde se observan edificios con daños y vecinos atentos. (Andina)
+La Dirección de Investigación Criminal (**Dirincri**) informó que ya tiene identificados a los presuntos responsables del [**incendio que dejó 10 integrantes de una familia fallecidos**](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/ "https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/") en la calle Pisagua, en la urbanización Manzanilla, en La Victoria. De acuerdo con las primeras investigaciones, el ataque habría estado motivado por una **disputa entre grupos dedicados al transporte informal con mototaxis eléctricas**.
 
-La Policía Nacional del Perú (PNP) continúa investigando las causas del [**incendio que dejó 10 personas fallecidas**](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/ "https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/"), entre ellas cinco menores de edad, en una vivienda ubicada en la calle Pisagua, en la urbanización Manzanilla, en el distrito limeño de La Victoria.
+[**Leer la nota completa**](https://www.infobae.com/peru/2026/07/23/incendio-en-la-victoria-pnp-identifica-a-presuntos-responsables-crimen-habria-sido-por-disputa-entre-mototaxistas/)
 
-[**Leer la nota completa**](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-fue-provocado-por-extorsion-o-descuido-esto-dice-la-pnp/)
+12:44 hsHoy
 
-14:31 hsHoy
+## Velan fotos de los fallecidos
 
-## PNP confirma 10 fallecidos
+A la zona han llegado arreglos florales que rodean las imágenes de los 10 fallecidos, entre ellos 5 menores de edad, todos pertenecientes a una misma familia. Además, se instalaron carpas para los damnificados.
 
-La cifra de víctimas del incendio registrado en la calle Pisagua, en la urbanización Manzanilla, fue actualizada a **10 fallecidos**, según confirmó el comandante general de la Policía Nacional, general PNP Óscar Arriola, durante una conferencia de prensa en la sede de la Dirincri.
+![10 fallecidos](https://www.infobae.com/resizer/v2/ACFZSD535ZE25DLOTE7BGIM3EM.jpg?auth=d4fbd036354a5656fb1bf64d6b504b88b62741d66f059adc3e47a3d6fbe980a2&smart=true&width=350&height=197&quality=85)
 
-Reportaje periodístico sobre un incendio en La Victoria, Perú, que causó el fallecimiento de diez integrantes de una familia. Las imágenes muestran la presencia de efectivos policiales, vehículos blancos y cinta de seguridad amarilla en el lugar. Se observa un edificio con estructuras afectadas. Un coronel de la Policía Nacional del Perú es entrevistado. Las autoridades investigan el incidente, que se vincula a presuntos extorsionadores.
+10 fallecidos
 
-De acuerdo con la información recogida en la zona, las víctimas pertenecían a una misma familia. Entre los fallecidos se encuentran **cinco adultos y cinco menores de edad**. Según los reportes preliminares, dentro del inmueble se encontraban 17 integrantes de la familia: siete lograron escapar con vida, mientras que otros diez quedaron atrapados por las llamas.
+02:47 hsHoy
 
-Entre las víctimas figuran **Orestes Vílchez (29)** y **Katherine Gómez (29)**, ciudadana colombiana y pareja del primero, además de su hijo de tres años. También fallecieron **Le
+## Familia extorsionada antes del incendio
+
+La familia **Vílchez**, afectada por el incendio en **La Victoria**, había sido víctima de amenazas y extorsiones previas. Según los deudos, el grupo familiar se dedicaba al trabajo de taxi en motos eléctricas y, un mes antes del siniestro, comenzaron a recibir mensajes extorsivos.
+
+**Los delincuentes exigían el pago de 700 soles semanales** por cada una de las diez motos eléctricas que utilizaban para su labor diaria. Los familiares aseguraron que presentaron denuncias ante las autoridades policiales antes del ataque incendiario.
+
+Tras el incendio, los deudos manifestaron no contar con los recursos económicos necesarios para cubrir los gastos de los entierros de los diez fallecidos y difundieron el **número telefónico 978915115** para quienes deseen colaborar con ayuda financiera destinada a los gastos funerarios y a la atención de los sobrevivientes de la tragedia.
+
+![Calle con escombros y restos quemados, un carro de mano calcinado, oficial de policía, hombre con chaleco amarillo, grupo de personas y cinta de seguridad amarilla](https://www.infobae.com/resizer/v2/NIDYGS5MDFDBNIGVYXA2FQ3I6M.jpg?auth=19c5aaab7294696532450b946f2aadc448f1d040c653e144ba1efc62f77172e1&smart=true&width=350&height=206&quality=85)
+
+Oficiales y civiles observan una calle con vehículos calcinados y escombros, acordonada tras un incendio en La Victoria. (Andina)
+
+02:39 hsHoy
+
+## Madre y su bebé murieron abrazados
+
+Durante las labores de rescate tras el incendio en **La Victoria**, agentes de la **Policía Nacional del Perú** encontraron una escena que evidencia la magnitud de la tragedia: una madre fue hallada abrazando a su bebé de tres años entre los restos calcinados de la vivienda.
+
+El coronel **Juan Carlos Montúfar**, jefe de la División de Robos de la **PNP**, relató que la madre cubrió el cuerpo de su hijo menor intentando protegerlo de las llamas que consumieron el inmueble. “Probablemente ahí se ve a una madre abrazando a su bebé. Una criatura de 3 años, es desgarradora”, señaló el oficial sobre el hallazgo.
+
+El incendio, provocado durante la madrugada en el pasaje Pisagua, dejó diez víctimas fatales, entre ellas cinco menores. La madre y el pequeño fallecieron juntos, sin posibilidad de escapar, mientras otros miembros de la familia intentaban salvarse.
+
+En un acto de amor supremo, una madre falleció abrazando a sus tres hijos para protegerlos de un voraz incendio. Las autoridades describen la escena como desgarradora, mientras el padre de familia, único sobreviviente, pide justicia por la tragedia que le arrebató todo. | Willax Noticias
+
+01:21 hsHoy
+
+[
+
+## Keiko Fujimori se reunió con deudos de incendio en La Victoria que dejó 10 muertos: “Es una matanza terrible”
+
+](https://www.infobae.com/peru/2026/07/23/keiko-fujimori-se-reunio-con-deudos-de-incendio-en-la-victoria-que-dejo-10-muertos-es-una-matanza-terrible/)
+
+### La presidenta electa aseguró que la seguridad ciudadana será una prioridad de su gestión y adelantó que convocará a su primer Consejo de Ministros el 29 de julio
+
+![Marlon Carrasco Freitas](https://www.infobae.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Finfobae%2FRPASWZJZ5BEG5BT4IMRTMXDI6E.jpg?auth=3f2daf2df0f984e2dbf2923a9c0e5446bfa449874b4907cbd3211cf7eba674b8&smart=true&width=40&height=40&quality=85)
+
+Por [Marlon Carrasco Freitas](/autor/marlon-carrasco-freitas/)
+
+[Agregar Infobae en![Icono de Google para seguir en redes sociales](https://www.infobae.com/assets/images/icons/IconGoogle.svg)](https://www.google.com/preferences/source?q=infobae.com "Agregar Infobae en Google")
+
+Declaraciones de Keiko Fujimori desde el lugar del fatal incendio en La Victoria. Calificando el hecho como una "matanza", la lideresa política se reunió con los deudos y anunció que su primera acción como jefa de Estado será enfocarse en la seguridad. | Canal N
+
+La presidenta electa [Keiko Fujimori](https://www.infobae.com/peru/2026/07/23/keiko-fujimori-confirma-que-su-primer-viaje-como-presidenta-sera-a-chupaca-voy-a-reunirme-con-los-damnificados/ "https://www.infobae.com/peru/2026/07/23/keiko-fujimori-confirma-que-su-primer-viaje-como-presidenta-sera-a-chupaca-voy-a-reunirme-con-los-damnificados/") llegó al sector de **Manzanilla, en el distrito de La Victoria**, para reunirse con los familiares de las [víctimas del incendio que consumió parte de una vivienda y dejó 10 personas fallecidas](https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/ "https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/"), entre ellas cuatro menores de edad y un adulto mayor.
+
+[**Leer la nota completa**](https://www.infobae
