@@ -1,85 +1,108 @@
 {
-  "generatedAt": "2026-07-23T19:24:38.145Z",
+  "generatedAt": "2026-07-23T21:11:12.527Z",
   "run": {
     "persistOutputs": true,
     "githubActions": true,
     "eventName": "schedule",
-    "runId": "30037635432",
-    "headSha": "35549d16ae327b5ff8d510965145625812686007"
+    "runId": "30044879331",
+    "headSha": "5c8e6da98f86a17e12a55437250ac25ac5321c5f"
   },
   "metrics": {
     "sourcesConfigured": 33,
     "sourcesConsulted": 33,
     "candidatesDetected": 96,
-    "candidatesIngested": 39,
-    "extractionSucceeded": 38,
-    "candidatesApproved": 23,
-    "discardedDuplicate": 7,
+    "candidatesIngested": 34,
+    "extractionSucceeded": 33,
+    "candidatesApproved": 19,
+    "discardedDuplicate": 9,
     "duplicateExactUrl": 3,
     "duplicateExactContent": 0,
-    "duplicatePublishedEvent": 4,
-    "discardedQuality": 9,
+    "duplicatePublishedEvent": 6,
+    "discardedQuality": 5,
     "discardedQualityByReason": {
       "stale-hard-news": 1,
-      "undated-discovery": 5,
-      "stale-dated-discovery": 2,
-      "evergreen-or-stale-outside-news-window": 1
+      "undated-discovery": 3,
+      "stale-dated-discovery": 1
     },
     "discardedBySourceAndReason": {
       "bing-ushuaia": {
         "stale-hard-news": 1
       },
       "sur54": {
-        "undated-discovery": 4
-      },
-      "bing-malvinas": {
-        "stale-dated-discovery": 1
-      },
-      "nacionales-infobae": {
-        "evergreen-or-stale-outside-news-window": 1
-      },
-      "nacionales-ambito": {
-        "stale-dated-discovery": 1
+        "undated-discovery": 2
       },
       "critica-sur": {
         "undated-discovery": 1
+      },
+      "mundo-clarin": {
+        "stale-dated-discovery": 1
       }
     },
-    "discardedGenericTitle": 2,
-    "discardedEvergreen": 3,
-    "eventsGrouped": 21,
-    "verified": 14,
+    "discardedGenericTitle": 0,
+    "discardedEvergreen": 1,
+    "eventsGrouped": 19,
+    "verified": 15,
     "pendingVerification": 4,
-    "pendingMatchedFromHistory": 2,
+    "pendingMatchedFromHistory": 1,
     "recentEventRepair": {
       "corrected": 0,
       "compacted": 0,
-      "conservedPublished": 67
+      "conservedPublished": 64
     },
     "pendingEventsCompacted": 0,
     "pendingCompactionVerified": 0,
-    "pendingRecoveryAttempted": 3,
-    "pendingTerminalizedExpired": 0,
+    "pendingRecoveryAttempted": 4,
+    "pendingTerminalizedExpired": 3,
     "pendingTerminalizedAttempts": 0,
     "pendingAudit": [
       {
-        "eventKey": "general|ademas|gobierno|internacionales|investigaciones|judicial|maduro|mundo|2026-07-23",
-        "title": "3 investigaciones internacionales sobre Nicolás Maduro y su gobierno además del proceso judicial de Nueva York - BBC News Mundo",
-        "sourceId": "mundo-bbc",
-        "publisherDomain": "bbc.com",
+        "eventKey": "sports-result|franco watson|ramiro carrera|argentina|informa|2026-07-23",
+        "title": "Lanús vs Cienciano, en vivo, por la Copa Sudamericana: minuto a minuto y qué canal pasa el partido por TV",
+        "sourceId": "nacionales-tn",
+        "publisherDomain": "tn.com.ar",
+        "category": "Nacionales",
+        "eventType": "sports-result",
+        "lane": "standard",
+        "riskLevel": "high",
+        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-24T00:09:34.889Z",
+        "expiresAt": "2026-07-25T02:58:21.773Z",
+        "corroborationAttempts": 4
+      },
+      {
+        "eventKey": "crime|ministerio de igualdad|universidad de lancaster|internacional|argentina|brasil|informa|2026-07-23",
+        "title": "Los llamados por violencia de género en España aumentaron 120% en las horas posteriores a la final del Mundial",
+        "sourceId": "mundo-clarin",
+        "publisherDomain": "clarin.com",
         "category": "Mundo",
-        "eventType": "general",
+        "eventType": "crime",
+        "lane": "standard",
+        "riskLevel": "high",
+        "exactReason": "standard-requires-trusted-tier-b-or-two-independent-tier-b",
+        "missingCondition": "additional-qualified-source",
+        "nextRetryAt": "2026-07-24T00:09:34.891Z",
+        "expiresAt": "2026-07-25T21:09:34.891Z",
+        "corroborationAttempts": 0
+      },
+      {
+        "eventKey": "weather|gobierno|gobierno de venezuela|banco mundial|la guaira|internacional|venezuela|estados unidos|informa|2026-07-23",
+        "title": "Un mes del doble sismo en Venezuela: más de 5.000 muertos, impotencia por los desaparecidos y temor al olvido",
+        "sourceId": "mundo-france24",
+        "publisherDomain": "france24.com",
+        "category": "Mundo",
+        "eventType": "weather",
         "lane": "strict",
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-23T22:24:36.372Z",
-        "expiresAt": "2026-07-25T14:08:43.336Z",
-        "corroborationAttempts": 0
+        "nextRetryAt": "2026-07-24T00:09:34.891Z",
+        "expiresAt": "2026-07-25T21:09:34.891Z",
+        "corroborationAttempts": 1
       },
       {
-        "eventKey": "general|castillo|comision|falta|gracias|indultar|pedro|presidenciales|2026-07-23",
-        "title": "Comisión de Gracias Presidenciales rechaza indultar a Pedro Castillo por falta de requisitos",
+        "eventKey": "general|aplastados|arboles|castro|fueron|hombres|mientras|monte|2026-07-23",
+        "title": "Dos hombres fueron aplastados por un poste de luz en Monte Castro mientras podaban árboles",
         "sourceId": "nacionales-infobae",
         "publisherDomain": "infobae.com",
         "category": "Nacionales",
@@ -88,87 +111,56 @@
         "riskLevel": "high",
         "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
         "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-23T22:24:36.374Z",
-        "expiresAt": "2026-07-25T19:24:36.374Z",
+        "nextRetryAt": "2026-07-24T00:09:34.891Z",
+        "expiresAt": "2026-07-25T21:09:34.891Z",
         "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "crime|policia|maxi lopez|argentina|italia|informa|2026-07-23",
-        "title": "Maxi López se reecontró con sus hijos tras el robo que sufrieron en Milán: qué decisión tomó tras el angustiante hecho",
-        "sourceId": "nacionales-tn",
-        "publisherDomain": "tn.com.ar",
-        "category": "Nacionales",
-        "eventType": "crime",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-23T22:24:36.376Z",
-        "expiresAt": "2026-07-25T19:24:36.376Z",
-        "corroborationAttempts": 0
-      },
-      {
-        "eventKey": "casualty|gustavo daniel santillan|informa|2026-07-23",
-        "title": "Santiago del Estero: una mujer escapó desnuda por la ventana de su casa para evitar que su pareja la matara a tiros",
-        "sourceId": "nacionales-tn",
-        "publisherDomain": "tn.com.ar",
-        "category": "Nacionales",
-        "eventType": "casualty",
-        "lane": "strict",
-        "riskLevel": "high",
-        "exactReason": "strict-requires-competent-tier-a-or-two-independent-tier-b",
-        "missingCondition": "additional-qualified-source",
-        "nextRetryAt": "2026-07-23T22:24:36.377Z",
-        "expiresAt": "2026-07-25T19:24:36.377Z",
-        "corroborationAttempts": 1
       }
     ],
-    "conflicting": 3,
-    "published": 0,
-    "publishedByLane": {},
+    "conflicting": 0,
+    "published": 5,
+    "publishedByLane": {
+      "standard": 4,
+      "strict": 1
+    },
     "verifiedByLane": {
-      "standard": 12,
-      "strict": 1,
-      "fast": 1
+      "standard": 14,
+      "strict": 1
     },
     "pendingByLane": {
-      "strict": 4
+      "standard": 2,
+      "strict": 2
     },
     "eventsByTerritory": {
-      "Mundo": 10,
-      "Provincia": 1,
       "Nacionales": 8,
-      "Tolhuin": 1,
-      "Rio Grande": 1
+      "Provincia": 1,
+      "Mundo": 10
     },
     "verifiedByTerritory": {
+      "Nacionales": 7,
       "Provincia": 1,
-      "Tolhuin": 1,
-      "Mundo": 6,
-      "Nacionales": 5,
-      "Rio Grande": 1
+      "Mundo": 7
     },
     "fastPendingAudit": [],
-    "freshCandidates": 29,
-    "staleDiscarded": 4,
+    "freshCandidates": 25,
+    "staleDiscarded": 2,
     "sourceHealth": {
       "rio-grande-oficial": {
         "detected": 1,
-        "materialized": 1,
-        "freshCandidates": 1,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -314,9 +306,9 @@
       },
       "sur54": {
         "detected": 5,
-        "materialized": 4,
+        "materialized": 2,
         "freshCandidates": 0,
-        "qualityDiscarded": 4,
+        "qualityDiscarded": 2,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
@@ -327,15 +319,15 @@
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0.8,
+        "materializationSuccessRate": 0.4,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "ushuaia24": {
         "detected": 4,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -344,12 +336,12 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.5,
-        "materializationSuccessRate": 0.5,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
+        "freshCandidateRate": 0.25,
+        "materializationSuccessRate": 0.25,
+        "verificationContributionRate": 0.25,
+        "publicationContributionRate": 0.25,
         "staleDiscardRate": 0
       },
       "provincia23": {
@@ -394,7 +386,7 @@
       },
       "futsal-9420-youtube": {
         "detected": 4,
-        "materialized": 0,
+        "materialized": 2,
         "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
@@ -402,12 +394,12 @@
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "idle",
-        "issueCategory": "no-new-materializable-items",
+        "status": "degraded",
+        "issueCategory": "zero-useful-candidates",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
-        "materializationSuccessRate": 0,
+        "materializationSuccessRate": 0.5,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -424,11 +416,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0.2,
         "materializationSuccessRate": 0.2,
-        "verificationContributionRate": 0.2,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -474,21 +466,21 @@
       },
       "bing-tolhuin": {
         "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "materialized": 0,
+        "freshCandidates": 0,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 1,
+        "status": "idle",
+        "issueCategory": "no-new-materializable-items",
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
+        "freshCandidateRate": 0,
+        "materializationSuccessRate": 0,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -496,21 +488,21 @@
         "detected": 3,
         "materialized": 1,
         "freshCandidates": 0,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
         "status": "degraded",
-        "issueCategory": "stale-or-evergreen",
+        "issueCategory": "zero-useful-candidates",
         "verifiedContribution": 0,
         "publicationContribution": 0,
         "freshCandidateRate": 0,
         "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
+        "staleDiscardRate": 0
       },
       "bing-antartida": {
         "detected": 3,
@@ -595,47 +587,7 @@
       "nacionales-infobae": {
         "detected": 3,
         "materialized": 3,
-        "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 0,
-        "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 0,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
-      },
-      "nacionales-perfil": {
-        "detected": 2,
-        "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
-        "consulted": 1,
-        "fetchErrors": 0,
-        "noItems": 0,
-        "lastError": "",
-        "status": "healthy",
-        "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
-        "verificationContributionRate": 1,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0
-      },
-      "nacionales-la-nacion": {
-        "detected": 3,
-        "materialized": 2,
-        "freshCandidates": 2,
+        "freshCandidates": 3,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -646,18 +598,58 @@
         "issueCategory": "",
         "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 0.67,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
         "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0,
+        "staleDiscardRate": 0
+      },
+      "nacionales-perfil": {
+        "detected": 2,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 3,
+        "publicationContribution": 1,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 1,
+        "publicationContributionRate": 0.33,
+        "staleDiscardRate": 0
+      },
+      "nacionales-la-nacion": {
+        "detected": 3,
+        "materialized": 3,
+        "freshCandidates": 3,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
+        "consulted": 1,
+        "fetchErrors": 0,
+        "noItems": 0,
+        "lastError": "",
+        "status": "healthy",
+        "issueCategory": "",
+        "verifiedContribution": 3,
+        "publicationContribution": 0,
+        "freshCandidateRate": 1,
+        "materializationSuccessRate": 1,
+        "verificationContributionRate": 1,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
       "nacionales-ambito": {
         "detected": 3,
-        "materialized": 3,
+        "materialized": 2,
         "freshCandidates": 2,
-        "qualityDiscarded": 1,
-        "staleDiscarded": 1,
+        "qualityDiscarded": 0,
+        "staleDiscarded": 0,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
@@ -665,12 +657,12 @@
         "status": "healthy",
         "issueCategory": "",
         "verifiedContribution": 2,
-        "publicationContribution": 0,
+        "publicationContribution": 1,
         "freshCandidateRate": 0.67,
-        "materializationSuccessRate": 1,
+        "materializationSuccessRate": 0.67,
         "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
-        "staleDiscardRate": 0.33
+        "publicationContributionRate": 0.33,
+        "staleDiscardRate": 0
       },
       "nacionales-cronista": {
         "detected": 3,
@@ -684,11 +676,11 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
+        "verifiedContribution": 1,
         "publicationContribution": 0,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
+        "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
       },
@@ -704,33 +696,33 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
-        "publicationContribution": 0,
+        "verifiedContribution": 2,
+        "publicationContribution": 1,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.33,
-        "publicationContributionRate": 0,
+        "verificationContributionRate": 0.67,
+        "publicationContributionRate": 0.33,
         "staleDiscardRate": 0
       },
       "mundo-clarin": {
         "detected": 3,
         "materialized": 2,
-        "freshCandidates": 2,
-        "qualityDiscarded": 0,
-        "staleDiscarded": 0,
+        "freshCandidates": 1,
+        "qualityDiscarded": 1,
+        "staleDiscarded": 1,
         "consulted": 1,
         "fetchErrors": 0,
         "noItems": 0,
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 1,
+        "verifiedContribution": 0,
         "publicationContribution": 0,
-        "freshCandidateRate": 0.67,
+        "freshCandidateRate": 0.33,
         "materializationSuccessRate": 0.67,
-        "verificationContributionRate": 0.33,
+        "verificationContributionRate": 0,
         "publicationContributionRate": 0,
-        "staleDiscardRate": 0
+        "staleDiscardRate": 0.33
       },
       "mundo-bbc": {
         "detected": 3,
@@ -754,8 +746,8 @@
       },
       "mundo-dw": {
         "detected": 3,
-        "materialized": 3,
-        "freshCandidates": 3,
+        "materialized": 1,
+        "freshCandidates": 1,
         "qualityDiscarded": 0,
         "staleDiscarded": 0,
         "consulted": 1,
@@ -766,8 +758,8 @@
         "issueCategory": "",
         "verifiedContribution": 1,
         "publicationContribution": 0,
-        "freshCandidateRate": 1,
-        "materializationSuccessRate": 1,
+        "freshCandidateRate": 0.33,
+        "materializationSuccessRate": 0.33,
         "verificationContributionRate": 0.33,
         "publicationContributionRate": 0,
         "staleDiscardRate": 0
@@ -784,12 +776,12 @@
         "lastError": "",
         "status": "healthy",
         "issueCategory": "",
-        "verifiedContribution": 2,
-        "publicationContribution": 0,
+        "verifiedContribution": 1,
+        "publicationContribution": 1,
         "freshCandidateRate": 1,
         "materializationSuccessRate": 1,
-        "verificationContributionRate": 0.67,
-        "publicationContributionRate": 0,
+        "verificationContributionRate": 0.33,
+        "publicationContributionRate": 0.33,
         "staleDiscardRate": 0
       },
       "mundo-bing": {
@@ -814,216 +806,293 @@
       }
     },
     "sourceDeprioritized": [],
-    "drafts": 3,
-    "modelErrors": 14,
+    "drafts": 7,
+    "modelErrors": 1,
     "publicationErrors": 0,
     "factualValidationErrors": 0,
-    "discardedImportance": 0,
+    "discardedImportance": 3,
     "discardedSourceLimit": 0,
     "discardedNoAiBudget": 0,
     "budgetDeferred": 0,
-    "failedRetryable": 3,
-    "failedTerminal": 12,
+    "failedRetryable": 4,
+    "failedTerminal": 1,
     "failedRetryableByReason": {
-      "rate-limit": 3
+      "short-body,title-body-mismatch": 2,
+      "short-body": 1,
+      "rate-limit": 1
     },
     "failedTerminalByReason": {
-      "http-403": 1,
-      "http-410": 11
+      "http-403": 1
     },
-    "aiReused": 0,
+    "aiReused": 1,
     "rescueQueued": 0,
     "rescueAttempted": 0,
     "rescueSucceeded": 0,
     "rescueExhausted": 0,
-    "discardedPublicationLimit": 0,
-    "extractErrors": 1,
+    "discardedPublicationLimit": 6,
+    "extractErrors": 4,
     "imageErrors": 0,
     "aiAttempts": 14,
-    "aiCalls": 0,
-    "articlesDrafted": 0,
-    "imagesResolved": 0,
-    "approvedForPublication": 0,
-    "imageSelections": [],
-    "agendaStories": 1017,
+    "aiCalls": 13,
+    "articlesDrafted": 14,
+    "imagesResolved": 5,
+    "approvedForPublication": 5,
+    "imageSelections": [
+      {
+        "title": "Llegada de Equipamiento desde China para Nueva Usina de Ushuaia",
+        "strategy": "article-og",
+        "query": "La nueva usina de Ushuaia entra en una etapa clave con la llegada de 6.200 toneladas de equipamiento desde China",
+        "score": 82,
+        "source": "https://ushuaia24.com.ar/download/multimedia.normal.9e88d56889768d02.bm9ybWFsLndlYnA%3D.webp"
+      },
+      {
+        "title": "Bullrich y Sturzenegger trabajan en la Ley de Propiedad Privada en el Senado",
+        "strategy": "article-og",
+        "query": "Patricia Bullrich se reunió con Sturzenegger para definir los cambios a la Ley de Propiedad Privada: \"Tiene el aporte de todos, creemos que va a salir\"",
+        "score": 82,
+        "source": "https://tn.com.ar/resizer/v2/federico-sturzenegger-y-patricia-bullrich-se-reunieron-en-el-senado-para-ultimar-los-detalles-de-la-ley-de-propiedad-privada-foto-archivo-x-patobullrich-NWUQJWXPJ5ELVOQ3LSXRDOMYCA.jpg?auth=363edc304d84c4a28d0a49fad2252ce0723b45710c7565a7a5205c756d1bd36a&width=1023"
+      },
+      {
+        "title": "Hutíes atacan petroleros saudíes en el mar Rojo; Trump responde con amenazas",
+        "strategy": "article-og",
+        "query": "Informe desde Beirut: Hutíes atacaron dos petroleros de Arabia Saudita; Trump lanza amenaza",
+        "score": 82,
+        "source": "https://s.france24.com/media/display/1f7a714c-86d4-11f1-97fb-005056bfb2b6/w:1280/p:16x9/ES-20260723-130410-130545-CS.jpg"
+      },
+      {
+        "title": "Gisela Scaglia impulsa candidatura de Mauricio Macri y destaca rol de provincias",
+        "strategy": "article-og",
+        "query": "Gisela Scaglia: \"Trabajo para que Provincias Unidas y el PRO compartan la candidatura presidencial de Mauricio Macri\"",
+        "score": 82,
+        "source": "https://fotos.perfil.com/2026/04/23/trim/1140/641/23-04-2026-gisela-scaglia-diputada-provincias-unidas-santa-fe-2226478.jpg"
+      },
+      {
+        "title": "Caída de reservas del BCRA interrumpe racha de aumentos",
+        "strategy": "article-og",
+        "query": "Las reservas del BCRA cayeron más de u$s350 millones y cortaron una racha de cuatro subas al hilo",
+        "score": 82,
+        "source": "https://media.ambito.com/p/c3d5f51f711848a23eabe8f00d8f439a/adjuntos/239/imagenes/041/962/0041962721/banco-central-republica-argentina-bcra.jpg"
+      }
+    ],
+    "agendaStories": 1015,
     "editorialOpportunityReview": 0,
-    "newsworthinessAverage": 68,
+    "newsworthinessAverage": 67,
     "newsworthinessTop": [
       {
-        "title": "Un ranking nacional ubicó a Tierra del Fuego entre las provincias con mejor calidad de vida – La 97 Radio Fueguina",
-        "eventKey": "service|calidad|fueguina|mejor|nacional|provincias|radio|ranking|tierra del fuego|tierra del fuego aias|2026-07-23",
+        "title": "La nueva usina de Ushuaia entra en una etapa clave con la llegada de 6.200 toneladas de equipamiento desde China",
+        "eventKey": "territorial-sovereignty|gobierno|gobierno de tierra de|municipalidad de ushuaia|rio grande|ushuaia|venezuela|informa|2026-07-23",
         "score": 100,
         "topic": "servicios",
         "territory": "Provincia",
         "lane": "standard"
       },
       {
-        "title": "Regresó a Tolhuin el generador Cummins 2 y comienza la etapa para su instalación - Diario El Sureño",
-        "eventKey": "service|comienza|cummins|diario|etapa|generador|instalacion|regreso|tolhuin|2026-07-23",
-        "score": 100,
-        "topic": "servicios",
-        "territory": "Tolhuin",
+        "title": "Patricia Bullrich se reunió con Sturzenegger para definir los cambios a la Ley de Propiedad Privada: \"Tiene el aporte de todos, creemos que va a salir\"",
+        "eventKey": "legislative|gobierno|patricia bullrich|propiedad privada|argentina|informa|2026-07-23",
+        "score": 95,
+        "topic": "politica",
+        "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "EE.UU.: representantes vuelven a votar contra la guerra",
-        "eventKey": "international-conflict|camara de representantes|justicia|camara|donald trump|internacional|estados unidos|informa|2026-07-23",
-        "score": 91,
+        "title": "Informe desde Beirut: Hutíes atacaron dos petroleros de Arabia Saudita; Trump lanza amenaza",
+        "eventKey": "international-conflict|onu|donald trump|internacional|estados unidos|informa|2026-07-23",
+        "score": 94,
         "topic": "politica",
         "territory": "Mundo",
         "lane": "strict"
       },
       {
-        "title": "Casa de Jóvenes de Córdoba cuenta con su propia huerta como un espacio de aprendizaje",
-        "eventKey": "general|aprendizaje|cordoba|cuenta|espacio|huerta|jovenes|propia|rio grande|2026-07-23",
-        "score": 84,
-        "topic": "sociedad",
-        "territory": "Rio Grande",
-        "lane": "fast"
+        "title": "Gisela Scaglia: \"Trabajo para que Provincias Unidas y el PRO compartan la candidatura presidencial de Mauricio Macri\"",
+        "eventKey": "election|camara de diputados de la nacion|gobierno|gisela scaglia|provincias unidas|mauricio macri|argentina|informa|2026-07-23",
+        "score": 93,
+        "topic": "politica",
+        "territory": "Nacionales",
+        "lane": "standard"
       },
       {
-        "title": "¿Mbappé, Messi, Yamal, Rodri? La lucha por el Balón de Oro 2026 es más impredecible que nunca",
-        "eventKey": "general|balon|impredecible|lucha|mbappe|messi|nunca|rodri|2026-07-23",
+        "title": "Las reservas del BCRA cayeron más de u$s350 millones y cortaron una racha de cuatro subas al hilo",
+        "eventKey": "general|cayeron|cortaron|cuatro|millones|racha|reservas|subas|2026-07-23",
+        "score": 60,
+        "topic": "sociedad",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "El “mapa” de los barrios porteños no turísticos que ganaron 335 millones de dólares gracias a los B&Bs",
+        "eventKey": "service|barrios|dolares|ganaron|gracias|millones|portenos|turisticos|2026-07-23",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Cabalgata de la Fe 2026: dos noches de música y cierre con el Chaqueño Palavecino",
+        "eventKey": "general|cabalgata|chaqueno|cierre|musica|noches|palavecino|2026-07-23",
+        "score": 60,
+        "topic": "cultura",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "Volver a “la tierra” y fomentar lazos garantizan la salud mental",
+        "eventKey": "service|fomentar|garantizan|lazos|mental|salud|volver|2026-07-23",
+        "score": 60,
+        "topic": "servicios",
+        "territory": "Nacionales",
+        "lane": "standard"
+      },
+      {
+        "title": "El DT de España apuntó contra los jugadores de la Selección argentina por los incidentes en la final: “Es algo intolerable, inadmisible, no se puede permitir\"",
+        "eventKey": "general|apunto|argentina|contra|espana|final|inadmisible|incidentes|2026-07-23",
         "score": 60,
         "topic": "deportes",
         "territory": "Nacionales",
         "lane": "standard"
       },
       {
-        "title": "El consumo sigue sin encontrar piso: las ventas cayeron en mayo tanto en supermercados como en mayoristas",
-        "eventKey": "general|cayeron|consumo|encontrar|mayoristas|sigue|supermercados|tanto|2026-07-23",
-        "score": 60,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Luján cerró definitivamente el basural a cielo abierto más grande del país",
-        "eventKey": "service|abierto|basural|cerro|cielo|definitivamente|lujan|antartida|2026-07-23",
-        "score": 60,
-        "topic": "servicios",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Qué pasó con las ventas en los supermercados, mayoristas y shoppings en mayo, según el Indec",
-        "eventKey": "general|indec|mayoristas|segun|shoppings|supermercados|ventas|2026-07-23",
-        "score": 60,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Otra cadena de supermercados buscaría comprador para su operación en la Argentina",
-        "eventKey": "general|argentina|buscaria|cadena|comprador|operacion|supermercados|2026-07-23",
-        "score": 57,
-        "topic": "sociedad",
-        "territory": "Nacionales",
-        "lane": "standard"
-      },
-      {
-        "title": "Dólar hoy: a cuánto cerró este jueves 23 de julio",
-        "eventKey": "general|cerro|cuanto|dolar|jueves|julio|2026-07-23",
+        "title": "Gobernador de Santander, que es un general (r) del Ejército, también respaldó la posesión de De la Espriella en una guarnición militar",
+        "eventKey": "legislative|camara de representantes|gobierno de la espriella|gobierno petro|juvenal diaz mateus|colombia|informa|2026-07-23",
         "score": 55,
-        "topic": "economia",
+        "topic": "politica",
         "territory": "Mundo",
         "lane": "standard"
       }
     ],
     "corroborationSearches": 3,
-    "corroborationFound": 3,
+    "corroborationFound": 1,
     "corroborationVerified": 1,
-    "corroborationConflicts": 1,
-    "corroborationNoResult": 1,
+    "corroborationConflicts": 0,
+    "corroborationNoResult": 2,
     "corroborationAttempts": [
       {
-        "eventKey": "service|comienza|cummins|diario|etapa|generador|instalacion|regreso|tolhuin|2026-07-23",
-        "title": "Regresó a Tolhuin el generador Cummins 2 y comienza la etapa para su instalación - Diario El Sureño",
+        "eventKey": "weather|gobierno|gobierno de venezuela|banco mundial|la guaira|internacional|venezuela|estados unidos|informa|2026-07-23",
+        "title": "Un mes del doble sismo en Venezuela: más de 5.000 muertos, impotencia por los desaparecidos y temor al olvido",
         "priorityRank": 1,
-        "corroborationQuery": "Dirección Provincial Ministerio de Energía Ministerio Tolhuin Buenos Aires comienza cummins diario etapa generador instalacion",
-        "corroborationReason": "newsworthiness=100; freshness=3h; territory=Tolhuin; impact=19; corroborability=10; pendingAge=3h; attempts=0",
-        "found": 1,
-        "verified": true,
-        "status": "verified-standard"
-      },
-      {
-        "eventKey": "casualty|gustavo daniel santillan|informa|2026-07-23",
-        "title": "Santiago del Estero: una mujer escapó desnuda por la ventana de su casa para evitar que su pareja la matara a tiros",
-        "priorityRank": 2,
-        "corroborationQuery": "Gustavo Daniel Santillán desnuda escapo estero evitar matara mujer",
-        "corroborationReason": "newsworthiness=95; freshness=0h; territory=Nacionales; impact=12; corroborability=10; pendingAge=0h; attempts=0",
+        "corroborationQuery": "Gobierno Gobierno de Venezuela Banco Mundial Venezuela Estados Unidos desaparecidos doble impotencia muertos olvido sismo",
+        "corroborationReason": "newsworthiness=100; freshness=0h; territory=Mundo; impact=23; corroborability=10; pendingAge=0h; attempts=0",
         "found": 0,
         "verified": false,
         "status": "no-result"
       },
       {
-        "eventKey": "international-conflict|universidad mcgill|union europea|internacional|estados unidos|francia|informa|2026-07-23",
-        "title": "Aranceles de Trump: UE y Canadá estrechan lazos comerciales",
+        "eventKey": "election|camara de diputados de la nacion|gobierno|gisela scaglia|provincias unidas|mauricio macri|argentina|informa|2026-07-23",
+        "title": "Gisela Scaglia: “Trabajo para que Provincias Unidas y el PRO compartan la candidatura presidencial de Mauricio Macri“",
+        "priorityRank": 2,
+        "corroborationQuery": "Gisela Scaglia Provincias Unidas Mauricio Macri Santa Fe Cámara de Diputados de la Nación elecciones resultado candidatura compartan gisela macri mauricio presidencial",
+        "corroborationReason": "newsworthiness=99; freshness=4h; territory=Nacionales; impact=12; corroborability=10; pendingAge=4h; attempts=1",
+        "found": 1,
+        "verified": true,
+        "status": "verified-standard"
+      },
+      {
+        "eventKey": "sports-result|franco watson|ramiro carrera|argentina|informa|2026-07-23",
+        "title": "Lanús vs Cienciano, en vivo, por la Copa Sudamericana: minuto a minuto y qué canal pasa el partido por TV",
         "priorityRank": 3,
-        "corroborationQuery": "Unión Europea Universidad McGill Estados Unidos Francia Alemania conflicto aranceles canada comerciales estrechan lazos trump",
-        "corroborationReason": "newsworthiness=97; freshness=0h; territory=Mundo; impact=12; corroborability=10; pendingAge=0h; attempts=0",
-        "found": 2,
+        "corroborationQuery": "Franco Watson Ramiro Carrera Argentina resultado canal cienciano lanus minuto partido sudamericana",
+        "corroborationReason": "newsworthiness=93; freshness=4h; territory=Nacionales; impact=6; corroborability=10; pendingAge=18h; attempts=3",
+        "found": 0,
         "verified": false,
-        "status": "conflicting-sources"
+        "status": "no-result"
       }
     ],
-    "conflictsByField": {
-      "dates": 11,
-      "scores": 1,
-      "percentages": 3
-    },
-    "criticalConflicts": 12,
-    "nonCriticalDifferences": 3,
-    "resolvedComplementaryFacts": 34,
+    "conflictsByField": {},
+    "criticalConflicts": 0,
+    "nonCriticalDifferences": 0,
+    "resolvedComplementaryFacts": 13,
     "latency": {
       "discoveryToVerificationMinutes": {
-        "count": 67,
-        "avg": 89.3,
+        "count": 69,
+        "avg": 88.5,
         "p50": 0,
         "max": 2012.1
       },
       "verificationToPublicationMinutes": {
-        "count": 67,
-        "avg": 54,
+        "count": 69,
+        "avg": 52.4,
         "p50": 0.3,
         "max": 789.2
       },
       "discoveryToPublicationMinutes": {
-        "count": 67,
-        "avg": 143.3,
+        "count": 69,
+        "avg": 140.9,
         "p50": 0.4,
         "max": 2012.3
       },
       "discoveryToVerificationAllMinutes": {
-        "count": 812,
-        "avg": 31.9,
+        "count": 811,
+        "avg": 32,
         "p50": 0,
         "max": 2737.6
       },
       "cohort": {
-        "comparablePublishedCount": 67,
-        "verifiedWithoutPublicationCount": 745,
+        "comparablePublishedCount": 69,
+        "verifiedWithoutPublicationCount": 742,
         "publicationWithoutVerifiedAtCount": 0,
         "invalidTimestampCount": 0,
         "comparableDefinition": "firstDetectedAt <= verifiedAt <= publishedAt"
       }
     },
-    "byCategory": {},
-    "publishedLast3hBeforeRun": 1,
-    "publishedLast6hBeforeRun": 4,
+    "byCategory": {
+      "Actualidad": 1,
+      "Nacionales": 3,
+      "Mundo": 1
+    },
+    "publishedLast3hBeforeRun": 0,
+    "publishedLast6hBeforeRun": 1,
     "publishedLast12hBeforeRun": 4,
-    "publishedLast24hBeforeRun": 16,
-    "hoursSinceLastPublicationBeforeRun": 1.9,
+    "publishedLast24hBeforeRun": 11,
+    "hoursSinceLastPublicationBeforeRun": 3.7,
     "dailyTarget": {
       "min": 12,
       "max": 16,
-      "publishedLast24hBeforeRun": 16,
-      "remainingToMin": 0,
-      "slotsRemaining": 0,
+      "publishedLast24hBeforeRun": 11,
+      "remainingToMin": 1,
+      "slotsRemaining": 5,
       "effectiveRunTarget": 3,
-      "effectiveRunMaxNormal": 0
+      "effectiveRunMaxNormal": 4
     },
     "agendaTop": [
+      {
+        "storyId": "weather|gobierno|gobierno de venezuela|banco mundial|la guaira|internacional|venezuela|estados unidos|informa|2026-07-23",
+        "headlineSeed": "Un mes del doble sismo en Venezuela: más de 5.000 muertos, impotencia por los desaparecidos y temor al olvido",
+        "topic": "servicios",
+        "territory": "Mundo",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 25,
+          "localRelevance": 7,
+          "impactMagnitude": 23,
+          "serviceValue": 20,
+          "socialPotential": 4,
+          "searchPotential": 15,
+          "recency": 15,
+          "sourceStrength": 3,
+          "strategicValue": 2,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "territorial-sovereignty|gobierno|gobierno de tierra de|municipalidad de ushuaia|rio grande|ushuaia|venezuela|informa|2026-07-23",
+        "headlineSeed": "La nueva usina de Ushuaia entra en una etapa clave con la llegada de 6.200 toneladas de equipamiento desde China",
+        "topic": "servicios",
+        "territory": "Provincia",
+        "newsworthinessScore": 100,
+        "status": "published",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 22,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 4,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "strategicValue": 5,
+          "diversity": 0
+        }
+      },
       {
         "storyId": "casualty|gustavo daniel santillan|informa|2026-07-23",
         "headlineSeed": "Santiago del Estero: una mujer escapó desnuda por la ventana de su casa para evitar que su pareja la matara a tiros",
@@ -1083,66 +1152,26 @@
           "strategicValue": 5,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "election|camara de diputados de la nacion|gobierno|gisela scaglia|provincias unidas|mauricio macri|argentina|informa|2026-07-23",
-        "headlineSeed": "Gisela Scaglia: “Trabajo para que Provincias Unidas y el PRO compartan la candidatura presidencial de Mauricio Macri“",
-        "topic": "politica",
-        "territory": "Nacionales",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 23,
-          "localRelevance": 12,
-          "impactMagnitude": 23,
-          "serviceValue": 3,
-          "socialPotential": 7,
-          "searchPotential": 10,
-          "recency": 15,
-          "sourceStrength": 3,
-          "strategicValue": 2,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "election|justicia|flavio bolsonaro|jair bolsonaro|internacional|brasil|venezuela|denuncia|2026-07-23",
-        "headlineSeed": "Como su padre, Flávio Bolsonaro cuestiona el sistema de urnas electrónicas y el partido de Lula da Silva lo denuncia ante la Justicia electoral",
-        "topic": "deportes",
-        "territory": "Mundo",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 23,
-          "localRelevance": 7,
-          "impactMagnitude": 23,
-          "serviceValue": 3,
-          "socialPotential": 12,
-          "searchPotential": 10,
-          "recency": 15,
-          "sourceStrength": 3,
-          "strategicValue": 4,
-          "diversity": 4
-        }
       }
     ],
     "agendaInvalidStories": 18,
     "technicalSuccess": true,
-    "editorialOutcome": "no-publishable-story",
+    "editorialOutcome": "published",
     "sourceHealthSummary": {
       "configured": 33,
       "consulted": 33,
       "healthy": 30,
-      "productive": 14,
+      "productive": 12,
       "noResults": 3,
       "failed": 0
     }
   },
   "budget": {
     "maxAiPerRun": 16,
-    "officialAiUsed": 1,
-    "officialAiBudget": 1,
-    "discoveryAiUsed": 13,
-    "discoveryAiBudget": 13,
+    "officialAiUsed": 0,
+    "officialAiBudget": 0,
+    "discoveryAiUsed": 14,
+    "discoveryAiBudget": 15,
     "aiConcurrency": 1,
     "maxRetryAttempts": 3,
     "maxRescuePerRun": 4,
@@ -1151,19 +1180,20 @@
     "targetPublishedPerRun": 3,
     "effectiveRunTarget": 3,
     "maxNormalPublishedPerRun": 4,
-    "effectiveRunMaxNormal": 0,
+    "effectiveRunMaxNormal": 4,
     "extraSlotMinImportance": 8,
     "dailyTargetMin": 12,
     "dailyTargetMax": 16,
-    "publishedLast24hBeforeRun": 16,
-    "candidatesMaterialized": 39,
-    "totalCandidatesBeforeLimit": 39
+    "publishedLast24hBeforeRun": 11,
+    "candidatesMaterialized": 34,
+    "totalCandidatesBeforeLimit": 34
   },
   "reasonNoMorePublished": [
     "4 evento(s) quedaron pendientes de segunda fuente",
-    "3 evento(s) tuvieron conflicto factual",
-    "7 candidato(s) descartados por duplicado/similitud",
-    "9 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 5, stale-dated-discovery: 2, evergreen-or-stale-outside-news-window: 1)",
-    "14 error(es) reales de modelo"
+    "9 candidato(s) descartados por duplicado/similitud",
+    "5 candidato(s) descartados por causas especificas (stale-hard-news: 1, undated-discovery: 3, stale-dated-discovery: 1)",
+    "3 candidato(s) descartados por importancia editorial",
+    "6 candidato(s) quedaron por cupo editorial de corrida",
+    "1 error(es) reales de modelo"
   ]
 }
