@@ -4,11 +4,11 @@ description: "Análisis sobre la relación entre el fútbol y la política en Ar
 date: "2026-07-23T22:36:26.000Z"
 category: "Deportes"
 location: "Islas Malvinas"
-sourceName: "Perfil — Nacionales"
+sourceName: "Perfil — Cobertura TdF"
 sourceUrl: "https://www.perfil.com/noticias/opinion/milei-no-salta-igual-que-los-ingleses.phtml"
 originalImage: "https://fotos.perfil.com/2026/07/20/trim/1140/641/hinchada-argentina-en-el-obelisco-19072026-2286970.jpg"
 status: "draft"
-detectedAt: "2026-07-23T23:00:38.232Z"
+detectedAt: "2026-07-24T02:53:36.100Z"
 mode: "discovery-review"
 editorialReason: "daily-target-max"
 opportunityType: "standard-news"
@@ -53,7 +53,7 @@ Hinchada Argentina en el obelisco 19072026 | Juan Obregón
 - [](https://www.facebook.com/sharer/sharer.php?u=https://www.perfil.com/noticias/opinion/milei-no-salta-igual-que-los-ingleses.phtml)
 - [](https://twitter.com/intent/tweet?text=Milei+no+salta%2C+igual+que+los+ingleses&url=https://www.perfil.com/noticias/opinion/milei-no-salta-igual-que-los-ingleses.phtml)
 - [](<whatsapp://send?text=Milei+no+salta%2C+igual+que+los+ingleses https://www.perfil.com/noticias/opinion/milei-no-salta-igual-que-los-ingleses.phtml>)
-- [](/cdn-cgi/l/email-protection#dfe0acaabdb5baabe28fbaadb9b6b3f1bcb0b2ffa3ff92b6b3bab6f4b1b0f4acbeb3abbefaed9cf4b6b8aabeb3f4aeaabaf4b3b0acf4b6b1b8b3baacbaacf9bdb0bba6e297b0b3bef3ffa9b6ffbaacabbaffbeadab1c72bcaab3b0ffaeaabaffafaabdb3b6bc1c6cff8fbaadb9b6b3f1bcb0b2ffa6ffbcadbab0ffaeaabaffabbaffafaababbbaffb6b1abbaadbaacbeadf1ffb7ababaface5f0f0a8a8a8f1afbaadb9b6b3f1bcb0b2f0b1b0abb6bcb6beacf0b0afb6b1b6b0b1f0b2b6b3bab6f2b1b0f2acbeb3abbef2b6b8aabeb3f2aeaabaf2b3b0acf2b6b1b8b3baacbaacf1afb7abb2b3 "Compartir por email")
+- [](/cdn-cgi/l/email-protection#84bbf7f1e6eee1f0b9d4e1f6e2ede8aae7ebe9a4f8a4c9ede8e1edafeaebaff7e5e8f0e5a1b6c7afede3f1e5e8aff5f1e1afe8ebf7afedeae3e8e1f7e1f7a2e6ebe0fdb9ccebe8e5a8a4f2eda4e1f7f0e1a4e5f6f04729e7f1e8eba4f5f1e1a4f4f1e6e8ede74737a4d4e1f6e2ede8aae7ebe9a4fda4e7f6e1eba4f5f1e1a4f0e1a4f4f1e1e0e1a4edeaf0e1f6e1f7e5f6aaa4ecf0f0f4f7beababf3f3f3aaf4e1f6e2ede8aae7ebe9abeaebf0ede7ede5f7abebf4edeaedebeaabe9ede8e1eda9eaeba9f7e5e8f0e5a9ede3f1e5e8a9f5f1e1a9e8ebf7a9edeae3e8e1f7e1f7aaf4ecf0e9e8 "Compartir por email")
 - [](#vf-comments)
 
 ![Nazareno Etchepare](https://fotos.perfil.com/autores/default/nazarenoetchepare_100.jpg)
