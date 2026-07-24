@@ -1,40 +1,40 @@
 {
   "version": 2,
-  "generatedAt": "2026-07-24T02:54:48.560Z",
+  "generatedAt": "2026-07-24T06:30:44.122Z",
   "summary": {
-    "totalStories": 1019,
+    "totalStories": 1014,
     "byStatus": {
-      "conflicting-sources": 47,
-      "pending-verification": 44,
-      "published": 64,
+      "pending-verification": 45,
+      "conflicting-sources": 48,
+      "published": 67,
       "verified-standard": 9,
-      "verified-standard-single-source": 695,
+      "verified-standard-single-source": 690,
       "agenda-invalid": 19,
-      "rejected-terminal": 111,
-      "verified-strict": 25,
+      "rejected-terminal": 109,
+      "verified-strict": 23,
       "verified-fast-lane": 2,
-      "verified-local-routine": 3
+      "verified-local-routine": 2
     },
     "byTopic": {
-      "sociedad": 380,
-      "servicios": 160,
+      "servicios": 159,
+      "sociedad": 375,
       "deportes": 222,
       "politica": 131,
       "turismo": 6,
-      "educacion": 18,
-      "policiales": 35,
-      "economia": 47,
+      "educacion": 17,
+      "policiales": 36,
+      "economia": 48,
       "cultura": 4,
       "agenda": 15,
       "salud": 1
     },
     "byTerritory": {
-      "Provincia": 97,
-      "Mundo": 590,
+      "Rio Grande": 7,
+      "Ushuaia": 13,
+      "Provincia": 98,
+      "Mundo": 587,
       "Tolhuin": 3,
-      "Nacionales": 299,
-      "Ushuaia": 12,
-      "Rio Grande": 6,
+      "Nacionales": 294,
       "Malvinas": 9,
       "Antartida": 3
     },
@@ -136,6 +136,46 @@
     ],
     "topStories": [
       {
+        "storyId": "service|acusado|cuchillo|detuvieron|hombre|persecucion|robar|rio grande|ushuaia|2026-07-24",
+        "headlineSeed": "Detuvieron a un hombre acusado de robar con un cuchillo tras una persecución en Río Grande",
+        "topic": "servicios",
+        "territory": "Rio Grande",
+        "newsworthinessScore": 100,
+        "status": "pending-verification",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "strategicValue": 5,
+          "diversity": 4
+        }
+      },
+      {
+        "storyId": "weather-forecast|2026-07-24|tierra-del-fuego",
+        "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 24 de julio de 2026",
+        "topic": "servicios",
+        "territory": "Ushuaia",
+        "newsworthinessScore": 100,
+        "status": "conflicting-sources",
+        "scoreBreakdown": {
+          "publicInterest": 18,
+          "localRelevance": 25,
+          "impactMagnitude": 0,
+          "serviceValue": 20,
+          "socialPotential": 8,
+          "searchPotential": 13,
+          "recency": 15,
+          "sourceStrength": 3,
+          "strategicValue": 5,
+          "diversity": 4
+        }
+      },
+      {
         "storyId": "casualty|gustavo daniel santillan|informa|2026-07-23",
         "headlineSeed": "Santiago del Estero: una mujer escapó desnuda por la ventana de su casa para evitar que su pareja la matara a tiros",
         "topic": "sociedad",
@@ -189,7 +229,7 @@
           "serviceValue": 20,
           "socialPotential": 4,
           "searchPotential": 13,
-          "recency": 15,
+          "recency": 12,
           "sourceStrength": 3,
           "strategicValue": 5,
           "diversity": 4
@@ -294,50 +334,134 @@
           "strategicValue": 3,
           "diversity": 4
         }
-      },
-      {
-        "storyId": "service|baleado|choco|cuadras|dentro|despues|durante|herido|2026-07-23",
-        "headlineSeed": "Un joven fue baleado dentro de su auto, manejó herido durante dos cuadras y chocó: murió poco después en el hospital",
-        "topic": "servicios",
-        "territory": "Nacionales",
-        "newsworthinessScore": 100,
-        "status": "pending-verification",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 12,
-          "impactMagnitude": 21,
-          "serviceValue": 20,
-          "socialPotential": 7,
-          "searchPotential": 15,
-          "recency": 9,
-          "sourceStrength": 3,
-          "strategicValue": 2,
-          "diversity": 4
-        }
-      },
-      {
-        "storyId": "service|crisis|estado|preocupa|puerto|recupera|servicios|turismo|rio grande|ushuaia|2026-07-22",
-        "headlineSeed": "El turismo se recupera en Ushuaia, pero preocupa la crisis de los servicios y el estado del puerto",
-        "topic": "servicios",
-        "territory": "Ushuaia",
-        "newsworthinessScore": 100,
-        "status": "published",
-        "scoreBreakdown": {
-          "publicInterest": 18,
-          "localRelevance": 25,
-          "impactMagnitude": 0,
-          "serviceValue": 20,
-          "socialPotential": 8,
-          "searchPotential": 13,
-          "recency": 9,
-          "sourceStrength": 3,
-          "strategicValue": 5,
-          "diversity": 4
-        }
       }
     ]
   },
   "stories": [
+    {
+      "storyId": "service|acusado|cuchillo|detuvieron|hombre|persecucion|robar|rio grande|ushuaia|2026-07-24",
+      "headlineSeed": "Detuvieron a un hombre acusado de robar con un cuchillo tras una persecución en Río Grande",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Rio Grande",
+      "primaryEntities": [
+        "Policía",
+        "Policía Provincial",
+        "Ministerio Público Fiscal de",
+        "Justicia",
+        "Justicia Federal",
+        "Ministerio de Educación",
+        "Municipio y la Asociación Civil Global",
+        "Gobierno",
+        "Rio Grande",
+        "Ushuaia"
+      ],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-24T06:29:55.645Z",
+      "lastSeenAt": "2026-07-24T06:29:55.645Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "strategicValueScore": 5,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 8,
+        "originalReportingPotentialScore": 8,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 5,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 5,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "weather-forecast|2026-07-24|tierra-del-fuego",
+      "headlineSeed": "Clima en Ushuaia hoy: cuál es el pronóstico del tiempo para el 24 de julio de 2026",
+      "topic": "servicios",
+      "subtopic": "clima",
+      "territory": "Ushuaia",
+      "primaryEntities": [
+        "SMN",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Argentina"
+      ],
+      "people": [],
+      "eventType": "weather-forecast",
+      "firstSeenAt": "2026-07-24T06:29:55.645Z",
+      "lastSeenAt": "2026-07-24T06:29:55.645Z",
+      "sourceCount": 3,
+      "independentPublisherCount": 3,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "strategicValueScore": 5,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 8,
+        "originalReportingPotentialScore": 8,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 5,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 5,
+        "diversity": 4
+      },
+      "newsworthinessScore": 100,
+      "status": "conflicting-sources",
+      "validationReasons": []
+    },
     {
       "storyId": "casualty|gustavo daniel santillan|informa|2026-07-23",
       "headlineSeed": "Santiago del Estero: una mujer escapó desnuda por la ventana de su casa para evitar que su pareja la matara a tiros",
@@ -492,7 +616,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 18,
       "localRelevanceScore": 22,
       "impactMagnitudeScore": 0,
@@ -520,7 +644,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 13,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "strategicValue": 5,
         "diversity": 4
@@ -1655,63 +1779,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|alimentarios|entrega|fecha|licuadora|modulos|reprogramada|ushuaia|tolhuin|2026-07-21",
-      "headlineSeed": "FECHA DE ENTREGA DE MÓDULOS ALIMENTARIOS EN TOLHUIN REPROGRAMADA - La Licuadora",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Tolhuin",
-      "primaryEntities": [
-        "Ushuaia",
-        "Tolhuin"
-      ],
-      "people": [],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-21T06:32:54.556Z",
-      "lastSeenAt": "2026-07-21T06:32:54.556Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-context",
-      "publicInterestScore": 18,
-      "localRelevanceScore": 25,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 8,
-      "searchPotentialScore": 13,
-      "strategicValueScore": 3,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 5,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 3,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 18,
-        "localRelevance": 25,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 8,
-        "searchPotential": 13,
-        "recency": 5,
-        "sourceStrength": 3,
-        "strategicValue": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 99,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "weather|ministerio de salud|gobierno|policia nacional de|internacional|argentina|peru|informa|2026-07-19",
       "headlineSeed": "Un sismo de magnitud 5.5 sacudió Perú: hay al menos seis muertos y 20 heridos",
       "topic": "servicios",
@@ -1962,60 +2029,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "service|almonaster|desalojar|extinguido|incendio|obligo|vecinos|2026-07-23",
-      "headlineSeed": "Extinguido el incendio de Almonaster que obligó a desalojar a más de 300 vecinos",
-      "topic": "servicios",
-      "subtopic": "servicios",
-      "territory": "Provincia",
-      "primaryEntities": [],
-      "people": [],
-      "eventType": "service",
-      "firstSeenAt": "2026-07-23T06:34:01.325Z",
-      "lastSeenAt": "2026-07-23T06:34:01.325Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 21,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 20,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 2,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 0,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 21,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 20,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 98,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|atrapada|estuvo|extremo|horas|nieve|pareja|rescate|rio grande|2026-07-22",
       "headlineSeed": "Video: así fue el rescate de la pareja que estuvo atrapada más de 40 horas en la nieve y bajo frío extremo",
       "topic": "servicios",
@@ -2129,6 +2142,69 @@
       },
       "newsworthinessScore": 98,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|union europea|internacional|brasil|estados unidos|reactiva|2026-07-24",
+      "headlineSeed": "Trump reactiva su guerra comercial con batería de aranceles",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Unión Europea",
+        "Internacional",
+        "Brasil",
+        "Estados Unidos"
+      ],
+      "people": [
+        "Unión Europea"
+      ],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-24T06:29:55.647Z",
+      "lastSeenAt": "2026-07-24T06:29:55.647Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 3,
+      "editorialOpportunity": {
+        "opportunityType": "high-impact-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 5,
+        "strategicValueScore": 3,
+        "reasons": [
+          "high-impact-event"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 97,
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -2506,72 +2582,6 @@
       ]
     },
     {
-      "storyId": "sports-result|santa fe|hugo rodallega|franco fagundez|argentina|informa|2026-07-24",
-      "headlineSeed": "Santa Fe vs Caracas, en vivo, por la Copa Sudamericana: minuto a minuto y qué canal pasa el partido por TV",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Santa Fe",
-        "Hugo Rodallega",
-        "Franco Fagúndez",
-        "Argentina"
-      ],
-      "people": [
-        "Santa Fe",
-        "Hugo Rodallega",
-        "Franco Fagúndez"
-      ],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-24T02:53:20.987Z",
-      "lastSeenAt": "2026-07-24T02:53:20.987Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "strategicValueScore": 4,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 7,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 4,
-        "reasons": [
-          "high-impact-event",
-          "strong-sharing-potential"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 96,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
       "storyId": "legislative|victoria villarruel|martin menem|tierra del fuego aias|informa|2026-07-20",
       "headlineSeed": "Los senadores pasarán a cobrar 12 millones de pesos por mes - Actualidad TDF",
       "topic": "politica",
@@ -2632,6 +2642,117 @@
       },
       "newsworthinessScore": 96,
       "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|almonaster|desalojar|extinguido|incendio|obligo|vecinos|2026-07-23",
+      "headlineSeed": "Extinguido el incendio de Almonaster que obligó a desalojar a más de 300 vecinos",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-23T06:34:01.325Z",
+      "lastSeenAt": "2026-07-23T06:34:01.325Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 0,
+        "originalReportingPotentialScore": 0,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 9,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 95,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|alimentarios|entrega|fecha|licuadora|modulos|reprogramada|ushuaia|tolhuin|2026-07-21",
+      "headlineSeed": "FECHA DE ENTREGA DE MÓDULOS ALIMENTARIOS EN TOLHUIN REPROGRAMADA - La Licuadora",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Tolhuin",
+      "primaryEntities": [
+        "Ushuaia",
+        "Tolhuin"
+      ],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T06:32:54.556Z",
+      "lastSeenAt": "2026-07-21T06:32:54.556Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 25,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 8,
+      "searchPotentialScore": 13,
+      "strategicValueScore": 3,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 5,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 3,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 25,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 8,
+        "searchPotential": 13,
+        "recency": 1,
+        "sourceStrength": 3,
+        "strategicValue": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 95,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -2762,85 +2883,26 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|chile|higgins|partido|playoffs|sudamericana|2026-07-23|1-0",
-      "headlineSeed": "Boca le ganó a O’Higgins en el partido de ida por los playoffs de la Copa Sudamericana",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Universidad Católica",
-        "Chile",
-        "Argentina",
-        "Brasil",
-        "Uruguay",
-        "Paraguay",
-        "Colombia",
-        "Estados Unidos"
-      ],
-      "people": [],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-24T02:53:20.987Z",
-      "lastSeenAt": "2026-07-24T02:53:20.987Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 4,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 7,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 4,
-        "reasons": [
-          "high-impact-event",
-          "strong-sharing-potential"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 94,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-23",
-      "headlineSeed": "¿Por qué Irán ataca las plantas desalinizadoras de Kuwait como parte de su estrategia de guerra?",
+      "storyId": "election|justicia|machado marco rubio|la guaira|venezuela|estados unidos|abre|2026-07-24",
+      "headlineSeed": "El chavismo busca truncar la transición tras el terremoto, pero EE.UU. le cierra el paso y se abre una oportunidad para Machado",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
+        "Machado Marco Rubio",
+        "Justicia",
+        "La Guaira",
+        "Venezuela",
+        "Estados Unidos",
+        "Italia",
+        "Cuba"
       ],
-      "people": [],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-23T23:00:23.676Z",
-      "lastSeenAt": "2026-07-23T23:00:23.676Z",
+      "people": [
+        "Machado Marco Rubio"
+      ],
+      "eventType": "election",
+      "firstSeenAt": "2026-07-24T06:29:55.646Z",
+      "lastSeenAt": "2026-07-24T06:29:55.646Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
@@ -2850,22 +2912,22 @@
       "freshness": "breaking",
       "publicInterestScore": 20,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
+      "impactMagnitudeScore": 23,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
+      "socialPotentialScore": 7,
       "searchPotentialScore": 10,
-      "strategicValueScore": 3,
+      "strategicValueScore": 2,
       "editorialOpportunity": {
         "opportunityType": "high-impact-news",
         "recommendedFormat": "noticia",
         "recommendedAction": "publish-if-verified",
         "followUpFormat": "",
         "requiresHumanReview": false,
-        "communityMobilizationScore": 0,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 5,
-        "strategicValueScore": 3,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
         "reasons": [
           "high-impact-event"
         ]
@@ -2873,13 +2935,13 @@
       "scoreBreakdown": {
         "publicInterest": 20,
         "localRelevance": 7,
-        "impactMagnitude": 25,
+        "impactMagnitude": 23,
         "serviceValue": 3,
-        "socialPotential": 4,
+        "socialPotential": 7,
         "searchPotential": 10,
         "recency": 15,
         "sourceStrength": 3,
-        "strategicValue": 3,
+        "strategicValue": 2,
         "diversity": 4
       },
       "newsworthinessScore": 94,
@@ -3062,6 +3124,72 @@
       "validationReasons": []
     },
     {
+      "storyId": "sports-result|santa fe|hugo rodallega|franco fagundez|argentina|informa|2026-07-24",
+      "headlineSeed": "Santa Fe vs Caracas, en vivo, por la Copa Sudamericana: minuto a minuto y qué canal pasa el partido por TV",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Santa Fe",
+        "Hugo Rodallega",
+        "Franco Fagúndez",
+        "Argentina"
+      ],
+      "people": [
+        "Santa Fe",
+        "Hugo Rodallega",
+        "Franco Fagúndez"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-24T02:53:20.987Z",
+      "lastSeenAt": "2026-07-24T06:29:55.644Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "strategicValueScore": 4,
+      "editorialOpportunity": {
+        "opportunityType": "high-impact-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 7,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 4,
+        "reasons": [
+          "high-impact-event",
+          "strong-sharing-potential"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 12,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 4,
+        "diversity": 4
+      },
+      "newsworthinessScore": 93,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|rosario central|arranque|belgrano|central|clausura|2026-07-23|1-1",
       "headlineSeed": "Belgrano le ganó 2-1 a Rosario Central en el arranque del Torneo Clausura",
       "topic": "deportes",
@@ -3186,73 +3314,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|clases|extiende|invierno|semana|tarde|terminaran|vacaciones|rio grande|ushuaia|2026-07-22",
-      "headlineSeed": "Tierra del Fuego extiende una semana las vacaciones de invierno y las clases terminarán más tarde",
-      "topic": "educacion",
-      "subtopic": "educacion",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Ministerio de Educación",
-        "Ministerio de Educación de Tierra de",
-        "Ministerio",
-        "Policia",
-        "Gobierno",
-        "El Ministerio",
-        "Rio Grande",
-        "Ushuaia",
-        "Tierra del Fuego",
-        "Venezuela"
-      ],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T02:58:21.768Z",
-      "lastSeenAt": "2026-07-23T02:58:21.768Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "today",
-      "publicInterestScore": 13,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 15,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 13,
-      "strategicValueScore": 7,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 12,
-        "originalReportingPotentialScore": 8,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 7,
-        "reasons": [
-          "mobilizable-local-community"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 13,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 15,
-        "socialPotential": 4,
-        "searchPotential": 13,
-        "recency": 12,
-        "sourceStrength": 3,
-        "strategicValue": 7,
-        "diversity": 4
-      },
-      "newsworthinessScore": 93,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
       "storyId": "casualty|policia|policia la|justicia|informa|2026-07-22",
       "headlineSeed": "Se hicieron pasar por policías para entrar a robar en una casa, balearon al dueño y volcaron al escapar",
       "topic": "sociedad",
@@ -3309,7 +3370,7 @@
         "diversity": 4
       },
       "newsworthinessScore": 93,
-      "status": "pending-verification",
+      "status": "rejected-terminal",
       "validationReasons": []
     },
     {
@@ -3689,41 +3750,38 @@
       "validationReasons": []
     },
     {
-      "storyId": "sports-result|argentina|venezuela|2026-07-23|3-1",
-      "headlineSeed": "Argentina vs Venezuela 3-1: resumen del triunfo ‘albiceleste’ para clasificar a semifinales de la Copa Sudamericana de Vóley 2026",
+      "storyId": "sports-result|chile|higgins|partido|playoffs|sudamericana|2026-07-23|1-0",
+      "headlineSeed": "Boca le ganó a O’Higgins en el partido de ida por los playoffs de la Copa Sudamericana",
       "topic": "deportes",
       "subtopic": "deportes",
       "territory": "Mundo",
       "primaryEntities": [
-        "Facundo Morando",
-        "Argentina",
-        "Venezuela",
-        "Ecuador",
-        "Brasil",
+        "Universidad Católica",
         "Chile",
-        "Bolivia",
-        "Peru",
-        "Colombia"
+        "Argentina",
+        "Brasil",
+        "Uruguay",
+        "Paraguay",
+        "Colombia",
+        "Estados Unidos"
       ],
-      "people": [
-        "Facundo Morando"
-      ],
+      "people": [],
       "eventType": "sports-result",
-      "firstSeenAt": "2026-07-23T23:00:23.670Z",
-      "lastSeenAt": "2026-07-23T23:00:23.670Z",
+      "firstSeenAt": "2026-07-24T02:53:20.987Z",
+      "lastSeenAt": "2026-07-24T02:53:20.987Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 11,
       "localRelevanceScore": 7,
       "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
       "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "strategicValueScore": 4,
       "editorialOpportunity": {
         "opportunityType": "high-impact-news",
@@ -3733,7 +3791,7 @@
         "requiresHumanReview": false,
         "communityMobilizationScore": 7,
         "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
+        "dataExplainerPotentialScore": 4,
         "contrastPotentialScore": 0,
         "strategicValueScore": 4,
         "reasons": [
@@ -3747,10 +3805,69 @@
         "impactMagnitude": 25,
         "serviceValue": 3,
         "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 15,
+        "searchPotential": 10,
+        "recency": 12,
         "sourceStrength": 3,
         "strategicValue": 4,
+        "diversity": 4
+      },
+      "newsworthinessScore": 91,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "international-conflict|internacional|estados unidos|informa|2026-07-23",
+      "headlineSeed": "¿Por qué Irán ataca las plantas desalinizadoras de Kuwait como parte de su estrategia de guerra?",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Internacional",
+        "Estados Unidos"
+      ],
+      "people": [],
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-23T23:00:23.676Z",
+      "lastSeenAt": "2026-07-23T23:00:23.676Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 3,
+      "editorialOpportunity": {
+        "opportunityType": "high-impact-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 0,
+        "originalReportingPotentialScore": 0,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 5,
+        "strategicValueScore": 3,
+        "reasons": [
+          "high-impact-event"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "strategicValue": 3,
         "diversity": 4
       },
       "newsworthinessScore": 91,
@@ -4135,6 +4252,73 @@
       ]
     },
     {
+      "storyId": "general|clases|extiende|invierno|semana|tarde|terminaran|vacaciones|rio grande|ushuaia|2026-07-22",
+      "headlineSeed": "Tierra del Fuego extiende una semana las vacaciones de invierno y las clases terminarán más tarde",
+      "topic": "educacion",
+      "subtopic": "educacion",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Ministerio de Educación",
+        "Ministerio de Educación de Tierra de",
+        "Ministerio",
+        "Policia",
+        "Gobierno",
+        "El Ministerio",
+        "Rio Grande",
+        "Ushuaia",
+        "Tierra del Fuego",
+        "Venezuela"
+      ],
+      "people": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-23T02:58:21.768Z",
+      "lastSeenAt": "2026-07-23T02:58:21.768Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 13,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 15,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 13,
+      "strategicValueScore": 7,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 12,
+        "originalReportingPotentialScore": 8,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 7,
+        "reasons": [
+          "mobilizable-local-community"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 13,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 15,
+        "socialPotential": 4,
+        "searchPotential": 13,
+        "recency": 9,
+        "sourceStrength": 3,
+        "strategicValue": 7,
+        "diversity": 4
+      },
+      "newsworthinessScore": 90,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
       "storyId": "election|gobierno|daniel ortega|paris|argentina|uruguay|informa|2026-07-21",
       "headlineSeed": "Daniel Ortega anunció la clausura definitiva de las elecciones en Nicaragua: “Que se olviden”",
       "topic": "deportes",
@@ -4260,6 +4444,65 @@
       "validationReasons": []
     },
     {
+      "storyId": "crime|justicia|entre rios|informa|2026-07-24",
+      "headlineSeed": "Entre Ríos: encontraron una cámara oculta en el baño de mujeres de una comisaría",
+      "topic": "policiales",
+      "subtopic": "policiales",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Entre Ríos",
+        "Justicia"
+      ],
+      "people": [
+        "Entre Ríos"
+      ],
+      "eventType": "crime",
+      "firstSeenAt": "2026-07-24T06:29:55.648Z",
+      "lastSeenAt": "2026-07-24T06:29:55.648Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "breaking",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 5,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 5,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
       "storyId": "sports-result|chile|higgins|partido|quien|resultado|2026-07-24",
       "headlineSeed": "Resultado de Boca vs. O’Higgins: quién ganó el partido de la Copa Sudamericana 2026",
       "topic": "deportes",
@@ -4318,6 +4561,65 @@
       },
       "newsworthinessScore": 89,
       "status": "pending-verification",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|banco central|gobierno|gobierno de javier milei|argentina|informa|2026-07-23",
+      "headlineSeed": "La estabilización es necesaria, pero no suficiente",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco Central",
+        "Gobierno",
+        "Gobierno de Javier Milei",
+        "Argentina"
+      ],
+      "people": [],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-24T02:53:20.986Z",
+      "lastSeenAt": "2026-07-24T02:53:20.986Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "today",
+      "publicInterestScore": 23,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 16,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 23,
+        "localRelevance": 12,
+        "impactMagnitude": 16,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 89,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -4432,69 +4734,6 @@
       },
       "newsworthinessScore": 89,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legal-policy|internacional|venezuela|estados unidos|informa|2026-07-21",
-      "headlineSeed": "El Papa pide el desarme nuclear en su último mensaje contra la guerra",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Nicolás Maduro",
-        "Internacional",
-        "Venezuela",
-        "Estados Unidos"
-      ],
-      "people": [
-        "Nicolás Maduro"
-      ],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-21T15:50:37.228Z",
-      "lastSeenAt": "2026-07-22T17:24:57.346Z",
-      "sourceCount": 3,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 3,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 5,
-        "strategicValueScore": 3,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 89,
-      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -4751,62 +4990,72 @@
       "validationReasons": []
     },
     {
-      "storyId": "legal-policy|banco central|gobierno|gobierno de javier milei|argentina|informa|2026-07-23",
-      "headlineSeed": "La estabilización es necesaria, pero no suficiente",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Nacionales",
+      "storyId": "sports-result|argentina|venezuela|2026-07-23|3-1",
+      "headlineSeed": "Argentina vs Venezuela 3-1: resumen del triunfo ‘albiceleste’ para clasificar a semifinales de la Copa Sudamericana de Vóley 2026",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Banco Central",
-        "Gobierno",
-        "Gobierno de Javier Milei",
-        "Argentina"
+        "Facundo Morando",
+        "Argentina",
+        "Venezuela",
+        "Ecuador",
+        "Brasil",
+        "Chile",
+        "Bolivia",
+        "Peru",
+        "Colombia"
       ],
-      "people": [],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-24T02:53:20.986Z",
-      "lastSeenAt": "2026-07-24T02:53:20.986Z",
+      "people": [
+        "Facundo Morando"
+      ],
+      "eventType": "sports-result",
+      "firstSeenAt": "2026-07-23T23:00:23.670Z",
+      "lastSeenAt": "2026-07-23T23:00:23.670Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 23,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
+      "editorialLane": "strict",
+      "freshness": "today",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
       "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 2,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 7,
+      "strategicValueScore": 4,
       "editorialOpportunity": {
-        "opportunityType": "standard-news",
+        "opportunityType": "high-impact-news",
         "recommendedFormat": "noticia",
         "recommendedAction": "publish-if-verified",
         "followUpFormat": "",
         "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
+        "communityMobilizationScore": 7,
         "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
         "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
+        "strategicValueScore": 4,
+        "reasons": [
+          "high-impact-event",
+          "strong-sharing-potential"
+        ]
       },
       "scoreBreakdown": {
-        "publicInterest": 23,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
+        "publicInterest": 11,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
         "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
+        "socialPotential": 12,
+        "searchPotential": 7,
+        "recency": 12,
         "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 0
+        "strategicValue": 4,
+        "diversity": 4
       },
       "newsworthinessScore": 88,
-      "status": "published",
+      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -5311,42 +5560,42 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|universidad de texas|gobierno|argentina racista|malvinas|argentina|egipto|informa|2026-07-22",
-      "headlineSeed": "ARGENTINA RACISTA | Conspiraciones y algo de verdad: cómo opera el ALGORITMO que nutre la campaña anti-Argentina en el mundo",
+      "storyId": "territorial-sovereignty|tom holland|lionel messi|brand new day|argentina|inglaterra|informa|2026-07-24",
+      "headlineSeed": "Tom Holland sobre Lionel Messi: “Es el mejor de la historia”",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Nacionales",
       "primaryEntities": [
-        "ARGENTINA RACISTA",
-        "Universidad de Texas",
-        "Gobierno",
-        "Malvinas",
+        "Tom Holland",
+        "Lionel Messi",
+        "Brand New Day",
+        "Marvel Studios",
         "Argentina",
-        "Egipto",
-        "Estados Unidos",
         "Inglaterra",
-        "Francia",
-        "Alemania"
+        "Espana"
       ],
       "people": [
-        "ARGENTINA RACISTA"
+        "Tom Holland",
+        "Lionel Messi",
+        "Brand New Day",
+        "Marvel Studios"
       ],
       "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-22T21:08:23.822Z",
-      "lastSeenAt": "2026-07-22T21:08:23.822Z",
+      "firstSeenAt": "2026-07-24T02:53:20.988Z",
+      "lastSeenAt": "2026-07-24T02:53:20.988Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 17,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 16,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
+      "searchPotentialScore": 7,
       "strategicValueScore": 2,
       "editorialOpportunity": {
         "opportunityType": "standard-news",
@@ -5356,143 +5605,21 @@
         "requiresHumanReview": false,
         "communityMobilizationScore": 3,
         "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
         "contrastPotentialScore": 0,
         "strategicValueScore": 2,
         "reasons": []
       },
       "scoreBreakdown": {
-        "publicInterest": 20,
+        "publicInterest": 17,
         "localRelevance": 12,
         "impactMagnitude": 16,
         "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
+        "searchPotential": 7,
+        "recency": 15,
         "sourceStrength": 3,
         "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 86,
-      "status": "pending-verification",
-      "validationReasons": []
-    },
-    {
-      "storyId": "legal-policy|ministerio de educacion|ministerio de educacion de|ministerio|tierra del fuego aias|informa|2026-07-22",
-      "headlineSeed": "El Ministerio de Educación extiende una semana el receso invernal - Actualidad TDF",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Ministerio de Educación",
-        "Ministerio de Educación de",
-        "Ministerio",
-        "El Ministerio",
-        "Actualidad TDF El Ministerio",
-        "Tierra del Fuego AIAS"
-      ],
-      "people": [],
-      "eventType": "legal-policy",
-      "firstSeenAt": "2026-07-22T19:27:12.516Z",
-      "lastSeenAt": "2026-07-22T19:27:12.516Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 8,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 8,
-      "strategicValueScore": 5,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 8,
-        "originalReportingPotentialScore": 8,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 5,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 22,
-        "impactMagnitude": 8,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 8,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 5,
-        "diversity": 4
-      },
-      "newsworthinessScore": 86,
-      "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|crecer|cuanto|definio|economica|nueva|puede|2026-07-22",
-      "headlineSeed": "Nueva fase económica: Daza definió cuánto puede crecer Argentina",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Gobierno",
-        "Banco Central",
-        "Gobierno de",
-        "Argentina",
-        "Chile",
-        "Uruguay"
-      ],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T17:24:57.348Z",
-      "lastSeenAt": "2026-07-22T17:24:57.348Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 16,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 5,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 8,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 5,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 12,
-        "impactMagnitude": 16,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 5,
         "diversity": 4
       },
       "newsworthinessScore": 86,
@@ -5814,36 +5941,36 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|onu reconocio|onu|nueva york|zohran mamdani|internacional|estados unidos|informa|2026-07-22",
-      "headlineSeed": "Ahora el alcalde de Nueva York, Zohran Mamdani, dice que no podrá arrestar a Netanyahu cuando vaya a la asamblea de la ONU",
+      "storyId": "legal-policy|internacional|venezuela|estados unidos|informa|2026-07-21",
+      "headlineSeed": "El Papa pide el desarme nuclear en su último mensaje contra la guerra",
       "topic": "politica",
       "subtopic": "politica",
       "territory": "Mundo",
       "primaryEntities": [
-        "Nueva York",
-        "Zohran Mamdani",
+        "Nicolás Maduro",
+        "Internacional",
+        "Venezuela",
         "Estados Unidos"
       ],
       "people": [
-        "Nueva York",
-        "Zohran Mamdani"
+        "Nicolás Maduro"
       ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-22T23:08:59.411Z",
-      "lastSeenAt": "2026-07-23T06:34:01.324Z",
-      "sourceCount": 2,
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-21T15:50:37.228Z",
+      "lastSeenAt": "2026-07-22T17:24:57.346Z",
+      "sourceCount": 3,
       "independentPublisherCount": 2,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 17,
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
       "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
+      "searchPotentialScore": 10,
       "strategicValueScore": 3,
       "editorialOpportunity": {
         "opportunityType": "high-impact-news",
@@ -5861,19 +5988,19 @@
         ]
       },
       "scoreBreakdown": {
-        "publicInterest": 17,
+        "publicInterest": 20,
         "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 12,
+        "searchPotential": 10,
+        "recency": 5,
         "sourceStrength": 3,
         "strategicValue": 3,
         "diversity": 4
       },
       "newsworthinessScore": 85,
-      "status": "published",
+      "status": "conflicting-sources",
       "validationReasons": []
     },
     {
@@ -7281,43 +7408,161 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|tom holland|lionel messi|brand new day|argentina|inglaterra|informa|2026-07-24",
-      "headlineSeed": "Tom Holland sobre Lionel Messi: “Es el mejor de la historia”",
+      "storyId": "international-conflict|onu reconocio|onu|nueva york|zohran mamdani|internacional|estados unidos|informa|2026-07-22",
+      "headlineSeed": "Ahora el alcalde de Nueva York, Zohran Mamdani, dice que no podrá arrestar a Netanyahu cuando vaya a la asamblea de la ONU",
       "topic": "politica",
       "subtopic": "politica",
-      "territory": "Nacionales",
+      "territory": "Mundo",
       "primaryEntities": [
-        "Tom Holland",
-        "Lionel Messi",
-        "Brand New Day",
-        "Marvel Studios",
-        "Argentina",
-        "Inglaterra",
-        "Espana"
+        "Nueva York",
+        "Zohran Mamdani",
+        "Estados Unidos"
       ],
       "people": [
-        "Tom Holland",
-        "Lionel Messi",
-        "Brand New Day",
-        "Marvel Studios"
+        "Nueva York",
+        "Zohran Mamdani"
       ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-24T02:53:20.988Z",
-      "lastSeenAt": "2026-07-24T02:53:20.988Z",
+      "eventType": "international-conflict",
+      "firstSeenAt": "2026-07-22T23:08:59.411Z",
+      "lastSeenAt": "2026-07-23T06:34:01.324Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "recent-hard-news",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 25,
+      "serviceValueScore": 0,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
+      "strategicValueScore": 3,
+      "editorialOpportunity": {
+        "opportunityType": "high-impact-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 5,
+        "strategicValueScore": 3,
+        "reasons": [
+          "high-impact-event"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 7,
+        "impactMagnitude": 25,
+        "serviceValue": 0,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 9,
+        "sourceStrength": 3,
+        "strategicValue": 3,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "legal-policy|ministerio de educacion|ministerio de educacion de|ministerio|tierra del fuego aias|informa|2026-07-22",
+      "headlineSeed": "El Ministerio de Educación extiende una semana el receso invernal - Actualidad TDF",
+      "topic": "politica",
+      "subtopic": "politica",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "Ministerio de Educación",
+        "Ministerio de Educación de",
+        "Ministerio",
+        "El Ministerio",
+        "Actualidad TDF El Ministerio",
+        "Tierra del Fuego AIAS"
+      ],
+      "people": [],
+      "eventType": "legal-policy",
+      "firstSeenAt": "2026-07-22T19:27:12.516Z",
+      "lastSeenAt": "2026-07-22T19:27:12.516Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 17,
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 8,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 8,
+      "strategicValueScore": 5,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 8,
+        "originalReportingPotentialScore": 8,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 5,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 20,
+        "localRelevance": 22,
+        "impactMagnitude": 8,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 5,
+        "diversity": 4
+      },
+      "newsworthinessScore": 82,
+      "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|argentina|crecer|cuanto|definio|economica|nueva|puede|2026-07-22",
+      "headlineSeed": "Nueva fase económica: Daza definió cuánto puede crecer Argentina",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Gobierno",
+        "Banco Central",
+        "Gobierno de",
+        "Argentina",
+        "Chile",
+        "Uruguay"
+      ],
+      "people": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.348Z",
+      "lastSeenAt": "2026-07-22T17:24:57.348Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 20,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 16,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "strategicValueScore": 2,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 5,
       "editorialOpportunity": {
         "opportunityType": "standard-news",
         "recommendedFormat": "noticia",
@@ -7326,22 +7571,22 @@
         "requiresHumanReview": false,
         "communityMobilizationScore": 3,
         "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
+        "dataExplainerPotentialScore": 8,
         "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
+        "strategicValueScore": 5,
         "reasons": []
       },
       "scoreBreakdown": {
-        "publicInterest": 17,
+        "publicInterest": 20,
         "localRelevance": 12,
         "impactMagnitude": 16,
         "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 15,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 5,
         "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 0
+        "strategicValue": 5,
+        "diversity": 4
       },
       "newsworthinessScore": 82,
       "status": "verified-standard-single-source",
@@ -9625,75 +9870,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "territorial-sovereignty|banco nacion|milei|malvinas|buenos aires|argentina|egipto|informa|2026-07-23",
-      "headlineSeed": "Milei no salta, igual que los ingleses",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Malvinas",
-      "primaryEntities": [
-        "Milei",
-        "Banco Nación",
-        "Malvinas",
-        "Buenos Aires",
-        "Paris",
-        "Argentina",
-        "Egipto",
-        "Brasil",
-        "Chile",
-        "Colombia"
-      ],
-      "people": [
-        "Milei"
-      ],
-      "eventType": "territorial-sovereignty",
-      "firstSeenAt": "2026-07-23T23:00:23.672Z",
-      "lastSeenAt": "2026-07-24T02:53:20.987Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 8,
-      "strategicValueScore": 4,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 7,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 4,
-        "reasons": [
-          "strong-sharing-potential"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 8,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "election|internacional|estados unidos|cuba|informa|2026-07-22",
       "headlineSeed": "Estados Unidos ahora pone el foco en Nicaragua y dice que \"no se quedará de brazos cruzados\" ante la avanzada del régimen de Ortega para eliminar las elecciones",
       "topic": "politica",
@@ -10250,70 +10426,6 @@
       },
       "newsworthinessScore": 79,
       "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "casualty|gobierno|mercedes gonzalez|santos cerdan|leire diez mercedes gonzalez|espana|informa|2026-07-17",
-      "headlineSeed": "Mercedes González afirma ser víctima de Santos Cerdán y de la trama de Leire Díez",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Mercedes González",
-        "Santos Cerdán",
-        "Gobierno",
-        "Espana"
-      ],
-      "people": [
-        "Mercedes González",
-        "Santos Cerdán"
-      ],
-      "eventType": "casualty",
-      "firstSeenAt": "2026-07-17T11:38:31.727Z",
-      "lastSeenAt": "2026-07-17T11:38:31.727Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 20,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 21,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 3,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 5,
-        "strategicValueScore": 3,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 20,
-        "localRelevance": 7,
-        "impactMagnitude": 21,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "strategicValue": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 79,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -11043,65 +11155,6 @@
       },
       "newsworthinessScore": 78,
       "status": "published",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|ataque|denuncia|drones|irani|kuwait|misiles|nuevo|2026-07-23",
-      "headlineSeed": "Kuwait denuncia nuevo ataque iraní con drones y misiles",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Internacional",
-        "Estados Unidos"
-      ],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T23:00:23.670Z",
-      "lastSeenAt": "2026-07-24T02:53:20.984Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 0,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 0,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 0,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 0,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -11838,124 +11891,72 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|internacional|estados unidos|reino unido|informa|2026-07-17",
-      "headlineSeed": "Reino Unido reporta ataque a petrolero en estrecho de Ormuz",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
+      "storyId": "territorial-sovereignty|banco nacion|milei|malvinas|buenos aires|argentina|egipto|informa|2026-07-23",
+      "headlineSeed": "Milei no salta, igual que los ingleses",
+      "topic": "deportes",
+      "subtopic": "deportes",
+      "territory": "Malvinas",
       "primaryEntities": [
-        "Internacional",
-        "Estados Unidos",
-        "Reino Unido"
+        "Milei",
+        "Banco Nación",
+        "Malvinas",
+        "Buenos Aires",
+        "Paris",
+        "Argentina",
+        "Egipto",
+        "Brasil",
+        "Chile",
+        "Colombia"
       ],
-      "people": [],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-17T10:02:06.709Z",
-      "lastSeenAt": "2026-07-17T10:02:06.709Z",
+      "people": [
+        "Milei"
+      ],
+      "eventType": "territorial-sovereignty",
+      "firstSeenAt": "2026-07-23T23:00:23.672Z",
+      "lastSeenAt": "2026-07-24T06:29:55.649Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 3,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 0,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 5,
-        "strategicValueScore": 3,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 1,
-        "sourceStrength": 3,
-        "strategicValue": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 77,
-      "status": "rejected-terminal",
-      "validationReasons": []
-    },
-    {
-      "storyId": "sports-result|argentina|espana|2026-07-16|6-1",
-      "headlineSeed": "Una rivalidad sin dueño tendrá su capítulo más grande: Argentina y España definen el Mundial",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Malvinas",
-        "Argentina",
-        "Inglaterra",
-        "Espana"
-      ],
-      "people": [],
-      "eventType": "sports-result",
-      "firstSeenAt": "2026-07-16T23:01:12.843Z",
-      "lastSeenAt": "2026-07-17T06:21:23.210Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
+      "editorialLane": "standard",
+      "freshness": "today",
       "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 25,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 2,
+      "socialPotentialScore": 12,
+      "searchPotentialScore": 8,
+      "strategicValueScore": 4,
       "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
+        "opportunityType": "standard-news",
         "recommendedFormat": "noticia",
         "recommendedAction": "publish-if-verified",
         "followUpFormat": "",
         "requiresHumanReview": false,
-        "communityMobilizationScore": 4,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 0,
+        "communityMobilizationScore": 7,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
         "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
+        "strategicValueScore": 4,
         "reasons": [
-          "high-impact-event"
+          "strong-sharing-potential"
         ]
       },
       "scoreBreakdown": {
         "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 25,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
         "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 10,
-        "recency": 1,
+        "socialPotential": 12,
+        "searchPotential": 8,
+        "recency": 12,
         "sourceStrength": 3,
-        "strategicValue": 2,
+        "strategicValue": 4,
         "diversity": 4
       },
-      "newsworthinessScore": 77,
-      "status": "verified-strict",
+      "newsworthinessScore": 76,
+      "status": "published",
       "validationReasons": []
     },
     {
@@ -12017,74 +12018,6 @@
       },
       "newsworthinessScore": 76,
       "status": "conflicting-sources",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|corte|maduro|narcotrafico|nicolas|nueva|regresa|tercera|2026-07-22",
-      "headlineSeed": "Nicolás Maduro regresa a la corte de Nueva York para su tercera en el caso por narcotráfico",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Nicolás Maduro",
-        "Nueva York",
-        "Cilia Flores",
-        "Justicia de Estados Unidos",
-        "Internacional",
-        "Venezuela",
-        "Estados Unidos"
-      ],
-      "people": [
-        "Nicolás Maduro",
-        "Nueva York",
-        "Cilia Flores"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T17:24:57.345Z",
-      "lastSeenAt": "2026-07-22T17:24:57.345Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 23,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 2,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 7,
-        "impactMagnitude": 23,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 10,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 76,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -12707,58 +12640,58 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|africa|brote|ebola|muertos|2026-07-22",
-      "headlineSeed": "Brote de ébola en África ya deja más de mil muertos",
+      "storyId": "general|ataque|denuncia|drones|irani|kuwait|misiles|nuevo|2026-07-23",
+      "headlineSeed": "Kuwait denuncia nuevo ataque iraní con drones y misiles",
       "topic": "sociedad",
       "subtopic": "sociedad",
-      "territory": "Provincia",
+      "territory": "Mundo",
       "primaryEntities": [
-        "República Democrática",
-        "Internacional"
+        "Internacional",
+        "Estados Unidos"
       ],
-      "people": [
-        "República Democrática"
-      ],
+      "people": [],
       "eventType": "general",
-      "firstSeenAt": "2026-07-22T17:24:57.347Z",
-      "lastSeenAt": "2026-07-22T17:24:57.347Z",
+      "firstSeenAt": "2026-07-23T23:00:23.670Z",
+      "lastSeenAt": "2026-07-24T02:53:20.984Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 16,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
+      "freshness": "today",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
       "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 8,
-      "strategicValueScore": 2,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 0,
       "editorialOpportunity": {
-        "opportunityType": "standard-news",
+        "opportunityType": "high-impact-news",
         "recommendedFormat": "noticia",
         "recommendedAction": "publish-if-verified",
         "followUpFormat": "",
         "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
+        "communityMobilizationScore": 0,
+        "originalReportingPotentialScore": 0,
+        "dataExplainerPotentialScore": 0,
         "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
+        "strategicValueScore": 0,
+        "reasons": [
+          "high-impact-event"
+        ]
       },
       "scoreBreakdown": {
-        "publicInterest": 16,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
         "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 8,
-        "recency": 9,
+        "socialPotential": 4,
+        "searchPotential": 10,
+        "recency": 12,
         "sourceStrength": 3,
-        "strategicValue": 2,
+        "strategicValue": 0,
         "diversity": 4
       },
       "newsworthinessScore": 74,
@@ -13737,67 +13670,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "international-conflict|panorama internacional|donald trump|golfo estados unidos|internacional|brasil|estados unidos|informa|2026-07-17",
-      "headlineSeed": "Panorama Internacional: Donald Trump otra vez en la cuerda floja de la guerra del Golfo",
-      "topic": "politica",
-      "subtopic": "politica",
-      "territory": "Mundo",
-      "primaryEntities": [
-        "Donald Trump",
-        "Estados Unidos"
-      ],
-      "people": [
-        "Donald Trump"
-      ],
-      "eventType": "international-conflict",
-      "firstSeenAt": "2026-07-17T10:02:06.710Z",
-      "lastSeenAt": "2026-07-17T10:02:06.710Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "stale-or-evergreen",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 7,
-      "impactMagnitudeScore": 25,
-      "serviceValueScore": 0,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 7,
-      "strategicValueScore": 3,
-      "editorialOpportunity": {
-        "opportunityType": "high-impact-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 5,
-        "strategicValueScore": 3,
-        "reasons": [
-          "high-impact-event"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 7,
-        "impactMagnitude": 25,
-        "serviceValue": 0,
-        "socialPotential": 7,
-        "searchPotential": 7,
-        "recency": 1,
-        "sourceStrength": 3,
-        "strategicValue": 3,
-        "diversity": 4
-      },
-      "newsworthinessScore": 74,
-      "status": "verified-strict",
-      "validationReasons": []
-    },
-    {
       "storyId": "general|abril|actividad|crecio|economica|frente|interanual|medio|2026-07-22",
       "headlineSeed": "La actividad economica creció 0,2% interanual en abril, pero cayó medio punto frente a abril",
       "topic": "sociedad",
@@ -13969,6 +13841,74 @@
         "socialPotential": 4,
         "searchPotential": 8,
         "recency": 9,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 72,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|corte|maduro|narcotrafico|nicolas|nueva|regresa|tercera|2026-07-22",
+      "headlineSeed": "Nicolás Maduro regresa a la corte de Nueva York para su tercera en el caso por narcotráfico",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Mundo",
+      "primaryEntities": [
+        "Nicolás Maduro",
+        "Nueva York",
+        "Cilia Flores",
+        "Justicia de Estados Unidos",
+        "Internacional",
+        "Venezuela",
+        "Estados Unidos"
+      ],
+      "people": [
+        "Nicolás Maduro",
+        "Nueva York",
+        "Cilia Flores"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.345Z",
+      "lastSeenAt": "2026-07-22T17:24:57.345Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 8,
+      "localRelevanceScore": 7,
+      "impactMagnitudeScore": 23,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 10,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "high-impact-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": [
+          "high-impact-event"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 8,
+        "localRelevance": 7,
+        "impactMagnitude": 23,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 10,
+        "recency": 5,
         "sourceStrength": 3,
         "strategicValue": 2,
         "diversity": 4
@@ -14611,6 +14551,65 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|africa|brote|ebola|muertos|2026-07-22",
+      "headlineSeed": "Brote de ébola en África ya deja más de mil muertos",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Provincia",
+      "primaryEntities": [
+        "República Democrática",
+        "Internacional"
+      ],
+      "people": [
+        "República Democrática"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T17:24:57.347Z",
+      "lastSeenAt": "2026-07-22T17:24:57.347Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 16,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 8,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 16,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 8,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 70,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
       "storyId": "territorial-sovereignty|seleccion argentina|lionel scaloni|islas malvinas|malvinas|argentina|uruguay|informa|2026-07-22",
       "headlineSeed": "Tigre homenajeó a la Selección Argentina con la icónica bandera de las Islas Malvinas del Mundial 2026",
       "topic": "deportes",
@@ -14922,60 +14921,6 @@
       },
       "newsworthinessScore": 69,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
-      "headlineSeed": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
-      "topic": "economia",
-      "subtopic": "economia",
-      "territory": "Provincia",
-      "primaryEntities": [],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T06:33:01.771Z",
-      "lastSeenAt": "2026-07-22T17:24:57.346Z",
-      "sourceCount": 2,
-      "independentPublisherCount": 2,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 17,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 5,
-      "strategicValueScore": 2,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 0,
-        "originalReportingPotentialScore": 0,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 17,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 5,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 69,
-      "status": "verified-standard",
       "validationReasons": []
     },
     {
@@ -15780,6 +15725,60 @@
       "validationReasons": []
     },
     {
+      "storyId": "general|cotiza|cuanto|dolar|julio|miercoles|2026-07-22",
+      "headlineSeed": "Dólar hoy: a cuánto cotiza este miércoles 22 de julio",
+      "topic": "economia",
+      "subtopic": "economia",
+      "territory": "Provincia",
+      "primaryEntities": [],
+      "people": [],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-22T06:33:01.771Z",
+      "lastSeenAt": "2026-07-22T17:24:57.346Z",
+      "sourceCount": 2,
+      "independentPublisherCount": 2,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 17,
+      "localRelevanceScore": 22,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 5,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 0,
+        "originalReportingPotentialScore": 0,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 17,
+        "localRelevance": 22,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 4,
+        "searchPotential": 5,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 65,
+      "status": "verified-standard",
+      "validationReasons": []
+    },
+    {
       "storyId": "general|frena|justicia|megafusion|paramount|temporalmente|warner|2026-07-21",
       "headlineSeed": "Justicia de EE.UU. frena temporalmente la megafusión entre Paramount y Warner Bros.",
       "topic": "sociedad",
@@ -16029,64 +16028,6 @@
       },
       "newsworthinessScore": 64,
       "status": "verified-local-routine",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|buettner|ejercicio|experto|forma|hacen|longevidad|mueven|2026-07-22",
-      "headlineSeed": "Dan Buettner, experto en longevidad: “Las personas que más viven no hacen ejercicio, se mueven de forma natural”",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Provincia",
-      "primaryEntities": [
-        "Dan Buettner"
-      ],
-      "people": [
-        "Dan Buettner"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T17:27:31.796Z",
-      "lastSeenAt": "2026-07-23T17:27:31.796Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 22,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 7,
-      "searchPotentialScore": 5,
-      "strategicValueScore": 2,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 22,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 7,
-        "searchPotential": 5,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 63,
-      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -16607,39 +16548,96 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|campo|macroalgas|patagonicas|proyecto|rompehielos|santacruceno|tierra del fuego aias|2026-07-24",
-      "headlineSeed": "Macroalgas patagónicas: el proyecto santacruceño que une el mar con el campo - El Rompehielos",
+      "storyId": "general|arena|argentina|cancelaron|movistar|polemica|posteo|problemas|2026-07-24",
+      "headlineSeed": "Más problemas para Rosalía: cancelaron los traslados al Movistar Arena y sigue la polémica por su posteo sobre Argentina.",
       "topic": "sociedad",
       "subtopic": "sociedad",
       "territory": "Nacionales",
       "primaryEntities": [
-        "Santa Cruz",
-        "Expo Rural",
-        "Secretaría de Comunicación Pública y Medios",
-        "Atlantico Sur",
-        "Tierra del Fuego AIAS",
-        "Argentina"
+        "Movistar Arena",
+        "Argentina",
+        "Espana"
       ],
       "people": [
-        "Santa Cruz",
-        "Expo Rural"
+        "Movistar Arena"
       ],
       "eventType": "general",
-      "firstSeenAt": "2026-07-24T02:53:20.988Z",
-      "lastSeenAt": "2026-07-24T02:53:20.988Z",
+      "firstSeenAt": "2026-07-24T02:53:20.987Z",
+      "lastSeenAt": "2026-07-24T02:53:20.987Z",
       "sourceCount": 1,
       "independentPublisherCount": 1,
       "sourceTiers": [
         "B"
       ],
-      "editorialLane": "fast",
+      "editorialLane": "standard",
       "freshness": "breaking",
-      "publicInterestScore": 8,
+      "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
       "serviceValueScore": 3,
       "socialPotentialScore": 7,
-      "searchPotentialScore": 10,
+      "searchPotentialScore": 7,
+      "strategicValueScore": 5,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 5,
+        "originalReportingPotentialScore": 9,
+        "dataExplainerPotentialScore": 0,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 5,
+        "reasons": [
+          "undercovered-protagonist"
+        ]
+      },
+      "scoreBreakdown": {
+        "publicInterest": 11,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 3,
+        "socialPotential": 7,
+        "searchPotential": 7,
+        "recency": 15,
+        "sourceStrength": 3,
+        "strategicValue": 5,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "general|eugenia|filtraron|fotos|maria|onlyfans|vende|2026-07-24",
+      "headlineSeed": "Filtraron las fotos que María Eugenia Ritó vende por US$ 4 en OnlyFans",
+      "topic": "sociedad",
+      "subtopic": "sociedad",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "María Eugenia Ritó",
+        "Argentina"
+      ],
+      "people": [
+        "María Eugenia Ritó"
+      ],
+      "eventType": "general",
+      "firstSeenAt": "2026-07-24T02:53:20.987Z",
+      "lastSeenAt": "2026-07-24T02:53:20.987Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "breaking",
+      "publicInterestScore": 11,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 3,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 7,
       "strategicValueScore": 2,
       "editorialOpportunity": {
         "opportunityType": "standard-news",
@@ -16649,25 +16647,25 @@
         "requiresHumanReview": false,
         "communityMobilizationScore": 3,
         "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
+        "dataExplainerPotentialScore": 4,
         "contrastPotentialScore": 0,
         "strategicValueScore": 2,
         "reasons": []
       },
       "scoreBreakdown": {
-        "publicInterest": 8,
+        "publicInterest": 11,
         "localRelevance": 12,
         "impactMagnitude": 0,
         "serviceValue": 3,
         "socialPotential": 7,
-        "searchPotential": 10,
+        "searchPotential": 7,
         "recency": 15,
         "sourceStrength": 3,
         "strategicValue": 2,
         "diversity": 4
       },
       "newsworthinessScore": 60,
-      "status": "verified-local-routine",
+      "status": "verified-standard-single-source",
       "validationReasons": []
     },
     {
@@ -16724,7 +16722,7 @@
         "recency": 12,
         "sourceStrength": 3,
         "strategicValue": 2,
-        "diversity": 0
+        "diversity": 4
       },
       "newsworthinessScore": 60,
       "status": "verified-standard-single-source",
@@ -16818,7 +16816,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 8,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -16848,7 +16846,7 @@
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 7,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "strategicValue": 5,
         "diversity": 4
@@ -16885,7 +16883,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "breaking",
+      "freshness": "today",
       "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -16913,7 +16911,7 @@
         "serviceValue": 3,
         "socialPotential": 7,
         "searchPotential": 10,
-        "recency": 15,
+        "recency": 12,
         "sourceStrength": 3,
         "strategicValue": 2,
         "diversity": 4
@@ -16990,63 +16988,6 @@
       "validationReasons": []
     },
     {
-      "storyId": "general|apunto|argentina|contra|espana|final|inadmisible|incidentes|2026-07-23",
-      "headlineSeed": "El DT de España apuntó contra los jugadores de la Selección argentina por los incidentes en la final: “Es algo intolerable, inadmisible, no se puede permitir\"",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Argentina",
-        "Espana"
-      ],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T21:09:34.893Z",
-      "lastSeenAt": "2026-07-23T21:09:34.893Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 9,
-      "searchPotentialScore": 7,
-      "strategicValueScore": 4,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 6,
-        "originalReportingPotentialScore": 5,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 4,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 9,
-        "searchPotential": 7,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
       "storyId": "service|fomentar|garantizan|lazos|mental|salud|volver|2026-07-23",
       "headlineSeed": "Volver a “la tierra” y fomentar lazos garantizan la salud mental",
       "topic": "servicios",
@@ -17101,65 +17042,6 @@
       },
       "newsworthinessScore": 60,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|cayeron|cortaron|cuatro|millones|racha|reservas|subas|2026-07-23",
-      "headlineSeed": "Las reservas del BCRA cayeron más de u$s350 millones y cortaron una racha de cuatro subas al hilo",
-      "topic": "sociedad",
-      "subtopic": "sociedad",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Banco Central",
-        "Banco Nación",
-        "Argentina",
-        "Uruguay"
-      ],
-      "people": [],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T21:09:34.890Z",
-      "lastSeenAt": "2026-07-23T21:09:34.890Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "breaking",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 4,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 2,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 3,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 2,
-        "reasons": []
-      },
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 4,
-        "searchPotential": 10,
-        "recency": 15,
-        "sourceStrength": 3,
-        "strategicValue": 2,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "published",
       "validationReasons": []
     },
     {
@@ -17476,76 +17358,6 @@
       },
       "newsworthinessScore": 60,
       "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|bolsonaro|cadena|errores|favorece|milei|padre|parte|2026-07-23",
-      "headlineSeed": "“Recibir a Milei es parte de la cadena de errores de Bolsonaro, padre e hijo, que favorece a Lula”",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Milei",
-        "Trabajadores Adriano Diogo",
-        "Javier Milei",
-        "Luiz Inácio Lula",
-        "Banco Máster",
-        "Argentina",
-        "Brasil",
-        "Estados Unidos"
-      ],
-      "people": [
-        "Milei",
-        "Trabajadores Adriano Diogo",
-        "Javier Milei",
-        "Luiz Inácio Lula"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-23T17:27:31.796Z",
-      "lastSeenAt": "2026-07-23T17:27:31.796Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "strict",
-      "freshness": "today",
-      "publicInterestScore": 8,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 10,
-      "strategicValueScore": 4,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 7,
-        "originalReportingPotentialScore": 4,
-        "dataExplainerPotentialScore": 0,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 4,
-        "reasons": [
-          "strong-sharing-potential"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 8,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 10,
-        "recency": 12,
-        "sourceStrength": 3,
-        "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "pending-verification",
       "validationReasons": []
     },
     {
@@ -18038,7 +17850,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 18,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -18066,7 +17878,7 @@
         "serviceValue": 20,
         "socialPotential": 4,
         "searchPotential": 15,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "strategicValue": 2,
         "diversity": 4
@@ -18412,7 +18224,7 @@
         "B"
       ],
       "editorialLane": "standard",
-      "freshness": "recent-hard-news",
+      "freshness": "recent-context",
       "publicInterestScore": 11,
       "localRelevanceScore": 12,
       "impactMagnitudeScore": 0,
@@ -18442,78 +18254,9 @@
         "serviceValue": 3,
         "socialPotential": 12,
         "searchPotential": 10,
-        "recency": 9,
+        "recency": 5,
         "sourceStrength": 3,
         "strategicValue": 4,
-        "diversity": 4
-      },
-      "newsworthinessScore": 60,
-      "status": "verified-standard-single-source",
-      "validationReasons": []
-    },
-    {
-      "storyId": "general|argentina|golosina|iconica|llega|messi|segundo|seleccion|2026-07-22",
-      "headlineSeed": "Una icónica golosina argentina llega al segundo país más fan de Messi y la Selección",
-      "topic": "deportes",
-      "subtopic": "deportes",
-      "territory": "Nacionales",
-      "primaryEntities": [
-        "Selección Georgalos",
-        "Selección Argentina",
-        "Argentina",
-        "Chile",
-        "Uruguay",
-        "Paraguay",
-        "Bolivia",
-        "Estados Unidos",
-        "Espana"
-      ],
-      "people": [
-        "Selección Georgalos",
-        "Selección Argentina"
-      ],
-      "eventType": "general",
-      "firstSeenAt": "2026-07-22T17:24:57.348Z",
-      "lastSeenAt": "2026-07-22T17:24:57.348Z",
-      "sourceCount": 1,
-      "independentPublisherCount": 1,
-      "sourceTiers": [
-        "B"
-      ],
-      "editorialLane": "standard",
-      "freshness": "recent-hard-news",
-      "publicInterestScore": 11,
-      "localRelevanceScore": 12,
-      "impactMagnitudeScore": 0,
-      "serviceValueScore": 3,
-      "socialPotentialScore": 12,
-      "searchPotentialScore": 7,
-      "strategicValueScore": 5,
-      "editorialOpportunity": {
-        "opportunityType": "standard-news",
-        "recommendedFormat": "noticia",
-        "recommendedAction": "publish-if-verified",
-        "followUpFormat": "",
-        "requiresHumanReview": false,
-        "communityMobilizationScore": 9,
-        "originalReportingPotentialScore": 9,
-        "dataExplainerPotentialScore": 4,
-        "contrastPotentialScore": 0,
-        "strategicValueScore": 5,
-        "reasons": [
-          "strong-sharing-potential"
-        ]
-      },
-      "scoreBreakdown": {
-        "publicInterest": 11,
-        "localRelevance": 12,
-        "impactMagnitude": 0,
-        "serviceValue": 3,
-        "socialPotential": 12,
-        "searchPotential": 7,
-        "recency": 9,
-        "sourceStrength": 3,
-        "strategicValue": 5,
         "diversity": 4
       },
       "newsworthinessScore": 60,
@@ -18949,6 +18692,253 @@
       },
       "newsworthinessScore": 60,
       "status": "published",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|acceso|argentina|carne|conozco|frigorificos|global|logran|2026-07-21",
+      "headlineSeed": "“Yo los conozco”: tres frigoríficos logran acceso al mayor mercado global de la carne argentina",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Secretaría de Agricultura",
+        "Argentina",
+        "Brasil",
+        "Chile",
+        "Estados Unidos"
+      ],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T19:26:13.340Z",
+      "lastSeenAt": "2026-07-21T19:26:13.340Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|anticipa|dolar|ferreres|inflacion|orlando|proyeccion|sorpresiva|2026-07-21",
+      "headlineSeed": "La sorpresiva proyección de Orlando Ferreres para 2027: qué anticipa para el dólar, la inflación y las tarifas",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Orlando Ferreres",
+        "Milei",
+        "Gobierno",
+        "Banco Central",
+        "Estados Unidos"
+      ],
+      "people": [
+        "Orlando Ferreres",
+        "Milei"
+      ],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T17:26:16.433Z",
+      "lastSeenAt": "2026-07-21T17:26:16.433Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 7,
+      "searchPotentialScore": 15,
+      "strategicValueScore": 5,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 9,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 5,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 7,
+        "searchPotential": 15,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 5,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|argentina|conducir|dejarte|infracciones|licencia|pueden|2026-07-21",
+      "headlineSeed": "Qué infracciones pueden dejarte sin licencia de conducir en la Argentina hoy",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Banco Central de",
+        "Buenos Aires",
+        "Argentina",
+        "Uruguay"
+      ],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T15:50:37.227Z",
+      "lastSeenAt": "2026-07-21T15:50:37.227Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "standard",
+      "freshness": "recent-context",
+      "publicInterestScore": 21,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 21,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 5,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "verified-standard-single-source",
+      "validationReasons": []
+    },
+    {
+      "storyId": "service|accesos|cortaran|marchas|movimientos|piquetes|programa|rechazo|2026-07-21",
+      "headlineSeed": "Marchas y piquetes: los movimientos sociales cortarán accesos en rechazo a la baja del programa Volver al Trabajo",
+      "topic": "servicios",
+      "subtopic": "servicios",
+      "territory": "Nacionales",
+      "primaryEntities": [
+        "Gobierno",
+        "Policía",
+        "Ministerio de Seguridad",
+        "Ministerio de Capital Humano",
+        "Gobierno y",
+        "Cámara Federal de San Martín",
+        "Cámara de Diputados de la Provincia",
+        "Gobierno y la CGT",
+        "Buenos Aires",
+        "Argentina"
+      ],
+      "people": [],
+      "eventType": "service",
+      "firstSeenAt": "2026-07-21T06:32:54.557Z",
+      "lastSeenAt": "2026-07-21T06:32:54.557Z",
+      "sourceCount": 1,
+      "independentPublisherCount": 1,
+      "sourceTiers": [
+        "B"
+      ],
+      "editorialLane": "strict",
+      "freshness": "stale-or-evergreen",
+      "publicInterestScore": 18,
+      "localRelevanceScore": 12,
+      "impactMagnitudeScore": 0,
+      "serviceValueScore": 20,
+      "socialPotentialScore": 4,
+      "searchPotentialScore": 15,
+      "strategicValueScore": 2,
+      "editorialOpportunity": {
+        "opportunityType": "standard-news",
+        "recommendedFormat": "noticia",
+        "recommendedAction": "publish-if-verified",
+        "followUpFormat": "",
+        "requiresHumanReview": false,
+        "communityMobilizationScore": 3,
+        "originalReportingPotentialScore": 4,
+        "dataExplainerPotentialScore": 4,
+        "contrastPotentialScore": 0,
+        "strategicValueScore": 2,
+        "reasons": []
+      },
+      "scoreBreakdown": {
+        "publicInterest": 18,
+        "localRelevance": 12,
+        "impactMagnitude": 0,
+        "serviceValue": 20,
+        "socialPotential": 4,
+        "searchPotential": 15,
+        "recency": 1,
+        "sourceStrength": 3,
+        "strategicValue": 2,
+        "diversity": 4
+      },
+      "newsworthinessScore": 60,
+      "status": "rejected-terminal",
       "validationReasons": []
     }
   ],
