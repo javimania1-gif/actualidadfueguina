@@ -1,14 +1,14 @@
 ---
 title: "Jürgen Klopp asume como nuevo director técnico de la selección alemana de fútbol"
 description: "El reconocido entrenador Jürgen Klopp fue presentado oficialmente como el nuevo seleccionador de Alemania por la DFB."
-date: "2026-07-24T09:08:00.000Z"
+date: "2026-07-24T13:47:00.000Z"
 category: "Mundo"
 location: "Alemania"
 sourceName: "DW Espanol"
 sourceUrl: "https://www.dw.com/es/j%C3%BCrgen-klopp-ser%C3%A1-el-nuevo-director-t%C3%A9cnico-de-la-selecci%C3%B3n-alemana-de-f%C3%B9tbol/a-78097335?maca=spa-rss-sp-all-1122-rdf"
 originalImage: "https://static.dw.com/image/78097842_6.jpg"
 status: "draft"
-detectedAt: "2026-07-24T10:23:26.477Z"
+detectedAt: "2026-07-24T15:30:07.252Z"
 mode: "discovery-review"
 editorialReason: "daily-target-max"
 opportunityType: "standard-news"
@@ -61,7 +61,9 @@ La disponibilidad de Klopp, alternativa favorita de la DFB para el puesto, acele
 
 "Es un gran honor para mí estar sentado hoy aquí", declaró Klopp en una rueda de prensa convocada este viernes por la DFB en Fráncfort.
 
-"Es el punto álgido de mi carrera, de mi vida, de mi vida profesional. Daré todo lo que tengo", añadió.
+"Es el punto álgido de mi carrera, de mi vida, de mi vida profesional. Daré todo lo que tengo", añadió. 
+
+El nuevo seleccionador nacional pide expectativas realistas. "Necesitamos expectativas realistas. No es importante ser como [Francia](/es/francia/t-17412345), [España](/es/españa/t-17411938), [Argentina](/es/argentina/t-17411654) o cualquier otro; somos quienes somos. No somos tan buenos como Francia, pero aun así podemos ganarles", subrayó.
 
 Bernd Neuendorf, presidente de la DFB, anunció que el contrato del nuevo DT arranca el 15 de agosto y durará hasta el verano boreal 2030. 
 
